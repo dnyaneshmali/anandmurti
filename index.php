@@ -1,8 +1,8 @@
 <?php include('header.php');?>
       <!--End of main div-->
       <div id="home-slider">
-         <h1 class="slider-title text-center">Anand Murti Group</h1>
-         <h4 class="slider-subtitle text-center">Welcomes you</h4>
+         <h1 class="slider-title text-center"></h1>
+         <h4 class="slider-subtitle text-center"></h4>
          <p class="text-center">
             <a class="slider-btn1 btn btn-lg" href="#">MORE INFO</a>
             <a class="slider-btn2 btn btn-lg" href="#">CHECK IT</a>
@@ -14,7 +14,7 @@
                <div class="row">
                   <div class="col-md-12">
                      <h2 class="text-center">We work to make your life healthy and happy</h2>
-                     <p class="text-center text-muted">Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.</p>
+                     <p class="text-center text-muted">Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.</p>
                   </div>
                </div>
             </div>
@@ -22,7 +22,7 @@
          <div class="second-section">
             <div class="container">
                <h2 class="text-center">Solutions that you need everyday</h2>
-               <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
+               <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
                <div class="row home-content-box">
                   <div class="col-md-4 col-sm-6 text-center">
                    <img src="/anandmurti/assets/images/gas_icon.png">

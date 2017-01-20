@@ -18,11 +18,12 @@
        <div class="aqua-form">
             <div class="container">
                <div class="row">
-                  <div class="col-md-6 offset-md-6">
+                  <div class="col-md-offset-3 col-md-6 ">
                      <form id="aquaform" name="aquaform" method="POST" action="#" >
                      	<div class="form-group">
-                           <h4>Enquiry Form</h4>
-                           
+                          
+                           <h4 class="text-center">Enquiry Form</h4>
+                         
                         </div>
                         <div class="form-group">
                            <label for="name">Full Name:</label>
