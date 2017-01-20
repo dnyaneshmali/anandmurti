@@ -1,0 +1,327 @@
+/*
+Title:Bootstrap with Slider
+Author:Dnaynesh
+---------------------------
+Table Of content
+1.Header
+2.Slider
+
+*/
+/*------------body Start--------------*/
+
+body {} h1 {
+    font-size: 48px;
+}
+h2 {
+    font-size: 36px;
+}
+h3 {
+    font-size: 24px;
+}
+h4 {
+    font-size: 18px;
+}
+a {
+    color: rgb(104, 176, 210);;
+}
+a:hover {
+    color: #FF712C;
+}
+/*----------------Header Section Start----------*/
+
+.navbar {
+    padding: 12px 0;
+    background: #fff;
+    margin-bottom: 0;
+    border-bottom: 0 none;
+    box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+    padding-bottom: 60px;
+}
+.navbar .navbar-nav > li > a:hover,
+.navbar .navbar-nav > li > a:focus,
+.navbar .navbar-nav > .open > a:hover,
+.navbar .navbar-nav > .open > a:focus,
+.navbar .navbar-nav > .active > a {
+    background: none;
+    color: #FF712C;
+}
+.dropdown-menu > li > a:hover {
+    color: #FF712C;
+}
+.navbar-inverse .navbar-toggle {
+    border: none
+}
+.navbar-inverse .navbar-toggle .icon-bar {
+    background-color: #000;
+}
+.navbar-inverse .navbar-toggle:hover,
+.navbar-inverse .navbar-toggle:focus {
+    background-color: transparent;
+}
+.navbar-inverse .navbar-collapse,
+.navbar-inverse .navbar-form {
+    border-color: transparent;
+}
+/*----------------Slider Section Start----------*/
+
+div#home-slider {
+    padding-top: 90px;
+    background-image: url(/anandmurti/assets/images/home-image.png);
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+div#gas-slider {
+    padding-top: 90px;
+    background-image: url(/anandmurti/assets/images/home-image.png);
+    background-size: cover;
+    height: 500px;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+}
+.btn:hover,
+.btn:focus,
+.btn.focus {
+    color: #fff;
+}
+h1.slider-title {
+    color: #fff;
+    font-weight: bold;
+    margin-top: 150px;
+}
+h4.slider-subtitle {
+    color: #fff;
+}
+a.slider-btn1 {
+    background-color: rgb(104, 176, 210);
+    color: #fff;
+    border-radius: 0px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+a.slider-btn1:hover,
+a.slider-btn2:hover,
+a.footer-cta-btn:hover{
+    background-color: #f85100;
+}
+
+a.slider-btn2 {
+    background-color: rgb(104, 176, 210);
+    color: #fff;
+    border-radius: 0px;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+}
+/*----------------Content Section Start----------*/
+
+.container.content {
+    padding: 20px 15px;
+}
+.first-section {
+    margin-bottom: 44px;
+    margin-top: 30px;
+}
+.second-section {
+    margin-bottom: 30px;
+    background-color: #f6f7f8;
+    padding-top: 32px;
+    padding-bottom: 47px;
+}
+
+.third-section{
+	padding-bottom:30px;
+}
+.home-content-box {
+    margin-top: 60px;
+}
+.single-faq {
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
+
+
+
+
+.title-section.container {
+    padding-top: 40px;
+}
+.upper_slider .item img{
+    height: 100px;
+}
+
+/*----------------Contact Page Start----------*/
+
+.page-content {
+    margin-top: 75px;
+}
+#page-contact .title-section {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.contact-form {
+    padding-top: 60px;
+    padding-bottom: 60px;
+}
+.contact-details {
+    background: #fff;
+    border: solid 1px #E4E3E3;
+}
+.contact-details .item {
+    padding: 12px 36px;
+    border-bottom: 1px solid #e5e7e9;
+}
+.contact-details .item .icon {
+    font-size: 36px;
+    line-height: 21px;
+    color: #FF712C;
+    float: left;
+}
+.contact-details .content {
+    margin-left: 61px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+    color: #5d6e7b;
+}
+.contact-details .social-shares {
+    padding: 12px 36px;
+}
+ul.contact-social-list li {
+    list-style-type: none;
+    float: left;
+    margin-right: 4px;
+}
+.social-shares {
+    background: #2a2a2a;
+    float: left;
+    width: 100%;
+    padding: 30px 30px;
+}
+.social-shares h2 {
+    color: #ffffff;
+    font-weight: 400;
+    font-size: 25px;
+    border-left: solid 4px #fff;
+    padding-left: 20px;
+    margin: 0 0 20px 0px;
+}
+.contact-social-list li a {
+    font-size: 12px;
+    border-radius: 3px 2px 2px 3px;
+    display: inline-block;
+    width: 25px;
+    height: 26px;
+    text-align: center;
+    line-height: 28px;
+    color: white;
+}
+.contact-social-list .facebook {
+    background-color: #3b589e;
+}
+.contact-social-list .twitter {
+    background-color: #2b97f0;
+}
+.contact-social-list .linkedin {
+    background-color: #1c82ca;
+}
+.contact-social-list .google {
+    background-color: #dc4e41;
+}
+.contact-social-list .rss {
+    background-color: #e78733;
+}
+
+#errormsg, #emailerrormsg, #suberrormsg, #msgerrormsg, #numbererrormsg{
+	color:red;	
+}
+
+#contactform .error {
+    color: red;
+}
+
+/*----------------About Page Start----------*/
+
+.info-section .title-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+.info-section .single-item {
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.single-item .icon {
+    font-size: 12px;
+    line-height: 15px;
+    color: #FF712C;
+    float: left;
+}
+
+.single-item .description {
+    margin-left: 85px;
+    font-size: 14px;
+    line-height: 21px;
+    font-weight: 400;
+}
+
+.about-content-box .title-section {
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+
+
+/*----------------Footer CTA Section Start----------*/
+
+
+.footer-cta-section {
+    background-color: rgb(112, 188, 68);
+	padding-top: 20px;
+    padding-bottom: 20px;
+}
+a.footer-cta-btn {
+    color: #fff;
+    border-radius: 0px;
+	border: solid 1px #fff;
+	box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
+        background-color: rgb(104, 176, 210);
+}
+
+.footer-cta-section h3{
+color:#fff;
+}
+
+
+/*----------------Footer Section Start----------*/
+
+div#footer1 {
+    background: #f2f4f5;
+    color: #000;
+	padding-top: 30px;
+    padding-bottom: 30px;
+}
+div#footer2 {
+    background: #e1e4e6;
+    color: #000;
+	padding-top: 10px;
+}
+
+#footer1 p.social-icons {
+    font-size: 30px;
+}
+
+/*----------------Media Queries Start----------*/
+
+@media (max-width: 767px) {
+    .navbar-collapse ul {
+        width: 100%;
+        text-align: center;
+    }
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
+    .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
+        color: #FF712C;
+    }
+}
