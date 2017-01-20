@@ -1,11 +1,11 @@
 <?php include('header.php');?>
 <div id="gas-slider">
-         <h1 class="slider-title text-center">Anand Murti Group</h1>
+         <!-- <h1 class="slider-title text-center">Anand Murti Group</h1>
          <h4 class="slider-subtitle text-center">Welcomes you</h4>
          <p class="text-center">
             <a class="slider-btn1 btn btn-lg" href="#">MORE INFO</a>
             <a class="slider-btn2 btn btn-lg" href="#">CHECK IT</a>
-         </p>
+         </p> -->
       </div>
       <!--End of main div-->
       <div class="page-content">
@@ -40,7 +40,18 @@
                </div>
             </div>
          </div>
+                             <div class="featured_schools col s12 m12">
 
+                                <h5>Our Products</h5>
+                                 <div class="featured_slider">
+                           
+                            <div class="item"><img class="our_products" src=""></div>
+                             <div class="item"><img class="our_products" src=""></div>
+                              <div class="item"><img class="our_products" src=""></div>
+                               
+                           
+                        </div>
+                            </div>
 
             	  <div class="footer-cta-section">
 	  <div class="container">
@@ -49,7 +60,7 @@
 	  <h3>Click Here To Contact And To Know More !</h3>
 	  </div>
 	  <div class="col-md-3">
-	  <a class="footer-cta-btn btn btn-lg" href="#">CHECK IT</a>
+	  <a class="footer-cta-btn btn btn-lg" href="#">Contact Us</a>
 	  </div>
 	  </div>
 	  </div>

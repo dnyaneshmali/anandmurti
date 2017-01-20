@@ -46,10 +46,11 @@
                      </p>
                   </div>
                </div>
+
                <div class="col-md-6 widget">
                   <div class="widget-body">
                      <p class="text-right">
-                        Copyright &copy; 2016, SoftInfology. Design: <a href="http://softinfology.com/">SoftInfology</a>
+                        Copyright &copy; 2017, SoftInfology. DESIGNED & DEVELOPED WITH <span class="heart"><i class="fa fa-heart"></i></span> BY:  <a href="http://softinfology.com/">SoftInfology</a>
                      </p>
                   </div>
                </div>
@@ -57,4 +58,6 @@
             <!-- /row of widgets -->
          </div>
       </div>
+      <script type="text/javascript" src="http://localhost/anandmurti/assets/js/jquery-1.9.1.min.js"></script> 
+       <script type="text/javascript" src="http://localhost/anandmurti/assets/js/owl.carousel.min.js"></script>
   

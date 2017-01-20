@@ -70,7 +70,7 @@ div#home-slider {
     background-size: cover;
     height: 500px;
     background-position: center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-repeat: no-repeat;
 }
 div#gas-slider {
@@ -79,7 +79,7 @@ div#gas-slider {
     background-size: cover;
     height: 500px;
     background-position: center;
-    background-attachment: fixed;
+    /*background-attachment: fixed;*/
     background-repeat: no-repeat;
 }
 .btn:hover,
@@ -139,20 +139,9 @@ a.slider-btn2 {
     margin-top: 30px;
     margin-bottom: 30px;
 }
-
-
-
-
-.title-section.container {
-    padding-top: 40px;
-}
-.upper_slider .item img{
-    height: 100px;
-}
-
 /*----------------Contact Page Start----------*/
 
-.page-content {
+.page-content ,.products-content {
     margin-top: 75px;
 }
 #page-contact .title-section {
@@ -325,3 +314,91 @@ div#footer2 {
         color: #FF712C;
     }
 }
+
+
+
+.title-section.container {
+    padding-top: 40px;
+}
+.upper_slider .item img{
+    height: 100px;
+}
+
+
+
+.album {
+  min-height: 50rem; /* Can be removed; just added for demo purposes */
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  background-color: #f7f7f7;
+}
+.text-muted {
+    color: #636c72!important;
+}
+.card {
+  float: left;
+  width: 33.333%;
+  padding: .75rem;
+  margin-bottom: 2rem;
+  border: 0;
+}
+.card-text {
+    font-size: 85%;
+}
+.card img {
+    height: 280px;
+    width: 100%;
+    display: block;
+}
+card > img {
+    margin-bottom: .75rem;
+}
+.container{
+width: 1140px;
+    max-width: 100%;
+}
+.copyright a {
+    color: black;
+}
+span.heart {
+    color: #cc4643;
+}
+
+
+/*login*/
+
+.form-signin {
+  max-width: 330px;
+  padding: 15px;
+  margin: 0 auto;
+}
+.form-signin .form-signin-heading,
+.form-signin .checkbox {
+  margin-bottom: 10px;
+}
+.form-signin .checkbox {
+  font-weight: normal;
+}
+.form-signin .form-control {
+  position: relative;
+  height: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 10px;
+  font-size: 16px;
+}
+.form-signin .form-control:focus {
+  z-index: 2;
+}
+.form-signin input[type="email"] {
+  margin-bottom: -1px;
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+.form-signin input[type="password"] {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+

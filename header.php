@@ -8,8 +8,10 @@
       <title>Template With Slider</title>
       <link  rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link href="<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
       <!--Font awesome file-->
 	<link rel="stylesheet" type="text/css" href="assets/css/front-style.css">
+    <link rel="stylesheet" type="text/css" href=" http://localhost/anandmurti/assets/css/owl.carousel.css" />
         <!--Custom stylesheet-->
    </head>
    <body class="body-wrapper">
@@ -32,7 +34,7 @@
                      <li><a href="http://localhost/anandmurti/aqua.php">Aqua</a></li>
                      <li><a href="http://localhost/anandmurti/products.php">Products</a></li>
                      <li><a href="http://localhost/anandmurti/contact.php">Contact</a></li>
-                     <li><a href="http://localhost/anandmurti/">Login</a></li>
+                     <li><a href="http://localhost/anandmurti/login.php">Login</a></li>
                   </ul>
                </div>
                <!--/.nav-collapse -->

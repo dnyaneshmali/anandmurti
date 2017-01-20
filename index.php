@@ -25,12 +25,12 @@
                <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
                <div class="row home-content-box">
                   <div class="col-md-4 col-sm-6 text-center">
-                     <i class="fa fa-cogs fa-4x color-accent"></i>
+                   <img src="/anandmurti/assets/images/gas_icon.png">
                      <h4>Go Gas</h4>
                      <p class="text-center">Gogas is a leading brand name for Auto LPG Dispensing Stations( ALDS ) by any private company in India. It is a trusted and a proven brand owned by the parent company Confidence Petroleum India Ltd. </p>
                   </div>
-                  <div class="col-md-4 text-center">
-                     <i class="fa fa-cogs fa-4x color-accent"></i>
+                  <div class="col-md-4 s12 text-center">
+                      <img src="/anandmurti/assets/images/aqua_icon.png">
                      <h4>Aqua Amaze</h4>
                      <p class="text-center">RO + UV + TDS controller + Mineral added, 10 STAGE PURIFICATION
 "Aqua 
@@ -38,8 +38,7 @@ water purifier "
 AN ISO 9001-2008 certified company</p>
                   </div>
                   <div class="col-md-4 col-sm-6 text-center">
-                     <!-- <i class="fa fa-cogs fa-4x color-accent"></i> -->
-                     
+                    <img src="/anandmurti/assets/images/fb_icon.png">
                      <h4>Food Beverages</h4>
                      <p class="text-center">Anand Murti F&B Pvt. Ltd is a fast growing company extending world-class services in F&B and Retail businesses.
 With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  Pvt. Ltd is a one stop shop for high quality , hygienic and end to end F&B and Retail Services.</p>
@@ -76,18 +75,18 @@ With a vast experience and expertise supported by a core team of professionals, 
             </div>
          </div>
       </div>
-	  <div class="footer-cta-section">
-	  <div class="container">
-	  <div class="row">
-	  <div class="col-md-9">
-	  <h3>Click Here To Contact And To Know More !</h3>
-	  </div>
-	  <div class="col-md-3">
-	  <a class="footer-cta-btn btn btn-lg" href="http://localhost/anandmurti/contact.php">Contact Us</a>
-	  </div>
-	  </div>
-	  </div>
-	  </div>
+     <div class="footer-cta-section">
+     <div class="container">
+     <div class="row">
+     <div class="col-md-9">
+     <h3>Click Here To Contact And To Know More !</h3>
+     </div>
+     <div class="col-md-3">
+     <a class="footer-cta-btn btn btn-lg" href="http://localhost/anandmurti/contact.php">Contact Us</a>
+     </div>
+     </div>
+     </div>
+     </div>
       <!--Footer -->
       
      <?php include('footer.php');?>
