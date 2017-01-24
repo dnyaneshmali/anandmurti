@@ -1,27 +1,29 @@
 <!DOCTYPE html>
 <html lang="en">
+<?php
+$root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
+include($root."/config/config.php");
+?>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-<?php
-define("BASE_URL", "http://localhost/anandmurti");
-?>
     <title>Anand Murti </title>
-   <link  rel="stylesheet" href="<?php echo BASE_URL; ?>/assets/css/bootstrap.min.css">
-    <link href="<?php echo BASE_URL; ?>/assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="<?php echo BASE_URL; ?>/assets/css/nprogress.css" rel="stylesheet">
-    <link href="<?php echo BASE_URL; ?>/assets/css/green.css" rel="stylesheet">
-    <link href="<?php echo BASE_URL; ?>/assets/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
-    <link href="<?php echo BASE_URL; ?>/assets/css/jqvmap.min.css" rel="stylesheet"/>
-    <link href="<?php echo BASE_URL; ?>/assets/css/daterangepicker.css" rel="stylesheet">
-    <link href="<?php echo BASE_URL; ?>/assets/css/custom.css" rel="stylesheet">
-    <link href="<?php echo BASE_URL; ?>/assets/css/admin-style.css" rel="stylesheet">
-    <script src="<?php echo BASE_URL; ?>/assets/js/angular.min.js"></script>
-    <script src="<?php echo BASE_URL; ?>/assets/js/angular-route.min.js"></script>
-    <script src="<?php echo BASE_URL; ?>/config/app.js"></script>
-    <script src="<?php echo BASE_URL; ?>/controllers/globalcontrollers.js"></script> 
+   <link  rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css">
+    <link href="<?php echo base_url(); ?>/assets/css/font-awesome.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/nprogress.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/green.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/jqvmap.min.css" rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>/assets/css/daterangepicker.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/jquery.dataTables.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/custom.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/admin-style.css" rel="stylesheet">
+    <script src="<?php echo base_url(); ?>/assets/js/angular.min.js"></script>
+    <script src="<?php echo base_url(); ?>/assets/js/angular-route.min.js"></script>
+    <script src="<?php echo base_url(); ?>/config/app.js"></script>
+    <script src="<?php echo base_url(); ?>/controllers/globalcontrollers.js"></script> 
   </head>
   <body class="nav-md" ng-app="app">
     <div class="container body">
@@ -37,7 +39,7 @@ define("BASE_URL", "http://localhost/anandmurti");
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?php echo BASE_URL; ?>/assets/images/img.jpg" alt="">Dnyanesh
+                    <img src="<?php echo base_url(); ?>/assets/images/img.jpg" alt="">Dnyanesh
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">

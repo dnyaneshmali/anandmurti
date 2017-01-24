@@ -10,3 +10,10 @@ app.controller('Aqua', ['$scope', function($scope) {
 app.controller('Gogas', ['$scope', function($scope) {
     $scope.homepage = "Gogas";
 }]);
+
+app.controller('Userlist', ['$scope', function($scope) {
+    $scope.homepage = "Userlist";
+}]);
+app.controller('Adduser', ['$scope', function($scope) {
+    $scope.homepage = "Adduser";
+}]);

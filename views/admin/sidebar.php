@@ -7,7 +7,7 @@
             <div class="clearfix"></div>
             <div class="profile clearfix">
               <div class="profile_pic">
-                <img src="<?php echo BASE_URL; ?>/assets/images/img.jpg" alt="..." class="img-circle profile_img">
+                <img src="<?php echo base_url(); ?>/assets/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -30,6 +30,13 @@
                   <li><a><i class="fa fa-home"></i> Go Gas Agency<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/gogas">Dashboard</a></li>
+                    </ul>
+                  </li>
+
+                  <li><a><i class="fa fa-home"></i>User Manage<span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="#/userlist">List User</a></li>
+                      <li><a href="#/adduser">Add User</a></li>
                     </ul>
                   </li>
                 </ul>
