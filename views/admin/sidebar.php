@@ -33,10 +33,10 @@
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-home"></i>User Manage<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-home"></i>Manage Admin's<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="#/userlist">List User</a></li>
-                      <li><a href="#/adduser">Add User</a></li>
+                      <li><a href="#/adminlist">List Admin</a></li>
+                      <li><a href="#/addadmin">Add Admin</a></li>
                     </ul>
                   </li>
                 </ul>

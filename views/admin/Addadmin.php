@@ -1,6 +1,6 @@
 Add User
-<div class="adduserform" ng-controller="Adduserctrl">
-<form name="adduserform" class="form-horizontal form-label-left" novalidate>
+<div class="addadminform" ng-controller="Addadminctrl">
+<form name="addadminform" class="form-horizontal form-label-left" novalidate>
 
                       <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
                       </p>
@@ -66,6 +66,8 @@ Add User
                         <div class="col-md-6 col-md-offset-3">
                           <button type="submit" class="btn btn-primary">Cancel</button>
                           <button ng-click="insertdata(user)" id="send" type="submit" class="btn btn-success">Submit</button>
+
+                          {{msg}}
                         </div>
                       </div>
                     </form>

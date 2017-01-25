@@ -11,9 +11,9 @@ app.controller('Gogas', ['$scope', function($scope) {
     $scope.homepage = "Gogas";
 }]);
 
-app.controller('Userlistctrl', ['$scope','$http', function($scope,$http) {
+app.controller('Adminlistctrl', ['$scope','$http', function($scope,$http) {
     
-    $http.get("../../models/getuser.php")
+    $http.get("../../models/getadmin.php")
     .success(function(data){
         $scope.data=data
         //console.log($scope.data);
@@ -26,7 +26,7 @@ app.controller('Userlistctrl', ['$scope','$http', function($scope,$http) {
 console.log(user_id);
      $http({
           method  : 'POST',
-          url     : '../../models/deleteuser.php',
+          url     : '../../models/deleteadmin.php',
           data    : {'user_id':user_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
@@ -42,27 +42,28 @@ console.log(user_id);
 }]);
 
 
-app.controller('Adduserctrl', ['$scope','$http', function($scope,$http) {
+app.controller('Addadminctrl', ['$scope','$http', function($scope,$http) {
 $scope.user = {};
 $scope.insertdata=function(user){
 $scope.user = angular.copy(user);
 //console.log( $scope.user );
 	 $http({
           method  : 'POST',
-          url     : '../../models/insertuser.php',
+          url     : '../../models/insertadmin.php',
           data    : $scope.user, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
 
      .success(function(data) {
-            console.log(data);
+           /* console.log(data);*/
+
            if (data.errors) {
               // Showing errors.
               $scope.errorName = data.errors.name;
               $scope.errorUserName = data.errors.username;
               $scope.errorEmail = data.errors.email;
             } else {
-              $scope.message = data.message;
+              $scope.msg = "data inserted successfully "
             }
 
           });
