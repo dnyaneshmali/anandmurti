@@ -4,9 +4,18 @@
     $sql = "localhost"; 
     $username = "root";
     $password = "";
-    $connection = mysql_connect($sql, $username, $password) or 
+    $connection = mysqli_connect($sql, $username, $password) or 
     die("Unable to Connect");
-    $databse = mysql_select_db("anandmurti_db", $connection); 
+    $databse = mysqli_select_db($connection,"anandmurti_db"); 
+/*
+
+$result = mysqli_query($connection, 'SELECT * FROM tbl_users');
+while ($row = mysqli_fetch_assoc($result)) {
+    echo $row["user_id"];
+    echo $row["username"];
+}
+*/
+
 function base_url(){
 
 echo 'http://localhost/anandmurti';

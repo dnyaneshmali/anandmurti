@@ -11,23 +11,61 @@ app.controller('Gogas', ['$scope', function($scope) {
     $scope.homepage = "Gogas";
 }]);
 
-app.controller('Userlist', ['$scope', function($scope) {
-    $scope.homepage = "Userlist";
+app.controller('Userlistctrl', ['$scope','$http', function($scope,$http) {
+    
+    $http.get("../../models/getuser.php")
+    .success(function(data){
+        $scope.data=data
+        //console.log($scope.data);
+    });
+
+
+  $scope.deleteuser=function(user_id){
+    alert('in delete function');
+
+console.log(user_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deleteuser.php',
+          data    : {'user_id':user_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+            console.log(data);
+
+          });
+}
+
+
+
 }]);
+
+
 app.controller('Adduserctrl', ['$scope','$http', function($scope,$http) {
+$scope.user = {};
+$scope.insertdata=function(user){
+$scope.user = angular.copy(user);
+//console.log( $scope.user );
+	 $http({
+          method  : 'POST',
+          url     : '../../models/insertuser.php',
+          data    : $scope.user, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
 
-var vm = this;
+     .success(function(data) {
+            console.log(data);
+           if (data.errors) {
+              // Showing errors.
+              $scope.errorName = data.errors.name;
+              $scope.errorUserName = data.errors.username;
+              $scope.errorEmail = data.errors.email;
+            } else {
+              $scope.message = data.message;
+            }
 
-vm.insertdata = {};
-$scope.insertdata=function(){
-	
-console.log(vm.insertdata);
-console.log("in function");
-	$http.post("insertuser.php",{'username':$scope.username,'user_full_name':$scope.user_full_name,'user_email':$scope.email,'user_number':$scope.phone,'user_password':$scope.password,'user_role':$scope.userrole,'btnName':$scope.btnName})
-            .success(function(){
-            	console.log();
-            	$scope.msg="data inserted";
-              });
+          });
 
 }
 }]);

@@ -17,7 +17,7 @@ app.config(function($routeProvider) {
         })
      .when('/userlist', {
             templateUrl : 'userlist.php',
-            controller  : 'Userlist'
+            controller  : 'Userlistctrl'
         })
       .when('/adduser', {
             templateUrl : 'adduser.php',
