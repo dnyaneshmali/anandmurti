@@ -21,7 +21,7 @@ app.config(function($routeProvider) {
         })
       .when('/adduser', {
             templateUrl : 'adduser.php',
-            controller  : 'Adduser'
+            controller  : 'Adduserctrl'
         })
 
 });

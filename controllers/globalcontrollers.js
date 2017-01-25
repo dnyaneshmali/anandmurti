@@ -14,6 +14,20 @@ app.controller('Gogas', ['$scope', function($scope) {
 app.controller('Userlist', ['$scope', function($scope) {
     $scope.homepage = "Userlist";
 }]);
-app.controller('Adduser', ['$scope', function($scope) {
-    $scope.homepage = "Adduser";
+app.controller('Adduserctrl', ['$scope','$http', function($scope,$http) {
+
+var vm = this;
+
+vm.insertdata = {};
+$scope.insertdata=function(){
+	
+console.log(vm.insertdata);
+console.log("in function");
+	$http.post("insertuser.php",{'username':$scope.username,'user_full_name':$scope.user_full_name,'user_email':$scope.email,'user_number':$scope.phone,'user_password':$scope.password,'user_role':$scope.userrole,'btnName':$scope.btnName})
+            .success(function(){
+            	console.log();
+            	$scope.msg="data inserted";
+              });
+
+}
 }]);
