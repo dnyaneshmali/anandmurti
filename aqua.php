@@ -1,62 +1,167 @@
 <?php include('header.php');?>
       <!--End of main div-->
-      <div id="gas-slider">
+      <div id="aqua-slider" class="home-slider">
          <!-- <h1 class="slider-title text-center">Anand Murti Group</h1>
          <h4 class="slider-subtitle text-center">Welcomes you</h4>
          <p class="text-center">
             <a class="slider-btn1 btn btn-lg" href="#">MORE INFO</a>
             <a class="slider-btn2 btn btn-lg" href="#">CHECK IT</a>
          </p> -->
+         
+
+                        <div class="container-fluid" >
+                            <img src="images\aqua_(3).png" class="img-responsive">
+                        </div>
+                        
+                   
       </div>
-      <div class="page-content">
+      <div class="page-content aqua-page">
          <div class="title-section container">
             <h1 class="text-center">Aqua</h1>
             <p class="text-center text-muted">Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
          </div>
-         
-      </div>
-       <div class="aqua-form">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-offset-3 col-md-6 ">
-                     <form id="aquaform" name="aquaform" method="POST" action="#" >
-                     	<div class="form-group">
-                          
-                           <h4 class="text-center">Enquiry Form</h4>
-                         
-                        </div>
-                        <div class="form-group">
-                           <label for="name">Full Name:</label>
-                           <input class="form-control" id="name" type="text" name="fname" placeholder="Enter Name">
-						   <span id="errormsg"></span>
-                        </div>
-                        <div class="form-group">
-                           <label for="email">Email:</label>
-                           <input class="form-control" id="email" type="text" name="email" placeholder="Enter Email">
-						   <span id="emailerrormsg"></span>
-                        </div>
-						<div class="form-group">
-                           <label for="number">Number:</label>
-                           <input class="form-control" id="number" type="text" name="number" placeholder="Enter Mobile Number">
-						   <span id="numbererrormsg"></span>
-                        </div>
-                        <div class="form-group">
-                           <label for="subject">Subject:</label>
-                           <input class="form-control" id="subject" type="text" name="subject" placeholder="Enter Subject">
-						   <span id="suberrormsg"></span>
-                        </div>
-                        <div class="form-group">
-                           <label for="message">Message:</label>
-                           <textarea name="message" id="message" class="form-control" rows="3"></textarea>
-						   <span id="msgerrormsg"></span>
-                        </div>
-                        <button type="submit" id="contactsubmit" class="btn btn-default">Submit</button>
-                     </form>
+        <div class="third-section our-features">
+            <div class="container ">
+               <h2 class="text-center">Our key Features </h2>
+               <p class="text-center text-muted">Anand Murti Group of companies Pvt. Ltd having following features: </p>
+               <div class="row stylish-panel">
+                  <div class="col-md-6  ">
+                     <div id ="f1" class="single-faq panel panel-default">
+                      <div class="content-icon"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></div>
+                      <div class="box-right">
+                       <span class="panel-body"> <h4><b>Best Service</b></h4>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                        </span>
+                      </div>
+                     </div>
+                     <div id ="f2" class="single-faq panel panel-default">
+                       <div class="content-icon"><span class="glyphicon glyphicon-align-left" aria-hidden="true">
+                       </div>
+                       <div class="box-right">
+                        <span class="panel-body"> <h4><b>Quality products</b></h4>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                        </span>
+                      </div>
+                     </div>
                   </div>
-                  
+                  <div class="col-md-6">
+                     <div id="f4" class="single-faq panel panel-default">
+                       <div class="content-icon"><span class="glyphicon glyphicon-star" aria-hidden="true">
+                       </div>
+                        <div class="box-right">
+                       <span class="panel-body">  <h4><b>Easy Transactions</b></h4>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                        </span>
+                      </div>
+                     </div>
+                     <div id="f4" class="single-faq panel panel-default">
+                       <div class="content-icon"><span class="glyphicon glyphicon-align-left" aria-hidden="true">
+                       </div>
+                       <div class="box-right">
+                       <span class="panel-body"> 
+                        <h4><b>On time delivery</b></h4>
+                        <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                        </span>
+                      </div>
+                     </div>
+                  </div>
                </div>
             </div>
          </div>
+         
+
+      
+          <div class="container">
+        <div class="row">
+            <div class="col-md-12   ">
+                <div id="imageCarousel" class="carousel slide" data-interval="2000"
+                     data-ride="carousel" data-pause="hover" data-wrap="true">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#imageCarousel" data-slide-to="1"></li>
+                        <li data-target="#imageCarousel" data-slide-to="2"></li>
+                  <li data-target="#imageCarousel" data-slide-to="3"></li>
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img src="images\gas_stove.png" class="img-responsive">
+                                    
+                                </div>
+                                <div class="col-xs-3">
+                                    <img src="images\cooker.png" class="img-responsive">
+                                    
+                                </div>
+                                <div class="col-xs-3">
+                                    <img src="images\gas_stove.png" class="img-responsive">
+                                    
+                                </div>
+                        <div class="col-xs-3">
+                                    <img src="images\gas_stove.png" class="img-responsive">
+                                    
+                                </div>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img src="images\lighter.png" class="img-responsive">
+                                    
+                                </div>
+                                <div class="col-xs-3">
+                                    <img src="images\vessel.png" class="img-responsive">
+                                   
+                                </div>
+                                <div class="col-xs-3">
+                                    <img src="images\gg.jpg" class="img-responsive">
+                                    
+                                </div>
+                        <div class="col-xs-3">
+                                    <img src="images\gas_stove.png" class="img-responsive">
+                                    
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="item">
+                            <div class="row">
+                                <div class="col-xs-3">
+                                    <img src="images\gas_cylinders.png" class="img-responsive">
+                                    
+                                </div>
+                                <div class="col-xs-3">
+                                    <img src="images\gas_stove_large.png" class="img-responsive">
+                                    
+                                </div>
+                                <div class="col-xs-3">
+                                    <img src="images\gas_cylinders.png" class="img-responsive">
+                                    
+                                </div>
+                        <div class="col-xs-3">
+                                    <img src="images\gas_stove.png" class="img-responsive">
+                                   
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <a href="#imageCarousel" class="carousel-control left" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a href="#imageCarousel" class="carousel-control right" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
+          </div>
+
 	  <div class="footer-cta-section">
 	  <div class="container">
 	  <div class="row">

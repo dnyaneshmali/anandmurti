@@ -1,14 +1,70 @@
 <?php include('header.php');?>
       <!--End of main div-->
-      <div id="home-slider">
-         <h1 class="slider-title text-center"></h1>
+      <div id="home-slider" class="home-slider">
+	  <!--<h1 class="slider-title text-center"></h1>
          <h4 class="slider-subtitle text-center"></h4>
          <p class="text-center">
             <a class="slider-btn1 btn btn-lg" href="#">MORE INFO</a>
             <a class="slider-btn2 btn btn-lg" href="#">CHECK IT</a>
-         </p>
+         </p>-->
+         <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12 col-md-offset-0">
+                <div id="imageCarousel" class="carousel slide" data-interval="3000"
+                     data-ride="carousel" data-pause="hover" data-wrap="true">
+
+                    <ol class="carousel-indicators">
+                        <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
+                        <li data-target="#imageCarousel" data-slide-to="1"></li>
+                       <!--  <li data-target="#imageCarousel" data-slide-to="2"></li>
+                        <li data-target="#imageCarousel" data-slide-to="3"></li> -->
+                    </ol>
+
+                    <div class="carousel-inner">
+                        <div class="item active">
+                            <img src="images\aqua_(3).png" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h3>Aqua</h3>
+                                <p>Aqua water for healthy life</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images\gogas_(3).png" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h3>Go gas </h3>
+                                <p>Lpg gas for domestic and industrial use </p>
+                            </div>
+                        </div>
+                       <!--  <div class="item">
+                            <img src="images\gas_stove.png" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h3>Lighthouse</h3>
+                                <p>Lighthouse Image Description</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <img src="images\cooker.png" class="img-responsive">
+                            <div class="carousel-caption">
+                                <h3>Penguins</h3>
+                                <p>Penguins Image Description</p>
+                            </div>
+                        </div> -->
+                    </div>
+
+                    <a href="#imageCarousel" class="carousel-control left" data-slide="prev">
+                        <span class="glyphicon glyphicon-chevron-left"></span>
+                    </a>
+                    <a href="#imageCarousel" class="carousel-control right" data-slide="next">
+                        <span class="glyphicon glyphicon-chevron-right"></span>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+    </div>
       </div>
-      <div class="home-page-content">
+	  
+      <div class="page-content home-page">
          <div class="first-section">
             <div class="container">
                <div class="row">
@@ -23,52 +79,89 @@
             <div class="container">
                <h2 class="text-center">Solutions that you need everyday</h2>
                <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
-               <div class="row home-content-box">
-                  <div class="col-md-4 col-sm-6 text-center">
-                   <img src="/anandmurti/assets/images/gas_icon.png">
+               <div class="row home-content-box stylish-panel">
+                <div class="col-md-4 col-sm-6">
+                <div class="panel panel-default">
+                  <div class="text-center">
+                    <div class="panel-body">
+                   <img id="img-1" src="/anandmurti/assets/images/gas_icon.png">
                      <h4>Go Gas</h4>
                      <p class="text-center">Gogas is a leading brand name for Auto LPG Dispensing Stations( ALDS ) by any private company in India. It is a trusted and a proven brand owned by the parent company Confidence Petroleum India Ltd. </p>
                   </div>
-                  <div class="col-md-4 s12 text-center">
-                      <img src="/anandmurti/assets/images/aqua_icon.png">
+                    </div>
+                       </div>
+                </div>
+                <div class="col-md-4 col-sm-6">
+                <div class="panel panel-default ">
+                  <div class="text-center">
+                    <div class="panel-body">
+                      <img id="img-2" src="/anandmurti/assets/images/aqua_icon.png">
                      <h4>Aqua Amaze</h4>
-                     <p class="text-center">RO + UV + TDS controller + Mineral added, 10 STAGE PURIFICATION
-"Aqua 
-water purifier "
-AN ISO 9001-2008 certified company</p>
+                     <p class="text-center">RO + UV + TDS controller + Mineral added, 10 STAGE PURIFICATION "Aqua 
+                        water purifier "
+                        AN ISO 9001-2008 certified company</p>
                   </div>
-                  <div class="col-md-4 col-sm-6 text-center">
-                    <img src="/anandmurti/assets/images/fb_icon.png">
+                   </div>
+                    </div>
+                      </div>
+                      <div class="col-md-4 col-sm-6">
+                    <div class="panel panel-default">
+                  <div class="text-center">
+                     <div class="panel-body">
+                    <img id="img-3" src="/anandmurti/assets/images/fb_icon.png">
                      <h4>Food Beverages</h4>
                      <p class="text-center">Anand Murti F&B Pvt. Ltd is a fast growing company extending world-class services in F&B and Retail businesses.
-With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  Pvt. Ltd is a one stop shop for high quality , hygienic and end to end F&B and Retail Services.</p>
+                        With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  Pvt. Ltd is a one stop shop for high quality , hygienic and end to end F&B and Retail Services.</p>
                   </div>
+                </div>
+              </div>
+            </div>
                </div>
             </div>
          </div>
-         <div class="third-section">
-            <div class="container">
+         <div class="third-section our-features">
+            <div class="container ">
                <h2 class="text-center">Our key Features </h2>
                <p class="text-center text-muted">Anand Murti Group of companies Pvt. Ltd having following features: </p>
-               <div class="row">
-                  <div class="col-md-6">
-                     <div class="single-faq">
-                        <h4><b>Best Service</b></h4>
+               <div class="row stylish-panel">
+                  <div class="col-md-6  ">
+                     <div id ="f1" class="single-faq panel panel-default">
+                      <div class="content-icon"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></div>
+                      <div class="box-right">
+                       <span class="panel-body"> <h4><b>Best Service</b></h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                        </span>
+                      </div>
                      </div>
-                     <div class="single-faq">
-                        <h4><b>Quality products</b></h4>
+                     <div id ="f2" class="single-faq panel panel-default">
+                       <div class="content-icon"><span class="glyphicon glyphicon-align-left" aria-hidden="true">
+                       </div>
+                       <div class="box-right">
+                        <span class="panel-body"> <h4><b>Quality products</b></h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                        </span>
+                      </div>
                      </div>
                   </div>
                   <div class="col-md-6">
-                     <div class="single-faq">
-                        <h4><b>Easy Transactions</b></h4>
+                     <div id="f4" class="single-faq panel panel-default">
+                       <div class="content-icon"><span class="glyphicon glyphicon-star" aria-hidden="true">
+                       </div>
+                        <div class="box-right">
+                       <span class="panel-body">  <h4><b>Easy Transactions</b></h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                        </span>
+                      </div>
                      </div>
-                     <div class="single-faq">
+                     <div id="f4" class="single-faq panel panel-default">
+                       <div class="content-icon"><span class="glyphicon glyphicon-align-left" aria-hidden="true">
+                       </div>
+                       <div class="box-right">
+                       <span class="panel-body"> 
                         <h4><b>On time delivery</b></h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
+                        </span>
+                      </div>
                      </div>
                   </div>
                </div>

@@ -1,126 +1,80 @@
 <?php include('header.php');?>
       <!--End of main div-->
-      <div class="page-content">
-         <div class="title-section container">
-            <h1 class="text-center">Get In Touch</h1>
-            <p class="text-center text-muted">Have a question, comment, or just want to say hi? Drop us a line!</p>
-         </div>
-         <div class="contact-form">
-            <div class="container">
-               <div class="row">
-                  <div class="col-md-6">
-                     <form id="contactform" name="contactform" method="POST" action="#" >
-                        <div class="form-group">
-                           <label for="name">Full Name:</label>
-                           <input class="form-control" id="name" type="text" name="fname" placeholder="Enter Name">
-						   <span id="errormsg"></span>
-                        </div>
-                        <div class="form-group">
-                           <label for="email">Email:</label>
-                           <input class="form-control" id="email" type="text" name="email" placeholder="Enter Email">
-						   <span id="emailerrormsg"></span>
-                        </div>
-						<div class="form-group">
-                           <label for="number">Number:</label>
-                           <input class="form-control" id="number" type="text" name="number" placeholder="Enter Mobile Number">
-						   <span id="numbererrormsg"></span>
-                        </div>
-                        <div class="form-group">
-                           <label for="subject">Subject:</label>
-                           <input class="form-control" id="subject" type="text" name="subject" placeholder="Enter Subject">
-						   <span id="suberrormsg"></span>
-                        </div>
-                        <div class="form-group">
-                           <label for="message">Message:</label>
-                           <textarea name="message" id="message" class="form-control" rows="3"></textarea>
-						   <span id="msgerrormsg"></span>
-                        </div>
-                        <button type="submit" id="contactsubmit" class="btn btn-default">Submit</button>
-                     </form>
-                  </div>
-                  <div class="col-md-offset-2 col-md-4">
-                     <div class="row contact-details">
-                        <div class="item">
-                           <div class="icon">
-                              <i class="fa fa-map-marker"></i>
-                           </div>
-                           <div class="content">
-                              Softinfology Pvt. Ltd.<br/>
-                              #314, World Trade Center<br/>
-                              Near EON IT Park,<br/>
-                              Kharadi Pune-41453<br/>
-                           </div>
-                        </div>
-                        <div class="item">
-                           <div class="icon">
-                              <i class="fa fa-phone"></i>
-                           </div>
-                           <div class="content">
-                              Softinfology Pvt. Ltd.<br/>
-                              #314, World Trade Center<br/>
-                              Near EON IT Park,<br/>
-                              Kharadi Pune-41453<br/>
-                           </div>
-                        </div>
-                        <div class="item">
-                           <div class="icon">
-                              <i class="fa fa-envelope-o"></i>
-                           </div>
-                           <div class="content">
-                              Softinfology Pvt. Ltd.<br/>
-                              #314, World Trade Center<br/>
-                              Near EON IT Park,<br/>
-                              Kharadi Pune-41453<br/>
-                           </div>
-                        </div>
-                        <div class="social-shares">
-                           <h2>Share</h2>
-                           <ul class="contact-social-list">
-                              <li>
-                                 <a href="#" class="facebook">
-                                 <i class="fa fa-facebook"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#" class="twitter">
-                                 <i class="fa fa-twitter"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#" class="linkedin">
-                                 <i class="fa fa-linkedin"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#" class="google">
-                                 <i class="fa fa-google-plus"></i>
-                                 </a>
-                              </li>
-                              <li>
-                                 <a href="#" class="rss">
-                                 <i class="fa fa-rss"></i>
-                                 </a>
-                              </li>
-                           </ul>
-                        </div>
-                     </div>
-                  </div>
-               </div>
-            </div>
-         </div>
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+    $(".arrowup").click(function(){
+        $(".contact-area").toggle();
+    });
+});
+</script>
+      <div class="page-content contact-page">
+     <div class="container">
+     <div class="row">
+     <div class="col-md-12 col-sm-12 col-lg-12">
+        <div id="content" style="margin-top:20px;">
+  <div class="container">
+    <div class="row">
+     <div class="col-md-12 col-sm-12 col-lg-12">
+    <div class="contentarea">
+      <div class="innerright" style="width:100%; padding-bottom:20px; position:relative;">
+        <h1><center>Contact us</center></h1>
+        <iframe width="1000" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=WTC%20kharadi%20pune+(Softinfology)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style=" margin-top: 30px;"></iframe>
+        <div class="contact-area" style="font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;">
+          <ul class="info">
+            <li><img src="/anandmurti/assets/images/mail.png" alt="" class="cnt" width="58" height="58" /><span>
+              <h2>Email</h2>
+              <a href="mailto:jxyz@india.co.in">anandmurti@india.co.in</a> </span></li>
+            <li><img src="/anandmurti/assets/images/mobile.png" alt="" class="cnt"   width="58" height="58"   /><span>
+              <h2>Teliphone</h2>
+              (120) 4609000 <br />
+              (120) 2470800 </span></li>
+            <li><img src="/anandmurti/assets/images/diirection.png" alt="" class="cnt"   width="58" height="58"  /><span>
+              <h2>Direction</h2>
+              Sector-128 Pune-411410<br />
+              Maharashtra India</span></li>
+          </ul>
+          <div class="contfrm">
+            <p>For all queries please contact us at the below addresses</p>
+            <div class="cntleft"> <strong>Registered &amp; Main Office</strong><br />
+             Anandmurti Group Limited <br />
+              (CIN:L14106UP1995PLC019017)<br />
+              Sector-128, Pune - 411410<br />
+              Maharashtra, India<br />
+              Ph No: (120) 4609000, 2470800<br />
+              Fax: (120) 4609464, 4609496 </div>
+            <div class="cntright"> <strong>Go Gas center</strong><br />
+               Anandmurti Group Limited <br />
+               “Go Gas”<br />
+              63, Natepute, Vasant Vihar<br />
+              Pune -110 057<br />
+              India<br />
+              Email address for investors :<a href="mailto:jal.investor@jalindia.co.in">anandmurti@india.co.in</a> </div>
+          </div>
+        </div>
+        <div class="arrowup">Show Map</div>
       </div>
-	  <div class="footer-cta-section">
-	  <div class="container">
-	  <div class="row">
-	  <div class="col-md-9">
-	  <h3>Click Here To Contact And To Know More !</h3>
-	  </div>
-	  <div class="col-md-3">
-	  <a class="footer-cta-btn btn btn-lg" href="#">CHECK IT</a>
-	  </div>
-	  </div>
-	  </div>
-	  </div>
+    </div>
+  </div>
+</div>
+      </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     </div>
+     <div class="footer-cta-section">
+     <div class="container">
+     <div class="row">
+     <div class="col-md-9">
+     <h3>Click Here To Contact And To Know More !</h3>
+     </div>
+     <div class="col-md-3">
+     <a class="footer-cta-btn btn btn-lg" href="#">CHECK IT</a>
+     </div>
+     </div>
+     </div>
+     </div>
       
       <?php include('footer.php');?>
    </body>

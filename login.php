@@ -12,7 +12,7 @@
     <meta name="author" content="">
     <link rel="icon" href="../../favicon.ico">
 
-    <title>Signin Template for Bootstrap</title>
+    <title>Login</title>
 
     <!-- Bootstrap core CSS -->
           <link  rel="stylesheet" href="assets/css/bootstrap.min.css">
@@ -25,10 +25,41 @@
   <body>
 
     <div class="container">
+      <div class="row">
+<div class = "panel panel-default">
+   <div class = "panel-body">
+      <!-- <form class="form-horizontal col-md-offset-3 col-md-5">
+        <div class="form-group"> <h2 class="">Please Login</h2></div> -->
+       <!-- <div class="form-group">     
+        <label for="inputUserName" class="control-label col-sm-2">Username</label>
+        <div class="col-sm-10">
+            <input class="form-control" placeholder="Login Username"
+                    type="text" id="inputUserName" /></div></div> -->
+       <!-- <div class="form-group">
+        <label for="inputPassword" class="control-label col-sm-2">Password</label>
+        <div class="col-sm-10">
+            <input class="form-control" placeholder="Login Password"
+                    type="password" id="inputPassword" />
+        </div></div> -->
+       <!--  <div>
+        <div  class="col-sm-12 form-group checkbox">
+          <label >
+            <input type="checkbox" value="remember-me"> Remember me
+          </label>
+        </div>
+      </div> -->
+      <!-- <div class="col-md-offset-4 col-md-4">
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Login in</button>
+      </div> -->
         <div ng-app='AnandMurtiLogin' ng-controller='loginCtrl'>
 
+<<<<<<< HEAD
       <form class="form-signin" >
         <h2 class="form-signin-heading">Please sign in</h2>
+=======
+      <form class="form-horizontal col-md-offset-3 col-md-5">
+         <div class="form-group"> <h2 class="">Please Login</h2></div>
+>>>>>>> 7577ee00a5624fb170ffa6f50150129983554511
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" ng-model="email" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
@@ -41,7 +72,9 @@
         <button class="btn btn-lg btn-primary btn-block" ng-click="login()" type="submit">Sign in</button><br>
          <span>{{responseMessage}}</span>
       </form>
-
+       </div>
+     </div>
+     </div>
     </div> <!-- /container -->
 
 
