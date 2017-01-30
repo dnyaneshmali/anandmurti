@@ -15,5 +15,13 @@ app.config(function($routeProvider) {
             templateUrl : 'gogas/gogasdashboard.php',
             controller  : 'Gogas'
         })
+     .when('/adminlist', {
+            templateUrl : 'adminlist.php',
+            controller  : 'Adminlistctrl'
+        })
+      .when('/addadmin', {
+            templateUrl : 'Addadmin.php',
+            controller  : 'Addadminctrl'
+        })
 
 });
