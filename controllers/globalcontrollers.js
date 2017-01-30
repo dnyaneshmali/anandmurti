@@ -20,14 +20,14 @@ app.controller('Adminlistctrl', ['$scope','$http', function($scope,$http) {
     });
 
 
-  $scope.deleteuser=function(user_id){
+  $scope.deleteuser=function(admin_id){
     alert('in delete function');
 
-console.log(user_id);
+console.log(admin_id);
      $http({
           method  : 'POST',
           url     : '../../models/deleteadmin.php',
-          data    : {'user_id':user_id}, //forms user object
+          data    : {'admin_id':admin_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
@@ -43,28 +43,21 @@ console.log(user_id);
 
 
 app.controller('Addadminctrl', ['$scope','$http', function($scope,$http) {
-$scope.user = {};
-$scope.insertdata=function(user){
-$scope.user = angular.copy(user);
-//console.log( $scope.user );
+$scope.admin = {};
+$scope.insertdata=function(admin){
+$scope.admin = angular.copy(admin);
+console.log($scope.admin);
 	 $http({
           method  : 'POST',
           url     : '../../models/insertadmin.php',
-          data    : $scope.user, //forms user object
+          data    : $scope.admin, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
 
      .success(function(data) {
            /* console.log(data);*/
-
-           if (data.errors) {
-              // Showing errors.
-              $scope.errorName = data.errors.name;
-              $scope.errorUserName = data.errors.username;
-              $scope.errorEmail = data.errors.email;
-            } else {
               $scope.msg = "data inserted successfully "
-            }
+            
 
           });
 

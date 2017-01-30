@@ -2,7 +2,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Button Example <small>Users</small></h2>
+                    <h2>Button Example <small>Admin</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -38,14 +38,14 @@
 
 
                       <tbody>
-                        <tr ng-repeat="user in data">
-                          <td>{{user.user_full_name}}</td>
-                          <td>{{user.user_email}}</td>
-                          <td>{{user.user_number}}</td>
-                          <td>{{user.user_role}}</td>
-                          <td>{{user.user_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(user.user_id);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(user.user_id,user.username);">Edit</button></td>
+                        <tr ng-repeat="admin in data">
+                          <td>{{admin.admin_name}}</td>
+                          <td>{{admin.admin_email}}</td>
+                          <td>{{admin.admin_number}}</td>
+                          <td>{{admin.admin_role}}</td>
+                          <td>{{admin.admin_date}}</td>
+                          <td><button class="btn btn-danger" ng-click="deleteuser(admin.admin_id);">Delete</button></td>
+                          <td><button class="btn btn-warning" ng-click="edituser(admin.admin_id,admin.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>
                     </table>
