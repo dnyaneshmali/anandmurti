@@ -2,7 +2,7 @@
 $root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
 include($root."/config/config.php");
 
-$query="SELECT * FROM tbl_users";
+$query="SELECT * FROM tbl_admin";
 $result = mysqli_query($connection,$query);
 
 while ($row = mysqli_fetch_assoc($result)){
