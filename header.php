@@ -4,17 +4,20 @@
       <meta name="viewport"    content="width=device-width, initial-scale=1.0">
       <meta name="description" content="">
       <meta name="author"      content="softinfology.com">
+      <meta name="keywords" content="go gas,aqua,natepute,filtered water">
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <title>Template With Slider</title>
       <link  rel="stylesheet" href="assets/css/bootstrap.min.css">
+	  <!--1 <link href="assets\css\bootstrap.min.css" rel="stylesheet"> -->
     <link href="<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
       <!--Font awesome file-->
 	<link rel="stylesheet" type="text/css" href="assets/css/front-style.css">
-    <link rel="stylesheet" type="text/css" href=" http://localhost/anandmurti/assets/css/owl.carousel.css" />
+   <link rel="stylesheet" type="text/css" href="assets/css/effects.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href=" http://localhost/anandmurti/assets/css/owl.carousel.css" /> -->
         <!--Custom stylesheet-->
    </head>
-   <body class="body-wrapper">
+   <body class="body-wrapper" class="modal-open">
       <div id="header-wrapper">
          <div class= "navbar navbar-dual navbar-inverse navbar-fixed-top">
             <!-- fixed navbar -->

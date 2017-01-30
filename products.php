@@ -1,174 +1,240 @@
 <?php include('header.php');?>
+
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
       <!--End of main div-->
-      <div class="products-content">
+       <!--  <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" /> -->
+      <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/tabs.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/tabstyles.css" />
+      /*<script src="assets\js\modernizr.custom.js"></script>*/
+
+      <div class="page-content products-page">
          <div class="title-section container">
             <h1 class="text-center">Products</h1>
             <p class="text-center text-muted">Have a question, comment, or just want to say hi? Drop us a line!</p>
          </div>
 
-         <div class="container">
+         <div class="container bg">
  <!--  <h2>Dynamic Tabs</h2>
   <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
  -->
-  <ul class="nav nav-tabs">
-    <li class="active"><a data-toggle="tab" href="#home">Go Gas</a></li>
-    <li><a data-toggle="tab" href="#menu1">Aqua</a></li>
-    <li><a data-toggle="tab" href="#menu2">Food Beverages</a></li>
+  <div class="tabs tabs-style-tzoid">
+          <nav>
+  <ul >
+    <li><a href="#section-tzoid-1" class="icon icon-home"><span>Go Gas</span></a></li>
+              <li><a href="#section-tzoid-2" class="icon icon-box"><span>Aqua</span></a></li>
+              <li><a href="#section-tzoid-3" class="icon icon-upload"><span>Food Beverages</span></a></li>
 
   </ul>
-
-  <div class="tab-content">
-    <div id="home" class="tab-pane fade in active">
-      <h3>Go Gas</h3>
-      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-     <div class="album text-muted">
-      <div class="container">
-        <div class="row">
-          <div class="card">
-            <img src="images/gas_cylinders.png" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img src="images/gas_stove_large.png" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img src="images/gas_stove.png" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-
-          <div class="card">
-            <img src="images/coocker.png" alt="Card image cap" >
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img src="images/lighter.png" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img src="images/vessel.png" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    </div>
-    <div id="menu1" class="tab-pane fade">
-      <h3>Aqua</h3>
-      <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-      <div class="album text-muted">
-      <div class="container">
-        <div class="row">
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap" >
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    </div>
-    <div id="menu2" class="tab-pane fade">
-      <h3>Food Beverages</h3>
-      <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
-      <div class="album text-muted">
-      <div class="container">
-        <div class="row">
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap" >
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    </div>
+  </nav>
+ 
+  <div class="content-wrap">
   
+<section id="section-tzoid-1"><h3>Go Gas</h3>
+<!--       <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+ -->     <div class="album text-muted">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+          <div class="card ">
+            <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
+            <div class="overlay">
+              <h2>Gas Cylinders</h2>
+              <button class="info nullbutton">View
+              </button>
+            </div>        
+        </div>
+          </div>
+        </div>
+          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+           <div class="card">
+        <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_stove_large.png" alt="Large gas stove">
+            <div class="overlay">
+              <h2>Large gas stove</h2>
+              <button class="info nullbutton">View
+              </button>
+            </div>        
+        </div>
+          </div>
+        </div>
+          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+            <div class="card">
+          <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_stove.png" alt="Small gas stove">
+            <div class="overlay">
+              <h2>Small gas stove</h2>
+              <button class="info nullbutton">View
+              </button>
+            </div>        
+        </div>
+          </div>
+        </div>
+
+        <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+            <div class="card">
+        <div class="hover ehover13">
+          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+            <div class="overlay">
+              <h2>Pressure cooker</h2>
+              <button class="info nullbutton">View
+              </button>
+            </div>        
+        </div>
+           </div>
+          </div>
+          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+             <div class="card">
+              <div class="hover ehover13">
+          <img class="img-responsive" src="images/lighter.png" alt="lighter">
+            <div class="overlay">
+              <h2>lighter</h2>
+              <button class="info nullbutton">View
+              </button>
+            </div>
+            </div>        
+        </div>
+          </div>
+          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+            <div class="card">
+             <div class="hover ehover13">
+          <img class="img-responsive" src="images/vessel.png" alt="Vessel">
+            <div class="overlay">
+              <h2>Vessel</h2>
+              <button class="info nullbutton">View
+              </button>
+            </div>        
+        </div>
+      </div>
+          </div>
+
+          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+            <div class="card">
+            <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_wire.png" alt="Gas Wire">
+            <div class="overlay">
+              <h2>Gas Wire</h2>
+              <button class="info nullbutton">View
+              </button>
+            </div>        
+        </div>
+      </div>
+          </div>
+          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+            <div class="card">
+            <img data-src="" alt="Card image cap">
+          
+          </div> 
+        </div>
+           <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+            <div class="card">
+            <img data-src="" alt="Card image cap">
+           </div> 
+          </div> 
+        </div>
+
+      </div>
+    </div></section>
+            <section id="section-tzoid-2"> <h3>Aqua</h3>
+<!--       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+ -->      <div class="album text-muted">
+      <div class="container">
+        <div class="row">
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap" >
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+        </div>
+
+      </div>
+    </div></section>
+            <section id="section-tzoid-3"> <h3>Food Beverages</h3>
+<!--       <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam.</p>
+ -->      <div class="album text-muted">
+      <div class="container">
+        <div class="row">
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap" >
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+          <div class="card">
+            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
+<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+ -->          </div>
+        </div>
+
+      </div>
+    </div></section>
+            
   </div>
+</div>
+
 </div>
 
         
@@ -185,7 +251,59 @@
 	  </div>
 	  </div>
 	  </div>
+    <div id="modal1" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title">Hover effect 1</h2>
+            </div>
+            <div class="modal-body">
+                <h3>HTML</h3>
+        <p> Note: if not using bootstrap and you wish to use the hover simply remove the classes on the first div "col-lg-3 col-md-4 col-sm-6 col-xs-12" and give this div a chosen size eg width: 300px</p>
+      </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>
+
+  <div id="modal13" class="modal fade">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h2 class="modal-title">Hover effect 13</h2>
+            </div>
+            <div class="modal-body">
+                <h3>HTML</h3>
+        <p> Note: if not using bootstrap and you wish to use the hover simply remove the classes on the first div "col-lg-3 col-md-4 col-sm-6 col-xs-12" and give this div a chosen size eg width: 300px</p>
+      
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+  </div>    
       
       <?php include('footer.php');?>
+        <script src="assets\js\cbpFWTabs.js"></script>
+       <script>
+      (function() {
+
+        [].slice.call( document.querySelectorAll( '.tabs' ) ).forEach( function( el ) {
+          new CBPFWTabs( el );
+        });
+
+      })();
+    </script>
    </body>
    </html>
+  
+  
+  <!--  /*<script>
+$(document).ready(function () {
+    $('[data-toggle="ppover"]').popover();
+});</script>*/ -->
