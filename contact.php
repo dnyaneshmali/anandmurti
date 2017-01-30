@@ -24,32 +24,32 @@ $(document).ready(function(){
           <ul class="info">
             <li><img src="/anandmurti/assets/images/mail.png" alt="" class="cnt" width="58" height="58" /><span>
               <h2>Email</h2>
-              <a href="mailto:jaypee@jalindia.co.in">jaypee@jalindia.co.in</a> </span></li>
+              <a href="mailto:jxyz@india.co.in">anandmurti@india.co.in</a> </span></li>
             <li><img src="/anandmurti/assets/images/mobile.png" alt="" class="cnt"   width="58" height="58"   /><span>
               <h2>Teliphone</h2>
               (120) 4609000 <br />
               (120) 2470800 </span></li>
             <li><img src="/anandmurti/assets/images/diirection.png" alt="" class="cnt"   width="58" height="58"  /><span>
               <h2>Direction</h2>
-              Sector-128 Noida-201304<br />
-              Uttar Pradesh India</span></li>
+              Sector-128 Pune-411410<br />
+              Maharashtra India</span></li>
           </ul>
           <div class="contfrm">
             <p>For all queries please contact us at the below addresses</p>
             <div class="cntleft"> <strong>Registered &amp; Main Office</strong><br />
-              Jaiprakash Associates Limited <br />
+             Anandmurti Group Limited <br />
               (CIN:L14106UP1995PLC019017)<br />
-              Sector-128, Noida - 201304<br />
-              Uttar Pradesh, India<br />
+              Sector-128, Pune - 411410<br />
+              Maharashtra, India<br />
               Ph No: (120) 4609000, 2470800<br />
               Fax: (120) 4609464, 4609496 </div>
             <div class="cntright"> <strong>Go Gas center</strong><br />
-              Jaiprakash Associates Limited <br />
-               “JA House”<br />
-              63, Basant Lok, Vasant Vihar<br />
-              New Delhi -110 057<br />
+               Anandmurti Group Limited <br />
+               “Go Gas”<br />
+              63, Natepute, Vasant Vihar<br />
+              Pune -110 057<br />
               India<br />
-              Email address for investors :<a href="mailto:jal.investor@jalindia.co.in">jal.investor@jalindia.co.in</a> </div>
+              Email address for investors :<a href="mailto:jal.investor@jalindia.co.in">anandmurti@india.co.in</a> </div>
           </div>
         </div>
         <div class="arrowup">Show Map</div>

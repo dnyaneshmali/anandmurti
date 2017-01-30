@@ -35,7 +35,7 @@ a:hover {
     margin-bottom: 0;
     border-bottom: 0 none;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
-    padding-bottom: 60px;
+    padding-bottom: 20px;
 }
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus,
@@ -44,6 +44,9 @@ a:hover {
 .navbar .navbar-nav > .active > a {
     background: none;
     color: #FF712C;
+}
+.navbar-collapse.collapse {
+    padding-top: 20px;
 }
 .dropdown-menu > li > a:hover {
     color: #FF712C;
@@ -448,7 +451,14 @@ img.owner_img {
   
      padding: 0px 0px;
  }
-
+.home-page .panel,.aqua-page .panel,.gogas-page .panel{
+    background-color: rgb(246, 247, 248);
+    box-shadow: 0 0.9px 10px  rgba(0,0,0,0.14);
+}
+.home-content-box .panel {
+    background-color: #fff;
+    margin: 10px;
+}
     
 .home-slider .container-fluid {
     padding-right: 0px;
@@ -458,7 +468,7 @@ img.owner_img {
     overflow-x: hidden;
 }
 .our-features .container {
-    background-color: rgb(246, 247, 248);
+    background-color: white;
 }
 .our-features .row {
     margin-right: -15px;
@@ -467,7 +477,7 @@ img.owner_img {
     padding-right: 50px;
 }
 .home-page .third-section,.aqua-page .third-section {
-        background-color: rgb(246, 247, 248);
+        background-color: white;
             margin-bottom: 30px;
 }
 .stylish-panel > div > #f1,.stylish-panel > div > #f2,.stylish-panel > div > #f3,.stylish-panel > div > #f4{
@@ -492,6 +502,9 @@ img.owner_img {
 .stylish-panel div#f1:hover,.stylish-panel div#f2:hover,.stylish-panel div#f3:hover,.stylish-panel div#f4:hover{
   border: 1px solid rgb(200, 200, 200);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+}
+.home-page .panel-body , .gogas-page .panel-body{
+    height: 250px;
 }
 /*product*/
 .nav-tabs>li>a {

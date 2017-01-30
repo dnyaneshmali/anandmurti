@@ -6,6 +6,7 @@
    letter-spacing: 0.5px;
     font-family: serif;
     font-size: medium;
+    box-shadow: 0 1px 21px rgba(0,0,0,0.21);
   
 }</style>
       <!--End of main div-->
