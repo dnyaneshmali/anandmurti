@@ -68,8 +68,8 @@ Add User
                             <option value="aquaadmin">aquaadmin</option>
                             <option value="gogasadmin">gogasadmin</option>
                           </select>
-                          <div class="error-container" ng-show="addadminform.title.$dirty && addadminform.userrole.$invalid" ng-messages="addadminform.userrole.$error">
-                         <div class="error" ng-message="required">This field is required!</div>
+                          <div class="error-container" ng-show="addadminform.userrole.$dirty && addadminform.userrole.$invalid" ng-messages="addadminform.userrole.$error">
+                         <div style="color:red;" class="error" ng-message="required">select Userrole </div>
                           </div>
                         </div>
                       </div>

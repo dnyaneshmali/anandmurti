@@ -52,14 +52,11 @@
         <button class="btn btn-lg btn-primary btn-block" type="submit">Login in</button>
       </div> -->
         <div ng-app='AnandMurtiLogin' ng-controller='loginCtrl'>
-
-<<<<<<< HEAD
       <form class="form-signin" >
         <h2 class="form-signin-heading">Please sign in</h2>
-=======
       <form class="form-horizontal col-md-offset-3 col-md-5">
          <div class="form-group"> <h2 class="">Please Login</h2></div>
->>>>>>> 7577ee00a5624fb170ffa6f50150129983554511
+
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" ng-model="email" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
