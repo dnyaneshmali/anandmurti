@@ -1,6 +1,6 @@
 var app = angular.module('AnandMurtiLogin', []);
  
-app.controller('loginCtrl', function ($scope, $http) {
+app.controller('loginCtrl', function ($scope, $http,$window) {
  
     $scope.login = function () {
  
@@ -18,10 +18,11 @@ app.controller('loginCtrl', function ($scope, $http) {
                 if(data == "1"){
                   // $location.path('/views/aqua.php');
 
-
                     $scope.responseMessage = "Successfully Logged In";
                     $scope.email="";
                     $scope.password="";
+
+                    $window.location.href="views/admin/admin.php";
                 }
                 else {
                     $scope.responseMessage = "Username or Password is incorrect";

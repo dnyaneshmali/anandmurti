@@ -66,21 +66,33 @@ a:hover {
 
 div#home-slider {
     padding-top: 90px;
-    background-image: url(/anandmurti/assets/images/home-image.png);
+   /* background-image: url(/anandmurti/assets/images/home-image.png);*/
     background-size: cover;
-    height: 500px;
+    height: 370px;
+	/*height: 500px;*/
     background-position: center;
-    /*background-attachment: fixed;*/
+    background-attachment: fixed;
     background-repeat: no-repeat;
 }
 div#gas-slider {
     padding-top: 90px;
-    background-image: url(/anandmurti/assets/images/home-image.png);
+  /*  background-image: url(/anandmurti/assets/images/home-image.png);*/
     background-size: cover;
-    height: 500px;
+    height: 370px;
     background-position: center;
-    /*background-attachment: fixed;*/
+    background-attachment: fixed;
     background-repeat: no-repeat;
+  /*  margin-top: 70px;*/
+}
+div#aqua-slider {
+    padding-top: 90px;
+  /*  background-image: url(/anandmurti/assets/images/aqua_banner.jpg);*/
+    background-size: cover;
+    height: 370px;
+    background-position: center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    /*margin-top: 70px;*/
 }
 .btn:hover,
 .btn:focus,
@@ -119,7 +131,7 @@ a.slider-btn2 {
     padding: 20px 15px;
 }
 .first-section {
-    margin-bottom: 44px;
+    margin-bottom: 30px;
     margin-top: 30px;
 }
 .second-section {
@@ -138,10 +150,11 @@ a.slider-btn2 {
 .single-faq {
     margin-top: 30px;
     margin-bottom: 30px;
+        padding: 10px;
 }
 /*----------------Contact Page Start----------*/
 
-.page-content ,.products-content {
+.page-content ,.products-page {
     margin-top: 75px;
 }
 #page-contact .title-section {
@@ -150,8 +163,8 @@ a.slider-btn2 {
 }
 
 .contact-form {
-    padding-top: 60px;
-    padding-bottom: 60px;
+   
+    padding-bottom: 30px;
 }
 .contact-details {
     background: #fff;
@@ -287,13 +300,13 @@ color:#fff;
 /*----------------Footer Section Start----------*/
 
 div#footer1 {
-    background: #f2f4f5;
+    background: #e1e4e6;
     color: #000;
 	padding-top: 30px;
     padding-bottom: 30px;
 }
 div#footer2 {
-    background: #e1e4e6;
+    background: rgb(192, 196, 198);
     color: #000;
 	padding-top: 10px;
 }
@@ -308,6 +321,7 @@ div#footer2 {
     .navbar-collapse ul {
         width: 100%;
         text-align: center;
+            margin-top: 40px;
     }
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:hover,
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
@@ -319,6 +333,7 @@ div#footer2 {
 
 .title-section.container {
     padding-top: 40px;
+        margin-bottom: 30px;
 }
 .upper_slider .item img{
     height: 100px;
@@ -330,14 +345,14 @@ div#footer2 {
   min-height: 50rem; /* Can be removed; just added for demo purposes */
   padding-top: 3rem;
   padding-bottom: 3rem;
-  background-color: #f7f7f7;
+   background-color: WHITE;
 }
 .text-muted {
     color: #636c72!important;
 }
 .card {
   float: left;
-  width: 33.333%;
+ /* width: 33.333%;*/
   padding: .75rem;
   margin-bottom: 2rem;
   border: 0;
@@ -405,4 +420,232 @@ span.heart {
 
 a.slider-btn2,a.slider-btn1 {
     margin-top: 200px;
+}
+/*about us*/
+img.owner_img {
+    float: left;
+    margin: 15px 20px 0px 0px;
+}
+
+.about-page .row {
+    margin-right: -15px;
+    margin-left: -15px;
+    margin-bottom: 30px;
+}
+/*index*/
+.home-page .content-icon , .aqua-page .content-icon {
+    float: left;
+    margin-top: 20px;
+}
+.home-page .content-icon span ,.aqua-page .content-icon span {
+    color: rgb(104, 176, 210);
+    font-size: 20px;
+    line-height: 50px;}
+.home-page .box-right , .aqua-page .box-right {
+    padding-left: 45px;
+}
+.navbar-brand {
+  
+     padding: 0px 0px;
+ }
+
+    
+.home-slider .container-fluid {
+    padding-right: 0px;
+    padding-left: 0px;
+    margin-right: auto;
+    margin-left: auto;
+    overflow-x: hidden;
+}
+.our-features .container {
+    background-color: rgb(246, 247, 248);
+}
+.our-features .row {
+    margin-right: -15px;
+    margin-left: -15px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+.home-page .third-section,.aqua-page .third-section {
+        background-color: rgb(246, 247, 248);
+            margin-bottom: 30px;
+}
+.stylish-panel > div > #f1,.stylish-panel > div > #f2,.stylish-panel > div > #f3,.stylish-panel > div > #f4{
+    padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+}
+.stylish-panel > div > #img-1,.stylish-panel > div > #img-2,.stylish-panel > div > #img-3
+{
+     padding: 10px;
+    border: 1px solid transparent;
+    border-radius: 4px;
+    transition: 0.2s;
+
+}
+.stylish-panel img#img-1:hover,.stylish-panel img#img-2:hover,.stylish-panel img#img-3:hover
+{
+     border: 1px solid rgb(200, 200, 200);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+}
+.stylish-panel div#f1:hover,.stylish-panel div#f2:hover,.stylish-panel div#f3:hover,.stylish-panel div#f4:hover{
+  border: 1px solid rgb(200, 200, 200);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+}
+/*product*/
+.nav-tabs>li>a {
+    font-size: 15px;
+}
+/*enquiry*/
+.enquiry-page i {
+    padding-top: 8px;
+}
+/*contact*/
+ #maincontent {
+    width: 1040px;
+    margin: 0 auto;
+    overflow: hidden;
+    padding: 0px 0px;
+    background: #fff;
+}
+.contact-area {
+    background: url(/anandmurti/assets/images/contactbg1.png) repeat;
+    width: 1000;
+    height: 460px;
+    position: absolute;
+    top: 53px;
+    padding: 20px;
+    margin-top: 30px;
+}
+.cnt {
+    float: left;
+}
+.contact-page ul.info li span {
+    float: left;
+    margin-left: 20px;
+    display: block;
+    color: #fff;
+    font-size: 14px;
+    line-height: 16px;
+}
+.contentarea {
+    width: 1000px;
+    padding: 0px 20px 10px;
+    overflow: hidden;
+    min-height: 454px;
+}
+
+.cntleft {
+    float: left;
+    width: 45%;
+    color: #f5f0ec;
+    margin-top: 10px;
+    line-height: 26px;
+}
+.cntright {
+    float: right;
+    width: 45%;
+    color: #f5f0ec;
+    margin-top: 10px;
+    line-height: 26px;
+}
+
+ul.info {
+    overflow: hidden;
+    margin-top: 20px;
+}
+.contfrm {
+    overflow: hidden;
+    margin-top: 60px;
+}
+.contfrm strong {
+    color: #222;
+    line-height: 30px;
+}
+.contact-page a {
+    color: #F90;
+    text-decoration: none;
+}
+.contact-page a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+.contact-page a {
+    cursor: pointer;
+}
+.arrowup {
+    margin: -36px auto 0px;
+    position: relative;
+    background-color: #f18737;
+    color: #fff;
+    width: 12%;
+    padding: 7px 20px;
+    text-align: center;
+    cursor: pointer;
+}
+.contact-page h2{
+  border: 0;
+    outline: 0;
+    
+    vertical-align: baseline;
+}
+.contact-page ul.info li span h2 {
+    background: none;
+    color: #fff;
+    padding: 0px 0px 10px 0px;
+    margin: 0px;
+}
+.contact-page ul{
+      margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+}
+.innerright h2 {
+    color: #36C;
+    font-size: 18px;
+    padding: 10px;
+    margin-bottom: 15px;
+    background-color: #ececec;
+    text-transform: uppercase;
+    font-weight: normal;
+    letter-spacing: 1px;
+}
+ul.info li {
+    float: left;
+    width: 30%;
+    margin-left: 3%;
+}
+li {
+    list-style: none;
+}
+.contact-area p {
+    color: #fff;
+}
+.innerright{
+width: 100%;
+    padding-bottom: 20px;
+    position: relative;
+  }
+  .contact-page h1 {
+    font-size: 48px;
+    margin-top: 60px;
+}
+/*media Queries*/
+@media screen and (max-width:736px){
+div#home-slider,div#gas-slider,div#aqua-slider {
+    padding-top: 170px;
+height: 210px;}
+
+
+   .about-page h1,.products-page h1,.enquiry-page h1 {
+    margin-top: 60px;
+}
+    
 }
