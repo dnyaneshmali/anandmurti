@@ -11,6 +11,6 @@ while ($row = mysqli_fetch_assoc($result)){
 	 $data[]=$row;
 
 }
-
 print json_encode($data);
+
 ?>

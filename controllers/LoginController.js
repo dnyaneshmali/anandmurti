@@ -3,7 +3,7 @@ var app = angular.module('AnandMurtiLogin', []);
 app.controller('loginCtrl', function ($scope, $http,$window) {
  
     $scope.login = function () {
- 
+ console.log($scope.email);
             var request = $http({
                 method: "post",
                 url: "LoginAction.php",
