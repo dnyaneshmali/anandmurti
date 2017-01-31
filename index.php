@@ -120,7 +120,7 @@
             </div>
          </div>
          <div class="third-section our-features">
-            <div class="container ">
+            <div class="container panel2">
                <h2 class="text-center">Our key Features </h2>
                <p class="text-center text-muted">Anand Murti Group of companies Pvt. Ltd having following features: </p>
                <div class="row stylish-panel">

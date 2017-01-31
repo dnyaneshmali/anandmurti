@@ -151,7 +151,7 @@ a.slider-btn2 {
 }
 .second-section {
     margin-bottom: 30px;
-    background-color: #f6f7f8;
+    /*background-color: #f6f7f8;*/
     padding-top: 32px;
     padding-bottom: 47px;
 }
@@ -473,9 +473,12 @@ img.owner_img {
   
      padding: 0px 0px;
  }
-.home-page .panel,.aqua-page .panel,.gogas-page .panel{
+.home-page .panel2 .panel,.aqua-page .panel,.gogas-page .panel{
     background-color: rgb(246, 247, 248);
     box-shadow: 0 0.9px 10px  rgba(0,0,0,0.14);
+}
+.panel{
+    border:none;
 }
 .home-content-box .panel {
   /*  background-color: #fff;*/
