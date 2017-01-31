@@ -13,7 +13,7 @@
 
 .tabs-style-tzoid nav ul li a {
 	padding: 0 1.5em 0 0.3em;
-	color: #0d9564;
+	color: #fff;
 	-webkit-transition: color 0.2s;
 	transition: color 0.2s;
 }
@@ -61,7 +61,7 @@
 
 .tabs-style-tzoid nav ul li.tab-current a::after,
 .tabs-style-tzoid .content-wrap {
-	background: #fff;
+	background: rgb(206, 200, 200);
 	box-shadow: none;
 }
 

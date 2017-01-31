@@ -6,7 +6,7 @@
       <meta name="author"      content="softinfology.com">
       <meta name="keywords" content="go gas,aqua,natepute,filtered water">
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <title>Template With Slider</title>
+      <title>Anandmurti</title>
       <link  rel="stylesheet" href="assets/css/bootstrap.min.css">
 	  <!--1 <link href="assets\css\bootstrap.min.css" rel="stylesheet"> -->
     <link href="<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>assets/css/font-awesome.min.css" rel="stylesheet">

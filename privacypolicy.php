@@ -7,7 +7,7 @@
          </div>
          
       </div>
-	  <div class="footer-cta-section">
+	  <!-- <div class="footer-cta-section">
 	  <div class="container">
 	  <div class="row">
 	  <div class="col-md-9">
@@ -18,7 +18,7 @@
 	  </div>
 	  </div>
 	  </div>
-	  </div>
+	  </div> -->
       
       <?php include('footer.php');?>
    </body>

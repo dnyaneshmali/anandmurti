@@ -4,8 +4,8 @@
 .customDiv{ margin:3px; min-height:300px; background-color:rgb(246, 247, 248);; 
    padding: 10px;
    letter-spacing: 0.5px;
-    font-family: serif;
-    font-size: medium;
+    font-family: Helvetica;
+    /*font-size: medium;*/
     box-shadow: 0 1px 21px rgba(0,0,0,0.21);
   
 }</style>
@@ -29,7 +29,7 @@ Founded in [year] by Mr.Pramod Baradkar. When Mr.Pramod Baradkar,first started o
 
       </div>
   </div>
-	  <div class="footer-cta-section">
+	  <!-- <div class="footer-cta-section">
 	  <div class="container">
 	  <div class="row">
 	  <div class="col-md-9">
@@ -40,7 +40,7 @@ Founded in [year] by Mr.Pramod Baradkar. When Mr.Pramod Baradkar,first started o
 	  </div>
 	  </div>
 	  </div>
-	  </div>
+	  </div> -->
        </div>
       <?php include('footer.php');?>
    

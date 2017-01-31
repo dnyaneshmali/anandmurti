@@ -76,7 +76,7 @@
             </div>
          </div>
          <div class="second-section">
-            <div class="container">
+            <div class="container panel1">
                <h2 class="text-center">Solutions that you need everyday</h2>
                <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
                <div class="row home-content-box stylish-panel">
@@ -168,7 +168,7 @@
             </div>
          </div>
       </div>
-     <div class="footer-cta-section">
+    <!--  <div class="footer-cta-section">
      <div class="container">
      <div class="row">
      <div class="col-md-9">
@@ -179,7 +179,7 @@
      </div>
      </div>
      </div>
-     </div>
+     </div> -->
       <!--Footer -->
       
      <?php include('footer.php');?>

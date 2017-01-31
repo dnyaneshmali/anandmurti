@@ -18,6 +18,15 @@ h2 {
 h3 {
     font-size: 24px;
 }
+.footer p,.footer a{
+    color:white;
+}
+.copyright p,.copyright a{
+    color:white;
+}
+.footer h3,.footer h5{
+    color:white;
+}
 h4 {
     font-size: 18px;
 }
@@ -30,6 +39,9 @@ a:hover {
 /*----------------Header Section Start----------*/
 
 .navbar {
+  /*  background: url(/anandmurti/assets/images/white_header.jpg);*/
+    /*background-color: rgb(112, 188, 68);*/
+     background-size: cover;
     padding: 12px 0;
     background: #fff;
     margin-bottom: 0;
@@ -283,7 +295,9 @@ ul.contact-social-list li {
 
 
 .footer-cta-section {
-    background-color: rgb(112, 188, 68);
+    background: url(/anandmurti/assets/images/green_footer.jpg);
+    /*background-color: rgb(112, 188, 68);*/
+     background-size: cover;
 	padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -303,13 +317,16 @@ color:#fff;
 /*----------------Footer Section Start----------*/
 
 div#footer1 {
-    background: #e1e4e6;
+     background: url(/anandmurti/assets/images/aquablue_footer.jpg);
+    /*background: #e1e4e6;*/
+    background-repeat: no-repeat;
+    background-size: cover;
     color: #000;
 	padding-top: 30px;
     padding-bottom: 30px;
 }
 div#footer2 {
-    background: rgb(192, 196, 198);
+    background: #000;
     color: #000;
 	padding-top: 10px;
 }
@@ -377,7 +394,7 @@ width: 1140px;
     max-width: 100%;
 }
 .copyright a {
-    color: black;
+    color: #fff;
 }
 span.heart {
     color: #cc4643;
@@ -436,6 +453,11 @@ img.owner_img {
     margin-bottom: 30px;
 }
 /*index*/
+.panel1 .panel.panel-default:hover {
+    box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+    margin-top: -10px;
+    transition: all 0.3s ease 0s;
+}
 .home-page .content-icon , .aqua-page .content-icon {
     float: left;
     margin-top: 20px;
@@ -456,7 +478,7 @@ img.owner_img {
     box-shadow: 0 0.9px 10px  rgba(0,0,0,0.14);
 }
 .home-content-box .panel {
-    background-color: #fff;
+  /*  background-color: #fff;*/
     margin: 10px;
 }
     
@@ -522,7 +544,7 @@ img.owner_img {
     padding: 0px 0px;
     background: #fff;
 }
-.contact-area {
+/*.contact-area {
     background: url(/anandmurti/assets/images/contactbg1.png) repeat;
     width: 1000;
     height: 460px;
@@ -530,7 +552,27 @@ img.owner_img {
     top: 53px;
     padding: 20px;
     margin-top: 30px;
+}*/
+.contact-area {
+    /* background: url(/anandmurti/assets/images/contactbg1.png) repeat; */
+    width: 1000;
+    height: 460px;
+    background-color: #607D8B;
+    opacity: 0.8;
+    position: absolute;
+    top: 53px;
+    padding: 20px;
+    margin-top: 30px;
 }
+/*.overlay .contact-area{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 1000;
+    height: 460px;
+  z-index: 10;
+  background-color: rgba(0,0,0,0.5);
+}*/
 .cnt {
     float: left;
 }

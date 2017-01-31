@@ -1,4 +1,4 @@
-<div id="footer1">
+<div id="footer1" class="footer">
          <div class="container">
             <div class="row">
                <div class="col-md-3 widget">
@@ -22,10 +22,10 @@
                      </p>
                   </div>
 				  <div>
-         				   <a href="http://localhost/anandmurti/enquiry.php" ><h5 class="widget-title" style="color: black;">Enquiry</h5></a> 
-         				  <a href="http://localhost/anandmurti/aboutus.php" ><h5 class="widget-title" style="color: black;">About Us</h5></a> 
-                         <a href="http://localhost/anandmurti/privacypolicy.php" class="widget-title"><h5 class="widget-title" style="color: black;">Privacy Policy</h5></a> 
-                        <a href="http://localhost/anandmurti/terms_conditions.php" class="widget-title"><h5 class="widget-title" style="color: black;">Terms & Conditions</h5></a>
+         				   <a href="http://localhost/anandmurti/enquiry.php" ><h5 class="widget-title" >Enquiry</h5></a> 
+         				  <a href="http://localhost/anandmurti/aboutus.php" ><h5 class="widget-title" >About Us</h5></a> 
+                         <a href="http://localhost/anandmurti/privacypolicy.php" class="widget-title"><h5 class="widget-title" >Privacy Policy</h5></a> 
+                        <a href="http://localhost/anandmurti/terms_conditions.php" class="widget-title"><h5 class="widget-title" >Terms & Conditions</h5></a>
                         
 
 				  </div>
