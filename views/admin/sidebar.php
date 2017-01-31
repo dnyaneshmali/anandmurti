@@ -25,6 +25,8 @@
                   <li><a><i class="fa fa-home"></i> Aqua Agency <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/aqua">Dashboard</a></li>
+                      <li><a href="#/addaquacustomer">Add Customers</a></li>
+                      <li><a href="#/listaquacustomer">Add Customers</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-home"></i> Go Gas Agency<span class="fa fa-chevron-down"></span></a>

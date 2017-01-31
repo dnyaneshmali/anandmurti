@@ -2,6 +2,13 @@
 		// check username or password from database
 $root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
 include($root."/config/config.php");
+
+$jsondata=file_get_contents("php://input");
+print_r($jsondata);
+$data = json_decode($jsondata, true);
+
+echo $data;
+/*
 $query="SELECT admin_username,admin_password FROM tbl_admin";
 $result = mysqli_query($connection,$query);
 
@@ -24,3 +31,4 @@ echo json_encode($data);
 		     	echo "0";
 		     }
 		     ?>
+		     */

@@ -1,32 +1,25 @@
 var app = angular.module('AnandMurtiLogin', []);
  
 app.controller('loginCtrl', function ($scope, $http,$window) {
- 
-    $scope.login = function () {
- console.log($scope.email);
-            var request = $http({
-                method: "post",
-                url: "LoginAction.php",
-                data: {
-                    email: $scope.email,
-                    password: $scope.password
-                },
-                headers: { 'Content-Type': 'application/x-www-form-urlencoded' }
-            });
-            /* Successful HTTP post request or not */
-            request.success(function (data) {
-                if(data == "1"){
-                  // $location.path('/views/aqua.php');
+// $scope.data = {};
+    $scope.login=function(loginadmin){
+        $scope.data = angular.copy(loginadmin);
+        //console.log($scope.data);
+     $http({
+          method  : 'POST',
+          url     : 'LoginAction.php',
+          data    : $scope.data, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
 
-                    $scope.responseMessage = "Successfully Logged In";
-                    $scope.email="";
-                    $scope.password="";
+     .success(function(data) {
+              $scope.msg = "data inserted successfully"
+            
 
-                    $window.location.href="views/admin/admin.php";
-                }
-                else {
-                    $scope.responseMessage = "Username or Password is incorrect";
-                }
-            });
-    }
+          });
+
+}
+
+
+
 });

@@ -32,15 +32,15 @@
          <div class="form-group"> <h2 class="">Please Login</h2></div>
 
         <label for="inputEmail" class="sr-only">Email address</label>
-        <input type="email" id="inputEmail" ng-model="email" class="form-control" placeholder="Email address" required autofocus>
+        <input type="email" id="inputEmail" ng-model="loginadmin.email" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
-        <input type="password" id="inputPassword" class="form-control" ng-model="password"  placeholder="Password" required>
+        <input type="password" id="inputPassword" class="form-control" ng-model="loginadmin.password"  placeholder="Password" required>
         <div class="checkbox">
           <label>
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" ng-click="login()" type="submit">Sign in</button><br>
+        <button class="btn btn-lg btn-primary btn-block" ng-click="login(loginadmin)" type="submit">Sign in</button><br>
          <span>{{responseMessage}}</span>
       </form>
        </div>

@@ -10,6 +10,12 @@ app.controller('Aqua', ['$scope', function($scope) {
 app.controller('Gogas', ['$scope', function($scope) {
     $scope.homepage = "Gogas";
 }]);
+/* app.controller('Addaquactrl', ['$scope', function($scope) {
+    //$scope.homepage = "Gogas";
+}]);
+app.controller('Listaquactrl', ['$scope', function($scope) {
+    //$scope.homepage = "Gogas";
+}]); */
 
 app.controller('Adminlistctrl', ['$scope','$http', function($scope,$http) {
     
