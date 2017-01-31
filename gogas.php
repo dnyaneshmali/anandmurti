@@ -15,34 +15,46 @@
                         </div>
       </div>
       <!--End of main div-->
-      <div class="page-content">
+      <div class="page-content gogas-page">
          <div class="title-section container">
             <h1 class="text-center">Go Gas</h1>
             <p class="text-center text-muted">Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
          </div>
 
          
-      </div>
+    
        <div class="second-section">
             <div class="container">
                <h2 class="text-center">Gas Cylinder Types</h2>
                <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
                <div class="row home-content-box">
                   <div class="col-md-4 col-sm-6 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
                      <i class="fa fa-cogs fa-4x color-accent"></i>
                      <h4>12 kg</h4>
-                     <p class="text-center">Gogas is a leading brand name for Auto LPG Dispensing Stations </p>
+                     <p class="text-center">Gogas is a leading brand name for Auto LPG Dispensing Stations. Gogas is a leading brand name for Auto LPG Dispensing Stations. Gogas is a leading brand name for Auto LPG Dispensing Stations. Gogas is a leading brand name for Auto LPG Dispensing Stations </p>
                   </div>
+              </div>
+          </div>
                   <div class="col-md-4 text-center">
+                     <div class="panel panel-default">
+                        <div class="panel-body">
                      <i class="fa fa-cogs fa-4x color-accent"></i>
                      <h4>5 kg</h4>
-                     <p class="text-center">RO + UV + TDS controller + Mineral added, 10 STAGE </p>
+                     <p class="text-center">RO + UV + TDS controller + Mineral added, 10 STAGE. RO + UV + TDS controller + Mineral added, 10 STAGE. RO + UV + TDS controller + Mineral added, 10 STAGE. RO + UV + TDS controller + Mineral added, 10 STAGE </p>
                   </div>
+                   </div>
+                    </div>
                   <div class="col-md-4 col-sm-6 text-center">
+                    <div class="panel panel-default">
+                        <div class="panel-body">
                      <i class="fa fa-cogs fa-4x color-accent"></i>
                      <h4>2 kg</h4>
-                     <p class="text-center">Anand Murti F&B Pvt.</p>
+                     <p class="text-center">Anand Murti F&B Pvt.RO + UV + TDS controller + Mineral added, 10 STAGE.RO + UV + TDS controller + Mineral added, 10 STAGE. RO + UV + TDS controller + Mineral added, 10 STAGE</p>
                   </div>
+                   </div>
+                    </div>
 
                </div>
             </div>
@@ -137,7 +149,7 @@
         </div>
     </div>
 
-    
+      </div>
     
 
             	  <div class="footer-cta-section">

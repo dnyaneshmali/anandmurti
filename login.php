@@ -26,9 +26,11 @@
 <div class = "panel panel-default">
    <div class = "panel-body">
         <div ng-app='AnandMurtiLogin' ng-controller='loginCtrl'>
-
+      <form class="form-signin" >
+        <h2 class="form-signin-heading">Please sign in</h2>
       <form class="form-horizontal col-md-offset-3 col-md-5">
          <div class="form-group"> <h2 class="">Please Login</h2></div>
+
         <label for="inputEmail" class="sr-only">Email address</label>
         <input type="email" id="inputEmail" ng-model="email" class="form-control" placeholder="Email address" required autofocus>
         <label for="inputPassword" class="sr-only">Password</label>
