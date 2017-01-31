@@ -23,7 +23,8 @@ include($root."/config/config.php");
     <script src="<?php echo base_url(); ?>/assets/js/angular.min.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/angular-route.min.js"></script>
     <script src="<?php echo base_url(); ?>/config/app.js"></script>
-    <script src="<?php echo base_url(); ?>/controllers/globalcontrollers.js"></script> 
+    <script src="<?php echo base_url(); ?>/controllers/globalcontrollers.js"></script>
+    <script src="<?php echo base_url(); ?>/controllers/aqua/aquacontrollers.js"></script>  
   </head>
   <body class="nav-md" ng-app="app">
     <div class="container body">

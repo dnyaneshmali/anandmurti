@@ -11,6 +11,14 @@ app.config(function($routeProvider) {
             templateUrl : 'aqua/aquadashboard.php',
             controller  : 'Aqua'
         })
+     .when('/addaquacustomer', {
+            templateUrl : 'aqua/addaquacustomer.php',
+            controller  : 'Addaquactrl'
+        })
+     .when('/listaquacustomer', {
+            templateUrl : 'aqua/listaquacustomer.php',
+            controller  : 'Listaquactrl'
+        })
      .when('/gogas', {
             templateUrl : 'gogas/gogasdashboard.php',
             controller  : 'Gogas'
