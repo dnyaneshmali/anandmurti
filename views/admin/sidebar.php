@@ -32,6 +32,8 @@
                   <li><a><i class="fa fa-home"></i> Go Gas Agency<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/gogas">Dashboard</a></li>
+                       <li><a href="#/addgogascustomer">Add Gogas Customers</a></li>
+                        <li><a href="#/listgogascustomer">List Gogas Customers</a></li>
                     </ul>
                   </li>
 
