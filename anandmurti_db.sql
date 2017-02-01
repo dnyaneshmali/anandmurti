@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 30, 2017 at 10:57 AM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Generation Time: Feb 01, 2017 at 02:00 PM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -42,8 +42,7 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`admin_id`, `admin_username`, `admin_name`, `admin_email`, `admin_password`, `admin_number`, `admin_role`, `admin_date`) VALUES
-(1, 'dnyanesh', 'Dnyanesh Mali', 'dnyanesh.mali@softinfology.com', 'e6e061838856bf47e1de730719fb2609', '9689483519', 'superadmin', '2017-01-30 00:00:00'),
-(7, 'santosh', 'Santosh B', 'santoshbhosale123@gmail.com', 'e6e061838856bf47e1de730719fb2609', '123456789', 'gogasadmin', '2017-01-20 05:24:08');
+(1, 'santosh', 'bhosale', 'santosh.bhosale123@gmail.com', '12345', '7777777777', 'aquaadmin', '2017-02-01 07:29:45');
 
 -- --------------------------------------------------------
 
@@ -61,6 +60,46 @@ CREATE TABLE `tbl_customers` (
   `customer_role` varchar(50) NOT NULL,
   `customer_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_customers`
+--
+
+INSERT INTO `tbl_customers` (`customer_id`, `customer_name`, `customer_email`, `customer_number`, `customer_address`, `customer_type`, `customer_role`, `customer_date`) VALUES
+(7, '', '', '32423423234', 'sdfsdfsdf', 'Temporary', '', '2017-01-31 11:46:32'),
+(12, 'sa123', 'ssss@gmail.com', '7777777777', 'pune', 'aquaadmin', 'Aqua', '2017-01-31 12:08:33'),
+(13, 'santosh', 'santosssssh@gmail.com', '77777777777', 'pune', 'aquaadmin', '', '2017-01-31 12:11:09'),
+(14, 'sawwqw', 'ssasa@gmail.com', '11124353454', 'dnsd', 'aquaadmin', 'Aqua', '2017-01-31 12:15:16'),
+(16, 'santosjh', 'sasdas@gmail.com', '4684654654', 'pune', 'temporary', 'Aqua', '2017-01-31 12:47:39'),
+(17, 'santosh', 'sa@gmail.com', '21212122112', 'qwq', 'Regular', 'Aqua', '2017-01-31 13:08:28'),
+(20, 'sa', 'sa@ddd.ddd', '23233223123', 'd', 'temporary', 'Aqua', '2017-02-01 07:57:59'),
+(21, 'sss', 'ss@gmail.com', '8234782222', 'sas', 'temporary', 'Aqua', '2017-02-01 08:00:03'),
+(22, 'prashant', 'prashant@gmail.com', '23782371237', 'pune', 'temporary', 'Gogas', '2017-02-01 08:01:11'),
+(25, 'ssss', 'ss22323@gmail.com', '1227862376', 'jksajkd', 'temporary', 'Gogas', '2017-02-01 08:12:06'),
+(26, 'santosh', 'bhosale123@gmail.com', '7709326583', 'pune', 'temporary', 'Gogas', '2017-02-01 10:06:22');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_products`
+--
+
+CREATE TABLE `tbl_products` (
+  `product_id` int(11) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `product_prize` varchar(100) NOT NULL,
+  `Product_category` varchar(100) NOT NULL,
+  `Product_company` varchar(100) NOT NULL,
+  `product_tax` varchar(100) NOT NULL,
+  `product_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_products`
+--
+
+INSERT INTO `tbl_products` (`product_id`, `product_name`, `product_prize`, `Product_category`, `Product_company`, `product_tax`, `product_date`) VALUES
+(3, 'sasasas', 'asasas', 'Regular', 'sasa', 'sasa', '2017-02-01 13:53:39');
 
 --
 -- Indexes for dumped tables
@@ -84,6 +123,12 @@ ALTER TABLE `tbl_customers`
   ADD UNIQUE KEY `customer_number` (`customer_number`);
 
 --
+-- Indexes for table `tbl_products`
+--
+ALTER TABLE `tbl_products`
+  ADD PRIMARY KEY (`product_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -91,12 +136,17 @@ ALTER TABLE `tbl_customers`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_customers`
 --
 ALTER TABLE `tbl_customers`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+--
+-- AUTO_INCREMENT for table `tbl_products`
+--
+ALTER TABLE `tbl_products`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
