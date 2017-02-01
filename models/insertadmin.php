@@ -17,5 +17,4 @@ $query = "INSERT INTO tbl_admin(admin_username, admin_name,admin_email, admin_nu
 	
 echo json_encode($data);
 
-//echo json_encode($data);
  	?>
