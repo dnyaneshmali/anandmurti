@@ -49,3 +49,25 @@ console.log(customer_id);
 
 
 }]);
+
+app.controller('Addgogasctrl', ['$scope','$http', function($scope,$http) {
+$scope.gogascustomers = {};
+$scope.insertdata=function(gogascustomers){
+$scope.gogascustomers = angular.copy(gogascustomers);
+console.log($scope.gogascustomers);
+   $http({
+          method  : 'POST',
+          url     : '../../models/insertgogascustomer.php',
+          data    : $scope.gogascustomers, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+              $scope.msg = "data inserted successfully "
+            
+
+          });
+
+}
+}]);
