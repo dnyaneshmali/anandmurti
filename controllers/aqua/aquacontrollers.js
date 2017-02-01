@@ -76,3 +76,33 @@ console.log($scope.addaquaproduct);
 
 }
 }]);
+app.controller('Listaquaproductctrl', ['$scope','$http', function($scope,$http) {
+    
+    $http.get("../../models/getaquaproduct.php")
+    .success(function(data){
+        $scope.data=data
+        //console.log($scope.data);
+    });
+
+
+  $scope.deleteuser=function(product_id){
+    alert('in delete function');
+
+console.log(product_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deleteaquaproduct.php',
+          data    : {'product_id':product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+            console.log(data);
+            
+
+          });
+}
+
+
+
+}]);
