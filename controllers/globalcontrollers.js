@@ -80,7 +80,6 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
                  $window.localStorage.setItem('sname','');
                  $window.localStorage.setItem('srole','');
                  $window.localStorage.setItem('islogin','false');
-                  //  console.log($scope.data1);
             }
 
 

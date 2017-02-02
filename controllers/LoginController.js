@@ -1,6 +1,6 @@
-var app = angular.module('AnandMurtiLogin', ['ngStorage']);
- 
-app.controller('loginCtrl', function ($scope, $http, $window, $localStorage, $location) {
+var loginapp = angular.module('AnandMurtiLogin', ['ngStorage']);
+
+loginapp.controller('loginCtrl',['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage, $location) {
 // $scope.data = {};
     $scope.login=function(loginadmin){
         $scope.data = angular.copy(loginadmin);
@@ -36,6 +36,20 @@ app.controller('loginCtrl', function ($scope, $http, $window, $localStorage, $lo
 
 }
 
+}]);
 
 
-});
+app.controller('Logoutctrl',['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage, $location) {
+
+    $scope.logout=function(){
+
+                 $window.localStorage.setItem('ssid','');
+                 $window.localStorage.setItem('sname','');
+                 $window.localStorage.setItem('srole','');
+                 $window.localStorage.setItem('islogin','false');
+                 if($window.localStorage.getItem('ssid') == ''){
+                  window.location.replace("http://localhost/anandmurti/login.php");
+                 }
+            }
+
+}]);
