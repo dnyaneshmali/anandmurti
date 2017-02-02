@@ -28,7 +28,10 @@
                       <li><a href="#/addaquacustomer">Add Customers</a></li>
                       <li><a href="#/listaquacustomer">List Customers</a></li>
                        <li><a href="#/addaquaproducts">Add Aqua Products</a></li>
-                        <li><a href="#/listaquaproduct">List Products</a></li>
+                        <li><a href="#/listaquaproduct">List Aqua Products</a></li>
+                         <li><a href="#/addaquaorder">Add Aqua order</a></li>
+                         <li><a href="#/listaquaorder">List Aqua order</a></li>
+                         <li><a href="#/trackjardetails">Track Jar Details</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-home"></i> Go Gas Agency<span class="fa fa-chevron-down"></span></a>
@@ -36,6 +39,8 @@
                       <li><a href="#/gogas">Dashboard</a></li>
                        <li><a href="#/addgogascustomer">Add Gogas Customers</a></li>
                         <li><a href="#/listgogascustomer">List Gogas Customers</a></li>
+                        <li><a href="#/addgogasproduct">Add Gogas Products</a></li>
+                        <li><a href="#/listgogasproduct">List Gogas Products</a></li>
                     </ul>
                   </li>
 

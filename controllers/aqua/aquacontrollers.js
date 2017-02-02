@@ -106,3 +106,24 @@ console.log(product_id);
 
 
 }]);
+
+app.controller('Addaquaorder', ['$scope','$http', function($scope,$http) {
+
+  }]);
+
+
+app.controller('Listaquaorder', ['$scope','$http', function($scope,$http) {
+
+  }]);
+
+
+
+
+app.controller('Trackjardetails', ['$scope','$http', function($scope,$http) {
+
+  }]);
+
+
+
+
+

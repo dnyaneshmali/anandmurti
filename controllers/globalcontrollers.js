@@ -76,6 +76,4 @@ console.log(admin_id);
 
 
 
- app.controller('Myaccountctrl', ['$scope', function($scope) {
-   
-}]);
+ 
