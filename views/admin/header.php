@@ -22,6 +22,7 @@ include($root."/config/config.php");
     <link href="<?php echo base_url(); ?>/assets/css/admin-style.css" rel="stylesheet">
     <script src="<?php echo base_url(); ?>/assets/js/angular.min.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/angular-route.min.js"></script>
+    <script src="<?php echo base_url(); ?>/assets/js/angular-validation-match.min.js"></script>
     <script src="<?php echo base_url(); ?>/config/app.js"></script>
     <script src="<?php echo base_url(); ?>/controllers/globalcontrollers.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/ngStorage.min.js"></script>  

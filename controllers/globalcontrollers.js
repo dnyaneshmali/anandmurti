@@ -36,8 +36,10 @@ app.controller('Addadminctrl', ['$scope', '$http', '$window', '$localStorage', f
            
                 .success(function(data) {
                       /* console.log(data);*/
-                         $scope.msg = "data inserted successfully "
-                       
+                         $scope.msg = "data inserted successfully ";
+
+                        delete $scope.admin;
+                        $scope.addadminform.$setPristine();
            
                      });
            
@@ -56,7 +58,7 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
                 });
 
 
-              $scope.deleteuser=function(admin_id){
+              $scope.deleteuser=function(admin_id,index){
                 alert('in delete function');
 
             console.log(admin_id);
@@ -69,6 +71,8 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
                  .success(function(data) {
                         
                         console.log(data);
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
 
                       });
             }
