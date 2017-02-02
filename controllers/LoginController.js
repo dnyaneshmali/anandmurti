@@ -1,6 +1,6 @@
 var app = angular.module('AnandMurtiLogin', ['ngStorage']);
  
-app.controller('loginCtrl', function ($scope, $http, $window, $localStorage) {
+app.controller('loginCtrl', function ($scope, $http, $window, $localStorage, $location) {
 // $scope.data = {};
     $scope.login=function(loginadmin){
         $scope.data = angular.copy(loginadmin);
@@ -17,16 +17,17 @@ app.controller('loginCtrl', function ($scope, $http, $window, $localStorage) {
               ssid = data[0].admin_id;
               sname = data[0].admin_username;
               srole = data[0].admin_role;
-                $scope.$storage = $localStorage;
-                //$localStorage.ssid = ssid;
-                //$localStorage.sname = sname;
+              $scope.$storage = $localStorage;
+                if(!ssid == ''){
                 $window.localStorage.setItem('ssid',ssid);
                 $window.localStorage.setItem('sname',sname);
                 $window.localStorage.setItem('srole',srole);
-                //console.log($window.localStorage.getItem('srole'));
-                //$localStorage.srole = srole;
-                if(!$window.localStorage.getItem('ssid') == ''){
                 $window.localStorage.setItem('islogin','true');
+                //$scope.data2 = $window.localStorage.getItem('ssid');
+                //alert($scope.data2);
+                window.location.replace("views/admin/admin.php");
+              }else{
+                window.location.replace("http://localhost/anandmurti/login.php");
               }
               //$window.location.href="views/admin/admin.php";
             
