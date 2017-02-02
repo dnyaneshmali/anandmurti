@@ -17,24 +17,21 @@ $uname = "";
 $upass = "";
 $urole = "";
 $uid = "";
+if(mysqli_num_rows($result)>0){
 while ($row = mysqli_fetch_assoc($result)){
-
-	 $data[]=$row;
+	$data[]=$row;
 	//$uid .= $row['admin_id'];
 	//$uname .= $row['admin_username'];
 	//$upass .= $row['admin_password'];
 	//$urole .= $row['admin_role'];
 
 }
+//echo $uid;
 //echo $uname;
-//echo $upass;
-/*
-if($adminuname==$uname && $encpass==$upass){
-			echo "1";
+//echo $urole;
+echo json_encode($data);
+}else{
+	echo"Error";
+}
 
-		     }
-		     else{
-		     	echo "0";
-		     } */
-		     print json_encode($data);
 		     ?>
