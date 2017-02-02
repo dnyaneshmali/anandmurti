@@ -2,7 +2,7 @@
 $root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
 include($root."/config/config.php");
 
-$query="SELECT * FROM tbl_customers WHERE customer_role='Aqua'";
+$query="SELECT * FROM tbl_customers WHERE customer_role='Gogas' ";
 $result = mysqli_query($connection,$query);
 
 while ($row = mysqli_fetch_assoc($result)){

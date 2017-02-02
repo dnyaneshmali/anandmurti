@@ -19,9 +19,25 @@ app.config(function($routeProvider) {
             templateUrl : 'aqua/listaquacustomer.php',
             controller  : 'Listaquactrl'
         })
+     .when('/addaquaproducts', {
+            templateUrl : 'aqua/addaquaproducts.php',
+            controller  : 'Addaquaproductctrl'
+        })
+     .when('/listaquaproduct', {
+            templateUrl : 'aqua/listaquaproduct.php',
+            controller  : 'Listaquaproductctrl'
+        })
      .when('/gogas', {
             templateUrl : 'gogas/gogasdashboard.php',
             controller  : 'Gogas'
+        })
+     .when('/addgogascustomer', {
+            templateUrl : 'gogas/addgogascustomer.php',
+            controller  : 'Addgogasctrl'
+        })
+     .when('/listgogascustomer', {
+            templateUrl : 'gogas/listgogascustomer.php',
+            controller  : 'Listgogasctrl'
         })
      .when('/adminlist', {
             templateUrl : 'adminlist.php',

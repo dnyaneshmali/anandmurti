@@ -5,9 +5,9 @@ include($root."/config/config.php");
 
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
-$customer_date = date("Y-m-d H:i:s");
-$query = "INSERT INTO  tbl_customers(customer_name,customer_email,customer_number,customer_address, 	customer_type,customer_role,customer_date)
-    VALUES('".$data['customer_name']."','".$data['customer_email']."', '".$data['customer_number']."', '".$data['customer_address']."', '".$data['customer_type']."','".$data['customer_role']."', '".$customer_date."')";
+$product_date = date("Y-m-d H:i:s");
+$query = "INSERT INTO  tbl_products(product_name,product_prize,Product_category,Product_company	, 	product_tax,product_date)
+    VALUES('".$data['product_name']."','".$data['product_prize']."', '".$data['Product_category']."', '".$data['Product_company']."', '".$data['product_tax']."', '".$product_date."')";
    
     /*print_r(mysqli_query($connection, $query));*/
    if(!mysqli_query($connection,$query))

@@ -27,11 +27,15 @@
                       <li><a href="#/aqua">Dashboard</a></li>
                       <li><a href="#/addaquacustomer">Add Customers</a></li>
                       <li><a href="#/listaquacustomer">List Customers</a></li>
+                       <li><a href="#/addaquaproducts">Add Aqua Products</a></li>
+                        <li><a href="#/listaquaproduct">List Products</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-home"></i> Go Gas Agency<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/gogas">Dashboard</a></li>
+                       <li><a href="#/addgogascustomer">Add Gogas Customers</a></li>
+                        <li><a href="#/listgogascustomer">List Gogas Customers</a></li>
                     </ul>
                   </li>
 

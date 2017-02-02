@@ -50,24 +50,3 @@ console.log(admin_id);
 }]);
 
 
-app.controller('Addadminctrl', ['$scope','$http', function($scope,$http) {
-$scope.admin = {};
-$scope.insertdata=function(admin){
-$scope.admin = angular.copy(admin);
-console.log($scope.admin);
-	 $http({
-          method  : 'POST',
-          url     : '../../models/insertadmin.php',
-          data    : $scope.admin, //forms user object
-          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
-         })
-
-     .success(function(data) {
-           /* console.log(data);*/
-              $scope.msg = "data inserted successfully "
-            
-
-          });
-
-}
-}]);
