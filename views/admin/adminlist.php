@@ -44,9 +44,10 @@
                           <td>{{admin.admin_number}}</td>
                           <td>{{admin.admin_role}}</td>
                           <td>{{admin.admin_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(admin.admin_id,admin.admin_username);">Edit</button></td>
-                          <td><button class="btn btn-warning" ng-click="logout();">Logout</button></td>
+                          <td><button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button> 
+                              <button class="btn btn-warning" ng-click="edituser();">Edit</button>
+                              <button class="btn btn-warning" ng-click="logout();">Logout</button>
+                          </td>
                         </tr>
                       </tbody>
                     </table>
