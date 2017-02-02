@@ -16,6 +16,28 @@ app.controller('Gogas', ['$scope', function($scope) {
 app.controller('Listaquactrl', ['$scope', function($scope) {
     //$scope.homepage = "Gogas";
 }]); */
+app.controller('Addadminctrl', ['$scope','$http', function($scope,$http) {
+ $scope.admin = {};
+ $scope.insertdata=function(admin){
+ $scope.admin = angular.copy(admin);
+ console.log($scope.admin);
+    $http({
+           method  : 'POST',
+           url     : '../../models/insertadmin.php',
+           data    : $scope.admin, //forms user object
+           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+          })
+ 
+      .success(function(data) {
+            /* console.log(data);*/
+               $scope.msg = "data inserted successfully "
+             
+ 
+           });
+ 
+ }
+ }]);
+
 
 app.controller('Adminlistctrl', ['$scope','$http', function($scope, $http, $window, $localStorage) {
     
@@ -50,3 +72,8 @@ console.log(admin_id);
 }]);
 
 
+
+
+ app.controller('Myaccountctrl', ['$scope', function($scope) {
+   
+}]);

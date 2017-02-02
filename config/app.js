@@ -7,6 +7,13 @@ app.config(function($routeProvider) {
             templateUrl : 'dashboard.php',
             controller  : 'Dashboard'
         })
+
+        .when('/myaccount', {
+            templateUrl : 'myaccount.php',
+            controller  : 'Myacccountctrl'
+        })
+
+
      .when('/aqua', {
             templateUrl : 'aqua/aquadashboard.php',
             controller  : 'Aqua'
