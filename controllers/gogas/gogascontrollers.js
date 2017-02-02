@@ -71,3 +71,12 @@ console.log($scope.gogascustomers);
 
 }
 }]);
+
+
+app.controller('Addgogasproductctrl', ['$scope','$http', function($scope,$http) {
+
+  }]);
+
+app.controller('Listgogasproductctrl', ['$scope','$http', function($scope,$http) {
+
+  }]);

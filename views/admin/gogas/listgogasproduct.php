@@ -1,4 +1,4 @@
-<div class="userlist" ng-controller="Listaquaproductctrl">
+<div class="userlist" ng-controller="Listgogasproductctrl">
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
@@ -28,11 +28,11 @@
                       <thead>
                         <tr>
                           <th>product name</th>
-                          <th>product prize</th>
+                          <th>product price</th>
                           <th>Product category</th>
                           <th>Product company</th>
                           <th>product tax</th>
-                          
+                        
                           <th>product date</th>
                           <th colspan="2">Action</th>
                         </tr>
@@ -40,14 +40,14 @@
 
 
                       <tbody>
-                        <tr ng-repeat="aquaproduct in data">
-                          <td>{{aquaproduct.product_name}}</td>
-                          <td>{{aquaproduct.product_prize}}</td>
-                          <td>{{aquaproduct.Product_category}}</td>
-                          <td>{{aquaproduct.Product_company}}</td>
-                          <td>{{aquaproduct.product_tax}}</td>
-                          <td>{{aquaproduct.product_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(aquaproduct.product_id);">Delete</button></td>
+                        <tr ng-repeat="gogasproduct in data">
+                          <td>{{gogasproduct.product_name}}</td>
+                          <td>{{gogasproduct.product_prize}}</td>
+                          <td>{{gogasproduct.Product_category}}</td>
+                          <td>{{gogasproduct.Product_company}}</td>
+                          <td>{{gogasproduct.product_tax}}</td>
+                          <td>{{gogasproduct.product_date}}</td>
+                          <td><button class="btn btn-danger" ng-click="deleteuser(gogasproduct.product_id);">Delete</button></td>
                           <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>

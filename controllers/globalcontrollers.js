@@ -87,11 +87,7 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
 
 }]);
 
-
-
-
  app.controller('Myaccountctrl', ['$scope', function($scope) {
    
 }]);
-
 

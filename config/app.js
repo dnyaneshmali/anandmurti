@@ -34,6 +34,19 @@ app.config(function($routeProvider) {
             templateUrl : 'aqua/listaquaproduct.php',
             controller  : 'Listaquaproductctrl'
         })
+        .when('/addaquaorder', {
+            templateUrl : 'aqua/addaquaorder.php',
+            controller  : 'Addaquaorder'
+        })
+         .when('/listaquaorder', {
+            templateUrl : 'aqua/listaquaorder.php',
+            controller  : 'Listaquaorder'
+        })
+       .when('/trackjardetails', {
+            templateUrl : 'aqua/trackjardetails.php',
+            controller  : 'Trackjardetails'
+        })
+
      .when('/gogas', {
             templateUrl : 'gogas/gogasdashboard.php',
             controller  : 'Gogas'
@@ -45,6 +58,14 @@ app.config(function($routeProvider) {
      .when('/listgogascustomer', {
             templateUrl : 'gogas/listgogascustomer.php',
             controller  : 'Listgogasctrl'
+        })
+     .when('/addgogasproduct', {
+            templateUrl : 'gogas/addgogasproduct.php',
+            controller  : 'Addgogasproductctrl'
+        })
+     .when('/listgogasproduct', {
+            templateUrl : 'gogas/listgogasproduct.php',
+            controller  : 'Listgogasproductctrl'
         })
      .when('/adminlist', {
             templateUrl : 'adminlist.php',

@@ -1,4 +1,4 @@
-<div class="userlist" ng-controller="Listaquaproductctrl">
+<div class="listaquaorder" ng-controller="Listaquaorder">
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
@@ -27,27 +27,30 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>product name</th>
-                          <th>product prize</th>
-                          <th>Product category</th>
-                          <th>Product company</th>
-                          <th>product tax</th>
+                          <th>Order Name</th>
+                          <th>Order Address</th>
+                          <th>Quantity</th>
+                          <th>Order time</th>
+                          <th>Order Date</th>
+                           <th>Advance payment</th>
+                          <th>Remaining Payment</th>
+                          <th colspan="3">Action</th>
                           
-                          <th>product date</th>
-                          <th colspan="2">Action</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                        <tr ng-repeat="aquaproduct in data">
-                          <td>{{aquaproduct.product_name}}</td>
-                          <td>{{aquaproduct.product_prize}}</td>
-                          <td>{{aquaproduct.Product_category}}</td>
-                          <td>{{aquaproduct.Product_company}}</td>
-                          <td>{{aquaproduct.product_tax}}</td>
-                          <td>{{aquaproduct.product_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(aquaproduct.product_id);">Delete</button></td>
+                        <tr ng-repeat="aquacustomer in data">
+                          <td>{{aquacustomer.customer_name}}</td>
+                          <td>{{aquacustomer.customer_email}}</td>
+                          <td>{{aquacustomer.customer_number}}</td>
+                          <td>{{aquacustomer.customer_address}}</td>
+                          <td>{{aquacustomer.customer_type}}</td>
+                          <td>{{aquacustomer.customer_role}}</td>
+                          <td>{{aquacustomer.customer_date}}</td>
+                          <td><button class="btn btn-danger" ng-click="deleteuser(aquacustomer.customer_id);">Delete</button></td>
+                          <td><button class="btn btn-danger" ng-click="deleteuser(aquacustomer.customer_id);">Add Reminder</button></td>
                           <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>
