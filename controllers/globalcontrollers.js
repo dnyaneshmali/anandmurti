@@ -17,14 +17,16 @@ app.controller('Listaquactrl', ['$scope', function($scope) {
     //$scope.homepage = "Gogas";
 }]); */
 
-app.controller('Adminlistctrl', ['$scope','$http', function($scope, $http, $window, $localStorage) {
+app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
     
     $http.get("../../models/getadmin.php")
     .success(function(data){
         $scope.data=data
         //console.log($scope.data);
         //$scope.$storage = $localStorage;
-        //console.log($window.localStorage.getItem(sname));
+        console.log($window.localStorage.getItem('sname'));
+        //var sdata = $window.localStorage.getItem('sname');
+        //$scope.data = sdata;
     });
 
 
