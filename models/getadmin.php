@@ -9,7 +9,7 @@ while ($row = mysqli_fetch_assoc($result)){
 
 	//echo $row['username'];
 	 //$data[]=$row;
-      array_push($data, $row);
+      array_push($data,$row);
 }
 print json_encode($data);
 

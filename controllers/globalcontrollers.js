@@ -23,8 +23,9 @@ app.controller('Addadminctrl', ['$scope', '$http', '$window', '$localStorage', f
           if($window.localStorage.getItem('ssid') == ''){
               window.location.replace("http://localhost/anandmurti/");
             }
-           $scope.admin = {};
+             
            $scope.insertdata=function(admin){
+              $scope.admin = {};
            $scope.admin = angular.copy(admin);
            console.log($scope.admin);
               $http({
