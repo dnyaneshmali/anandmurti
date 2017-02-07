@@ -10,7 +10,7 @@ $query = "INSERT INTO  tbl_customers(customer_name,customer_email,customer_numbe
     VALUES('".$data['customer_name']."','".$data['customer_email']."', '".$data['customer_number']."', '".$data['customer_address']."', '".$data['customer_type']."','".$data['customer_role']."', '".$customer_date."')";
    
     /*print_r(mysqli_query($connection, $query));*/
-   if(!mysqli_query($connection,$query))
+  if(!mysqli_query($connection,$query))
     {
         die('Error : ' . mysqli_error());
     }else{

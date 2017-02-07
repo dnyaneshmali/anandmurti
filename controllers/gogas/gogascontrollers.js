@@ -1,7 +1,8 @@
 
 app.controller('Addgogasctrl', ['$scope','$http', function($scope,$http) {
-$scope.gogascustomers = {};
+
 $scope.insertdata=function(gogascustomers){
+  $scope.gogascustomers = {};
 $scope.gogascustomers = angular.copy(gogascustomers);
 console.log($scope.gogascustomers);
 	 $http({
@@ -14,6 +15,8 @@ console.log($scope.gogascustomers);
      .success(function(data) {
             console.log(data);
               $scope.msg = "data inserted successfully "
+                delete $scope.gogascustomers;
+                $scope.addgogasform.$setPristine();
             
 
           });
@@ -28,7 +31,7 @@ app.controller('Listgogasctrl', ['$scope','$http', function($scope,$http) {
         //console.log($scope.data);
     });
 
-$scope.deleteuser=function(customer_id){
+$scope.deleteuser=function(customer_id,index){
     alert('in delete function');
 
 console.log(customer_id);
@@ -41,6 +44,9 @@ console.log(customer_id);
      .success(function(data) {
             
             console.log(data);
+             $scope.data.splice(index, 1);
+                        $scope.$watch();
+            
             
 
           });
@@ -50,7 +56,7 @@ console.log(customer_id);
 
 }]);
 
-app.controller('Addgogasctrl', ['$scope','$http', function($scope,$http) {
+/*app.controller('Addgogasctrl', ['$scope','$http', function($scope,$http) {
 $scope.gogascustomers = {};
 $scope.insertdata=function(gogascustomers){
 $scope.gogascustomers = angular.copy(gogascustomers);
@@ -70,7 +76,7 @@ console.log($scope.gogascustomers);
           });
 
 }
-}]);
+}]);*/
 
 
 app.controller('Addgogasproductctrl', ['$scope','$http', function($scope,$http) {

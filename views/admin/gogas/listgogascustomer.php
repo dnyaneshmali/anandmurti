@@ -48,7 +48,7 @@
                           <td>{{gogascustomer.customer_type}}</td>
                           <td>{{gogascustomer.customer_role}}</td>
                           <td>{{gogascustomer.customer_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(gogascustomer.customer_id);">Delete</button></td>
+                          <td><button class="btn btn-danger" ng-click="deleteuser(gogascustomer.customer_id,$index);">Delete</button></td>
                           <td><button class="btn btn-warning" ng-click="edituser(gogascustomers.customer_id,gogascustomers.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>

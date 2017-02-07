@@ -36,8 +36,8 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <select class="form-control" ng-model="addaquaproduct.Product_category" name="Product_category" >
                             <option value="" selected>Product category</option>
-                            <option value="temporary">minaral</option>
-                            <option value="Regular">Normal</option>
+                            <option value="minaral">minaral</option>
+                            <option value="Normal">Normal</option>
                           </select>
                           
                         </div>
