@@ -5,10 +5,10 @@
   <head>
      <link  rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css">
     <script src="<?php echo base_url(); ?>/assets/js/angular.min.js"></script>
-        <script src="controllers/LoginController.js" type="text/javascript"></script>
+        <script src="<?php echo base_url(); ?>/controllers/LoginController.js"></script>
         <script src="assets/js/angular-route.min.js" type="text/javascript"></script>
         <script src="assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/ngStorage/0.3.6/ngStorage.min.js"></script>
+        <script src="<?php echo base_url(); ?>/assets/js/ngStorage.min.js"></script>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <meta name="description" content="">

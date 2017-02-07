@@ -1,4 +1,4 @@
-<div class="userlist" ng-controller="Listgogasctrl">
+<div class="userlist" ng-controller="Listgogasproductctrl">
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
@@ -27,29 +27,28 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Customer Name</th>
-                          <th>Customer Email</th>
-                          <th>Customer Number</th>
-                          <th>customer Address</th>
-                          <th>customer Type</th>
-                           <th>customer Role</th>
-                          <th>Start Date</th>
+                          <th>product name</th>
+                          <th>product price</th>
+                          <th>Product category</th>
+                          <th>Product company</th>
+                          <th>product tax</th>
+                        
+                          <th>product date</th>
                           <th colspan="2">Action</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                        <tr ng-repeat="gogascustomer in data">
-                          <td>{{gogascustomer.customer_name}}</td>
-                          <td>{{gogascustomer.customer_email}}</td>
-                          <td>{{gogascustomer.customer_number}}</td>
-                          <td>{{gogascustomer.customer_address}}</td>
-                          <td>{{gogascustomer.customer_type}}</td>
-                          <td>{{gogascustomer.customer_role}}</td>
-                          <td>{{gogascustomer.customer_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(gogascustomer.customer_id,$index);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(gogascustomers.customer_id,gogascustomers.admin_username);">Edit</button></td>
+                        <tr ng-repeat="gogasproduct in data">
+                          <td>{{gogasproduct.product_name}}</td>
+                          <td>{{gogasproduct.product_prize}}</td>
+                          <td>{{gogasproduct.Product_category}}</td>
+                          <td>{{gogasproduct.Product_company}}</td>
+                          <td>{{gogasproduct.product_tax}}</td>
+                          <td>{{gogasproduct.product_date}}</td>
+                          <td><button class="btn btn-danger" ng-click="deleteuser(gogasproduct.product_id);">Delete</button></td>
+                          <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>
                     </table>

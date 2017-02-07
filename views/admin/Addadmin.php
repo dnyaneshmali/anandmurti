@@ -55,8 +55,9 @@ Add User
                       <div class="item form-group">
                         <label for="password2" class="control-label col-md-3 col-sm-3 col-xs-12">Confirm Password <span class="required">*</span></label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="password" ng-model="admin.password2" id="password2" class="form-control" name="password2" required />
-                          <p style="color:red;" ng-show="addadminform.password2.$invalid && !addadminform.password2.$pristine" class="help-block"> confirm password is required.</p>
+                          <input type="password" ng-model="admin.password2" id="password2" class="form-control" name="password2" match="admin.password" required />
+                          <p style="color:red;" ng-show="addadminform.password2.$error.required && !addadminform.password2.$pristine" class="help-block"> confirm password is required.</p>
+                          <p style="color:red;" ng-show="addadminform.password2.$error.match && !addadminform.password2.$pristine" class="help-block"> confirm password is not mached.</p>
                         </div>
                       </div>
                       <div class="item form-group">
@@ -77,7 +78,7 @@ Add User
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
                           <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button ng-click="insertdata(admin)" ng-disabled="!addadminform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
+                          <button ng-click="insertdata(admin)"  ng-disabled="!addadminform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
 
                           {{msg}}
                         </div>

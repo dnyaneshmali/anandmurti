@@ -48,7 +48,7 @@
                           <td>{{aquacustomer.customer_type}}</td>
                           <td>{{aquacustomer.customer_role}}</td>
                           <td>{{aquacustomer.customer_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(aquacustomer.customer_id);">Delete</button></td>
+                          <td><button class="btn btn-danger" ng-click="deleteuser(aquacustomer.customer_id,$index);">Delete</button></td>
                           <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>

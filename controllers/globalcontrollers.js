@@ -1,52 +1,115 @@
 /**
  * Created by User on 10/19/14.
  */
- app.controller('Dashboard', ['$scope', function($scope) {
-    $scope.homepage = "Dashboard";
-}]);
-app.controller('Aqua', ['$scope', function($scope) {
-    $scope.homepage = "Aqua";
-}]);
-app.controller('Gogas', ['$scope', function($scope) {
-    $scope.homepage = "Gogas";
-}]);
-/* app.controller('Addaquactrl', ['$scope', function($scope) {
-    //$scope.homepage = "Gogas";
-}]);
-app.controller('Listaquactrl', ['$scope', function($scope) {
-    //$scope.homepage = "Gogas";
-}]); */
-
-app.controller('Adminlistctrl', ['$scope','$http', function($scope, $http, $window, $localStorage) {
-    
-    $http.get("../../models/getadmin.php")
-    .success(function(data){
-        $scope.data=data
-        //console.log($scope.data);
-        //$scope.$storage = $localStorage;
-        //console.log($window.localStorage.getItem(sname));
-    });
-
-
-  $scope.deleteuser=function(admin_id){
-    alert('in delete function');
-
-console.log(admin_id);
-     $http({
-          method  : 'POST',
-          url     : '../../models/deleteadmin.php',
-          data    : {'admin_id':admin_id}, //forms user object
-          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
-         })
-     .success(function(data) {
-            
-            console.log(data);
-
-          });
-}
-
-
-
+ app.controller('Dashboard', ['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
+    if($window.localStorage.getItem('ssid') == ''){
+    window.location.replace("http://localhost/anandmurti/");
+  }
 }]);
 
+app.controller('Aqua', ['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
+    if($window.localStorage.getItem('ssid') == ''){
+    window.location.replace("http://localhost/anandmurti/");
+  }
+}]);
+
+app.controller('Gogas', ['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
+    if($window.localStorage.getItem('ssid') == ''){
+    window.location.replace("http://localhost/anandmurti/");
+  }
+}]);
+
+app.controller('Addadminctrl', ['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
+  //$scope.obj={'idisable':false};
+          if($window.localStorage.getItem('ssid') == ''){
+              window.location.replace("http://localhost/anandmurti/");
+            }
+             
+           $scope.insertdata=function(admin){
+              $scope.admin = {};
+           $scope.admin = angular.copy(admin);
+           console.log($scope.admin);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/insertadmin.php',
+                     data    : $scope.admin, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                      /* console.log(data);*/
+                         $scope.msg = "data inserted successfully ";
+
+                        delete $scope.admin;
+                        $scope.addadminform.$setPristine();
+           
+                     });
+           
+           }
+ }]);
+
+
+app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
+              if($window.localStorage.getItem('ssid') == ''){
+                window.location.replace("http://localhost/anandmurti/");
+              }
+                $http.get("../../models/getadmin.php")
+                .success(function(data){
+                    $scope.data=data
+                    //console.log($scope.data);
+                });
+
+
+              $scope.deleteuser=function(admin_id,index){
+                alert('in delete function');
+
+            console.log(admin_id);
+                 $http({
+                      method  : 'POST',
+                      url     : '../../models/deleteadmin.php',
+                      data    : {'admin_id':admin_id}, //forms user object
+                      headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                     })
+                 .success(function(data) {
+                        
+                        console.log(data);
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
+
+                      });
+            }
+               
+            /*  $scope.edituser=function(admin_id){
+                alert('in edit function');
+                console.log(admin_id);
+                $http({
+                method :'GET',
+                url    :'../../models/updateadmin.php',
+                data   :{'admin_id' :admin_id},
+                headers:{'Content-Type':'application/x-www-form-urlencoded'}
+               })
+                
+                .success(function(data){
+                  console.log(data);
+                  $scope.btnName="Update"
+              /*$scope.obj.idisable=true;*/
+
+                });
+              }*/
+
+              $scope.logout=function(){
+
+                 $window.localStorage.setItem('ssid','');
+                 $window.localStorage.setItem('sname','');
+                 $window.localStorage.setItem('srole','');
+                 $window.localStorage.setItem('islogin','false');
+            }
+
+
+
+}]);
+
+ app.controller('Myaccountctrl', ['$scope', function($scope) {
+   
+}]);
 
