@@ -20,10 +20,21 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
+
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                          <input type="text" ng-model="clisearch" id="clisearch"  name="clisearch" style="width:100%">
+                          
+                        </div>
+                      </div>
+
+
+
                   <div class="x_content">
-                    <p class="text-muted font-13 m-b-30">
-                      The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
-                    </p>
+                    
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -39,19 +50,19 @@
 
                       <tbody>
                         
-                        <tr ng-repeat="admin in data">
+                        <tr ng-repeat="admin in data | filter:clisearch">
                           <td>{{admin.admin_name}}</td>
                           <td>{{admin.admin_email}}</td>
                           <td>{{admin.admin_number}}</td>
                           <td>{{admin.admin_role}}</td>
                           <td>{{admin.admin_date}}</td>
-                          <td><button class="btn btn-warning" ng-click="edituser(admin.admin_id,admin.admin_username);">Edit</button></td>
+                          
                           <td><button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button> 
-<<<<<<< HEAD
+
                               <button class="btn btn-warning" value="{{btnName}}" ng-click="edituser(admin.admin_id);">Edit</button>
-=======
->>>>>>> 87cfff19ed4c6397250cceaf83e5eaa05fa4fccf
-                              <button class="btn btn-warning" ng-click="logout();">Logout</button>
+
+
+                             <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
                           </td>
                         </tr>
                       </tbody>

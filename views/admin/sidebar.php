@@ -41,6 +41,8 @@
                         <li><a href="#/listgogascustomer">List Gogas Customers</a></li>
                         <li><a href="#/addgogasproduct">Add Gogas Products</a></li>
                         <li><a href="#/listgogasproduct">List Gogas Products</a></li>
+                        <li><a href="#/addnewconnection">Add New Connection</a></li>
+                        <li><a href="#/listnewconnection">List New connections</a></li>
                     </ul>
                   </li>
 

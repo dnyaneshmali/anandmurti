@@ -79,24 +79,8 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
                       });
             }
                
-            /*  $scope.edituser=function(admin_id){
-                alert('in edit function');
-                console.log(admin_id);
-                $http({
-                method :'GET',
-                url    :'../../models/updateadmin.php',
-                data   :{'admin_id' :admin_id},
-                headers:{'Content-Type':'application/x-www-form-urlencoded'}
-               })
-                
-                .success(function(data){
-                  console.log(data);
-                  $scope.btnName="Update"
-              /*$scope.obj.idisable=true;*/
-
-                });
-              }*/
-
+            /*
+            */
               $scope.logout=function(){
 
                  $window.localStorage.setItem('ssid','');

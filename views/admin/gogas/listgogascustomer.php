@@ -21,35 +21,46 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p class="text-muted font-13 m-b-30">
-                      The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
-                    </p>
+                   <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                          <input type="text" ng-model="clisearch" id="clisearch"  name="clisearch" style="width:100%">
+                          
+                        </div>
+                      </div>
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
                           <th>Customer Name</th>
                           <th>Customer Email</th>
                           <th>Customer Number</th>
-                          <th>customer Address</th>
-                          <th>customer Type</th>
-                           <th>customer Role</th>
-                          <th>Start Date</th>
+                          <!-- <th>customer DOB</th> -->
+                          <!-- <th>customer State</th> -->
+                          <th>customer City</th>
+                         <!--  <th>customer Pincode</th> -->
+                          <th>customer Landmark</th>
+                           <!-- <th>customer Proof</th> -->
+                          <th> Date</th>
                           <th colspan="2">Action</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                        <tr ng-repeat="gogascustomer in data">
-                          <td>{{gogascustomer.customer_name}}</td>
-                          <td>{{gogascustomer.customer_email}}</td>
-                          <td>{{gogascustomer.customer_number}}</td>
-                          <td>{{gogascustomer.customer_address}}</td>
-                          <td>{{gogascustomer.customer_type}}</td>
-                          <td>{{gogascustomer.customer_role}}</td>
-                          <td>{{gogascustomer.customer_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(gogascustomer.customer_id,$index);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(gogascustomers.customer_id,gogascustomers.admin_username);">Edit</button></td>
+                        <tr ng-repeat="gogascustomer in data | filter:clisearch">
+                          <td>{{gogascustomer.gcustomer_name}}</td>
+                          <td>{{gogascustomer.gcustomer_email}}</td>
+                          <td>{{gogascustomer.gcustomer_number}}</td>
+                          <!-- <td>{{gogascustomer.gcustomer_dob}}</td>
+                          <td>{{gogascustomer.gcustomer_state}}</td> -->
+                          <td>{{gogascustomer.gcustomer_city}}</td>
+                          <!-- <td>{{gogascustomer.gcustomer_pincode}}</td> -->
+                          <td>{{gogascustomer.gcustomer_landmark}}</td>
+                          <!-- <td>{{gogascustomer.gcustomer_proof}}</td>
+ -->                          <td>{{gogascustomer.gcustomer_date}}</td>
+                          <td><button class="btn btn-danger" ng-click="deleteuser(gogascustomer.gcustomer_id,$index);">Delete</button></td>
+                          <td><button class="btn btn-warning" ng-click="edituser(gogascustomers.gcustomer_id,gogascustomers.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>
                     </table>

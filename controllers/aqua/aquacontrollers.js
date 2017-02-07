@@ -9,7 +9,7 @@ $scope.aquacustomers = angular.copy(aquacustomers);
 console.log($scope.aquacustomers);
 	 $http({
           method  : 'POST',
-          url     : '../../models/insertcustomer.php',
+          url     : '../../models/insertaquacustomer.php',
           data    : $scope.aquacustomers, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
@@ -37,14 +37,14 @@ app.controller('Listaquactrl', ['$scope','$http', function($scope,$http) {
     });
 
 
-  $scope.deleteuser=function(customer_id,index){
+  $scope.deleteuser=function(acustomer_id,index){
     alert('in delete function');
 
-console.log(customer_id);
+console.log(acustomer_id);
      $http({
           method  : 'POST',
           url     : '../../models/deleteaqua.php',
-          data    : {'customer_id':customer_id}, //forms user object
+          data    : {'acustomer_id':acustomer_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {

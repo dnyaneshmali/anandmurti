@@ -21,9 +21,14 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <p class="text-muted font-13 m-b-30">
-                      The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
-                    </p>
+                    <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                          <input type="text" ng-model="clisearch" id="clisearch"  name="clisearch" style="width:100%">
+                          
+                        </div>
+                      </div>
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -40,7 +45,7 @@
 
 
                       <tbody>
-                        <tr ng-repeat="aquaproduct in data">
+                        <tr ng-repeat="aquaproduct in data |filter:clisearch">
                           <td>{{aquaproduct.product_name}}</td>
                           <td>{{aquaproduct.product_prize}}</td>
                           <td>{{aquaproduct.Product_category}}</td>

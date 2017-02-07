@@ -31,14 +31,14 @@ app.controller('Listgogasctrl', ['$scope','$http', function($scope,$http) {
         //console.log($scope.data);
     });
 
-$scope.deleteuser=function(customer_id,index){
+$scope.deleteuser=function(gcustomer_id,index){
     alert('in delete function');
 
-console.log(customer_id);
+console.log(gcustomer_id);
      $http({
           method  : 'POST',
           url     : '../../models/deletegogas.php',
-          data    : {'customer_id':customer_id}, //forms user object
+          data    : {'gcustomer_id':gcustomer_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
@@ -84,5 +84,13 @@ app.controller('Addgogasproductctrl', ['$scope','$http', function($scope,$http) 
   }]);
 
 app.controller('Listgogasproductctrl', ['$scope','$http', function($scope,$http) {
+
+  }]);
+
+app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http) {
+
+  }]);
+
+app.controller('Listnewconnectionctrl', ['$scope','$http', function($scope,$http) {
 
   }]);

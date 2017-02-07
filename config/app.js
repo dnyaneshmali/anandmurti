@@ -67,6 +67,14 @@ app.config(function($routeProvider) {
             templateUrl : 'gogas/listgogasproduct.php',
             controller  : 'Listgogasproductctrl'
         })
+     .when('/addnewconnection', {
+            templateUrl : 'gogas/addnewconnection.php',
+            controller  : 'Addnewconnectionctrl'
+        })
+     .when('/listnewconnection', {
+            templateUrl : 'gogas/listnewconnection.php',
+            controller  : 'Listnewconnectionctrl'
+        })
      .when('/adminlist', {
             templateUrl : 'adminlist.php',
             controller  : 'Adminlistctrl'
