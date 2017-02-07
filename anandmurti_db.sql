@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 01, 2017 at 02:00 PM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.20
+-- Generation Time: Feb 07, 2017 at 06:13 AM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -42,64 +42,82 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`admin_id`, `admin_username`, `admin_name`, `admin_email`, `admin_password`, `admin_number`, `admin_role`, `admin_date`) VALUES
-(1, 'santosh', 'bhosale', 'santosh.bhosale123@gmail.com', '12345', '7777777777', 'aquaadmin', '2017-02-01 07:29:45');
+(1, 'dnyanesh', 'Dnyanesh Mali', 'dnyanesh.mali@softinfology.com', 'e6e061838856bf47e1de730719fb2609', '9689483519', 'superadmin', '2017-01-30 00:00:00'),
+(2, 'santosh', 'Santosh B', 'santoshbhosale123@gmail.com', 'e6e061838856bf47e1de730719fb2609', '1234567890', 'aquaadmin', '2017-02-02 12:30:23'),
+(3, 'test', 'sdfsdfsf', 'sdfadfasdsdf@dsfsdf.com', 'tet', '424243443334', 'aquaadmin', '2017-02-03 08:27:36'),
+(4, 'test2', 'sdfsdfsfdfdf', 'sdsfsdfdfadfasdsdf@dsfsdf.com', 'tet', '467657643334', 'gogasadmin', '2017-02-03 08:28:00');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_customers`
+-- Table structure for table `tbl_aqua_customers`
 --
 
-CREATE TABLE `tbl_customers` (
-  `customer_id` int(11) NOT NULL,
-  `customer_name` varchar(100) NOT NULL,
-  `customer_email` varchar(150) NOT NULL,
-  `customer_number` varchar(50) NOT NULL,
-  `customer_address` varchar(255) NOT NULL,
-  `customer_type` varchar(100) NOT NULL,
-  `customer_role` varchar(50) NOT NULL,
-  `customer_date` datetime NOT NULL
+CREATE TABLE `tbl_aqua_customers` (
+  `acustomer_id` int(11) NOT NULL,
+  `acustomer_name` varchar(100) NOT NULL,
+  `acustomer_email` varchar(150) NOT NULL,
+  `acustomer_number` varchar(50) NOT NULL,
+  `acustomer_address` varchar(255) NOT NULL,
+  `acustomer_type` varchar(100) NOT NULL,
+  `acustomer_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_customers`
---
-
-INSERT INTO `tbl_customers` (`customer_id`, `customer_name`, `customer_email`, `customer_number`, `customer_address`, `customer_type`, `customer_role`, `customer_date`) VALUES
-(7, '', '', '32423423234', 'sdfsdfsdf', 'Temporary', '', '2017-01-31 11:46:32'),
-(12, 'sa123', 'ssss@gmail.com', '7777777777', 'pune', 'aquaadmin', 'Aqua', '2017-01-31 12:08:33'),
-(13, 'santosh', 'santosssssh@gmail.com', '77777777777', 'pune', 'aquaadmin', '', '2017-01-31 12:11:09'),
-(14, 'sawwqw', 'ssasa@gmail.com', '11124353454', 'dnsd', 'aquaadmin', 'Aqua', '2017-01-31 12:15:16'),
-(16, 'santosjh', 'sasdas@gmail.com', '4684654654', 'pune', 'temporary', 'Aqua', '2017-01-31 12:47:39'),
-(17, 'santosh', 'sa@gmail.com', '21212122112', 'qwq', 'Regular', 'Aqua', '2017-01-31 13:08:28'),
-(20, 'sa', 'sa@ddd.ddd', '23233223123', 'd', 'temporary', 'Aqua', '2017-02-01 07:57:59'),
-(21, 'sss', 'ss@gmail.com', '8234782222', 'sas', 'temporary', 'Aqua', '2017-02-01 08:00:03'),
-(22, 'prashant', 'prashant@gmail.com', '23782371237', 'pune', 'temporary', 'Gogas', '2017-02-01 08:01:11'),
-(25, 'ssss', 'ss22323@gmail.com', '1227862376', 'jksajkd', 'temporary', 'Gogas', '2017-02-01 08:12:06'),
-(26, 'santosh', 'bhosale123@gmail.com', '7709326583', 'pune', 'temporary', 'Gogas', '2017-02-01 10:06:22');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_products`
+-- Table structure for table `tbl_gogas_customers`
 --
 
-CREATE TABLE `tbl_products` (
-  `product_id` int(11) NOT NULL,
-  `product_name` varchar(100) NOT NULL,
-  `product_prize` varchar(100) NOT NULL,
-  `Product_category` varchar(100) NOT NULL,
-  `Product_company` varchar(100) NOT NULL,
-  `product_tax` varchar(100) NOT NULL,
-  `product_date` datetime NOT NULL
+CREATE TABLE `tbl_gogas_customers` (
+  `gcustomer_id` int(11) NOT NULL,
+  `gcustomer_name` varchar(100) NOT NULL,
+  `gcustomer_email` varchar(150) NOT NULL,
+  `gcustomer_number` varchar(50) NOT NULL,
+  `gcustomer_dob` varchar(50) NOT NULL,
+  `gcustomer_state` varchar(50) NOT NULL,
+  `gcustomer_city` varchar(50) NOT NULL,
+  `gcustomer_pincode` int(10) NOT NULL,
+  `gcustomer_landmark` varchar(200) NOT NULL,
+  `gcustomer_proof` varchar(200) NOT NULL,
+  `gcustomer_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+-- --------------------------------------------------------
+
 --
--- Dumping data for table `tbl_products`
+-- Table structure for table `tbl_new_connection`
 --
 
-INSERT INTO `tbl_products` (`product_id`, `product_name`, `product_prize`, `Product_category`, `Product_company`, `product_tax`, `product_date`) VALUES
-(3, 'sasasas', 'asasas', 'Regular', 'sasa', 'sasa', '2017-02-01 13:53:39');
+CREATE TABLE `tbl_new_connection` (
+  `connection_id` int(11) NOT NULL,
+  `connection_cylinder_deposit` varchar(50) NOT NULL,
+  `connection_depreciation` varchar(50) NOT NULL,
+  `connection_hotplate` varchar(50) NOT NULL,
+  `connection_passbook` varchar(50) NOT NULL,
+  `connection_stamp` varchar(50) NOT NULL,
+  `connection_tube` varchar(50) NOT NULL,
+  `connection_lighter` varchar(50) NOT NULL,
+  `connection_other` varchar(100) NOT NULL,
+  `connection_date` datetime NOT NULL,
+  `gcustomer_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_refil_details`
+--
+
+CREATE TABLE `tbl_refil_details` (
+  `refil_id` int(11) NOT NULL,
+  `refil_type` varchar(50) NOT NULL,
+  `refil_payment_details` varchar(100) NOT NULL,
+  `refil_amount` int(10) NOT NULL,
+  `refil_date` datetime NOT NULL,
+  `connection_id` int(11) NOT NULL,
+  `gcustomer_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -115,18 +133,32 @@ ALTER TABLE `tbl_admin`
   ADD UNIQUE KEY `admin_number` (`admin_number`);
 
 --
--- Indexes for table `tbl_customers`
+-- Indexes for table `tbl_aqua_customers`
 --
-ALTER TABLE `tbl_customers`
-  ADD PRIMARY KEY (`customer_id`),
-  ADD UNIQUE KEY `customer_email` (`customer_email`),
-  ADD UNIQUE KEY `customer_number` (`customer_number`);
+ALTER TABLE `tbl_aqua_customers`
+  ADD PRIMARY KEY (`acustomer_id`);
 
 --
--- Indexes for table `tbl_products`
+-- Indexes for table `tbl_gogas_customers`
 --
-ALTER TABLE `tbl_products`
-  ADD PRIMARY KEY (`product_id`);
+ALTER TABLE `tbl_gogas_customers`
+  ADD PRIMARY KEY (`gcustomer_id`),
+  ADD UNIQUE KEY `gcustomer_email` (`gcustomer_email`),
+  ADD UNIQUE KEY `gcustomer_number` (`gcustomer_number`);
+
+--
+-- Indexes for table `tbl_new_connection`
+--
+ALTER TABLE `tbl_new_connection`
+  ADD PRIMARY KEY (`connection_id`),
+  ADD KEY `gcustomer_id` (`gcustomer_id`);
+
+--
+-- Indexes for table `tbl_refil_details`
+--
+ALTER TABLE `tbl_refil_details`
+  ADD PRIMARY KEY (`refil_id`),
+  ADD KEY `connection_id` (`connection_id`,`gcustomer_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -136,17 +168,27 @@ ALTER TABLE `tbl_products`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
--- AUTO_INCREMENT for table `tbl_customers`
+-- AUTO_INCREMENT for table `tbl_aqua_customers`
 --
-ALTER TABLE `tbl_customers`
-  MODIFY `customer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+ALTER TABLE `tbl_aqua_customers`
+  MODIFY `acustomer_id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `tbl_products`
+-- AUTO_INCREMENT for table `tbl_gogas_customers`
 --
-ALTER TABLE `tbl_products`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+ALTER TABLE `tbl_gogas_customers`
+  MODIFY `gcustomer_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tbl_new_connection`
+--
+ALTER TABLE `tbl_new_connection`
+  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT;
+--
+-- AUTO_INCREMENT for table `tbl_refil_details`
+--
+ALTER TABLE `tbl_refil_details`
+  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

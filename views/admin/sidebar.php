@@ -11,7 +11,7 @@
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
-                <h2>Dnyanesh</h2>
+                <h2>{{sname}}</h2>
               </div>
             </div>
             <br />
@@ -24,14 +24,14 @@
                   </li>
                   <li><a><i class="fa fa-home"></i> Aqua Agency <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="#/aqua">Dashboard</a></li>
-                      <li><a href="#/addaquacustomer">Add Customers</a></li>
-                      <li><a href="#/listaquacustomer">List Customers</a></li>
-                       <li><a href="#/addaquaproducts">Add Aqua Products</a></li>
+                        <li><a href="#/aqua">Dashboard</a></li>
+                        <li><a href="#/addaquacustomer">Add Customers</a></li>
+                        <li><a href="#/listaquacustomer">List Customers</a></li>
+                        <li><a href="#/addaquaproducts">Add Aqua Products</a></li>
                         <li><a href="#/listaquaproduct">List Aqua Products</a></li>
-                         <li><a href="#/addaquaorder">Add Aqua order</a></li>
-                         <li><a href="#/listaquaorder">List Aqua order</a></li>
-                         <li><a href="#/trackjardetails">Track Jar Details</a></li>
+                        <li><a href="#/addaquaorder">Add Aqua order</a></li>
+                        <li><a href="#/listaquaorder">List Aqua order</a></li>
+                        <li><a href="#/trackjardetails">Track Jar Details</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-home"></i> Go Gas Agency<span class="fa fa-chevron-down"></span></a>

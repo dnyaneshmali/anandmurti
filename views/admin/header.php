@@ -31,7 +31,7 @@ include($root."/config/config.php");
     <script src="<?php echo base_url(); ?>/controllers/LoginController.js"></script>  
   </head>
   <body class="nav-md" ng-app="app">
-    <div class="container body">
+    <div class="container body" ng-controller="Adminbarctrl">
       <div class="main_container">
       <?php include('sidebar.php'); ?>
         <div class="top_nav">
@@ -44,7 +44,7 @@ include($root."/config/config.php");
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="<?php echo base_url(); ?>/assets/images/img.jpg" alt="">Dnyanesh{{data1}}
+                    <img src="<?php echo base_url(); ?>/assets/images/img.jpg" alt="">{{sname}}
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -56,7 +56,7 @@ include($root."/config/config.php");
                       </a>
                     </li>
                     <li><a href="javascript:;">Help</a></li>
-                    <li ng-controller="Logoutctrl"><a href="javascript:;" ng-click="logout();"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="javascript:;" ng-click="logout();"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
               </ul>

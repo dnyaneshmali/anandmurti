@@ -45,8 +45,12 @@
                           <td>{{admin.admin_number}}</td>
                           <td>{{admin.admin_role}}</td>
                           <td>{{admin.admin_date}}</td>
+                          <td><button class="btn btn-warning" ng-click="edituser(admin.admin_id,admin.admin_username);">Edit</button></td>
                           <td><button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button> 
+<<<<<<< HEAD
                               <button class="btn btn-warning" value="{{btnName}}" ng-click="edituser(admin.admin_id);">Edit</button>
+=======
+>>>>>>> 87cfff19ed4c6397250cceaf83e5eaa05fa4fccf
                               <button class="btn btn-warning" ng-click="logout();">Logout</button>
                           </td>
                         </tr>
