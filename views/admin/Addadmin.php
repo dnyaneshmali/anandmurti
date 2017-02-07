@@ -78,7 +78,7 @@ Add User
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
                           <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button ng-click="insertdata(admin)" ng-disabled="!addadminform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
+                          <button ng-click="insertdata(admin)"  ng-disabled="!addadminform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
 
                           {{msg}}
                         </div>

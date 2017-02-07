@@ -20,6 +20,7 @@ app.controller('Gogas', ['$scope', '$http', '$window', '$localStorage', function
 }]);
 
 app.controller('Addadminctrl', ['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
+  //$scope.obj={'idisable':false};
           if($window.localStorage.getItem('ssid') == ''){
               window.location.replace("http://localhost/anandmurti/");
             }
@@ -77,7 +78,24 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
 
                       });
             }
+               
+            /*  $scope.edituser=function(admin_id){
+                alert('in edit function');
+                console.log(admin_id);
+                $http({
+                method :'GET',
+                url    :'../../models/updateadmin.php',
+                data   :{'admin_id' :admin_id},
+                headers:{'Content-Type':'application/x-www-form-urlencoded'}
+               })
+                
+                .success(function(data){
+                  console.log(data);
+                  $scope.btnName="Update"
+              /*$scope.obj.idisable=true;*/
 
+                });
+              }*/
 
               $scope.logout=function(){
 
