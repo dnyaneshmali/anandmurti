@@ -31,7 +31,7 @@
 	left:10%;top:10%;
 	/*border-bottom:1px solid #FFF;
 	border-top:1px solid #FFF;*/
-	transition:opacity .35s,transform .35s;
+	transition:opacity .35s,transform .6s;
 	-webkit-transform:scale(0,1);
 	-ms-transform:scale(0,1);transform:scale(0,1)
 	}
@@ -44,13 +44,13 @@
 	padding:1em 0
 }
 .ehover13 button{
-	transition:opacity .35s,transform .35s;
+	transition:opacity .35s,transform .5s;
 	-webkit-transform:translate3d(0,100%,0);
 	transform:translate3d(0,100%,0)
 }
 .ehover13 h2{
 	background-color:transparent;
-	-webkit-transition:opacity .35s,-webkit-transform .35s;transition:opacity .35s,transform .35s;
+	-webkit-transition:opacity .5s,-webkit-transform .35s;transition:opacity .35s,transform .35s;
 	-webkit-transform:translate3d(0,-100%,0);
 	transform:translate3d(0,-100%,0)
 }

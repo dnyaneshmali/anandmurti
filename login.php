@@ -30,7 +30,7 @@
    <div class = "panel-body">
         <div ng-app='AnandMurtiLogin' ng-controller='loginCtrl'>
       <form class="form-signin" >
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <!-- <h2 class="form-signin-heading">Please sign in</h2> -->
       <form class="form-horizontal col-md-offset-3 col-md-5">
          <div class="form-group"> <h2 class="">Please Login</h2></div>
 

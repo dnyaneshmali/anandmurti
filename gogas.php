@@ -7,7 +7,7 @@
             <a class="slider-btn2 btn btn-lg" href="#">CHECK IT</a>
          </p> -->
          <div >
-                            <img src="images\gogas_(3).png" class="img-responsive">
+                            <img src="images\gogas_(3).png" class="img-responsive img-mt">
                            <!--  <div class="carousel-caption">
                                 <h3>Aqua</h3>
                                 <p>Aqua water for healthy life</p>
@@ -24,42 +24,52 @@
          
     
        <div class="second-section">
-            <div class="container">
+            <div class="container panel1">
                <h2 class="text-center">Gas Cylinder Types</h2>
                <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
-               <div class="row home-content-box">
-                  <div class="col-md-4 col-sm-6 text-center">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                     <i class="fa fa-cogs fa-4x color-accent"></i>
-                     <h4>12 kg</h4>
-                     <p class="text-center">Gogas is a leading brand name for Auto LPG Dispensing Stations. Gogas is a leading brand name for Auto LPG Dispensing Stations. Gogas is a leading brand name for Auto LPG Dispensing Stations. Gogas is a leading brand name for Auto LPG Dispensing Stations </p>
+                   <div class="row home-content-box stylish-panel">
+            <div class="col-md-4 col-sm-6">
+               <div class="panel panel-default">
+                  <div class="text-center">
+                     <div class="panel-body">
+                        <img id="img-1" src="/anandmurti/assets/images/gas_icon.png">
+                        <h4>3 kg</h4>
+                        <p class="text-center">Gogas is a leading brand name for Auto LPG Dispensing Stations( ALDS ) by any private company in India. It is a trusted and a proven brand owned by the parent company Confidence Petroleum India Ltd. </p>
+                     </div>
                   </div>
-              </div>
-          </div>
-                  <div class="col-md-4 text-center">
-                     <div class="panel panel-default">
-                        <div class="panel-body">
-                     <i class="fa fa-cogs fa-4x color-accent"></i>
-                     <h4>5 kg</h4>
-                     <p class="text-center">RO + UV + TDS controller + Mineral added, 10 STAGE. RO + UV + TDS controller + Mineral added, 10 STAGE. RO + UV + TDS controller + Mineral added, 10 STAGE. RO + UV + TDS controller + Mineral added, 10 STAGE </p>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <div class="panel panel-default ">
+                  <div class="text-center">
+                     <div class="panel-body">
+                        <img id="img-2" src="/anandmurti/assets/images/gas_icon.png">
+                        <h4>5 kg</h4>
+                        <p class="text-center">RO + UV + TDS controller + Mineral added, 10 STAGE PURIFICATION "Aqua 
+                           water purifier "
+                           AN ISO 9001-2008 certified company
+                        </p>
+                     </div>
                   </div>
-                   </div>
-                    </div>
-                  <div class="col-md-4 col-sm-6 text-center">
-                    <div class="panel panel-default">
-                        <div class="panel-body">
-                     <i class="fa fa-cogs fa-4x color-accent"></i>
-                     <h4>2 kg</h4>
-                     <p class="text-center">Anand Murti F&B Pvt.RO + UV + TDS controller + Mineral added, 10 STAGE.RO + UV + TDS controller + Mineral added, 10 STAGE. RO + UV + TDS controller + Mineral added, 10 STAGE</p>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <div class="panel panel-default">
+                  <div class="text-center">
+                     <div class="panel-body">
+                        <img id="img-3" src="/anandmurti/assets/images/gas_icon.png">
+                        <h4>12 kg</h4>
+                        <p class="text-center">Anand Murti F&B Pvt. Ltd is a fast growing company extending world-class services in F&B and Retail businesses.
+                           With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  Pvt. Ltd is a one stop shop for high quality , hygienic and end to end F&B and Retail Services.
+                        </p>
+                     </div>
                   </div>
-                   </div>
-                    </div>
-
                </div>
             </div>
          </div>
-		 <div class="container">
+            </div>
+         </div>
+		 <div class="container carousel-mb">
         <div class="row">
             <div class="col-md-12 	">
                 <div id="imageCarousel" class="carousel slide" data-interval="2000"

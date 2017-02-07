@@ -8,6 +8,7 @@ $(document).ready(function(){
     });
 });
 </script>
+
       <div class="page-content contact-page">
      <div class="container">
      <div class="row">
@@ -15,9 +16,9 @@ $(document).ready(function(){
         <div id="content" style="margin-top:20px;">
   <div class="container">
     <div class="row">
-     <div class="col-md-12 col-sm-12 col-lg-12">
+     <div class="col-md-8 col-sm-12 col-lg-12">
     <div class="contentarea">
-      <div class="innerright" style="width:100%; padding-bottom:20px; position:relative;">
+      <div class="innerright">
         <h1><center>Contact us</center></h1>
         <iframe width="1000" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=WTC%20kharadi%20pune+(Softinfology)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style=" margin-top: 30px;"></iframe>
         <div class="contact-area" style="font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;">

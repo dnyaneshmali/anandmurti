@@ -2,7 +2,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Anand Murti!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Anandmurti</span></a>
             </div>
             <div class="clearfix"></div>
             <div class="profile clearfix">
@@ -20,9 +20,9 @@
                 <h3>General</h3>
                 <ul class="nav side-menu">
                 
-                  <li><a href="#/"><i class="fa fa-home"></i> Dashboard</a>
+                  <li><a href="#/"><i class="fa fa-table"></i> Dashboard</a>
                   </li>
-                  <li><a><i class="fa fa-home"></i> Aqua Agency <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-tint"></i> Aqua Agency <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/aqua">Dashboard</a></li>
                       <li><a href="#/addaquacustomer">Add Customers</a></li>
@@ -31,7 +31,7 @@
                         <li><a href="#/listaquaproduct">List Products</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-home"></i> Go Gas Agency<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-fire"></i> Go Gas Agency<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/gogas">Dashboard</a></li>
                        <li><a href="#/addgogascustomer">Add Gogas Customers</a></li>
@@ -39,7 +39,7 @@
                     </ul>
                   </li>
 
-                  <li><a><i class="fa fa-home"></i>Manage Admin's<span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-group"></i>Manage Admin's<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/adminlist">List Admin</a></li>
                       <li><a href="#/addadmin">Add Admin</a></li>

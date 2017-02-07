@@ -8,12 +8,29 @@ Table Of content
 
 */
 /*------------body Start--------------*/
+::-webkit-scrollbar {
+      width:  15px;
+      height: 15px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+     /*background: linear-gradient(to top,#e96253 0,#251c1d 100%);*/
+     /*background: linear-gradient(to top,#a0d88a 0,#ded8d8 100%);*/
+     background: linear-gradient(to bottom,#226b8c 0,#ded8d8 100%);
+    -webkit-border-radius: 3px;
+  }
+
+  ::-webkit-scrollbar-track {
+      background: rgb(232, 232, 232);
+  }
 
 body {} h1 {
     font-size: 48px;
+    text-decoration: underline;
 }
 h2 {
     font-size: 36px;
+    text-decoration: underline;
 }
 h3 {
     font-size: 24px;
@@ -25,7 +42,7 @@ h3 {
     color:white;
 }
 .footer h3,.footer h5{
-    color:white;
+    color:#fff;
 }
 h4 {
     font-size: 18px;
@@ -36,6 +53,10 @@ a {
 a:hover {
     color: #FF712C;
 }
+.footer a:hover {
+        color: #67b945;
+    text-decoration: underline 
+}
 /*----------------Header Section Start----------*/
 
 .navbar {
@@ -44,10 +65,14 @@ a:hover {
      background-size: cover;
     padding: 12px 0;
     background: #fff;
+        background-color: rgba(0, 0, 0, 0.5);
     margin-bottom: 0;
     border-bottom: 0 none;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.3);
     padding-bottom: 20px;
+}
+.navbar-inverse .navbar-nav>li>a {
+    color: #fff;
 }
 .navbar .navbar-nav > li > a:hover,
 .navbar .navbar-nav > li > a:focus,
@@ -55,7 +80,9 @@ a:hover {
 .navbar .navbar-nav > .open > a:focus,
 .navbar .navbar-nav > .active > a {
     background: none;
-    color: #FF712C;
+    /*color: #FF712C;*/
+    color: #67b945;
+    text-decoration: underline;
 }
 .navbar-collapse.collapse {
     padding-top: 20px;
@@ -80,7 +107,7 @@ a:hover {
 /*----------------Slider Section Start----------*/
 
 div#home-slider {
-    padding-top: 90px;
+    padding-top: 120px;
    /* background-image: url(/anandmurti/assets/images/home-image.png);*/
     background-size: cover;
     height: 370px;
@@ -145,15 +172,15 @@ a.slider-btn2 {
 .container.content {
     padding: 20px 15px;
 }
-.first-section {
+/*.first-section {
     margin-bottom: 30px;
     margin-top: 30px;
-}
+}*/
 .second-section {
     margin-bottom: 30px;
     /*background-color: #f6f7f8;*/
     padding-top: 32px;
-    padding-bottom: 47px;
+    /*padding-bottom: 47px;*/
 }
 
 .third-section{
@@ -317,16 +344,19 @@ color:#fff;
 /*----------------Footer Section Start----------*/
 
 div#footer1 {
-     background: url(/anandmurti/assets/images/aquablue_footer.jpg);
-    /*background: #e1e4e6;*/
+   /*  background: url(/anandmurti/assets/images/images.jpg);*/
+   /* background: #000;*/
+    background: #468cad;;
     background-repeat: no-repeat;
     background-size: cover;
     color: #000;
 	padding-top: 30px;
     padding-bottom: 30px;
+   /* background: linear-gradient(to bottom,#7da7bb 0,#226b8c 100%);*/
 }
 div#footer2 {
-    background: #000;
+    /*background: linear-gradient(to top,#67b945 0,#0e0e0e 100%);*/
+    background: #6eb94e;
     color: #000;
 	padding-top: 10px;
 }
@@ -334,7 +364,15 @@ div#footer2 {
 #footer1 p.social-icons {
     font-size: 30px;
 }
+.footer i{
+background-color: #6eb94e;
+    border-radius: 50%;
+    height: 5.5%;
+    width: 15%;}
 
+   .footer p.social-icons a:hover {
+    color: #226b8c;
+}
 /*----------------Media Queries Start----------*/
 
 @media (max-width: 767px) {
@@ -397,7 +435,7 @@ width: 1140px;
     color: #fff;
 }
 span.heart {
-    color: #cc4643;
+    color: #cc2323;
 }
 
 
@@ -452,18 +490,34 @@ img.owner_img {
     margin-left: -15px;
     margin-bottom: 30px;
 }
+.about-page .customDiv{ margin:3px; min-height:300px; /*background-color:rgb(246, 247, 248);; */
+   padding: 10px;
+   letter-spacing: 0.5px;
+   font-family: Helvetica;
+   /*font-size: medium;*/
+   box-shadow: 0 1px 21px rgba(0,0,0,0.21);
+   }
 /*index*/
+.img-mt{margin-top: 2.5%;}
+.container.carousel-mb {
+    margin-bottom: 3%;
+}
+.home-page h2{
+margin-top: 60px;
+}
+.navbar-brand {
+    float: none;}
 .panel1 .panel.panel-default:hover {
     box-shadow: 0 4px 10px rgba(0,0,0,0.4);
     margin-top: -10px;
-    transition: all 0.3s ease 0s;
+    transition: all 0.4s ease 0s;
 }
 .home-page .content-icon , .aqua-page .content-icon {
     float: left;
     margin-top: 20px;
 }
 .home-page .content-icon span ,.aqua-page .content-icon span {
-    color: rgb(104, 176, 210);
+    color: rgb(68, 155, 195);
     font-size: 20px;
     line-height: 50px;}
 .home-page .box-right , .aqua-page .box-right {
@@ -474,11 +528,12 @@ img.owner_img {
      padding: 0px 0px;
  }
 .home-page .panel2 .panel,.aqua-page .panel,.gogas-page .panel{
-    background-color: rgb(246, 247, 248);
+    /*background-color: rgb(246, 247, 248);*/
     box-shadow: 0 0.9px 10px  rgba(0,0,0,0.14);
 }
 .panel{
     border:none;
+    box-shadow: 0 0.9px 10px  rgba(0,0,0,0.14);
 }
 .home-content-box .panel {
   /*  background-color: #fff;*/
@@ -521,12 +576,13 @@ img.owner_img {
 }
 .stylish-panel img#img-1:hover,.stylish-panel img#img-2:hover,.stylish-panel img#img-3:hover
 {
-     border: 1px solid rgb(200, 200, 200);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+     /*border: 1px solid rgb(200, 200, 200);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;*/
 }
 .stylish-panel div#f1:hover,.stylish-panel div#f2:hover,.stylish-panel div#f3:hover,.stylish-panel div#f4:hover{
   border: 1px solid rgb(200, 200, 200);
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+  /*  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;*/
+    box-shadow:rgb(185, 202, 178) 0px 5px 5px 2px;
 }
 .home-page .panel-body , .gogas-page .panel-body{
     height: 250px;
@@ -694,16 +750,75 @@ width: 100%;
   .contact-page h1 {
     font-size: 48px;
     margin-top: 60px;
+} 
+/*Product*/
+.hover .overlay h4{
+    color: #fff;
 }
 /*media Queries*/
-@media screen and (max-width:736px){
-div#home-slider,div#gas-slider,div#aqua-slider {
-    padding-top: 170px;
-height: 210px;}
-
+@media screen and (max-width:767px){                                          
+div#home-slider, div#gas-slider, div#aqua-slider {
+    padding-top: 80px;
+    height: 20px;}
 
    .about-page h1,.products-page h1,.enquiry-page h1 {
     margin-top: 60px;
 }
-    
+.footer i{
+   height: 4.5%;
+   width: 10%;
+}
+   .footer .fa {
+        padding: 2% !important;
+} 
+.card img {
+    height: 80px;
+}
+}
+@media only screen  and (min-width : 768px) and (max-width : 992px){/*}*/
+/*@media screen and (min-width:768px){*/
+.home-page h2{
+margin-top: 140px;
+}
+.navbar-brand img{width: 200px; padding-top: 13px}
+div#home-slider, div#gas-slider,div#aqua-slider {
+    padding-top: 100px;
+}
+.page-content, .products-page {
+    margin-top: 5px;
+}
+.footer-center{
+text-align:center
+}
+.footer i{
+    height: 4.5%;
+    width: 7%;
+}
+.footer .fa {
+   padding: 2% !important;
+}
+}
+@media screen and (max-width:767px){
+
+    .tabs-style-tzoid nav ul li a {
+    width: 87px;
+}
+.home-page h2{
+margin-top: 80px;
+}
+.footer-center{
+text-align:center
+}
+
+.about-page .col-sm-12{
+    padding-right: 15px;
+    padding-left: 15px;
+}
+.navbar-brand img{width: 210px;}
+h2 {
+    font-size: 20px;}
+    h1 {
+    font-size: 25px;}
+
+
 }

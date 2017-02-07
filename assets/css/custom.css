@@ -91,7 +91,7 @@
 
 @charset "UTF-8";
 .left_col {
-  background: #6BBA42; }
+  background: #000; }
 
 .nav-sm .container.body .col-md-3.left_col {
   min-height: 100%;

@@ -10,7 +10,7 @@
          
 
                         <div class="container-fluid" >
-                            <img src="images\aqua_(3).png" class="img-responsive">
+                            <img src="images\aqua_(3).png" class="img-responsive img-mt">
                         </div>
                         
                    
@@ -71,7 +71,7 @@
          
 
       
-          <div class="container">
+          <div class="container carousel-mb">
         <div class="row">
             <div class="col-md-12   ">
                 <div id="imageCarousel" class="carousel slide" data-interval="2000"
