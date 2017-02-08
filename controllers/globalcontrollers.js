@@ -50,6 +50,9 @@ app.controller('Addadminctrl', ['$scope', '$http', '$window', '$localStorage', f
 
 
 app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
+
+    $scope.iseditid='';
+
               if($window.localStorage.getItem('ssid') == ''){
                 window.location.replace("http://localhost/anandmurti/");
               }
@@ -89,7 +92,20 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
                  $window.localStorage.setItem('islogin','false');
             }
 
-
+            $scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id){
+              $scope.iseditid=id;
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.$watch();
+            }
+            $scope.updateuser=function(admin){
+              console.log(admin);
+            }
 
 }]);
 
