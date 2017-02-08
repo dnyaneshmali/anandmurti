@@ -87,10 +87,65 @@ app.controller('Listgogasproductctrl', ['$scope','$http', function($scope,$http)
 
   }]);
 
+
+
+
 app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http) {
 
-  }]);
+
+
+$scope.insertdata=function(Connection){
+  $scope.Connection = {};
+$scope.Connection = angular.copy(Connection);
+console.log($scope.Connection);
+   $http({
+          method  : 'POST',
+          url     : '../../models/insertnewconnection.php',
+          data    : $scope.Connection, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+              $scope.msg = "data inserted successfully "
+                delete $scope.Connection;
+                $scope.connectionform.$setPristine();
+            
+
+          });
+
+}
+}]);
 
 app.controller('Listnewconnectionctrl', ['$scope','$http', function($scope,$http) {
+   $http.get("../../models/getnewconnections.php")
+    .success(function(data){
+        $scope.data=data
+        //console.log($scope.data);
+    });
 
-  }]);
+$scope.deleteuser=function(connection_id,index){
+    alert('in delete function');
+
+console.log(connection_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deleteconection.php',
+          data    : {'connection_id': connection_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+            console.log(data);
+             $scope.data.splice(index, 1);
+                        $scope.$watch();
+            
+            
+
+          });
+}
+
+
+
+}]);
+

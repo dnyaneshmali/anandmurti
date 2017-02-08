@@ -91,7 +91,7 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
                  $window.localStorage.setItem('srole','');
                  $window.localStorage.setItem('islogin','false');
             }
-
+           //button work functions and update operation
             $scope.isedit=function(id){
               return id==$scope.iseditid;
             }
