@@ -32,6 +32,32 @@ h2 {
     font-size: 36px;
     text-decoration: underline;
 }
+.bggradient{
+    min-height: 760px;
+}
+.bggradient h2 {
+    font-size: 36px;
+    text-decoration: none;
+    text-align: center;
+}
+.bggradient img{
+    padding-left: 75px;
+    padding-top: 30px;
+}
+.bggradient #inputusername{
+        margin-bottom: 10px;}
+        .bggradient .btn{
+    margin-left: 110px;
+    background-color: #3e9bc3;;
+        }
+      .bggradient h2{
+            font-family: initial;
+
+        }
+        input:-webkit-autofill{
+    background-color: #fff;
+}
+
 h3 {
     font-size: 24px;
 }
