@@ -103,9 +103,28 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
               $scope.iseditid='';
               $scope.$watch();
             }
-            $scope.updateuser=function(admin){
-              console.log(admin);
-            }
+            $scope.updateuser=function(admin,adminupdate,index){
+              
+              $scope.admin = {};
+           $scope.admin = angular.copy(admin);
+           console.log($scope.admin);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updateadmin.php',
+                     data    : $scope.admin, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                      /* console.log(data);*/
+                         $scope.msg = "data inserted successfully ";
+
+                        delete $scope.admin;
+                        $scope.addadminform.$setPristine();
+           
+                     });
+           
+           }
 
 }]);
 

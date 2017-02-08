@@ -43,23 +43,56 @@
                         </div>
                       </div>
                           
-                      <div class="item form-group">
+                      <!-- <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="    connection_depreciation">connection hotplate <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <input type="text" ng-model="connection.connection_hotplate" id="   connection_hotplate" class="form-control" name=" connection_hotplate" required />
                           <p style="color:red;" ng-show="connectionform.connection_hotplate.$invalid && !connectionform.connection_hotplate.$pristine" class="help-block"> required</p>
                         </div>
-                      </div>
-
+                      </div> -->
                       <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_tube">connection Hotplate<span class="required">*</span>
+                        </label>
+                            <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
+                              <label>
+                              <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">yes </label><br />
+                              <label>
+                              <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">No </label>
+                              </div>
+                            </div>
+
+
+
+                           
+
+
+
+
+
+                      <!-- <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="    connection_depreciation">connection passbook <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <input type="text" ng-model="connection.connection_passbook" id="   connection_passbook" class="form-control" name="connection_passbook" required />
                           <p style="color:red;" ng-show="connectionform.connection_passbook.$invalid && !connectionform.connection_passbook.$pristine" class="help-block"> required</p>
                         </div>
-                      </div>
+                      </div> -->
+                             
+                           <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_tube">connection passbook<span class="required">*</span>
+                        </label>
+                            <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
+                              <label>
+                              <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">yes </label><br />
+                              <label>
+                              <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">No </label>
+                              </div>
+                            </div>
+
+
+
+
 
                        <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_stamp">connection stamp<span class="required">*</span>
@@ -70,17 +103,36 @@
                         </div>
                       </div>
 
-                       <div class="item form-group">
+                      <!--  <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_tube">connection tube<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <input type="text" ng-model="connection.connection_tube" id="    connection_tube" class="form-control" name="connection_tube" required />
                           <p style="color:red;" ng-show="connectionform.connection_tube.$invalid && !connectionform.connection_tube.$pristine" class="help-block"> required</p>
                         </div>
-                      </div>
+                      </div> -->
                        
+                          <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_tube">connection tube<span class="required">*</span>
+                        </label>
+                            <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
+                              <label>
+                              <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">yes </label><br />
+                              <label>
+                              <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">No </label>
+                              </div>
+                            </div>
 
-                         <div class="item form-group">
+
+
+
+
+
+
+
+
+
+                         <!-- <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="        connection_lighter">connection lighter<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
@@ -88,8 +140,20 @@
                           <p style="color:red;" ng-show="connectionform.connection_lighter.$invalid && !connectionform.connection_lighter.$pristine" class="help-block"> required</p>
                         </div>
                       </div>
-
+ -->
                         
+                              <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_tube">connection Lighter<span class="required">*</span>
+                        </label>
+                            <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
+                              <label>
+                              <input type="radio" checked="" value="option1" id="optionsRadios1" name="optionsRadios">yes </label><br />
+                              <label>
+                              <input type="radio" value="option2" id="optionsRadios2" name="optionsRadios">No </label>
+                              </div>
+                            </div>
+
+
                          
 
                            <div class="item form-group">

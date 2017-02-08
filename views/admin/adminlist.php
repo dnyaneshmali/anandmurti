@@ -64,7 +64,7 @@
                           </td>
                           <ng-form name="addadminform">
                           <td ng-if="isedit(admin.admin_id)">
-                          <input type="text" ng-value="admin.admin_name" ng-model="admin.admin_name" name="admin_name" style="width: auto;" required>
+                          <input type="text" ng-value="admin.admin_name" ng-model="admin.admin_name" name="admin_name" style="width:auto;" required>
                           <p style="color:red;" ng-show="addadminform.admin_name.$invalid && !addadminform.admin_name.$pristine" class="help-block"> fullname is required.</p>
                           </td>
                           <td ng-if="isedit(admin.admin_id)">{{admin.admin_email}}</td>
