@@ -1,8 +1,8 @@
-<div class="userlist" ng-controller="Listaquaproductctrl">
+<div class="listvehiclectrl" ng-controller="Listvehiclectrl">
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>List of Aqua Products</h2>
+                   <!--  <h2>Button Example <small>A</small></h2> -->
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -21,10 +21,6 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <!-- <p class="text-muted font-13 m-b-30">
-                      The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
-                    </p> -->
-
                     <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
                         </label>
@@ -36,28 +32,22 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>product name</th>
-                          <th>product prize</th>
-                          <th>Product category</th>
-                          <th>Product company</th>
-                          <th>product tax</th>
+                          <th>Vehicle Owner Name</th>
+                          <th>Vehicle Number</th>
+                          <th>Vehicle Contact Number</th>
+                          <th colspan="3">Action</th>
                           
-                          <th>product date</th>
-                          <th colspan="2">Action</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                        <tr ng-repeat="aquaproduct in data |filter:clisearch">
-                          <td>{{aquaproduct.product_name}}</td>
-                          <td>{{aquaproduct.product_prize}}</td>
-                          <td>{{aquaproduct.Product_category}}</td>
-                          <td>{{aquaproduct.Product_company}}</td>
-                          <td>{{aquaproduct.product_tax}}</td>
-                          <td>{{aquaproduct.product_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(aquaproduct.product_id,$index);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);">Edit</button></td>
+                        <tr ng-repeat="listvehicle in data | filter:clisearch">
+                          <td>{{listvehicle.vehicle_owner_name}}</td>
+                          <td>{{listvehicle.vehicle_number}}</td>
+                          <td>{{listvehicle.vehicle_contact_number}}</td>
+                          <td><button class="btn btn-danger" ng-click="deletevehicle(listvehicle.vehicle_id);">Delete</button></td>
+                          <td><button class="btn btn-warning" ng-click="editvehicle(listvehicle.customer_id,listvehicle.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>
                     </table>

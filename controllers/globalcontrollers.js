@@ -50,6 +50,9 @@ app.controller('Addadminctrl', ['$scope', '$http', '$window', '$localStorage', f
 
 
 app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
+
+    $scope.iseditid='';
+
               if($window.localStorage.getItem('ssid') == ''){
                 window.location.replace("http://localhost/anandmurti/");
               }
@@ -79,24 +82,8 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
                       });
             }
                
-            /*  $scope.edituser=function(admin_id){
-                alert('in edit function');
-                console.log(admin_id);
-                $http({
-                method :'GET',
-                url    :'../../models/updateadmin.php',
-                data   :{'admin_id' :admin_id},
-                headers:{'Content-Type':'application/x-www-form-urlencoded'}
-               })
-                
-                .success(function(data){
-                  console.log(data);
-                  $scope.btnName="Update"
-              /*$scope.obj.idisable=true;*/
-
-                });
-              }*/
-
+            /*
+            */
               $scope.logout=function(){
 
                  $window.localStorage.setItem('ssid','');
@@ -104,8 +91,40 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
                  $window.localStorage.setItem('srole','');
                  $window.localStorage.setItem('islogin','false');
             }
+           //button work functions and update operation
+            $scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id){
+              $scope.iseditid=id;
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.$watch();
+            }
+            $scope.updateuser=function(admin,adminupdate,index){
+              
+              $scope.admin = {};
+           $scope.admin = angular.copy(admin);
+           console.log($scope.admin);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updateadmin.php',
+                     data    : $scope.admin, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                      /* console.log(data);*/
+                         $scope.msg = "data inserted successfully ";
 
-
+                        delete $scope.admin;
+                        $scope.addadminform.$setPristine();
+           
+                     });
+           
+           }
 
 }]);
 

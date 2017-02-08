@@ -20,6 +20,19 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
+
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                          <input type="text" ng-model="clisearch" id="clisearch"  name="clisearch" style="width:100%">
+                          
+                        </div>
+                      </div>
+
+
+
                   <div class="x_content">
                     <!-- <p class="text-muted font-13 m-b-30">
                       The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
@@ -39,20 +52,42 @@
 
                       <tbody>
                         
-                        <tr ng-repeat="admin in data">
-                          <td>{{admin.admin_name}}</td>
-                          <td>{{admin.admin_email}}</td>
-                          <td>{{admin.admin_number}}</td>
-                          <td>{{admin.admin_role}}</td>
-                          <td>{{admin.admin_date}}</td>
-                          <td><button class="btn btn-warning" ng-click="edituser(admin.admin_id,admin.admin_username);">Edit</button></td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button> 
-<<<<<<< HEAD
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="edituser(admin.admin_id);">Edit</button>
-=======
->>>>>>> 87cfff19ed4c6397250cceaf83e5eaa05fa4fccf
-                              <button class="btn btn-warning" ng-click="logout();">Logout</button>
+                        <tr ng-repeat="admin in data | filter:clisearch">
+                          <td ng-if="!isedit(admin.admin_id)">{{admin.admin_name}}</td>
+                          <td ng-if="!isedit(admin.admin_id)">{{admin.admin_email}}</td>
+                          <td ng-if="!isedit(admin.admin_id)">{{admin.admin_number}}</td>
+                          <td ng-if="!isedit(admin.admin_id)">{{admin.admin_role}}</td>
+                          <td ng-if="!isedit(admin.admin_id)">{{admin.admin_date}}</td>
+                          
+                          <td ng-if="!isedit(admin.admin_id)">
+                              <button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button> 
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id);">Edit</button>
+                             <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
                           </td>
+                          <ng-form name="addadminform">
+                          <td ng-if="isedit(admin.admin_id)">
+                          <input type="text" ng-value="admin.admin_name" ng-model="admin.admin_name" name="admin_name" style="width:auto;" required>
+                          <p style="color:red;" ng-show="addadminform.admin_name.$invalid && !addadminform.admin_name.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+                          <td ng-if="isedit(admin.admin_id)">{{admin.admin_email}}</td>
+                          <td ng-if="isedit(admin.admin_id)">
+                          <input type="text" ng-value="admin.admin_number" ng-model="admin.admin_number" name="admin_number" style="width: auto;" required>
+                          <p style="color:red;" ng-show="addadminform.admin_number.$invalid && !addadminform.admin_number.$pristine" class="help-block"> phone number is required.</p>
+                          </td>
+                          <td ng-if="isedit(admin.admin_id)">
+                          <input type="text" ng-value="admin.admin_role" ng-model="admin.admin_role" name="admin_role" style="width: auto;" required>
+                          <p style="color:red;" ng-show="addadminform.admin_role.$invalid && !addadminform.admin_role.$pristine" class="help-block"> admin_role is required.</p>
+                          </td>
+                          <td ng-if="isedit(admin.admin_id)">{{admin.admin_date}}</td>
+                          
+                          <td ng-if="isedit(admin.admin_id)"><button class="btn btn-danger" ng-click="updateuser(admin);">Update</button> 
+
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit(admin.admin_id);">Cancel</button>
+
+
+                             <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
+                          </td>
+                          <ng-form>
                         </tr>
                       </tbody>
                     </table>

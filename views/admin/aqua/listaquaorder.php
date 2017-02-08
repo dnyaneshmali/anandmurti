@@ -24,16 +24,24 @@
                    <!--  <p class="text-muted font-13 m-b-30">
                       The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
                     </p> -->
+                    <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                          <input type="text" ng-model="clisearch" id="clisearch"  name="clisearch" style="width:100%">
+                          
+                        </div>
+                      </div>
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Order Name</th>
+                          <th>Customer Name</th>
                           <th>Order Address</th>
                           <th>Quantity</th>
                           <th>Order time</th>
                           <th>Order Date</th>
-                           <th>Advance payment</th>
-                          <th>Remaining Payment</th>
+                          <th>Vehicle Name</th>
+                          <th>Order Status</th>
                           <th colspan="3">Action</th>
                           
                         </tr>
@@ -41,17 +49,18 @@
 
 
                       <tbody>
-                        <tr ng-repeat="aquacustomer in data">
-                          <td>{{aquacustomer.customer_name}}</td>
-                          <td>{{aquacustomer.customer_email}}</td>
-                          <td>{{aquacustomer.customer_number}}</td>
-                          <td>{{aquacustomer.customer_address}}</td>
-                          <td>{{aquacustomer.customer_type}}</td>
-                          <td>{{aquacustomer.customer_role}}</td>
-                          <td>{{aquacustomer.customer_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(aquacustomer.customer_id);">Delete</button></td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(aquacustomer.customer_id);">Add Reminder</button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);">Edit</button></td>
+                        <tr ng-repeat="aquaorder in data | filter:clisearch">
+                          <td>{{aquaorder.customer_name}}</td>
+                          <td>{{aquaorder.order_delivery_address}}</td>
+                          <td>{{aquaorder.order_quantity}}</td>
+                          <td>{{aquaorder.order_delivery_time}}</td>
+                          <td>{{aquaorder.order_delivery_date}}</td>
+                          <td>{{aquaorder.vehicle_name}}</td>
+                          <td>{{aquaorder.order_status}}</td>
+                          <td><button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);">Delete</button></td>
+                          <td ng-if="aquaorder.order_reminder==0"><button class="btn btn-danger" ng-click="setreminder(1);">Set Reminder</button></td>
+                          <td ng-if="aquaorder.order_reminder==1"><button class="btn btn-active" ng-click="unsetreminder(0);">Unset Reminder</button></td>
+                          <td><button class="btn btn-warning" ng-click="editorder(aquaorder.customer_id,aquaorder.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>
                     </table>

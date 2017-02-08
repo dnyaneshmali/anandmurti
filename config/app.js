@@ -36,15 +36,28 @@ app.config(function($routeProvider) {
         })
         .when('/addaquaorder', {
             templateUrl : 'aqua/addaquaorder.php',
-            controller  : 'Addaquaorder'
+            controller  : 'Addaquaorderctrl'
         })
          .when('/listaquaorder', {
             templateUrl : 'aqua/listaquaorder.php',
             controller  : 'Listaquaorder'
         })
-       .when('/trackjardetails', {
-            templateUrl : 'aqua/trackjardetails.php',
-            controller  : 'Trackjardetails'
+       .when('/addjardetails', {
+            templateUrl : 'aqua/addjardetails.php',
+            controller  : 'Addjardetailsctrl'
+        })
+
+       .when('/listjardetails', {
+            templateUrl : 'aqua/listjardetails.php',
+            controller  : 'Listjardetailsctrl'
+        })
+       .when('/addvehicledetails', {
+            templateUrl : 'aqua/addvehicledetails.php',
+            controller  : 'Addvehiclectrl'
+        })
+       .when('/listvehicledetails', {
+            templateUrl : 'aqua/listvehicledetails.php',
+            controller  : 'Listvehiclectrl'
         })
 
      .when('/gogas', {
@@ -66,6 +79,14 @@ app.config(function($routeProvider) {
      .when('/listgogasproduct', {
             templateUrl : 'gogas/listgogasproduct.php',
             controller  : 'Listgogasproductctrl'
+        })
+     .when('/addnewconnection', {
+            templateUrl : 'gogas/addnewconnection.php',
+            controller  : 'Addnewconnectionctrl'
+        })
+     .when('/listnewconnection', {
+            templateUrl : 'gogas/listnewconnection.php',
+            controller  : 'Listnewconnectionctrl'
         })
      .when('/adminlist', {
             templateUrl : 'adminlist.php',

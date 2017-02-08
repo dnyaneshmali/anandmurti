@@ -5,9 +5,11 @@ include($root."/config/config.php");
 
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
-$query = "UPDATE tbl_admin SET admin_name='".$data['admin_name']."', admin_number='".$data['admin_number']."', admin_role='".$data['admin_number']."' WHERE admin_id='".$data['admin_id']."'";
-
-    if(!mysqli_query($connection,$query))
+$jardetails_date = date("Y-m-d H:i:s");
+$query = "INSERT INTO   tbl_jar_details(jar_type, jar_price,jar_date)
+    VALUES('".$data['jar_type']."','".$data['jar_price']."','".$jardetails_date."')";
+   
+     if(!mysqli_query($connection,$query))
     {
         die('Error : ' . mysqli_error());
     }else{

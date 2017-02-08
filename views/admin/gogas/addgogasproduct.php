@@ -1,5 +1,6 @@
+
 <div class="addgo-prod">
-<h1>Add Aqua Products</h1>
+<h1>Add Gogas Products</h1>
 <div class="addgogasproductform" ng-controller="Addgogasproductctrl">
 <form name="addgogasproductform" class="form-horizontal form-label-left" nonvalidate>
 
