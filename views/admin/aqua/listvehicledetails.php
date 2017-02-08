@@ -1,4 +1,4 @@
-<div class="listaquaorder" ng-controller="Listaquaorder">
+<div class="listvehiclectrl" ng-controller="Listvehiclectrl">
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
@@ -32,13 +32,9 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Customer Name</th>
-                          <th>Order Address</th>
-                          <th>Quantity</th>
-                          <th>Order time</th>
-                          <th>Order Date</th>
-                          <th>Vehicle Name</th>
-                          <th>Order Status</th>
+                          <th>Vehicle Owner Name</th>
+                          <th>Vehicle Number</th>
+                          <th>Vehicle Contact Number</th>
                           <th colspan="3">Action</th>
                           
                         </tr>
@@ -46,18 +42,12 @@
 
 
                       <tbody>
-                        <tr ng-repeat="aquaorder in data | filter:clisearch">
-                          <td>{{aquaorder.customer_name}}</td>
-                          <td>{{aquaorder.order_delivery_address}}</td>
-                          <td>{{aquaorder.order_quantity}}</td>
-                          <td>{{aquaorder.order_delivery_time}}</td>
-                          <td>{{aquaorder.order_delivery_date}}</td>
-                          <td>{{aquaorder.vehicle_name}}</td>
-                          <td>{{aquaorder.order_status}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);">Delete</button></td>
-                          <td ng-if="aquaorder.order_reminder==0"><button class="btn btn-danger" ng-click="setreminder(1);">Set Reminder</button></td>
-                          <td ng-if="aquaorder.order_reminder==1"><button class="btn btn-active" ng-click="unsetreminder(0);">Unset Reminder</button></td>
-                          <td><button class="btn btn-warning" ng-click="editorder(aquaorder.customer_id,aquaorder.admin_username);">Edit</button></td>
+                        <tr ng-repeat="listvehicle in data | filter:clisearch">
+                          <td>{{listvehicle.vehicle_owner_name}}</td>
+                          <td>{{listvehicle.vehicle_number}}</td>
+                          <td>{{listvehicle.vehicle_contact_number}}</td>
+                          <td><button class="btn btn-danger" ng-click="deletevehicle(listvehicle.vehicle_id);">Delete</button></td>
+                          <td><button class="btn btn-warning" ng-click="editvehicle(listvehicle.customer_id,listvehicle.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>
                     </table>

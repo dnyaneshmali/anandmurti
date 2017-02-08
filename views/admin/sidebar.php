@@ -31,7 +31,10 @@
                         <li><a href="#/listaquaproduct">List Aqua Products</a></li>
                         <li><a href="#/addaquaorder">Add Aqua order</a></li>
                         <li><a href="#/listaquaorder">List Aqua order</a></li>
-                        <li><a href="#/trackjardetails">Track Jar Details</a></li>
+                        <li><a href="#/addjardetails">Add Jar Details</a></li>
+                        <li><a href="#/listjardetails">List Jar Details</a></li>
+                        <li><a href="#/addvehicledetails">Add Vehicle Details</a></li>
+                        <li><a href="#/listvehicledetails">List Vehicle Details</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-home"></i> Go Gas Agency<span class="fa fa-chevron-down"></span></a>
