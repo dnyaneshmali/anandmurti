@@ -61,7 +61,7 @@
                           
                           <td ng-if="!isedit(admin.admin_id)">
                               <button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button> 
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id);">Edit</button>
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id, admin);">Edit</button>
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
                           </td>
                           <ng-form name="addadminform">
@@ -80,9 +80,11 @@
                           </td>
                           <td ng-if="isedit(admin.admin_id)">{{admin.admin_date}}</td>
                           
-                          <td ng-if="isedit(admin.admin_id)"><button class="btn btn-danger" ng-click="updateuser(admin);">Update</button> 
+                          <td ng-if="isedit(admin.admin_id)">
 
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit(admin.admin_id);">Cancel</button>
+                              <button class="btn btn-danger" ng-click="updateuser(admin,$index);">Update</button> 
+
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button>
 
 
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->

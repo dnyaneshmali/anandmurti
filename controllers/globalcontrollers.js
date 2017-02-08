@@ -52,6 +52,7 @@ app.controller('Addadminctrl', ['$scope', '$http', '$window', '$localStorage', f
 app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
 
     $scope.iseditid='';
+    $scope.oldadmin='';
 
               if($window.localStorage.getItem('ssid') == ''){
                 window.location.replace("http://localhost/anandmurti/");
@@ -95,33 +96,35 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
             $scope.isedit=function(id){
               return id==$scope.iseditid;
             }
-            $scope.setedit=function(id){
+            $scope.setedit=function(id,oldadmin){
               $scope.iseditid=id;
+              $scope.oldadmin=angular.copy(oldadmin);
               $scope.$watch();
             }
             $scope.unsetedit=function(id){
               $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldadmin);
               $scope.$watch();
             }
-            $scope.updateuser=function(admin,adminupdate,index){
-              
-              $scope.admin = {};
-           $scope.admin = angular.copy(admin);
-           console.log($scope.admin);
+            $scope.initval = function (admin) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updateuser=function(admin,index){
               $http({
                      method  : 'POST',
                      url     : '../../models/updateadmin.php',
-                     data    : $scope.admin, //forms user object
+                     data    : admin, //forms user object
                      headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
                     })
            
                 .success(function(data) {
                       /* console.log(data);*/
-                         $scope.msg = "data inserted successfully ";
-
-                        delete $scope.admin;
+                        $scope.msg = "data inserted successfully ";
                         $scope.addadminform.$setPristine();
-           
+                        delete $scope.oldadmin;
+                        $scope.iseditid='';
+                        $scope.$watch();
                      });
            
            }

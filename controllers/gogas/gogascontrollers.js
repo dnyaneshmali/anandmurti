@@ -115,6 +115,50 @@ console.log($scope.Connection);
           });
 
 }
+
+
+
+      $scope.customers = ["Lord of the Rings",
+                        "Drive",
+                        "Science of Sleep",
+                        "Back to the Future",
+                        "Oldboy"];
+      $scope.updatecustomers = function(typed){
+          console.log('clicked');
+            $scope.customers = ["Lord of the Rings",
+                        "Drive",
+                        "Science of Sleep",
+                        "Back to the Future",
+                        "Oldboy"];
+      }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }]);
 
 app.controller('Listnewconnectionctrl', ['$scope','$http', function($scope,$http) {
