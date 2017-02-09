@@ -208,22 +208,86 @@ console.log(order_id);
                       });
             }
 
-            $scope.setreminder=function(data){
-console.log(data);
+            $scope.setreminder=function(data,index){
+//console.log(data);
+$scope.setrem = angular.copy(data);
+console.log($scope.setrem);
      $http({
           method  : 'POST',
           url     : '../../models/setreminder.php',
-          data    : {'order_id':order_id}, //forms user object
+          data    : $scope.setrem, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
             
               console.log(data);
-                        $scope.data.splice(index, 1);
-                        $scope.$watch();
+                       //$scope.data.splice(index, 1);
+                      // $scope.$watch();
 
                       });
             }
+
+
+            $scope.unsetreminder=function(data,index){
+//console.log(data);
+$scope.setrem = angular.copy(data);
+console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/unsetreminder.php',
+          data    : $scope.setrem, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                      //scope.data.splice(index, 1);
+                       //$scope.$watch();
+
+                      });
+            }
+
+            $scope.setstatus=function(data,index){
+//console.log(data);
+$scope.setstatus = angular.copy(data);
+console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/setstatus.php',
+          data    : $scope.setstatus, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                     //   $scope.data.splice(index, 1);
+                      //  $scope.$watch();
+
+                      });
+            }
+
+            $scope.unsetstatus=function(data,index){
+//console.log(data);
+$scope.setstatus = angular.copy(data);
+console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/unsetstatus.php',
+          data    : $scope.setstatus, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
+
+
+
+
 
 
 
