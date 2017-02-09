@@ -1,3 +1,5 @@
+
+
 .daterangepicker .ranges li {
   color: #73879C; }
   .daterangepicker .ranges li.active, .daterangepicker .ranges li:hover {
@@ -3996,3 +3998,14 @@ span.required {
   background-color: #000;
 }*/
 
+.listaqua-prod input#clisearch,.listaqua-cust input#clisearch,.listaquaorder input#clisearch,.listjardetails input#clisearch,.listvehiclectrl input#clisearch,.listgogas-cust input#clisearch,.listnew-conn input#clisearch ,.userlist input#clisearch {
+    width: 350px;
+    height: 30px;
+    border-right: 0;
+    box-shadow: inset 0 3px 0px rgba(0,0,0,0.075);
+    border-radius: 25px 25px 25px 25px;
+    padding-left: 30px;
+    border: 1px solid rgba(221,226,232,0.49);
+    font-family: FontAwesome , Arial;
+    font-style: normal;
+}

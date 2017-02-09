@@ -137,28 +137,6 @@ console.log($scope.Connection);
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 }]);
 
 app.controller('Listnewconnectionctrl', ['$scope','$http', function($scope,$http) {

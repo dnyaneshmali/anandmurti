@@ -2,8 +2,8 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                   <!--  <h2>Button Example <small>A</small></h2> -->
-                    <ul class="nav navbar-right panel_toolbox">
+                    <h2>List Vehicle Details</h2>
+                    <!-- <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
                       <li class="dropdown">
@@ -17,15 +17,15 @@
                       </li>
                       <li><a class="close-link"><i class="fa fa-close"></i></a>
                       </li>
-                    </ul>
+                    </ul> -->
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
                     <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
-                        </label>
+                       <!--  <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
+                        </label> -->
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="clisearch" id="clisearch"  name="clisearch" style="width:100%">
+                          <input type="text" ng-model="clisearch" id="clisearch" placeholder="&#xF002; Search for ..." name="clisearch" >
                           
                         </div>
                       </div>
