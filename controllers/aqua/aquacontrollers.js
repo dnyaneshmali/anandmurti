@@ -29,6 +29,8 @@ console.log($scope.aquacustomers);
 
 
 app.controller('Listaquactrl', ['$scope','$http', function($scope,$http) {
+  $scope.iseditid='';
+    $scope.oldaqua='';
     
     $http.get("../../models/getaquacustomer.php")
     .success(function(data){
@@ -53,11 +55,45 @@ console.log(acustomer_id);
                      $scope.data.splice(index, 1);
                         $scope.$watch();
             
+ });
+            }
 
-          });
-}
-
-
+             $scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldaqua){
+              $scope.iseditid=id;
+              $scope.oldaqua=angular.copy(oldaqua);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldaqua);
+              $scope.$watch();
+            }
+            $scope.initval = function (aquacustomer) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updateaquacustomer=function(aquacustomer,index){
+              console.log(aquacustomer);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updatelistaquacutomers.php',
+                     data    : aquacustomer, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                        $scope.msg = "data inserted successfully ";
+                        $scope.listaquacustomerform.$setPristine();
+                        delete $scope.oldaqua;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
 }]);
 
@@ -220,6 +256,8 @@ console.log($scope.addjardetails);
   }]);
 
 app.controller('Listjardetailsctrl', ['$scope','$http', function($scope,$http) {
+  $scope.iseditid='';
+    $scope.oldjar='';
 
   $http.get("../../models/getjardetails.php")
     .success(function(data){
@@ -248,10 +286,44 @@ console.log(jar_id);
                       });
             }
 
-
+             $scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldjar){
+              $scope.iseditid=id;
+              $scope.oldjar=angular.copy(oldjar);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldjar);
+              $scope.$watch();
+            }
+            $scope.initval = function (listjar) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updatejardetails=function(listjar,index){
+              console.log(listjar);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updatejardetails.php',
+                     data    : listjar, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.listjardetailsform.$setPristine();
+                        delete $scope.oldjar;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
 }]);
-
 
 app.controller('Addvehiclectrl', ['$scope','$http', function($scope,$http){
 
