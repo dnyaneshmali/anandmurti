@@ -29,7 +29,7 @@
                      <div id ="f1" class="single-faq panel panel-default">
                       <div class="content-icon"><span class="glyphicon glyphicon-star-empty" aria-hidden="true"></span></div>
                       <div class="box-right">
-                       <span class="panel-body"> <h4><b>Best Service</b></h4>
+                       <span class="panel-body"> <h4><b>RO + UV + TDS controller + Mineral added</b></h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
                         </span>
                       </div>
@@ -38,7 +38,7 @@
                        <div class="content-icon"><span class="glyphicon glyphicon-align-left" aria-hidden="true">
                        </div>
                        <div class="box-right">
-                        <span class="panel-body"> <h4><b>Quality products</b></h4>
+                        <span class="panel-body"> <h4><b>ISO 9001-2008 certified</b></h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
                         </span>
                       </div>
@@ -49,7 +49,7 @@
                        <div class="content-icon"><span class="glyphicon glyphicon-star" aria-hidden="true">
                        </div>
                         <div class="box-right">
-                       <span class="panel-body">  <h4><b>Easy Transactions</b></h4>
+                       <span class="panel-body">  <h4><b>10 stage purification</b></h4>
                         <p>Contrary to popular belief, Lorem Ipsum is not simply random text</p>
                         </span>
                       </div>
