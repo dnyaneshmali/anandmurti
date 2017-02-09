@@ -2,7 +2,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Button Example <small>Admin</small></h2>
+                    <h2>List of Admins</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -34,7 +34,9 @@
 
 
                   <div class="x_content">
-                    
+                    <!-- <p class="text-muted font-13 m-b-30">
+                      The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
+                    </p> -->
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
@@ -59,7 +61,7 @@
                           
                           <td ng-if="!isedit(admin.admin_id)">
                               <button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button> 
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id);">Edit</button>
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id, admin);">Edit</button>
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
                           </td>
                           <ng-form name="addadminform">
@@ -78,9 +80,11 @@
                           </td>
                           <td ng-if="isedit(admin.admin_id)">{{admin.admin_date}}</td>
                           
-                          <td ng-if="isedit(admin.admin_id)"><button class="btn btn-danger" ng-click="updateuser(admin);">Update</button> 
+                          <td ng-if="isedit(admin.admin_id)">
 
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit(admin.admin_id);">Cancel</button>
+                              <button class="btn btn-danger" ng-click="updateuser(admin,$index);">Update</button> 
+
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button>
 
 
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->

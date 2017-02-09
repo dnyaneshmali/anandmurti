@@ -10,14 +10,15 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select class="form-control" ng-model="Connection.customer" name="customer" ng-class="{'has-errors' : connectionform.customer.$invalid, 'no-errors' : connectionform.customer.$valid}" ng-required="true">
+                          <autocomplete ng-model="Connection.customer" data="customers" on-type="updatecustomers"></autocomplete>
+                          <!-- <select class="form-control" ng-model="Connection.customer" name="customer" ng-class="{'has-errors' : connectionform.customer.$invalid, 'no-errors' : connectionform.customer.$valid}" ng-required="true">
                             <option value="" selected>Choose option</option>
                             <option value="1">customer1</option>
                             <option value="2">customer2</option>
                           </select>
                           <div class="error-container" ng-show="connectionform.customer.$dirty && connectionform.customer.$invalid" ng-messages="connectionform.customer.$error">
                          <div style="color:red;" class="error" ng-message="required">select customer to set connection</div>
-                          </div>
+                          </div> -->
                         </div>
                        </div> 
                       

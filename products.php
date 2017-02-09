@@ -7,7 +7,7 @@
       <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/tabs.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/tabstyles.css" />
-      /*<script src="assets\js\modernizr.custom.js"></script>*/
+      <!-- /*<script src="assets\js\modernizr.custom.js"></script>*/ -->
 
       <div class="page-content products-page">
          <div class="title-section container">
@@ -22,9 +22,9 @@
   <div class="tabs tabs-style-tzoid">
           <nav>
   <ul >
-    <li><a href="#section-tzoid-1" class="icon icon-home"><span>Go Gas</span></a></li>
-              <li><a href="#section-tzoid-2" class="icon icon-box"><span>Aqua</span></a></li>
-              <li><a href="#section-tzoid-3" class="icon icon-upload"><span>Food Beverages</span></a></li>
+    <li><a href="#section-tzoid-1" class="icon icon-home"><span><i class="fa fa-fire">&nbsp;</i>Go Gas</span></a></li>
+              <li><a href="#section-tzoid-2" class="icon icon-box"><span><i class="fa fa-tint">&nbsp;</i>Aqua</span></a></li>
+              <li><a href="#section-tzoid-3" class="icon icon-upload"><span><i class="fa fa-coffee  ">&nbsp;</i>Food Beverages</span></a></li>
 
   </ul>
   </nav>
@@ -36,103 +36,103 @@
  -->     <div class="album text-muted">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
           <div class="card ">
             <div class="hover ehover13">
           <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
             <div class="overlay">
               <h2>Gas Cylinders</h2>
-              <button class="info nullbutton">View
-              </button>
+              <h4>View
+              </h4>
             </div>        
         </div>
           </div>
         </div>
-          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
            <div class="card">
         <div class="hover ehover13">
           <img class="img-responsive" src="images/gas_stove_large.png" alt="Large gas stove">
             <div class="overlay">
               <h2>Large gas stove</h2>
-              <button class="info nullbutton">View
-              </button>
+              <h4>View
+              </h4>
             </div>        
         </div>
           </div>
         </div>
-          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
           <div class="hover ehover13">
           <img class="img-responsive" src="images/gas_stove.png" alt="Small gas stove">
             <div class="overlay">
               <h2>Small gas stove</h2>
-              <button class="info nullbutton">View
-              </button>
+              <h4>View
+              </h4>
             </div>        
         </div>
           </div>
         </div>
 
-        <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+        <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
         <div class="hover ehover13">
           <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
-              <button class="info nullbutton">View
-              </button>
+              <h4>View
+              </h4>
             </div>        
         </div>
            </div>
           </div>
-          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
              <div class="card">
               <div class="hover ehover13">
           <img class="img-responsive" src="images/lighter.png" alt="lighter">
             <div class="overlay">
               <h2>lighter</h2>
-              <button class="info nullbutton">View
-              </button>
+              <h4>View
+              </h4>
             </div>
             </div>        
         </div>
           </div>
-          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
              <div class="hover ehover13">
           <img class="img-responsive" src="images/vessel.png" alt="Vessel">
             <div class="overlay">
               <h2>Vessel</h2>
-              <button class="info nullbutton">View
-              </button>
+              <h4>View
+              </h4>
             </div>        
         </div>
       </div>
           </div>
 
-          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
             <div class="hover ehover13">
           <img class="img-responsive" src="images/gas_wire.png" alt="Gas Wire">
             <div class="overlay">
               <h2>Gas Wire</h2>
-              <button class="info nullbutton">View
-              </button>
+              <h4>View
+              </h4>
             </div>        
         </div>
       </div>
           </div>
-          <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+         <!--  <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
             <img data-src="" alt="Card image cap">
           
           </div> 
         </div>
-           <div class="col-md-4 col-xs-6 col-lg-4 col-sm-6">
+           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
             <img data-src="" alt="Card image cap">
            </div> 
-          </div> 
+          </div>  -->
         </div>
 
       </div>

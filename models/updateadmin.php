@@ -14,6 +14,5 @@ $query = "UPDATE tbl_admin SET admin_name='".$data['admin_name']."', admin_numbe
     	echo"success";
     }
 	
-echo json_encode($data);
 
  	?>

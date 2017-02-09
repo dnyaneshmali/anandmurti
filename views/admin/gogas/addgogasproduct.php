@@ -1,10 +1,12 @@
+
+<div class="addgo-prod">
 <h1>Add Gogas Products</h1>
 <div class="addgogasproductform" ng-controller="Addgogasproductctrl">
 <form name="addgogasproductform" class="form-horizontal form-label-left" nonvalidate>
 
                     <!--   <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
                       </p> -->
-                      <span class="section">Personal Info</span>
+                     <!--  <span class="section">Personal Info</span> -->
 
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="customer_name">Product Name <span class="required">*</span>
@@ -68,7 +70,7 @@
 
                       <div class="ln_solid"></div>
                       <div class="form-group">
-                        <div class="col-md-6 col-md-offset-3">
+                        <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
                           <button type="submit" class="btn btn-primary">Cancel</button>
                           <button ng-click="insertdata(addgogasproduct)" ng-disabled="!addgogasproductform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
 
@@ -77,3 +79,4 @@
                       </div>
                     </form>
                      </div>
+                    </div>

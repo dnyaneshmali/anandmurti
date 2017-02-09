@@ -1,4 +1,14 @@
 <!DOCTYPE html>
+<style>
+.row{
+  padding-left: 300px;
+    padding-right: 300px;
+    padding-top: 30px;
+}
+.bggradient{
+  background: radial-gradient(ellipse at center, rgba(50,157,207,1) 0%, rgba(0, 0, 0, 0.51) 100%);
+}
+</style>
 <html lang="en">
 <?php $root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
  include($root."/config/config.php"); ?>
@@ -23,16 +33,18 @@
   </head>
 
   <body>
+<div class="bggradient">
 
     <div class="container">
       <div class="row">
 <div class = "panel panel-default">
+  <div><a href="http://localhost/anandmurti/index.php"><img src="images/am_logo.png" alt="logo"></a></div>
    <div class = "panel-body">
         <div ng-app='AnandMurtiLogin' ng-controller='loginCtrl'>
       <form class="form-signin" >
-        <h2 class="form-signin-heading">Please sign in</h2>
+        <!-- <h2 class="form-signin-heading">Please sign in</h2> -->
       <form class="form-horizontal col-md-offset-3 col-md-5">
-         <div class="form-group"> <h2 class="">Please Login</h2></div>
+         <div class="form-group"> <h2 class="">Login</h2>
 
         <label for="inputusername" class="sr-only">Email address</label>
         <input type="text" id="inputusername" ng-model="loginadmin.username" class="form-control" placeholder="Username" required autofocus>
@@ -43,13 +55,15 @@
             <input type="checkbox" value="remember-me"> Remember me
           </label>
         </div>
-        <button class="btn btn-lg btn-primary btn-block" ng-click="login(loginadmin)" type="submit">Sign in</button><br>
+        <button class="btn btn-lg btn-primary " ng-click="login(loginadmin)" type="submit">Sign in</button><br>
          <span>{{responseMessage}}</span>
          <span>{{ssname}}</span>
+         </div>
       </form>
        </div>
      </div>
      </div>
     </div>
+  </div>
   </body>
 </html>
