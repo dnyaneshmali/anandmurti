@@ -26,12 +26,8 @@ include($root."/config/config.php");
     <script src="<?php echo base_url(); ?>/assets/js/angular.min.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/angular-route.min.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/angular-validation-match.min.js"></script>
-<<<<<<< HEAD
-   <script src="<?php echo base_url(); ?>/config/app.js"></script>
-=======
     <script src="<?php echo base_url(); ?>/assets/js/autocomplete.js"></script>
     <script src="<?php echo base_url(); ?>/config/app.js"></script>
->>>>>>> e3ceedce167615d69a56660b4fcb22c36ade876d
     <script src="<?php echo base_url(); ?>/controllers/globalcontrollers.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/ngStorage.min.js"></script>  
     <script src="<?php echo base_url(); ?>/controllers/aqua/aquacontrollers.js"></script>  
