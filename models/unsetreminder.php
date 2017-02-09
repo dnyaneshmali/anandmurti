@@ -4,7 +4,7 @@ include($root."/config/config.php");
 
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
-$query="update tbl_aqua_orders set order_reminder = 0";
+$query="update tbl_aqua_orders set order_reminder = 0 where order_id = '".$data['order_id']."'";
 
  if(!mysqli_query($connection,$query))
     {
@@ -13,5 +13,5 @@ $query="update tbl_aqua_orders set order_reminder = 0";
     	echo"success";
     }
 	
-echo json_encode($data);
+//echo json_encode($data);
 ?>

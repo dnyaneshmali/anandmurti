@@ -172,14 +172,14 @@ console.log(order_id);
                       });
             }
 
-            $scope.setreminder=function(data,index){
-//console.log(data);
-$scope.setrem = angular.copy(data);
-console.log($scope.setrem);
+            $scope.setreminder=function(order_id,index){
+console.log(order_id);
+//$scope.setrem = angular.copy(order_id);
+//console.log($scope.setrem);
      $http({
           method  : 'POST',
           url     : '../../models/setreminder.php',
-          data    : $scope.setrem, //forms user object
+          data    : {'order_id':order_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
@@ -192,14 +192,14 @@ console.log($scope.setrem);
             }
 
 
-            $scope.unsetreminder=function(data,index){
+            $scope.unsetreminder=function(order_id,index){
 //console.log(data);
-$scope.setrem = angular.copy(data);
+//$scope.setrem = angular.copy(order_id);
 console.log($scope.setrem);
      $http({
           method  : 'POST',
           url     : '../../models/unsetreminder.php',
-          data    : $scope.setrem, //forms user object
+          data    : {'order_id':order_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
@@ -211,14 +211,14 @@ console.log($scope.setrem);
                       });
             }
 
-            $scope.setstatus=function(data,index){
+            $scope.setstatus=function(order_id,index){
 //console.log(data);
-$scope.setstatus = angular.copy(data);
-console.log($scope.setrem);
+//$scope.setstatus = angular.copy(order_id);
+//console.log($scope.setrem);
      $http({
           method  : 'POST',
           url     : '../../models/setstatus.php',
-          data    : $scope.setstatus, //forms user object
+          data    : {'order_id':order_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
@@ -230,14 +230,14 @@ console.log($scope.setrem);
                       });
             }
 
-            $scope.unsetstatus=function(data,index){
+            $scope.unsetstatus=function(order_id,index){
 //console.log(data);
-$scope.setstatus = angular.copy(data);
-console.log($scope.setrem);
+//$scope.setstatus = angular.copy(data);
+//console.log($scope.setrem);
      $http({
           method  : 'POST',
           url     : '../../models/unsetstatus.php',
-          data    : $scope.setstatus, //forms user object
+          data    : {'order_id':order_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
