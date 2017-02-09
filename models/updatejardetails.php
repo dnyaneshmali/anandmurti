@@ -5,7 +5,10 @@ include($root."/config/config.php");
 
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
-$query = "UPDATE tbl_admin SET admin_name='".$data['admin_name']."', admin_number='".$data['admin_number']."', admin_role='".$data['admin_number']."' WHERE admin_id='".$data['admin_id']."'";
+print_r($data);
+
+$query = "UPDATE tbl_jar_details SET jar_type='".$data['jar_type']."', jar_price='".$data['jar_price']."'WHERE jar_id='".$data['jar_id']."'";
+
 
     if(!mysqli_query($connection,$query))
     {

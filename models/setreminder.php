@@ -1,17 +1,17 @@
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
 include($root."/config/config.php");
-$data=array();
 
-$query="SELECT * FROM  tbl_aqua_orders";
-$result = mysqli_query($connection,$query);
+$jsondata=file_get_contents("php://input");
+$data = json_decode($jsondata, true);
+$query="update tbl_aqua_orders set order_reminder = 1";
 
-while ($row = mysqli_fetch_assoc($result)){
-
-	//echo $row['username'];
-	// $data[]=$row;
- array_push($data, $row);
-}
-print json_encode($data);
-
+ if(!mysqli_query($connection,$query))
+    {
+        die('Error : ' . mysqli_error());
+    }else{
+    	echo"success";
+    }
+	
+echo json_encode($data);
 ?>

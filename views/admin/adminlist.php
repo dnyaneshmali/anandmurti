@@ -62,9 +62,14 @@
                           <td ng-if="!isedit(admin.admin_id)">
                               <button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);"><i class="fa fa-trash"></i></button> 
                               <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id);"><i class="fa fa-edit"></i></button>
+
+                            <!--   <button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button> 
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id, admin);">Edit</button> -->
+
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
                           </td>
                           <ng-form name="addadminform">
+                          
                           <td ng-if="isedit(admin.admin_id)">
                           <input type="text" ng-value="admin.admin_name" ng-model="admin.admin_name" name="admin_name" style="width:auto;" required>
                           <p style="color:red;" ng-show="addadminform.admin_name.$invalid && !addadminform.admin_name.$pristine" class="help-block"> fullname is required.</p>
@@ -80,9 +85,17 @@
                           </td>
                           <td ng-if="isedit(admin.admin_id)">{{admin.admin_date}}</td>
                           
+
                           <td ng-if="isedit(admin.admin_id)"><button class="btn btn-danger" ng-click="updateuser(admin);"><i class="fa fa-check"></i></button> 
 
                               <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit(admin.admin_id);"><i class="fa fa-close"></i></button>
+
+                         <!--  <td ng-if="isedit(admin.admin_id)"> -->
+
+                             <!--  <button class="btn btn-danger" ng-click="updateuser(admin,$index);">Update</button> 
+
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button> -->
+
 
 
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->

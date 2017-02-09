@@ -20,12 +20,18 @@ include($root."/config/config.php");
     <!-- <link href="<?php// echo base_url(); ?>/assets/css/daterangepicker.css" rel="stylesheet"> -->
     <link href="<?php echo base_url(); ?>/assets/css/jquery.dataTables.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/custom.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/autocomplete.css" rel="stylesheet">
      <!--   <link href="<?php //echo base_url(); ?>/assets/css/custom.min.css" rel="stylesheet"> -->
     <link href="<?php echo base_url(); ?>/assets/css/admin-style.css" rel="stylesheet">
     <script src="<?php echo base_url(); ?>/assets/js/angular.min.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/angular-route.min.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/angular-validation-match.min.js"></script>
+<<<<<<< HEAD
    <script src="<?php echo base_url(); ?>/config/app.js"></script>
+=======
+    <script src="<?php echo base_url(); ?>/assets/js/autocomplete.js"></script>
+    <script src="<?php echo base_url(); ?>/config/app.js"></script>
+>>>>>>> e3ceedce167615d69a56660b4fcb22c36ade876d
     <script src="<?php echo base_url(); ?>/controllers/globalcontrollers.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/ngStorage.min.js"></script>  
     <script src="<?php echo base_url(); ?>/controllers/aqua/aquacontrollers.js"></script>  

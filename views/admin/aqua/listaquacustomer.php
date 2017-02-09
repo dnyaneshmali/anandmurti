@@ -50,15 +50,65 @@
 
                       <tbody>
                         <tr ng-repeat="aquacustomer in data | filter:clisearch">
-                          <td>{{aquacustomer.acustomer_name}}</td>
-                          <td>{{aquacustomer.acustomer_email}}</td>
-                          <td>{{aquacustomer.acustomer_number}}</td>
-                          <td>{{aquacustomer.acustomer_address}}</td>
-                          <td>{{aquacustomer.acustomer_type}}</td>
+                          <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_name}}</td>
+                          <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_email}}</td>
+                          <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_number}}</td>
+                          <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_address}}</td>
+                          <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_type}}</td>
                           <!-- <td>{{aquacustomer.customer_role}}</td> -->
-                          <td>{{aquacustomer.acustomer_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(aquacustomer.acustomer_id,$index);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.acustomer_id,aquacustomers.admin_username);">Edit</button></td>
+                          <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_date}}</td>
+                          <td ng-if="!isedit(aquacustomer.acustomer_id)">
+                            <button class="btn btn-danger" ng-click="deleteuser(aquacustomer.acustomer_id,$index);">Delete</button>
+                          <button class="btn btn-warning" value="{{btnName}}"  ng-click="setedit(aquacustomer.acustomer_id,aquacustomer);">Edit</button>
+                        </td>
+
+                          <ng-form name="listaquacustomerform">
+
+                             <td ng-if="isedit(aquacustomer.acustomer_id)">
+                          <input type="text" ng-value="aquacustomer.acustomer_name" ng-model="aquacustomer.acustomer_name" name="acustomer_name" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listaquacustomerform.acustomer_name.$invalid && !listaquacustomerform.acustomer_name.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+
+                             <td ng-if="isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_email}}</td>
+
+                            <td ng-if="isedit(aquacustomer.acustomer_id)">
+                          <input type="text" ng-value="aquacustomer.acustomer_number" ng-model="aquacustomer.acustomer_number" name="acustomer_number" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listaquacustomerform.acustomer_number.$invalid && !listaquacustomerform.acustomer_number.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+
+                          <td ng-if="isedit(aquacustomer.acustomer_id)">
+                          <input type="text" ng-value="aquacustomer.acustomer_address" ng-model="aquacustomer.acustomer_address" name="acustomer_address" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listaquacustomerform.acustomer_address.$invalid && !listaquacustomerform.acustomer_address.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+                           
+                           <td ng-if="isedit(aquacustomer.acustomer_id)">
+                          <input type="text" ng-value="aquacustomer.acustomer_type" ng-model="aquacustomer.acustomer_type" name=" acustomer_type" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listaquacustomerform.acustomer_type.$invalid && !listaquacustomerform.acustomer_type.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+                           
+
+
+
+
+                              <td ng-if="isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_date}}</td>
+
+
+
+
+
+
+
+                             <td ng-if="isedit(aquacustomer.acustomer_id)">
+
+                              <button class="btn btn-danger" ng-click="updateaquacustomer(aquacustomer,$index);">Update</button> 
+
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button>
+
+
+                             <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
+                          </td>
+                            <ng-form>
+                       
                         </tr>
                       </tbody>
                     </table>
