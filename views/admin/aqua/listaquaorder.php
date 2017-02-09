@@ -53,10 +53,12 @@
                           <td>{{aquaorder.order_delivery_time}}</td>
                           <td>{{aquaorder.order_delivery_date}}</td>
                           <td>{{aquaorder.vehicle_name}}</td>
-                          <td>{{aquaorder.order_status}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);">Delete</button></td>
-                          <td ng-if="aquaorder.order_reminder==0"><button class="btn btn-danger" ng-click="setreminder(1);">Set Reminder</button></td>
+                          <td ng-if="aquaorder.order_status==0"><button class="btn btn-danger" ng-click="setstatus(1);">Pending</button></td>
+                          <td ng-if="aquaorder.order_status==1"><button class="btn btn-active" ng-click="unsetstatus(0);">Complete</button></td>
+                          <td ng-if="aquaorder.order_reminder==0"><button class="btn btn-danger" ng-click="setreminder(1,$index);">Set Reminder</button></td>
                           <td ng-if="aquaorder.order_reminder==1"><button class="btn btn-active" ng-click="unsetreminder(0);">Unset Reminder</button></td>
+
+                          <td><button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);">Delete</button></td>
                           <td><button class="btn btn-warning" ng-click="editorder(aquaorder.customer_id,aquaorder.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>

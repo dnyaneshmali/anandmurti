@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2017 at 01:57 PM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.20
+-- Generation Time: Feb 08, 2017 at 02:24 PM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -42,8 +42,8 @@ CREATE TABLE `tbl_admin` (
 --
 
 INSERT INTO `tbl_admin` (`admin_id`, `admin_username`, `admin_name`, `admin_email`, `admin_password`, `admin_number`, `admin_role`, `admin_date`) VALUES
-(1, 'dnyanesh', 'Dnyanesh Maliaa', 'dnyanesh.mali@softinfology.com', 'e6e061838856bf47e1de730719fb2609', '9689483519', '9689483519', '2017-01-30 00:00:00'),
-(3, 'santosh', 'santosh bhosale', 'santosh.bhosale123@gmail.com', 'admin@123', '7709326583', '7709326583', '2017-02-08 08:59:49');
+(1, 'dnyanesh', 'Dnyanesh Mali', 'dnyanesh.mali@softinfology.com', 'e6e061838856bf47e1de730719fb2609', '9689483519', 'superadmin', '2017-01-30 00:00:00'),
+(2, 'santosh', 'Santosh B', 'santoshbhosale123@gmail.com', 'e6e061838856bf47e1de730719fb2609', '1234567890', 'aquaadmin', '2017-02-02 12:30:23');
 
 -- --------------------------------------------------------
 
@@ -61,6 +61,13 @@ CREATE TABLE `tbl_aqua_customers` (
   `acustomer_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_aqua_customers`
+--
+
+INSERT INTO `tbl_aqua_customers` (`acustomer_id`, `acustomer_name`, `acustomer_email`, `acustomer_number`, `acustomer_address`, `acustomer_type`, `acustomer_date`) VALUES
+(1, 'c1', 'c1@gmai.com', '234234242234', 'Pune', 'temporary', '2017-02-08 11:34:29');
+
 -- --------------------------------------------------------
 
 --
@@ -70,17 +77,24 @@ CREATE TABLE `tbl_aqua_customers` (
 CREATE TABLE `tbl_aqua_orders` (
   `order_id` int(11) NOT NULL,
   `customer_name` varchar(100) NOT NULL,
-  `order_jar_type` varchar(100) NOT NULL,
+  `order_jar_type` varchar(50) NOT NULL,
   `order_quantity` varchar(50) NOT NULL,
   `order_price` int(10) NOT NULL,
   `order_delivery_address` varchar(100) NOT NULL,
   `order_delivery_date` datetime NOT NULL,
   `order_delivery_time` varchar(50) NOT NULL,
+  `vehicle_name` varchar(50) NOT NULL,
   `order_status` varchar(50) NOT NULL,
-  `order_date` datetime NOT NULL,
-  `vehicle_id` int(11) NOT NULL,
-  `jar_id` int(11) NOT NULL
+  `order_reminder` varchar(20) NOT NULL,
+  `order_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_aqua_orders`
+--
+
+INSERT INTO `tbl_aqua_orders` (`order_id`, `customer_name`, `order_jar_type`, `order_quantity`, `order_price`, `order_delivery_address`, `order_delivery_date`, `order_delivery_time`, `vehicle_name`, `order_status`, `order_reminder`, `order_date`) VALUES
+(2, 'Test Customer2', '1', '3', 456, 'Osmanabad', '0000-00-00 00:00:00', '03:30', '2', 'Pending', '0', '2017-02-08 12:09:37');
 
 -- --------------------------------------------------------
 
@@ -95,6 +109,14 @@ CREATE TABLE `tbl_avehicle_details` (
   `vehicle_date` datetime NOT NULL,
   `vehicle_contact_number` int(15) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_avehicle_details`
+--
+
+INSERT INTO `tbl_avehicle_details` (`vehicle_id`, `vehicle_owner_name`, `vehicle_number`, `vehicle_date`, `vehicle_contact_number`) VALUES
+(2, 'test2', '323424', '2017-02-08 10:28:25', 2147483647),
+(3, 'HMT', '234234', '2017-02-08 10:29:58', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -116,13 +138,6 @@ CREATE TABLE `tbl_gogas_customers` (
   `gcustomer_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
---
--- Dumping data for table `tbl_gogas_customers`
---
-
-INSERT INTO `tbl_gogas_customers` (`gcustomer_id`, `gcustomer_name`, `gcustomer_email`, `gcustomer_number`, `gcustomer_dob`, `gcustomer_state`, `gcustomer_city`, `gcustomer_pincode`, `gcustomer_landmark`, `gcustomer_proof`, `gcustomer_date`) VALUES
-(1, 'santosh', 'santoshbhosal@gmail.com', '7894561230', '2017-02-03T18:30:00.000Z', 'sasas', 'sasa', 0, 'sas', 'asa', '2017-02-08 11:47:37');
-
 -- --------------------------------------------------------
 
 --
@@ -135,6 +150,14 @@ CREATE TABLE `tbl_jar_details` (
   `jar_price` int(10) NOT NULL,
   `jar_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_jar_details`
+--
+
+INSERT INTO `tbl_jar_details` (`jar_id`, `jar_type`, `jar_price`, `jar_date`) VALUES
+(1, 'normal-jar', 100, '2017-02-08 08:09:15'),
+(3, 'only-water', 222, '2017-02-08 08:47:05');
 
 -- --------------------------------------------------------
 
@@ -155,13 +178,6 @@ CREATE TABLE `tbl_new_connection` (
   `connection_date` datetime NOT NULL,
   `gcustomer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_new_connection`
---
-
-INSERT INTO `tbl_new_connection` (`connection_id`, `connection_cylinder_deposit`, `connection_depreciation`, `connection_hotplate`, `connection_passbook`, `connection_stamp`, `connection_tube`, `connection_lighter`, `connection_other`, `connection_date`, `gcustomer_id`) VALUES
-(1, '100', '100', 'Yes', 'Yes', 's', 'No', 'Yes', 'ss', '2017-02-08 12:51:04', 1);
 
 -- --------------------------------------------------------
 
@@ -202,9 +218,7 @@ ALTER TABLE `tbl_aqua_customers`
 -- Indexes for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
-  ADD PRIMARY KEY (`order_id`),
-  ADD KEY `jar_id` (`jar_id`),
-  ADD KEY `vehicle_id` (`vehicle_id`);
+  ADD PRIMARY KEY (`order_id`);
 
 --
 -- Indexes for table `tbl_avehicle_details`
@@ -248,37 +262,37 @@ ALTER TABLE `tbl_refil_details`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_aqua_customers`
 --
 ALTER TABLE `tbl_aqua_customers`
-  MODIFY `acustomer_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `acustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
 ALTER TABLE `tbl_avehicle_details`
-  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_gogas_customers`
 --
 ALTER TABLE `tbl_gogas_customers`
-  MODIFY `gcustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `gcustomer_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_jar_details`
 --
 ALTER TABLE `tbl_jar_details`
-  MODIFY `jar_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `jar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_new_connection`
 --
 ALTER TABLE `tbl_new_connection`
-  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_refil_details`
 --
