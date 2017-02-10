@@ -200,6 +200,8 @@ console.log($scope.addaquaorder);
 
 
 app.controller('Listaquaorder', ['$scope','$http', function($scope,$http) {
+  $scope.iseditid='';
+    $scope.oldorder='';
 
   $http.get("../../models/getorderdetails.php")
     .success(function(data){
@@ -305,13 +307,45 @@ console.log($scope.setrem);
                       });
             }
 
+             $scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldorder){
+              $scope.iseditid=id;
+              $scope.oldorder=angular.copy(oldorder);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldorder);
+              $scope.$watch();
+            }
+            $scope.initval = function (aquaorder) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updateaquaorder=function(aquaorder,index){
+              console.log(aquaorder);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updateaquaorders.php',
+                     data    : aquaorder, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.listordertailsform.$setPristine();
+                        delete $scope.oldorder;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
+}]);
 
-
-
-
-
-  }]);
 
 app.controller('Addjardetailsctrl', ['$scope','$http', function($scope,$http){
 
