@@ -158,7 +158,7 @@ app.controller('Addaquaorderctrl', ['$scope','$http', function($scope,$http) {
   $http.get("../../models/getaquacustomer.php")
     .success(function(data){
         $scope.customerdata=data
-        console.log($scope.customerdata);
+        //console.log($scope.customerdata);
     });
 
   $scope.insertdata=function(addaquaorder){
