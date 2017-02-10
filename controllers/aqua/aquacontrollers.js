@@ -161,6 +161,19 @@ app.controller('Addaquaorderctrl', ['$scope','$http', function($scope,$http) {
         //console.log($scope.customerdata);
     });
 
+     $http.get("../../models/getvehicledetails.php")
+    .success(function(data){
+        $scope.vehicledata=data
+        //console.log($scope.customerdata);
+    });
+
+     $http.get("../../models/getjardetails.php")
+    .success(function(data){
+        $scope.jardata=data
+        //console.log($scope.customerdata);
+    });
+
+
   $scope.insertdata=function(addaquaorder){
   $scope.addaquaorder = {};
 $scope.addaquaorder = angular.copy(addaquaorder);

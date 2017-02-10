@@ -92,7 +92,11 @@ app.controller('Listgogasproductctrl', ['$scope','$http', function($scope,$http)
 
 app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http) {
 
-
+$http.get("../../models/getgogascustomer.php")
+    .success(function(data){
+        $scope.gcustomerdata=data
+        console.log($scope.gcustomerdata);
+    });
 
 $scope.insertdata=function(Connection){
   $scope.Connection = {};
