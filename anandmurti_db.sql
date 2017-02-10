@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 10, 2017 at 07:11 AM
+-- Generation Time: Feb 10, 2017 at 02:11 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -66,8 +66,9 @@ CREATE TABLE `tbl_aqua_customers` (
 --
 
 INSERT INTO `tbl_aqua_customers` (`acustomer_id`, `acustomer_name`, `acustomer_email`, `acustomer_number`, `acustomer_address`, `acustomer_type`, `acustomer_date`) VALUES
-(1, 'c1', 'c1@gmai.com', '234234242234', 'Pune', 'temporary', '2017-02-08 11:34:29'),
-(3, 'Test Customer2', 'sdf@sdfdsf.fghfhgsdfsdf', '452424234234', 'Pune', 'temporary', '2017-02-10 07:06:07');
+(1, 'John', 'c1@gmai.com', '234234242234', 'Pune', 'temporary', '2017-02-08 11:34:29'),
+(3, 'Pitter', 'sdf@sdfdsf.fghfhgsdfsdf', '452424234234', 'Pune', 'temporary', '2017-02-10 07:06:07'),
+(4, 'Charly', 'charl@gmail.com', '3434344343', 'Pune', 'Regular', '2017-02-10 08:00:33');
 
 -- --------------------------------------------------------
 
@@ -95,9 +96,11 @@ CREATE TABLE `tbl_aqua_orders` (
 --
 
 INSERT INTO `tbl_aqua_orders` (`order_id`, `customer_name`, `order_jar_type`, `order_quantity`, `order_price`, `order_delivery_address`, `order_delivery_date`, `order_delivery_time`, `vehicle_name`, `order_status`, `order_reminder`, `order_date`) VALUES
-(2, 'Test Customer2', '1', '3', 456, 'Osmanabad', '0000-00-00 00:00:00', '03:30', '2', '1', '0', '2017-02-08 12:09:37'),
-(3, 'Test Customer', '1', '4', 200, 'Osmanabad', '0000-00-00 00:00:00', '04:20', '1', '0', '1', '2017-02-09 06:56:32'),
-(4, 'Test Customer22', '1', '3', 300, 'pune', '0000-00-00 00:00:00', '03:34', '1', '0', '', '2017-02-10 07:09:42');
+(2, 'John', '1', '3', 456, 'Osmanabad', '0000-00-00 00:00:00', '03:30', 'HMT', '1', '0', '2017-02-08 12:09:37'),
+(3, 'Pitter', '1', '4', 200, 'Osmanabad', '0000-00-00 00:00:00', '04:20', 'HMT', '0', '1', '2017-02-09 06:56:32'),
+(5, 'Charly', '2', '4', 400, 'Pune', '0000-00-00 00:00:00', '03:34', 'HMT', '1', '1', '2017-02-10 08:03:57'),
+(6, 'Charly', '1', '2', 200, 'Pune', '0000-00-00 00:00:00', '03:34', 'HMT', '0', '1', '2017-02-10 08:05:39'),
+(7, 'Pitter', 'normal-jar', '1', 100, 'Pune', '0000-00-00 00:00:00', '03:34', 'test2', '0', '0', '2017-02-10 08:48:44');
 
 -- --------------------------------------------------------
 
@@ -141,6 +144,14 @@ CREATE TABLE `tbl_gogas_customers` (
   `gcustomer_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
+--
+-- Dumping data for table `tbl_gogas_customers`
+--
+
+INSERT INTO `tbl_gogas_customers` (`gcustomer_id`, `gcustomer_name`, `gcustomer_email`, `gcustomer_number`, `gcustomer_dob`, `gcustomer_state`, `gcustomer_city`, `gcustomer_pincode`, `gcustomer_landmark`, `gcustomer_proof`, `gcustomer_date`) VALUES
+(1, 'Adam', 'adam@gmail.com', '3434343434', '2017-02-06T18:30:00.000Z', 'Maharashtra', 'Osmanabad', 413501, 'Near Hospital', 'Id', '2017-02-10 09:16:58'),
+(2, 'Matt', 'matt@gmail.com', '65665565656', '2017-02-12T18:30:00.000Z', 'Maharashtra', 'Osmanabad', 413501, 'Near Hospital', 'Pancard', '2017-02-10 09:25:20');
+
 -- --------------------------------------------------------
 
 --
@@ -170,6 +181,7 @@ INSERT INTO `tbl_jar_details` (`jar_id`, `jar_type`, `jar_price`, `jar_date`) VA
 
 CREATE TABLE `tbl_new_connection` (
   `connection_id` int(11) NOT NULL,
+  `gcustomer_name` varchar(100) NOT NULL,
   `connection_cylinder_deposit` varchar(50) NOT NULL,
   `connection_depreciation` varchar(50) NOT NULL,
   `connection_hotplate` varchar(50) NOT NULL,
@@ -178,9 +190,16 @@ CREATE TABLE `tbl_new_connection` (
   `connection_tube` varchar(50) NOT NULL,
   `connection_lighter` varchar(50) NOT NULL,
   `connection_other` varchar(100) NOT NULL,
-  `connection_date` datetime NOT NULL,
-  `gcustomer_id` int(11) NOT NULL
+  `connection_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_new_connection`
+--
+
+INSERT INTO `tbl_new_connection` (`connection_id`, `gcustomer_name`, `connection_cylinder_deposit`, `connection_depreciation`, `connection_hotplate`, `connection_passbook`, `connection_stamp`, `connection_tube`, `connection_lighter`, `connection_other`, `connection_date`) VALUES
+(1, '', '12', 'Test', 'Yes', '', 'Stamp', 'Yes', '', 'test', '2017-02-10 09:26:09'),
+(2, 'Matt', '11', 'yes', 'Yes', 'No', '1', 'Yes', 'No', 'test2', '2017-02-10 12:15:32');
 
 -- --------------------------------------------------------
 
@@ -247,8 +266,7 @@ ALTER TABLE `tbl_jar_details`
 -- Indexes for table `tbl_new_connection`
 --
 ALTER TABLE `tbl_new_connection`
-  ADD PRIMARY KEY (`connection_id`),
-  ADD KEY `gcustomer_id` (`gcustomer_id`);
+  ADD PRIMARY KEY (`connection_id`);
 
 --
 -- Indexes for table `tbl_refil_details`
@@ -270,12 +288,12 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_aqua_customers`
 --
 ALTER TABLE `tbl_aqua_customers`
-  MODIFY `acustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `acustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
@@ -285,7 +303,7 @@ ALTER TABLE `tbl_avehicle_details`
 -- AUTO_INCREMENT for table `tbl_gogas_customers`
 --
 ALTER TABLE `tbl_gogas_customers`
-  MODIFY `gcustomer_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `gcustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_jar_details`
 --
@@ -295,7 +313,7 @@ ALTER TABLE `tbl_jar_details`
 -- AUTO_INCREMENT for table `tbl_new_connection`
 --
 ALTER TABLE `tbl_new_connection`
-  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_refil_details`
 --
