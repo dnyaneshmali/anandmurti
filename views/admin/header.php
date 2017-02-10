@@ -19,7 +19,7 @@ include($root."/config/config.php");
     <link href="<?php echo base_url(); ?>/assets/css/jqvmap.min.css" rel="stylesheet"/>
     <!-- <link href="<?php// echo base_url(); ?>/assets/css/daterangepicker.css" rel="stylesheet"> -->
     <link href="<?php echo base_url(); ?>/assets/css/jquery.dataTables.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/assets/css/custom.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/build/css/custom.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/autocomplete.css" rel="stylesheet">
      <!--   <link href="<?php //echo base_url(); ?>/assets/css/custom.min.css" rel="stylesheet"> -->
     <link href="<?php echo base_url(); ?>/assets/css/admin-style.css" rel="stylesheet">

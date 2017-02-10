@@ -25,7 +25,7 @@
                    <div class="item form-group">
                         <!-- <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
                         </label> -->
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
                           <input type="text" ng-model="clisearch" id="clisearch" placeholder="&#xF002; Search for ..."  name="clisearch" >
                           
                         </div>

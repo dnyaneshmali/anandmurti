@@ -301,7 +301,7 @@ body .container.body .right_col {
 .nav_title {
   width: 230px;
   float: left;
-  background: #2A3F54;
+  background: #8BC34A;
   border-radius: 0;
   height: 57px; }
 
@@ -591,7 +591,8 @@ a:hover, a:focus {
 
 .nav.child_menu li:hover,
 .nav.child_menu li.active {
-  background-color: rgba(255, 255, 255, 0.06); }
+  /*background-color: rgba(255, 255, 255, 0.06);*/
+      background-color: #6b8e41; }
 
 .nav.child_menu li {
   padding-left: 36px; }
@@ -684,7 +685,11 @@ a:hover, a:focus {
   color: #34495E !important; }
 
 .nav > li > a:hover, .nav > li > a:focus {
-  background-color: transparent; }
+  background-color: transparent;
+/*border-bottom-style: solid !important;
+    border-bottom-width: thin !important;
+        border-color: #6bba42 !important;*/
+   }
 
 .top_search {
   padding: 0; }
@@ -1510,7 +1515,7 @@ span.right {
   padding: 5px 0 0 0;
   position: fixed;
   width: 230px;
-  background: #2A3F54; }
+  background: #8BC34A; }
 
 .sidebar-footer a {
   padding: 7px 0 3px;
@@ -3977,3 +3982,24 @@ ul.notifications {
   border: 1px solid #e5e5e5; }
 
 /** /Dropzone.js **/
+.listaqua-prod input#clisearch,.listaqua-cust input#clisearch,.listaquaorder input#clisearch,.listjardetails input#clisearch,.listvehiclectrl input#clisearch,.listgogas-cust input#clisearch,.listnew-conn input#clisearch ,.userlist input#clisearch {
+    width: 350px;
+    height: 30px;
+    border-right: 0;
+    box-shadow: inset 0 3px 0px rgba(0,0,0,0.075);
+    border-radius: 25px 25px 25px 25px;
+    padding-left: 30px;
+    border: 1px solid rgba(221,226,232,0.49);
+    font-family: FontAwesome , Arial;
+    font-style: normal;
+    float: right;
+}
+.addgo-cust h1,.adda-cust h1,.adda-prod h1,.adda-order h1,.addgo-prod h1,.addjar-dtls h1{
+  text-align: center;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom:10px;
+}
+span.required {
+  color: #d40d0d;
+}

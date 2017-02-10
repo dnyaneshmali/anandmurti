@@ -28,7 +28,7 @@
                     <div class="item form-group">
                         <!-- <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
                         </label> -->
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
                           <input type="text" ng-model="clisearch" id="clisearch" placeholder="&#xF002; Search for ..." name="clisearch" >
                           
                         </div>
@@ -58,8 +58,8 @@
                           <!-- <td>{{aquacustomer.customer_role}}</td> -->
                           <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_date}}</td>
                           <td ng-if="!isedit(aquacustomer.acustomer_id)">
-                            <button class="btn btn-danger" ng-click="deleteuser(aquacustomer.acustomer_id,$index);">Delete</button>
-                          <button class="btn btn-warning" value="{{btnName}}"  ng-click="setedit(aquacustomer.acustomer_id,aquacustomer);">Edit</button>
+                            <button class="btn btn-danger" ng-click="deleteuser(aquacustomer.acustomer_id,$index);"><i class="fa fa-trash"></i></button>
+                          <button class="btn btn-warning" value="{{btnName}}"  ng-click="setedit(aquacustomer.acustomer_id,aquacustomer);"><i class="fa fa-edit"></i></button>
                         </td>
 
                           <ng-form name="listaquacustomerform">
@@ -100,9 +100,9 @@
 
                              <td ng-if="isedit(aquacustomer.acustomer_id)">
 
-                              <button class="btn btn-danger" ng-click="updateaquacustomer(aquacustomer,$index);">Update</button> 
+                              <button class="btn btn-success" ng-click="updateaquacustomer(aquacustomer,$index);"><i class="fa fa-check"></i></button> 
 
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button>
+                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
 
 
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->

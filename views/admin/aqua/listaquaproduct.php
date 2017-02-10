@@ -29,7 +29,7 @@
                     <div class="item form-group">
                         <!-- <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
                         </label> -->
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
                           <input type="text" ng-model="clisearch" id="clisearch" placeholder="&#xF002; Search for ..."  name="clisearch" >
                           
                         </div>
@@ -57,8 +57,8 @@
                           <td>{{aquaproduct.Product_company}}</td>
                           <td>{{aquaproduct.product_tax}}</td>
                           <td>{{aquaproduct.product_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(aquaproduct.product_id,$index);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);">Edit</button></td>
+                          <td><button class="btn btn-danger" ng-click="deleteuser(aquaproduct.product_id,$index);"><i class="fa fa-trash"></i></button></td>
+                          <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);"><i class="fa fa-edit"></i></button></td>
                         </tr>
                       </tbody>
                     </table>

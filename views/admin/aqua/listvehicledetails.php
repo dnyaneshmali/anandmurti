@@ -24,7 +24,7 @@
                     <div class="item form-group">
                        <!--  <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
                         </label> -->
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
                           <input type="text" ng-model="clisearch" id="clisearch" placeholder="&#xF002; Search for ..." name="clisearch" >
                           
                         </div>
@@ -46,8 +46,8 @@
                           <td>{{listvehicle.vehicle_owner_name}}</td>
                           <td>{{listvehicle.vehicle_number}}</td>
                           <td>{{listvehicle.vehicle_contact_number}}</td>
-                          <td><button class="btn btn-danger" ng-click="deletevehicle(listvehicle.vehicle_id);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="editvehicle(listvehicle.customer_id,listvehicle.admin_username);">Edit</button></td>
+                          <td><button class="btn btn-danger" ng-click="deletevehicle(listvehicle.vehicle_id);"><i class="fa fa-trash"> </i></button>
+                          <button class="btn btn-warning" ng-click="editvehicle(listvehicle.customer_id,listvehicle.admin_username);"><i class="fa fa-edit"></i></button></td>
                         </tr>
                       </tbody>
                     </table>
