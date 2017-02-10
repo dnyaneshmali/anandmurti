@@ -4003,3 +4003,10 @@ ul.notifications {
 span.required {
   color: #d40d0d;
 }
+i.fa.fa-fire.gradient-gas {
+    background: -webkit-gradient(linear, left top, left bottom, from(#F44336), to(#FF9800));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    display: initial;
+    background-color: linear-gradient(284deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 100%);
+}
