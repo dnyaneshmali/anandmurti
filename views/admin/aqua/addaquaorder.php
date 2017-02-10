@@ -6,12 +6,15 @@
                     <!--   <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
                       </p> -->
                    <!--    <span class="section">Personal Info</span> -->
+                   <datalist ng-repeat="clist in customerdata id="acustomerlist">
+    <option value="{{clist.acustomer_name}}">{{clist.acustomer_name}}</option>
 
+</datalist>
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="customer_name">Customer Name <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="addaquaorder.customer_name" id="customer_name" class="form-control" name="customer_name" required />
+                          <input type="text" ng-model="addaquaorder.customer_name" id="customer_name" class="form-control" name="customer_name" list="acustomerlist" required />
                           
                         </div>
                       </div>

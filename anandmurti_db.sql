@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 08, 2017 at 02:24 PM
+-- Generation Time: Feb 10, 2017 at 07:11 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -66,7 +66,8 @@ CREATE TABLE `tbl_aqua_customers` (
 --
 
 INSERT INTO `tbl_aqua_customers` (`acustomer_id`, `acustomer_name`, `acustomer_email`, `acustomer_number`, `acustomer_address`, `acustomer_type`, `acustomer_date`) VALUES
-(1, 'c1', 'c1@gmai.com', '234234242234', 'Pune', 'temporary', '2017-02-08 11:34:29');
+(1, 'c1', 'c1@gmai.com', '234234242234', 'Pune', 'temporary', '2017-02-08 11:34:29'),
+(3, 'Test Customer2', 'sdf@sdfdsf.fghfhgsdfsdf', '452424234234', 'Pune', 'temporary', '2017-02-10 07:06:07');
 
 -- --------------------------------------------------------
 
@@ -94,7 +95,9 @@ CREATE TABLE `tbl_aqua_orders` (
 --
 
 INSERT INTO `tbl_aqua_orders` (`order_id`, `customer_name`, `order_jar_type`, `order_quantity`, `order_price`, `order_delivery_address`, `order_delivery_date`, `order_delivery_time`, `vehicle_name`, `order_status`, `order_reminder`, `order_date`) VALUES
-(2, 'Test Customer2', '1', '3', 456, 'Osmanabad', '0000-00-00 00:00:00', '03:30', '2', 'Pending', '0', '2017-02-08 12:09:37');
+(2, 'Test Customer2', '1', '3', 456, 'Osmanabad', '0000-00-00 00:00:00', '03:30', '2', '1', '0', '2017-02-08 12:09:37'),
+(3, 'Test Customer', '1', '4', 200, 'Osmanabad', '0000-00-00 00:00:00', '04:20', '1', '0', '1', '2017-02-09 06:56:32'),
+(4, 'Test Customer22', '1', '3', 300, 'pune', '0000-00-00 00:00:00', '03:34', '1', '0', '', '2017-02-10 07:09:42');
 
 -- --------------------------------------------------------
 
@@ -267,12 +270,12 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT for table `tbl_aqua_customers`
 --
 ALTER TABLE `tbl_aqua_customers`
-  MODIFY `acustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `acustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
