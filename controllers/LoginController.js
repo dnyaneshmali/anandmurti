@@ -40,7 +40,7 @@ loginapp.controller('loginCtrl',['$scope', '$http', '$window', '$localStorage', 
 
 
 app.controller('Adminbarctrl',['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage, $location) {
-
+                 
                   $scope.ssid = $window.localStorage.getItem('ssid');
                   $scope.sname = $window.localStorage.getItem('sname');
                   $scope.srole = $window.localStorage.getItem('srole');
