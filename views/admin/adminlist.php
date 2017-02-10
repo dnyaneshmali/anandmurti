@@ -86,9 +86,9 @@
                           <td ng-if="isedit(admin.admin_id)">{{admin.admin_date}}</td>
                           
 
-                          <td ng-if="isedit(admin.admin_id)"><button class="btn btn-danger" ng-click="updateuser(admin);"><i class="fa fa-check"></i></button> 
+                          <td ng-if="isedit(admin.admin_id)"><button class="btn btn-success" ng-click="updateuser(admin);"><i class="fa fa-check"></i></button> 
 
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit(admin.admin_id);"><i class="fa fa-close"></i></button>
+                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(admin.admin_id);"><i class="fa fa-close"></i></button>
 
                          <!--  <td ng-if="isedit(admin.admin_id)"> -->
 
