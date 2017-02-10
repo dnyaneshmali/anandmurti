@@ -71,6 +71,7 @@ $(document).ready(function() {
         var $li = $(this).parent();
 
         if ($li.is('.active')) {
+
             $li.removeClass('active active-sm');
             $('ul:first', $li).slideUp(function() {
                 setContentHeight();
@@ -80,9 +81,18 @@ $(document).ready(function() {
             if (!$li.parent().is('.child_menu')) {
                 $SIDEBAR_MENU.find('li').removeClass('active active-sm');
                 $SIDEBAR_MENU.find('li ul').slideUp();
+                $li.removeClass('active');
+
+
+
+            }
+
+            if($li.parent().is('.child_menu')){
+              $SIDEBAR_MENU.find('li ul li').removeClass('active active-sm');
             }
             
             $li.addClass('active');
+         
 
             $('ul:first', $li).slideDown(function() {
                 setContentHeight();

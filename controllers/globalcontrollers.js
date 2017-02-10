@@ -5,6 +5,44 @@
     if($window.localStorage.getItem('ssid') == ''){
     window.location.replace("http://localhost/anandmurti/");
   }
+
+
+  $scope.isaquaadmin = function(){
+$scope.srole = $window.localStorage.getItem('srole');
+
+    if ($scope.srole == "gasadmin") {
+ return false;
+  };
+   if ($scope.srole == "superadmin" ||  $scope.srole == "aquaadmin") {
+return true;
+   };
+ 
+  }
+
+   $scope.isgasadmin = function(){
+$scope.srole = $window.localStorage.getItem('srole');
+
+    if ($scope.srole == "aquaadmin") {
+ return false;
+  };
+   if ($scope.srole == "superadmin" || $scope.srole == "gasadmin" ) {
+return true;
+   };
+ 
+  }
+
+  $scope.isadmin = function(){
+$scope.srole = $window.localStorage.getItem('srole');
+
+     if ($scope.srole == "superadmin") {
+return true;
+  };
+   if ($scope.srole == "aquaadmin" || $scope.srole == "gasadmin" ) {
+return false;
+   };
+
+  }
+
 }]);
 
 app.controller('Aqua', ['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
