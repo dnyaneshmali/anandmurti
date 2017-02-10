@@ -2,6 +2,13 @@
  * Created by User on 10/19/14.
  */
 app.controller('Addaquactrl', ['$scope','$http', function($scope,$http) {
+
+  $http.get("../../models/getaquacustomer.php")
+    .success(function(data){
+        $scope.data=data
+        console.log($scope.data);
+    });
+
 $scope.insertdata=function(aquacustomers){
   $scope.aquacustomers = {};
 
