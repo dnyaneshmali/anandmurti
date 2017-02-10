@@ -24,7 +24,7 @@
                     <div class="item form-group">
                         <!-- <label class="control-label col-md-3 col-sm-3 col-xs-12">Search for <span class="required">*</span>
                         </label> -->
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
                           <input type="text" ng-model="clisearch" id="clisearch" placeholder="&#xF002;Search for ..." name="clisearch" >
                           
                         </div>
@@ -46,8 +46,8 @@
                           <td ng-if="!isedit(listjar.jar_id)">{{listjar.jar_price}}</td>
 
                           <td ng-if="!isedit(listjar.jar_id)">
-                            <button class="btn btn-danger" ng-click="deletejar(listjar.jar_id,$index);">Delete</button>      
-                          <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(listjar.jar_id,listjar);">Edit</button>
+                            <button class="btn btn-danger" ng-click="deletejar(listjar.jar_id,$index);"><i class="fa fa-trash"></i></button>      
+                          <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(listjar.jar_id,listjar);"><i class="fa fa-edit"></i></button>
                         </td>
 
                          <ng-form name="listjardetailsform">
@@ -64,9 +64,9 @@
 
                            <td ng-if="isedit(listjar.jar_id)">
 
-                              <button class="btn btn-danger" ng-click="updatejardetails(listjar,$index);">Update</button> 
+                              <button class="btn btn-success" ng-click="updatejardetails(listjar,$index);"><i class="fa fa-check"></i></button> 
 
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button>
+                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
 
 
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
