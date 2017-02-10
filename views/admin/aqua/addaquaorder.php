@@ -8,8 +8,16 @@
                    <!--    <span class="section">Personal Info</span> -->
                  <datalist  id="acustomerlist">
     <option ng-repeat="clist in customerdata" value="{{clist.acustomer_name}}">{{clist.acustomer_name}}</option>
-
 </datalist>
+
+<datalist  id="vehiclelist">
+    <option ng-repeat="vlist in vehicledata" value="{{vlist.vehicle_owner_name}}">{{vlist.vehicle_owner_name}}</option>
+</datalist>
+
+<datalist  id="jarlist">
+    <option ng-repeat="jlist in jardata" value="{{jlist.jar_type}}">{{jlist.jar_type}}</option>
+</datalist>
+
 <!--
 <div ng-repeat="clist in customerdata"> <div>{{clist.acustomer_name}}</div>
                           </div> -->
@@ -26,11 +34,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select class="form-control" ng-model="addaquaorder.jar_type" name="jar_type" ng-required="true">
-                            <option value="" selected>Jar Type</option>
-                            <option value="1">Normal</option>
-                            <option value="2">Cool</option>
-                          </select>
+                          <input type="text" ng-model="addaquaorder.jar_type" id="jar_type" class="form-control" name="jar_type" list="jarlist" required />
                         </div>
                       </div>
 
@@ -84,11 +88,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select class="form-control" ng-model="addaquaorder.vehicle" name="vehicle" ng-required="true">
-                            <option value="" selected>Select Vehicle</option>
-                            <option value="1">A Transport</option>
-                            <option value="2">B Transport</option>
-                          </select>
+                          <input type="text" ng-model="addaquaorder.vehicle" id="vehicle" class="form-control" name="vehicle" list="vehiclelist" required />
                         </div>
                       </div>
                        
