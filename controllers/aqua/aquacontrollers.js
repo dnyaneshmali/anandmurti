@@ -3,12 +3,6 @@
  */
 app.controller('Addaquactrl', ['$scope','$http', function($scope,$http) {
 
-  $http.get("../../models/getaquacustomer.php")
-    .success(function(data){
-        $scope.data=data
-        console.log($scope.data);
-    });
-
 $scope.insertdata=function(aquacustomers){
   $scope.aquacustomers = {};
 
@@ -161,6 +155,25 @@ console.log(product_id);
 }]);
 
 app.controller('Addaquaorderctrl', ['$scope','$http', function($scope,$http) {
+  $http.get("../../models/getaquacustomer.php")
+    .success(function(data){
+        $scope.customerdata=data
+        //console.log($scope.customerdata);
+    });
+
+     $http.get("../../models/getvehicledetails.php")
+    .success(function(data){
+        $scope.vehicledata=data
+        //console.log($scope.customerdata);
+    });
+
+     $http.get("../../models/getjardetails.php")
+    .success(function(data){
+        $scope.jardata=data
+        //console.log($scope.customerdata);
+    });
+
+
   $scope.insertdata=function(addaquaorder){
   $scope.addaquaorder = {};
 $scope.addaquaorder = angular.copy(addaquaorder);
@@ -187,6 +200,8 @@ console.log($scope.addaquaorder);
 
 
 app.controller('Listaquaorder', ['$scope','$http', function($scope,$http) {
+  $scope.iseditid='';
+    $scope.oldorder='';
 
   $http.get("../../models/getorderdetails.php")
     .success(function(data){
@@ -292,13 +307,45 @@ console.log($scope.setrem);
                       });
             }
 
+             $scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldorder){
+              $scope.iseditid=id;
+              $scope.oldorder=angular.copy(oldorder);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldorder);
+              $scope.$watch();
+            }
+            $scope.initval = function (aquaorder) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updateaquaorder=function(aquaorder,index){
+              console.log(aquaorder);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updateaquaorders.php',
+                     data    : aquaorder, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.listordertailsform.$setPristine();
+                        delete $scope.oldorder;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
+}]);
 
-
-
-
-
-  }]);
 
 app.controller('Addjardetailsctrl', ['$scope','$http', function($scope,$http){
 
@@ -423,6 +470,8 @@ console.log($scope.vdetails);
   }]);
 
 app.controller('Listvehiclectrl', ['$scope','$http', function($scope,$http) {
+  $scope.iseditid='';
+    $scope.oldvehicle='';
 
   $http.get("../../models/getvehicledetails.php")
     .success(function(data){
@@ -452,6 +501,44 @@ console.log(vehicle_id);
             }
 
 
+
+
+             $scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldvehicle){
+              $scope.iseditid=id;
+              $scope.oldvehicle=angular.copy(oldvehicle);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldvehicle);
+              $scope.$watch();
+            }
+            $scope.initval = function (listvehicle) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updatevehicle=function(listvehicle,index){
+              console.log(listvehicle);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updatevehicledetails.php',
+                     data    : listvehicle, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                        $scope.msg = "data inserted successfully ";
+                        $scope.listvehicleform.$setPristine();
+                        delete $scope.oldvehicle;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
 }]);
 

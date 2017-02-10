@@ -50,19 +50,84 @@
 
                       <tbody>
                         <tr ng-repeat="aquaorder in data | filter:clisearch">
-                          <td>{{aquaorder.customer_name}}</td>
-                          <td>{{aquaorder.order_delivery_address}}</td>
-                          <td>{{aquaorder.order_quantity}}</td>
-                          <td>{{aquaorder.order_delivery_time}}</td>
-                          <td>{{aquaorder.order_delivery_date}}</td>
-                          <td>{{aquaorder.vehicle_name}}</td>
-                          <td ng-if="aquaorder.order_status==0"><button class="btn btn-danger" ng-click="setstatus(aquaorder.order_id);">Pending</button></td>
+                          <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.customer_name}}</td>
+                          <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_address}}</td>
+                          <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_quantity}}</td>
+                          <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_time}}</td>
+                          <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_date}}</td>
+                          <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.vehicle_name}}</td>
+
+
+
+
+                          
+
+                              <td ng-if="!isedit(aquaorder.order_id)">
+
+
+                        <button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);">Delete</button>
+                          <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(aquaorder.order_id,aquaorder);">Edit</button>
+                        </td>
+                                 
+                                <ng-form name="listordertailsform">
+                               <td ng-if="isedit(aquaorder.order_id)">
+                          <input type="text" ng-value="aquaorder.customer_name" ng-model="aquaorder.customer_name" name="customer_name" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listordertailsform.customer_name.$invalid && !listordertailsform.customer_name.$pristine" class="help-block">  is required.</p>
+                          </td>
+
+                            <td ng-if="isedit(aquaorder.order_id)">
+                          <input type="text" ng-value="aquaorder.order_delivery_address" ng-model="aquaorder.order_delivery_address" name="order_delivery_address" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listordertailsform.order_delivery_address.$invalid && !listordertailsform.order_delivery_address.$pristine" class="help-block">  is required.</p>
+                          </td>
+
+                         
+                               <td ng-if="isedit(aquaorder.order_id)">
+                          <input type="text" ng-value="aquaorder.order_quantity" ng-model="aquaorder. order_quantity" name="order_quantity" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listordertailsform.order_quantity.$invalid && !listordertailsform.order_quantity.$pristine" class="help-block">  is required.</p>
+                          </td>
+
+                          <td ng-if="isedit(aquaorder.order_id)">
+                          <input type="text" ng-value="aquaorder.order_delivery_time" ng-model="aquaorder.order_delivery_time" name="order_delivery_time" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listordertailsform.order_delivery_time.$invalid && !listordertailsform.order_delivery_time.$pristine" class="help-block">  is required.</p>
+                          </td>
+                           
+                          
+
+                        <td ng-if="isedit(aquaorder.order_id)">
+                          <input type="text" ng-value="aquaorder.order_delivery_date" ng-model="aquaorder.order_delivery_date" name="order_delivery_date" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listordertailsform.order_delivery_date.$invalid && !listordertailsform.order_delivery_date.$pristine" class="help-block">  is required.</p>
+                          </td>
+
+                          <td ng-if="isedit(aquaorder.order_id)">
+                          <input type="text" ng-value="aquaorder.vehicle_name" ng-model="aquaorder. vehicle_name" name=" vehicle_name" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listordertailsform.vehicle_name.$invalid && !listordertailsform.vehicle_name.$pristine" class="help-block">  is required.</p>
+                          </td>
+                             <td ng-if="isedit(aquaorder.order_id)">
+
+                              <button class="btn btn-danger" ng-click="updateaquaorder(aquaorder,$index);">Update</button> 
+
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button>
+
+
+                             <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
+
+
+
+                             <td ng-if="aquaorder.order_status==0"><button class="btn btn-danger" ng-click="setstatus(aquaorder.order_id);">Pending</button></td>
                           <td ng-if="aquaorder.order_status==1"><button class="btn btn-active" ng-click="unsetstatus(aquaorder.order_id);">Complete</button></td>
                           <td ng-if="aquaorder.order_reminder==0"><button class="btn btn-danger" ng-click="setreminder(aquaorder.order_id,$index);">Set Reminder</button></td>
                           <td ng-if="aquaorder.order_reminder==1"><button class="btn btn-active" ng-click="unsetreminder(aquaorder.order_id);">Unset Reminder</button></td>
+                                      
+                          </td>
 
-                          <td><button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="editorder(aquaorder.customer_id,aquaorder.admin_username);">Edit</button></td>
+                          <ng-form>
+
+
+
+
+
+
+
                         </tr>
                       </tbody>
                     </table>

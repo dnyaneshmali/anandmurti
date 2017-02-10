@@ -43,11 +43,54 @@
 
                       <tbody>
                         <tr ng-repeat="listvehicle in data | filter:clisearch">
+<<<<<<< HEAD
                           <td>{{listvehicle.vehicle_owner_name}}</td>
                           <td>{{listvehicle.vehicle_number}}</td>
                           <td>{{listvehicle.vehicle_contact_number}}</td>
                           <td><button class="btn btn-danger" ng-click="deletevehicle(listvehicle.vehicle_id);"><i class="fa fa-trash"> </i></button>
                           <button class="btn btn-warning" ng-click="editvehicle(listvehicle.customer_id,listvehicle.admin_username);"><i class="fa fa-edit"></i></button></td>
+=======
+                          <td ng-if="!isedit(listvehicle.vehicle_id)">{{listvehicle.vehicle_owner_name}}</td>
+                          <td ng-if="!isedit(listvehicle.vehicle_id)" >{{listvehicle.vehicle_number}}</td>
+                          <td ng-if="!isedit(listvehicle.vehicle_id)">{{listvehicle.vehicle_contact_number}}</td>
+
+                            <td ng-if="!isedit(listvehicle.vehicle_id)">
+                          <button class="btn btn-danger" ng-click="deletevehicle(listvehicle.vehicle_id);">Delete</button>
+                        <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(listvehicle.vehicle_id,listvehicle);">Edit</button>
+                            </td>
+                              <ng-form name="listvehicleform">
+                               <td ng-if="isedit(listvehicle.vehicle_id)">
+                          <input type="text" ng-value="listvehicle.jar_type" ng-model="listvehicle.vehicle_owner_name" name="vehicle_owner_name" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listvehicleform.vehicle_owner_name.$invalid && !listvehicleform.vehicle_owner_name.$pristine" class="help-block">  is required.</p>
+                          </td>
+                          
+                            <td ng-if="isedit(listvehicle.vehicle_id)">
+                          <input type="text" ng-value="listvehicle.vehicle_number" ng-model="listvehicle.vehicle_number" name="vehicle_number" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listvehicleform.vehicle_number.$invalid && !listvehicleform.vehicle_number.$pristine" class="help-block">  is required.</p>
+                          </td>
+
+                          <td ng-if="isedit(listvehicle.vehicle_id)">
+                          <input type="text" ng-value="listvehicle.vehicle_contact_number" ng-model="listvehicle.vehicle_contact_number" name="vehicle_contact_number" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listvehicleform.vehicle_contact_number.$invalid && !listvehicleform.vehicle_contact_number.$pristine" class="help-block">  is required.</p>
+                          </td>
+                          
+
+                          
+                           <td ng-if="isedit(listvehicle.vehicle_id)">
+
+                              <button class="btn btn-danger" ng-click="updatevehicle(listvehicle,$index);">Update</button> 
+
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button>
+
+
+                             <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
+                          </td>
+                          <ng-form>
+
+
+
+
+>>>>>>> 90efc39abf10184f75f2a3a188285d4382422e6b
                         </tr>
                       </tbody>
                     </table>
