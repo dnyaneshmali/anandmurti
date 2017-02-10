@@ -55,7 +55,7 @@
                           <input type="text" ng-value="listjar.jar_type" ng-model="listjar.jar_type" name="jar_type" style="width:auto;" required>
                           <p style="color:red;" ng-show="listjardetailsform.jar_type.$invalid && !listjardetailsform.jar_type.$pristine" class="help-block"> jartype is required.</p>
                           </td>
-                           <ng-form name="listjardetailsform">
+                          
                             <td ng-if="isedit(listjar.jar_id)">
                           <input type="text" ng-value="listjar.jar_price" ng-model="listjar.jar_price" name="jar_price" style="width:auto;" required>
                           <p style="color:red;" ng-show="listjardetailsform.jar_price.$invalid && !listjardetailsform.jar_price.$pristine" class="help-block"> jarprice is required.</p>

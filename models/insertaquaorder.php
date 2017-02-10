@@ -10,13 +10,12 @@ $order_status = '0';
 $query = "INSERT INTO  tbl_aqua_orders(customer_name, order_jar_type, order_quantity, order_price, order_delivery_address, order_delivery_date, order_delivery_time, vehicle_name, order_status, order_date)
     VALUES('".$data['customer_name']."','".$data['jar_type']."', '".$data['order_quantity']."', '".$data['order_price']."', '".$data['order_address']."', '".$data['order_date']."', '".$data['order_time']."','".$data['vehicle']."','".$order_status."','".$order_date."')";
    
-     if(!mysqli_query($connection,$query))
+    if(!mysqli_query($connection,$query))
     {
-        die('Error : ' . mysqli_error());
+        die('Error :' .mysqli_error());
     }else{
     	echo"success";
     }
 	
 echo json_encode($data);
-
  	?>
