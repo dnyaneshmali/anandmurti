@@ -24,7 +24,7 @@
                   </li>
                   <li ng-hide="!isaquaadmin()" ng-controller="Dashboard"><a><i class="fa fa-tint gradient-aqua"></i>        Aqua Agency <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                        <li><a href="#/aqua">Dashboard</a></li>
+                        <li><a href="#/aquadashboard">Dashboard</a></li>
                         <li><a href="#/addaquacustomer">Add Customers</a></li>
                         <li><a href="#/listaquacustomer">List Customers</a></li>
                         <li><a href="#/addaquaproducts">Add Aqua Products</a></li>

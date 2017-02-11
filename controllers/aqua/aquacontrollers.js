@@ -1,6 +1,17 @@
 /**
  * Created by User on 10/19/14.
  */
+
+app.controller('Aquadashboardctrl', ['$scope','$http', function($scope,$http) {
+  $http.get("../../models/getorderdetails.php")
+    .success(function(data){
+        $scope.reminderdata=data
+        console.log($scope.reminderdata);
+    });
+
+}]);
+
+
 app.controller('Addaquactrl', ['$scope','$http', function($scope,$http) {
 
 $scope.insertdata=function(aquacustomers){
