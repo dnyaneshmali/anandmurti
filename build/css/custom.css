@@ -4007,6 +4007,18 @@ i.fa.fa-fire.gradient-gas {
     background: -webkit-gradient(linear, left top, left bottom, from(#F44336), to(#FF9800));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    display: initial;
+   
     background-color: linear-gradient(284deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 100%);
 }
+i.fa.fa-tint.gradient-aqua {
+background: -webkit-gradient(linear, left top, left bottom, from(#28dff7), to(#19869e));
+-webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+   
+    background-color: linear-gradient(284deg, rgba(255,0,0,1) 0%, rgba(255,0,0,1) 100%);}
+
+
+    i.fa.fa-group {
+color: #e2d34d;}
+ i.fa.fa-table {
+color: #f36998;}

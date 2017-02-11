@@ -115,8 +115,8 @@
 
                              <td ng-if="aquaorder.order_status==0"><button class="btn btn-danger" ng-click="setstatus(aquaorder.order_id);">Pending</button></td>
                           <td ng-if="aquaorder.order_status==1"><button class="btn btn-active" ng-click="unsetstatus(aquaorder.order_id);">Complete</button></td>
-                          <td ng-if="aquaorder.order_reminder==0"><button class="btn btn-danger" ng-click="setreminder(aquaorder.order_id,$index);">Set Reminder</button></td>
-                          <td ng-if="aquaorder.order_reminder==1"><button class="btn btn-active" ng-click="unsetreminder(aquaorder.order_id);">Unset Reminder</button></td>
+                          <td ng-if="aquaorder.order_reminder==0"><button class="btn btn-danger" ng-click="setreminder(aquaorder.order_id,$index);"><i class="fa fa-bell"></i></button></td>
+                          <td ng-if="aquaorder.order_reminder==1"><button class="btn btn-active" ng-click="unsetreminder(aquaorder.order_id);"><i class="fa fa-bell-slash"></i></button></td>
                                       
                           </td>
 

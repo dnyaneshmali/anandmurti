@@ -22,7 +22,7 @@
                 
                   <li><a href="#/"><i class="fa fa-table"></i> Dashboard</a>
                   </li>
-                  <li ng-hide="!isaquaadmin()" ng-controller="Dashboard"><a><i class="fa fa-tint gradient-aqua"></i> Aqua Agency <span class="fa fa-chevron-down"></span></a>
+                  <li ng-hide="!isaquaadmin()" ng-controller="Dashboard"><a><i class="fa fa-tint gradient-aqua"></i>        Aqua Agency <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                         <li><a href="#/aqua">Dashboard</a></li>
                         <li><a href="#/addaquacustomer">Add Customers</a></li>
@@ -37,7 +37,7 @@
                         <li><a href="#/listvehicledetails">List Vehicle Details</a></li>
                     </ul>
                   </li>
-                  <li ng-hide="!isgasadmin()" ng-controller="Dashboard" ><a><i class="fa fa-fire gradient-gas"></i> Go Gas Agency<span class="fa fa-chevron-down"></span></a>
+                  <li ng-hide="!isgasadmin()" ng-controller="Dashboard" ><a><i class="fa fa-fire gradient-gas"></i>     Go Gas Agency<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/gogas">Dashboard</a></li>
                        <li><a href="#/addgogascustomer">Add Gogas Customers</a></li>
@@ -49,7 +49,7 @@
                     </ul>
                   </li>
 
-                  <li ng-hide="!isadmin()" ng-controller="Dashboard"><a><i class="fa fa-group"></i>Manage Admin's<span class="fa fa-chevron-down"></span></a>
+                  <li ng-hide="!isadmin()" ng-controller="Dashboard"><a><i class="fa fa-group"></i>   Manage Admin's<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/adminlist">List Admin</a></li>
                       <li><a href="#/addadmin">Add Admin</a></li>
