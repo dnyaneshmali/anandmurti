@@ -361,6 +361,7 @@ console.log($scope.setrem);
 app.controller('Addjardetailsctrl', ['$scope','$http', function($scope,$http){
 
 $scope.insertdata=function(addjardetails){
+  
   $scope.addjardetails = {};
 $scope.addjardetails = angular.copy(addjardetails);
 console.log($scope.addjardetails);
