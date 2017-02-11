@@ -1,6 +1,6 @@
 <footer>
           <div class="pull-right">
-            Anand Murti Group Of Companies Developed And Designed By <a href="https://colorlib.com">Softinfology</a>
+            Anand Murti Group Of Companies Developed And Designed By <a href="http://www.softinfology.com/">Softinfology</a>
           </div>
           <div class="clearfix"></div>
         </footer>
