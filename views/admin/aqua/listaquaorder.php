@@ -41,8 +41,9 @@
                           <th>Order time</th>
                           <th>Order Date</th>
                           <th>Vehicle Name</th>
+                          <th>Action</th>
                           <th>Order Status</th>
-                          <th colspan="3">Action</th>
+                                 <th>Reminder</th>
                           
                         </tr>
                       </thead>
@@ -65,8 +66,8 @@
                               <td ng-if="!isedit(aquaorder.order_id)">
 
 
-                        <button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);">Delete</button>
-                          <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(aquaorder.order_id,aquaorder);">Edit</button>
+                        <button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);"><i class="fa fa-trash"></i></button>
+                          <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(aquaorder.order_id,aquaorder);"><i class="fa fa-edit"></i></button>
                         </td>
                                  
                                 <ng-form name="listordertailsform">
@@ -104,17 +105,17 @@
                           </td>
                              <td ng-if="isedit(aquaorder.order_id)">
 
-                              <button class="btn btn-danger" ng-click="updateaquaorder(aquaorder,$index);">Update</button> 
+                              <button class="btn btn-success" ng-click="updateaquaorder(aquaorder,$index);"><i class="fa fa-check"></i></button> 
 
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button>
+                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
 
 
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
 
 
 
-                             <td ng-if="aquaorder.order_status==0"><button class="btn btn-danger" ng-click="setstatus(aquaorder.order_id);">Pending</button></td>
-                          <td ng-if="aquaorder.order_status==1"><button class="btn btn-active" ng-click="unsetstatus(aquaorder.order_id);">Complete</button></td>
+                             <td ng-if="aquaorder.order_status==0"><button class="btn btn-danger" ng-click="setstatus(aquaorder.order_id);"><i class="fa fa-spinner"></i></button></td>
+                          <td ng-if="aquaorder.order_status==1"><button class="btn btn-success" ng-click="unsetstatus(aquaorder.order_id);"><i class="fa fa-check-circle"></i></button></td>
                           <td ng-if="aquaorder.order_reminder==0"><button class="btn btn-danger" ng-click="setreminder(aquaorder.order_id,$index);"><i class="fa fa-bell"></i></button></td>
                           <td ng-if="aquaorder.order_reminder==1"><button class="btn btn-active" ng-click="unsetreminder(aquaorder.order_id);"><i class="fa fa-bell-slash"></i></button></td>
                                       
