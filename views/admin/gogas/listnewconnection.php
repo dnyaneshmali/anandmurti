@@ -39,7 +39,7 @@
                          <th>connection Hotplate</th> 
                          
                           <th>connection passbook</th>
-                          <th>customer State</th>
+                        <!--  <th>customer State</th> -->
                         
                           <th>connection stamp</th>
                            <th>connection tube</th>
@@ -53,25 +53,85 @@
 
                       <tbody>
                         <tr ng-repeat="Connection in data | filter:clisearch">
-                          <td>{{Connection.gcustomer_name}}</td>
-                          <td>{{Connection.connection_cylinder_deposit}}</td>
-                          <td>{{Connection.connection_depreciation}}</td>
+                          <td ng-if="!isedit(Connection.connection_id)">{{Connection.gcustomer_name}}</td>
+                          <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_cylinder_deposit}}</td>
+                          <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_depreciation}}</td>
                          
-                          <td>{{Connection.connection_hotplate}}</td>
+                          <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_hotplate}}</td>
                          
-                          <td>{{Connection.connection_passbook}}</td>
-                         <td>{{Connection.connection_stamp}}</td>
-                            <td>{{Connection.connection_tube}}</td>
-                             <td>{{Connection.connection_lighter}}</td>
-                              <td>{{Connection.connection_other}}</td>
-                               <td>{{Connection.connection_date}}</td>
+                          <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_passbook}}</td>
+                         <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_stamp}}</td>
+                            <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_tube}}</td>
+                             <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_lighter}}</td>
+                              <!-- <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_other}}</td> -->
+                               <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_date}}</td>
 
                              
+              
+                              <td ng-if="!isedit(Connection.connection_id)">
+
+                          <button class="btn btn-danger" ng-click="deleteuser(Connection.connection_id,$index);">Delete</button>
+                          <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(Connection.connection_id);">Edit</button>
+                        </td>
+
+                            <ng-form name="updateconnectionform">
+                   <td ng-if="isedit(Connection.connection_id)">{{Connection.gcustomer_name}}</td>
 
 
-                          <td><button class="btn btn-danger" ng-click="deleteuser(Connection.connection_id,$index);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(Connections.gcustomer_id,Connections.admin_username);">Edit</button></td>
-                        </tr>
+                            
+
+                             <td ng-if="isedit(Connection.connection_id)">
+                          <input type="text" ng-value="Connection.connection_cylinder_deposit" ng-model="Connection.connection_cylinder_deposit" name="connection_cylinder_deposit" style="width:auto;" required>
+                          <p style="color:red;" ng-show="updateconnectionform.connection_cylinder_deposit.$invalid && !updateconnectionform.connection_cylinder_deposit.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+
+                          <td ng-if="isedit(Connection.connection_id)">
+                          <input type="text" ng-value="Connection.connection_depreciation" ng-model="Connection.connection_depreciation" name="connection_depreciation" style="width:auto;" required>
+                          <p style="color:red;" ng-show="updateconnectionform.connection_depreciation.$invalid && !updateconnectionform.connection_depreciation.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+
+
+                        <td ng-if="isedit(Connection.connection_id)">
+                          <input type="text" ng-value="Connection.connection_hotplate" ng-model="Connection.connection_hotplate" name="connection_hotplate" style="width:auto;" required>
+                          <p style="color:red;" ng-show="updateconnectionform.connection_hotplate.$invalid && !updateconnectionform.connection_hotplate.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+
+
+                          <td ng-if="isedit(Connection.connection_id)">
+                          <input type="text" ng-value="Connection.connection_passbook" ng-model="Connection.connection_passbook" name="connection_passbook" style="width:auto;" required>
+                          <p style="color:red;" ng-show="updateconnectionform.connection_passbook.$invalid && !updateconnectionform.connection_passbook.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+
+                           <td ng-if="isedit(Connection.connection_id)">
+                          <input type="text" ng-value="Connection.connection_stamp" ng-model="Connection.connection_stamp" name="connection_stamp" style="width:auto;" required>
+                          <p style="color:red;" ng-show="updateconnectionform.connection_stamp.$invalid && !updateconnectionform.connection_stamp.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+
+
+                          <td ng-if="isedit(Connection.connection_id)">
+                          <input type="text" ng-value="Connection. connection_tube" ng-model="Connection.connection_tube" name="connection_tube" style="width:auto;" required>
+                          <p style="color:red;" ng-show="updateconnectionform.connection_tube.$invalid && !updateconnectionform.connection_tube.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+
+                           <td ng-if="isedit(Connection.connection_id)">
+                          <input type="text" ng-value="Connection.connection_lighter" ng-model="Connection.connection_lighter" name="connection_lighter" style="width:auto;" required>
+                          <p style="color:red;" ng-show="updateconnectionform.connection_lighter.$invalid && !updateconnectionform.connection_lighter.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+                           <td ng-if="isedit(Connection.connection_id)">{{Connection. connection_date}}</td>
+
+
+
+                      <td ng-if="isedit(Connection.connection_id)"><button class="btn btn-success" ng-click="updategasconnection(Connection);"><i class="fa fa-check"></i></button> 
+
+                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(Connection.connection_id);"><i class="fa fa-close"></i></button>
+
+                               </td>
+
+
+
+
+                           <ng-form>
+                       </tr>
                       </tbody>
                     </table>
                   </div>

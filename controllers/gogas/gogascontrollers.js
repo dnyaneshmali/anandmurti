@@ -158,6 +158,8 @@ console.log($scope.Connection);
 }]);
 
 app.controller('Listnewconnectionctrl', ['$scope','$http', function($scope,$http) {
+  $scope.iseditid='';
+    $scope.oldconnection='';
    $http.get("../../models/getnewconnections.php")
     .success(function(data){
         $scope.data=data
@@ -184,8 +186,41 @@ console.log(connection_id);
 
           });
 }
-
-
+$scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldconnection){
+              $scope.iseditid=id;
+              $scope.oldconnection=angular.copy(oldconnection);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldconnection);
+              $scope.$watch();
+            }
+            $scope.initval = function (Connection) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updategasconnection=function(Connection,index){
+              console.log(Connection);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updategasconnection.php',
+                     data    : Connection, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.updateconnectionform.$setPristine();
+                        delete $scope.oldconnection;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
 }]);
-
