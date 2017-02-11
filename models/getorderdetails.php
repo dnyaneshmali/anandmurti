@@ -3,7 +3,7 @@ $root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
 include($root."/config/config.php");
 $data=array();
 
-$query="SELECT * FROM  tbl_aqua_orders";
+$query="SELECT * FROM  tbl_aqua_orders order by order_delivery_date,order_delivery_time ";
 $result = mysqli_query($connection,$query);
 
 while ($row = mysqli_fetch_assoc($result)){
