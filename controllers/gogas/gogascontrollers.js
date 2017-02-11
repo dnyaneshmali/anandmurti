@@ -24,6 +24,8 @@ console.log($scope.gogascustomers);
 }
 }]);
 app.controller('Listgogasctrl', ['$scope','$http', function($scope,$http) {
+  $scope.iseditid='';
+    $scope.oldgogas='';
     
     $http.get("../../models/getgogascustomer.php")
     .success(function(data){
@@ -51,8 +53,42 @@ console.log(gcustomer_id);
 
           });
 }
-
-
+              $scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldgogas){
+              $scope.iseditid=id;
+              $scope.oldgogas=angular.copy(oldgogas);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldgogas);
+              $scope.$watch();
+            }
+            $scope.initval = function (gogascustomer) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updategogascustomers=function(gogascustomer,index){
+              console.log(gogascustomer);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updategogascustomer.php',
+                     data    : gogascustomer, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.updategogascustomer.$setPristine();
+                        delete $scope.oldgogas;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
 }]);
 

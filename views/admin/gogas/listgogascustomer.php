@@ -54,18 +54,58 @@
 
                       <tbody>
                         <tr ng-repeat="gogascustomer in data | filter:clisearch">
-                          <td>{{gogascustomer.gcustomer_name}}</td>
-                          <td>{{gogascustomer.gcustomer_email}}</td>
-                          <td>{{gogascustomer.gcustomer_number}}</td>
+                          <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_name}}</td>
+                          <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_email}}</td>
+                          <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_number}}</td>
                           <!-- <td>{{gogascustomer.gcustomer_dob}}</td>
                           <td>{{gogascustomer.gcustomer_state}}</td> -->
-                          <td>{{gogascustomer.gcustomer_city}}</td>
+                          <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_city}}</td>
                           <!-- <td>{{gogascustomer.gcustomer_pincode}}</td> -->
-                          <td>{{gogascustomer.gcustomer_landmark}}</td>
+                          <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_landmark}}</td>
                           <!-- <td>{{gogascustomer.gcustomer_proof}}</td>
- -->                          <td>{{gogascustomer.gcustomer_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(gogascustomer.gcustomer_id,$index);"><i class="fa fa-trash"> </i></button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(gogascustomers.gcustomer_id,gogascustomers.admin_username);"><i class="fa fa-edit"></i></button></td>
+ -->                          <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.                              gcustomer_date}}</td>
+
+                                <td ng-if="!isedit(gogascustomer.gcustomer_id)">
+                        <button class="btn btn-danger" ng-click="deleteuser(gogascustomer.gcustomer_id,$index);"><i class="fa fa-trash"> </i></button>
+                        <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(gogascustomer.gcustomer_id,gogascustomer);"><i class="fa fa-edit"></i></button>
+                      </td>
+
+                          <ng-form name="updategogascustomer">
+                                <td ng-if="isedit(gogascustomer.gcustomer_id)">
+                          <input type="text" ng-value="gogascustomer.gcustomer_name" ng-model="gogascustomer.gcustomer_name" name="gcustomer_name" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listgogascustomerform.gcustomer_name.$invalid && !listgogascustomerform.gcustomer_name.$pristine" class="help-block"> fullname is required.</p>
+                          </td>
+                              
+
+                          
+                           <td ng-if="isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_email}}</td>
+
+                           <td ng-if="isedit(gogascustomer.gcustomer_id)">
+                          <input type="text" ng-value="gogascustomer.gcustomer_number" ng-model="gogascustomer.gcustomer_number" name="gcustomer_number" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listgogascustomerform.gcustomer_number.$invalid && !listgogascustomerform.gcustomer_number.$pristine" class="help-block"> No is required.</p>
+                          </td>
+                            
+                              <td ng-if="isedit(gogascustomer.gcustomer_id)">
+                          <input type="text" ng-value="gogascustomer.gcustomer_city" ng-model="gogascustomer.gcustomer_city" name="gcustomer_city" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listgogascustomerform.gcustomer_city.$invalid && !listgogascustomerform.gcustomer_city.$pristine" class="help-block"> No is required.</p>
+                          </td>
+
+
+                              <td ng-if="isedit(gogascustomer.gcustomer_id)">
+                          <input type="text" ng-value="gogascustomer.gcustomer_landmark" ng-model="gogascustomer.gcustomer_landmark" name="gcustomer_landmark" style="width:auto;" required>
+                          <p style="color:red;" ng-show="listgogascustomerform.gcustomer_landmark.$invalid && !listgogascustomerform.gcustomer_landmark.$pristine" class="help-block"> No is required.</p>
+                          </td>
+                           
+                           <td ng-if="isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_date}}</td>
+
+                           <td ng-if="isedit(gogascustomer.gcustomer_id)">
+
+                              <button class="btn btn-success" ng-click="updategogascustomers(gogascustomer,$index);"><i class="fa fa-check"></i></button> 
+
+                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
+
+                            </td>
+                            <ng-form>
                         </tr>
                       </tbody>
                     </table>

@@ -11,7 +11,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="gcustomer_name">Customer Name <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="gogascustomers.gcustomer_name" id="customer_name" class="form-control" name="customer_name" required />
+                          <input type="text" ng-model="gogascustomers.gcustomer_name" id="customer_name" class="form-control" name="gcustomer_name" required />
                           <p style="color:red;" ng-show="addgogasform.gcustomer_name.$invalid && !addgogasform.gcustomer_name.$pristine" class="help-block"> Customer name is required.</p>
                         </div>
                       </div>
@@ -20,7 +20,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="  gcustomer_email">Customer Email <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="email" ng-model="gogascustomers.gcustomer_email" id="  gcustomer_email" class="form-control" name="gcustomer_email" required />
+                          <input type="email" ng-model="gogascustomers.gcustomer_email" id="gcustomer_email" class="form-control" name="gcustomer_email" required />
                           <p style="color:red;" ng-show="addgogasform. gcustomer_email.$invalid && !addgogasform.gcustomer_email.$pristine" class="help-block"> email is required with correct format.</p>
                         </div>
                       </div>
