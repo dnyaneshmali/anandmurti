@@ -27,7 +27,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Vehicle Contact Number <span class="required">*</span>
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="vdetails.vehicle_contact_number" ng-pattern="/^[0-9]{1,10}$/" id="vehicle_contact_number" class="form-control" name="vehicle_contact_number"
+                          <input type="text" ng-model="vdetails.vehicle_contact_number" id="vehicle_contact_number" class="form-control" name="vehicle_contact_number"
        required/>
                         </div>
                       </div>

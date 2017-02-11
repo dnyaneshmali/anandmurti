@@ -1,6 +1,20 @@
 /**
  * Created by User on 10/19/14.
  */
+
+
+ app.controller('Aquadashboardctrl', ['$scope','$http', function($scope,$http) {
+alert('dffd');
+$http.get("../../models/getorderdetails.php")
+    .success(function(data){
+        $scope.data=data
+        //console.log($scope.data);
+    });
+
+}
+}]);
+
+
 app.controller('Addaquactrl', ['$scope','$http', function($scope,$http) {
 
 $scope.insertdata=function(aquacustomers){

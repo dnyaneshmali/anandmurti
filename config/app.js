@@ -14,9 +14,9 @@ app.config(function($routeProvider) {
         })
 
 
-     .when('/aqua', {
+     .when('/aquadashboard', {
             templateUrl : 'aqua/aquadashboard.php',
-            controller  : 'Aqua'
+            controller  : 'Aquadashboardctrl'
         })
      .when('/addaquacustomer', {
             templateUrl : 'aqua/addaquacustomer.php',
