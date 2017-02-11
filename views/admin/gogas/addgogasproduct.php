@@ -22,7 +22,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Product price <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12 input-group" >
-                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                          <span class="input-group-addon"><i class="glyphicon glyphicon-rupee"></i></span>
                           <input type="text" ng-model="addgogasproduct.product_prize" id="product_prize" class="form-control" name="product_prize" required />
                          
                         </div>

@@ -4022,3 +4022,12 @@ background: -webkit-gradient(linear, left top, left bottom, from(#28dff7), to(#1
 color: #e2d34d;}
  i.fa.fa-table {
 color: #f36998;}
+
+.listaquaorder .x_panel,.listnew-con .x_panel{
+  overflow-x: scroll;
+}
+
+
+.connectionlist .x_panel {
+    overflow-x: scroll;
+}
