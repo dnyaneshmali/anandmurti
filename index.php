@@ -1,3 +1,4 @@
+
 <?php include('header.php');?>
 <div id="home-slider" class="home-slider">
    <!--<h1 class="slider-title text-center"></h1>
@@ -50,6 +51,7 @@
          <div class="row">
             <div class="col-md-12">
                <h2 class="text-center">We work to make your life healthy and happy</h2>
+               <div class="underline" style="width: 65%;"></div>
                <p class="text-center text-muted">Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.</p>
             </div>
          </div>
@@ -58,6 +60,7 @@
    <div class="second-section">
       <div class="container panel1">
          <h2 class="text-center">Solutions that you need everyday</h2>
+          <div class="underline" style="width: 50%;"></div>
          <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
          <div class="row home-content-box stylish-panel">
             <div class="col-md-4 col-sm-6">
@@ -104,6 +107,7 @@
    <div class="third-section our-features">
       <div class="container panel2">
          <h2 class="text-center">Our key Features </h2>
+          <div class="underline" style="width: 25%;"></div>
          <p class="text-center text-muted">Anand Murti Group of companies Pvt. Ltd having following features: </p>
          <div class="row stylish-panel">
             <div class="col-md-6  ">

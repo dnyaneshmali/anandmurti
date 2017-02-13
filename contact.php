@@ -20,6 +20,7 @@ $(document).ready(function(){
     <div class="contentarea">
       <div class="innerright">
         <h1><center>Contact us</center></h1>
+        <div class="underline" style="width:25%"></div>
         <!-- <iframe width="1000" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=WTC%20kharadi%20pune+(Softinfology)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style=" margin-top: 30px;"></iframe> -->
 <iframe width="1000" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style=" margin-top: 30px;">
 </iframe>

@@ -18,6 +18,7 @@
       <div class="page-content gogas-page">
          <div class="title-section container">
             <h1 class="text-center">Go Gas</h1>
+            <div class="underline" style="width:20%"></div>
             <p class="text-center text-muted">Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
          </div>
 
@@ -26,6 +27,7 @@
        <div class="second-section">
             <div class="container panel1">
                <h2 class="text-center">Gas Cylinder Types</h2>
+               <div class="underline" style="width:30%"></div>
                <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
                    <div class="row home-content-box stylish-panel">
             <div class="col-md-4 col-sm-6">
@@ -74,6 +76,7 @@
          </div>
          <div class="title-section container new-conn">
             <h2 class="text-center">How to get New connection?</h2>
+            <div class="underline" style="width:45%"></div>
             <p class="text-muted"><span style="font-weight: 600;">Step 1:</span> Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit.</br> <span style="font-weight: 600;">Step 2:</span> Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore </br> <span style="font-weight: 600;">Step 3:</span>optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, </br> <span style="font-weight: 600;">Step 4:</span> consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi </br> <span style="font-weight: 600;">Step 5:</span> quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
          </div>
 		 <div class="container carousel-mb">

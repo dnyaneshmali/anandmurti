@@ -26,11 +26,11 @@ Table Of content
 
 body {} h1 {
     font-size: 48px;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 h2 {
     font-size: 36px;
-    text-decoration: underline;
+    /*text-decoration: underline;*/
 }
 .bggradient{
     min-height: 760px;
@@ -855,4 +855,12 @@ h2 {
     font-size: 25px;}
 
 
+}
+
+.underline {
+    border-bottom: solid 2px #000;
+    text-align: center;
+    
+    margin: auto;
+    margin-bottom: 15px;
 }

@@ -18,11 +18,13 @@
       <div class="page-content aqua-page">
          <div class="title-section container">
             <h1 class="text-center">Aqua</h1>
+            <div class="underline" style="width:15%"></div>
             <p class="text-center text-muted">Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
          </div>
         <div class="third-section our-features">
             <div class="container ">
                <h2 class="text-center">Our key Features </h2>
+               <div class="underline" style="width:30%"></div>
                <p class="text-center text-muted">Anand Murti Group of companies Pvt. Ltd having following features: </p>
                <div class="row stylish-panel">
                   <div class="col-md-6  ">
