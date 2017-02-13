@@ -25,7 +25,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="customer_name">Customer Name <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="addaquaorder.customer_name" id="customer_name" class="form-control" name="customer_name" list="acustomerlist" required />
+                          <input type="text" class="form-control" ng-model="addaquaorder.customer_name" id="customer_name" class="form-control" name="customer_name" list="acustomerlist" required />
+                          <p style="color:red;" ng-show="addaquorderform.customer_name.$invalid && !addaquorderform.customer_name.$pristine" class="help-block">required</p>
                           
                         </div>
                       </div>
@@ -34,7 +35,9 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" ng-model="addaquaorder.jar_type" id="jar_type" class="form-control" name="jar_type" list="jarlist" required />
+                          <input type="text" class="form-control" ng-model="addaquaorder.jar_type" id="jar_type" class="form-control" name="jar_type" list="jarlist" required />
+                          <p style="color:red;" ng-show="addaquorderform.jar_type.$invalid && !addaquorderform.jar_type.$pristine" class="help-block">required</p>
+                          
                         </div>
                       </div>
 
@@ -43,7 +46,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="order_quantity">Order Quantity<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="addaquaorder.order_quantity" id="order_quantity" class="form-control" name="order_quantity" required />
+                          <input type="text" class="form-control" ng-model="addaquaorder.order_quantity" ng-pattern="/^\d+$/" id="order_quantity" class="form-control" name="order_quantity" required />
+                          <p style="color:red;" ng-show="addaquorderform.order_quantity.$invalid && !addaquorderform.order_quantity.$pristine" class="help-block">accept only digits required</p>
                          
                         </div>
                       </div>
@@ -52,7 +56,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="order_price">Order Price<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="addaquaorder.order_price" id="order_price" class="form-control" name="order_price" required />
+                          <input type="text" class="form-control" ng-model="addaquaorder.order_price" ng-pattern="/^\d+$/" id="order_price" class="form-control" name="order_price" required />
+                           <p style="color:red;" ng-show="addaquorderform.order_price.$invalid && !addaquorderform.order_price.$pristine" class="help-block">accept only digits required</p>
                          
                         </div>
                       </div>
@@ -61,7 +66,9 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="order_address">Delivery Address<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="addaquaorder.order_address" id="order_address" class="form-control" name="order_address" required />
+                          <input type="text" class="form-control" ng-model="addaquaorder.order_address" id="order_address" class="form-control" name="order_address" required />
+                          <p style="color:red;" ng-show="addaquorderform.order_address.$invalid && !addaquorderform.order_address.$pristine" class="help-block">required</p>
+                         
                          
                         </div>
                       </div>
@@ -70,7 +77,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="order_date">Delivery Date<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="addaquaorder.order_date" id="order_date" class="form-control" name="order_date" required />
+                          <input type="date" class="form-control" ng-model="addaquaorder.order_date" id="order_date" class="form-control" name="order_date" required />
+                             <p style="color:red;" ng-show="addaquorderform.order_date.$invalid && !addaquorderform.order_date.$pristine" class="help-block">date required</p>
                          
                         </div>
                       </div>
@@ -79,7 +87,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="order_time">Order Time<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="addaquaorder.order_time" id="order_time" class="form-control" name="order_time" required />
+                          <input type="time" class="form-control" ng-model="addaquaorder.order_time" id="order_time" class="form-control" name="order_time" required />
+                          <p style="color:red;" ng-show="addaquorderform.order_time.$invalid && !addaquorderform.order_time.$pristine" class="help-block"> time required</p>
                          
                         </div>
                       </div>
@@ -88,7 +97,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" ng-model="addaquaorder.vehicle" id="vehicle" class="form-control" name="vehicle" list="vehiclelist" required />
+                          <input type="text" class="form-control" ng-model="addaquaorder.vehicle" id="vehicle" class="form-control" name="vehicle" list="vehiclelist" required />
+                          <p style="color:red;" ng-show="addaquorderform.vehicle.$invalid && !addaquorderform.vehicle.$pristine" class="help-block"> time required</p>
                         </div>
                       </div>
                        

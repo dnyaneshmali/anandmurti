@@ -30,7 +30,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Customer Number <span class="required">*</span>
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="gogascustomers.gcustomer_number" id="gcustomer_number" class="form-control" name="gcustomer_number" ng-pattern="/^[0-9]{1,10}$/"
+                          <input type="text" ng-model="gogascustomers.gcustomer_number" id="gcustomer_number" class="form-control" name="gcustomer_number" ng-pattern="/^[0-9]{10}$/"
        required/>
                           <p style="color:red;" ng-show="addgogasform.gcustomer_number.$invalid && !addgogasform.gcustomer_number.$pristine" class="help-block"> 10 digit phone is required.</p>
                         </div>
@@ -67,8 +67,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">pincode <span class="required">*</span>
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addgogasform.gcustomer_pincode.$invalid && !addgogasform.gcustomer_pincode.$pristine }" >
-                          <input type="text" ng-model="gogascustomers.gcustomer_pincode" id="  gcustomer_pincode" class="form-control" name="gcustomer_pincode" required />
-                          <p style="color:red;" ng-show="addgogasform.gcustomer_pincode.$invalid && !addgogasform.gcustomer_pincode.$pristine" class="help-block">Required.</p>
+                          <input type="text" ng-model="gogascustomers.gcustomer_pincode" ng-pattern="/^[0-9]{6}$/"  id="gcustomer_pincode" class="form-control" name="gcustomer_pincode" required />
+                          <p style="color:red;" ng-show="addgogasform.gcustomer_pincode.$invalid && !addgogasform.gcustomer_pincode.$pristine" class="help-block">Required accept only 6 digit Numbers format .</p>
                         </div>
                       </div>
 

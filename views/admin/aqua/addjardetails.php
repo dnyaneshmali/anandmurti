@@ -6,7 +6,7 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select jar type<span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select class="form-control" ng-model="addjardetails.jar_type" name="jar_type"class="{'has-errors' : addjardetailsform.jar_type.$invalid, 'no-errors' : addjardetailsform.userrole.$valid}" ng-required="true">
+                          <select class="form-control" ng-model="addjardetails.jar_type" name="jar_type"class="{'has-errors' : addjardetailsform.jar_type.$invalid, 'no-errors' : addjardetailsform.jar_type.$valid}" ng-required="true">
                             <option value="" selected>Jar Type</option>
                             <option value="normal-jar">Normal jar </option>
                             <option value="cool-jar">Cool jar</option>
@@ -30,7 +30,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
+                          <button type="submit"  class="btn btn-primary">Cancel</button>
                           <button ng-click="insertdata(addjardetails)" ng-disabled="!addjardetailsform.$valid" id="send" type="submit" class="btn btn-success">save</button>
                         </div>
                       </div>

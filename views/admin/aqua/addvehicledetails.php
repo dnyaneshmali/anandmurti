@@ -10,7 +10,8 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="vowner_name">Vehicle Owner Name <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="vdetails.vowner_name" id="vowner_name" class="form-control" name="vowner_name" required />
+                          <input type="text" class="form-control"ng-model="vdetails.vowner_name" id="vowner_name" class="form-control" name="vowner_name" required />
+                          <p style="color:red;" ng-show="addvehicleform.vowner_name.$invalid && !addvehicleform.vowner_name.$pristine" class="help-block"> required.</p>
                         </div>
                       </div>
 
@@ -19,16 +20,18 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Vehicle Number<span class="required">*</span>
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="vdetails.vehicle_number" id="vehicle_number" class="form-control" name="vehicle_number" required />
+                          <input type="text" class="form-control" ng-model="vdetails.vehicle_number" id="vehicle_number" class="form-control" name="vehicle_number" required />
+                          <p style="color:red;" ng-show="addvehicleform.vehicle_number.$invalid && !addvehicleform.vehicle_number.$pristine" class="help-block"> required.</p>
                         </div>
                       </div>
 
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Vehicle Contact Number <span class="required">*</span>
                         </label>
-                        <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="vdetails.vehicle_contact_number" id="vehicle_contact_number" class="form-control" name="vehicle_contact_number"
+                        <div class="form-group col-md-6 col-sm-6 col-xs-12" >
+                          <input type="text" class="form-control" ng-pattern="/^[0-9]{10}$/"  ng-model="vdetails.vehicle_contact_number" id="vehicle_contact_number" class="form-control" name="vehicle_contact_number"
        required/>
+       <p style="color:red;" ng-show="addvehicleform.vehicle_contact_number.$invalid && !addvehicleform.vehicle_contact_number.$pristine" class="help-block"> required 10 digit number.</p>
                         </div>
                       </div>
 

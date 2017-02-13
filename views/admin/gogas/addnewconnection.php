@@ -13,16 +13,17 @@
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                          <input type="text" ng-model="Connection.customer" id="customer" class="form-control" name="customer" list="gcustomerlist" required />
-                        </div>
+                          <input type="text" class="form-control" ng-model="Connection.customer" id="customer" class="form-control" name="customer" list="gcustomerlist" required />
+                        <p style="color:red;" ng-show="connectionform.customer.$invalid && !connectionform.customer.$pristine" class="help-block">required</p>
+                      </div>
                        </div> 
                       
                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_cylinder_deposit">connection Cylinder Deposit<span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_cylinder_deposit">connection Cylinder Deposit<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="Connection.connection_cylinder_deposit" id="    connection_cylinder_deposit" class="form-control" name="connection_cylinder_deposit" required />
-                          <p style="color:red;" ng-show="connectionform.connection_cylinder_deposit.$invalid && !connectionform.connection_cylinder_deposit.$pristine" class="help-block"> required</p>
+                          <input type="text" ng-pattern="/^\d+$/" ng-model="Connection.connection_cylinder_deposit" id="    connection_cylinder_deposit" class="form-control" name="connection_cylinder_deposit" required />
+                          <p style="color:red;" ng-show="connectionform.connection_cylinder_deposit.$invalid && !connectionform.connection_cylinder_deposit.$pristine" class="help-block">Accept digits only</p>
                         </div>
                       </div>
 
