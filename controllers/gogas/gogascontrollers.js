@@ -135,7 +135,6 @@ console.log($scope.Connection);
 }
 
 
-
       $scope.customers = ["Lord of the Rings",
                         "Drive",
                         "Science of Sleep",
@@ -178,8 +177,8 @@ console.log(connection_id);
          })
      .success(function(data) {
             
-            console.log(data);
-             $scope.data.splice(index, 1);
+                        console.log(data);
+                        $scope.data.splice(index, 1);
                         $scope.$watch();
             
             
@@ -224,3 +223,17 @@ $scope.isedit=function(id){
            }
 
 }]);
+
+app.controller('Refilcylinderctrl', ['$scope','$http', function($scope,$http) {
+$http.get("../../models/getnewconnections.php")
+    .success(function(data){
+        $scope.connectiondetails=data
+        console.log($scope.connectiondetails);
+    });
+
+  }]);
+
+app.controller('Listrefilcylinderctrl', ['$scope','$http', function($scope,$http) {
+
+
+  }]);

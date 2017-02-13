@@ -46,6 +46,8 @@
                         <li><a href="#/listgogasproduct">List Gogas Products</a></li>
                         <li><a href="#/addnewconnection">Add New Connection</a></li>
                         <li><a href="#/listnewconnection">List New connections</a></li>
+                        <li><a href="#/refilcylinder">Add Refil cylinder</a></li>
+                        <li><a href="#/listrefilcylinder">List Refil cylinder</a></li>
                     </ul>
                   </li>
 

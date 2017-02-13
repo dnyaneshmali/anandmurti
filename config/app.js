@@ -88,6 +88,17 @@ app.config(function($routeProvider) {
             templateUrl : 'gogas/listnewconnection.php',
             controller  : 'Listnewconnectionctrl'
         })
+
+     .when('/refilcylinder', {
+            templateUrl : 'gogas/refil_cylinder.php',
+            controller  : 'Refilcylinderctrl'
+        })
+
+      .when('/listrefilcylinder', {
+            templateUrl : 'gogas/listrefilcylinder.php',
+            controller  : 'Listrefilcylinderctrl'
+        })
+
      .when('/adminlist', {
             templateUrl : 'adminlist.php',
             controller  : 'Adminlistctrl'
