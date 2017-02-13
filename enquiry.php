@@ -109,11 +109,11 @@
                                  <i class="fa fa-google-plus"></i>
                                  </a>
                               </li>
-                              <li>
+                             <!--  <li>
                                  <a href="#" class="rss">
                                  <i class="fa fa-rss"></i>
                                  </a>
-                              </li>
+                              </li> -->
                            </ul>
                         </div>
                      </div>
