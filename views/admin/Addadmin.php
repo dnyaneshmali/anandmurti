@@ -46,7 +46,7 @@
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Number <span class="required">*</span>
                         </label>
-                        <div class=" form-group col-md-6 col-sm-6 col-xs-12 input-group" >
+                        <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-phone"></i></span>
                           <input type="text" placeholder="Mobile Number" ng-model="admin.phone" id="phone" class="form-control" name="phone" ng-pattern="/^[0-9]{1,10}$/"
