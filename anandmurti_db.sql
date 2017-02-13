@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2017 at 06:39 AM
+-- Generation Time: Feb 13, 2017 at 02:27 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -43,7 +43,8 @@ CREATE TABLE `tbl_admin` (
 
 INSERT INTO `tbl_admin` (`admin_id`, `admin_username`, `admin_name`, `admin_email`, `admin_password`, `admin_number`, `admin_role`, `admin_date`) VALUES
 (1, 'dnyanesh', 'Dnyanesh Mali', 'dnyanesh.mali@softinfology.com', 'e6e061838856bf47e1de730719fb2609', '9689483519', 'superadmin', '2017-01-30 00:00:00'),
-(2, 'santosh', 'Santosh B', 'santoshbhosale123@gmail.com', 'e6e061838856bf47e1de730719fb2609', '1234567890', 'aquaadmin', '2017-02-02 12:30:23');
+(2, 'santosh', 'Santosh B', 'santoshbhosale123@gmail.com', 'e6e061838856bf47e1de730719fb2609', '1234567890', 'aquaadmin', '2017-02-02 12:30:23'),
+(3, 'pallavi', 'Pallavi G', 'p@gmail.com', 'e6e061838856bf47e1de730719fb2609', '9999999999', 'gasadmin', '2017-02-13 10:53:45');
 
 -- --------------------------------------------------------
 
@@ -124,11 +125,25 @@ INSERT INTO `tbl_avehicle_details` (`vehicle_id`, `vehicle_owner_name`, `vehicle
 (2, 'test2', '323424', '2017-02-08 10:28:25', 2147483647),
 (3, 'HMT', '234234', '2017-02-08 10:29:58', 2147483647),
 (4, 'test owner', '2343232', '2017-02-11 11:12:22', 0),
-(5, 'ss', 'ss', '2017-02-11 11:15:32', 0),
 (6, 'sdfsf', '342342', '2017-02-11 11:16:06', 2147483647),
 (7, 'fgh', '453454', '2017-02-11 11:16:51', 0),
 (8, 'erewrewr', '454354', '2017-02-11 11:27:36', 0),
 (9, 'fgdfg', '45345', '2017-02-11 11:29:59', 2147483647);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_gas_inwards`
+--
+
+CREATE TABLE `tbl_gas_inwards` (
+  `inwards_id` int(11) NOT NULL,
+  `product_quantity` int(10) NOT NULL,
+  `product_price` int(10) NOT NULL,
+  `product_date` datetime NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `vehicle_Id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -157,6 +172,18 @@ CREATE TABLE `tbl_gogas_customers` (
 INSERT INTO `tbl_gogas_customers` (`gcustomer_id`, `gcustomer_name`, `gcustomer_email`, `gcustomer_number`, `gcustomer_dob`, `gcustomer_state`, `gcustomer_city`, `gcustomer_pincode`, `gcustomer_landmark`, `gcustomer_proof`, `gcustomer_date`) VALUES
 (1, 'Adam', 'adam@gmail.com', '3434343434', '2017-02-06T18:30:00.000Z', 'Maharashtra', 'Osmanabad', 413501, 'Near Hospital', 'Id', '2017-02-10 09:16:58'),
 (2, 'Matt', 'matt@gmail.com', '65665565656', '2017-02-12T18:30:00.000Z', 'Maharashtra', 'Osmanabad', 413501, 'Near Hospital', 'Pancard', '2017-02-10 09:25:20');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_gproducts`
+--
+
+CREATE TABLE `tbl_gproducts` (
+  `product_id` int(11) NOT NULL,
+  `product_name` varchar(100) NOT NULL,
+  `product_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -204,7 +231,7 @@ CREATE TABLE `tbl_new_connection` (
 --
 
 INSERT INTO `tbl_new_connection` (`connection_id`, `gcustomer_name`, `connection_cylinder_deposit`, `connection_depreciation`, `connection_hotplate`, `connection_passbook`, `connection_stamp`, `connection_tube`, `connection_lighter`, `connection_other`, `connection_date`) VALUES
-(1, '', '12', 'Test', 'Yes', '', 'Stamp', 'Yes', '', 'test', '2017-02-10 09:26:09'),
+(1, 'Matt', '12', 'Test', 'Yes', '', 'Stamp', 'Yes', '', 'test', '2017-02-10 09:26:09'),
 (2, 'Matt', '11', 'yes', 'Yes', 'No', '1', 'Yes', 'No', 'test2', '2017-02-10 12:15:32');
 
 -- --------------------------------------------------------
@@ -215,7 +242,7 @@ INSERT INTO `tbl_new_connection` (`connection_id`, `gcustomer_name`, `connection
 
 CREATE TABLE `tbl_refil_details` (
   `refil_id` int(11) NOT NULL,
-  `refil_type` varchar(50) NOT NULL,
+  `refil_cylinder_type` varchar(50) NOT NULL,
   `refil_payment_details` varchar(100) NOT NULL,
   `refil_amount` int(10) NOT NULL,
   `refil_date` datetime NOT NULL,
@@ -255,12 +282,24 @@ ALTER TABLE `tbl_avehicle_details`
   ADD PRIMARY KEY (`vehicle_id`);
 
 --
+-- Indexes for table `tbl_gas_inwards`
+--
+ALTER TABLE `tbl_gas_inwards`
+  ADD PRIMARY KEY (`inwards_id`);
+
+--
 -- Indexes for table `tbl_gogas_customers`
 --
 ALTER TABLE `tbl_gogas_customers`
   ADD PRIMARY KEY (`gcustomer_id`),
   ADD UNIQUE KEY `gcustomer_email` (`gcustomer_email`),
   ADD UNIQUE KEY `gcustomer_number` (`gcustomer_number`);
+
+--
+-- Indexes for table `tbl_gproducts`
+--
+ALTER TABLE `tbl_gproducts`
+  ADD PRIMARY KEY (`product_id`);
 
 --
 -- Indexes for table `tbl_jar_details`
@@ -289,7 +328,7 @@ ALTER TABLE `tbl_refil_details`
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
-  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_aqua_customers`
 --
@@ -304,12 +343,22 @@ ALTER TABLE `tbl_aqua_orders`
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
 ALTER TABLE `tbl_avehicle_details`
-  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+--
+-- AUTO_INCREMENT for table `tbl_gas_inwards`
+--
+ALTER TABLE `tbl_gas_inwards`
+  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_gogas_customers`
 --
 ALTER TABLE `tbl_gogas_customers`
   MODIFY `gcustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `tbl_gproducts`
+--
+ALTER TABLE `tbl_gproducts`
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_jar_details`
 --
