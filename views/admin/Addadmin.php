@@ -88,7 +88,7 @@
                           <select class="form-control" ng-model="admin.userrole" name="userrole" ng-class="{'has-errors' : addadminform.userrole.$invalid, 'no-errors' : addadminform.userrole.$valid}" ng-required="true">
                             <option value="" selected>Choose option</option>
                             <option value="aquaadmin">aquaadmin</option>
-                            <option value="gogasadmin">gogasadmin</option>
+                            <option value="gasadmin">gogasadmin</option>
                           </select>
                         </div>
                           <div class="error-container" ng-show="addadminform.userrole.$dirty && addadminform.userrole.$invalid" ng-messages="addadminform.userrole.$error">

@@ -359,6 +359,9 @@ console.log($scope.setrem);
 
 
 app.controller('Addjardetailsctrl', ['$scope','$http', function($scope,$http){
+ $scope.resetForm = function(form) {
+  $scope.form = {};
+}
 
 $scope.insertdata=function(addjardetails){
 
@@ -395,9 +398,7 @@ app.controller('Listjardetailsctrl', ['$scope','$http', function($scope,$http) {
     .success(function(data){
         $scope.data=data
         //console.log($scope.data);
-    });
-
-
+    });    
 
   $scope.deletejar=function(jar_id,index){
     alert('in delete function');
