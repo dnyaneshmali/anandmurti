@@ -247,7 +247,8 @@ a.slider-btn2 {
 .contact-details .item .icon {
     font-size: 36px;
     line-height: 21px;
-    color: #FF712C;
+   /* color: #FF712C;*/
+    color:#1ab0d3;
     float: left;
 }
 .contact-details .content {
@@ -311,6 +312,11 @@ ul.contact-social-list li {
 
 #contactform .error {
     color: red;
+}
+/*----------------go gas----------*/
+.new-conn p.text-muted {
+    margin-left: 50px;
+        margin-bottom: 80px;
 }
 
 /*----------------About Page Start----------*/

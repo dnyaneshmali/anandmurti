@@ -1,4 +1,4 @@
-.daterangepicker .ranges li {
+s.daterangepicker .ranges li {
   color: #73879C; }
   .daterangepicker .ranges li.active, .daterangepicker .ranges li:hover {
     background: #536A7F;
@@ -3994,7 +3994,7 @@ ul.notifications {
     font-style: normal;
     float: right;
 }
-.addgo-cust h1,.adda-cust h1,.adda-prod h1,.adda-order h1,.addgo-prod h1,.addjar-dtls h1{
+.addgo-cust h1,.adda-cust h1,.adda-prod h1,.adda-order h1,.addgo-prod h1,.addjar-dtls h1,.addnew-conn h1,.addjar-dtls h1,.addveh-dtls h1{
   text-align: center;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
@@ -4022,3 +4022,15 @@ background: -webkit-gradient(linear, left top, left bottom, from(#28dff7), to(#1
 color: #e2d34d;}
  i.fa.fa-table {
 color: #f36998;}
+
+.listaquaorder .x_panel,.listnew-con .x_panel{
+  overflow-x: scroll;
+}
+
+
+.connectionlist .x_panel {
+    overflow-x: scroll;
+}
+
+/*validation */
+.val-style{color:red; margin-left: 45px;}

@@ -11,33 +11,30 @@
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="customer_name">Product Name <span class="required">*</span>
                         </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12 input-group" >
-                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-dropbox"></i></span>
                           <input type="text" placeholder="Product Name" ng-model="addgogasproduct.product_name" id="product_name" class="form-control" name="product_name" required />
-                          
+                          </div>
                         </div>
                       </div>
 
                        <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Product price <span class="required">*</span>
                         </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12 input-group" >
-                          <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-                          <input type="text" ng-model="addgogasproduct.product_prize" id="product_prize" class="form-control" name="product_prize" required />
-                         
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                          <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" placeholder="Product Price" ng-model="addgogasproduct.product_prize" id="product_prize" class="form-control" name="product_prize" required />
+                         </div>
                         </div>
                       </div>
-
-                     
-                     
-
-                      
-
-                      
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select  <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
                           <select class="form-control" ng-model="addgogasproduct.Product_category" name="Product_category" >
                             <option value="" selected>Product category</option>
                             <option value="cylinder">cylinder</option>
@@ -45,16 +42,18 @@
                             <option value="pipe">pipe</option>
                             <option value="lighter">lighter</option>
                           </select>
-                          
+                          </div>
                         </div>
                       </div>
                        
                         <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Product company <span class="required">*</span>
                         </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="addgogasproduct.Product_company" id="Product_company" class="form-control" name="Product_company" required />
-                         
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-building"></i></span>
+                          <input type="text" placeholder="Product Company" ng-model="addgogasproduct.Product_company" id="Product_company" class="form-control" name="Product_company" required />
+                         </div>
                         </div>
                       </div>
 
@@ -62,9 +61,11 @@
                            <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Product tax <span class="required">*</span>
                         </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <input type="text" ng-model="addgogasproduct.product_tax" id="product_tax" class="form-control" name="Product_tax" required />
-                        
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" placeholder="Product Tax" ng-model="addgogasproduct.product_tax" id="product_tax" class="form-control" name="Product_tax" required />
+                          </div>
                         </div>
                       </div>
 

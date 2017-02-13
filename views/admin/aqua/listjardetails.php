@@ -41,7 +41,7 @@
 
 
                       <tbody>
-                        <tr ng-repeat="listjar in data | filter:clisearch">
+                        <tr ng-repeat="listjar in data | filter:clisearch"  ng-form="subForm">
                           <td ng-if="!isedit(listjar.jar_id)">{{listjar.jar_type}}</td>
                           <td ng-if="!isedit(listjar.jar_id)">{{listjar.jar_price}}</td>
 
@@ -53,12 +53,13 @@
                          <ng-form name="listjardetailsform">
                             <td ng-if="isedit(listjar.jar_id)">
                           <input type="text" ng-value="listjar.jar_type" ng-model="listjar.jar_type" name="jar_type" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listjardetailsform.jar_type.$invalid && !listjardetailsform.jar_type.$pristine" class="help-block"> jartype is required.</p>
+                          <p style="color:red;" ng-show="subForm.jar_type.$error.required"> jartype is required.</p>
                           </td>
                           
                             <td ng-if="isedit(listjar.jar_id)">
-                          <input type="text" ng-value="listjar.jar_price" ng-model="listjar.jar_price" name="jar_price" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listjardetailsform.jar_price.$invalid && !listjardetailsform.jar_price.$pristine" class="help-block"> jarprice is required.</p>
+                          <input type="text" ng-value="listjar.jar_price" ng-pattern="/^\d+$/" ng-model="listjar.jar_price" id="jar_price"  class="form-control" name="jar_price" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.jar_price.$error.required"> jarprice is required.</p>
+                           <p style="color:red;" ng-show="!subForm.jar_price.$error.required && subForm.jar_price.$invalid"> accept digits only.</p>
                           </td>
 
 

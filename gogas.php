@@ -32,8 +32,9 @@
                <div class="panel panel-default">
                   <div class="text-center">
                      <div class="panel-body">
-                        <img id="img-1" src="/anandmurti/assets/images/2kg.png">
-                        <h4>2 kg</h4>
+                      <!--   <img id="img-1" src="/anandmurti/assets/images/2kg.png"> -->
+                       <img id="img-1" src="/anandmurti/assets/images/gas_icon.png">
+                        <h4>2 kg with cooktop</h4>
                         <p class="text-center">Gogas is a leading brand name for Auto LPG Dispensing Stations( ALDS ) by any private company in India. It is a trusted and a proven brand owned by the parent company Confidence Petroleum India Ltd. </p>
                      </div>
                   </div>
@@ -43,7 +44,8 @@
                <div class="panel panel-default ">
                   <div class="text-center">
                      <div class="panel-body">
-                        <img id="img-2" src="/anandmurti/assets/images/5kg.png">
+                        <!-- <img id="img-2" src="/anandmurti/assets/images/5kg.png"> -->
+                         <img id="img-1" src="/anandmurti/assets/images/gas_icon.png">
                         <h4>5 kg</h4>
                         <p class="text-center">RO + UV + TDS controller + Mineral added, 10 STAGE PURIFICATION "Aqua 
                            water purifier "
@@ -57,7 +59,8 @@
                <div class="panel panel-default">
                   <div class="text-center">
                      <div class="panel-body">
-                        <img id="img-3" src="/anandmurti/assets/images/12kg.png">
+                        <!-- <img id="img-3" src="/anandmurti/assets/images/12kg.png"> -->
+                         <img id="img-1" src="/anandmurti/assets/images/gas_icon.png">
                         <h4>12 kg</h4>
                         <p class="text-center">Anand Murti F&B Pvt. Ltd is a fast growing company extending world-class services in F&B and Retail businesses.
                            With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  Pvt. Ltd is a one stop shop for high quality , hygienic and end to end F&B and Retail Services.
@@ -68,6 +71,10 @@
             </div>
          </div>
             </div>
+         </div>
+         <div class="title-section container new-conn">
+            <h2 class="text-center">How to get New connection?</h2>
+            <p class="text-muted"><span style="font-weight: 600;">Step 1:</span> Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit.</br> <span style="font-weight: 600;">Step 2:</span> Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore </br> <span style="font-weight: 600;">Step 3:</span>optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, </br> <span style="font-weight: 600;">Step 4:</span> consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi </br> <span style="font-weight: 600;">Step 5:</span> quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
          </div>
 		 <div class="container carousel-mb">
         <div class="row">
