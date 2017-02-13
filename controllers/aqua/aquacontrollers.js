@@ -361,7 +361,7 @@ console.log($scope.setrem);
 app.controller('Addjardetailsctrl', ['$scope','$http', function($scope,$http){
 
 $scope.insertdata=function(addjardetails){
-  
+
   $scope.addjardetails = {};
 $scope.addjardetails = angular.copy(addjardetails);
 console.log($scope.addjardetails);
@@ -375,7 +375,9 @@ console.log($scope.addjardetails);
      .success(function(data) {
             console.log(data);
               $scope.msg = "data inserted successfully "
-               delete $scope.addjardetails;
+               //delete $scope.addjardetails;
+                delete $scope.addjardetails;
+                        $scope.addjardetailsform.$setPristine();
                       //$scope.addaaquaform.$setPristine();
             
 
@@ -449,6 +451,8 @@ console.log(jar_id);
                         delete $scope.oldjar;
                         $scope.iseditid='';
                         $scope.$watch();
+
+                        
                      });
            
            }

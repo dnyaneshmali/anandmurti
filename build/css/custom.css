@@ -4032,4 +4032,5 @@ color: #f36998;}
     overflow-x: scroll;
 }
 
-
+/*validation */
+.val-style{color:red; margin-left: 45px;}
