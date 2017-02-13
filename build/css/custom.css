@@ -3994,7 +3994,7 @@ ul.notifications {
     font-style: normal;
     float: right;
 }
-.addgo-cust h1,.adda-cust h1,.adda-prod h1,.adda-order h1,.addgo-prod h1,.addjar-dtls h1{
+.addgo-cust h1,.adda-cust h1,.adda-prod h1,.adda-order h1,.addgo-prod h1,.addjar-dtls h1,.addnew-conn h1,.addjar-dtls h1,.addveh-dtls h1{
   text-align: center;
   border: 0;
   border-bottom: 1px solid #e5e5e5;
@@ -4031,3 +4031,5 @@ color: #f36998;}
 .connectionlist .x_panel {
     overflow-x: scroll;
 }
+
+
