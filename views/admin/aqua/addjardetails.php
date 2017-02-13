@@ -30,7 +30,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-3">
-                          <button type="submit"  class="btn btn-primary">Cancel</button>
+                          <button type="submit" ng-click="resetForm(addjardetailsform)" class="btn btn-primary">Reset</button>
                           <button ng-click="insertdata(addjardetails)" ng-disabled="!addjardetailsform.$valid" id="send" type="submit" class="btn btn-success">save</button>
                         </div>
                       </div>
