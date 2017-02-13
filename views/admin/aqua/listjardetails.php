@@ -62,10 +62,11 @@
                            <p style="color:red;" ng-show="!subForm.jar_price.$error.required && subForm.jar_price.$invalid"> accept digits only.</p>
                           </td>
 
-
+                   
                            <td ng-if="isedit(listjar.jar_id)">
+                                   
 
-                              <button class="btn btn-success" ng-click="updatejardetails(listjar,$index);"><i class="fa fa-check"></i></button> 
+                              <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updatejardetails(listjar,$index);"><i class="fa fa-check"></i></button> 
 
                               <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
 
