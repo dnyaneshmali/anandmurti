@@ -41,7 +41,7 @@
 
 
                       <tbody>
-                        <tr ng-repeat="listjar in data | filter:clisearch" ng-form="subForm">
+                        <tr ng-repeat="listjar in data | filter:clisearch"  ng-form="subForm">
                           <td ng-if="!isedit(listjar.jar_id)">{{listjar.jar_type}}</td>
                           <td ng-if="!isedit(listjar.jar_id)">{{listjar.jar_price}}</td>
 
@@ -50,24 +50,22 @@
                           <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(listjar.jar_id,listjar);"><i class="fa fa-edit"></i></button>
                         </td>
 
-                         <ng-form name="listjardetailsform" novalidate>
+                         <ng-form name="listjardetailsform">
                             <td ng-if="isedit(listjar.jar_id)">
-                          <input type="text" ng-value="listjar.jar_type" ng-model="jar_type" name="jar_type" style="width:auto;" required>
-                        <p style="color:red;" ng-show="subForm.jar_type.$error.required">required</p>
-                       
+                          <input type="text" ng-value="listjar.jar_type" ng-model="listjar.jar_type" name="jar_type" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.jar_type.$error.required"> jartype is required.</p>
                           </td>
                           
-                            <td ng-if="isedit(listjar.jar_id)"> 
-                             
+                            <td ng-if="isedit(listjar.jar_id)">
                           <input type="text" ng-value="listjar.jar_price" ng-pattern="/^\d+$/" ng-model="listjar.jar_price" id="jar_price"  class="form-control" name="jar_price" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listjardetailsform.listjar.jar_price.$error.required"> jarprice is required.</p>
-                          
+                          <p style="color:red;" ng-show="subForm.jar_price.$error.required"> jarprice is required.</p>
+                           <p style="color:red;" ng-show="!subForm.jar_price.$error.required && subForm.jar_price.$invalid"> accept digits only.</p>
                           </td>
-                          
+
 
                            <td ng-if="isedit(listjar.jar_id)">
 
-                              <button class="btn btn-success" ng-disabled="subForm.$invalid" ng-click="updatejardetails(listjar,$index);"><i class="fa fa-check"></i></button> 
+                              <button class="btn btn-success" ng-click="updatejardetails(listjar,$index);"><i class="fa fa-check"></i></button> 
 
                               <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
 
