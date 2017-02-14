@@ -241,6 +241,38 @@ $http.get("../../models/getdistinctconnection.php")
         console.log($scope.connectiondetails);
     });
 
+    $http.get("../../models/getuserconnections.php")
+    .success(function(data){
+        $scope.userconnections=data
+        console.log($scope.userconnections);
+    });
+
+
+    $scope.insertdata=function(refilrefil){
+  $scope.refil = {};
+$scope.refil = angular.copy(refil);
+console.log($scope.refil);
+   $http({
+          method  : 'POST',
+          url     : '../../models/insertrefildetails.php',
+          data    : $scope.refil, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+              $scope.msg = "data inserted successfully "
+                delete $scope.gogascustomers;
+                $scope.addgogasform.$setPristine();
+            
+
+          });
+
+}
+
+
+
+
   }]);
 
 app.controller('Listrefilcylinderctrl', ['$scope','$http', function($scope,$http) {

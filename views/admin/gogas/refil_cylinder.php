@@ -23,11 +23,17 @@
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
-                          <input type="text" ng-model="refil.connection" id="connection" class="form-control" name="connection" required />
+                              <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
+                          <select class="form-control" ng-model="Connection.type" name="type"  ng-required="true">
+                            <option ng-repeat="uconn in userconnections" ng-if="uconn.connection_type==1" value="{{uconn.connection_type}}">2 Kg</option>
+                            <option ng-repeat="uconn in userconnections" ng-if="uconn.connection_type==2" value="{{uconn.connection_type}}">5 Kg</option>
+                            <option ng-repeat="uconn in userconnections" ng-if="uconn.connection_type==3" value="{{uconn.connection_type}}">12 Kg</option>
+                          </select>
                         </div>
                         </div>
-                       </div> 
+                      </div>
+
+
                      <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_cylinder_deposit">Refil Payment Details<span class="required">*</span>
                         </label>
@@ -46,7 +52,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" ng-model="refil.connection_depreciation" id="    connection_depreciation" class="form-control" name="connection_depreciation" required />
+                          <input type="text" ng-model="refil.amount" id="amount" class="form-control" name="amount" required />
                         </div>
                           <p class="val-style" ng-show="refilform.connection_depreciation.$invalid && !connectionform.connection_depreciation.$pristine" class="help-block"> required</p>
                         </div>
