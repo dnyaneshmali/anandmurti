@@ -225,7 +225,7 @@ $scope.isedit=function(id){
 }]);
 
 app.controller('Refilcylinderctrl', ['$scope','$http', function($scope,$http) {
-$http.get("../../models/getnewconnections.php")
+$http.get("../../models/getdistinctconnection.php")
     .success(function(data){
         $scope.connectiondetails=data
         console.log($scope.connectiondetails);
