@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 13, 2017 at 02:27 PM
+-- Generation Time: Feb 14, 2017 at 11:59 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -67,8 +67,7 @@ CREATE TABLE `tbl_aqua_customers` (
 --
 
 INSERT INTO `tbl_aqua_customers` (`acustomer_id`, `acustomer_name`, `acustomer_email`, `acustomer_number`, `acustomer_address`, `acustomer_type`, `acustomer_date`) VALUES
-(1, 'John', 'c1@gmai.com', '234234242234', 'Pune', 'temporary', '2017-02-08 11:34:29'),
-(3, 'Pitter', 'sdf@sdfdsf.fghfhgsdfsdf', '452424234234', 'Pune', 'temporary', '2017-02-10 07:06:07'),
+(1, 'John', 'c1@gmai.com', '6777777777', 'Pune', 'temporary', '2017-02-08 11:34:29'),
 (4, 'Charly', 'charl@gmail.com', '3434344343', 'Pune', 'Regular', '2017-02-10 08:00:33');
 
 -- --------------------------------------------------------
@@ -214,7 +213,7 @@ INSERT INTO `tbl_jar_details` (`jar_id`, `jar_type`, `jar_price`, `jar_date`) VA
 
 CREATE TABLE `tbl_new_connection` (
   `connection_id` int(11) NOT NULL,
-  `gcustomer_name` varchar(100) NOT NULL,
+  `connection_type` varchar(50) NOT NULL,
   `connection_cylinder_deposit` varchar(50) NOT NULL,
   `connection_depreciation` varchar(50) NOT NULL,
   `connection_hotplate` varchar(50) NOT NULL,
@@ -223,16 +222,21 @@ CREATE TABLE `tbl_new_connection` (
   `connection_tube` varchar(50) NOT NULL,
   `connection_lighter` varchar(50) NOT NULL,
   `connection_other` varchar(100) NOT NULL,
-  `connection_date` datetime NOT NULL
+  `connection_date` datetime NOT NULL,
+  `gcustomer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_new_connection`
 --
 
-INSERT INTO `tbl_new_connection` (`connection_id`, `gcustomer_name`, `connection_cylinder_deposit`, `connection_depreciation`, `connection_hotplate`, `connection_passbook`, `connection_stamp`, `connection_tube`, `connection_lighter`, `connection_other`, `connection_date`) VALUES
-(1, 'Matt', '12', 'Test', 'Yes', '', 'Stamp', 'Yes', '', 'test', '2017-02-10 09:26:09'),
-(2, 'Matt', '11', 'yes', 'Yes', 'No', '1', 'Yes', 'No', 'test2', '2017-02-10 12:15:32');
+INSERT INTO `tbl_new_connection` (`connection_id`, `connection_type`, `connection_cylinder_deposit`, `connection_depreciation`, `connection_hotplate`, `connection_passbook`, `connection_stamp`, `connection_tube`, `connection_lighter`, `connection_other`, `connection_date`, `gcustomer_id`) VALUES
+(1, '1', '12', 'Test', 'Yes', '', 'Stamp', 'Yes', '', 'test', '2017-02-10 09:26:09', 1),
+(2, '3', '11', 'yes', 'Yes', 'No', '1', 'Yes', 'No', 'test2', '2017-02-10 12:15:32', 1),
+(3, '2', '45', 'test', 'Yes', 'Yes', 'tt', 'Yes', 'Yes', 'tttttt', '2017-02-14 07:53:13', 2),
+(4, '1', '34', 'depreciation', 'Yes', 'Yes', 'test', 'Yes', 'Yes', 'testtest', '2017-02-14 11:10:11', 2),
+(5, '3', '23', 'dpreciation', 'Yes', 'Yes', 'test', 'Yes', 'Yes', 'other', '2017-02-14 11:14:08', 2),
+(6, '2', '21', 'depreciation', 'Yes', 'Yes', 'stamp', 'Yes', 'Yes', 'other notes', '2017-02-14 11:15:49', 2);
 
 -- --------------------------------------------------------
 
@@ -246,7 +250,6 @@ CREATE TABLE `tbl_refil_details` (
   `refil_payment_details` varchar(100) NOT NULL,
   `refil_amount` int(10) NOT NULL,
   `refil_date` datetime NOT NULL,
-  `connection_id` int(11) NOT NULL,
   `gcustomer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -311,14 +314,15 @@ ALTER TABLE `tbl_jar_details`
 -- Indexes for table `tbl_new_connection`
 --
 ALTER TABLE `tbl_new_connection`
-  ADD PRIMARY KEY (`connection_id`);
+  ADD PRIMARY KEY (`connection_id`),
+  ADD KEY `gcustomer_id` (`gcustomer_id`);
 
 --
 -- Indexes for table `tbl_refil_details`
 --
 ALTER TABLE `tbl_refil_details`
   ADD PRIMARY KEY (`refil_id`),
-  ADD KEY `connection_id` (`connection_id`,`gcustomer_id`);
+  ADD KEY `connection_id` (`gcustomer_id`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -343,7 +347,7 @@ ALTER TABLE `tbl_aqua_orders`
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
 ALTER TABLE `tbl_avehicle_details`
-  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
+  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
@@ -368,7 +372,7 @@ ALTER TABLE `tbl_jar_details`
 -- AUTO_INCREMENT for table `tbl_new_connection`
 --
 ALTER TABLE `tbl_new_connection`
-  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_refil_details`
 --

@@ -87,10 +87,9 @@
                           </td>
 
                            <td ng-if="isedit(Connection.connection_id)">
-                          YES: <input type="radio" ng-model="Connection.connection_depreciation" name=" connection_depreciation" style="width:auto;" value="Yes">
-                          NO: <input type="radio" ng-model="Connection. connection_depreciation" name="connection_depreciation" style="width:auto;" value="No">
+                          <input type="text" ng-value="Connection.connection_depreciation" ng-model="Connection.connection_depreciation" name="connection_depreciation" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.connection_depreciation.$error.required"> required field.</p>
                           </td>
-
 
                         <td ng-if="isedit(Connection.connection_id)">
                           YES: <input type="radio" ng-model="Connection.connection_hotplate" name="connection_hotplate" style="width:auto;" value="Yes">
@@ -124,7 +123,8 @@
 
 
 
-                      <td ng-if="isedit(Connection.connection_id)"><button class="btn btn-success" ng-click="updategasconnection(Connection);"><i class="fa fa-check"></i></button> 
+                      <td ng-if="isedit(Connection.connection_id)">
+                        <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updategasconnection(Connection);"><i class="fa fa-check"></i></button> 
 
                               <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(Connection.connection_id);"><i class="fa fa-close"></i></button>
 
