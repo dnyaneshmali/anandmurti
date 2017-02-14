@@ -100,9 +100,59 @@ console.log(gcustomer_id);
 
 app.controller('Addgogasproductctrl', ['$scope','$http', function($scope,$http) {
 
+$scope.insertdata=function(gogasproduct){
+  $scope.gogasproduct = {};
+$scope.gogasproduct = angular.copy(gogasproduct);
+console.log($scope.gogasproduct);
+   $http({
+          method  : 'POST',
+          url     : '../../models/insertgasproduct.php',
+          data    : $scope.gogasproduct, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+              $scope.msg = "data inserted successfully "
+                //delete $scope.gogasproduct;
+               // $scope.connectionform.$setPristine();
+            
+
+          });
+
+}
+
   }]);
 
 app.controller('Listgogasproductctrl', ['$scope','$http', function($scope,$http) {
+
+$http.get("../../models/getgasproducts.php")
+    .success(function(data){
+        $scope.gasproducts=data
+        console.log($scope.gasproducts);
+    });
+
+    $scope.deleteproduct=function(product_id,index){
+    alert('in delete function');
+
+console.log(product_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deletegproduct.php',
+          data    : {'product_id': product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+                        console.log(data);
+                        //$scope.data.splice(index, 1);
+                       // $scope.$watch();
+            
+            
+
+          });
+}
+
 
   }]);
 
@@ -143,24 +193,6 @@ console.log($scope.Connection);
           });
 
 }
-
-/*
-      $scope.customers = ["Lord of the Rings",
-                        "Drive",
-                        "Science of Sleep",
-                        "Back to the Future",
-                        "Oldboy"];
-      $scope.updatecustomers = function(typed){
-          console.log('clicked');
-            $scope.customers = ["Lord of the Rings",
-                        "Drive",
-                        "Science of Sleep",
-                        "Back to the Future",
-                        "Oldboy"];
-      }*/
-
-
-
 
 
 
@@ -248,7 +280,7 @@ $http.get("../../models/getdistinctconnection.php")
     });
 
 
-    $scope.insertdata=function(refilrefil){
+    $scope.insertdata=function(refil){
   $scope.refil = {};
 $scope.refil = angular.copy(refil);
 console.log($scope.refil);
@@ -263,19 +295,44 @@ console.log($scope.refil);
             console.log(data);
               $scope.msg = "data inserted successfully "
                 delete $scope.gogascustomers;
-                $scope.addgogasform.$setPristine();
+                //$scope.addgogasform.$setPristine();
             
 
           });
 
 }
-
-
-
-
   }]);
 
 app.controller('Listrefilcylinderctrl', ['$scope','$http', function($scope,$http) {
+
+ $http.get("../../models/getrefildetails.php")
+    .success(function(data){
+        $scope.refildata=data
+        console.log($scope.refildata);
+    });
+
+
+    $scope.deleterefil=function(refil_id,index){
+    alert('in delete function');
+
+console.log(refil_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deleterefil.php',
+          data    : {'refil_id': refil_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+                        console.log(data);
+                        //$scope.data.splice(index, 1);
+                       // $scope.$watch();
+            
+            
+
+          });
+}
+
 
 
   }]);

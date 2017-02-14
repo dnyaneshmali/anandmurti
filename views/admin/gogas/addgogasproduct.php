@@ -14,7 +14,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-dropbox"></i></span>
-                          <input type="text" placeholder="Product Name" ng-model="addgogasproduct.product_name" id="product_name" class="form-control" name="product_name" required />
+                          <input type="text" placeholder="Product Name" ng-model="gogasproduct.product_name" id="product_name" class="form-control" name="product_name" required />
                           </div>
                         </div>
                       </div>
@@ -25,7 +25,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Product Price" ng-model="addgogasproduct.product_prize" id="product_prize" class="form-control" name="product_prize" required />
+                          <input type="text" placeholder="Product Price" ng-model="gogasproduct.product_prize" id="product_prize" class="form-control" name="product_prize" required />
                          </div>
                         </div>
                       </div>
@@ -35,7 +35,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
-                          <select class="form-control" ng-model="addgogasproduct.Product_category" name="Product_category" >
+                          <select class="form-control" ng-model="gogasproduct.Product_category" name="Product_category" >
                             <option value="" selected>Product category</option>
                             <option value="cylinder">cylinder</option>
                             <option value="cooktop">cooktop</option>
@@ -52,7 +52,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-building"></i></span>
-                          <input type="text" placeholder="Product Company" ng-model="addgogasproduct.Product_company" id="Product_company" class="form-control" name="Product_company" required />
+                          <input type="text" placeholder="Product Company" ng-model="gogasproduct.Product_company" id="Product_company" class="form-control" name="Product_company" required />
                          </div>
                         </div>
                       </div>
@@ -64,7 +64,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Product Tax" ng-model="addgogasproduct.product_tax" id="product_tax" class="form-control" name="Product_tax" required />
+                          <input type="text" placeholder="Product Tax" ng-model="gogasproduct.product_tax" id="product_tax" class="form-control" name="Product_tax" required />
                           </div>
                         </div>
                       </div>
@@ -75,7 +75,7 @@
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
                           <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button ng-click="insertdata(addgogasproduct)" ng-disabled="!addgogasproductform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
+                          <button ng-click="insertdata(gogasproduct)" id="send" type="submit" class="btn btn-success">Submit</button>
 
                           {{msg}}
                         </div>

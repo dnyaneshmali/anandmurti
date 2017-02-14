@@ -40,14 +40,14 @@
 
 
                       <tbody>
-                        <tr ng-repeat="gogasproduct in data">
+                        <tr ng-repeat="gogasproduct in gasproducts">
                           <td>{{gogasproduct.product_name}}</td>
-                          <td>{{gogasproduct.product_prize}}</td>
-                          <td>{{gogasproduct.Product_category}}</td>
-                          <td>{{gogasproduct.Product_company}}</td>
+                          <td>{{gogasproduct.product_price}}</td>
+                          <td>{{gogasproduct.product_category}}</td>
+                          <td>{{gogasproduct.product_company}}</td>
                           <td>{{gogasproduct.product_tax}}</td>
                           <td>{{gogasproduct.product_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(gogasproduct.product_id);">Delete</button></td>
+                          <td><button class="btn btn-danger" ng-click="deleteproduct(gogasproduct.product_id);">Delete</button></td>
                           <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);">Edit</button></td>
                         </tr>
                       </tbody>
