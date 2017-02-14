@@ -8,6 +8,10 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <title>Anandmurti</title>
       <link  rel="stylesheet" href="assets/css/bootstrap.min.css">
+      <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+
+      <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet"> -->
+     <link href="https://fonts.googleapis.com/css?family=Raleway:300|Roboto:500" rel="stylesheet">
 	  <!--1 <link href="assets\css\bootstrap.min.css" rel="stylesheet"> -->
     <link href="<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>assets/css/font-awesome.min.css" rel="stylesheet">
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
@@ -17,8 +21,12 @@
     <!-- <link rel="stylesheet" type="text/css" href=" http://localhost/anandmurti/assets/css/owl.carousel.css" /> -->
         <!--Custom stylesheet-->
    </head>
-   <body class="body-wrapper" class="modal-open">
-      <div id="header-wrapper">
+   <body class="body-wrapper">
+      
+   
+
+
+    <div id="header-wrapper">
          <div class= "navbar navbar-dual navbar-inverse navbar-fixed-top">
             <!-- fixed navbar -->
             <div class="container">
@@ -45,4 +53,3 @@
          </div>
          <!-- end of fixed navbar -->
       </div>
-   
