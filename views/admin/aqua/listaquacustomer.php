@@ -42,7 +42,7 @@
                           <th>customer Address</th>
                           <th>customer Type</th>
                         <!--    <th>customer Role</th> -->
-                          <th>Start Date</th>
+                         <!--  <th>Start Date</th> -->
                           <th colspan="2">Action</th>
                         </tr>
                       </thead>
@@ -56,7 +56,7 @@
                           <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_address}}</td>
                           <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_type}}</td>
                           <!-- <td>{{aquacustomer.customer_role}}</td> -->
-                          <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_date}}</td>
+                          <!-- <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_date}}</td> -->
                           <td ng-if="!isedit(aquacustomer.acustomer_id)">
                             <button class="btn btn-danger" ng-click="deleteuser(aquacustomer.acustomer_id,$index);"><i class="fa fa-trash"></i></button>
                           <button class="btn btn-warning" value="{{btnName}}"  ng-click="setedit(aquacustomer.acustomer_id,aquacustomer);"><i class="fa fa-edit"></i></button>
@@ -90,7 +90,7 @@
 
 
 
-                              <td ng-if="isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_date}}</td>
+                             <!--  <td ng-if="isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_date}}</td> -->
 
 
 
