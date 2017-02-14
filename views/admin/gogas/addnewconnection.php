@@ -3,10 +3,12 @@
 <h1>Add Gogas Connection</h1>
 <div class="connectionform" ng-controller="Addnewconnectionctrl">
 <form name="connectionform" class="form-horizontal form-label-left" nonvalidate>
+<!--
 <datalist  id="gcustomerlist">
     <option ng-repeat="gclist in gcustomerdata" value="{{gclist.gcustomer_name}}">{{gclist.gcustomer_name}}</option>
 </datalist>
-                    <div class="item form-group">
+-->
+                    <!-- <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
@@ -16,7 +18,21 @@
                         </div>
                         <p class="val-style" ng-show="connectionform.customer.$invalid && !connectionform.customer.$pristine" class="help-block">required</p>
                       </div>
-                       </div> 
+                       </div>  -->
+                       
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select Customer <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
+                          <select class="form-control" ng-model="Connection.customer" name="customer"  ng-required="true">
+                            <option ng-repeat="gclist in gcustomerdata" value="{{gclist.gcustomer_id}}">{{gclist.gcustomer_name}}</option>
+                          </select>
+                        </div>
+                        </div>
+                      </div>
+
                       
                      <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_cylinder_deposit">Connection Cylinder Deposite<span class="required">*</span>
@@ -49,7 +65,7 @@
                           
 
                               <label>
-                              <input type="radio" checked="" ng-model="Connection.connection_hotplate" value="Yes" id="Yes" name="connection_hotplate">yes </label>&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+                              <input type="radio" checked="" ng-model="Connection.connection_hotplate" value="Yes" id="Yes" name="connection_hotplate">yes </label>
                               <label>
                               <input type="radio" ng-model="Connection.connection_hotplate" value="No" id="No" name="connection_hotplate">No </label>
                            
@@ -63,7 +79,7 @@
                             <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
                              
                               <label>
-                              <input type="radio" checked="" ng-model="Connection.connection_passbook" value="Yes" id="Yes" name="connection_passbook">yes </label> &nbsp&nbsp&nbsp&nbsp&nbsp
+                              <input type="radio" checked="" ng-model="Connection.connection_passbook" value="Yes" id="Yes" name="connection_passbook">yes </label>
                               <label>
                               <input type="radio" ng-model="Connection.connection_passbook" value="No" id="No" name="connection_passbook">No </label>
                             </div>
@@ -88,7 +104,7 @@
                             <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
                         
                               <label>
-                              <input type="radio" checked="" ng-model="Connection.connection_tube" value="Yes" id="Yes" name="connection_tube">yes </label>&nbsp&nbsp&nbsp&nbsp&nbsp
+                              <input type="radio" checked="" ng-model="Connection.connection_tube" value="Yes" id="Yes" name="connection_tube">yes </label>
                               <label>
                               <input type="radio" ng-model="Connection.connection_tube" value="No" id="No" name="connection_tube">No </label>
                            
@@ -101,7 +117,7 @@
                             <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
                               <div class="input-group">
                               <label>
-                              <input type="radio" checked="" ng-model="Connection.connection_lighter" value="Yes" id="Yes" name=" connection_lighter">yes </label>&nbsp&nbsp&nbsp&nbsp&nbsp
+                              <input type="radio" checked="" ng-model="Connection.connection_lighter" value="Yes" id="Yes" name=" connection_lighter">yes </label>
                               <label>
                               <input type="radio" ng-model="Connection.connection_lighter" value="No" id="No" name="connection_lighter">No </label>
                             </div>
