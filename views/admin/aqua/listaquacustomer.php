@@ -49,7 +49,7 @@
 
 
                       <tbody>
-                        <tr ng-repeat="aquacustomer in data | filter:clisearch">
+                        <tr ng-repeat="aquacustomer in data | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_name}}</td>
                           <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_email}}</td>
                           <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_number}}</td>
@@ -65,25 +65,29 @@
                           <ng-form name="listaquacustomerform">
 
                              <td ng-if="isedit(aquacustomer.acustomer_id)">
-                          <input type="text" ng-value="aquacustomer.acustomer_name" ng-model="aquacustomer.acustomer_name" name="acustomer_name" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listaquacustomerform.acustomer_name.$invalid && !listaquacustomerform.acustomer_name.$pristine" class="help-block"> fullname is required.</p>
-                          </td>
+                          <input type="text" class="form-control"ng-value="aquacustomer.acustomer_name" ng-model="aquacustomer.acustomer_name" name="acustomer_name" style="width:auto;" required>
+                           <p style="color:red;" ng-show="subForm.acustomer_name.$error.required"> Name is required.</p>
+
+
+
 
                              <td ng-if="isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_email}}</td>
 
                             <td ng-if="isedit(aquacustomer.acustomer_id)">
-                          <input type="text" ng-value="aquacustomer.acustomer_number" ng-model="aquacustomer.acustomer_number" name="acustomer_number" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listaquacustomerform.acustomer_number.$invalid && !listaquacustomerform.acustomer_number.$pristine" class="help-block"> fullname is required.</p>
+                          <input type="text" ng-value="aquacustomer.acustomer_number" ng-pattern="/^[0-9]{10}$/" ng-model="aquacustomer.acustomer_number" name="acustomer_number" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.acustomer_number.$error.required"> Number is required.</p>
+                           <p style="color:red;" ng-show="!subForm.acustomer_number.$error.required && subForm.acustomer_number.$invalid"> accept 10 digits only.</p>
                           </td>
 
                           <td ng-if="isedit(aquacustomer.acustomer_id)">
                           <input type="text" ng-value="aquacustomer.acustomer_address" ng-model="aquacustomer.acustomer_address" name="acustomer_address" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listaquacustomerform.acustomer_address.$invalid && !listaquacustomerform.acustomer_address.$pristine" class="help-block"> fullname is required.</p>
+                           <p style="color:red;" ng-show="subForm.acustomer_address.$error.required"> address is required.</p>
                           </td>
                            
                            <td ng-if="isedit(aquacustomer.acustomer_id)">
                           <input type="text" ng-value="aquacustomer.acustomer_type" ng-model="aquacustomer.acustomer_type" name=" acustomer_type" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listaquacustomerform.acustomer_type.$invalid && !listaquacustomerform.acustomer_type.$pristine" class="help-block"> fullname is required.</p>
+                          <p style="color:red;" ng-show="subForm.acustomer_type.$error.required">Type
+                              is required.</p>
                           </td>
                            
 
@@ -100,7 +104,7 @@
 
                              <td ng-if="isedit(aquacustomer.acustomer_id)">
 
-                              <button class="btn btn-success" ng-click="updateaquacustomer(aquacustomer,$index);"><i class="fa fa-check"></i></button> 
+                              <button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updateaquacustomer(aquacustomer,$index);"><i class="fa fa-check"></i></button> 
 
                               <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
 
