@@ -50,7 +50,7 @@
 
 
                       <tbody>
-                        <tr ng-repeat="aquaorder in data | filter:clisearch">
+                        <tr ng-repeat="aquaorder in data | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.customer_name}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_address}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_quantity}}</td>
@@ -72,31 +72,34 @@
                                  
                                 <ng-form name="listordertailsform">
                                <td ng-if="isedit(aquaorder.order_id)">
-                          <input type="text" ng-value="aquaorder.customer_name" ng-model="aquaorder.customer_name" name="customer_name" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listordertailsform.customer_name.$invalid && !listordertailsform.customer_name.$pristine" class="help-block">  is required.</p>
+                          <input type="text" class="form-control" ng-value="aquaorder.customer_name" ng-model="aquaorder.customer_name" name="customer_name" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.customer_name.$error.required"> Name is required.</p>
+
                           </td>
 
                             <td ng-if="isedit(aquaorder.order_id)">
-                          <input type="text" ng-value="aquaorder.order_delivery_address" ng-model="aquaorder.order_delivery_address" name="order_delivery_address" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listordertailsform.order_delivery_address.$invalid && !listordertailsform.order_delivery_address.$pristine" class="help-block">  is required.</p>
+                          <input type="text" ng-value="aquaorder.order_delivery_address" ng-model="aquaorder.order_delivery_address" class="form-control" name="order_delivery_address" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.order_delivery_address.$error.required"> Destination Address is required.</p>
+
                           </td>
 
                          
                                <td ng-if="isedit(aquaorder.order_id)">
-                          <input type="text" ng-value="aquaorder.order_quantity" ng-model="aquaorder. order_quantity" name="order_quantity" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listordertailsform.order_quantity.$invalid && !listordertailsform.order_quantity.$pristine" class="help-block">  is required.</p>
+                          <input type="text" class="form-control" ng-pattern="/^\d+$/"  ng-value="aquaorder.order_quantity" ng-model="aquaorder.order_quantity" name="order_quantity" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.order_quantity.$error.required"> quantity is required.</p>
+                           <p style="color:red;" ng-show="!subForm.order_quantity.$error.required && subForm.order_quantity.$invalid"> accept digits only.</p>
                           </td>
 
                           <td ng-if="isedit(aquaorder.order_id)">
-                          <input type="text" ng-value="aquaorder.order_delivery_time" ng-model="aquaorder.order_delivery_time" name="order_delivery_time" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listordertailsform.order_delivery_time.$invalid && !listordertailsform.order_delivery_time.$pristine" class="help-block">  is required.</p>
+                          <input type="text" class="form-control" ng-value="aquaorder.order_delivery_time" ng-model="aquaorder.order_delivery_time" name="order_delivery_time" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.order_delivery_time.$error.required">time is required.</p>
                           </td>
                            
                           
 
                         <td ng-if="isedit(aquaorder.order_id)">
-                          <input type="text" ng-value="aquaorder.order_delivery_date" ng-model="aquaorder.order_delivery_date" name="order_delivery_date" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listordertailsform.order_delivery_date.$invalid && !listordertailsform.order_delivery_date.$pristine" class="help-block">  is required.</p>
+                          <input type="text"  class="form-control" ng-value="aquaorder.order_delivery_date" ng-model="aquaorder.order_delivery_date" name="order_delivery_date" style="width:auto;" required>
+                         <p style="color:red;" ng-show="subForm.order_delivery_date.$error.required">time is required.</p>
                           </td>
 
                           <td ng-if="isedit(aquaorder.order_id)">
@@ -105,7 +108,7 @@
                           </td>
                              <td ng-if="isedit(aquaorder.order_id)">
 
-                              <button class="btn btn-success" ng-click="updateaquaorder(aquaorder,$index);"><i class="fa fa-check"></i></button> 
+                              <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updateaquaorder(aquaorder,$index);"><i class="fa fa-check"></i></button> 
 
                               <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
 
