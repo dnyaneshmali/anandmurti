@@ -42,7 +42,7 @@
 
 
                       <tbody>
-                        <tr ng-repeat="listvehicle in data | filter:clisearch">
+                        <tr ng-repeat="listvehicle in data | filter:clisearch" ng-form="subForm">
 
                           <td ng-if="!isedit(listvehicle.vehicle_id)">{{listvehicle.vehicle_owner_name}}</td>
                           <td ng-if="!isedit(listvehicle.vehicle_id)" >{{listvehicle.vehicle_number}}</td>
@@ -54,25 +54,26 @@
                             </td>
                               <ng-form name="listvehicleform">
                                <td ng-if="isedit(listvehicle.vehicle_id)">
-                          <input type="text" ng-value="listvehicle.jar_type" ng-model="listvehicle.vehicle_owner_name" name="vehicle_owner_name" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listvehicleform.vehicle_owner_name.$invalid && !listvehicleform.vehicle_owner_name.$pristine" class="help-block">  is required.</p>
+                          <input type="text" class="form-control" ng-value="listvehicle.jar_type" ng-model="listvehicle.vehicle_owner_name" name="vehicle_owner_name" style="width:auto;" required>
+                        <p style="color:red;" ng-show="subForm.vehicle_owner_name.$error.required"> Name is required.</p>
                           </td>
                           
                             <td ng-if="isedit(listvehicle.vehicle_id)">
-                          <input type="text" ng-value="listvehicle.vehicle_number" ng-model="listvehicle.vehicle_number" name="vehicle_number" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listvehicleform.vehicle_number.$invalid && !listvehicleform.vehicle_number.$pristine" class="help-block">  is required.</p>
+                          <input type="text" ng-value="listvehicle.vehicle_number" ng-model="listvehicle.vehicle_number" class="form-control" name="vehicle_number" style="width:auto;" required>
+                           <p style="color:red;" ng-show="subForm.vehicle_number.$error.required"> Name is required.</p>
                           </td>
 
                           <td ng-if="isedit(listvehicle.vehicle_id)">
-                          <input type="text" ng-value="listvehicle.vehicle_contact_number" ng-model="listvehicle.vehicle_contact_number" name="vehicle_contact_number" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listvehicleform.vehicle_contact_number.$invalid && !listvehicleform.vehicle_contact_number.$pristine" class="help-block">  is required.</p>
+                          <input type="text" class="form-control" ng-pattern="/^[0-9]{10}$/"  ng-value="listvehicle.vehicle_contact_number" ng-model="listvehicle.vehicle_contact_number" name="vehicle_contact_number" style="width:auto;" required>
+                         <p style="color:red;" ng-show="subForm.vehicle_contact_number.$error.required"> Phone no is required.</p>
+                           <p style="color:red;" ng-show="!subForm.vehicle_contact_number.$error.required && subForm.vehicle_contact_number.$invalid"> accept 10 digits only.</p>
                           </td>
                           
 
                           
                            <td ng-if="isedit(listvehicle.vehicle_id)">
 
-                              <button class="btn btn-danger" ng-click="updatevehicle(listvehicle,$index);">Update</button> 
+                              <button class="btn btn-danger" ng-disabled="!subForm.$valid" ng-click="updatevehicle(listvehicle,$index);">Update</button> 
 
                               <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button>
 
