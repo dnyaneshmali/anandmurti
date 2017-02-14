@@ -71,7 +71,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
+                          <button type="submit" ng-click="reset()" class="btn btn-primary">Cancel</button>
                           <button ng-click="insertdata(addaquaproduct)" ng-disabled="!addaquaproductform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
 
                           {{msg}}

@@ -1,4 +1,4 @@
-/**
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      /**
  * Created by User on 10/19/14.
  */
 
@@ -13,8 +13,14 @@ app.controller('Aquadashboardctrl', ['$scope','$http', function($scope,$http) {
 
 
 app.controller('Addaquactrl', ['$scope','$http', function($scope,$http) {
+  $scope.reset = function() {
+  delete $scope.aquacustomers;
+  $scope.addaaquaform.$setPristine();
+}
+
 
 $scope.insertdata=function(aquacustomers){
+
   $scope.aquacustomers = {};
 
 $scope.aquacustomers = angular.copy(aquacustomers);
@@ -110,6 +116,10 @@ console.log(acustomer_id);
 }]);
 
 app.controller('Addaquaproductctrl', ['$scope','$http', function($scope,$http) {
+   $scope.reset = function() {
+  delete $scope.addaquaproduct;
+  $scope.addaquaproductform.$setPristine();
+}
 
 $scope.insertdata=function(addaquaproduct){
   $scope.addaquaproduct = {};
@@ -166,6 +176,10 @@ console.log(product_id);
 }]);
 
 app.controller('Addaquaorderctrl', ['$scope','$http', function($scope,$http) {
+   $scope.reset = function() {
+  delete $scope.addaquaorder;
+  $scope.addaquorderform.$setPristine();
+}
   $http.get("../../models/getaquacustomer.php")
     .success(function(data){
         $scope.customerdata=data
@@ -462,6 +476,11 @@ console.log(jar_id);
 }]);
 
 app.controller('Addvehiclectrl', ['$scope','$http', function($scope,$http){
+  $scope.reset = function() {
+  delete $scope.vdetails;
+  $scope.addvehicleform.$setPristine();
+}
+
 
 $scope.insertdata=function(vdetails){
   $scope.vdetails = {};
