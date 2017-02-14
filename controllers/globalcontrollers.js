@@ -87,7 +87,7 @@ app.controller('Addadminctrl', ['$scope', '$http', '$window', '$localStorage', f
  }]);
 
 
-app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
+app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', '$filter', function($scope, $http, $window, $localStorage, $filter) {
 
     $scope.iseditid='';
     $scope.oldadmin='';
@@ -135,13 +135,20 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldadmin){
+              if($scope.oldadmin){
+                var index1 = getIndexOf($scope.data, $scope.iseditid, "admin_id");
+                $scope.data[index1]=angular.copy($scope.oldadmin);
+                delete $scope.oldadmin;
+              }
               $scope.iseditid=id;
               $scope.oldadmin=angular.copy(oldadmin);
               $scope.$watch();
             }
             $scope.unsetedit=function(id){
               $scope.iseditid='';
+              console.log($scope.oldadmin);
               $scope.data[id]=angular.copy($scope.oldadmin);
+              delete $scope.oldadmin;
               $scope.$watch();
             }
             $scope.initval = function (admin) {
@@ -166,6 +173,18 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', f
                      });
            
            }
+
+
+           function getIndexOf(arr, val, prop) {
+              var l = arr.length,
+                k = 0;
+              for (k = 0; k < l; k = k + 1) {
+                if (arr[k][prop] === val) {
+                  return k;
+                }
+              }
+              return false;
+            }
 
 }]);
 

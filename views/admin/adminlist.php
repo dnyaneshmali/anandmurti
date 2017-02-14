@@ -61,7 +61,7 @@
                           
                           <td ng-if="!isedit(admin.admin_id)">
                               <a  data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);"><i class="fa fa-trash"></i></button></a>
-                               <a  data-toggle="tooltip" title="Edit"><button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id);"><i class="fa fa-edit"></i></button></a>
+                               <a  data-toggle="tooltip" title="Edit"><button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id, admin);"><i class="fa fa-edit"></i></button></a>
 
                             <!--   <button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button> 
                               <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id, admin);">Edit</button> -->
@@ -88,7 +88,7 @@
 
                           <td ng-if="isedit(admin.admin_id)"> <a  data-toggle="tooltip" title="Update"><button class="btn btn-success" ng-click="updateuser(admin);"><i class="fa fa-check"></i></button></a>
 
-                             <a  data-toggle="tooltip" title="Cancle"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(admin.admin_id);"><i class="fa fa-close"></i></button></a>
+                             <a  data-toggle="tooltip" title="Cancle"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
 
                          <!--  <td ng-if="isedit(admin.admin_id)"> -->
 

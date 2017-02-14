@@ -52,6 +52,19 @@
 
                          <ng-form name="listjardetailsform">
                             <td ng-if="isedit(listjar.jar_id)">
+
+
+                            <!-- code by me -->
+                          <select class="form-control" ng-model="listjar.jar_type" name="jar_type">
+                            <option value="" ng-selected="listjar.jar_type == ''">Jar Type</option>
+                            <option value="normal-jar" ng-selected="listjar.jar_type == 'normal-jar'">Normal jar </option>
+                            <option value="cool-jar" ng-selected="listjar.jar_type == 'cool-jar'">Cool jar</option>
+                              <option value="only-water" ng-selected="listjar.jar_type == 'only-water'">Only water</option>
+                          </select>
+                          <!-- code by me ends -->
+
+
+
                           <input type="text" ng-value="listjar.jar_type" ng-model="listjar.jar_type" name="jar_type" style="width:auto;" required>
                           <p style="color:red;" ng-show="subForm.jar_type.$error.required"> jartype is required.</p>
                           </td>

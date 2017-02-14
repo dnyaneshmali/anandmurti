@@ -359,8 +359,9 @@ console.log($scope.setrem);
 
 
 app.controller('Addjardetailsctrl', ['$scope','$http', function($scope,$http){
- $scope.resetForm = function(form) {
-  $scope.form = {};
+ $scope.reset = function() {
+  delete $scope.addjardetails;
+  $scope.addjardetailsform.$setPristine();
 }
 
 $scope.insertdata=function(addjardetails){

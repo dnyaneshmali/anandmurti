@@ -92,7 +92,8 @@
 
 
                         <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_hotplate" ng-model="Connection.connection_hotplate" name="connection_hotplate" style="width:auto;" required>
+                          YES: <input type="radio" ng-model="Connection.connection_hotplate" name="connection_hotplate" style="width:auto;" value="Yes">
+                          NO: <input type="radio" ng-model="Connection.connection_hotplate" name="connection_hotplate" style="width:auto;" value="No">
                           <p style="color:red;" ng-show="updateconnectionform.connection_hotplate.$invalid && !updateconnectionform.connection_hotplate.$pristine" class="help-block"> fullname is required.</p>
                           </td>
 
