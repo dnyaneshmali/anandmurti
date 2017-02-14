@@ -1,5 +1,10 @@
 
 app.controller('Addgogasctrl', ['$scope','$http', function($scope,$http) {
+  $scope.reset = function() {
+  delete $scope.gogascustomers;
+  $scope.addgogasform.$setPristine();
+
+}
 
 $scope.insertdata=function(gogascustomers){
   $scope.gogascustomers = {};
@@ -105,6 +110,11 @@ app.controller('Listgogasproductctrl', ['$scope','$http', function($scope,$http)
 
 
 app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http) {
+  $scope.reset = function() {
+  delete $scope.Connection;
+  $scope.connectionform.$setPristine();
+  
+}
 
 $http.get("../../models/getgogascustomer.php")
     .success(function(data){
@@ -134,7 +144,7 @@ console.log($scope.Connection);
 
 }
 
-
+/*
       $scope.customers = ["Lord of the Rings",
                         "Drive",
                         "Science of Sleep",
@@ -147,7 +157,7 @@ console.log($scope.Connection);
                         "Science of Sleep",
                         "Back to the Future",
                         "Oldboy"];
-      }
+      }*/
 
 
 
