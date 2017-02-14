@@ -33,6 +33,21 @@
                         </div>
                       </div>
 
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Connection Type <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
+                          <select class="form-control" ng-model="Connection.c_type" name="c_type"  ng-required="true">
+                            <option value="1" selected>2 Kg</option>
+                            <option value="2">5 Kg</option>
+                            <option value="3">12 Kg</option>
+                          </select>
+                        </div>
+                        </div>
+                      </div>
+
                       
                      <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_cylinder_deposit">Connection Cylinder Deposite<span class="required">*</span>

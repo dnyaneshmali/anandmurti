@@ -12,14 +12,14 @@
                           <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
                           <select class="form-control" ng-model="Connection.customer" name="customer"  ng-required="true">
-                            <option ng-repeat="clist in connectiondetails" value="{{clist.gcustomer_id}}">{{clist.gcustomer_id}}</option>
+                            <option ng-repeat="clist in connectiondetails" value="{{clist.gcustomer_id}}">{{clist.gcustomer_name}}</option>
                           </select>
                         </div>
                         </div>
                       </div>
 
                        <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select Connection <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Connection Type <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
@@ -28,19 +28,6 @@
                         </div>
                         </div>
                        </div> 
-
-
-                    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select Cylinder <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
-                          <input type="text" ng-model="refil.cylinder" id="cylinder" class="form-control" name="cylinder"  required />
-                        </div>
-                        </div>
-                       </div> 
-                      
                      <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_cylinder_deposit">Refil Payment Details<span class="required">*</span>
                         </label>
