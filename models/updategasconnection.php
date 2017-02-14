@@ -7,7 +7,7 @@ $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 print_r($data);
 
-$query = "UPDATE  tbl_new_connection SET connection_cylinder_deposit='".$data['connection_cylinder_deposit']."', connection_depreciation='".$data['connection_depreciation']."' ,connection_hotplate='".$data['connection_hotplate']."',connection_passbook='".$data['connection_passbook']."',connection_stamp='".$data['connection_stamp']."',connection_tube='".$data['connection_tube']."',	connection_lighter='".$data['connection_lighter']."' WHERE 	connection_id='".$data['connection_id']."'";
+$query = "UPDATE tbl_new_connection SET connection_cylinder_deposit='".$data['connection_cylinder_deposit']."', connection_depreciation='".$data['connection_depreciation']."' ,connection_hotplate='".$data['connection_hotplate']."',connection_passbook='".$data['connection_passbook']."',connection_stamp='".$data['connection_stamp']."',connection_tube='".$data['connection_tube']."',	connection_lighter='".$data['connection_lighter']."' WHERE 	connection_id='".$data['connection_id']."'";
 
 
     if(!mysqli_query($connection,$query))
