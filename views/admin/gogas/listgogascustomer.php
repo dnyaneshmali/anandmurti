@@ -53,7 +53,7 @@
 
 
                       <tbody>
-                        <tr ng-repeat="gogascustomer in data | filter:clisearch">
+                        <tr ng-repeat="gogascustomer in data | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_name}}</td>
                           <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_email}}</td>
                           <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_number}}</td>
@@ -73,7 +73,7 @@
                           <ng-form name="updategogascustomer">
                                 <td ng-if="isedit(gogascustomer.gcustomer_id)">
                           <input type="text" ng-value="gogascustomer.gcustomer_name" ng-model="gogascustomer.gcustomer_name" name="gcustomer_name" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listgogascustomerform.gcustomer_name.$invalid && !listgogascustomerform.gcustomer_name.$pristine" class="help-block"> fullname is required.</p>
+                          <p style="color:red;" ng-show="subForm.gcustomer_name.$error.required"> Name is required.</p>
                           </td>
                               
 
@@ -81,26 +81,27 @@
                            <td ng-if="isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_email}}</td>
 
                            <td ng-if="isedit(gogascustomer.gcustomer_id)">
-                          <input type="text" ng-value="gogascustomer.gcustomer_number" ng-model="gogascustomer.gcustomer_number" name="gcustomer_number" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listgogascustomerform.gcustomer_number.$invalid && !listgogascustomerform.gcustomer_number.$pristine" class="help-block"> No is required.</p>
+                          <input type="text" ng-value="gogascustomer.gcustomer_number" ng-model="gogascustomer.gcustomer_number" ng-pattern="/^[0-9]{10}$/" name="gcustomer_number" style="width:auto;" required>
+                         <p style="color:red;" ng-show="subForm.gcustomer_number.$error.required"> Number is required.</p>
+                           <p style="color:red;" ng-show="!subForm.gcustomer_number.$error.required && subForm.gcustomer_number.$invalid"> accept 10 digits only.</p>
                           </td>
                             
                               <td ng-if="isedit(gogascustomer.gcustomer_id)">
                           <input type="text" ng-value="gogascustomer.gcustomer_city" ng-model="gogascustomer.gcustomer_city" name="gcustomer_city" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listgogascustomerform.gcustomer_city.$invalid && !listgogascustomerform.gcustomer_city.$pristine" class="help-block"> No is required.</p>
+                          <p style="color:red;" ng-show="subForm.gcustomer_number.$error.required"> City is required.</p>
                           </td>
 
 
                               <td ng-if="isedit(gogascustomer.gcustomer_id)">
                           <input type="text" ng-value="gogascustomer.gcustomer_landmark" ng-model="gogascustomer.gcustomer_landmark" name="gcustomer_landmark" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listgogascustomerform.gcustomer_landmark.$invalid && !listgogascustomerform.gcustomer_landmark.$pristine" class="help-block"> No is required.</p>
+                         <p style="color:red;" ng-show="subForm.gcustomer_landmark.$error.required"> required.</p>
                           </td>
                            
                            <td ng-if="isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_date}}</td>
 
                            <td ng-if="isedit(gogascustomer.gcustomer_id)">
 
-                              <button class="btn btn-success" ng-click="updategogascustomers(gogascustomer,$index);"><i class="fa fa-check"></i></button> 
+                              <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updategogascustomers(gogascustomer,$index);"><i class="fa fa-check"></i></button> 
 
                               <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
 

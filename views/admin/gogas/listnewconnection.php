@@ -52,7 +52,7 @@
 
 
                       <tbody>
-                        <tr ng-repeat="Connection in data | filter:clisearch">
+                        <tr ng-repeat="Connection in data | filter:clisearch"  ng-form="subForm">
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.gcustomer_name}}</td>
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_cylinder_deposit}}</td>
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_depreciation}}</td>
@@ -81,43 +81,45 @@
                             
 
                              <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_cylinder_deposit" ng-model="Connection.connection_cylinder_deposit" name="connection_cylinder_deposit" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_cylinder_deposit.$invalid && !updateconnectionform.connection_cylinder_deposit.$pristine" class="help-block"> fullname is required.</p>
+                          <input type="text" ng-pattern="/^\d+$/" ng-value="Connection.connection_cylinder_deposit" ng-model="Connection.connection_cylinder_deposit" name="connection_cylinder_deposit" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.connection_cylinder_deposit.$error.required"> required field.</p>
+                           <p style="color:red;" ng-show="!subForm.connection_cylinder_deposit.$error.required && subForm.connection_cylinder_deposit.$invalid"> accept digits only.</p>
                           </td>
 
-                          <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_depreciation" ng-model="Connection.connection_depreciation" name="connection_depreciation" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_depreciation.$invalid && !updateconnectionform.connection_depreciation.$pristine" class="help-block"> fullname is required.</p>
+                           <td ng-if="isedit(Connection.connection_id)">
+                          YES: <input type="radio" ng-model="Connection.connection_depreciation" name=" connection_depreciation" style="width:auto;" value="Yes">
+                          NO: <input type="radio" ng-model="Connection. connection_depreciation" name="connection_depreciation" style="width:auto;" value="No">
                           </td>
 
 
                         <td ng-if="isedit(Connection.connection_id)">
                           YES: <input type="radio" ng-model="Connection.connection_hotplate" name="connection_hotplate" style="width:auto;" value="Yes">
                           NO: <input type="radio" ng-model="Connection.connection_hotplate" name="connection_hotplate" style="width:auto;" value="No">
-                          <p style="color:red;" ng-show="updateconnectionform.connection_hotplate.$invalid && !updateconnectionform.connection_hotplate.$pristine" class="help-block"> fullname is required.</p>
                           </td>
 
 
                           <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_passbook" ng-model="Connection.connection_passbook" name="connection_passbook" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_passbook.$invalid && !updateconnectionform.connection_passbook.$pristine" class="help-block"> fullname is required.</p>
+                          YES: <input type="radio" ng-model="Connection.connection_passbook" name="connection_passbook" style="width:auto;" value="Yes">
+                          NO: <input type="radio" ng-model="Connection.connection_passbook" name="connection_passbook" style="width:auto;" value="No">
                           </td>
 
                            <td ng-if="isedit(Connection.connection_id)">
                           <input type="text" ng-value="Connection.connection_stamp" ng-model="Connection.connection_stamp" name="connection_stamp" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_stamp.$invalid && !updateconnectionform.connection_stamp.$pristine" class="help-block"> fullname is required.</p>
+                          <p style="color:red;" ng-show="subForm.connection_stamp.$error.required"> required field.</p>
                           </td>
 
 
                           <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection. connection_tube" ng-model="Connection.connection_tube" name="connection_tube" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_tube.$invalid && !updateconnectionform.connection_tube.$pristine" class="help-block"> fullname is required.</p>
+                          YES: <input type="radio" ng-model="Connection.connection_tube" name=" connection_tube" style="width:auto;" value="Yes">
+                          NO: <input type="radio" ng-model="Connection. connection_tube" name=" connection_tube" style="width:auto;" value="No">
                           </td>
 
                            <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_lighter" ng-model="Connection.connection_lighter" name="connection_lighter" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_lighter.$invalid && !updateconnectionform.connection_lighter.$pristine" class="help-block"> fullname is required.</p>
+                          YES: <input type="radio" ng-model="Connection.connection_lighter" name=" connection_lighter" style="width:auto;" value="Yes">
+                          NO: <input type="radio" ng-model="Connection. connection_lighter" name=" connection_lighter" style="width:auto;" value="No">
                           </td>
+
+
                            <td ng-if="isedit(Connection.connection_id)">{{Connection. connection_date}}</td>
 
 
