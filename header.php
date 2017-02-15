@@ -30,12 +30,16 @@
          <div class= "navbar navbar-dual navbar-inverse navbar-fixed-top">
             <!-- fixed navbar -->
             <div class="container">
-               <div class="navbar-header">
+               <div class="navbar-header row">
                   <!-- Button for smallest screens -->
-                  <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
-                  <a class="navbar-brand" href="index.html">
+                 <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+                  <a class="navbar-brand ">
                   <img src="images/am_logo.png" alt="logo" >
                   </a>
+                </div>
+                    <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                   <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
+                 </div>
                </div>
                <div class="navbar-collapse collapse">
                   <ul class="nav navbar-nav pull-right">
