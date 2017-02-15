@@ -13,6 +13,7 @@
 <?php $root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
  include($root."/config/config.php"); ?>
   <head>
+      <link href="https://fonts.googleapis.com/css?family=Lato:350,700" rel="stylesheet">
      <link  rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css">
     <script src="<?php echo base_url(); ?>/assets/js/angular.min.js"></script>
         <script src="<?php echo base_url(); ?>/controllers/LoginController.js"></script>

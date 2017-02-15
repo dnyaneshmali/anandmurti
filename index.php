@@ -21,15 +21,15 @@
                   <div class="item active">
                      <img src="images\aqua_(3).png" class="img-responsive">
                      <div class="carousel-caption hidden-xs hidden-sm">
-                        <h3>Aqua</h3>
-                        <p>Aqua water for healthy life</p>
+                       <!--  <h3>Aqua</h3>
+                        <p>Aqua water for healthy life</p> -->
                      </div>
                   </div>
                   <div class="item">
                      <img src="images\gogas_(3).png" class="img-responsive">
                      <div class="carousel-caption hidden-xs hidden-sm">
-                        <h3>Go gas </h3>
-                        <p>Lpg gas for domestic and industrial use </p>
+                        <!-- <h3>Go gas </h3>
+                        <p>Lpg gas for domestic and industrial use </p> -->
                      </div>
                   </div>
                </div>
@@ -51,7 +51,7 @@
          <div class="row">
             <div class="col-md-12">
                <h2 class="text-center">We work to make your life healthy and happy</h2>
-               <div class="underline" style="width: 65%;"></div>
+               <div class="underline" style="width: 15%;"></div>
                <p class="text-center text-muted">Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.</p>
             </div>
          </div>
@@ -60,7 +60,7 @@
    <div class="second-section">
       <div class="container panel1">
          <h2 class="text-center">Solutions that you need everyday</h2>
-          <div class="underline" style="width: 50%;"></div>
+          <div class="underline" style="width: 53%;"></div>
          <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
          <div class="row home-content-box stylish-panel">
             <div class="col-md-4 col-sm-6">
@@ -95,8 +95,7 @@
                         <img id="img-3" src="/anandmurti/assets/images/fb_icon.png">
                         <h4>Food Beverages</h4>
                         <p class="text-center">Anand Murti F&B Pvt. Ltd is a fast growing company extending world-class services in F&B and Retail businesses.
-                           With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  Pvt. Ltd is a one stop shop for high quality , hygienic and end to end F&B and Retail Services.
-                        </p>
+                           With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  
                      </div>
                   </div>
                </div>
@@ -107,7 +106,7 @@
    <div class="third-section our-features">
       <div class="container panel2">
          <h2 class="text-center">Our key Features </h2>
-          <div class="underline" style="width: 25%;"></div>
+          <div class="underline" style="width: 27%;"></div>
          <p class="text-center text-muted">Anand Murti Group of companies Pvt. Ltd having following features: </p>
          <div class="row stylish-panel">
             <div class="col-md-6  ">

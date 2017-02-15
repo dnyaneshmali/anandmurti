@@ -87,8 +87,8 @@
                           </td>
                             
                               <td ng-if="isedit(gogascustomer.gcustomer_id)">
-                          <input type="text" ng-value="gogascustomer.gcustomer_city" ng-model="gogascustomer.gcustomer_city" name="gcustomer_city" style="width:auto;" required>
-                          <p style="color:red;" ng-show="subForm.gcustomer_number.$error.required"> City is required.</p>
+                          <input type="text" ng-value="gogascustomer. gcustomer_city" ng-model="gogascustomer.  gcustomer_city" name="  gcustomer_city" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm. gcustomer_city.$error.required"> City is required.</p>
                           </td>
 
 

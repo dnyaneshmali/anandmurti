@@ -16,34 +16,36 @@
                       <thead>
                         <tr>
                           <th>Customer Name</th>
-                          <th>Connection ID</th>
                           <th>Cylinder Type</th>
+                          <th>Payment Details</th>
                           <th>Refil Amount</th>
-                         <th>Refil Date</th> 
+                          <th>Refil Date</th> 
                           <th colspan="2">Action</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-                        <tr ng-repeat="Connection in data | filter:clisearch">
-                          <td ng-if="!isedit(Connection.connection_id)">{{Connection.gcustomer_name}}</td>
-                          <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_cylinder_deposit}}</td>
-                          <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_depreciation}}</td>
-                         <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_hotplate}}</td>
-                          <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_hotplate}}</td>
+                        <tr ng-repeat="refil in refildata | filter:clisearch">
+                          <td ng-if="!isedit(refil.connection_id)">{{refil.gcustomer_name}}</td>
+                          <td ng-if="refil.refil_cylinder_type==1">2 Kg</td>
+                          <td ng-if="refil.refil_cylinder_type==2">5 Kg</td>
+                          <td ng-if="refil.refil_cylinder_type==3">12 Kg</td>
+                          <td>{{refil.refil_payment_details}}</td>
+                          <td>{{refil.refil_amount}}</td>
+                          <td>{{refil.refil_date}}</td>
                          
 
                              
               
-                              <td ng-if="!isedit(Connection.connection_id)">
+                              <td ng-if="!isedit(refil.connection_id)">
 
-                          <button class="btn btn-danger" ng-click="deleteuser(Connection.connection_id,$index);">Delete</button>
-                          <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(Connection.connection_id);">Edit</button>
+                          <button class="btn btn-danger" ng-click="deleterefil(refil.refil_id,$index);">Delete</button>
+                          <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(refil.connection_id);">Edit</button>
                         </td>
 
                             <ng-form name="updateconnectionform">
-                   <td ng-if="isedit(Connection.connection_id)">{{Connection.gcustomer_name}}</td>
+                   <td ng-if="isedit(refil.connection_id)">{{refil.gcustomer_name}}</td>
 
 
                             
