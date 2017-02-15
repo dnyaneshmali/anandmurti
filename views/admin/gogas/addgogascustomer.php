@@ -49,7 +49,7 @@
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addgogasform.gcustomer_dob.$invalid && !addgogasform.gcustomer_dob.$pristine }" >
                           <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
+                          <span class="input-group-addon"><i class="fa fa-birthday-cake"></i></span>
                           <input type="date" placeholder="Birth Date" ng-model="gogascustomers.gcustomer_dob" id="gcustomer_dob" class="form-control" name="gcustomer_dob" >
                         </div>
                           <p class="val-style" ng-show="addgogasform.gcustomer_dob.$invalid && !addgogasform.gcustomer_dob.$pristine" class="help-block">Birthdate required.</p>

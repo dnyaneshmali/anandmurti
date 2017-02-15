@@ -77,7 +77,9 @@
          <div class="title-section container new-conn">
             <h2 class="text-center">How to get New connection?</h2>
             <div class="underline"></div>
-            <p class="text-muted"><span style="font-weight: 600;">Step 1:</span> Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit.</br> <span style="font-weight: 600;">Step 2:</span> Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore </br> <span style="font-weight: 600;">Step 3:</span>optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, </br> <span style="font-weight: 600;">Step 4:</span> consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi </br> <span style="font-weight: 600;">Step 5:</span> quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
+            <p class="text-muted"><span style="font-weight: 600;">Step 1:</span> Collect an application form for new gas connection from the gas agency office.
+</br> <span style="font-weight: 600;">Step 2:</span> Submit documents giving the proofs of identity and address (xerox copy) with this application form.</br> <span style="font-weight: 600;">Step 3:</span>After the registration, the agency will issue you receipt on your name with date of registration and Registration Number. </br> <span style="font-weight: 600;">Step 4:</span> When your booking number comes, the agency inform the customer about the same.
+</br> <span style="font-weight: 600;">Step 5:</span>That time the customer has to produce the receipt of LPG registration and also make payments of Regulator/Cylinder/Deposit.</p>
          </div>
 		 <div class="container carousel-mb">
         <div class="row">
