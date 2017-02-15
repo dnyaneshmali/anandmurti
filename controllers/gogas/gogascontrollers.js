@@ -327,6 +327,8 @@ console.log($scope.refil);
   }]);
 
 app.controller('Listrefilcylinderctrl', ['$scope','$http', function($scope,$http) {
+  $scope.iseditid='';
+    $scope.oldrefil='';
 
  $http.get("../../models/getrefildetails.php")
     .success(function(data){
@@ -356,10 +358,44 @@ console.log(refil_id);
           });
 }
 
+$scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldrefil){
+              $scope.iseditid=id;
+              $scope.oldrefil=angular.copy(oldrefil);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldrefil);
+              $scope.$watch();
+            }
+            $scope.initval = function (refil) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updaterefil=function(refil,index){
+              console.log(refil);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updaterefil.php',
+                     data    : refil, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.updaterefilform.$setPristine();
+                        delete $scope.oldrefil;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
-
-  }]);
-
+}]);
 
 app.controller('Addgasvehiclectrl', ['$scope','$http', function($scope,$http){
   $scope.reset = function() {
