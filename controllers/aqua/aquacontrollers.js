@@ -416,6 +416,7 @@ app.controller('Listjardetailsctrl', ['$scope','$http', function($scope,$http) {
     });    
 
   $scope.deletejar=function(jar_id,index){
+
     alert('in delete function');
 
 console.log(jar_id);
@@ -472,6 +473,8 @@ console.log(jar_id);
                      });
            
            }
+          
+
 
 }]);
 

@@ -35,31 +35,36 @@
 
 
                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_cylinder_deposit">Refil Payment Details<span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">Refil payment details <span class="required">*</span>
                         </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" ng-model="refil.connection_cylinder_deposit" id="    connection_cylinder_deposit" class="form-control" name="connection_cylinder_deposit" />
-                        </div>
+                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" ng-pattern="/^\d+$/" placeholder="payment details" class="form-control"ng-model="refil.refil_payment_details" id="refil_payment_details" class="form-control" name="refil_payment_details" required />
+                          </div>
+                          <p class="val-style" ng-show="refilform.refil_payment_details.$invalid && !refilform.refil_payment_details.$pristine" class="help-block"> accept digits only required.</p>
                         </div>
                       </div>
 
-                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_depreciation"> Refil Amount<span class="required">*</span>
+
+                      
+                     <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">Refil amount <span class="required">*</span>
                         </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" ng-model="refil.amount" id="amount" class="form-control" name="amount"/>
-                        </div>
+                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" ng-pattern="/^\d+$/" placeholder="Refil amount" class="form-control"ng-model="refil.amount" id="refil_amount" class="form-control" name="amount" required />
+                          </div>
+                          <p class="val-style" ng-show="refilform.amount.$invalid && !refilform.amount.$pristine" class="help-block">accept digits only required.</p>
                         </div>
                       </div>
+
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
                           <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button ng-click="insertdata(refil)" id="send" type="submit" class="btn btn-success">Submit</button>
+                          <button ng-click="insertdata(refil)"  ng-disabled="!refilform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
                           {{msg}}
                         </div>
                       </div>

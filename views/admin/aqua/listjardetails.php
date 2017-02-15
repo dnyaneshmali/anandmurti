@@ -46,7 +46,7 @@
                           <td ng-if="!isedit(listjar.jar_id)">{{listjar.jar_price}}</td>
 
                           <td ng-if="!isedit(listjar.jar_id)">
-                            <button class="btn btn-danger" ng-click="deletejar(listjar.jar_id,$index);"><i class="fa fa-trash"></i></button>      
+                            <button class="btn btn-danger" Onclick="ConfirmDelete()" ng-click="deletejar(listjar.jar_id,$index);"><i class="fa fa-trash"></i></button>      
                           <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(listjar.jar_id,listjar);"><i class="fa fa-edit"></i></button>
                         </td>
 
