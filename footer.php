@@ -116,7 +116,7 @@ p a {color: rgba(255,255,255,.5)}
       
   
  <!--  <script src="assets\js\bootstrap.min.js"></script> -->
-   <script src="assets\js\production.min.js"></script>
+  <!--  /*<script src="assets\js\production.min.js"></script>*/ -->
 
   
 	

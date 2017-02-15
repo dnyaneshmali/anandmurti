@@ -1,7 +1,7 @@
 <?php include('header.php');?>
 
  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
       <!--End of main div-->
        <!--  <link rel="stylesheet" type="text/css" href="assets/css/normalize.css" /> -->
       <link rel="stylesheet" type="text/css" href="assets/css/demo.css" />
