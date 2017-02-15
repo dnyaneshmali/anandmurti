@@ -22,11 +22,11 @@
 
                       <tbody>
                         <tr ng-repeat="inwardsentry in gasinwards">
-                          <td>{{inwardsentry.product_id}}</td>
+                          <td>{{inwardsentry.product_name}}</td>
                           <td>{{inwardsentry.product_quantity}}</td>
                           <td>{{inwardsentry.total_price}}</td>
                           <td>{{inwardsentry.distributor_name}}</td>
-                          <td>{{inwardsentry.vehicle_id}}</td>
+                          <td>{{inwardsentry.gvehicle_owner_name}}</td>
                           <td>{{inwardsentry.product_date}}</td>
                           <td><button class="btn btn-danger" ng-click="deleteinwards(inwardsentry.inwards_id);">Delete</button></td>
                           <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);">Edit</button></td>
