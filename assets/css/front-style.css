@@ -37,6 +37,10 @@ a,p{
     font-size: 16px;
 
 }
+.latofont{
+font-family: 'Lato', sans-serif;
+    font-weight: 500;
+ font-size: 16px;}
 .nav a {
     text-decoration: none !important;
 }
@@ -547,10 +551,11 @@ img.owner_img {
     margin-left: -15px;
     margin-bottom: 30px;
 }
-.about-page .customDiv{ margin:3px; min-height:300px; /*background-color:rgb(246, 247, 248);; */
+.about-page .customDiv{ margin:3px; min-height:305px; /*background-color:rgb(246, 247, 248);; */
    padding: 10px;
    letter-spacing: 0.5px;
-   font-family: Helvetica;
+   word-spacing: 1px;
+/*   font-family: Helvetica;*/
    /*font-size: medium;*/
    box-shadow: 0 1px 21px rgba(0,0,0,0.21);
    }
@@ -575,7 +580,7 @@ margin-top: 110px;
 }
 .home-page .content-icon span ,.aqua-page .content-icon span {
     color: rgb(68, 155, 195);
-    font-size: 20px;
+    font-size: 30px;
     line-height: 50px;}
 .home-page .box-right , .aqua-page .box-right {
     padding-left: 45px;
@@ -887,4 +892,9 @@ h2 {
     width: 15% ! important;
     margin: auto;
     margin-bottom: 15px;
+}
+
+.customDiv span.fa {
+    margin-right: 10px;
+    color: #01afe9;
 }
