@@ -270,15 +270,38 @@ app.controller('Refilcylinderctrl', ['$scope','$http', function($scope,$http) {
 $http.get("../../models/getdistinctconnection.php")
     .success(function(data){
         $scope.connectiondetails=data
-        console.log($scope.connectiondetails);
+        //console.log($scope.connectiondetails);
     });
+
+     $scope.changedname=function(customer){
+  $scope.customer = {};
+$scope.customer = angular.copy(customer);
+console.log($scope.customer);
+   $http({
+          method  : 'POST',
+          url     : '../../models/getuserconnections.php',
+          data    : {'customer': customer}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+             $scope.userconnections=data
+            console.log($scope.userconnections);
+            
+
+          });
+
+}
+
+/*
 
     $http.get("../../models/getuserconnections.php")
     .success(function(data){
         $scope.userconnections=data
         console.log($scope.userconnections);
     });
-
+*/
 
     $scope.insertdata=function(refil){
   $scope.refil = {};

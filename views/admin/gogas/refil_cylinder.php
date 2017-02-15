@@ -11,7 +11,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
-                          <select class="form-control" ng-model="refil.customer" name="customer">
+                          <select class="form-control" ng-model="refil.customer" name="customer" ng-change="changedname(refil.customer)">
                             <option ng-repeat="clist in connectiondetails" value="{{clist.gcustomer_id}}">{{clist.gcustomer_name}}</option>
                           </select>
                         </div>

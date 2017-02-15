@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2017 at 11:59 AM
+-- Generation Time: Feb 14, 2017 at 02:15 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -181,8 +181,19 @@ INSERT INTO `tbl_gogas_customers` (`gcustomer_id`, `gcustomer_name`, `gcustomer_
 CREATE TABLE `tbl_gproducts` (
   `product_id` int(11) NOT NULL,
   `product_name` varchar(100) NOT NULL,
+  `product_category` varchar(100) NOT NULL,
+  `product_company` varchar(100) NOT NULL,
+  `product_price` varchar(100) NOT NULL,
+  `product_tax` varchar(100) NOT NULL,
   `product_date` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_gproducts`
+--
+
+INSERT INTO `tbl_gproducts` (`product_id`, `product_name`, `product_category`, `product_company`, `product_price`, `product_tax`, `product_date`) VALUES
+(1, 'p1', 'cooktop', 'test', '300', '10%', '2017-02-14 14:07:06');
 
 -- --------------------------------------------------------
 
@@ -252,6 +263,16 @@ CREATE TABLE `tbl_refil_details` (
   `refil_date` datetime NOT NULL,
   `gcustomer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_refil_details`
+--
+
+INSERT INTO `tbl_refil_details` (`refil_id`, `refil_cylinder_type`, `refil_payment_details`, `refil_amount`, `refil_date`, `gcustomer_id`) VALUES
+(1, '', 'test', 300, '2017-02-14 13:07:38', 0),
+(2, '', 'testtest', 300, '2017-02-14 13:09:40', 0),
+(3, '', 'payment details', 400, '2017-02-14 13:22:49', 0),
+(4, '2', 'test details', 600, '2017-02-14 13:24:25', 2);
 
 --
 -- Indexes for dumped tables
@@ -362,7 +383,7 @@ ALTER TABLE `tbl_gogas_customers`
 -- AUTO_INCREMENT for table `tbl_gproducts`
 --
 ALTER TABLE `tbl_gproducts`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_jar_details`
 --
@@ -377,7 +398,7 @@ ALTER TABLE `tbl_new_connection`
 -- AUTO_INCREMENT for table `tbl_refil_details`
 --
 ALTER TABLE `tbl_refil_details`
-  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
