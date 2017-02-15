@@ -99,6 +99,26 @@ app.config(function($routeProvider) {
             controller  : 'Listrefilcylinderctrl'
         })
 
+      .when('/addgasinwards', {
+            templateUrl : 'gogas/addgasinwards.php',
+            controller  : 'Addgasinwardsctrl'
+        })
+
+      .when('/listgasinwards', {
+            templateUrl : 'gogas/listgasinwards.php',
+            controller  : 'Listgasinwardsctrl'
+        })
+
+      .when('/addgasvehicles', {
+            templateUrl : 'gogas/addgasvehicles.php',
+            controller  : 'Addgasvehiclectrl'
+        })
+      .when('/listgasvehicles', {
+            templateUrl : 'gogas/listgasvehicles.php',
+            controller  : 'Listgasvehiclectrl'
+        })
+
+
      .when('/adminlist', {
             templateUrl : 'adminlist.php',
             controller  : 'Adminlistctrl'

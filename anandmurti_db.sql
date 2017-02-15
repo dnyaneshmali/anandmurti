@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 14, 2017 at 02:15 PM
+-- Generation Time: Feb 15, 2017 at 12:55 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -100,7 +100,8 @@ INSERT INTO `tbl_aqua_orders` (`order_id`, `customer_name`, `order_jar_type`, `o
 (3, 'Pitter', '1', '4', 200, 'Osmanabad', '2017-02-08', '04:20', 'HMT', '0', '1', '2017-02-09 06:56:32'),
 (5, 'Charly', '2', '4', 400, 'Pune', '2017-02-06', '03:34', 'HMT', '1', '1', '2017-02-10 08:03:57'),
 (6, 'Charly', '1', '2', 200, 'Pune', '2017-02-05', '03:34', 'HMT', '0', '1', '2017-02-10 08:05:39'),
-(7, 'Pitter', 'normal-jar', '1', 100, 'Pune', '2017-02-02', '03:34', 'test2', '0', '0', '2017-02-10 08:48:44');
+(7, 'Pitter', 'normal-jar', '1', 100, 'Pune', '2017-02-02', '03:34', 'test2', '0', '0', '2017-02-10 08:48:44'),
+(8, 'Charly', 'only-water', '20', 200, 'Shikrapur', '2017-02-15T18:30:00.000Z', '1970-01-01T07:29:00.000Z', 'HMT', '0', '0', '2017-02-15 11:17:33');
 
 -- --------------------------------------------------------
 
@@ -127,7 +128,8 @@ INSERT INTO `tbl_avehicle_details` (`vehicle_id`, `vehicle_owner_name`, `vehicle
 (6, 'sdfsf', '342342', '2017-02-11 11:16:06', 2147483647),
 (7, 'fgh', '453454', '2017-02-11 11:16:51', 0),
 (8, 'erewrewr', '454354', '2017-02-11 11:27:36', 0),
-(9, 'fgdfg', '45345', '2017-02-11 11:29:59', 2147483647);
+(9, 'fgdfg', '45345', '2017-02-11 11:29:59', 2147483647),
+(10, 'Swapnil T', '56788', '2017-02-15 08:49:08', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -138,11 +140,19 @@ INSERT INTO `tbl_avehicle_details` (`vehicle_id`, `vehicle_owner_name`, `vehicle
 CREATE TABLE `tbl_gas_inwards` (
   `inwards_id` int(11) NOT NULL,
   `product_quantity` int(10) NOT NULL,
-  `product_price` int(10) NOT NULL,
+  `total_price` varchar(10) NOT NULL,
   `product_date` datetime NOT NULL,
+  `distributor_name` varchar(100) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `vehicle_Id` int(11) NOT NULL
+  `vehicle_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_gas_inwards`
+--
+
+INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, `product_date`, `distributor_name`, `product_id`, `vehicle_id`) VALUES
+(1, 10, '100', '2017-02-15 12:37:57', 'Test Distributor', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -194,6 +204,27 @@ CREATE TABLE `tbl_gproducts` (
 
 INSERT INTO `tbl_gproducts` (`product_id`, `product_name`, `product_category`, `product_company`, `product_price`, `product_tax`, `product_date`) VALUES
 (1, 'p1', 'cooktop', 'test', '300', '10%', '2017-02-14 14:07:06');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_gvehicle_details`
+--
+
+CREATE TABLE `tbl_gvehicle_details` (
+  `gvehicle_id` int(11) NOT NULL,
+  `gvehicle_owner_name` varchar(100) NOT NULL,
+  `gvehicle_number` varchar(50) NOT NULL,
+  `gvehicle_date` datetime NOT NULL,
+  `gvehicle_contact_number` int(15) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_gvehicle_details`
+--
+
+INSERT INTO `tbl_gvehicle_details` (`gvehicle_id`, `gvehicle_owner_name`, `gvehicle_number`, `gvehicle_date`, `gvehicle_contact_number`) VALUES
+(2, 'v2', '56565', '2017-02-15 11:55:53', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -326,6 +357,12 @@ ALTER TABLE `tbl_gproducts`
   ADD PRIMARY KEY (`product_id`);
 
 --
+-- Indexes for table `tbl_gvehicle_details`
+--
+ALTER TABLE `tbl_gvehicle_details`
+  ADD PRIMARY KEY (`gvehicle_id`);
+
+--
 -- Indexes for table `tbl_jar_details`
 --
 ALTER TABLE `tbl_jar_details`
@@ -363,17 +400,17 @@ ALTER TABLE `tbl_aqua_customers`
 -- AUTO_INCREMENT for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
 ALTER TABLE `tbl_avehicle_details`
-  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 --
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
-  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_gogas_customers`
 --
@@ -383,7 +420,12 @@ ALTER TABLE `tbl_gogas_customers`
 -- AUTO_INCREMENT for table `tbl_gproducts`
 --
 ALTER TABLE `tbl_gproducts`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+--
+-- AUTO_INCREMENT for table `tbl_gvehicle_details`
+--
+ALTER TABLE `tbl_gvehicle_details`
+  MODIFY `gvehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_jar_details`
 --
@@ -398,7 +440,7 @@ ALTER TABLE `tbl_new_connection`
 -- AUTO_INCREMENT for table `tbl_refil_details`
 --
 ALTER TABLE `tbl_refil_details`
-  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

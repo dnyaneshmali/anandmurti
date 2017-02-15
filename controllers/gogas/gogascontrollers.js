@@ -359,3 +359,137 @@ console.log(refil_id);
 
 
   }]);
+
+
+app.controller('Addgasvehiclectrl', ['$scope','$http', function($scope,$http){
+  $scope.reset = function() {
+  delete $scope.vdetails;
+  $scope.addvehicleform.$setPristine();
+}
+
+
+$scope.insertdata=function(vdetails){
+  $scope.vdetails = {};
+$scope.vdetails = angular.copy(vdetails);
+console.log($scope.vdetails);
+   $http({
+          method  : 'POST',
+          url     : '../../models/insertgasvehicledetails.php',
+          data    : $scope.vdetails, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+              $scope.msg = "data inserted successfully "
+               delete $scope.vdetails;
+                      //$scope.addaaquaform.$setPristine();
+            
+
+          });
+
+}
+
+  }]);
+
+
+app.controller('Listgasvehiclectrl', ['$scope','$http', function($scope,$http) {
+
+$http.get("../../models/getgasvehicles.php")
+    .success(function(data){
+        $scope.data=data
+        //console.log($scope.data);
+    });
+
+
+
+  $scope.deletevehicle=function(gvehicle_id,index){
+    alert('in delete function');
+console.log(gvehicle_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deletegasvehicles.php',
+          data    : {'gvehicle_id':gvehicle_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
+
+                      });
+            }
+
+
+ }]);
+
+
+app.controller('Addgasinwardsctrl', ['$scope','$http', function($scope,$http) {
+
+ $http.get("../../models/getgasproducts.php")
+    .success(function(data){
+        $scope.allproducts=data
+        console.log($scope.allproducts);
+    });
+
+    $http.get("../../models/getgasvehicles.php")
+    .success(function(data){
+        $scope.vehiclesdata=data
+        console.log($scope.vehiclesdata);
+    });
+
+    $scope.insertdata=function(gasinwards){
+  $scope.gasinwards = {};
+$scope.gasinwards = angular.copy(gasinwards);
+console.log($scope.gasinwards);
+   $http({
+          method  : 'POST',
+          url     : '../../models/insertgasinwards.php',
+          data    : $scope.gasinwards, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+              $scope.msg = "data inserted successfully "
+               delete $scope.gasinwards;
+                      //$scope.addaaquaform.$setPristine();
+            
+
+          });
+
+}
+
+  }]);
+
+
+app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
+
+ $http.get("../../models/getgasinwards.php")
+    .success(function(data){
+        $scope.gasinwards=data
+        console.log($scope.gasinwards);
+    });
+
+    $scope.deleteinwards=function(inwards_id,index){
+    alert('in delete function');
+console.log(inwards_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deletegasinwards.php',
+          data    : {'inwards_id':inwards_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
+
+
+
+  }]);
