@@ -22,8 +22,9 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Product Quantity" ng-model="salegasproduct.product_quantity" id="product_quantity" class="form-control" name="product_quantity" required />
+                          <input type="text" placeholder="Product Quantity" ng-pattern="/^\d+$/"  ng-model="salegasproduct.product_quantity" id="product_quantity" class="form-control" name="product_quantity" required />
                          </div>
+                          <p class="val-style" ng-show="salegasproductform. product_quantity.$invalid && !salegasproductform.product_quantity.$pristine" class="help-block"> Prize required accept only digits.</p>
                         </div>
                       </div>
                         <div class="item form-group">
@@ -32,8 +33,9 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-building"></i></span>
-                          <input type="text" placeholder="Product Price" ng-model="salegasproduct.Product_price" id="Product_price" class="form-control" name="Product_price" required />
+                          <input type="text" placeholder="Product Price" ng-pattern="/^\d+$/"  ng-model="salegasproduct.Product_price" id="Product_price" class="form-control" name="Product_price" required />
                          </div>
+                         <p class="val-style" ng-show="salegasproductform. Product_price.$invalid && !salegasproductform.Product_price.$pristine" class="help-block"> Prize required accept only digits.</p>
                         </div>
                       </div>
 
@@ -44,8 +46,9 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-building"></i></span>
-                          <input type="text" placeholder="Product Total Price" ng-model="salegasproduct.Product_tprice" id="Product_tprice" class="form-control" name="Product_tprice" required />
+                          <input type="text" placeholder="Product Total Price" ng-pattern="/^\d+$/" ng-model="salegasproduct.Product_tprice" id="Product_tprice" class="form-control" name="Product_tprice" required />
                          </div>
+                          <p class="val-style" ng-show="salegasproductform.Product_tprice.$invalid && !salegasproductform.Product_tprice.$pristine" class="help-block"> Prize required accept only digits.</p>
                         </div>
                       </div>
 
@@ -53,7 +56,7 @@
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
                           <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button ng-click="insertdata(salegasproduct)" id="send" type="submit" class="btn btn-success">Submit</button>
+                          <button ng-click="insertdata(salegasproduct)" ng-disabled="!salegasproductform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
 
                           {{msg}}
                         </div>
