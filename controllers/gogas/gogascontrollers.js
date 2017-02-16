@@ -419,7 +419,7 @@ console.log($scope.vdetails);
             console.log(data);
               $scope.msg = "data inserted successfully "
                delete $scope.vdetails;
-                      //$scope.addaaquaform.$setPristine();
+                      $scope.addgasvehicleform.$setPristine();
             
 
           });
@@ -430,6 +430,9 @@ console.log($scope.vdetails);
 
 
 app.controller('Listgasvehiclectrl', ['$scope','$http', function($scope,$http) {
+   $scope.iseditid='';
+    $scope.oldvehicle='';
+
 
 $http.get("../../models/getgasvehicles.php")
     .success(function(data){
@@ -457,9 +460,44 @@ console.log(gvehicle_id);
                       });
             }
 
+$scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldvehicle){
+              $scope.iseditid=id;
+              $scope.oldvehicle=angular.copy(oldvehicle);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldvehicle);
+              $scope.$watch();
+            }
+            $scope.initval = function (listvehicle) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updatevehicle=function(listvehicle,index){
+              console.log(listvehicle);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updategasvehicle.php',
+                     data    : listvehicle, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.updatevehicleform.$setPristine();
+                        delete $scope.oldvehicle;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
- }]);
-
+}]);
 
 app.controller('Addgasinwardsctrl', ['$scope','$http', function($scope,$http) {
 
@@ -577,7 +615,7 @@ console.log($scope.salegasproduct);
             console.log(data);
               $scope.msg = "data inserted successfully "
                delete $scope.salegasproduct;
-                      //$scope.addaaquaform.$setPristine();
+                      $scope.salegasproductform.$setPristine();
             
 
           });
@@ -588,6 +626,9 @@ console.log($scope.salegasproduct);
 
 
 app.controller('Listsalegasproductctrl', ['$scope','$http', function($scope,$http) {
+   $scope.iseditid='';
+    $scope.oldsale='';
+
 
  $http.get("../../models/getsoldprodcuts.php")
     .success(function(data){
@@ -613,6 +654,41 @@ console.log(sale_product_id);
                       });
             }
 
+$scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldsale){
+              $scope.iseditid=id;
+              $scope.oldsale=angular.copy(oldsale);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldsale);
+              $scope.$watch();
+            }
+            $scope.initval = function (soldproduct) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updatesoldproduct=function(soldproduct,index){
+              console.log(soldproduct);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updatesoldproduct.php',
+                     data    : soldproduct, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.updatelistsaleform.$setPristine();
+                        delete $scope.oldsale;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
-
-  }]);
+}]);

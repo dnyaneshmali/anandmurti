@@ -35,6 +35,9 @@
                         <tr ng-repeat="refil in refildata | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(refil.refil_id)">{{refil.gcustomer_name}}</td>
                                 <td ng-if="!isedit(refil.refil_id)">{{refil.refil_cylinder_type}}</td>
+                                <!-- <td ng-if="refil.refil_cylinder_type==1">2 Kg</td>
+                          <td ng-if="refil.refil_cylinder_type==2">5 Kg</td>
+                          <td ng-if="refil.refil_cylinder_type==3">12 Kg</td> -->
                             <td ng-if="!isedit(refil.refil_id)">{{refil.refil_payment_details }}</td>
                           <td ng-if="!isedit(refil.refil_id)">{{refil.refil_amount}}</td>
                           <td ng-if="!isedit(refil.refil_id)">{{refil.refil_date}}</td>
@@ -74,19 +77,18 @@
 
 
                            <td ng-if="isedit(refil.refil_id)">{{refil.refil_date}}</td>
-<<<<<<< HEAD
+
                          <td ng-if="isedit(refil.refil_id)">
                                <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updaterefil(refil,$index);"><i class="fa fa-check"></i></button> </a>
                                <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
                             </td>
                             <ng-form>
                        
-=======
->>>>>>> 7d54da58adc7196490ab8a39a4490768584f0c91
+
 
 
                        <td ng-if="isedit(refil.refil_id)">
-                        <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updategasrefil(refil);"><i class="fa fa-check"></i></button> 
+                        <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updategasrefil(refil,$index);"><i class="fa fa-check"></i></button> 
 
                               <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(refil.refil_id);"><i class="fa fa-close"></i></button>
 

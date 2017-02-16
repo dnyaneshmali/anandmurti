@@ -32,12 +32,11 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder=" Total Price" ng-model="gasinwards.tprice" id="tprice" class="form-control" name="tprice" required value="productprice.product_price" />
+                          <input type="text" placeholder=" Total Price" ng-model="gasinwards.tprice" id="tprice" class="form-control" name="tprice" required/>
                         </div>
                           <p class="val-style" ng-show="inwardsform.tprice.$invalid && !inwardsform.tprice.$pristine" class="help-block"> required</p>
                         </div>
                       </div>
-                    
                        <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="distributor_name">Distributor Name<span class="required">*</span>
                         </label>
@@ -61,7 +60,6 @@
                         </div>
                         </div>
                       </div>
-
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">

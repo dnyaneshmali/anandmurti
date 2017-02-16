@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 15, 2017 at 02:12 PM
+-- Generation Time: Feb 16, 2017 at 01:11 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -19,6 +19,28 @@ SET time_zone = "+00:00";
 --
 -- Database: `anandmurti_db`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `gproducts_sale`
+--
+
+CREATE TABLE `gproducts_sale` (
+  `sale_product_id` int(11) NOT NULL,
+  `sale_product_quantity` int(10) NOT NULL,
+  `sale_product_price` int(10) NOT NULL,
+  `sale_total_price` int(10) NOT NULL,
+  `product_id` int(11) NOT NULL,
+  `sale_product_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `gproducts_sale`
+--
+
+INSERT INTO `gproducts_sale` (`sale_product_id`, `sale_product_quantity`, `sale_product_price`, `sale_total_price`, `product_id`, `sale_product_date`) VALUES
+(1, 12, 10, 120, 1, '2017-02-16 06:57:30');
 
 -- --------------------------------------------------------
 
@@ -152,7 +174,8 @@ CREATE TABLE `tbl_gas_inwards` (
 --
 
 INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, `product_date`, `distributor_name`, `product_id`, `vehicle_id`) VALUES
-(1, 10, '100', '2017-02-15 12:37:57', 'Test Distributor', 1, 2);
+(1, 10, '100', '2017-02-15 12:37:57', 'Test Distributor', 1, 2),
+(2, 200, '200', '2017-02-16 06:25:13', 'A Distributor', 2, 2);
 
 -- --------------------------------------------------------
 
@@ -203,7 +226,8 @@ CREATE TABLE `tbl_gproducts` (
 --
 
 INSERT INTO `tbl_gproducts` (`product_id`, `product_name`, `product_category`, `product_company`, `product_price`, `product_tax`, `product_date`) VALUES
-(1, 'p1', 'cooktop', 'test', '300', '10%', '2017-02-14 14:07:06');
+(1, 'p1', 'cooktop', 'test', '300', '10%', '2017-02-14 14:07:06'),
+(2, 'p2', 'cooktop', 'Surya', '10', '10%', '2017-02-16 06:24:10');
 
 -- --------------------------------------------------------
 
@@ -303,11 +327,20 @@ INSERT INTO `tbl_refil_details` (`refil_id`, `refil_cylinder_type`, `refil_payme
 (1, '', 'test', 300, '2017-02-14 13:07:38', 0),
 (2, '', 'testtest', 300, '2017-02-14 13:09:40', 0),
 (3, '', 'payment details', 400, '2017-02-14 13:22:49', 0),
-(4, '2', 'test details', 600, '2017-02-14 13:24:25', 2);
+(4, '2', 'test details', 600, '2017-02-14 13:24:25', 2),
+(5, '2', '', 200, '2017-02-16 06:51:13', 2),
+(6, '3', '21', 200, '2017-02-16 06:53:03', 1);
 
 --
 -- Indexes for dumped tables
 --
+
+--
+-- Indexes for table `gproducts_sale`
+--
+ALTER TABLE `gproducts_sale`
+  ADD PRIMARY KEY (`sale_product_id`),
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `tbl_admin`
@@ -387,6 +420,11 @@ ALTER TABLE `tbl_refil_details`
 --
 
 --
+-- AUTO_INCREMENT for table `gproducts_sale`
+--
+ALTER TABLE `gproducts_sale`
+  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
@@ -420,7 +458,7 @@ ALTER TABLE `tbl_gogas_customers`
 -- AUTO_INCREMENT for table `tbl_gproducts`
 --
 ALTER TABLE `tbl_gproducts`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_gvehicle_details`
 --
@@ -440,7 +478,7 @@ ALTER TABLE `tbl_new_connection`
 -- AUTO_INCREMENT for table `tbl_refil_details`
 --
 ALTER TABLE `tbl_refil_details`
-  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
