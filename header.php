@@ -32,12 +32,12 @@
             <div class="container">
                <div class="navbar-header row">
                   <!-- Button for smallest screens -->
-                 <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
+                 <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4 fl-l">
                   <a class="navbar-brand ">
                   <img src="images/am_logo.png" alt="logo" >
                   </a>
                 </div>
-                    <div class="col-md-4 col-xs-4 col-sm-4 col-lg-4">
+                    <div class="col-md-8 col-xs-8 col-sm-8 col-lg-8">
                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse"><span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span> </button>
                  </div>
                </div>
