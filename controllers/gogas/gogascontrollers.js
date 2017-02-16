@@ -375,11 +375,11 @@ $scope.isedit=function(id){
                 settings = window[settings];
                 console.log(settings.awesome); //1
             };
-            $scope.updaterefil=function(refil,index){
+            $scope.updategasrefil=function(refil,index){
               console.log(refil);
               $http({
                      method  : 'POST',
-                     url     : '../../models/updaterefil.php',
+                     url     : '../../models/updaterefilform.php',
                      data    : refil, //forms user object
                      headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
                     })
