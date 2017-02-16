@@ -118,6 +118,16 @@ app.config(function($routeProvider) {
             controller  : 'Listgasvehiclectrl'
         })
 
+      .when('/saleproducts', {
+            templateUrl : 'gogas/salegasproducts.php',
+            controller  : 'Salegasproductctrl'
+        })
+
+      .when('/listsoldproducts', {
+            templateUrl : 'gogas/listsaleproducts.php',
+            controller  : 'Listsalegasproductctrl'
+        })
+
 
      .when('/adminlist', {
             templateUrl : 'adminlist.php',

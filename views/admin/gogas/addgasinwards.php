@@ -9,7 +9,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
-                          <select class="form-control" ng-model="gasinwards.product" name="product"  ng-required="true">
+                          <select class="form-control" ng-model="gasinwards.product" name="product"  ng-required="true" ng-change="changedpname(gasinwards.product)">
                             <option ng-repeat="plist in allproducts" value="{{plist.product_id}}">{{plist.product_name}}</option>
                           </select>
                         </div>
@@ -32,7 +32,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder=" Total Price" ng-model="gasinwards.tprice" id="tprice" class="form-control" name="tprice" required />
+                          <input type="text" placeholder=" Total Price" ng-model="gasinwards.tprice" id="tprice" class="form-control" name="tprice" required value="productprice.product_price" />
                         </div>
                           <p class="val-style" ng-show="inwardsform.tprice.$invalid && !inwardsform.tprice.$pristine" class="help-block"> required</p>
                         </div>

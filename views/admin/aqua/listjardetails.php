@@ -59,7 +59,7 @@
                             <option value="" ng-selected="listjar.jar_type == ''">Jar Type</option>
                             <option value="normal-jar" ng-selected="listjar.jar_type == 'normal-jar'">Normal jar </option>
                             <option value="cool-jar" ng-selected="listjar.jar_type == 'cool-jar'">Cool jar</option>
-                              <option value="only-water" ng-selected="listjar.jar_type == 'only-water'">Only water</option>
+                              <option value="only-water" ng-selected="listjardetailsformjar.jar_type == 'only-water'">Only water</option>
                           </select>
                           <!-- code by me ends -->
 
