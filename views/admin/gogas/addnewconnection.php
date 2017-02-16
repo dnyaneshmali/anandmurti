@@ -134,7 +134,7 @@
                               <label>
                               <input type="radio" checked="" ng-model="Connection.connection_lighter" value="Yes" id="Yes" name=" connection_lighter">yes </label>
                               <label>
-                              <input type="radio" ng-model="Connection.connection_lighter" value="No" id="No" name="connection_lighter">No </label>
+                              <input type="radio" ng-model="Connection.connection_lighter" value="No" id="No" name="connection_lighter"> No </label>
                             </div>
                               </div>
                             </div>

@@ -110,6 +110,13 @@ p a {color: rgba(255,255,255,.5)}
       </div>
       
       <script type="text/javascript" src="http://localhost/anandmurti/assets/js/jquery-1.9.1.min.js"></script> 
+      <script>
+         $(document).ready(function(){
+           $(".arrowup").click(function(){
+        $(".contact-area").toggle();
+      });
+    });
+     </script>
       <script src="http://localhost/anandmurti/assets/js/bootstrap.min.js"></script>
 	  <!-- /*<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js">
     </script>*/ -->
