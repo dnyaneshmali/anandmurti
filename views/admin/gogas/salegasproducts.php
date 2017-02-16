@@ -9,7 +9,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
-                          <select class="form-control" ng-model="gasinwards.product" name="product"  ng-required="true">
+                          <select class="form-control" ng-model="salegasproduct.product" name="product"  ng-required="true">
                             <option ng-repeat="pinwardslist in getinwardsproducts" value="{{pinwardslist.product_id}}">{{pinwardslist.product_name}}</option>
                           </select>
                         </div>
