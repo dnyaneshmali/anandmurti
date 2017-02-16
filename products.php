@@ -11,7 +11,7 @@
 
       <div class="page-content products-page">
          <div class="title-section container">
-            <h1 class="text-center">Products</h1>
+            <h2 class="text-center" style="font-weight: 500 ! important;">Products</h2>
             <div class="underline" style="width:20%"></div>
             <p class="text-center text-muted">Have a question, comment, or just want to say hi? Drop us a line!</p>
          </div>
