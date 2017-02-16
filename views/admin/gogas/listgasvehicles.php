@@ -22,9 +22,7 @@
                           
                         </tr>
                       </thead>
-
-
-                      <tbody>
+              <tbody>
                         <tr ng-repeat="listvehicle in data | filter:clisearch" ng-form="subForm">
 
                           <td ng-if="!isedit(listvehicle.vehicle_id)">{{listvehicle.gvehicle_owner_name}}</td>
@@ -32,8 +30,8 @@
                           <td ng-if="!isedit(listvehicle.vehicle_id)">{{listvehicle.gvehicle_contact_number}}</td>
 
                             <td ng-if="!isedit(listvehicle.vehicle_id)">
-                          <button class="btn btn-danger" ng-click="deletevehicle(listvehicle.gvehicle_id);">Delete</button>
-                        <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(listvehicle.vehicle_id,listvehicle);">Edit</button>
+                          <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deletevehicle(listvehicle.gvehicle_id);"><i class="fa fa-trash"></i></button></a>
+                        <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(listvehicle.vehicle_id,listvehicle);"><i class="fa fa-edit"></i></button></a>
                             </td>
                               <ng-form name="listvehicleform">
                                <td ng-if="isedit(listvehicle.vehicle_id)">
@@ -56,17 +54,12 @@
                           
                            <td ng-if="isedit(listvehicle.vehicle_id)">
 
-                              <button class="btn btn-danger" ng-disabled="!subForm.$valid" ng-click="updatevehicle(listvehicle,$index);">Update</button> 
+                              <a data-toggle="tooltip" title="Update"><button class="btn btn-danger" ng-disabled="!subForm.$valid" ng-click="updatevehicle(listvehicle,$index);"><i class="fa fa-check"></i></button> </a>
 
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button>
+                              <a data-toggle="tooltip" title="Cancle"><button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
                           </td>
                           <ng-form>
-
-
-
-
-
-                        </tr>
+                 </tr>
                       </tbody>
                     </table>
                   </div>

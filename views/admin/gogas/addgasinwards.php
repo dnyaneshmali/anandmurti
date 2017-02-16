@@ -43,7 +43,7 @@
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
                           <input type="text" placeholder="Distributor Name" ng-model="gasinwards.distributor_name" id="distributor_name" class="form-control" name="distributor_name" required />
                         </div>
                           <p class="val-style" ng-show="inwardsform.distributor_name.$invalid && !inwardsform.distributor_name.$pristine" class="help-block"> required</p>

@@ -58,8 +58,8 @@
                           <!-- <td>{{aquacustomer.customer_role}}</td> -->
                           <!-- <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_date}}</td> -->
                           <td ng-if="!isedit(aquacustomer.acustomer_id)">
-                            <button class="btn btn-danger" ng-click="deleteuser(aquacustomer.acustomer_id,$index);"><i class="fa fa-trash"></i></button>
-                          <button class="btn btn-warning" value="{{btnName}}"  ng-click="setedit(aquacustomer.acustomer_id,aquacustomer);"><i class="fa fa-edit"></i></button>
+                            <a data-toggle="tooltip" title="delete"><button class="btn btn-danger" ng-click="deleteuser(aquacustomer.acustomer_id,$index);"><i class="fa fa-trash"></i></button></a>
+                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" value="{{btnName}}"  ng-click="setedit(aquacustomer.acustomer_id,aquacustomer);"><i class="fa fa-edit"></i></button></a>
                         </td>
 
                           <ng-form name="listaquacustomerform">
@@ -104,9 +104,9 @@
 
                              <td ng-if="isedit(aquacustomer.acustomer_id)">
 
-                              <button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updateaquacustomer(aquacustomer,$index);"><i class="fa fa-check"></i></button> 
+                              <a data-toggle="tooltip" title="Edit"><button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updateaquacustomer(aquacustomer,$index);"><i class="fa fa-check"></i></button></a> 
 
-                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
+                              <a data-toggle="tooltip" title="Edit"><button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
 
 
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->

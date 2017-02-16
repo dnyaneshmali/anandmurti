@@ -3,7 +3,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                   <!--  <h2>Button Example <small>A</small></h2> -->
+                    <h2>List New Connection</h2>
                    <!--  <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -70,8 +70,8 @@
               
                               <td ng-if="!isedit(Connection.connection_id)">
 
-                          <button class="btn btn-danger" ng-click="deleteuser(Connection.connection_id,$index);">Delete</button>
-                          <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(Connection.connection_id);">Edit</button>
+                          <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteuser(Connection.connection_id,$index);"><i class="fa fa-trash"></i></button></a>
+                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(Connection.connection_id);"><i class="fa fa-edit"></i></button></a>
                         </td>
 
                             <ng-form name="updateconnectionform">
@@ -124,9 +124,9 @@
 
 
                       <td ng-if="isedit(Connection.connection_id)">
-                        <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updategasconnection(Connection);"><i class="fa fa-check"></i></button> 
+                       <a data-toggle="tooltip" title="Update"> <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updategasconnection(Connection);"><i class="fa fa-check"></i></button> </a>
 
-                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(Connection.connection_id);"><i class="fa fa-close"></i></button>
+                              <a data-toggle="tooltip" title="Update"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(Connection.connection_id);"><i class="fa fa-close"></i></button> </a>
 
                                </td>
 

@@ -3,6 +3,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
+                    <h2>List Refill Cylinder</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -35,8 +36,8 @@
                           <td ng-if="!isedit(refil.connection_id)">{{refil.refil_amount}}</td>
                           <td ng-if="!isedit(refil.connection_id)">{{refil.refil_date}}</td>
                           <td ng-if="!isedit(refil.refil_id)">
-                          <button class="btn btn-danger" ng-click="deleterefil(refil.refil_id,$index);">Delete</button>
-                          <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(refil.refil_id,refil);">Edit</button>
+                          <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleterefil(refil.refil_id,$index);"><i class="fa fa-trash"></i></button></a>
+                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(refil.refil_id,refil);"><i class="fa fa-edit"></i></button></a>
                         </td>
                           <ng-form name="updaterefilform">
                           <td ng-if="isedit(refil.refil_id)">{{refil.gcustomer_name}}</td>
@@ -51,8 +52,8 @@
                           </td>
                            <td ng-if="isedit(refil.refil_id)">{{refil.refil_date}}</td>
                          <td ng-if="isedit(refil.refil_id)">
-                                <button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updaterefil(refil,$index);"><i class="fa fa-check"></i></button> 
-                                <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
+                               <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updaterefil(refil,$index);"><i class="fa fa-check"></i></button> </a>
+                               <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
                             </td>
                             <ng-form>
                        
