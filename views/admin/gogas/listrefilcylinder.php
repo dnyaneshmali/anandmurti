@@ -16,6 +16,7 @@
                       <thead>
                         <tr>
                           <th>Customer Name</th>
+                        <th>refil_cylinder_type</th>
                           <th>refil_payment_details</th>
                           <th>refil_amount</th>
                           
@@ -32,7 +33,7 @@
                       <tbody>
                         <tr ng-repeat="refil in refildata | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(refil.refil_id)">{{refil.gcustomer_name}}</td>
-                        
+                                <td ng-if="!isedit(refil.refil_id)">{{refil.refil_cylinder_type}}</td>
                             <td ng-if="!isedit(refil.refil_id)">{{refil.refil_payment_details }}</td>
                           <td ng-if="!isedit(refil.refil_id)">{{refil.refil_amount}}</td>
                           <td ng-if="!isedit(refil.refil_id)">{{refil.refil_date}}</td>
@@ -50,7 +51,7 @@
                           <ng-form name="updaterefilform">
                             <td ng-if="isedit(refil.refil_id)">{{refil.gcustomer_name}}</td>
 
-                       <!--    <td ng-if="isedit(refil.refil_id)">{{refil.refil_cylinder_type}}</td> -->
+                         <td ng-if="isedit(refil.refil_id)">{{refil.refil_cylinder_type}}</td>
 
                           <td ng-if="isedit(refil.refil_id)">
                           <input type="text" ng-pattern="/^\d+$/" ng-value="refil.refil_payment_details" ng-model="refil.refil_payment_details" name="refil_payment_details" style="width:auto;" required>
