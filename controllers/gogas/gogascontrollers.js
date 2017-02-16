@@ -562,3 +562,34 @@ console.log($scope.salegasproduct);
 }
 
   }]);
+
+
+app.controller('Listsalegasproductctrl', ['$scope','$http', function($scope,$http) {
+
+ $http.get("../../models/getsoldprodcuts.php")
+    .success(function(data){
+        $scope.soldproducts=data
+        console.log($scope.soldproducts);
+    });
+
+    $scope.deletesoldproduct=function(sale_product_id,index){
+    alert('in delete function');
+console.log(sale_product_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deletesoldproducts.php',
+          data    : {'sale_product_id':sale_product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
+
+
+
+  }]);

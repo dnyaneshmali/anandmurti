@@ -123,6 +123,11 @@ app.config(function($routeProvider) {
             controller  : 'Salegasproductctrl'
         })
 
+      .when('/listsoldproducts', {
+            templateUrl : 'gogas/listsaleproducts.php',
+            controller  : 'Listsalegasproductctrl'
+        })
+
 
      .when('/adminlist', {
             templateUrl : 'adminlist.php',

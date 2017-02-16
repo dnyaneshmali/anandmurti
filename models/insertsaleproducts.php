@@ -5,8 +5,8 @@ include($root."/config/config.php");
 
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
-$gproduct_date = date("Y-m-d H:i:s");
-$query = "INSERT INTO tbl_gproducts(product_name,product_category,product_company,product_price,product_tax,product_date)VALUES('".$data['product_name']."','".$data['Product_category']."','".$data['Product_company']."','".$data['product_prize']."','".$data['product_tax']."','".$gproduct_date."')";
+$saleproduct_date = date("Y-m-d H:i:s");
+$query = "INSERT INTO gproducts_sale(sale_product_quantity,sale_product_price,sale_total_price,product_id,sale_product_date)VALUES('".$data['product_quantity']."','".$data['Product_price']."','".$data['Product_tprice']."','".$data['product']."','".$saleproduct_date."')";
    
      if(!mysqli_query($connection,$query))
     {
