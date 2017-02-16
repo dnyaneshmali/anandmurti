@@ -475,6 +475,29 @@ app.controller('Addgasinwardsctrl', ['$scope','$http', function($scope,$http) {
         console.log($scope.vehiclesdata);
     });
 
+    $scope.changedpname=function(product){
+      //alert('test');
+  $scope.product = {};
+$scope.product = angular.copy(product);
+console.log($scope.product);
+   $http({
+          method  : 'POST',
+          url     : '../../models/getgasproductprice.php',
+          data    : {'product': product}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+            $scope.productprice=data
+            console.log($scope.productprice);
+            
+
+          });
+
+}
+
+
     $scope.insertdata=function(gasinwards){
   $scope.gasinwards = {};
 $scope.gasinwards = angular.copy(gasinwards);
