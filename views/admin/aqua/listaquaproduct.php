@@ -57,8 +57,8 @@
                           <td>{{aquaproduct.Product_company}}</td>
                           <td>{{aquaproduct.product_tax}}</td>
                           <td>{{aquaproduct.product_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteuser(aquaproduct.product_id,$index);"><i class="fa fa-trash"></i></button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);"><i class="fa fa-edit"></i></button></td>
+                          <td><a data-toggle="tooltip" title="delete"><button class="btn btn-danger" ng-click="deleteuser(aquaproduct.product_id,$index);"><i class="fa fa-trash"></i></button></a></td>
+                          <td><a data-toggle="tooltip" title="edit"><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);"><i class="fa fa-edit"></i></button></a></td>
                         </tr>
                       </tbody>
                     </table>

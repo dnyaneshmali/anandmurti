@@ -37,7 +37,7 @@
                           <span class="input-group-addon"><i class="fa fa-phone"></i></span>
                           <input type="text" placeholder="Vehicle Contact number" class="form-control" ng-pattern="/^[0-9]{10}$/"  ng-model="vdetails.vehicle_contact_number" id="vehicle_contact_number" class="form-control" name="vehicle_contact_number" required/>
                           </div>
-       <p class="val-style" ng-show="addgasvehicleform.vehicle_contact_number.$invalid && !addgasvehicleform.vehicle_contact_number.$pristine" class="help-block"> required 10 digit number.</p>
+                       <p class="val-style" ng-show="addgasvehicleform.vehicle_contact_number.$invalid && !addgasvehicleform.vehicle_contact_number.$pristine" class="help-block"> required 10 digit number.</p>
                            
                         </div>
                       </div>
