@@ -379,7 +379,7 @@ $scope.isedit=function(id){
               console.log(refil);
               $http({
                      method  : 'POST',
-                     url     : '../../models/updaterefilform.php',
+                     url     : '../../models/updaterefil.php',
                      data    : refil, //forms user object
                      headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
                     })
