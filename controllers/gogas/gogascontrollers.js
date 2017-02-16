@@ -317,8 +317,8 @@ console.log($scope.refil);
      .success(function(data) {
             console.log(data);
               $scope.msg = "data inserted successfully "
-                delete $scope.gogascustomers;
-                //$scope.addgogasform.$setPristine();
+                delete $scope.refil;
+              $scope.refilform.$setPristine();
             
 
           });
