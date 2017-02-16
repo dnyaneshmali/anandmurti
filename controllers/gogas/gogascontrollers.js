@@ -529,3 +529,36 @@ console.log(inwards_id);
 
 
   }]);
+
+
+app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
+
+ $http.get("../../models/getgasinwards.php")
+    .success(function(data){
+        $scope.getinwardsproducts=data
+        console.log($scope.getinwardsproducts);
+    });
+
+    $scope.insertdata=function(salegasproduct){
+  $scope.salegasproduct = {};
+$scope.salegasproduct = angular.copy(salegasproduct);
+console.log($scope.salegasproduct);
+   $http({
+          method  : 'POST',
+          url     : '../../models/insertsaleproducts.php',
+          data    : $scope.salegasproduct, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+              $scope.msg = "data inserted successfully "
+               delete $scope.salegasproduct;
+                      //$scope.addaaquaform.$setPristine();
+            
+
+          });
+
+}
+
+  }]);
