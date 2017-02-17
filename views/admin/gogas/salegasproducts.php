@@ -24,7 +24,7 @@
                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
                           <input type="text" placeholder="Product Quantity" ng-pattern="/^\d+$/"  ng-model="salegasproduct.product_quantity" id="product_quantity" class="form-control" name="product_quantity" required />
                          </div>
-                          <p class="val-style" ng-show="salegasproductform. product_quantity.$invalid && !salegasproductform.product_quantity.$pristine" class="help-block"> Prize required accept only digits.</p>
+                          <p class="val-style" ng-show="salegasproductform.product_quantity.$invalid && !salegasproductform.product_quantity.$pristine" class="help-block"> Prize required accept only digits.</p>
                         </div>
                       </div>
                         <div class="item form-group">

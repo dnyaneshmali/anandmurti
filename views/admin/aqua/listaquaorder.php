@@ -51,21 +51,13 @@
 
                       <tbody>
                         <tr ng-repeat="aquaorder in data | filter:clisearch" ng-form="subForm">
-                          <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.customer_name}}</td>
+                          <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.acustomer_name}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_address}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_quantity}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_time}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_date}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.vehicle_name}}</td>
-
-
-
-
-                          
-
-                              <td ng-if="!isedit(aquaorder.order_id)">
-
-
+                          <td ng-if="!isedit(aquaorder.order_id)">
                        <a data-toggle="tooltip" title="Delete"> <button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);"><i class="fa fa-trash"></i></button></a>
                          <a data-toggle="tooltip" title="Edit"> <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(aquaorder.order_id,aquaorder);"><i class="fa fa-edit"></i></button></a>
                         </td>

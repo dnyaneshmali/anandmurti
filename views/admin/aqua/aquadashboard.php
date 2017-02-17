@@ -51,8 +51,8 @@
                   <div class="x_content">
                     <article class="media event" ng-repeat="orderreminder in reminderdata">
                       <a class="pull-left date">
-                        <p class="month">April</p>
-                        <p class="day">23</p>
+                        <p class="month">{{orderreminder.order_delivery_date | date:'MM'}}</p>
+                        <p class="day">{{orderreminder.order_delivery_date | date:'dd'}}</p>
                       </a>
                       <div class="media-body">
                         <a class="title" href="#">{{orderreminder.customer_name}}</a>
