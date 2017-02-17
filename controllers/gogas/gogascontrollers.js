@@ -317,8 +317,8 @@ console.log($scope.refil);
      .success(function(data) {
             console.log(data);
               $scope.msg = "data inserted successfully "
-                delete $scope.gogascustomers;
-                //$scope.addgogasform.$setPristine();
+                delete $scope.refil;
+              $scope.refilform.$setPristine();
             
 
           });
@@ -327,6 +327,8 @@ console.log($scope.refil);
   }]);
 
 app.controller('Listrefilcylinderctrl', ['$scope','$http', function($scope,$http) {
+  $scope.iseditid='';
+    $scope.oldrefil='';
 
  $http.get("../../models/getrefildetails.php")
     .success(function(data){
@@ -356,6 +358,337 @@ console.log(refil_id);
           });
 }
 
+$scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldrefil){
+              $scope.iseditid=id;
+              $scope.oldrefil=angular.copy(oldrefil);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldrefil);
+              $scope.$watch();
+            }
+            $scope.initval = function (refil) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updategasrefil=function(refil,index){
+              console.log(refil);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updaterefil.php',
+                     data    : refil, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.updaterefilform.$setPristine();
+                        delete $scope.oldrefil;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
+
+}]);
+
+app.controller('Addgasvehiclectrl', ['$scope','$http', function($scope,$http){
+  $scope.reset = function() {
+  delete $scope.vdetails;
+  $scope.addvehicleform.$setPristine();
+}
+
+
+$scope.insertdata=function(vdetails){
+  $scope.vdetails = {};
+$scope.vdetails = angular.copy(vdetails);
+console.log($scope.vdetails);
+   $http({
+          method  : 'POST',
+          url     : '../../models/insertgasvehicledetails.php',
+          data    : $scope.vdetails, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+              $scope.msg = "data inserted successfully "
+               delete $scope.vdetails;
+                      $scope.addgasvehicleform.$setPristine();
+            
+
+          });
+
+}
+
+  }]);
+
+
+app.controller('Listgasvehiclectrl', ['$scope','$http', function($scope,$http) {
+   $scope.iseditid='';
+    $scope.oldvehicle='';
+
+
+$http.get("../../models/getgasvehicles.php")
+    .success(function(data){
+        $scope.data=data
+        //console.log($scope.data);
+    });
+
+
+
+  $scope.deletevehicle=function(gvehicle_id,index){
+    alert('in delete function');
+console.log(gvehicle_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deletegasvehicles.php',
+          data    : {'gvehicle_id':gvehicle_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
+
+                      });
+            }
+
+$scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldvehicle){
+              $scope.iseditid=id;
+              $scope.oldvehicle=angular.copy(oldvehicle);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldvehicle);
+              $scope.$watch();
+            }
+            $scope.initval = function (listvehicle) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updatevehicle=function(listvehicle,index){
+              console.log(listvehicle);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updategasvehicle.php',
+                     data    : listvehicle, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.updatevehicleform.$setPristine();
+                        delete $scope.oldvehicle;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
+
+}]);
+
+app.controller('Addgasinwardsctrl', ['$scope','$http', function($scope,$http) {
+
+ $http.get("../../models/getgasproducts.php")
+    .success(function(data){
+        $scope.allproducts=data
+        console.log($scope.allproducts);
+    });
+
+    $http.get("../../models/getgasvehicles.php")
+    .success(function(data){
+        $scope.vehiclesdata=data
+        console.log($scope.vehiclesdata);
+    });
+
+    $scope.changedpname=function(product){
+      //alert('test');
+  $scope.product = {};
+$scope.product = angular.copy(product);
+console.log($scope.product);
+   $http({
+          method  : 'POST',
+          url     : '../../models/getgasproductprice.php',
+          data    : {'product': product}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+            $scope.productprice=data
+            console.log($scope.productprice);
+            
+
+          });
+
+}
+
+
+    $scope.insertdata=function(gasinwards){
+  $scope.gasinwards = {};
+$scope.gasinwards = angular.copy(gasinwards);
+console.log($scope.gasinwards);
+   $http({
+          method  : 'POST',
+          url     : '../../models/insertgasinwards.php',
+          data    : $scope.gasinwards, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+              $scope.msg = "data inserted successfully "
+               delete $scope.gasinwards;
+                      //$scope.addaaquaform.$setPristine();
+            
+
+          });
+
+}
+
+  }]);
+
+
+app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
+
+ $http.get("../../models/getgasinwards.php")
+    .success(function(data){
+        $scope.gasinwards=data
+        console.log($scope.gasinwards);
+    });
+
+    $scope.deleteinwards=function(inwards_id,index){
+    alert('in delete function');
+console.log(inwards_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deletegasinwards.php',
+          data    : {'inwards_id':inwards_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
+
 
 
   }]);
+
+
+app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
+
+ $http.get("../../models/getgasinwards.php")
+    .success(function(data){
+        $scope.getinwardsproducts=data
+        console.log($scope.getinwardsproducts);
+    });
+
+    $scope.insertdata=function(salegasproduct){
+  $scope.salegasproduct = {};
+$scope.salegasproduct = angular.copy(salegasproduct);
+console.log($scope.salegasproduct);
+   $http({
+          method  : 'POST',
+          url     : '../../models/insertsaleproducts.php',
+          data    : $scope.salegasproduct, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            console.log(data);
+              $scope.msg = "data inserted successfully "
+               delete $scope.salegasproduct;
+                      $scope.salegasproductform.$setPristine();
+            
+
+          });
+
+}
+
+  }]);
+
+
+app.controller('Listsalegasproductctrl', ['$scope','$http', function($scope,$http) {
+   $scope.iseditid='';
+    $scope.oldsale='';
+
+
+ $http.get("../../models/getsoldprodcuts.php")
+    .success(function(data){
+        $scope.soldproducts=data
+        console.log($scope.soldproducts);
+    });
+
+    $scope.deletesoldproduct=function(sale_product_id,index){
+    alert('in delete function');
+console.log(sale_product_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deletesoldproducts.php',
+          data    : {'sale_product_id':sale_product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
+
+$scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldsale){
+              $scope.iseditid=id;
+              $scope.oldsale=angular.copy(oldsale);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldsale);
+              $scope.$watch();
+            }
+            $scope.initval = function (soldproduct) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updatesoldproduct=function(soldproduct,index){
+              console.log(soldproduct);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updatesoldproduct.php',
+                     data    : soldproduct, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                        $scope.updatelistsaleform.$setPristine();
+                        delete $scope.oldsale;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
+
+}]);

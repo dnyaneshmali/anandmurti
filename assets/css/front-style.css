@@ -575,7 +575,7 @@ margin-top: 110px;
 }
 .home-page .content-icon span ,.aqua-page .content-icon span {
     color: rgb(68, 155, 195);
-    font-size: 20px;
+    font-size: 30px;
     line-height: 50px;}
 .home-page .box-right , .aqua-page .box-right {
     padding-left: 45px;
@@ -887,4 +887,11 @@ h2 {
     width: 15% ! important;
     margin: auto;
     margin-bottom: 15px;
+}
+.customDiv .fa {
+    margin-right: 10px;
+    color: #01adf7;
+}
+.fl-l{
+    float: left
 }

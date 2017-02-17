@@ -3,7 +3,7 @@
  */
 
 app.controller('Aquadashboardctrl', ['$scope','$http', function($scope,$http) {
-  $http.get("../../models/getorderdetails.php")
+  $http.get("../../models/getorderreminder.php")
     .success(function(data){
         $scope.reminderdata=data
         console.log($scope.reminderdata);
@@ -416,6 +416,7 @@ app.controller('Listjardetailsctrl', ['$scope','$http', function($scope,$http) {
     });    
 
   $scope.deletejar=function(jar_id,index){
+
     alert('in delete function');
 
 console.log(jar_id);
@@ -472,6 +473,8 @@ console.log(jar_id);
                      });
            
            }
+          
+
 
 }]);
 

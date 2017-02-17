@@ -1,7 +1,7 @@
 <div class="addveh-dtls">
 <h1>Add Vehicle Details</h1>
-<div class="addvehicleform" ng-controller="Addvehiclectrl">
-<form name="addvehicleform" class="form-horizontal form-label-left" nonvalidate>
+<div class="addgasvehicleform" ng-controller="Addgasvehiclectrl">
+<form name="addgasvehicleform" class="form-horizontal form-label-left" nonvalidate>
 
                    
                       <div class="item form-group">
@@ -12,7 +12,7 @@
                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
                           <input type="text" placeholder="Vehicle owner name" class="form-control"ng-model="vdetails.vowner_name" id="vowner_name" class="form-control" name="vowner_name" required />
                           </div>
-                          <p class="val-style" ng-show="addvehicleform.vowner_name.$invalid && !addvehicleform.vowner_name.$pristine" class="help-block"> required.</p>
+                          <p class="val-style" ng-show="addgasvehicleform.vowner_name.$invalid && !addgasvehicleform.vowner_name.$pristine" class="help-block"> required.</p>
                         </div>
                       </div>
 
@@ -25,7 +25,7 @@
                              <span class="input-group-addon"><i class="fa fa-truck"></i></span>
                           <input type="text" placeholder="Vehicle Number" class="form-control" ng-model="vdetails.vehicle_number" id="vehicle_number" class="form-control" name="vehicle_number" required />
                            </div>
-                          <p class="val-style" ng-show="addvehicleform.vehicle_number.$invalid && !addvehicleform.vehicle_number.$pristine" class="help-block"> required.</p>     
+                          <p class="val-style" ng-show="addgasvehicleform.vehicle_number.$invalid && !addgasvehicleform.vehicle_number.$pristine" class="help-block"> required.</p>     
                         </div>
                       </div>
 
@@ -37,7 +37,7 @@
                           <span class="input-group-addon"><i class="fa fa-phone"></i></span>
                           <input type="text" placeholder="Vehicle Contact number" class="form-control" ng-pattern="/^[0-9]{10}$/"  ng-model="vdetails.vehicle_contact_number" id="vehicle_contact_number" class="form-control" name="vehicle_contact_number" required/>
                           </div>
-       <p class="val-style" ng-show="addvehicleform.vehicle_contact_number.$invalid && !addvehicleform.vehicle_contact_number.$pristine" class="help-block"> required 10 digit number.</p>
+                       <p class="val-style" ng-show="addgasvehicleform.vehicle_contact_number.$invalid && !addgasvehicleform.vehicle_contact_number.$pristine" class="help-block"> required 10 digit number.</p>
                            
                         </div>
                       </div>
@@ -46,7 +46,7 @@
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
                           <button type="submit" ng-click="reset()" class="btn btn-primary">Cancel</button>
-                          <button ng-click="insertdata(vdetails)" id="send" ng-disabled="!addvehicleform.$valid" type="submit" class="btn btn-success">Submit</button>
+                          <button ng-click="insertdata(vdetails)" id="send" type="submit" class="btn btn-success">Submit</button>
 
                           {{msg}}
                         </div>

@@ -3,6 +3,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
+                    <h2>List Refill Cylinder</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -16,84 +17,80 @@
                       <thead>
                         <tr>
                           <th>Customer Name</th>
-                          <th>Cylinder Type</th>
-                          <th>Payment Details</th>
-                          <th>Refil Amount</th>
-                          <th>Refil Date</th> 
+                        <th>refil_cylinder_type</th>
+                          <th>refil_payment_details</th>
+                          <th>refil_amount</th>
+                          
+                          <th>refil_date</th>
+                        <!--    <th>customer Role</th> -->
+                         <!--  <th>Start Date</th> -->
                           <th colspan="2">Action</th>
                         </tr>
                       </thead>
 
 
+
+
                       <tbody>
-                        <tr ng-repeat="refil in refildata | filter:clisearch">
-                          <td ng-if="!isedit(refil.connection_id)">{{refil.gcustomer_name}}</td>
-                          <td ng-if="refil.refil_cylinder_type==1">2 Kg</td>
+                        <tr ng-repeat="refil in refildata | filter:clisearch" ng-form="subForm">
+                          <td ng-if="!isedit(refil.refil_id)">{{refil.gcustomer_name}}</td>
+                                <td ng-if="!isedit(refil.refil_id)">{{refil.refil_cylinder_type}}</td>
+                                <!-- <td ng-if="refil.refil_cylinder_type==1">2 Kg</td>
                           <td ng-if="refil.refil_cylinder_type==2">5 Kg</td>
-                          <td ng-if="refil.refil_cylinder_type==3">12 Kg</td>
-                          <td>{{refil.refil_payment_details}}</td>
-                          <td>{{refil.refil_amount}}</td>
-                          <td>{{refil.refil_date}}</td>
-                         
+                          <td ng-if="refil.refil_cylinder_type==3">12 Kg</td> -->
+                            <td ng-if="!isedit(refil.refil_id)">{{refil.refil_payment_details }}</td>
+                          <td ng-if="!isedit(refil.refil_id)">{{refil.refil_amount}}</td>
+                          <td ng-if="!isedit(refil.refil_id)">{{refil.refil_date}}</td>
+                        
 
-                             
-              
-                              <td ng-if="!isedit(refil.connection_id)">
 
-                          <button class="btn btn-danger" ng-click="deleterefil(refil.refil_id,$index);">Delete</button>
-                          <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(refil.connection_id);">Edit</button>
+
+                          <td ng-if="!isedit(refil.refil_id)">
+                  
+                          <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleterefil(refil.refil_id,$index);"><i class="fa fa-trash"></i></button></a>
+                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(refil.refil_id,refil);"><i class="fa fa-edit"></i></button></a>
+
                         </td>
 
-                            <ng-form name="updateconnectionform">
-                   <td ng-if="isedit(refil.connection_id)">{{refil.gcustomer_name}}</td>
+                          <ng-form name="updaterefilform">
+                            <td ng-if="isedit(refil.refil_id)">{{refil.gcustomer_name}}</td>
 
+                         <td ng-if="isedit(refil.refil_id)">{{refil.refil_cylinder_type}}</td>
 
-                            
-
-                             <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_cylinder_deposit" ng-model="Connection.connection_cylinder_deposit" name="connection_cylinder_deposit" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_cylinder_deposit.$invalid && !updateconnectionform.connection_cylinder_deposit.$pristine" class="help-block"> fullname is required.</p>
-                          </td>
-
-                          <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_depreciation" ng-model="Connection.connection_depreciation" name="connection_depreciation" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_depreciation.$invalid && !updateconnectionform.connection_depreciation.$pristine" class="help-block"> fullname is required.</p>
+                          <td ng-if="isedit(refil.refil_id)">
+                          <input type="text" ng-pattern="/^\d+$/" ng-value="refil.refil_payment_details" ng-model="refil.refil_payment_details" name="refil_payment_details" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.refil_payment_details.$error.required"> required field.</p>
+                           <p style="color:red;" ng-show="!subForm.refil_payment_details.$error.required && subForm.refil_payment_details.$invalid"> accept digits only.</p>
                           </td>
 
 
-                        <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_hotplate" ng-model="Connection.connection_hotplate" name="connection_hotplate" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_hotplate.$invalid && !updateconnectionform.connection_hotplate.$pristine" class="help-block"> fullname is required.</p>
+
+
+
+
+                            <td ng-if="isedit(refil.refil_id)">
+                          <input type="text" ng-pattern="/^\d+$/" ng-value="refil.refil_amount" ng-model="refil.  refil_amount" name="refil_amount" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.refil_amount.$error.required"> required field.</p>
+                           <p style="color:red;" ng-show="!subForm.refil_amount.$error.required && subForm. refil_amount.$invalid"> accept digits only.</p>
                           </td>
 
 
-                          <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_passbook" ng-model="Connection.connection_passbook" name="connection_passbook" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_passbook.$invalid && !updateconnectionform.connection_passbook.$pristine" class="help-block"> fullname is required.</p>
-                          </td>
 
-                           <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_stamp" ng-model="Connection.connection_stamp" name="connection_stamp" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_stamp.$invalid && !updateconnectionform.connection_stamp.$pristine" class="help-block"> fullname is required.</p>
-                          </td>
+                           <td ng-if="isedit(refil.refil_id)">{{refil.refil_date}}</td>
 
-
-                          <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection. connection_tube" ng-model="Connection.connection_tube" name="connection_tube" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_tube.$invalid && !updateconnectionform.connection_tube.$pristine" class="help-block"> fullname is required.</p>
-                          </td>
-
-                           <td ng-if="isedit(Connection.connection_id)">
-                          <input type="text" ng-value="Connection.connection_lighter" ng-model="Connection.connection_lighter" name="connection_lighter" style="width:auto;" required>
-                          <p style="color:red;" ng-show="updateconnectionform.connection_lighter.$invalid && !updateconnectionform.connection_lighter.$pristine" class="help-block"> fullname is required.</p>
-                          </td>
-                           <td ng-if="isedit(Connection.connection_id)">{{Connection. connection_date}}</td>
+                         <td ng-if="isedit(refil.refil_id)">
+                               <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updaterefil(refil,$index);"><i class="fa fa-check"></i></button> </a>
+                               <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
+                            </td>
+                            <ng-form>
+                       
 
 
 
-                      <td ng-if="isedit(Connection.connection_id)"><button class="btn btn-success" ng-click="updategasconnection(Connection);"><i class="fa fa-check"></i></button> 
+                       <td ng-if="isedit(refil.refil_id)">
+                        <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updategasrefil(refil,$index);"><i class="fa fa-check"></i></button> 
 
-                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(Connection.connection_id);"><i class="fa fa-close"></i></button>
+                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(refil.refil_id);"><i class="fa fa-close"></i></button>
 
                                </td>
 
@@ -102,6 +99,7 @@
 
                            <ng-form>
                        </tr>
+
                       </tbody>
                     </table>
                   </div>

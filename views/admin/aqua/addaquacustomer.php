@@ -5,17 +5,17 @@
 <form name="addaaquaform" class="form-horizontal form-label-left" nonvalidate>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="acustomer_name">Customer Name
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Customer Name<span class="required">*</span>
                         </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                        <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                          <input type="text" placeholder="Customer Name" ng-model="aquacustomers.acustomer_name" id="acustomer_name" class="form-control" name="customer_name" >
-                        </div>
-                          
-                           <p class="val-style" ng-show="addaaquaform.acustomer_name.$invalid && !addaaquaform.acustomer_name.$pristine" class="help-block">required</p>       
+                             <span class="input-group-addon"><i class="fa fa-truck"></i></span>
+                          <input type="text" placeholder="Customer Name" class="form-control" ng-model="aquacustomers.acustomer_name" id="acustomer_name" class="form-control" name="acustomer_name" required />
+                           </div>
+                          <p class="val-style" ng-show="addaaquaform.acustomer_name.$invalid && !addaaquaform.acustomer_name.$pristine" class="help-block"> required.</p>     
                         </div>
                       </div>
+                      
 
                        <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Customer Email <span class="required">*</span>
@@ -44,17 +44,16 @@
                       </div>
 
                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Customer Address <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Customer Address<span class="required">*</span>
                         </label>
-                        <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addaaquaform.acustomer_address.$invalid && !addaaquaform.acustomer_address.$pristine }" >
+                        <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-home"></i></span>
-                          <input type="text" placeholder="Customer Address" ng-model="aquacustomers.acustomer_address" id="username" class="form-control" name="acustomer_address" >
-                        </div>
-                          <p class="val-style" ng-show="addaaquaform.acustomer_address.$invalid && !addaaquaform.acustomer_address.$pristine" class="help-block">Address is required.</p>
+                             <span class="input-group-addon"><i class="fa fa-truck"></i></span>
+                          <input type="text" placeholder="Customer Address" class="form-control" ng-model="aquacustomers.acustomer_address" id="acustomer_address" class="form-control" name="acustomer_address" required />
+                           </div>
+                          <p class="val-style" ng-show="addaaquaform.acustomer_address.$invalid && !addaaquaform.acustomer_address.$pristine" class="help-block"> required.</p>     
                         </div>
                       </div>
-
                       
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>

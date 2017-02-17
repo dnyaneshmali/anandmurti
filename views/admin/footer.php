@@ -1,6 +1,9 @@
 <footer>
-          <div class="pull-right">
-            Anand Murti Group Of Companies Developed And Designed By <a href="http://www.softinfology.com/">Softinfology</a>
+
+          <div>
+                Anand Murti Group Of Companies
+          
+            <span class="pull-right"> Developed And Designed By <a href="http://www.softinfology.com/">Softinfology</a></span>
           </div>
           <div class="clearfix"></div>
         </footer>

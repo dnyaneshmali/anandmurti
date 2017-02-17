@@ -46,12 +46,18 @@
                         <li><a href="#/listgogasproduct">List Gogas Products</a></li>
                         <li><a href="#/addnewconnection">Add New Connection</a></li>
                         <li><a href="#/listnewconnection">List New connections</a></li>
+                        <li><a href="#/saleproducts">Sale Products</a></li>
+                        <li><a href="#/listsoldproducts">List Sold Prodcuts</a></li>
                         <li><a href="#/refilcylinder">Add Refil cylinder</a></li>
                         <li><a href="#/listrefilcylinder">List Refil cylinder</a></li>
+                        <li><a href="#/addgasvehicles">Add Vehicle</a></li>
+                        <li><a href="#/listgasvehicles">List Vehicles</a></li>
+                        <li><a href="#/addgasinwards">Add Inwards</a></li>
+                        <li><a href="#/listgasinwards">List Inwards</a></li>
                     </ul>
                   </li>
 
-                  <li ng-hide="!isadmin()" ng-controller="Dashboard"><a><i class="fa fa-group"></i>   Manage Admin's<span class="fa fa-chevron-down"></span></a>
+                  <li ng-hide="!isadmin()" ng-controller="Dashboard"><a><i class="fa fa-group"></i> Manage Admin's<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="#/adminlist">List Admin</a></li>
                       <li><a href="#/addadmin">Add Admin</a></li>

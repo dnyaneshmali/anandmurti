@@ -47,8 +47,8 @@
                           <td>{{gogasproduct.product_company}}</td>
                           <td>{{gogasproduct.product_tax}}</td>
                           <td>{{gogasproduct.product_date}}</td>
-                          <td><button class="btn btn-danger" ng-click="deleteproduct(gogasproduct.product_id);">Delete</button></td>
-                          <td><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);">Edit</button></td>
+                          <td><a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteproduct(gogasproduct.product_id);"><i class="fa fa-trash"></i></button></a></td>
+                          <td><a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-click="edituser(aquacustomers.customer_id,aquacustomers.admin_username);"><i class="fa fa-edit"></i></button></a></td>
                         </tr>
                       </tbody>
                     </table>

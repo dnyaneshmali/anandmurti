@@ -3,6 +3,7 @@
       <div class="page-content">
          <div class="title-section container">
             <h1 class="text-center">Terms and Conditions</h1>
+            <div class="underline"></div>
             <p class="text-center text-muted">Have a question, comment, or just want to say hi? Drop us a line!</p>
          </div>
          
