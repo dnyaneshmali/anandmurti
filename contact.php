@@ -15,7 +15,7 @@
                                  <center>Contact us</center>
                               </h2>
                               <div class="underline" style="width:25%"></div>
-                              <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style=" margin-top: 30px;">
+                              <iframe width="1000" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style=" margin-top: 30px;">
                               </iframe>
                               <div class="contact-area" style="font-family: "Trebuchet MS", Arial, Helvetica, sans-serif;">
                               <ul class="info">

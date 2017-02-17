@@ -75,7 +75,7 @@
             </div>
          </div>
          <div class="title-section container new-conn">
-            <h2 class="text-center">How to get New connection?</h2>
+            <h2 class="text-center">How to get New Gas Connection?</h2>
             <div class="underline"></div>
             <p class="text-muted"><span style="font-weight: 600;">Step 1:</span> Collect an application form for new gas connection from the gas agency office.
 </br> <span style="font-weight: 600;">Step 2:</span> Submit documents giving the proofs of identity and address (xerox copy) with this application form.</br> <span style="font-weight: 600;">Step 3:</span>After the registration, the agency will issue you receipt on your name with date of registration and Registration Number. </br> <span style="font-weight: 600;">Step 4:</span> When your booking number comes, the agency inform the customer about the same.
