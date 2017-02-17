@@ -32,9 +32,9 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder=" Total Price" ng-model="gasinwards.tprice" id="tprice" class="form-control" name="tprice" required/>
+                          <input type="text" placeholder=" Total Price" ng-pattern="/^\d+$/"  ng-model="gasinwards.tprice" id="tprice" class="form-control" name="tprice" required/>
                         </div>
-                          <p class="val-style" ng-show="inwardsform.tprice.$invalid && !inwardsform.tprice.$pristine" class="help-block"> required</p>
+                          <p class="val-style" ng-show="inwardsform.tprice.$invalid && !inwardsform.tprice.$pristine" class="help-block">accept digits only required</p>
                         </div>
                       </div>
                        <div class="item form-group">

@@ -87,13 +87,13 @@
 
 
 
-                       <td ng-if="isedit(refil.refil_id)">
+                      <!--  <td ng-if="isedit(refil.refil_id)">
                         <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updategasrefil(refil,$index);"><i class="fa fa-check"></i></button> 
 
                               <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(refil.refil_id);"><i class="fa fa-close"></i></button>
 
                                </td>
-
+ -->
 
 
 

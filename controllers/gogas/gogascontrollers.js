@@ -125,6 +125,9 @@ console.log($scope.gogasproduct);
   }]);
 
 app.controller('Listgogasproductctrl', ['$scope','$http', function($scope,$http) {
+   $scope.iseditid='';
+    $scope.oldproduct='';
+    
 
 $http.get("../../models/getgasproducts.php")
     .success(function(data){
@@ -153,8 +156,44 @@ console.log(product_id);
           });
 }
 
+$scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldproduct){
+              $scope.iseditid=id;
+              $scope.oldproduct=angular.copy(oldproduct);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldproduct);
+              $scope.$watch();
+            }
+            $scope.initval = function (gogasproduct) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updategasproduct=function(gogasproduct,index){
+              console.log(gogasproduct);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updateproductlist.php',
+                     data    : gogasproduct, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                        $scope.msg = "data inserted successfully ";
+                        $scope.listproductsform.$setPristine();
+                        delete $scope.oldproduct;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
-  }]);
+}]);
 
 
 
@@ -551,7 +590,7 @@ console.log($scope.gasinwards);
             console.log(data);
               $scope.msg = "data inserted successfully "
                delete $scope.gasinwards;
-                      //$scope.addaaquaform.$setPristine();
+                      $scope.inwardsform.$setPristine();
             
 
           });
@@ -562,6 +601,8 @@ console.log($scope.gasinwards);
 
 
 app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
+   $scope.iseditid='';
+    $scope.oldinwards='';
 
  $http.get("../../models/getgasinwards.php")
     .success(function(data){
@@ -587,9 +628,44 @@ console.log(inwards_id);
                       });
             }
 
+$scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldinwards){
+              $scope.iseditid=id;
+              $scope.oldinwards=angular.copy(oldinwards);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldinwards);
+              $scope.$watch();
+            }
+            $scope.initval = function (inwardsentry) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updateinwards=function(inwardsentry,index){
+              console.log(inwardsentry);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updateinwardslist.php',
+                     data    : inwardsentry, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                      $scope.msg = "data inserted successfully ";
+                          $scope.updategasinwardsform.$setPristine();
+                          delete $scope.oldinwards;
+                           $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
 
-
-  }]);
+}]);
 
 
 app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
