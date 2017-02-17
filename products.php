@@ -11,7 +11,7 @@
 
       <div class="page-content products-page">
          <div class="title-section container">
-            <h1 class="text-center">Products</h1>
+            <h2 class="text-center" style="font-weight: 500 ! important;">Products</h2>
             <div class="underline" style="width:20%"></div>
             <p class="text-center text-muted">Have a question, comment, or just want to say hi? Drop us a line!</p>
          </div>
@@ -123,6 +123,30 @@
         </div>
       </div>
           </div>
+            <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+          <div class="card ">
+            <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
+            <div class="overlay">
+              <h2>Gas Cylinders</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+        <div class="hover ehover13">
+          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+            <div class="overlay">
+              <h2>Pressure cooker</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+           </div>
+          </div>
          <!--  <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
             <img data-src="" alt="Card image cap">
@@ -140,47 +164,130 @@
     </div></section>
             <section id="section-tzoid-2"> <h3>Aqua</h3>
 <!--       <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
- -->      <div class="album text-muted">
+ -->        <div class="album text-muted">
       <div class="container">
         <div class="row">
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+          <div class="card ">
+            <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
+            <div class="overlay">
+              <h2>Gas Cylinders</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+          </div>
+        </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+           <div class="card">
+        <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_stove_large.png" alt="Large gas stove">
+            <div class="overlay">
+              <h2>Large gas stove</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+          </div>
+        </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+          <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_stove.png" alt="Small gas stove">
+            <div class="overlay">
+              <h2>Small gas stove</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+          </div>
+        </div>
 
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap" >
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
+        <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+        <div class="hover ehover13">
+          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+            <div class="overlay">
+              <h2>Pressure cooker</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+           </div>
+          </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+             <div class="card">
+              <div class="hover ehover13">
+          <img class="img-responsive" src="images/lighter.png" alt="lighter">
+            <div class="overlay">
+              <h2>lighter</h2>
+              <h4>View
+              </h4>
+            </div>
+            </div>        
+        </div>
+          </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+             <div class="hover ehover13">
+          <img class="img-responsive" src="images/vessel.png" alt="Vessel">
+            <div class="overlay">
+              <h2>Vessel</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+      </div>
+          </div>
 
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+            <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_wire.png" alt="Gas Wire">
+            <div class="overlay">
+              <h2>Gas Wire</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+      </div>
+          </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+          <div class="card ">
+            <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
+            <div class="overlay">
+              <h2>Gas Cylinders</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+        <div class="hover ehover13">
+          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+            <div class="overlay">
+              <h2>Pressure cooker</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+           </div>
+          </div>
+         <!--  <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+            <img data-src="" alt="Card image cap">
+          
+          </div> 
+        </div>
+           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+            <img data-src="" alt="Card image cap">
+           </div> 
+          </div>  -->
         </div>
 
       </div>
@@ -190,44 +297,127 @@
  -->      <div class="album text-muted">
       <div class="container">
         <div class="row">
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+          <div class="card ">
+            <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
+            <div class="overlay">
+              <h2>Gas Cylinders</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+          </div>
+        </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+           <div class="card">
+        <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_stove_large.png" alt="Large gas stove">
+            <div class="overlay">
+              <h2>Large gas stove</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+          </div>
+        </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+          <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_stove.png" alt="Small gas stove">
+            <div class="overlay">
+              <h2>Small gas stove</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+          </div>
+        </div>
 
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap" >
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
+        <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+        <div class="hover ehover13">
+          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+            <div class="overlay">
+              <h2>Pressure cooker</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+           </div>
+          </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+             <div class="card">
+              <div class="hover ehover13">
+          <img class="img-responsive" src="images/lighter.png" alt="lighter">
+            <div class="overlay">
+              <h2>lighter</h2>
+              <h4>View
+              </h4>
+            </div>
+            </div>        
+        </div>
+          </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+             <div class="hover ehover13">
+          <img class="img-responsive" src="images/vessel.png" alt="Vessel">
+            <div class="overlay">
+              <h2>Vessel</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+      </div>
+          </div>
 
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
-          <div class="card">
-            <img data-src="holder.js/100px280/thumb" alt="Card image cap">
-<!--             <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
- -->          </div>
+          <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+            <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_wire.png" alt="Gas Wire">
+            <div class="overlay">
+              <h2>Gas Wire</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+      </div>
+          </div>
+            <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+          <div class="card ">
+            <div class="hover ehover13">
+          <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
+            <div class="overlay">
+              <h2>Gas Cylinders</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+        <div class="hover ehover13">
+          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+            <div class="overlay">
+              <h2>Pressure cooker</h2>
+              <h4>View
+              </h4>
+            </div>        
+        </div>
+           </div>
+          </div>
+         <!--  <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+            <img data-src="" alt="Card image cap">
+          
+          </div> 
+        </div>
+           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
+            <div class="card">
+            <img data-src="" alt="Card image cap">
+           </div> 
+          </div>  -->
         </div>
 
       </div>
