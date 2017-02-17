@@ -136,7 +136,7 @@ console.log($scope.addaquaproduct);
             console.log(data);
               $scope.msg = "data inserted successfully "
                delete $scope.addaquaproduct;
-                      //$scope.addaaquaform.$setPristine();
+                      $scope.addaquaproductform.$setPristine();
             
 
           });
@@ -214,7 +214,7 @@ console.log($scope.addaquaorder);
             console.log(data);
               $scope.msg = "data inserted successfully "
                delete $scope.addaquaorder;
-                      //$scope.addaaquaform.$setPristine();
+                      $scope.addaquorderform.$setPristine();
             
 
           });

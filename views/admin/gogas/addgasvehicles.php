@@ -45,8 +45,8 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
-                          <button type="submit" ng-click="reset()" class="btn btn-primary">Cancel</button>
-                          <button ng-click="insertdata(vdetails)" id="send" type="submit" class="btn btn-success">Submit</button>
+                          <button type="submit" ng-click="reset()" ng-disabled="!addgasvehicleform.$valid" class="btn btn-primary">Cancel</button>
+                          <button ng-click="insertdata(vdetails)" ng-disabled="!addgasvehicleform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
 
                           {{msg}}
                         </div>
