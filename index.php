@@ -50,7 +50,7 @@
       <div class="container">
          <div class="row">
             <div class="col-md-12">
-               <h2 class="text-center">We work to make your life healthy and happy</h2>
+               <h2 class="text-center">We work to make your life Healthy and Happy</h2>
                <div class="underline" style="width: 15%;"></div>
                <p class="text-center text-muted">Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.Aanand Murti Group of companies works on domestic services like Go gas Auto LPG Dispensing,Food Beverages,Aqua water purifier plant etc.</p>
             </div>
@@ -79,7 +79,7 @@
                   <div class="text-center">
                      <div class="panel-body">
                         <img id="img-2" src="/anandmurti/assets/images/aqua_icon.png">
-                        <h4>Aqua Amaze</h4>
+                        <h4>Aqua</h4>
                         <p class="text-center">RO + UV + TDS controller + Mineral added, 10 STAGE PURIFICATION "Aqua 
                            water purifier "
                            AN ISO 9001-2008 certified company

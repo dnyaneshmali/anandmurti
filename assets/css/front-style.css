@@ -47,6 +47,7 @@ h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     /*text-decoration: underline;*/
+    /*margin-top: 75px;*/
 }
 
 .bggradient{
@@ -216,19 +217,25 @@ a.slider-btn2 {
 .container.content {
     padding: 20px 15px;
 }
-/*.first-section {
-    margin-bottom: 30px;
-    margin-top: 30px;
-}*/
+.first-section {
+    /*margin-bottom: 30px;
+    margin-top: 30px;*/
+    padding-top: 70px;
+}
 .second-section {
-    margin-bottom: 30px;
+    /*margin-bottom: 30px;*/
     /*background-color: #f6f7f8;*/
-    padding-top: 32px;
+   /* padding-top: 32px;*/
     /*padding-bottom: 47px;*/
+    margin-bottom: 30px;
+    background-color: #f6f7f8;
+    padding-top: 32px;
+    padding-bottom: 47px;
+    margin-top: 40px;
 }
 
 .third-section{
-	padding-bottom:30px;
+	/*padding-bottom:65px;*/
 }
 .home-content-box {
     margin-top: 60px;
@@ -241,7 +248,8 @@ a.slider-btn2 {
 /*----------------Contact Page Start----------*/
 
 .page-content ,.products-page {
-    margin-top: 75px;
+    margin-top: 150px;
+    margin-bottom: 135px;
 }
 #page-contact .title-section {
     margin-top: 40px;
@@ -334,7 +342,7 @@ ul.contact-social-list li {
 /*----------------go gas----------*/
 .new-conn p.text-muted {
     margin-left: 50px;
-        margin-bottom: 80px;
+        margin-bottom: 95px;
 }
 
 /*----------------About Page Start----------*/
@@ -343,6 +351,12 @@ ul.contact-social-list li {
     padding-top: 30px;
     padding-bottom: 30px;
 }
+.page-content.about-page h2 {
+    margin-top: 5px;
+
+}
+.page-content.about-page .underline{
+ margin-bottom: 35px;}
 
 .info-section .single-item {
     padding-top: 10px;
@@ -550,17 +564,20 @@ img.owner_img {
 .about-page .customDiv{ margin:3px; min-height:300px; /*background-color:rgb(246, 247, 248);; */
    padding: 10px;
    letter-spacing: 0.5px;
-   font-family: Helvetica;
+/*   font-family: Helvetica;*/
    /*font-size: medium;*/
+   font-size: 16px;
+    font-family: 'Lato', sans-serif;
+   min-height: 400px;
    box-shadow: 0 1px 21px rgba(0,0,0,0.21);
    }
 /*index*/
 .img-mt{margin-top: 2.5%;}
 .container.carousel-mb {
-    margin-bottom: 3%;
+    margin-bottom: 10%;
 }
 .home-page h2{
-margin-top: 110px;
+/*margin-top: 90px;*/
 }
 .navbar-brand {
     float: none;}
@@ -638,8 +655,8 @@ margin-top: 110px;
 }
 .stylish-panel div#f1:hover,.stylish-panel div#f2:hover,.stylish-panel div#f3:hover,.stylish-panel div#f4:hover{
   border: 1px solid rgb(200, 200, 200);
-  /*  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;*/
-    box-shadow:rgb(185, 202, 178) 0px 5px 5px 2px;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    /*box-shadow:rgb(185, 202, 178) 0px 5px 5px 2px;*/
 }
 .home-page .panel-body , .gogas-page .panel-body{
     height: 250px;
@@ -759,10 +776,10 @@ ul.info {
     cursor: pointer;
 }
 .contact-page h2{
-  border: 0;
+  /*border: 0;
     outline: 0;
     
-    vertical-align: baseline;
+    vertical-align: baseline;*/
 }
 .contact-page ul.info li span h2 {
     background: none;
@@ -779,14 +796,14 @@ ul.info {
     vertical-align: baseline;
 }
 .innerright h2 {
-    color: #36C;
+    /*color: #36C;
     font-size: 18px;
     padding: 10px;
     margin-bottom: 15px;
     background-color: #ececec;
     text-transform: uppercase;
     font-weight: normal;
-    letter-spacing: 1px;
+    letter-spacing: 1px;*/
 }
 ul.info li {
     float: left;
@@ -895,3 +912,6 @@ h2 {
 .fl-l{
     float: left
 }
+.products-page h3{
+margin-bottom: 30px;
+margin-top: 0px;}

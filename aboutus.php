@@ -1,7 +1,7 @@
 <?php include('header.php');?>
 <div class="page-content about-page">
    <div class="title-section container">
-      <h1 class="text-center">About Us</h1>
+      <h2 class="text-center">About Us</h2>
       <div class="underline" style="width:20%"></div>
       <p class="text-center text-muted">
          <!-- Have a question, comment, or just want to say hi? Drop us a line! -->
