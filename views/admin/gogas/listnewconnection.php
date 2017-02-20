@@ -52,7 +52,7 @@
 
 
                       <tbody>
-                        <tr ng-repeat="Connection in data | filter:clisearch"  ng-form="subForm">
+                        <tr ng-repeat="Connection in data | filter:clisearch" ng-form="subForm" >
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.gcustomer_name}}</td>
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_cylinder_deposit}}</td>
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_depreciation}}</td>
@@ -71,7 +71,7 @@
                               <td ng-if="!isedit(Connection.connection_id)">
 
                           <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteuser(Connection.connection_id,$index);"><i class="fa fa-trash"></i></button></a>
-                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(Connection.connection_id);"><i class="fa fa-edit"></i></button></a>
+                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(Connection.connection_id,Connection);"><i class="fa fa-edit"></i></button></a>
                         </td>
 
                             <ng-form name="updateconnectionform">

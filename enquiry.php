@@ -2,7 +2,7 @@
       <!--End of main div-->
       <div class="page-content enquiry-page">
          <div class="title-section container">
-            <h1 class="text-center">Enquiry</h1>
+            <h2 class="text-center">Enquiry</h2>
             <div class="underline"></div>
             <p class="text-center text-muted">Have a question, comment, or just want to say hi? Drop us a line!</p>
          </div>
@@ -10,7 +10,7 @@
             <div class="container">
                <div class="row">
                   <div class="col-md-6">
-                     <form id="enquiryform" name="enquiryform" method="POST" action="#" >
+                     <form  name="enquiryform" id="enquiryform" name="enquiryform" method="POST" action="#" >
                         <div class="form-group">
                           
                            <!-- <h4 class="text-center">Enquiry Form</h4> -->
@@ -21,6 +21,10 @@
                            <input class="form-control" id="name" type="text" name="fname" placeholder="Enter Name">
                      <span id="errormsg"></span>
                         </div>
+
+
+
+
                         <div class="form-group">
                            <label for="email">Email:</label>
                            <input class="form-control" id="email" type="text" name="email" placeholder="Enter Email">

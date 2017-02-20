@@ -1,16 +1,6 @@
 <?php include('header.php');?>
 <!--End of main div-->
-<link  rel="stylesheet" href="assets/css/bootstrap.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
 
-      <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet"> -->
-     <link href="https://fonts.googleapis.com/css?family=Raleway:300|Roboto:500" rel="stylesheet">
-    <!--1 <link href="assets\css\bootstrap.min.css" rel="stylesheet"> -->
-    <link href="<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>assets/css/font-awesome.min.css" rel="stylesheet">
-    <link href="assets/css/font-awesome.min.css" rel="stylesheet">
-      <!--Font awesome file-->
-  <link rel="stylesheet" type="text/css" href="assets/css/front-style.css">
-   <link rel="stylesheet" type="text/css" href="assets/css/effects.min.css">
 <div class="page-content contact-page">
    <div class="container" id="content" style="margin-top:20px;">
      <!--  <div class="row">
@@ -18,12 +8,12 @@
             <div id="content" style="margin-top:20px;">
                <div class="container"> -->
                   <div class="row">
-                     <div class="col-md-12 col-sm-12 col-xs-12 col-lg-12">
+                     <div class="col-md-6 col-sm-12 col-xs-12 col-lg-12 offset-md-6">
                         <div class="contentarea">
                            <div class="innerright">
-                              <h1>
+                              <h2>
                                  <center>Contact us</center>
-                              </h1>
+                              </h2>
                               <div class="underline" style="width:25%"></div>
                               <iframe width="1000" height="450" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style=" margin-top: 30px;">
                               </iframe>
@@ -39,7 +29,7 @@
                                  <li>
                                     <img src="/anandmurti/assets/images/mobile.png" alt="" class="cnt"   width="58" height="58"   />
                                     <span>
-                                       <h2>Teliphone</h2>
+                                       <h2>Telephone</h2>
                                        (120) 4609000 <br />
                                        (120) 2470800 
                                     </span>

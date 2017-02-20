@@ -32,9 +32,9 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder=" Total Price" ng-model="gasinwards.tprice" id="tprice" class="form-control" name="tprice" required/>
+                          <input type="text" placeholder=" Total Price" ng-pattern="/^\d+$/"  ng-model="gasinwards.tprice" id="tprice" class="form-control" name="tprice" required/>
                         </div>
-                          <p class="val-style" ng-show="inwardsform.tprice.$invalid && !inwardsform.tprice.$pristine" class="help-block"> required</p>
+                          <p class="val-style" ng-show="inwardsform.tprice.$invalid && !inwardsform.tprice.$pristine" class="help-block">accept digits only required</p>
                         </div>
                       </div>
                        <div class="item form-group">
@@ -63,7 +63,7 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
-                          <button type="submit" ng-click="reset()" class="btn btn-primary">Cancel</button>
+                          <button type="submit" ng-click="reset()" ng-disabled="!inwardsform.$valid" class="btn btn-primary">Cancel</button>
                           <button ng-click="insertdata(gasinwards)" ng-disabled="!inwardsform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
 
                           {{msg}}
