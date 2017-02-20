@@ -10,8 +10,23 @@
     /*padding-top: 70px;*/
 
     margin-top: 20px;
-}</style>
-<div class="page-content contact-page">
+}
+.circle-icon {
+    background: #ffc0c0;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 100px;
+    vertical-align: middle;
+    padding: 30px;
+}
+.icon-background4 {
+    color: #c0ffc0;
+}
+
+</style>
+<div class="page-content d-contact-page">
   
   <div class="container">
 
@@ -27,12 +42,79 @@
                                   <div class="underline" style="width:25%; margin-bottom: 80px;"></div>
                               </h2>
                 
-                <div class="col-md-8">
+                <div class="col-md-7">
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-                    <iframe width="100%" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style="border:1px solid gray;">
+                    <iframe width="100%" height="430" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed">
                               </iframe>
                 </div>
-                <div class="col-md-4">
+                     <div class="col-md-offset-1 col-md-4 pd-right-25">
+                     <div class="row contact-details">
+                        <div class="item">
+                           <div class="icon">
+                              <i class="fa fa-map-marker"></i>
+                           </div>
+                           <div class="content">
+                              Softinfology Pvt. Ltd.<br/>
+                              #314, World Trade Center<br/>
+                              Near EON IT Park,<br/>
+                              Kharadi Pune-41453<br/>
+                           </div>
+                        </div>
+                        <div class="item">
+                           <div class="icon">
+                              <i class="fa fa-phone"></i>
+                           </div>
+                           <div class="content">
+                              Softinfology Pvt. Ltd.<br/>
+                              #314, World Trade Center<br/>
+                              Near EON IT Park,<br/>
+                              Kharadi Pune-41453<br/>
+                           </div>
+                        </div>
+                        <div class="item">
+                           <div class="icon">
+                              <i class="fa fa-envelope-o"></i>
+                           </div>
+                           <div class="content">
+                              Softinfology Pvt. Ltd.<br/>
+                              #314, World Trade Center<br/>
+                              Near EON IT Park,<br/>
+                              Kharadi Pune-41453<br/>
+                           </div>
+                        </div>
+                   <!--      <div class="social-shares">
+                           <h2>Share</h2>
+                           <ul class="contact-social-list">
+                              <li>
+                                 <a href="#" class="facebook">
+                                 <i class="fa fa-facebook"></i>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#" class="twitter">
+                                 <i class="fa fa-twitter"></i>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#" class="linkedin">
+                                 <i class="fa fa-linkedin"></i>
+                                 </a>
+                              </li>
+                              <li>
+                                 <a href="#" class="google">
+                                 <i class="fa fa-google-plus"></i>
+                                 </a>
+                              </li> -->
+                             <!--  <li>
+                                 <a href="#" class="rss">
+                                 <i class="fa fa-rss"></i>
+                                 </a>
+                              </li>
+                           </ul>
+                        </div> -->
+                     </div>
+                  </div>
+         <!--        <div class="col-md-4">
                     <p><i class="fa fa-phone"></i>  Phone:
                         <strong>123.456.7890</strong>
                     </p>
@@ -49,7 +131,7 @@
                             <br>Beverly Hills, CA 90210
                             <br>Beverly Hills, CA 90210</strong>
                     </p>
-                </div>
+                </div> -->
                 <div class="clearfix m-b-100"></div>
             </div>
         </div>
