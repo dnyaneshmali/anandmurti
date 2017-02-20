@@ -111,7 +111,7 @@
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addgogasform.gcustomer_proof.$invalid && !addgogasform.gcustomer_proof.$pristine }" >
                           <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-lock"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-newspaper-o"></i></span>
                           <input type="text" placeholder="Proof" ng-model="gogascustomers.gcustomer_proof" id="     gcustomer_proof" class="form-control" name="gcustomer_proof" >
                         </div>
                           <p class="val-style" ng-show="addgogasform.gcustomer_proof.$invalid && !addgogasform.gcustomer_proof.$pristine" class="help-block">Required.</p>

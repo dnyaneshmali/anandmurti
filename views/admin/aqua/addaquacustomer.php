@@ -9,7 +9,7 @@
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-truck"></i></span>
+                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
                           <input type="text" placeholder="Customer Name" class="form-control" ng-model="aquacustomers.acustomer_name" id="acustomer_name" class="form-control" name="acustomer_name" required />
                            </div>
                           <p class="val-style" ng-show="addaaquaform.acustomer_name.$invalid && !addaaquaform.acustomer_name.$pristine" class="help-block"> required.</p>     
@@ -48,7 +48,7 @@
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-truck"></i></span>
+                             <span class="input-group-addon"><i class="fa fa-home"></i></span>
                           <input type="text" placeholder="Customer Address" class="form-control" ng-model="aquacustomers.acustomer_address" id="acustomer_address" class="form-control" name="acustomer_address" required />
                            </div>
                           <p class="val-style" ng-show="addaaquaform.acustomer_address.$invalid && !addaaquaform.acustomer_address.$pristine" class="help-block"> required.</p>     

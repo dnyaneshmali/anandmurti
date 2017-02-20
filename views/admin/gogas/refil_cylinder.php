@@ -1,5 +1,5 @@
 <div class="refill-cy">
-<h1>Refil Cylinder</h1>
+<h1>Refill Cylinder</h1>
 <div class="refilform" ng-controller="Refilcylinderctrl">
 <form name="refilform" class="form-horizontal form-label-left" nonvalidate>
                      <!--  <span class="section">Personal Info</span> -->

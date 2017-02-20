@@ -4035,6 +4035,12 @@ color: #f36998;}*/
 /*validation */
 .val-style{color:red; margin-left: 45px;}
 
+
+
+input:focus
+{
+background-color:rgb(191, 226, 242);
+
 /*graph demo */
 
 .containr {
