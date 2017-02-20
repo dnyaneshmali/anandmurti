@@ -572,23 +572,40 @@ app.controller('Addgasinwardsctrl', ['$scope','$http', function($scope,$http) {
      .success(function(data) {
             //$scope.gasinwards = {pquantity:'1'};
             $scope.productprice=data;
-            $scope.gasinwards = {tprice:data[0].product_price};
-            //console.log(data[0].product_price);
+            //$scope.gasinwards = {tprice:data[0].product_price};
+            console.log(data[0].product_price);
             
 
           });
 
 }
 
-
 $scope.changedquantity=function(pquantity,product_id){
-
 $scope.pquantity = {};
 $scope.product_id = {};
 $scope.pquantity = angular.copy(pquantity);
 $scope.product_id = angular.copy(product_id);
-console.log($scope.pquantity);
-console.log($scope.product_id);
+//console.log($scope.pquantity);
+//console.log($scope.product_id);
+$http({
+          method  : 'POST',
+          url     : '../../models/getgasproductprice.php',
+          data    : {'product':product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            //console.log(data);
+            $scope.productprice=data;
+            console.log(data[0].product_price);
+            var fprice = data[0].product_price;
+            var fpquantity = $scope.pquantity;
+            var totalprice = fprice*fpquantity;
+            $scope.gasinwards = {tprice:totalprice};
+            
+
+          });
+
 
 }
 

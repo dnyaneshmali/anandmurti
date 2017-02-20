@@ -15,32 +15,20 @@
                         </div>
                         </div>
                       </div>
-                   <!--   <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="pquantity">Product Quantity<span class="required">*</span>
-                        </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Product Quantity" ng-pattern="/^\d+$/" ng-model="gasinwards.pquantity" id="pquantity" ng-change="changedquantity(gasinwards.pquantity,plist.product_id)" class="form-control" name="pquantity" required />
-                        </div>
-                          <p class="val-style" ng-show="inwardsform.pquantity.$invalid && !inwardsform.pquantity.$pristine" class="help-block">Accept digits only</p>
-                        </div>
-                      </div> -->
-
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="pquantity">Product Quantity<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Product Quantity" ng-pattern="/^\d+$/" ng-model="gasinwards.pquantity" id="pquantity" ng-init="gasinwards.pquantity='1'" value="1" class="form-control" name="pquantity" required />
+                          <input type="text" placeholder="Product Quantity" ng-pattern="/^\d+$/" ng-model="gasinwards.pquantity" id="pquantity" ng-change="changedquantity(gasinwards.pquantity,gasinwards.product)" class="form-control" name="pquantity" required />
                         </div>
                           <p class="val-style" ng-show="inwardsform.pquantity.$invalid && !inwardsform.pquantity.$pristine" class="help-block">Accept digits only</p>
                         </div>
-                      </div>
+                      </div> 
 
 
-                     <!--  <div class="item form-group">
+                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="tprice">Total Price<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
@@ -50,19 +38,8 @@
                         </div>
                           <p class="val-style" ng-show="inwardsform.tprice.$invalid && !inwardsform.tprice.$pristine" class="help-block">accept digits only required</p>
                         </div>
-                      </div> -->
+                      </div> 
 
-                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="tprice">Total Priceee<span class="required">*</span>
-                        </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder=" Total Price" ng-pattern="/^\d+$/"  ng-model="gasinwards.tprice" value="{{gasinwards.tprice}}" ng-init='gasinwards.tprice=[gasinwards.pquantity*gasinwards.tprice]' readonly  id="tprice" class="form-control" name="tprice" required/>
-                        </div>
-                          <p class="val-style" ng-show="inwardsform.tprice.$invalid && !inwardsform.tprice.$pristine" class="help-block">accept digits only required</p>
-                        </div>
-                      </div>
 
 
                       
