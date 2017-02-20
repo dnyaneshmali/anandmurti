@@ -16,7 +16,7 @@ Table Of content
   ::-webkit-scrollbar-thumb {
      /*background: linear-gradient(to top,#e96253 0,#251c1d 100%);*/
      /*background: linear-gradient(to top,#a0d88a 0,#ded8d8 100%);*/
-     background: linear-gradient(to bottom,#226b8c 0,#ded8d8 100%);
+     background: linear-gradient(to bottom,#86c2de 0,#86c2de 100%);
     -webkit-border-radius: 3px;
   }
 
@@ -456,7 +456,7 @@ background-color: #6eb94e;
 
 
 .title-section.container {
-    padding-top: 40px;
+    padding-top: 65px;
         margin-bottom: 30px;
 }
 .upper_slider .item img{
@@ -632,7 +632,8 @@ img.owner_img {
 }
 .home-page .third-section,.aqua-page .third-section {
         background-color: white;
-            margin-bottom: 30px;
+            margin-bottom: 80px;
+            margin-top: 75px;
 }
 .stylish-panel > div > #f1,.stylish-panel > div > #f2,.stylish-panel > div > #f3,.stylish-panel > div > #f4{
     padding: 10px;
@@ -690,7 +691,9 @@ img.owner_img {
     /* background: url(/anandmurti/assets/images/contactbg1.png) repeat; */
     width: 1000;
     height: 460px;
-    background-color: #607D8B;
+/*    background-color: #607D8B;*/
+/*background-color: #78a7bd;*/
+background: linear-gradient(91deg, rgba(20,47,201,1) 0%, #3CC9C2 100%);
     opacity: 0.8;
     position: absolute;
     top: 53px;
@@ -722,6 +725,7 @@ img.owner_img {
     padding: 0px 20px 10px;
     overflow: hidden;
     min-height: 454px;
+    /*padding-left: 130px;*/
 }
 
 .cntleft {

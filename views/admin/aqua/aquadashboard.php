@@ -2,9 +2,9 @@
 <div class="row top_tiles">
               <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="tile-stats">
-                 <div class="icon"><i class="fa fa-tint"></i></div>
+                 <div class="icon"><i class="fa fa-fire"></i></div>
                   <div class="count">99</div>
-                  <h3>Aqua</h3>
+                  <h3>Go Gas</h3>
                   <!-- <p>Lorem ipsum psdea itgum rixt.</p> -->
                 </div>
               </div>
@@ -18,9 +18,9 @@
               </div>
               <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="tile-stats">
-                 <div class="icon"><i class="fa fa-tint"></i></div>
+                 <div class="icon"><i class="fa fa-coffee"></i></div>
                   <div class="count">99</div>
-                  <h3>Aqua</h3>
+                  <h3>Food Beverages</h3>
                   <!-- <p>Lorem ipsum psdea itgum rixt.</p> -->
                 </div>
               </div>

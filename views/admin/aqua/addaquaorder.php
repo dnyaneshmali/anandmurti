@@ -63,7 +63,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Order type" class="form-control" ng-model="addaquaorder.order_price" ng-pattern="/^\d+$/" id="order_price" class="form-control" name="order_price" required />
+                          <input type="text" placeholder="Order Price" class="form-control" ng-model="addaquaorder.order_price" ng-pattern="/^\d+$/" id="order_price" class="form-control" name="order_price" required />
                         </div>
                            <p class="val-style" ng-show="addaquorderform.order_price.$invalid && !addaquorderform.order_price.$pristine" class="help-block">accept only digits required</p>
                         </div>
