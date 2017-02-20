@@ -540,34 +540,40 @@ $scope.isedit=function(id){
 
 app.controller('Addgasinwardsctrl', ['$scope','$http', function($scope,$http) {
 
+
  $http.get("../../models/getgasproducts.php")
     .success(function(data){
         $scope.allproducts=data
-        console.log($scope.allproducts);
+        //console.log($scope.allproducts);
+        //console.log(data[0].product_name);
+        //$scope.gasinwards = {tprice:data[0].product_name};
     });
+
+
 
     $http.get("../../models/getgasvehicles.php")
     .success(function(data){
         $scope.vehiclesdata=data
-        console.log($scope.vehiclesdata);
+        //console.log($scope.vehiclesdata);
     });
 
     $scope.changedpname=function(product){
-      //alert('test');
-  $scope.product = {};
-$scope.product = angular.copy(product);
-console.log($scope.product);
-   $http({
+    
+    $scope.product = {};
+    $scope.product = angular.copy(product);
+    //console.log($scope.product);
+    $http({
           method  : 'POST',
           url     : '../../models/getgasproductprice.php',
-          data    : {'product': product}, //forms user object
-          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+          data    : {'product':product}, //forms user object
+          headers : {'Content-Type':'application/x-www-form-urlencoded'} 
          })
 
      .success(function(data) {
-            console.log(data);
-            $scope.productprice=data
-            console.log($scope.productprice);
+            //$scope.gasinwards = {pquantity:'1'};
+            $scope.productprice=data;
+            $scope.gasinwards = {tprice:data[0].product_price};
+            //console.log(data[0].product_price);
             
 
           });
@@ -575,10 +581,22 @@ console.log($scope.product);
 }
 
 
-    $scope.insertdata=function(gasinwards){
+$scope.changedquantity=function(pquantity,product_id){
+
+$scope.pquantity = {};
+$scope.product_id = {};
+$scope.pquantity = angular.copy(pquantity);
+$scope.product_id = angular.copy(product_id);
+console.log($scope.pquantity);
+console.log($scope.product_id);
+
+}
+
+
+  $scope.insertdata=function(gasinwards){
   $scope.gasinwards = {};
-$scope.gasinwards = angular.copy(gasinwards);
-console.log($scope.gasinwards);
+  $scope.gasinwards = angular.copy(gasinwards);
+  console.log($scope.gasinwards);
    $http({
           method  : 'POST',
           url     : '../../models/insertgasinwards.php',
