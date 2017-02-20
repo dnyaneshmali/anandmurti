@@ -1,4 +1,17 @@
 <div ng-controller="Aquadashboardctrl">
+<div class ="row top_tiles">
+  <div class="col-lg-6 col-md-6 col-xs-12">
+  <div class="containr" ng-style="setContainer()">
+<div class='bar' ng-repeat="bar in bars" ng-style="setDetails(bar,$index)">{{bar.color}}-{{bar.percentage}}</div>
+
+</div>
+</div>
+  <div class="col-lg-6 col-md-6 col-xs-12">
+  <div class="containr" ng-style="setContainer()">
+<div class='bar' ng-repeat="bar in bars" ng-style="setDetails(bar,$index)">{{bar.color}}-{{bar.percentage}}</div>
+
+</div>
+</div>
 <div class="row top_tiles">
               <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="tile-stats">

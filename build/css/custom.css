@@ -4034,3 +4034,20 @@ color: #f36998;}*/
 
 /*validation */
 .val-style{color:red; margin-left: 45px;}
+
+/*graph demo */
+
+.containr {
+position: relative;
+border-bottom: 1px solid #000;
+margin: 0px auto 25px;
+
+font-size: 14px;
+color: white;
+}
+.bar {
+position: absolute;
+bottom: 0px;
+text-align: center;
+word-break: break-all;
+}

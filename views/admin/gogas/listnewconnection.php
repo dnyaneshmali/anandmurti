@@ -75,7 +75,8 @@
                         </td>
 
                             <ng-form name="updateconnectionform">
-                   <td ng-if="isedit(Connection.connection_id)">{{Connection.gcustomer_name}}</td>
+                   <td ng-if="isedit(Connection.connection_id)">
+                   {{Connection.gcustomer_name}}</td>
 
 
                             
