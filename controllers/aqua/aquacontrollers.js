@@ -3,10 +3,42 @@
  */
 
 app.controller('Aquadashboardctrl', ['$scope','$http', function($scope,$http) {
+$scope.container = {width:500, height:300, gap:10};
+$scope.bars= [
+{color:'blue', percentage:50},
+{color:'orange', percentage:30},
+{color:'red', percentage:100},
+{color:'green', percentage:90},
+];
+$scope.setContainer = function() {
+return {
+'padding-right': $scope.container.gap + 'px',
+'width': $scope.container.width + 'px',
+'height': $scope.container.height + 'px'
+};
+};
+$scope.setDetails = function(bar, index) {
+var barWidth = $scope.container.width/$scope.bars.length - $scope.
+container.gap;
+return {
+height: bar.percentage + '%',
+background: bar.color,
+width: barWidth/1.3 + 'px',
+left: $scope.container.gap + ($scope.container.gap +
+barWidth)*index + 'px'
+};
+};
+
   $http.get("../../models/getorderreminder.php")
     .success(function(data){
         $scope.reminderdata=data
         console.log($scope.reminderdata);
+        $scope.bars= [
+{color:'blue', percentage:$scope.reminderdata[0].order_quantity},
+{color:'orange', percentage:$scope.reminderdata[1].order_quantity},
+{color:'red', percentage:$scope.reminderdata[2].order_quantity},
+
+];
     });
 
 }]);
@@ -136,7 +168,7 @@ console.log($scope.addaquaproduct);
             console.log(data);
               $scope.msg = "data inserted successfully "
                delete $scope.addaquaproduct;
-                      //$scope.addaaquaform.$setPristine();
+                      $scope.addaquaproductform.$setPristine();
             
 
           });
@@ -214,7 +246,7 @@ console.log($scope.addaquaorder);
             console.log(data);
               $scope.msg = "data inserted successfully "
                delete $scope.addaquaorder;
-                      //$scope.addaaquaform.$setPristine();
+                      $scope.addaquorderform.$setPristine();
             
 
           });

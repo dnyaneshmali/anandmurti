@@ -1,4 +1,17 @@
 <div ng-controller="Aquadashboardctrl">
+<div class ="row top_tiles">
+  <div class="col-lg-6 col-md-6 col-xs-12">
+  <div class="containr" ng-style="setContainer()">
+<div class='bar' ng-repeat="bar in bars" ng-style="setDetails(bar,$index)">{{bar.color}}-{{bar.percentage}}</div>
+
+</div>
+</div>
+  <div class="col-lg-6 col-md-6 col-xs-12">
+  <div class="containr" ng-style="setContainer()">
+<div class='bar' ng-repeat="bar in bars" ng-style="setDetails(bar,$index)">{{bar.color}}-{{bar.percentage}}</div>
+
+</div>
+</div>
 <div class="row top_tiles">
               <div class="animated flipInY col-lg-4 col-md-4 col-sm-6 col-xs-12">
                 <div class="tile-stats">
@@ -51,8 +64,8 @@
                   <div class="x_content">
                     <article class="media event" ng-repeat="orderreminder in reminderdata">
                       <a class="pull-left date">
-                        <p class="month">April</p>
-                        <p class="day">23</p>
+                        <p class="month">{{orderreminder.order_delivery_date | date:'MM'}}</p>
+                        <p class="day">{{orderreminder.order_delivery_date | date:'dd'}}</p>
                       </a>
                       <div class="media-body">
                         <a class="title" href="#">{{orderreminder.customer_name}}</a>
