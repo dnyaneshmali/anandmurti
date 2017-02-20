@@ -26,15 +26,17 @@
                         </div>
                         </div>
                       </div>
-                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select Order Type <span class="required">*</span>
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select Customer <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
-                         <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
-                          <input type="text" placeholder="Select order type" class="form-control" ng-model="addaquaorder.jar_type" id="jar_type" class="form-control" name="jar_type" list="jarlist" required />
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
+                          <select class="form-control" ng-model="addaquaorder.jar_id" name="jar_id"  ng-required="true">
+                          <option ng-repeat="jlist in jardata" value="{{jlist.jar_id}}">{{jlist.jar_type}}</option>
+                          </select>
                         </div>
-                          <p class="val-style" ng-show="addaquorderform.jar_type.$invalid && !addaquorderform.jar_type.$pristine" class="help-block">required</p>
                         </div>
                       </div>
                     <div class="item form-group">

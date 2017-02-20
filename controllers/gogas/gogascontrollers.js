@@ -612,7 +612,7 @@ app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
 
     $scope.deleteinwards=function(inwards_id,index){
     alert('in delete function');
-console.log(inwards_id);
+    console.log(inwards_id);
      $http({
           method  : 'POST',
           url     : '../../models/deletegasinwards.php',
@@ -686,14 +686,11 @@ console.log($scope.salegasproduct);
           data    : $scope.salegasproduct, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
-
      .success(function(data) {
             console.log(data);
               $scope.msg = "data inserted successfully "
                delete $scope.salegasproduct;
                       $scope.salegasproductform.$setPristine();
-            
-
           });
 
 }

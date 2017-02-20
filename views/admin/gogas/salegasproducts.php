@@ -15,7 +15,6 @@
                         </div>
                         </div>
                       </div>
-
                        <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Product Quantity<span class="required">*</span>
                         </label>
@@ -38,8 +37,6 @@
                          <p class="val-style" ng-show="salegasproductform. Product_price.$invalid && !salegasproductform.Product_price.$pristine" class="help-block"> Prize required accept only digits.</p>
                         </div>
                       </div>
-
-                     
                         <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Product Total Price<span class="required">*</span>
                         </label>
@@ -51,13 +48,11 @@
                           <p class="val-style" ng-show="salegasproductform.Product_tprice.$invalid && !salegasproductform.Product_tprice.$pristine" class="help-block"> Prize required accept only digits.</p>
                         </div>
                       </div>
-
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
                           <button type="submit" class="btn btn-primary">Cancel</button>
                           <button ng-click="insertdata(salegasproduct)" ng-disabled="!salegasproductform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
-
                           {{msg}}
                         </div>
                       </div>
