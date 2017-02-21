@@ -3,7 +3,7 @@ $root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
 include($root."/config/config.php");
 $data=array();
 
-//$query="SELECT * FROM  tbl_gas_inwards";
+//$query="$query="SELECT DISTINCT tbl_new_connection.gcustomer_id,tbl_gogas_customers.gcustomer_name FROM  tbl_new_connection INNER JOIN tbl_gogas_customers On tbl_new_connection.gcustomer_id = tbl_gogas_customers.gcustomer_id;
 $query="select tbl_gas_inwards.*,tbl_gproducts.product_name,tbl_gproducts.product_id,tbl_gvehicle_details.gvehicle_id,tbl_gvehicle_details.gvehicle_owner_name from tbl_gas_inwards INNER JOIN tbl_gproducts On tbl_gas_inwards.product_id = tbl_gproducts.product_id INNER JOIN tbl_gvehicle_details ON tbl_gas_inwards.vehicle_id = tbl_gvehicle_details.gvehicle_id
 ";
 $result = mysqli_query($connection,$query);

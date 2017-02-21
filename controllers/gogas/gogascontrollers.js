@@ -714,20 +714,120 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
         console.log($scope.getinwardsproducts);
     });
 
-    $scope.insertdata=function(salegasproduct){
+    $scope.changedspname=function(product){
+    $scope.product = {};
+    $scope.product = angular.copy(product);
+    //console.log($scope.product);
+
+
+    $http({
+          method  : 'POST',
+         /* url     : '../../models/getsinwadsproducts.php', */
+         url     : '../../models/getgproductcount.php',
+          data    : {'product':product}, //forms user object
+          headers : {'Content-Type':'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            //$scope.pquantity = '1';
+            //console.log(data);
+           $scope.availquantity = data[0].product_quantity;
+           var sremainquantity = $scope.availquantity-1;
+           $scope.remainquantity = sremainquantity;
+            console.log(data[0].product_quantity);
+          });
+
+
+
+
+    $http({
+          method  : 'POST',
+         /* url     : '../../models/getsinwadsproducts.php', */
+         url     : '../../models/getgasproductprice.php',
+          data    : {'product':product}, //forms user object
+          headers : {'Content-Type':'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            //$scope.pquantity = '1';
+            console.log(data);
+           $scope.product_quantity = '1';
+           $scope.Product_price = data[0].product_price;
+          $scope.Product_tprice = data[0].product_price;
+            //console.log($scope.tprice);
+          });
+
+}
+
+
+$scope.changedsquantity=function(product_quantity,product_id){
+$scope.product_quantity = {};
+$scope.product_id = {};
+$scope.product_quantity = angular.copy(product_quantity);
+$scope.product_id = angular.copy(product_id);
+
+$http({
+          method  : 'POST',
+         /* url     : '../../models/getsinwadsproducts.php', */
+         url     : '../../models/getgproductcount.php',
+          data    : {'product':product_id}, //forms user object
+          headers : {'Content-Type':'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            //$scope.pquantity = '1';
+            //console.log(data);
+            var tquantity = data[0].product_quantity;
+            var epquantity = $scope.product_quantity;
+            var remainquantity = tquantity-epquantity;
+            $scope.remainquantity = remainquantity;
+          });
+
+
+
+
+
+$http({
+          method  : 'POST',
+          url     : '../../models/getgasproductprice.php',
+          data    : {'product':product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            $scope.productprice=data;
+            console.log(data[0].product_price);
+            var fprice = data[0].product_price;
+            var fpquantity = $scope.product_quantity;
+            var totalprice = fprice*fpquantity;
+            $scope.Product_tprice = totalprice;
+          });
+
+
+}
+
+
+
+
+
+
+  $scope.insertdata=function(){
   $scope.salegasproduct = {};
-$scope.salegasproduct = angular.copy(salegasproduct);
-console.log($scope.salegasproduct);
+  $scope.gasinwards = {};
+  $scope.product = angular.copy($scope.product);
+  $scope.product_quantity = angular.copy($scope.product_quantity);
+  $scope.Product_price = angular.copy($scope.Product_price);
+  $scope.Product_tprice = angular.copy($scope.Product_tprice);
    $http({
           method  : 'POST',
           url     : '../../models/insertsaleproducts.php',
-          data    : $scope.salegasproduct, //forms user object
+          data    : {'product':$scope.product,'product_quantity':$scope.product_quantity,'Product_price':$scope.Product_price,'Product_tprice':$scope.Product_tprice}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
             console.log(data);
               $scope.msg = "data inserted successfully "
-               delete $scope.salegasproduct;
+               //delete $scope.salegasproduct;
                       $scope.salegasproductform.$setPristine();
           });
 
