@@ -31,9 +31,10 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Price" ng-model="addjardetails.jar_price" ng-pattern="/^\d+$/" id="jar_price" class="form-control" name="jar_price" required />
+                          <input type="text" placeholder="Price" ng-model="addjardetails.jar_price" ng-pattern="/^[0-9]{1,10}$/"
+                   id="jar_price" class="form-control" name="jar_price" required />
                         </div>
-                            <p class="val-style" ng-show="addjardetailsform. jar_price.$invalid && !addjardetailsform.jar_price.$pristine" class="help-block"> Prize required accept only digits.</p>
+                            <p class="val-style" ng-show="addjardetailsform. jar_price.$invalid && !addjardetailsform.jar_price.$pristine" class="help-block"> Prize required accept only upto 10 digits.</p>
                         </div>
                       </div>
                         
