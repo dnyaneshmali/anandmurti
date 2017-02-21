@@ -16,6 +16,8 @@
       <link href="https://fonts.googleapis.com/css?family=Lato:350,700" rel="stylesheet">
      <link  rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css">
     <script src="<?php echo base_url(); ?>/assets/js/angular.min.js"></script>
+    <script src="http://localhost/anandmurti/config/app.js"></script>
+
         <script src="<?php echo base_url(); ?>/controllers/LoginController.js"></script>
         <script src="assets/js/angular-route.min.js" type="text/javascript"></script>
         <script src="assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>

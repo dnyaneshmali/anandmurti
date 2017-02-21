@@ -5,10 +5,10 @@
 app.controller('Aquadashboardctrl', ['$scope','$http', function($scope,$http) {
 $scope.container = {width:500, height:300, gap:10};
 $scope.bars= [
-{color:'blue', percentage:50},
-{color:'orange', percentage:30},
-{color:'red', percentage:100},
-{color:'green', percentage:90},
+{color:'#803690', percentage:50},
+{color:'#DCDCDC', percentage:30},
+{color:'#46BFBD', percentage:100},
+{color:'#FDB45C', percentage:90},
 ];
 $scope.setContainer = function() {
 return {
@@ -532,7 +532,7 @@ console.log($scope.vdetails);
             console.log(data);
               $scope.msg = "data inserted successfully "
                delete $scope.vdetails;
-                      //$scope.addaaquaform.$setPristine();
+                    $scope.addvehicleform.$setPristine();
             
 
           });
