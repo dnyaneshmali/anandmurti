@@ -570,10 +570,12 @@ app.controller('Addgasinwardsctrl', ['$scope','$http', function($scope,$http) {
          })
 
      .success(function(data) {
-            //$scope.gasinwards = {pquantity:'1'};
+            $scope.pquantity = '1';
+            //console.log($scope.pquantity);
             $scope.productprice=data;
-            //$scope.gasinwards = {tprice:data[0].product_price};
-            console.log(data[0].product_price);
+            $scope.tprice = data[0].product_price;
+            //console.log(data[0].product_price);
+            //console.log($scope.tprice);
             
 
           });
@@ -600,7 +602,7 @@ $http({
             var fprice = data[0].product_price;
             var fpquantity = $scope.pquantity;
             var totalprice = fprice*fpquantity;
-            $scope.gasinwards = {tprice:totalprice};
+            $scope.tprice = totalprice;
           });
 
 
@@ -609,19 +611,23 @@ $http({
 
   $scope.insertdata=function(){
   $scope.gasinwards = {};
+  $scope.product = angular.copy($scope.product);
+  $scope.pquantity = angular.copy($scope.pquantity);
+  $scope.tprice = angular.copy($scope.tprice);
   $scope.distributor_name = angular.copy($scope.distributor_name);
-  console.log($scope.distributor_name);
+  $scope.vehicle = angular.copy($scope.vehicle);
+  //console.log($scope.distributor_name);
    $http({
           method  : 'POST',
           url     : '../../models/insertgasinwards.php',
-          data    : $scope.distributor_name, //forms user object
+          data    : {'product':$scope.product,'pquantity':$scope.pquantity,'tprice':$scope.tprice,'distributor_name':$scope.distributor_name,'vehicle':$scope.vehicle}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
 
      .success(function(data) {
             console.log(data);
               $scope.msg = "data inserted successfully "
-               delete $scope.gasinwards;
+              // delete $scope.gasinwards;
                       $scope.inwardsform.$setPristine();
             
 
