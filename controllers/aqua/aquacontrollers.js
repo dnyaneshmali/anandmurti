@@ -532,7 +532,7 @@ console.log($scope.vdetails);
             console.log(data);
               $scope.msg = "data inserted successfully "
                delete $scope.vdetails;
-                      //$scope.addaaquaform.$setPristine();
+                    $scope.addvehicleform.$setPristine();
             
 
           });
