@@ -595,29 +595,26 @@ $http({
          })
 
      .success(function(data) {
-            //console.log(data);
             $scope.productprice=data;
             console.log(data[0].product_price);
             var fprice = data[0].product_price;
             var fpquantity = $scope.pquantity;
             var totalprice = fprice*fpquantity;
             $scope.gasinwards = {tprice:totalprice};
-            
-
           });
 
 
 }
 
 
-  $scope.insertdata=function(gasinwards){
+  $scope.insertdata=function(){
   $scope.gasinwards = {};
-  $scope.gasinwards = angular.copy(gasinwards);
-  console.log($scope.gasinwards);
+  $scope.distributor_name = angular.copy($scope.distributor_name);
+  console.log($scope.distributor_name);
    $http({
           method  : 'POST',
           url     : '../../models/insertgasinwards.php',
-          data    : $scope.gasinwards, //forms user object
+          data    : $scope.distributor_name, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
 

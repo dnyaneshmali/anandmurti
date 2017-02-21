@@ -1,4 +1,4 @@
-var loginapp = angular.module('AnandMurtiLogin', ['ngStorage']);
+var loginapp = angular.module('AnandMurtiLogin', ['ngStorage','ui.bootstrap']);
 
 loginapp.controller('loginCtrl',['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage, $location) {
 // $scope.data = {};
@@ -11,7 +11,7 @@ loginapp.controller('loginCtrl',['$scope', '$http', '$window', '$localStorage', 
           data    : $scope.data, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
-
+     
      .success(function(data) {
               console.log(data);
               ssid = data[0].admin_id;
