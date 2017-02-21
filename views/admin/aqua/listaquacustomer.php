@@ -84,12 +84,39 @@
                            <p style="color:red;" ng-show="subForm.acustomer_address.$error.required"> address is required.</p>
                           </td>
                            
-                           <td ng-if="isedit(aquacustomer.acustomer_id)">
+                           <!-- <td ng-if="isedit(aquacustomer.acustomer_id)">
                           <input type="text" ng-value="aquacustomer.acustomer_type" ng-model="aquacustomer.acustomer_type" name=" acustomer_type" style="width:auto;" required>
                           <p style="color:red;" ng-show="subForm.acustomer_type.$error.required">Type
                               is required.</p>
                           </td>
-                           
+                            -->
+
+                             <td ng-if="isedit(aquacustomer.acustomer_id)">
+
+
+                            <!-- code by me -->
+                          <select class="form-control" ng-model="aquacustomer.acustomer_type" name="acustomer_type">
+                            <option value="" ng-selected="aquacustomer.acustomer_type == ''">Customer Type</option>
+                            <option value="temporary" ng-selected="aquacustomer.acustomer_type == 'temporary'"> temporary </option>
+                            <option value="Regular" ng-selected="aquacustomer.acustomer_type == 'Regular'">Regular </option>
+                             
+                          </select>
+                          <!-- code by me ends -->
+
+
+
+                          <input type="text" ng-value="aquacustomer.acustomer_type" ng-model="aquacustomer.acustomer_type" name="acustomer_type" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.acustomer_type.$error.required">  type is required.</p>
+                          </td>
+
+
+
+
+
+
+
+
+
 
 
 
