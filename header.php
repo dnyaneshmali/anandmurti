@@ -9,6 +9,7 @@
       <title>Anandmurti</title>
       <link  rel="stylesheet" href="assets/css/bootstrap.min.css">
       <link href="https://fonts.googleapis.com/css?family=Lato:400,700" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Homemade+Apple" rel="stylesheet">
 
       <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet"> -->
      <link href="https://fonts.googleapis.com/css?family=Raleway:300|Roboto:500" rel="stylesheet">
