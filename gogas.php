@@ -22,7 +22,15 @@
             <p class="text-center text-muted">Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
          </div>
 
-         
+          <div class="title-section container new-conn">
+            <h2 class="text-center">How to get New Gas Connection?</h2>
+            <div class="underline"></div>
+
+          <!--   <p class="text-muted"><span style="font-weight: 600;">Step 1:</span> Collect an application form for new gas connection from the gas agency office.
+</br> <span style="font-weight: 600;">Step 2:</span> Submit documents giving the proofs of identity and address (xerox copy) with this application form.</br> <span style="font-weight: 600;">Step 3:</span>After the registration, the agency will issue you receipt on your name with date of registration and Registration Number. </br> <span style="font-weight: 600;">Step 4:</span> When your booking number comes, the agency inform the customer about the same.
+</br> <span style="font-weight: 600;">Step 5:</span>That time the customer has to produce the receipt of LPG registration and also make payments of Regulator/Cylinder/Deposit.</p> -->
+<img src="/anandmurti/images/saftys.png" style="margin-bottom: 50px;">
+         </div>
     
        <div class="second-section">
             <div class="container panel1">
@@ -65,7 +73,7 @@
                          <img id="img-1" src="/anandmurti/assets/images/gas_icon.png">
                         <h4>12 kg</h4>
                         <p class="text-center">Anand Murti F&B Pvt. Ltd is a fast growing company extending world-class services in F&B and Retail businesses.
-                           With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  Pvt. Ltd is a one stop shop for high quality 
+                           With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  Pvt. Ltd is a one stop shop
                         </p>
                      </div>
                   </div>
@@ -74,15 +82,7 @@
          </div>
             </div>
          </div>
-         <div class="title-section container new-conn">
-            <h2 class="text-center">How to get New Gas Connection?</h2>
-            <div class="underline"></div>
-
-            <p class="text-muted"><span style="font-weight: 600;">Step 1:</span> Collect an application form for new gas connection from the gas agency office.
-</br> <span style="font-weight: 600;">Step 2:</span> Submit documents giving the proofs of identity and address (xerox copy) with this application form.</br> <span style="font-weight: 600;">Step 3:</span>After the registration, the agency will issue you receipt on your name with date of registration and Registration Number. </br> <span style="font-weight: 600;">Step 4:</span> When your booking number comes, the agency inform the customer about the same.
-</br> <span style="font-weight: 600;">Step 5:</span>That time the customer has to produce the receipt of LPG registration and also make payments of Regulator/Cylinder/Deposit.</p>
-<img src="/anandmurti/images/saftys.png">
-         </div>
+        
 		 <div class="container carousel-mb">
         <div class="row">
             <div class="col-md-12 	">

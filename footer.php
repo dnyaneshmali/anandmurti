@@ -110,6 +110,8 @@ p a {color: rgba(255,255,255,.5)}
       </div>
       
       <script type="text/javascript" src="http://localhost/anandmurti/assets/js/jquery-1.9.1.min.js"></script> 
+      <script type="text/javascript" src="http://localhost/anandmurti/assets/js/jQuerySimpleCounter.js"></script>
+
       <script>
          $(document).ready(function(){
            $(".arrowup").click(function(){

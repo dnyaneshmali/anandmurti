@@ -21,7 +21,7 @@
             <div class="underline"></div>
             <p class="text-center text-muted">Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
          </div>
-        <div class="third-section our-features">
+        <div class="third-section our-features aqua-features">
             <div class="container ">
                <h2 class="text-center">Our key Features </h2>
                <div class="underline" ></div>
@@ -70,7 +70,57 @@
                </div>
             </div>
          </div>
-         
+           <div class="second-section testimonial-section">
+      <div class="container panel1">
+         <h2 class="text-center">Testimonials</h2>
+          <div class="underline" style="width: 53%;"></div>
+         <p class="text-center text-muted"><!-- Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical --> </p>
+         <div class="row home-content-box stylish-panel">
+            <div class="col-md-4 col-sm-6">
+               <div class="panel panel-default">
+                  <div class="text-center">
+                     <div class="panel-body">
+                        
+                        
+                        <p class="text-center">"I LOVE drinking water. It's really good for you too. Did u know u are supposed to have at least 32 ounces before lunch??" </p><br>
+          <div class="col-md-8">  <h4 class="sign">Ramdev Baba</h4></div>
+                       <div class="col-md-4"> <img id="img-1" src="/anandmurti/assets/images/ramdevbaba.jpg" style="border-radius: 50%;
+    height: 60px; width: 60px;"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-4 col-sm-6">
+               <div class="panel panel-default ">
+                  <div class="text-center">
+                     <div class="panel-body">
+                        
+                        
+                        <p class="text-center">"I LOVE drinking water. It's really good for you too. Did u know u are supposed to have at least 32 ounces before lunch??" </p><br>
+          <div class="col-md-8">  <h4 class="sign">Shilpa Shetty</h4></div>
+                       <div class="col-md-4"> <img id="img-1" src="/anandmurti/assets/images/shilpa.jpg" style="border-radius: 50%;
+    height: 60px; width: 60px;"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+          <div class="col-md-4 col-sm-6">
+               <div class="panel panel-default ">
+                  <div class="text-center">
+                    <div class="panel-body">
+                        
+                        
+                        <p class="text-center">"I LOVE drinking water. It's really good for you too. Did u know u are supposed to have at least 32 ounces before lunch??" </p><br>
+          <div class="col-md-8">  <h4 class="sign">Virat Kohali</h4></div>
+                       <div class="col-md-4"> <img id="img-1" src="/anandmurti/assets/images/virat.jpg" style="border-radius: 50%;
+    height: 60px; width: 60px;"></div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </div>
 
       
           <div class="container carousel-mb">
