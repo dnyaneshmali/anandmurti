@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2017 at 01:11 PM
+-- Generation Time: Feb 21, 2017 at 10:08 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -100,8 +100,6 @@ INSERT INTO `tbl_aqua_customers` (`acustomer_id`, `acustomer_name`, `acustomer_e
 
 CREATE TABLE `tbl_aqua_orders` (
   `order_id` int(11) NOT NULL,
-  `customer_name` varchar(100) NOT NULL,
-  `order_jar_type` varchar(50) NOT NULL,
   `order_quantity` varchar(50) NOT NULL,
   `order_price` int(10) NOT NULL,
   `order_delivery_address` varchar(100) NOT NULL,
@@ -110,20 +108,30 @@ CREATE TABLE `tbl_aqua_orders` (
   `vehicle_name` varchar(50) NOT NULL,
   `order_status` varchar(50) NOT NULL,
   `order_reminder` varchar(20) NOT NULL,
-  `order_date` datetime NOT NULL
+  `order_date` datetime NOT NULL,
+  `jar_id` int(11) NOT NULL,
+  `acustomer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_aqua_orders`
 --
 
-INSERT INTO `tbl_aqua_orders` (`order_id`, `customer_name`, `order_jar_type`, `order_quantity`, `order_price`, `order_delivery_address`, `order_delivery_date`, `order_delivery_time`, `vehicle_name`, `order_status`, `order_reminder`, `order_date`) VALUES
-(2, 'John', '1', '3', 456, 'Osmanabad', '2017-02-07', '03:30', 'HMT', '1', '0', '2017-02-08 12:09:37'),
-(3, 'Pitter', '1', '4', 200, 'Osmanabad', '2017-02-08', '04:20', 'HMT', '0', '1', '2017-02-09 06:56:32'),
-(5, 'Charly', '2', '4', 400, 'Pune', '2017-02-06', '03:34', 'HMT', '1', '1', '2017-02-10 08:03:57'),
-(6, 'Charly', '1', '2', 200, 'Pune', '2017-02-05', '03:34', 'HMT', '0', '1', '2017-02-10 08:05:39'),
-(7, 'Pitter', 'normal-jar', '1', 100, 'Pune', '2017-02-02', '03:34', 'test2', '0', '0', '2017-02-10 08:48:44'),
-(8, 'Charly', 'only-water', '20', 200, 'Shikrapur', '2017-02-15T18:30:00.000Z', '1970-01-01T07:29:00.000Z', 'HMT', '0', '0', '2017-02-15 11:17:33');
+INSERT INTO `tbl_aqua_orders` (`order_id`, `order_quantity`, `order_price`, `order_delivery_address`, `order_delivery_date`, `order_delivery_time`, `vehicle_name`, `order_status`, `order_reminder`, `order_date`, `jar_id`, `acustomer_id`) VALUES
+(2, '3', 456, 'Osmanabad', '2017-02-17', '03:30', 'HMT', '1', '0', '2017-02-08 12:09:37', 1, 1),
+(3, '4', 200, 'Osmanabad', '2017-02-18', '04:20', 'HMT', '0', '1', '2017-02-09 06:56:32', 1, 4),
+(5, '4', 400, 'Pune', '2017-02-06', '03:34', 'HMT', '1', '1', '2017-02-10 08:03:57', 1, 1),
+(6, '2', 200, 'Pune', '2017-02-05', '03:34', 'HMT', '0', '1', '2017-02-10 08:05:39', 1, 4),
+(7, '1', 100, 'Pune', '2017-02-02', '03:34', 'test2', '0', '1', '2017-02-10 08:48:44', 1, 1),
+(8, '20', 200, 'Shikrapur', '2017-02-15T18:30:00.000Z', '1970-01-01T07:29:00.000Z', 'HMT', '0', '0', '2017-02-15 11:17:33', 3, 4),
+(9, '10', 100, 'Solapur', '2017-02-14T18:30:00.000Z', '1970-01-01T08:32:00.000Z', 'HMT', '0', '0', '2017-02-17 10:12:28', 3, 0),
+(10, '5', 50, 'Pune', '2017-02-08T18:30:00.000Z', '1970-01-01T08:31:00.000Z', 'HMT', '0', '0', '2017-02-17 10:18:06', 3, 0),
+(11, '2', 20, 'Pune', '2017-02-13T18:30:00.000Z', '1970-01-01T08:33:00.000Z', 'test owner', '0', '0', '2017-02-17 10:19:36', 3, 0),
+(12, '10', 100, 'Pune', '2017-10-28T18:30:00.000Z', '1970-01-01T18:28:00.000Z', 'test owner', '0', '0', '2017-02-17 10:48:50', 3, 0),
+(13, '1', 10, 'Pune', '2017-02-23T18:30:00.000Z', '1970-01-01T08:31:00.000Z', 'HMT', '0', '0', '2017-02-17 10:53:08', 3, 4),
+(14, '12', 120, 'Osmanabad', '2017-02-17T18:30:00.000Z', '1970-01-01T09:32:00.000Z', 'test owner', '0', '0', '0000-00-00 00:00:00', 1, 1),
+(15, '12', 120, 'Pune', '2017-11-29T18:30:00.000Z', '1970-01-01T17:28:00.000Z', 'HMT', '0', '0', '2017-02-17 11:40:13', 1, 4),
+(16, '8', 80, 'Pandharpur', '2017-12-29T18:30:00.000Z', '1970-01-01T18:28:00.000Z', 'HMT', '0', '0', '2017-02-17 11:42:59', 1, 1);
 
 -- --------------------------------------------------------
 
@@ -175,7 +183,14 @@ CREATE TABLE `tbl_gas_inwards` (
 
 INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, `product_date`, `distributor_name`, `product_id`, `vehicle_id`) VALUES
 (1, 10, '100', '2017-02-15 12:37:57', 'Test Distributor', 1, 2),
-(2, 200, '200', '2017-02-16 06:25:13', 'A Distributor', 2, 2);
+(2, 200, '200', '2017-02-16 06:25:13', 'A Distributor', 2, 2),
+(3, 0, '', '2017-02-21 07:40:22', '', 0, 0),
+(4, 0, '', '2017-02-21 07:42:48', '', 0, 0),
+(5, 0, '', '2017-02-21 07:46:34', '', 0, 0),
+(6, 0, '', '2017-02-21 09:59:12', '', 0, 0),
+(7, 0, '10', '2017-02-21 10:01:12', '', 0, 0),
+(8, 0, '', '2017-02-21 10:04:12', '', 0, 0),
+(9, 0, '', '2017-02-21 10:06:34', '', 0, 0);
 
 -- --------------------------------------------------------
 
@@ -228,6 +243,19 @@ CREATE TABLE `tbl_gproducts` (
 INSERT INTO `tbl_gproducts` (`product_id`, `product_name`, `product_category`, `product_company`, `product_price`, `product_tax`, `product_date`) VALUES
 (1, 'p1', 'cooktop', 'test', '300', '10%', '2017-02-14 14:07:06'),
 (2, 'p2', 'cooktop', 'Surya', '10', '10%', '2017-02-16 06:24:10');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_gproducts_trasaction`
+--
+
+CREATE TABLE `tbl_gproducts_trasaction` (
+  `transaction_id` int(11) NOT NULL,
+  `tproduct_quantity` int(10) NOT NULL,
+  `inwards_id` int(11) NOT NULL,
+  `transaction_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -361,7 +389,9 @@ ALTER TABLE `tbl_aqua_customers`
 -- Indexes for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
-  ADD PRIMARY KEY (`order_id`);
+  ADD PRIMARY KEY (`order_id`),
+  ADD KEY `acustomer_id` (`acustomer_id`),
+  ADD KEY `jar_id` (`jar_id`);
 
 --
 -- Indexes for table `tbl_avehicle_details`
@@ -388,6 +418,13 @@ ALTER TABLE `tbl_gogas_customers`
 --
 ALTER TABLE `tbl_gproducts`
   ADD PRIMARY KEY (`product_id`);
+
+--
+-- Indexes for table `tbl_gproducts_trasaction`
+--
+ALTER TABLE `tbl_gproducts_trasaction`
+  ADD PRIMARY KEY (`transaction_id`),
+  ADD KEY `inwards_id` (`inwards_id`);
 
 --
 -- Indexes for table `tbl_gvehicle_details`
@@ -423,7 +460,7 @@ ALTER TABLE `tbl_refil_details`
 -- AUTO_INCREMENT for table `gproducts_sale`
 --
 ALTER TABLE `gproducts_sale`
-  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_admin`
 --
@@ -438,7 +475,7 @@ ALTER TABLE `tbl_aqua_customers`
 -- AUTO_INCREMENT for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 --
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
@@ -448,7 +485,7 @@ ALTER TABLE `tbl_avehicle_details`
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
-  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tbl_gogas_customers`
 --
@@ -459,6 +496,11 @@ ALTER TABLE `tbl_gogas_customers`
 --
 ALTER TABLE `tbl_gproducts`
   MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+--
+-- AUTO_INCREMENT for table `tbl_gproducts_trasaction`
+--
+ALTER TABLE `tbl_gproducts_trasaction`
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_gvehicle_details`
 --

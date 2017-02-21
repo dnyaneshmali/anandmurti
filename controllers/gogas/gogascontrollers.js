@@ -570,44 +570,64 @@ app.controller('Addgasinwardsctrl', ['$scope','$http', function($scope,$http) {
          })
 
      .success(function(data) {
-            //$scope.gasinwards = {pquantity:'1'};
+            $scope.pquantity = '1';
+            //console.log($scope.pquantity);
             $scope.productprice=data;
-            $scope.gasinwards = {tprice:data[0].product_price};
+            $scope.tprice = data[0].product_price;
             //console.log(data[0].product_price);
+            //console.log($scope.tprice);
             
 
           });
 
 }
 
-
 $scope.changedquantity=function(pquantity,product_id){
-
 $scope.pquantity = {};
 $scope.product_id = {};
 $scope.pquantity = angular.copy(pquantity);
 $scope.product_id = angular.copy(product_id);
-console.log($scope.pquantity);
-console.log($scope.product_id);
+//console.log($scope.pquantity);
+//console.log($scope.product_id);
+$http({
+          method  : 'POST',
+          url     : '../../models/getgasproductprice.php',
+          data    : {'product':product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            $scope.productprice=data;
+            console.log(data[0].product_price);
+            var fprice = data[0].product_price;
+            var fpquantity = $scope.pquantity;
+            var totalprice = fprice*fpquantity;
+            $scope.tprice = totalprice;
+          });
+
 
 }
 
 
-  $scope.insertdata=function(gasinwards){
+  $scope.insertdata=function(){
   $scope.gasinwards = {};
-  $scope.gasinwards = angular.copy(gasinwards);
-  console.log($scope.gasinwards);
+  $scope.product = angular.copy($scope.product);
+  $scope.pquantity = angular.copy($scope.pquantity);
+  $scope.tprice = angular.copy($scope.tprice);
+  $scope.distributor_name = angular.copy($scope.distributor_name);
+  $scope.vehicle = angular.copy($scope.vehicle);
+  //console.log($scope.distributor_name);
    $http({
           method  : 'POST',
           url     : '../../models/insertgasinwards.php',
-          data    : $scope.gasinwards, //forms user object
+          data    : {'product':$scope.product,'pquantity':$scope.pquantity,'tprice':$scope.tprice,'distributor_name':$scope.distributor_name,'vehicle':$scope.vehicle}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
 
      .success(function(data) {
             console.log(data);
               $scope.msg = "data inserted successfully "
-               delete $scope.gasinwards;
+              // delete $scope.gasinwards;
                       $scope.inwardsform.$setPristine();
             
 
