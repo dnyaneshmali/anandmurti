@@ -6,7 +6,8 @@
     background-color: #b6d6a6;
 }*/.col-lg-12.bgclr {
 /*    background-color: #b6d6a6;*/
-    background-color: #f1f3f0;
+    background-color: #fff;
+    opacity: 0.8;
     /*padding-top: 70px;*/
 
     margin-top: 20px;
@@ -28,8 +29,28 @@
 </style>
 <div class="page-content d-contact-page">
   
-  <div class="container">
+  <div class="container" style="">
+<div class="row">
+            <div class="box">
+                <div class="col-lg-12 bgclr">
+                  
+                    <h3 class="intro-text">Contact Information :
+                        <!-- <div class="underline" style="width:25%;"></div> -->
 
+                    </h3>
+                     <div class="content text-center" style="align:left">
+                             <h5 style="font-size: 16px;
+    color: #000;">Go Gas Office, open 10:00 - 18:00 daily <br><br>
+
+                              #314,<br> World Trade Center<br>
+                              Near EON IT Park,<br>
+                              Kharadi Pune-41453<br><br>
+                              +44 20 3862 5900 <br>
+For the Parabola Restaurant please call 020 7940 8795</h5>
+                           </div>
+                  </div>
+                </div>
+              </div>
         <div class="row">
             <div class="box">
                 <div class="col-lg-12 bgclr">
@@ -42,12 +63,12 @@
                                   <div class="underline" style="width:25%; margin-bottom: 80px;"></div>
                               </h2>
                 
-                <div class="col-md-7">
+                <div class="col-md-12">
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
                     <iframe width="100%" height="430" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed">
                               </iframe>
                 </div>
-                     <div class="col-md-offset-1 col-md-4 pd-right-25">
+                     <!-- <div class="col-md-offset-1 col-md-4 pd-right-25">
                      <div class="row contact-details">
                         <div class="item">
                            <div class="icon">
@@ -81,7 +102,7 @@
                               Near EON IT Park,<br/>
                               Kharadi Pune-41453<br/>
                            </div>
-                        </div>
+                        </div> -->
                    <!--      <div class="social-shares">
                            <h2>Share</h2>
                            <ul class="contact-social-list">
@@ -112,8 +133,8 @@
                               </li>
                            </ul>
                         </div> -->
-                     </div>
-                  </div>
+                     <!-- </div>
+                  </div> -->
          <!--        <div class="col-md-4">
                     <p><i class="fa fa-phone"></i>  Phone:
                         <strong>123.456.7890</strong>
@@ -136,8 +157,58 @@
             </div>
         </div>
      </div>
+<div class="row">
+            <div class="box">
+                <div class="col-lg-12 bgclr">
+                  
+                    <h3 class="intro-text">Go Gas office Address :
+                        <!-- <div class="underline" style="width:25%;"></div> -->
 
-        <div class="row">
+                    </h3>
+                     <div class="content text-center">
+                             <h5 style="font-size: 16px;
+    color: #000;"> Softinfology Pvt. Ltd.
+                              #314, World Trade Center
+                              Near EON IT Park,
+                              Kharadi Pune-41453</h5>
+                           </div>
+                  </div>
+                </div>
+              </div>
+             <div class="row">
+            <div class="box">
+                <div class="col-lg-12 bgclr">
+                  
+                    <h3 class="intro-text">Aqua office Address :
+                        <!-- <div class="underline" style="width:25%;"></div> -->
+
+                    </h3>
+                     <div class="content text-center">
+                             <h5 style="font-size: 16px;
+    color: #000;"> Softinfology Pvt. Ltd.
+                              #314, World Trade Center
+                              Near EON IT Park,
+                              Kharadi Pune-41453</h5>
+                           </div>
+                  </div>
+                </div>
+              </div>
+              <div class="row">
+            <div class="box">
+                <div class="col-lg-12 bgclr">
+                  
+                    <h3 class="intro-text">About this Website :
+                        <!-- <div class="underline" style="width:25%;"></div> -->
+
+                    </h3>
+                     <div class="content text-center">
+                             <h5 style="font-size: 16px;
+    color: #000;"> Designed by agency Fabrique together with technical partner Q42. Please read the terms and conditions for use of the website.<br><br>Thanks for interest in AnnandMurti group of companies.<a href="http://localhost/anandmurti/enquiry.php" style="color: rgb(17, 176, 244);">Click Here</a> if you have any questions about our products and we'll get back with you very soon.questions about our products and we'll get back with you very soon</h5>
+                           </div>
+                  </div>
+                </div>
+              </div>
+     <!--    <div class="row">
             <div class="box">
                 <div class="col-lg-12 bgclr">
                   
@@ -174,7 +245,7 @@
                     </form>
                 </div>
             </div>
-        </div>
+        </div> -->
 
     </div>
                </div>

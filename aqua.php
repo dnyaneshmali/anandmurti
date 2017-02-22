@@ -10,7 +10,7 @@
          
 
                         <div class="container-fluid" >
-                            <img src="images\aqua_(3).png" class="img-responsive img-mt">
+                            <img src="images\aqua_(3).jpg" class="img-responsive img-mt">
                         </div>
                         
                    

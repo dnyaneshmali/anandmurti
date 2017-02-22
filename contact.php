@@ -3,10 +3,6 @@
 
 <div class="page-content contact-page">
    <div class="container" id="content" style="margin-top:20px;">
-     <!--  <div class="row">
-         <div class="col-md-12 col-sm-12 col-lg-12">
-            <div id="content" style="margin-top:20px;">
-               <div class="container"> -->
                   <div class="row">
                      <div class="col-md-6 col-sm-12 col-xs-12 col-lg-12 offset-md-6">
                         <div class="contentarea">
@@ -70,20 +66,11 @@
                </div>
             </div>
          </div>
-<!--       </div>
-   </div>
+
+
+        <!--  <div class="container">
+                  <div class="row">
+                     <div class="maindiv" style="background-image: url("http://localhost/anandmurti/images/phone.jpg");"></div>
 </div>
 </div> -->
-<!--  <div class="footer-cta-section">
-   <div class="container">
-   <div class="row">
-   <div class="col-md-9">
-   <h3>Click Here To Contact And To Know More !</h3>
-   </div>
-   <div class="col-md-3">
-   <a class="footer-cta-btn btn btn-lg" href="#">CHECK IT</a>
-   </div>
-   </div>
-   </div>
-   </div> -->
 <?php include('footer.php');?>
