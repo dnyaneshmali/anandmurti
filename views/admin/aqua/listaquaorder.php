@@ -81,22 +81,51 @@
                           <td ng-if="aquaorder.order_status==1"><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="unsetstatus(aquaorder.order_id);"><i class="fa fa-check-circle"></i></button></a></td>
                           <td ng-if="aquaorder.order_reminder==0"><a data-toggle="tooltip" title="Set Reminder"><button class="btn btn-danger" ng-click="setreminder(aquaorder.order_id,$index);"><i class="fa fa-bell"></i></button></a></td>
                           <td ng-if="aquaorder.order_reminder==1"><a data-toggle="tooltip" title="Unset Reminder"><button class="btn btn-active" ng-click="unsetreminder(aquaorder.order_id);"><i class="fa fa-bell-slash"></i></button></a></td>
-                          <td><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="geninvoice(aquaorder.order_id);"><i class="fa fa-check-circle"></i></button></a></td>            
+                          <td><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="geninvoice(aquaorder.order_id);"><i class="fa fa-list-alt" aria-hidden="true"></i>
+</button></a></td>            
                           </td>
 
                           <ng-form>
-
-
-
-
-
-
 
                         </tr>
                       </tbody>
                     </table>
                   </div>
                 </div>
+
+
+                
+        <div class="modal fade" id="invoicemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span></button>
+                        <h4 class="modal-title">Modal table</h4>
+                    </div>
+                    <div class="modal-body">
+                        <table id="table"
+                               data-toggle="table"
+                               data-height="299"
+                               data-url="../json/data1.json">
+                            <thead>
+                            <tr>
+                                <th data-field="id">ID</th>
+                                <th data-field="name">Item Name</th>
+                                <th data-field="price">Item Price</th>
+                            </tr>
+                            </thead>
+                        </table>
+                    </div>
+                    <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    </div>
+                </div><!-- /.modal-content -->
+            </div><!-- /.modal-dialog -->
+        </div><!-- /.modal -->
+
+
+
               </div>
               </div>
 
