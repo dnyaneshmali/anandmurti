@@ -771,6 +771,7 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
            $scope.availquantity = data[0].product_quantity;
            var sremainquantity = $scope.availquantity-1;
            $scope.remainquantity = sremainquantity;
+           
             //console.log(data[0].product_quantity);
           });
 
