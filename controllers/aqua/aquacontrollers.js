@@ -382,6 +382,18 @@ console.log($scope.setrem);
                       });
             }
 
+
+              $scope.geninvoice=function(order_id,index){
+                //alert('dfdf');
+                $('#invoicemodal').modal('toggle');
+                //$('#invoicemodal').modal('show');
+               // $('#invoicemodal').modal('hide');
+
+            }
+
+
+
+
              $scope.isedit=function(id){
               return id==$scope.iseditid;
             }
