@@ -19,8 +19,14 @@ console.log($scope.gogascustomers);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+              //$scope.msg = "data inserted successfully "
                 delete $scope.gogascustomers;
+                 swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                 $scope.addgogasform.$setPristine();
             
 
@@ -231,8 +237,15 @@ console.log($scope.Connection);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+              //$scope.msg = "data inserted successfully "
                 delete $scope.Connection;
+               swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
+
                 $scope.connectionform.$setPristine();
             
 
@@ -362,8 +375,14 @@ console.log($scope.refil);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+              //$scope.msg = "data inserted successfully "
                 delete $scope.refil;
+                swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
               $scope.refilform.$setPristine();
             
 
@@ -396,8 +415,8 @@ console.log(refil_id);
      .success(function(data) {
             
                         console.log(data);
-                        //$scope.data.splice(index, 1);
-                       // $scope.$watch();
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
             
             
 
@@ -463,8 +482,14 @@ console.log($scope.vdetails);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+             // $scope.msg = "data inserted successfully "
                delete $scope.vdetails;
+               swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                       $scope.addgasvehicleform.$setPristine();
             
 
@@ -633,8 +658,14 @@ $http({
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
-              // delete $scope.gasinwards;
+              //$scope.msg = "data inserted successfully "
+              delete $scope.gasinwards;
+              swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                       $scope.inwardsform.$setPristine();
             
 
@@ -667,8 +698,8 @@ app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
      .success(function(data) {
             
               console.log(data);
-                       // $scope.data.splice(index, 1);
-                       // $scope.$watch();
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
 
                       });
             }
@@ -833,8 +864,14 @@ $http({
          })
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
-               //delete $scope.salegasproduct;
+             // $scope.msg = "data inserted successfully "
+               delete $scope.salegasproduct;
+               swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                       $scope.salegasproductform.$setPristine();
           });
 
@@ -866,8 +903,8 @@ console.log(sale_product_id);
      .success(function(data) {
             
               console.log(data);
-                       // $scope.data.splice(index, 1);
-                       // $scope.$watch();
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
 
                       });
             }
