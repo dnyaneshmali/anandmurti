@@ -1,4 +1,3 @@
-
 app.controller('Addgogasctrl', ['$scope','$http', function($scope,$http) {
   $scope.reset = function() {
   delete $scope.gogascustomers;
@@ -273,7 +272,7 @@ console.log(connection_id);
      $http({
           method  : 'POST',
           url     : '../../models/deleteconection.php',
-          data    : {'connection_id': connection_id}, //forms user object
+          data    : {'connection_id':connection_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
@@ -760,19 +759,20 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
 
     $http({
           method  : 'POST',
-         /* url     : '../../models/getsinwadsproducts.php', */
-         url     : '../../models/getgproductcount.php',
+          url     : '../../models/getselectedpdetails.php',
           data    : {'product':product}, //forms user object
           headers : {'Content-Type':'application/x-www-form-urlencoded'} 
          })
 
      .success(function(data) {
+     // console.log(data);
             //$scope.pquantity = '1';
-            //console.log(data);
+            console.log(data[0].product_quantity);
            $scope.availquantity = data[0].product_quantity;
            var sremainquantity = $scope.availquantity-1;
            $scope.remainquantity = sremainquantity;
-            console.log(data[0].product_quantity);
+           
+            //console.log(data[0].product_quantity);
           });
 
 
@@ -807,7 +807,7 @@ $scope.product_id = angular.copy(product_id);
 $http({
           method  : 'POST',
          /* url     : '../../models/getsinwadsproducts.php', */
-         url     : '../../models/getgproductcount.php',
+         url     : '../../models/getselectedpdetails.php',
           data    : {'product':product_id}, //forms user object
           headers : {'Content-Type':'application/x-www-form-urlencoded'} 
          })
