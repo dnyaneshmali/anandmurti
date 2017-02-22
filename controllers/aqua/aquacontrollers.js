@@ -424,7 +424,7 @@ console.log($scope.addjardetails);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+    $scope.msg = "data inserted successfully "
                //delete $scope.addjardetails;
                 delete $scope.addjardetails;
                         $scope.addjardetailsform.$setPristine();
