@@ -113,9 +113,16 @@ console.log($scope.gogasproduct);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
-                //delete $scope.gogasproduct;
-               // $scope.connectionform.$setPristine();
+              //$scope.msg = "data inserted successfully "
+                delete $scope.gogasproduct;
+                swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
+                $scope.addgogasproductform.$setPristine();
+
             
 
           });
@@ -136,7 +143,7 @@ $http.get("../../models/getgasproducts.php")
     });
 
     $scope.deleteproduct=function(product_id,index){
-    alert('in delete function');
+    //alert('in delete function');
 
 console.log(product_id);
      $http({
