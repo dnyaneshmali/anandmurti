@@ -104,18 +104,26 @@
                         <h4 class="modal-title">Modal table</h4>
                     </div>
                     <div class="modal-body">
-                        <table id="table"
-                               data-toggle="table"
-                               data-height="299"
-                               data-url="../json/data1.json">
-                            <thead>
-                            <tr>
-                                <th data-field="id">ID</th>
-                                <th data-field="name">Item Name</th>
-                                <th data-field="price">Item Price</th>
-                            </tr>
-                            </thead>
-                        </table>
+                        <table id="datatable-buttons" class="table table-striped table-bordered">
+                      <thead>
+                        <tr>
+                          <th>Jar Type</th>
+                          <th>Price</th>
+                          <th colspan="2">Action</th>
+                          
+                        </tr>
+                      </thead>
+
+
+                      <tbody>
+<tr>
+                          <td>1</td>
+                          <td>2</td>
+                          <td>3</td>
+</tr>
+
+                      </tbody>
+                    </table>
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
