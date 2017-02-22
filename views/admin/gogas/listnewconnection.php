@@ -120,7 +120,7 @@
                           </td>
 
 
-                           <td ng-if="isedit(Connection.connection_id)">{{Connection. connection_date}}</td>
+                           <td ng-if="isedit(Connection.connection_id)">{{Connection.connection_date}}</td>
 
 
 

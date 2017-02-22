@@ -272,7 +272,7 @@ console.log(connection_id);
      $http({
           method  : 'POST',
           url     : '../../models/deleteconection.php',
-          data    : {'connection_id': connection_id}, //forms user object
+          data    : {'connection_id':connection_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
