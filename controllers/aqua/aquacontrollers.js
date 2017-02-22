@@ -66,9 +66,15 @@ console.log($scope.aquacustomers);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+              //$scope.msg = "data inserted successfully "
 
                         delete $scope.aquacustomers;
+                        swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                       $scope.addaaquaform.$setPristine();
             
 
@@ -166,8 +172,14 @@ console.log($scope.addaquaproduct);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+              //$scope.msg = "data inserted successfully "
                delete $scope.addaquaproduct;
+               swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                       $scope.addaquaproductform.$setPristine();
             
 
@@ -244,8 +256,14 @@ console.log($scope.addaquaorder);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+              //$scope.msg = "data inserted successfully "
                delete $scope.addaquaorder;
+               swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                       $scope.addaquorderform.$setPristine();
             
 
@@ -427,8 +445,14 @@ console.log($scope.addjardetails);
     $scope.msg = "data inserted successfully "
                //delete $scope.addjardetails;
                 delete $scope.addjardetails;
-                        $scope.addjardetailsform.$setPristine();
-                      //$scope.addaaquaform.$setPristine();
+                        swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
+
+                      $scope.addjardetailsform.$setPristine();
             
 
           });
@@ -530,8 +554,14 @@ console.log($scope.vdetails);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+              //$scope.msg = "data inserted successfully "
                delete $scope.vdetails;
+                swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                     $scope.addvehicleform.$setPristine();
             
 
