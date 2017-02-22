@@ -1,4 +1,4 @@
-var loginapp = angular.module('AnandMurtiLogin', ['ngStorage','ui.bootstrap']);
+var loginapp = angular.module('AnandMurtiLogin', ['ngRoute','ngStorage']);
 
 loginapp.controller('loginCtrl',['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage, $location) {
 // $scope.data = {};
