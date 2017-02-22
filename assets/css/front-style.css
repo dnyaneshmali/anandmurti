@@ -16,7 +16,7 @@ Table Of content
   ::-webkit-scrollbar-thumb {
      /*background: linear-gradient(to top,#e96253 0,#251c1d 100%);*/
      /*background: linear-gradient(to top,#a0d88a 0,#ded8d8 100%);*/
-     background: linear-gradient(to bottom,#86c2de 0,#86c2de 100%);
+     background: linear-gradient(to bottom,#226b8c 0,#ded8d8 100%);
     -webkit-border-radius: 3px;
   }
 
@@ -47,7 +47,6 @@ h2 {
     font-family: 'Raleway', sans-serif;
     font-weight: 700;
     /*text-decoration: underline;*/
-    /*margin-top: 75px;*/
 }
 
 .bggradient{
@@ -217,25 +216,19 @@ a.slider-btn2 {
 .container.content {
     padding: 20px 15px;
 }
-.first-section {
-    /*margin-bottom: 30px;
-    margin-top: 30px;*/
-    padding-top: 70px;
-}
-.second-section {
-    /*margin-bottom: 30px;*/
-    /*background-color: #f6f7f8;*/
-   /* padding-top: 32px;*/
-    /*padding-bottom: 47px;*/
+/*.first-section {
     margin-bottom: 30px;
-    background-color: #f6f7f8;
+    margin-top: 30px;
+}*/
+.second-section {
+    margin-bottom: 30px;
+    /*background-color: #f6f7f8;*/
     padding-top: 32px;
-    padding-bottom: 47px;
-    margin-top: 40px;
+    /*padding-bottom: 47px;*/
 }
 
 .third-section{
-	/*padding-bottom:65px;*/
+	padding-bottom:30px;
 }
 .home-content-box {
     margin-top: 60px;
@@ -248,8 +241,7 @@ a.slider-btn2 {
 /*----------------Contact Page Start----------*/
 
 .page-content ,.products-page {
-    margin-top: 150px;
-    margin-bottom: 135px;
+    margin-top: 75px;
 }
 #page-contact .title-section {
     margin-top: 40px;
@@ -263,12 +255,12 @@ a.slider-btn2 {
     padding-bottom: 30px;
 }
 .contact-details {
-    /*background: #fff;
-    border: solid 1px #E4E3E3;*/
+    background: #fff;
+    border: solid 1px #E4E3E3;
 }
 .contact-details .item {
     padding: 12px 36px;
-    /*border-bottom: 1px solid #e5e7e9;*/
+    border-bottom: 1px solid #e5e7e9;
 }
 .contact-details .item .icon {
     font-size: 36px;
@@ -342,7 +334,7 @@ ul.contact-social-list li {
 /*----------------go gas----------*/
 .new-conn p.text-muted {
     margin-left: 50px;
-        margin-bottom: 95px;
+        margin-bottom: 80px;
 }
 
 /*----------------About Page Start----------*/
@@ -351,12 +343,6 @@ ul.contact-social-list li {
     padding-top: 30px;
     padding-bottom: 30px;
 }
-.page-content.about-page h2 {
-    margin-top: 5px;
-
-}
-.page-content.about-page .underline{
- margin-bottom: 35px;}
 
 .info-section .single-item {
     padding-top: 10px;
@@ -456,7 +442,7 @@ background-color: #6eb94e;
 
 
 .title-section.container {
-    padding-top: 65px;
+    padding-top: 40px;
         margin-bottom: 30px;
 }
 .upper_slider .item img{
@@ -564,20 +550,17 @@ img.owner_img {
 .about-page .customDiv{ margin:3px; min-height:300px; /*background-color:rgb(246, 247, 248);; */
    padding: 10px;
    letter-spacing: 0.5px;
-/*   font-family: Helvetica;*/
+   font-family: Helvetica;
    /*font-size: medium;*/
-   font-size: 16px;
-    font-family: 'Lato', sans-serif;
-   min-height: 400px;
    box-shadow: 0 1px 21px rgba(0,0,0,0.21);
    }
 /*index*/
 .img-mt{margin-top: 2.5%;}
 .container.carousel-mb {
-    margin-bottom: 10%;
+    margin-bottom: 3%;
 }
 .home-page h2{
-/*margin-top: 90px;*/
+margin-top: 110px;
 }
 .navbar-brand {
     float: none;}
@@ -632,8 +615,7 @@ img.owner_img {
 }
 .home-page .third-section,.aqua-page .third-section {
         background-color: white;
-            margin-bottom: 80px;
-            margin-top: 75px;
+            margin-bottom: 30px;
 }
 .stylish-panel > div > #f1,.stylish-panel > div > #f2,.stylish-panel > div > #f3,.stylish-panel > div > #f4{
     padding: 10px;
@@ -656,8 +638,8 @@ img.owner_img {
 }
 .stylish-panel div#f1:hover,.stylish-panel div#f2:hover,.stylish-panel div#f3:hover,.stylish-panel div#f4:hover{
   border: 1px solid rgb(200, 200, 200);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
-    /*box-shadow:rgb(185, 202, 178) 0px 5px 5px 2px;*/
+  /*  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;*/
+    box-shadow:rgb(185, 202, 178) 0px 5px 5px 2px;
 }
 .home-page .panel-body , .gogas-page .panel-body{
     height: 250px;
@@ -691,9 +673,7 @@ img.owner_img {
     /* background: url(/anandmurti/assets/images/contactbg1.png) repeat; */
     width: 1000;
     height: 460px;
-/*    background-color: #607D8B;*/
-background-color: #78a7bd;
-/*background: linear-gradient(91deg, rgba(20,47,201,1) 0%, #3CC9C2 100%);*/
+    background-color: #607D8B;
     opacity: 0.8;
     position: absolute;
     top: 53px;
@@ -725,7 +705,6 @@ background-color: #78a7bd;
     padding: 0px 20px 10px;
     overflow: hidden;
     min-height: 454px;
-    /*padding-left: 130px;*/
 }
 
 .cntleft {
@@ -780,10 +759,10 @@ ul.info {
     cursor: pointer;
 }
 .contact-page h2{
-  /*border: 0;
+  border: 0;
     outline: 0;
     
-    vertical-align: baseline;*/
+    vertical-align: baseline;
 }
 .contact-page ul.info li span h2 {
     background: none;
@@ -800,14 +779,14 @@ ul.info {
     vertical-align: baseline;
 }
 .innerright h2 {
-    /*color: #36C;
+    color: #36C;
     font-size: 18px;
     padding: 10px;
     margin-bottom: 15px;
     background-color: #ececec;
     text-transform: uppercase;
     font-weight: normal;
-    letter-spacing: 1px;*/
+    letter-spacing: 1px;
 }
 ul.info li {
     float: left;
@@ -916,7 +895,3 @@ h2 {
 .fl-l{
     float: left
 }
-.products-page h3{
-margin-bottom: 30px;
-margin-top: 0px;}
-.col-md-4{padding-right: 25px ! important;}
