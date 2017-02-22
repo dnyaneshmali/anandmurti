@@ -161,8 +161,8 @@ console.log(product_id);
      .success(function(data) {
             
                         console.log(data);
-                        //$scope.data.splice(index, 1);
-                       // $scope.$watch();
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
             
             
 
