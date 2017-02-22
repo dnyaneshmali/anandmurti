@@ -1,4 +1,3 @@
-
 app.controller('Addgogasctrl', ['$scope','$http', function($scope,$http) {
   $scope.reset = function() {
   delete $scope.gogascustomers;
@@ -19,8 +18,14 @@ console.log($scope.gogascustomers);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+              //$scope.msg = "data inserted successfully "
                 delete $scope.gogascustomers;
+                 swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                 $scope.addgogasform.$setPristine();
             
 
@@ -113,9 +118,16 @@ console.log($scope.gogasproduct);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
-                //delete $scope.gogasproduct;
-               // $scope.connectionform.$setPristine();
+              //$scope.msg = "data inserted successfully "
+                delete $scope.gogasproduct;
+                swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
+                $scope.addgogasproductform.$setPristine();
+
             
 
           });
@@ -136,7 +148,7 @@ $http.get("../../models/getgasproducts.php")
     });
 
     $scope.deleteproduct=function(product_id,index){
-    alert('in delete function');
+    //alert('in delete function');
 
 console.log(product_id);
      $http({
@@ -148,8 +160,8 @@ console.log(product_id);
      .success(function(data) {
             
                         console.log(data);
-                        //$scope.data.splice(index, 1);
-                       // $scope.$watch();
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
             
             
 
@@ -224,8 +236,15 @@ console.log($scope.Connection);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+              //$scope.msg = "data inserted successfully "
                 delete $scope.Connection;
+               swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
+
                 $scope.connectionform.$setPristine();
             
 
@@ -253,7 +272,7 @@ console.log(connection_id);
      $http({
           method  : 'POST',
           url     : '../../models/deleteconection.php',
-          data    : {'connection_id': connection_id}, //forms user object
+          data    : {'connection_id':connection_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
@@ -355,8 +374,14 @@ console.log($scope.refil);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+              //$scope.msg = "data inserted successfully "
                 delete $scope.refil;
+                swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
               $scope.refilform.$setPristine();
             
 
@@ -389,8 +414,8 @@ console.log(refil_id);
      .success(function(data) {
             
                         console.log(data);
-                        //$scope.data.splice(index, 1);
-                       // $scope.$watch();
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
             
             
 
@@ -456,8 +481,14 @@ console.log($scope.vdetails);
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
+             // $scope.msg = "data inserted successfully "
                delete $scope.vdetails;
+               swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                       $scope.addgasvehicleform.$setPristine();
             
 
@@ -626,8 +657,14 @@ $http({
 
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
-              // delete $scope.gasinwards;
+              //$scope.msg = "data inserted successfully "
+              delete $scope.gasinwards;
+              swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                       $scope.inwardsform.$setPristine();
             
 
@@ -660,8 +697,8 @@ app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
      .success(function(data) {
             
               console.log(data);
-                       // $scope.data.splice(index, 1);
-                       // $scope.$watch();
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
 
                       });
             }
@@ -722,19 +759,20 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
 
     $http({
           method  : 'POST',
-         /* url     : '../../models/getsinwadsproducts.php', */
-         url     : '../../models/getgproductcount.php',
+          url     : '../../models/getselectedpdetails.php',
           data    : {'product':product}, //forms user object
           headers : {'Content-Type':'application/x-www-form-urlencoded'} 
          })
 
      .success(function(data) {
+     // console.log(data);
             //$scope.pquantity = '1';
-            //console.log(data);
+            console.log(data[0].product_quantity);
            $scope.availquantity = data[0].product_quantity;
            var sremainquantity = $scope.availquantity-1;
            $scope.remainquantity = sremainquantity;
-            console.log(data[0].product_quantity);
+           
+            //console.log(data[0].product_quantity);
           });
 
 
@@ -769,7 +807,7 @@ $scope.product_id = angular.copy(product_id);
 $http({
           method  : 'POST',
          /* url     : '../../models/getsinwadsproducts.php', */
-         url     : '../../models/getgproductcount.php',
+         url     : '../../models/getselectedpdetails.php',
           data    : {'product':product_id}, //forms user object
           headers : {'Content-Type':'application/x-www-form-urlencoded'} 
          })
@@ -826,8 +864,14 @@ $http({
          })
      .success(function(data) {
             console.log(data);
-              $scope.msg = "data inserted successfully "
-               //delete $scope.salegasproduct;
+             // $scope.msg = "data inserted successfully "
+               delete $scope.salegasproduct;
+               swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                       $scope.salegasproductform.$setPristine();
           });
 
@@ -859,8 +903,8 @@ console.log(sale_product_id);
      .success(function(data) {
             
               console.log(data);
-                       // $scope.data.splice(index, 1);
-                       // $scope.$watch();
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
 
                       });
             }

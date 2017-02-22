@@ -12,8 +12,14 @@
                             <option ng-repeat="pinwardslist in getinwardsproducts" value="{{pinwardslist.product_id}}">{{pinwardslist.product_name}}</option>
                           </select>
                         </div>
-                        <span ng-if="availquantity">Total Quantity : {{availquantity}}</span>
+                        <div ng-if="availquantity>0">
+                        <span ng-if="availquantity">Total Available Quantity : {{availquantity}}</span>
+                        <div ng-if="remainquantity>0">
                         <span ng-if="remainquantity">Remaining Quantity : {{remainquantity}}</span>
+                        </div>
+                        <span class="text-danger" ng-if="remainquantity<0"><strong>Entered quantity Should not  be greater than available quantity</strong></span>
+                        </div>
+                        <span class="text-danger" ng-if="availquantity==0"><strong>Out Of Stock</strong></span>
                         </div>
                       </div>
                        <div class="item form-group">
@@ -33,7 +39,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-building"></i></span>
-                          <input type="text" placeholder="Product Price" ng-pattern="/^\d+$/"  ng-model="Product_price" id="Product_price" class="form-control" name="Product_price" required />
+                          <input type="text" placeholder="Product Price" ng-pattern="/^\d+$/"  ng-model="Product_price" readonly id="Product_price" class="form-control" name="Product_price" required />
                          </div>
                          <p class="val-style" ng-show="salegasproductform. Product_price.$invalid && !salegasproductform.Product_price.$pristine" class="help-block"> Prize required accept only digits.</p>
                         </div>
@@ -44,7 +50,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-building"></i></span>
-                          <input type="text" placeholder="Product Total Price" ng-pattern="/^\d+$/" ng-model="Product_tprice" id="Product_tprice" class="form-control" name="Product_tprice" required />
+                          <input type="text" placeholder="Product Total Price" ng-pattern="/^\d+$/" ng-model="Product_tprice" readonly id="Product_tprice" class="form-control" name="Product_tprice" required />
                          </div>
                           <p class="val-style" ng-show="salegasproductform.Product_tprice.$invalid && !salegasproductform.Product_tprice.$pristine" class="help-block"> Prize required accept only digits.</p>
                         </div>

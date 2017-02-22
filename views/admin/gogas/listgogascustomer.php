@@ -63,7 +63,7 @@
                           <!-- <td>{{gogascustomer.gcustomer_pincode}}</td> -->
                           <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_landmark}}</td>
                           <!-- <td>{{gogascustomer.gcustomer_proof}}</td>
- -->                          <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.                              gcustomer_date}}</td>
+ -->                          <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_date}}</td>
 
                                 <td ng-if="!isedit(gogascustomer.gcustomer_id)">
                        <a data-toggle="tooltip" title="Update"> <button class="btn btn-danger" ng-click="deleteuser(gogascustomer.gcustomer_id,$index);"><i class="fa fa-trash"> </i></button></a>

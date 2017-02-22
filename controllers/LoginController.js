@@ -13,6 +13,7 @@ loginapp.controller('loginCtrl',['$scope', '$http', '$window', '$localStorage', 
          })
      
      .success(function(data) {
+
               console.log(data);
               ssid = data[0].admin_id;
               sname = data[0].admin_username;
@@ -30,6 +31,7 @@ loginapp.controller('loginCtrl',['$scope', '$http', '$window', '$localStorage', 
                 window.location.replace("http://localhost/anandmurti/login.php");
               }
               //$window.location.href="views/admin/admin.php";
+              
             
 
           });

@@ -17,6 +17,7 @@ include($root."/config/config.php");
     <link href="<?php echo base_url(); ?>/assets/css/green.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/jqvmap.min.css" rel="stylesheet"/>
+    <link href="<?php echo base_url(); ?>/assets/css/sweetalert.css" rel="stylesheet"/>
     <!-- <link href="<?php// echo base_url(); ?>/assets/css/daterangepicker.css" rel="stylesheet"> -->
     <link href="<?php echo base_url(); ?>/assets/css/jquery.dataTables.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/build/css/custom.css" rel="stylesheet">
@@ -32,7 +33,8 @@ include($root."/config/config.php");
     <script src="<?php echo base_url(); ?>/assets/js/ngStorage.min.js"></script>  
     <script src="<?php echo base_url(); ?>/controllers/aqua/aquacontrollers.js"></script>  
     <script src="<?php echo base_url(); ?>/controllers/gogas/gogascontrollers.js"></script>
-    <script src="<?php echo base_url(); ?>/controllers/LoginController.js"></script>   
+    <script src="<?php echo base_url(); ?>/controllers/LoginController.js"></script>
+    <script src="<?php echo base_url(); ?>/assets/js/sweetalert.min.js"></script>      
   </head>
   <body class="nav-md" ng-app="app">
     <div class="container body" ng-controller="Adminbarctrl">
