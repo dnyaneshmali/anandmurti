@@ -44,7 +44,17 @@ app.controller('Listgogasctrl', ['$scope','$http', function($scope,$http) {
     });
 
 $scope.deleteuser=function(gcustomer_id,index){
-    alert('in delete function');
+    //alert('in delete function');
+     swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
 
 console.log(gcustomer_id);
      $http({
@@ -62,7 +72,8 @@ console.log(gcustomer_id);
             
 
           });
-}
+});
+   }
               $scope.isedit=function(id){
               return id==$scope.iseditid;
             }
@@ -149,6 +160,16 @@ $http.get("../../models/getgasproducts.php")
 
     $scope.deleteproduct=function(product_id,index){
     //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
 
 console.log(product_id);
      $http({
@@ -160,13 +181,14 @@ console.log(product_id);
      .success(function(data) {
             
                         console.log(data);
-                        $scope.data.splice(index, 1);
+                        $scope.data.splice(index,1);
                         $scope.$watch();
             
             
 
           });
-}
+});
+  }
 
 $scope.isedit=function(id){
               return id==$scope.iseditid;
@@ -266,7 +288,19 @@ app.controller('Listnewconnectionctrl', ['$scope','$http', function($scope,$http
     });
 
 $scope.deleteuser=function(connection_id,index){
-    alert('in delete function');
+    //alert('in delete function');
+     swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
+
 
 console.log(connection_id);
      $http({
@@ -283,8 +317,9 @@ console.log(connection_id);
             
             
 
+                    });
           });
-}
+   }
 $scope.isedit=function(id){
               return id==$scope.iseditid;
             }
@@ -402,7 +437,18 @@ app.controller('Listrefilcylinderctrl', ['$scope','$http', function($scope,$http
 
 
     $scope.deleterefil=function(refil_id,index){
-    alert('in delete function');
+    //alert('in delete function');
+     swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
 
 console.log(refil_id);
      $http({
@@ -414,13 +460,14 @@ console.log(refil_id);
      .success(function(data) {
             
                         console.log(data);
-                        $scope.data.splice(index, 1);
+                        $scope.data.splice(index,1);
                         $scope.$watch();
             
             
 
+                    });
           });
-}
+   }
 
 $scope.isedit=function(id){
               return id==$scope.iseditid;
@@ -513,7 +560,18 @@ $http.get("../../models/getgasvehicles.php")
 
 
   $scope.deletevehicle=function(gvehicle_id,index){
-    alert('in delete function');
+    //alert('in delete function');
+     swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
 console.log(gvehicle_id);
      $http({
           method  : 'POST',
@@ -528,7 +586,8 @@ console.log(gvehicle_id);
                         $scope.$watch();
 
                       });
-            }
+            });
+   }
 
 $scope.isedit=function(id){
               return id==$scope.iseditid;
@@ -686,7 +745,18 @@ app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
     });
 
     $scope.deleteinwards=function(inwards_id,index){
-    alert('in delete function');
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
     console.log(inwards_id);
      $http({
           method  : 'POST',
@@ -697,11 +767,12 @@ app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
      .success(function(data) {
             
               console.log(data);
-                        $scope.data.splice(index, 1);
+                        $scope.data.splice(index,1);
                         $scope.$watch();
 
                       });
-            }
+            });
+  }
 
 $scope.isedit=function(id){
               return id==$scope.iseditid;
@@ -892,7 +963,18 @@ app.controller('Listsalegasproductctrl', ['$scope','$http', function($scope,$htt
     });
 
     $scope.deletesoldproduct=function(sale_product_id,index){
-    alert('in delete function');
+    //alert('in delete function');
+     swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
 console.log(sale_product_id);
      $http({
           method  : 'POST',
@@ -907,7 +989,8 @@ console.log(sale_product_id);
                         $scope.$watch();
 
                       });
-            }
+            });
+   }
 
 $scope.isedit=function(id){
               return id==$scope.iseditid;

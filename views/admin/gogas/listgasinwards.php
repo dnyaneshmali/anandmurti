@@ -66,7 +66,7 @@
                          <td ng-if="isedit(inwardsentry.inwards_id)">
                         <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updateinwards(inwardsentry,$index);"><i class="fa fa-check"></i></button> 
 
-                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(inwardsentry.inwards_id);"><i class="fa fa-close"></i></button>
+                              <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
 
                                </td>
 
