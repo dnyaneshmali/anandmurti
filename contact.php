@@ -41,7 +41,7 @@
                               </ul>
                               <div class="contfrm">
                                  <p>For all queries please contact us at the below addresses</p>
-                                 <div class="cntleft"> <strong>Registered &amp; Main Office</strong><br />
+                                 <div class="cntleft "> <strong>Registered &amp; Main Office</strong><br />
                                     Anandmurti Group Limited <br />
                                     (CIN:L14106UP1995PLC019017)<br />
                                     Sector-128, Pune - 411410<br />
