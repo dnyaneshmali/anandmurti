@@ -95,7 +95,7 @@
 
                              <td ng-if="isedit(gogasproduct.product_id)">
 
-                              <a data-toggle="tooltip" title="Edit"><button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updategasproduct(gogasproduct,$index);"><i class="fa fa-check"></i></button></a> 
+                              <a data-toggle="tooltip" title="Edit"><button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updategasproduct(gogasproduct);"><i class="fa fa-check"></i></button></a> 
 
                               <a data-toggle="tooltip" title="Edit"><button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
 

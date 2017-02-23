@@ -127,7 +127,7 @@
                       <td ng-if="isedit(Connection.connection_id)">
                        <a data-toggle="tooltip" title="Update"> <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updategasconnection(Connection);"><i class="fa fa-check"></i></button> </a>
 
-                              <a data-toggle="tooltip" title="Update"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit(Connection.connection_id);"><i class="fa fa-close"></i></button> </a>
+                              <a data-toggle="tooltip" title="Update"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button> </a>
 
                                </td>
 

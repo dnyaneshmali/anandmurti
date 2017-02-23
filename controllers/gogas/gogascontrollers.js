@@ -360,6 +360,11 @@ $scope.isedit=function(id){
 }]);
 
 app.controller('Refilcylinderctrl', ['$scope','$http', function($scope,$http) {
+   $scope.reset = function() {
+  delete $scope.refil;
+  $scope.refilform.$setPristine();
+}
+
 $http.get("../../models/getdistinctconnection.php")
     .success(function(data){
         $scope.connectiondetails=data
@@ -397,6 +402,7 @@ console.log($scope.customer);
 */
 
     $scope.insertdata=function(refil){
+
   $scope.refil = {};
 $scope.refil = angular.copy(refil);
 console.log($scope.refil);

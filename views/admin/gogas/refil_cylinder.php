@@ -19,7 +19,7 @@
                       </div>
 
                        <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Connection Type <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Cylinder Type <span class="required">*</span>
                         </label>
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
@@ -34,15 +34,15 @@
                       </div>
 
 
-                     <div class="item form-group">
+                  <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">Refil payment details <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" ng-pattern="/^\d+$/" placeholder="payment details" class="form-control"ng-model="refil.refil_payment_details" id="refil_payment_details" class="form-control" name="refil_payment_details" required />
+                           <span class="input-group-addon"><i class="fa fa-user"></i></span>
+                          <input type="text" placeholder="payment details" class="form-control" ng-model="refil.refil_payment_details" id="refil_payment_details"  name="refil_payment_details" required />
                           </div>
-                          <p class="val-style" ng-show="refilform.refil_payment_details.$invalid && !refilform.refil_payment_details.$pristine" class="help-block"> accept digits only required.</p>
+                          <p class="val-style" ng-show="refilform.refil_payment_details.$invalid && !refilform.refil_payment_details.$pristine" class="help-block"> required.</p>
                         </div>
                       </div>
 
@@ -54,7 +54,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" ng-pattern="/^\d+$/" placeholder="Refil amount" class="form-control"ng-model="refil.amount" id="refil_amount" class="form-control" name="amount" required />
+                          <input type="text" ng-pattern="/^\d+$/" placeholder="Refil amount" class="form-control"ng-model="refil.amount" id="refil_amount" class="form-control" name="amount" >
                           </div>
                           <p class="val-style" ng-show="refilform.amount.$invalid && !refilform.amount.$pristine" class="help-block">accept digits only required.</p>
                         </div>
@@ -63,8 +63,8 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
-                          <button type="submit" class="btn btn-primary">Cancel</button>
-                          <button ng-click="insertdata(refil)"  ng-disabled="!refilform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
+                          <button type="submit" ng-click="reset()"  ng-disabled="!refilform.$valid" class="btn btn-primary">Cancel</button>
+                          <button ng-click="insertdata(refil)"   ng-disabled="!refilform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
                           {{msg}}
                         </div>
                       </div>
