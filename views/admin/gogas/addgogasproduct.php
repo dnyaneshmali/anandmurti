@@ -26,8 +26,9 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Product Price" ng-model="gogasproduct.product_prize" id="product_prize" class="form-control" name="product_prize" required />
+                          <input type="text" placeholder="Product Price" ng-pattern="/^\d+$/" ng-model="gogasproduct.product_prize" id="product_prize" class="form-control" name="product_prize" required />
                          </div>
+                         <p style="color:red;" ng-show="!addgogasproductform.product_prize.$error.required && addgogasproductform.product_prize.$invalid"> accept digits only.</p>
                         </div>
                       </div>
                       <div class="item form-group">
@@ -36,13 +37,16 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
-                          <select class="form-control" ng-model="gogasproduct.Product_category" name="Product_category" >
+                          <select class="form-control" ng-model="gogasproduct.Product_category" name="Product_category" class="{'has-errors' : addgogasproductform.Product_category.$invalid, 'no-errors' : addgogasproductform.Product_category.$valid}" ng-required="true">
                             <option value="" selected>Product category</option>
                             <option value="cylinder">cylinder</option>
                             <option value="cooktop">cooktop</option>
                             <option value="pipe">pipe</option>
                             <option value="lighter">lighter</option>
                           </select>
+                          </div>
+                           <div class="error-container" ng-show="addgogasproductform.Product_category.$dirty && addgogasproductform.Product_category.$invalid" ng-messages="addgogasproductform.Product_category.$error">
+                         <div class="val-style" class="error" ng-message="required">select product category </div>
                           </div>
                         </div>
                       </div>
@@ -55,18 +59,20 @@
                            <span class="input-group-addon"><i class="fa fa-building"></i></span>
                           <input type="text" placeholder="Product Company" ng-model="gogasproduct.Product_company" id="Product_company" class="form-control" name="Product_company" required />
                          </div>
+                           <p class="val-style" ng-show="addgogasproductform.Product_company.$invalid && !addgogasproductform.Product_company.$pristine" class="help-block">  product company is required .</p>
                         </div>
                       </div>
 
                      
-                           <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Product tax <span class="required">*</span>
+                            <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="customer_name">Product tax <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Product Tax" ng-model="gogasproduct.product_tax" id="product_tax" class="form-control" name="Product_tax" required />
+                          <span class="input-group-addon"><i class="fa fa-dropbox"></i></span>
+                          <input type="text" placeholder="Product tax" ng-pattern="/^[0-9]*$/" ng-model="gogasproduct.product_tax" id="product_tax" class="form-control" name="product_tax" required />
                           </div>
+                           <p class="val-style" ng-show="addgogasproductform.product_tax.$invalid && !addgogasproductform.product_tax.$pristine" class="help-block">  product tax is required in digit.</p>
                         </div>
                       </div>
 
