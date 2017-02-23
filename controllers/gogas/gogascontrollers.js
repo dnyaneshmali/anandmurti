@@ -460,7 +460,7 @@ console.log(refil_id);
      .success(function(data) {
             
                         console.log(data);
-                        $scope.data.splice(index,1);
+                        $scope.data.splice(index, 1);
                         $scope.$watch();
             
             

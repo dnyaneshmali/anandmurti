@@ -96,7 +96,17 @@ app.controller('Listaquactrl', ['$scope','$http', function($scope,$http) {
 
 
   $scope.deleteuser=function(acustomer_id,index){
-    alert('in delete function');
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
 
 console.log(acustomer_id);
      $http({
@@ -112,7 +122,8 @@ console.log(acustomer_id);
                         $scope.$watch();
             
  });
-            }
+            });
+  }
 
              $scope.isedit=function(id){
               return id==$scope.iseditid;
@@ -197,7 +208,17 @@ app.controller('Listaquaproductctrl', ['$scope','$http', function($scope,$http) 
 
 
   $scope.deleteuser=function(product_id,index){
-    alert('in delete function');
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
 
 console.log(product_id);
      $http({
@@ -213,8 +234,9 @@ console.log(product_id);
                         $scope.$watch();
 
                       });
-            }
+            });
 
+}
 
 
 }]);
@@ -287,7 +309,17 @@ app.controller('Listaquaorder', ['$scope','$http', function($scope,$http) {
 
 
   $scope.deleteorder=function(order_id,index){
-    alert('in delete function');
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
 
 console.log(order_id);
      $http({
@@ -303,7 +335,8 @@ console.log(order_id);
                         $scope.$watch();
 
                       });
-            }
+            });
+  }
 
             $scope.setreminder=function(order_id,index){
 console.log(order_id);
@@ -609,7 +642,17 @@ app.controller('Listvehiclectrl', ['$scope','$http', function($scope,$http) {
 
 
   $scope.deletevehicle=function(vehicle_id,index){
-    alert('in delete function');
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
 
 console.log(vehicle_id);
      $http({
@@ -625,7 +668,8 @@ console.log(vehicle_id);
                         $scope.$watch();
 
                       });
-            }
+            });
+  }
 
 
 
