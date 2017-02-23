@@ -19,14 +19,14 @@
                </ol>
                <div class="carousel-inner">
                   <div class="item active">
-                     <img src="images\aqua_(3).png" class="img-responsive">
+                     <img src="images\aqua_(3).jpg" class="img-responsive">
                      <div class="carousel-caption hidden-xs hidden-sm">
                        <!--  <h3>Aqua</h3>
                         <p>Aqua water for healthy life</p> -->
                      </div>
                   </div>
                   <div class="item">
-                     <img src="images\gogas_(3).png" class="img-responsive">
+                     <img src="images\gogas_(3).jpg" class="img-responsive">
                      <div class="carousel-caption hidden-xs hidden-sm">
                         <!-- <h3>Go gas </h3>
                         <p>Lpg gas for domestic and industrial use </p> -->

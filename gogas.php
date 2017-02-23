@@ -7,7 +7,7 @@
             <a class="slider-btn2 btn btn-lg" href="#">CHECK IT</a>
          </p> -->
          <div >
-                            <img src="images\gogas_(3).png" class="img-responsive img-mt">
+                            <img src="images\gogas_(3).jpg" class="img-responsive img-mt">
                            <!--  <div class="carousel-caption">
                                 <h3>Aqua</h3>
                                 <p>Aqua water for healthy life</p>
@@ -29,7 +29,7 @@
           <!--   <p class="text-muted"><span style="font-weight: 600;">Step 1:</span> Collect an application form for new gas connection from the gas agency office.
 </br> <span style="font-weight: 600;">Step 2:</span> Submit documents giving the proofs of identity and address (xerox copy) with this application form.</br> <span style="font-weight: 600;">Step 3:</span>After the registration, the agency will issue you receipt on your name with date of registration and Registration Number. </br> <span style="font-weight: 600;">Step 4:</span> When your booking number comes, the agency inform the customer about the same.
 </br> <span style="font-weight: 600;">Step 5:</span>That time the customer has to produce the receipt of LPG registration and also make payments of Regulator/Cylinder/Deposit.</p> -->
-<img src="/anandmurti/images/saftys.png" style="margin-bottom: 50px;">
+<img src="/anandmurti/images/saftys.jpg" style="margin-bottom: 50px;">
          </div>
     
        <div class="second-section">

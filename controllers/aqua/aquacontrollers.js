@@ -454,7 +454,7 @@ console.log($scope.addjardetails);
 
      .success(function(data) {
             console.log(data);
-    $scope.msg = "data inserted successfully "
+    //$scope.msg = "data inserted successfully "
                //delete $scope.addjardetails;
                 delete $scope.addjardetails;
                         swal({
@@ -485,9 +485,19 @@ app.controller('Listjardetailsctrl', ['$scope','$http', function($scope,$http) {
 
   $scope.deletejar=function(jar_id,index){
 
-    alert('in delete function');
-
-console.log(jar_id);
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+ // swal("Deleted!", "Your imaginary file has been deleted.", "success");
+      console.log(jar_id);
      $http({
           method  : 'POST',
           url     : '../../models/deletejardetails.php',
@@ -501,6 +511,9 @@ console.log(jar_id);
                         $scope.$watch();
 
                       });
+    });
+
+
             }
 
              $scope.isedit=function(id){
