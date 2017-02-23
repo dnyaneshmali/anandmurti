@@ -48,6 +48,9 @@ h2 {
     font-weight: 700;
     /*text-decoration: underline;*/
 }
+ h2:hover {
+    color: #0aa4d8;
+}
 .d-contact-page {
     margin-bottom: 235px;
     padding-top: 0px;
@@ -237,9 +240,9 @@ a.slider-btn2 {
     /*padding-bottom: 47px;*/
 }
 
-.third-section{
+/*.third-section{
 	padding-bottom:30px;
-}
+}*/
 .home-content-box {
     margin-top: 60px;
 }
@@ -251,7 +254,10 @@ a.slider-btn2 {
 /*----------------Contact Page Start----------*/
 
 .page-content ,.products-page {
-    margin-top: 75px;
+    margin-top: 75px;    
+}
+.page-content{
+    margin-top: 140px ! important;
 }
 #page-contact .title-section {
     margin-top: 40px;
@@ -455,6 +461,11 @@ background-color: #6eb94e;
     padding-top: 40px;
         margin-bottom: 30px;
 }
+.about-page .title-section.container {
+    padding-top: 0px ! important;
+       
+}
+
 .upper_slider .item img{
     height: 100px;
 }
@@ -552,6 +563,7 @@ img.owner_img {
     margin: 15px 20px 0px 0px;
 }
 
+
 .about-page .row {
     margin-right: -15px;
     margin-left: -15px;
@@ -570,7 +582,7 @@ img.owner_img {
     margin-bottom: 3%;
 }
 .home-page h2{
-margin-top: 110px;
+/*margin-top: 110px;*/
 }
 .navbar-brand {
     float: none;}
@@ -623,10 +635,15 @@ margin-top: 110px;
     padding-left: 50px;
     padding-right: 50px;
 }
-.home-page .third-section,.aqua-page .third-section {
+.home-page .first-section,.gogas-page .first-section,.aqua-page .first-section {padding-top: 91px;}
+.home-page .second-section{padding-top: 75px; padding-bottom: 55px;}
+.gogas-page .first-section{padding-bottom: 40px;}
+.gogas-page .second-section{padding-top: 0px; padding-bottom: 85px;}
+.home-page .third-section{
         background-color: white;
-            margin-bottom: 30px;
+            margin-bottom: 115px;
 }
+.aqua-page .third-section{padding-top: 75px; margin-bottom: 0px;}
 .stylish-panel > div > #f1,.stylish-panel > div > #f2,.stylish-panel > div > #f3,.stylish-panel > div > #f4{
     padding: 10px;
     border: 1px solid transparent;
@@ -648,8 +665,8 @@ margin-top: 110px;
 }
 .stylish-panel div#f1:hover,.stylish-panel div#f2:hover,.stylish-panel div#f3:hover,.stylish-panel div#f4:hover{
   border: 1px solid rgb(200, 200, 200);
-  /*  box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;*/
-    box-shadow:rgb(185, 202, 178) 0px 5px 5px 2px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 5px 5px 2px;
+    /*box-shadow:rgb(185, 202, 178) 0px 5px 5px 2px;*/
 }
 .home-page .panel-body , .gogas-page .panel-body{
     height: 250px;
@@ -904,8 +921,6 @@ h2 {
 }
 .fl-l{
     float: left
-<<<<<<< HEAD
-=======
 }
 .products-page h3{
 margin-bottom: 30px;
@@ -916,7 +931,8 @@ margin-top: 0px;}
 }
 
 .second-section.testimonial-section {
-    margin-bottom: 100px;
+    margin-bottom: 115px;
+    margin-top: 35px;
     background-color: #FFF ! important;
->>>>>>> 3abdb1000d9a08df32989c6c94ec066d71c330ae
 }
+

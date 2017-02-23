@@ -25,15 +25,31 @@
 .icon-background4 {
     color: #c0ffc0;
 }
+h3{
+color: #21a0da;
+    text-decoration: underline;}
+    .d-contact-page{margin-top: 120px;}
+    .contact-details .item {
+    border-bottom:none ! important;}
+    .contact-details{
+      border:none ! important;
+      padding-top: 90px;
+    margin-left: 30px;
+    }
 
 </style>
 <div class="page-content d-contact-page">
+
   
-  <div class="container" style="">
+  <div class="container">
+    <h2>
+                                 <center>Contact us</center>
+                                  <div class="underline" style="width:25%; margin-bottom: 80px;"></div>
+                              </h2>
 <div class="row">
             <div class="box">
                 <div class="col-lg-12 bgclr">
-                  
+                   
                     <h3 class="intro-text">Contact Information :
                         <!-- <div class="underline" style="width:25%;"></div> -->
 
@@ -58,16 +74,53 @@ For the Parabola Restaurant please call 020 7940 8795</h5>
                     <h2 class="intro-text text-center">Contact
                         <strong>business casual</strong>
                     </h2>
-                    <hr> --> <h2>
-                                 <center>Contact us</center>
-                                  <div class="underline" style="width:25%; margin-bottom: 80px;"></div>
-                              </h2>
+                    <hr> --> 
                 
-                <div class="col-md-12">
+                <div class="col-md-8">
+                  <h3 class="intro-text">Location :</h3>
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-                    <iframe width="100%" height="430" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed">
+                    <iframe width="100%" height="430" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style="padding-top:40px">
                               </iframe>
+                              <div class="on-iframe"></div>
                 </div>
+                <div class="col-md-4">
+                     <div class="row contact-details">
+                        <div class="item">
+                           <div class="icon">
+                              <i class="fa fa-map-marker"></i>
+                           </div>
+                           <div class="content">
+                              Softinfology Pvt. Ltd.<br/>
+                              #314, World Trade Center<br/>
+                              Near EON IT Park,<br/>
+                              Kharadi Pune-41453<br/>
+                           </div>
+                        </div>
+                        <div class="item">
+                           <div class="icon">
+                              <i class="fa fa-phone"></i>
+                           </div>
+                           <div class="content">
+                              Softinfology Pvt. Ltd.<br/>
+                              #314, World Trade Center<br/>
+                              Near EON IT Park,<br/>
+                              Kharadi Pune-41453<br/>
+                           </div>
+                        </div>
+                        <div class="item">
+                           <div class="icon">
+                              <i class="fa fa-envelope-o"></i>
+                           </div>
+                           <div class="content">
+                              Softinfology Pvt. Ltd.<br/>
+                              #314, World Trade Center<br/>
+                              Near EON IT Park,<br/>
+                              Kharadi Pune-41453<br/>
+                           </div>
+                        </div>
+                        
+                     </div>
+                  </div>
                      <!-- <div class="col-md-offset-1 col-md-4 pd-right-25">
                      <div class="row contact-details">
                         <div class="item">
@@ -157,12 +210,12 @@ For the Parabola Restaurant please call 020 7940 8795</h5>
             </div>
         </div>
      </div>
-<div class="row">
+<!-- <div class="row">
             <div class="box">
                 <div class="col-lg-12 bgclr">
                   
                     <h3 class="intro-text">Go Gas office Address :
-                        <!-- <div class="underline" style="width:25%;"></div> -->
+                       
 
                     </h3>
                      <div class="content text-center">
@@ -174,13 +227,13 @@ For the Parabola Restaurant please call 020 7940 8795</h5>
                            </div>
                   </div>
                 </div>
-              </div>
-             <div class="row">
+              </div> -->
+       <!--       <div class="row">
             <div class="box">
                 <div class="col-lg-12 bgclr">
                   
                     <h3 class="intro-text">Aqua office Address :
-                        <!-- <div class="underline" style="width:25%;"></div> -->
+                 
 
                     </h3>
                      <div class="content text-center">
@@ -192,7 +245,7 @@ For the Parabola Restaurant please call 020 7940 8795</h5>
                            </div>
                   </div>
                 </div>
-              </div>
+              </div> -->
               <div class="row">
             <div class="box">
                 <div class="col-lg-12 bgclr">

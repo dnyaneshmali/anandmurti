@@ -16,7 +16,7 @@
       </div>
       <!--End of main div-->
       <div class="page-content gogas-page">
-         <div class="title-section container">
+         <div class="first-section container">
             <h2 class="text-center">Go Gas</h2>
             <div class="underline"></div>
             <p class="text-center text-muted">Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
@@ -25,10 +25,6 @@
           <div class="title-section container new-conn">
             <h2 class="text-center">How to get New Gas Connection?</h2>
             <div class="underline"></div>
-
-          <!--   <p class="text-muted"><span style="font-weight: 600;">Step 1:</span> Collect an application form for new gas connection from the gas agency office.
-</br> <span style="font-weight: 600;">Step 2:</span> Submit documents giving the proofs of identity and address (xerox copy) with this application form.</br> <span style="font-weight: 600;">Step 3:</span>After the registration, the agency will issue you receipt on your name with date of registration and Registration Number. </br> <span style="font-weight: 600;">Step 4:</span> When your booking number comes, the agency inform the customer about the same.
-</br> <span style="font-weight: 600;">Step 5:</span>That time the customer has to produce the receipt of LPG registration and also make payments of Regulator/Cylinder/Deposit.</p> -->
 <img src="/anandmurti/images/saftys.jpg" style="margin-bottom: 50px;">
          </div>
     
@@ -83,6 +79,34 @@
             </div>
          </div>
         
+<!--  <div class="container">
+ <h2 class="text-center">Signs of Gas Leak & safty Tips</h2>
+            <div class="underline"></div>
+  <p>The .table-bordered class adds border on all sides of the table and cells:</p>                        
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Firstname</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Anna</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Debbie</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>John</td>
+      </tr>
+    </tbody>
+  </table>
+</div> -->
+
 		 <div class="container carousel-mb">
         <div class="row">
             <div class="col-md-12 	">
