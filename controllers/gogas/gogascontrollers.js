@@ -85,6 +85,7 @@ console.log(gcustomer_id);
             $scope.unsetedit=function(id){
               $scope.iseditid='';
               $scope.data[id]=angular.copy($scope.oldgogas);
+              console.log($scope.data[id]);
               $scope.$watch();
             }
             $scope.initval = function (gogascustomer) {
@@ -181,7 +182,7 @@ console.log(product_id);
      .success(function(data) {
             
                         console.log(data);
-                        $scope.data.splice(index,1);
+                        $scope.data.splice(index, 1);
                         $scope.$watch();
             
             
@@ -199,8 +200,10 @@ $scope.isedit=function(id){
               $scope.$watch();
             }
             $scope.unsetedit=function(id){
+              console.log();
               $scope.iseditid='';
-              $scope.data[id]=angular.copy($scope.oldproduct);
+              $scope.gasproducts[id]=angular.copy($scope.oldproduct);
+
               $scope.$watch();
             }
             $scope.initval = function (gogasproduct) {
@@ -228,6 +231,8 @@ $scope.isedit=function(id){
            }
 
 }]);
+
+
 
 
 
@@ -485,7 +490,7 @@ $scope.isedit=function(id){
             }
             $scope.unsetedit=function(id){
               $scope.iseditid='';
-              $scope.data[id]=angular.copy($scope.oldrefil);
+              $scope.refildata[id]=angular.copy($scope.oldrefil);
               $scope.$watch();
             }
             $scope.initval = function (refil) {
@@ -786,11 +791,12 @@ $scope.isedit=function(id){
             $scope.setedit=function(id,oldinwards){
               $scope.iseditid=id;
               $scope.oldinwards=angular.copy(oldinwards);
+              
               $scope.$watch();
             }
             $scope.unsetedit=function(id){
               $scope.iseditid='';
-              $scope.data[id]=angular.copy($scope.oldinwards);
+              $scope.gasinwards[id]=angular.copy($scope.oldinwards);
               $scope.$watch();
             }
             $scope.initval = function (inwardsentry) {
@@ -1008,7 +1014,7 @@ $scope.isedit=function(id){
             }
             $scope.unsetedit=function(id){
               $scope.iseditid='';
-              $scope.data[id]=angular.copy($scope.oldsale);
+              $scope.soldproducts[id]=angular.copy($scope.oldsale);
               $scope.$watch();
             }
             $scope.initval = function (soldproduct) {
