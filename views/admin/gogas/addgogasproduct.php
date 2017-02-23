@@ -16,6 +16,7 @@
                           <span class="input-group-addon"><i class="fa fa-dropbox"></i></span>
                           <input type="text" placeholder="Product Name" ng-model="gogasproduct.product_name" id="product_name" class="form-control" name="product_name" required />
                           </div>
+                           <p class="val-style" ng-show="addgogasproductform.product_name.$invalid && !addgogasproductform.product_name.$pristine" class="help-block">  product name is required.</p>
                         </div>
                       </div>
 

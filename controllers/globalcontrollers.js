@@ -108,7 +108,17 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', '
 
 
               $scope.deleteuser=function(admin_id,index){
-                alert('in delete function');
+                //alert('in delete function');
+                swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
 
             console.log(admin_id);
                  $http({
@@ -124,7 +134,8 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', '
                         $scope.$watch();
 
                       });
-            }
+            })
+              }
                
             /*
             */

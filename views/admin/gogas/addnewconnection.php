@@ -67,9 +67,9 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder=" connection depreciation" ng-model="Connection.connection_depreciation" id="    connection_depreciation" class="form-control" name="connection_depreciation" required />
+                          <input type="text" placeholder=" connection depreciation" ng-pattern="/^\d+$/" ng-model="Connection.connection_depreciation" id=" connection_depreciation" class="form-control" name="connection_depreciation" required />
                         </div>
-                          <p class="val-style" ng-show="connectionform.connection_depreciation.$invalid && !connectionform.connection_depreciation.$pristine" class="help-block"> required</p>
+                          <p class="val-style" ng-show="connectionform.connection_depreciation.$invalid && !connectionform.connection_depreciation.$pristine" class="help-block">accept only digits required</p>
                         </div>
                       </div>
                     
@@ -146,7 +146,7 @@
                             <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
                           <input type="text" placeholder="connection other" ng-model="Connection.connection_other" id="connection_other" class="form-control" name="connection_other" required />
                         </div>
-                          <p class="val-style" ng-show="connectionform.connection_other.$invalid && !connectionform.connection_other.$pristine" class="help-block"> required</p>
+                          <!-- <p class="val-style" ng-show="connectionform.connection_other.$invalid && !connectionform.connection_other.$pristine" class="help-block"> required</p> -->
                         </div>
                       </div>
 
