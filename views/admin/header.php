@@ -12,9 +12,7 @@ include($root."/config/config.php");
     <title>Anand Murti </title>
    <link  rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css">
     <link href="<?php echo base_url(); ?>/assets/css/font-awesome.min.css" rel="stylesheet">
-   <link type="text/css" href="<?php echo base_url(); ?>/assets/css/custom.min.css" rel="stylesheet"> 
-    <link href="<?php echo base_url(); ?>/assets/css/nprogress.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/assets/css/green.css" rel="stylesheet">
+   <link type="text/css" href="<?php echo base_url(); ?>/assets/css/custom.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/jqvmap.min.css" rel="stylesheet"/>
     <link href="<?php echo base_url(); ?>/assets/css/sweetalert.css" rel="stylesheet"/>
