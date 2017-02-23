@@ -6,7 +6,7 @@
     background-color: #b6d6a6;
 }*/.col-lg-12.bgclr {
 /*    background-color: #b6d6a6;*/
-    background-color: #fff;
+    background-color: #f7f7f7;
     opacity: 0.8;
     /*padding-top: 70px;*/
 
@@ -35,6 +35,7 @@ color: #21a0da;
       border:none ! important;
       padding-top: 90px;
     margin-left: 30px;
+    background-color: #f7f7f7 ! important;
     }
 
 </style>
@@ -79,9 +80,9 @@ For the Parabola Restaurant please call 020 7940 8795</h5>
                 <div class="col-md-8">
                   <h3 class="intro-text">Location :</h3>
                     <!-- Embedded Google Map using an iframe - to select your location find it on Google maps and paste the link as the iframe src. If you want to use the Google Maps API instead then have at it! -->
-                    <iframe width="100%" height="430" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style="padding-top:40px">
-                              </iframe>
-                              <div class="on-iframe"></div>
+                    <!-- <iframe width="100%" height="430" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://www.citymaps.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=natepute%20solapur%20maharashtra+(%20Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" style="padding-top:40px">
+                              </iframe> -->
+                        <iframe width="100%" height="600" src="http://www.mapi.ie/create-google-map/map.php?width=100%&amp;height=500&amp;hl=en&amp;q=Natepute+(Anandmurti%20Group)&amp;ie=UTF8&amp;t=h&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" style="padding-top:40px"></iframe>
                 </div>
                 <div class="col-md-4">
                      <div class="row contact-details">
