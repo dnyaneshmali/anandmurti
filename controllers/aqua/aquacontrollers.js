@@ -430,6 +430,8 @@ console.log($scope.setrem);
               console.log(data);
               //$scope.orderinvoicedata = data;
               $scope.orderinvoicedata=data;
+              $scope.cdate = new Date();
+               $scope.duedate = new Date();
                        // $scope.data.splice(index, 1);
                        // $scope.$watch();
 

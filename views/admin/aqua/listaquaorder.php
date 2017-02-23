@@ -95,31 +95,91 @@
 
                 
         <div class="modal fade" id="invoicemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog">
+            <div class="modal-dialog  modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
+                    <style type="text/css">
+                      
+                      .invoice_logo {
+    padding-top: 10px;
+    padding-bottom: 25px;
+}
+.id-section {
+    text-align: center;
+}
+.modal-title {
+    background-color: #05ADF7;
+    color: #fff;
+    padding: 5px;
+    text-align: center;
+}
+.invoice-title{
+    background-color: #66B845;
+    margin-bottom: 24px;
+    color: #fff;
+    padding: 10px;
+  }
+                    </style>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
                             <div class="row">
-                            <div class="col-md-6">
-                        <h3 class="modal-title">AnandMurti</h3>
-                        <h4>Address</h4>
-                        <h5>Natepute</h5>
+                            <div class="col-md-6 logo-section">
+                            <div class="row">
+                            <div class="invoice_logo">
+                        <img style="width: 100%;margin-left: -27px;" src="http://localhost/anandmurti/images/am_logo.png" alt="logo">
+                        </div>
+                        <h4 class="modal-title">Anandmurti Group Limited</h4>
+                        <h5>(CIN:L14106UP1995PLC019017),</h5>
+                        <h5>Sector-128, Pune - 411410,</h5>
+                        <h5>Maharashtra, India,</h5>
+                        <h5>h No: (120) 4609000, 2470800,</h5>
+                        <h5>Fax: (120) 4609464, 4609496</h5>
+                        </div>
+                        <div class="row">
+                        <h4 class="modal-title">Customer</h4>
+                        <h5><strong>Name:</strong> <span ng-repeat="invoice in orderinvoicedata">{{invoice.acustomer_name}}</span></h5>
+                        <h5><strong>Email ID:</strong> <span ng-repeat="invoice in orderinvoicedata">{{invoice.acustomer_email}}</span></h5>
+                        <h5><strong>Address:</strong> <span ng-repeat="invoice in orderinvoicedata">{{invoice.acustomer_address}}</span></h5>
+                        <h5><strong>Number:</strong> <span ng-repeat="invoice in orderinvoicedata">{{invoice.acustomer_number}}</span></h5>
+                        </div>
+                        </div>
+                        <div class="col-md-6 id-section">
+                        <h3 class="invoice-title">Invoice</h3>
+                        <div class="row">
+                        <div class="col-md-6">
+                        <h5 class="modal-title"><strong>Invoice ID</strong></h5>
+                        IN-001
                         </div>
                         <div class="col-md-6">
-                        <h3 class="modal-title">Invoice</h3>
+                        <h5 class="modal-title"><strong>Invoice Date</strong></h5>
+                        <span>{{cdate | date:'yyyy-MM-dd'}}</span>
                         </div>
                         </div>
-                        <span ng-repeat="invoice in orderinvoicedata">Customer Name : {{invoice.acustomer_name}}</span>
-                        <span ng-repeat="invoice in orderinvoicedata">Cur : {{invoice.acustomer_name}}</span>
+                        <div class="row">
+                        <div class="col-md-6">
+                        <h5 class="modal-title"><strong>Customer ID</strong></h5>
+                        <span ng-repeat="invoice in orderinvoicedata">{{invoice.acustomer_id}}</span>
+                        </div>
+                        <div class="col-md-6">
+                        <h5 class="modal-title"><strong>Due Date</strong></h5>
+                        <span>
+                        <input type="date" placeholder="Delivery Date" class="form-control" ng-model="duedate" id="duedate" class="form-control" name="cdate" required />
+                        </span>
+                        </div>
+                        </div>
+
+                        </div>
+                        </div>
                     </div>
                     <div class="modal-body">
                         <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
                           <th>Order ID</th>
+                          <th>Jar Type</th>
                           <th>Order Quantity</th>
                           <th>Order Date</th>
+                          <th>Action</th>
                           
                         </tr>
                       </thead>
@@ -128,8 +188,10 @@
                       <tbody>
 <tr ng-repeat="invoice in orderinvoicedata">
                           <td>{{invoice.order_id}}</td>
+                          <td>{{invoice.jar_id}}</td>
                           <td>{{invoice.order_quantity}}</td>
                           <td>{{invoice.order_delivery_date}}</td>
+                          <td><a data-toggle="tooltip" title="Delete"> <button class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
 </tr>
 
                       </tbody>
