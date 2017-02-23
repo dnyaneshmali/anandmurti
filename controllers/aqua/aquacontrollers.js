@@ -180,7 +180,7 @@ console.log($scope.addaquaproduct);
   type: "success",
   confirmButtonText: "Ok"
 });
-                      $scope.addaquaproductform.$setPristine();
+       $scope.addaquaproductform.$setPristine();
             
 
           });
