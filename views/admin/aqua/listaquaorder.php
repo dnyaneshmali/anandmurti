@@ -86,7 +86,6 @@
                           </td>
 
                           <ng-form>
-
                         </tr>
                       </tbody>
                     </table>
@@ -101,25 +100,36 @@
                     <div class="modal-header">
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
-                        <h4 class="modal-title">Modal table</h4>
+                            <div class="row">
+                            <div class="col-md-6">
+                        <h3 class="modal-title">AnandMurti</h3>
+                        <h4>Address</h4>
+                        <h5>Natepute</h5>
+                        </div>
+                        <div class="col-md-6">
+                        <h3 class="modal-title">Invoice</h3>
+                        </div>
+                        </div>
+                        <span ng-repeat="invoice in orderinvoicedata">Customer Name : {{invoice.acustomer_name}}</span>
+                        <span ng-repeat="invoice in orderinvoicedata">Cur : {{invoice.acustomer_name}}</span>
                     </div>
                     <div class="modal-body">
                         <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Jar Type</th>
-                          <th>Price</th>
-                          <th colspan="2">Action</th>
+                          <th>Order ID</th>
+                          <th>Order Quantity</th>
+                          <th>Order Date</th>
                           
                         </tr>
                       </thead>
 
 
                       <tbody>
-<tr>
-                          <td>1</td>
-                          <td>2</td>
-                          <td>3</td>
+<tr ng-repeat="invoice in orderinvoicedata">
+                          <td>{{invoice.order_id}}</td>
+                          <td>{{invoice.order_quantity}}</td>
+                          <td>{{invoice.order_delivery_date}}</td>
 </tr>
 
                       </tbody>

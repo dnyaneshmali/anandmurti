@@ -417,7 +417,26 @@ console.log($scope.setrem);
 
 
               $scope.geninvoice=function(order_id,index){
-                //alert('dfdf');
+                
+
+                 $http({
+          method  : 'POST',
+          url     : '../../models/getorderinvoice.php',
+          data    : {'order_id':order_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+              //$scope.orderinvoicedata = data;
+              $scope.orderinvoicedata=data;
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+
+
+
                 $('#invoicemodal').modal('toggle');
                 //$('#invoicemodal').modal('show');
                // $('#invoicemodal').modal('hide');
