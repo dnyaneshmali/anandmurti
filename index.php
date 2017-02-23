@@ -74,7 +74,7 @@
                   </div>
                </div>
             </div>
-            <div class="col-md-4 col-sm-6">
+     <!--        <div class="col-md-4 col-sm-6">
                <div class="panel panel-default ">
                   <div class="text-center">
                      <div class="panel-body">
@@ -84,6 +84,18 @@
                            water purifier "
                            AN ISO 9001-2008 certified company
                         </p>
+                     </div>
+                  </div>
+               </div>
+            </div> -->
+             <div class="col-md-4 col-sm-6">
+               <div class="panel panel-default">
+                  <div class="text-center">
+                     <div class="panel-body">
+                         <img id="img-2" src="/anandmurti/assets/images/aqua_icon.png">
+                        <h4>Aqua</h4>
+                        <p class="text-center">Anand Murti F&B Pvt. Ltd is a fast growing company extending world-class services in F&B and Retail businesses.
+                           With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  
                      </div>
                   </div>
                </div>

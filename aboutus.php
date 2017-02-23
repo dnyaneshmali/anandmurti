@@ -1,11 +1,11 @@
 <?php include('header.php');?>
 <div class="page-content about-page">
    <div class="title-section container">
-      <h2 class="text-center">About Us</h2>
+     <!--  <h2 class="text-center">About Us</h2>
       <div class="underline" style="width:20%"></div>
       <p class="text-center text-muted">
-         <!-- Have a question, comment, or just want to say hi? Drop us a line! -->
-      </p>
+        
+      </p> -->
    
  <!--   <div class="container">
       <div class="row" >
@@ -28,22 +28,23 @@
 
    
 <div class="row">
-  <div class="col-md-3"></div>
-  <div class="col-md-6">
+  <div class="col-md-2"></div>
+  <div class="col-md-8">
     <img class="img-responsive" src="images/hello.jpg" style="margin-bottom: 50px; width:100%">
   </div>
-  <div class="col-md-3"></div>
-  <div class="col-md-7"><p style="word-spacing: 2px;">&nbsp &nbsp &nbsp Welcome to Anandmuti,  We’re dedicated to giving you the very best of  quality water ,lpg gas and food beverages, with a focus on dependability, customer service and uniqueness.
-               Founded in [year] by Mr.Pramod Baradkar. When Mr.Pramod Baradkar,first started out, his passion for making rural life healthy and easy , providing the best quality water and lpg gas for domestic and industrial use drove him to action, and gave him the impetus to turn hard work and inspiration. We now serve customers all over Natepute, and are thrilled to be a part of the rural development.  When Mr.Pramod Baradkar,first started out, his passion for making rural life healthy and easy , providing the best quality water and lpg gas for domestic and industrial use drove him to action, and gave him the impetus to turn hard work and inspiration. We now serve customers all over Natepute, and are thrilled to be a part of the rural development. </p></div>
+  <div class="col-md-2"></div>
+  <div class="col-md-7"><p style="word-spacing: 2px; text-align: justify;">&nbsp &nbsp &nbsp Welcome to Anandmuti,  We’re dedicated to giving you the very best of  quality water ,lpg gas and food beverages, with a focus on dependability, customer service and uniqueness.
+               Founded in [year] by Mr.Pramod Baradkar. When Mr.Pramod Baradkar,first started out, his passion for making rural life healthy and easy , providing the best quality water and lpg gas for domestic and industrial use drove him to action, and gave him the impetus to turn hard work and inspiration. We now serve customers all over Natepute, and are thrilled to be a part of the rural development.  When Mr.Pramod Baradkar,first started out, his passion for making rural life healthy and easy , providing the best quality water and lpg gas for domestic and industrial use drove him to action, and gave him the impetus to turn hard work and inspiration. We now serve customers all over Natepute, and are thrilled to be a part of the rural development.development.  When Mr.Pramod Baradkar,first started out, his passion for making rural life healthy and easy , providing the best quality water and lpg gas for domestic and industrial use drove him to action, and gave him the impetus to turn hard work and inspiration. We now serve customers all over Natepute, and are thrilled to be a part of the thrilled to development. </p></div>
 
 
-<div class="col-md-4">  <h4><span class="fa fa-bullseye" aria-hidden="true">
-                       </span>&nbsp &nbsp <span style="color: #70af55;
-    font-weight: 700;">Our Mission</span></h4>
+<div class="col-md-4" style="text-align: center; margin-left: 30px;"> 
+                  <i class="fa fa-bullseye" aria-hidden="true" style="color: #12a7df; font-size: 25px;"></i>
+                  <h4><span style="color: #70af55;
+    font-weight: 700; font-size: 25px;">Our Mission</span></h4>
                <p style="word-spacing: 2px;">The AnandMurti was started with the aim to produce big market in rural area and manage the all busiess.</p><br>
-             <h4><span class="fa fa-eye" aria-hidden="true">
-                       </span>&nbsp &nbsp <span style="color: #70af55;
-    font-weight: 700;">Our vission</span></h4>
+            <i class="fa fa-eye" aria-hidden="true" style="color: #12a7df; font-size: 25px;"></i>
+                       </span> <h4><span style="color: #70af55;
+    font-weight: 700; font-size: 25px;">Our Vission</span></h4>
                <p style="word-spacing: 2px;">The AnandMurti was started with the aim to produce big market in rural area and manage the all busiess.</p></div>
   </div>
 
