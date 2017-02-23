@@ -55,10 +55,10 @@ p a {color: rgba(255,255,255,.5)}
                   <h3 class="widget-title">Follow us</h3>
                   <div class="widget-body">
                      <p class="social-icons">
-                       <a href="" data-toggle="tooltip" title="facebook"><i class="fa fa-facebook fa-2"></i></a>
-                        <a href="" data-toggle="tooltip" title="twitter"><i class="fa fa-twitter fa-2"></i></a>
-                        <a href="" data-toggle="tooltip" title="dribble"><i class="fa fa-google-plus fa-2"></i></a>
-                        <a href="" data-toggle="tooltip" title="instagram"><i class="fa fa-linkedin fa-2"></i></a>
+                       <a href="" data-toggle="tooltip" title="facebook"><!-- <i class="fa fa-facebook fa-2"></i> --><img src="images/facebook.png" alt="fb"></a>
+                        <a href="" data-toggle="tooltip" title="twitter"><!-- <i class="fa fa-twitter fa-2"></i> --><img src="images/twitter.png" alt="twi"></a>
+                        <a href="" data-toggle="tooltip" title="googleplus"><!-- <i class="fa fa-google-plus fa-2"></i> --><img src="images/googleplus.png" alt="twi"></a></a>
+                        <a href="" data-toggle="tooltip" title="Linkedin"><!-- i class="fa fa-linkedin fa-2"></i> --><img src="images/linkedin.png" alt="twi"></a>
                        
                      </p>
                   </div>

@@ -9,15 +9,17 @@ Table Of content
 */
 /*------------body Start--------------*/
 ::-webkit-scrollbar {
-      width:  15px;
+      width:  10px;
       height: 15px;
   }
 
   ::-webkit-scrollbar-thumb {
      /*background: linear-gradient(to top,#e96253 0,#251c1d 100%);*/
      /*background: linear-gradient(to top,#a0d88a 0,#ded8d8 100%);*/
-     background: linear-gradient(to bottom,#226b8c 0,#ded8d8 100%);
+     /*background: linear-gradient(to bottom,#226b8c 0,#ded8d8 100%);*/
+     background: linear-gradient(to bottom,#64a7c5 0,#60bae2 100%);
     -webkit-border-radius: 3px;
+
   }
 
   ::-webkit-scrollbar-track {
@@ -54,7 +56,7 @@ h2 {
 .d-contact-page {
     margin-bottom: 235px;
     padding-top: 0px;
-    background: radial-gradient(ellipse at center, rgba(246,247,248,1) 0%, rgba(0, 0, 0, 0.11) 100%);
+   /* background: radial-gradient(ellipse at center, rgba(246,247,248,1) 0%, rgba(0, 0, 0, 0.11) 100%);*/
  /*   background: radial-gradient(ellipse at center, rgba(50,157,207,1) 0%, rgba(0, 0, 0, 0.51) 100%);*/
    /* background-image: url("http://localhost/anandmurti/images/phone.jpg");*/
     background-size: cover;
