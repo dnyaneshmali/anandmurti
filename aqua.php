@@ -123,7 +123,7 @@
    </div>
 
       
-          <div class="container carousel-mb">
+         <div class="container carousel-mb">
         <div class="row">
             <div class="col-md-12   ">
                 <div id="imageCarousel" class="carousel slide" data-interval="2000"
@@ -133,7 +133,7 @@
                         <li data-target="#imageCarousel" data-slide-to="0" class="active"></li>
                         <li data-target="#imageCarousel" data-slide-to="1"></li>
                         <li data-target="#imageCarousel" data-slide-to="2"></li>
-                  <li data-target="#imageCarousel" data-slide-to="3"></li>
+            <li data-target="#imageCarousel" data-slide-to="3"></li>
                     </ol>
 
                     <div class="carousel-inner">
@@ -144,14 +144,14 @@
                                     
                                 </div>
                                 <div class="col-xs-3">
-                                    <img src="images\cooker.png" class="img-responsive">
+                                    <img src="images\coocker.png" class="img-responsive">
                                     
                                 </div>
                                 <div class="col-xs-3">
                                     <img src="images\gas_stove.png" class="img-responsive">
                                     
                                 </div>
-                        <div class="col-xs-3">
+                <div class="col-xs-3">
                                     <img src="images\gas_stove.png" class="img-responsive">
                                     
                                 </div>
@@ -168,10 +168,10 @@
                                    
                                 </div>
                                 <div class="col-xs-3">
-                                    <img src="images\gg.jpg" class="img-responsive">
+                                    <img src="images\lighter.png" class="img-responsive">
                                     
                                 </div>
-                        <div class="col-xs-3">
+                <div class="col-xs-3">
                                     <img src="images\gas_stove.png" class="img-responsive">
                                     
                                 </div>
@@ -181,7 +181,7 @@
                         <div class="item">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images\gas_cylinders.png" class="img-responsive">
+                                    <img src="images\coocker.png" class="img-responsive">
                                     
                                 </div>
                                 <div class="col-xs-3">
@@ -189,10 +189,10 @@
                                     
                                 </div>
                                 <div class="col-xs-3">
-                                    <img src="images\gas_cylinders.png" class="img-responsive">
+                                    <img src="images\vessel.png" class="img-responsive">
                                     
                                 </div>
-                        <div class="col-xs-3">
+                <div class="col-xs-3">
                                     <img src="images\gas_stove.png" class="img-responsive">
                                    
                                 </div>

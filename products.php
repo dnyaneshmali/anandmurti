@@ -13,14 +13,14 @@
          <div class="title-section container">
             <h2 class="text-center" style="font-weight: 500 ! important;">Products</h2>
             <div class="underline" style="width:20%"></div>
-            <p class="text-center text-muted">Have a question, comment, or just want to say hi? Drop us a line!</p>
+           
          </div>
 
          <div class="container bg">
  <!--  <h2>Dynamic Tabs</h2>
   <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
  -->
-  <div class="tabs tabs-style-tzoid">
+  <div class="tabs tabs-style-tzoid" style="margin-bottom: 115px;">
           <nav>
   <ul >
     <li><a href="#section-tzoid-1" class="icon icon-home"><span><i class="fa fa-fire">&nbsp;</i>Go Gas</span></a></li>
@@ -52,7 +52,7 @@
           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
            <div class="card">
         <div class="hover ehover13">
-          <img class="img-responsive" src="images/gas_stove_large.png" alt="Large gas stove">
+          <img class="img-responsive" src="images/gas_stove_largeold.png" alt="Large gas stove">
             <div class="overlay">
               <h2>Large gas stove</h2>
               <h4>View
@@ -64,7 +64,7 @@
           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
           <div class="hover ehover13">
-          <img class="img-responsive" src="images/gas_stove.png" alt="Small gas stove">
+          <img class="img-responsive" src="images/gas_stoveold.png" alt="Small gas stove">
             <div class="overlay">
               <h2>Small gas stove</h2>
               <h4>View
@@ -77,7 +77,7 @@
         <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
         <div class="hover ehover13">
-          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+          <img class="img-responsive" src="images/cookerold.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
               <h4>View
@@ -89,7 +89,7 @@
           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
              <div class="card">
               <div class="hover ehover13">
-          <img class="img-responsive" src="images/lighter.png" alt="lighter">
+          <img class="img-responsive" src="images/lighterold.png" alt="lighter">
             <div class="overlay">
               <h2>lighter</h2>
               <h4>View
@@ -101,7 +101,7 @@
           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
              <div class="hover ehover13">
-          <img class="img-responsive" src="images/vessel.png" alt="Vessel">
+          <img class="img-responsive" src="images/vesselold.png" alt="Vessel">
             <div class="overlay">
               <h2>Vessel</h2>
               <h4>View
@@ -138,7 +138,7 @@
         <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
         <div class="hover ehover13">
-          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+          <img class="img-responsive" src="images/cookerold.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
               <h4>View

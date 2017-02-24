@@ -27,7 +27,7 @@
 }
 h3{
 color: #21a0da;
-    text-decoration: underline;}
+   /* text-decoration: underline;*/}
     .d-contact-page{margin-top: 120px;}
     .contact-details .item {
     border-bottom:none ! important;}

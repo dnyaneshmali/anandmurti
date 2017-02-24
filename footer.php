@@ -41,43 +41,69 @@ p a {color: rgba(255,255,255,.5)}
 <div id="footer1" class="footer">
          <div class="container">
             <div class="row">
-               <div class="col-md-3 widget footer-center">
-                  <h3 class="widget-title">Contact</h3>
+              <div class="col-md-3 widget footer-center">
+                  <h3 class="widget-title">Get in touch</h3>
+                  <div class="underline_f"></div><br>
                   <div class="widget-body">
                      <p>+91-2360957<br>
                         <a href="mailto:#">pramod.baradkar@yahoo.com</a><br>
                         <br>
-                       www.AnandMurtiGroup.in
+                     
+                  Softinfology Pvt. Ltd.<br/>
+                              #314, World Trade Center<br/>
+                              Near EON IT Park,<br/>
+                              Kharadi Pune-41453<br/>
+                              <br>
+                              Softinfology Pvt. Ltd.<br/>
+                              #314, World Trade Center<br/>
+
                      </p>
                   </div>
                </div>
-               <div class="col-md-3 widget footer-center">
-                  <h3 class="widget-title">Follow us</h3>
+               <div class="col-md-4 widget footer-center">
+                  <h3 class="widget-title">About us</h3>
+                  <div class="underline_f"></div><br>
+                  <div class="widget-body" style="text-align:justify">
+                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque volup?</p>
+                     <p>Eius consequatur nihil quibusdam! Laborum, rerum, quis, inventore ipsa autem repellat provident assumenda labore soluta minima alias temporibus facere distinctio </p>
+                  </div>
+               </div>
+              <div class="col-md-3 widget footer-center">
+                  <h3 class="widget-title">Companies</h3>
+                  <div class="underline_f"></div><br>
+                  <div class="widget-body" style="text-align:justify">
+                     <a>Go Gas</a><br><a>Aqua</a><br><a>Food Bevereges</a>
+                  </div>
+
+     <h3 class="widget-title">Follow us</h3>
+                       <div class="underline_f"></div><br>
                   <div class="widget-body">
                      <p class="social-icons">
                        <a href="" data-toggle="tooltip" title="facebook"><!-- <i class="fa fa-facebook fa-2"></i> --><img src="images/facebook.png" alt="fb"></a>
                         <a href="" data-toggle="tooltip" title="twitter"><!-- <i class="fa fa-twitter fa-2"></i> --><img src="images/twitter.png" alt="twi"></a>
-                        <a href="" data-toggle="tooltip" title="googleplus"><!-- <i class="fa fa-google-plus fa-2"></i> --><img src="images/googleplus.png" alt="twi"></a></a>
+                        <a href="" data-toggle="tooltip" title="googleplus"><!-- <i class="fa fa-google-plus fa-2"></i> --><img src="images/googleplus.png" alt="twi"></a>
                         <a href="" data-toggle="tooltip" title="Linkedin"><!-- i class="fa fa-linkedin fa-2"></i> --><img src="images/linkedin.png" alt="twi"></a>
                        
                      </p>
                   </div>
-				  <div>
-         				  <h5 class="widget-title" > <a href="http://localhost/anandmurti/enquiry.php" class="hvr-underline-from-left" >Enquiry</a> </h5>
-         				  <h5 class="widget-title" ><a href="http://localhost/anandmurti/aboutus.php" >About Us</a> </h5>
-                         <h5 class="widget-title" ><a href="http://localhost/anandmurti/privacypolicy.php" class="widget-title">Privacy Policy</a></h5>
-                        <h5 class="widget-title" ><a href="http://localhost/anandmurti/terms_conditions.php" class="widget-title">Terms & Conditions</a></h5>
-                        
-
-				  </div>
                </div>
-               <div class="col-md-6 widget footer-center">
-                  <h3 class="widget-title">About us</h3>
-                  <div class="widget-body">
-                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
-                     <p>Eius consequatur nihil quibusdam! Laborum, rerum, quis, inventore ipsa autem repellat provident assumenda labore soluta minima alias temporibus facere distinctio quas adipisci nam sunt explicabo officia tenetur at ea quos doloribus dolorum voluptate reprehenderit architecto sint libero illo et hic.</p>
-                  </div>
+               
+                <div class="col-md-2 widget footer-center">
+                   <h3 class="widget-title">Quick Links</h3>
+                   <div class="underline_f"></div><br>
+          <div>
+                  <h5 class="widget-title" > <a href="http://localhost/anandmurti/enquiry.php" class="hvr-underline-from-left" >Enquiry</a> </h5><hr>
+                  <h5 class="widget-title" ><a href="http://localhost/anandmurti/aboutus.php" >About Us</a> </h5><hr>
+                         <h5 class="widget-title" ><a href="http://localhost/anandmurti/privacypolicy.php" class="widget-title">Privacy Policy</a></h5><hr>
+                        <h5 class="widget-title" ><a href="http://localhost/anandmurti/terms_conditions.php" class="widget-title">Terms & Conditions</a></h5><hr>
+     
+          </div>
                </div>
+                  
+             
+              
+             
+                
                <!-- /row of widgets -->
             </div>
          </div>

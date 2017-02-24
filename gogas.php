@@ -21,14 +21,13 @@
             <div class="underline"></div>
             <p class="text-center text-muted">Anand Murti Go Gas Agency provides domestic as well as industrial lpg gas Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde? Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi, dolores, quibusdam architecto voluptatem amet fugiat nesciunt placeat provident cumque accusamus itaque voluptate modi quidem dolore optio velit hic iusto vero praesentium repellat commodi ad id expedita cupiditate repellendus possimus unde?</p>
          </div>
-
           <div class="title-section container new-conn">
             <h2 class="text-center">How to get New Gas Connection?</h2>
             <div class="underline"></div>
-<img src="/anandmurti/images/saftys.jpg" style="margin-bottom: 50px;">
+<img src="/anandmurti/images/gas-steps.png" style="margin-bottom: 50px;">
          </div>
-    
-       <div class="second-section">
+
+                <div class="second-section">
             <div class="container panel1">
                <h2 class="text-center">Gas Cylinder Types</h2>
                <div class="underline"></div>
@@ -78,6 +77,10 @@
          </div>
             </div>
          </div>
+
+         
+    
+
         
 <!--  <div class="container">
  <h2 class="text-center">Signs of Gas Leak & safty Tips</h2>
@@ -128,7 +131,7 @@
                                     
                                 </div>
                                 <div class="col-xs-3">
-                                    <img src="images\cooker.png" class="img-responsive">
+                                    <img src="images\coocker.png" class="img-responsive">
                                     
                                 </div>
                                 <div class="col-xs-3">
@@ -152,7 +155,7 @@
                                    
                                 </div>
                                 <div class="col-xs-3">
-                                    <img src="images\gg.jpg" class="img-responsive">
+                                    <img src="images\lighter.png" class="img-responsive">
                                     
                                 </div>
 								<div class="col-xs-3">
@@ -165,7 +168,7 @@
                         <div class="item">
                             <div class="row">
                                 <div class="col-xs-3">
-                                    <img src="images\gas_cylinders.png" class="img-responsive">
+                                    <img src="images\coocker.png" class="img-responsive">
                                     
                                 </div>
                                 <div class="col-xs-3">
@@ -173,7 +176,7 @@
                                     
                                 </div>
                                 <div class="col-xs-3">
-                                    <img src="images\gas_cylinders.png" class="img-responsive">
+                                    <img src="images\vessel.png" class="img-responsive">
                                     
                                 </div>
 								<div class="col-xs-3">

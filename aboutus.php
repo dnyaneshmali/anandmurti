@@ -30,7 +30,11 @@
 <div class="row">
   <div class="col-md-2"></div>
   <div class="col-md-8">
-    <img class="img-responsive" src="images/hello.jpg" style="margin-bottom: 50px; width:100%">
+    <!-- <img class="img-responsive" src="images/hello.jpg" style="margin-bottom: 50px; width:100%"> -->
+    <h2>
+                                 <center>About us</center>
+                              </h2>
+                              <div class="underline" style="width:25%"></div>
   </div>
   <div class="col-md-2"></div>
   <div class="col-md-7"><p style="word-spacing: 2px; text-align: justify;">&nbsp &nbsp &nbsp Welcome to Anandmuti,  We’re dedicated to giving you the very best of  quality water ,lpg gas and food beverages, with a focus on dependability, customer service and uniqueness.
@@ -119,7 +123,7 @@
                 <div class="col-lg-12">
                    
                     <h2 class="intro-text text-center">Our
-                        <strong>Team</strong>
+                        People, Our Asset
                     </h2>
                        <div class="underline" style="width:20%"></div>
                    

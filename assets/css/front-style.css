@@ -21,6 +21,10 @@ Table Of content
     -webkit-border-radius: 3px;
 
   }
+  body{
+   /* background-image: url("/anandmurti/images/texture.jpg");*/
+     background-image: url("/anandmurti/images/texture .jpg");
+  }
 
   ::-webkit-scrollbar-track {
       background: rgb(232, 232, 232);
@@ -122,8 +126,8 @@ a:hover {
   /*  background: url(/anandmurti/assets/images/white_header.jpg);*/
     /*background-color: rgb(112, 188, 68);*/
      background-size: cover;
-    padding: 12px 0;
-    background: #fff;
+   /* padding: 12px 0;*/
+   /* background: #fff;*/
         background-color: rgba(0, 0, 0, 0.5);
     margin-bottom: 0;
     border-bottom: 0 none;
@@ -427,6 +431,7 @@ div#footer1 {
 div#footer2 {
     /*background: linear-gradient(to top,#67b945 0,#0e0e0e 100%);*/
     background: #6eb94e;
+    /*background: #3d6e86;*/
     color: #000;
 	padding-top: 10px;
 }
@@ -629,7 +634,7 @@ img.owner_img {
     overflow-x: hidden;
 }
 .our-features .container {
-    background-color: white;
+    /*background-color: white;*/
 }
 .our-features .row {
     margin-right: -15px;
@@ -642,7 +647,7 @@ img.owner_img {
 .gogas-page .first-section{padding-bottom: 40px;}
 .gogas-page .second-section{padding-top: 0px; padding-bottom: 85px;}
 .home-page .third-section{
-        background-color: white;
+       /* background-color: white;*/
             margin-bottom: 115px;
 }
 .aqua-page .third-section{padding-top: 75px; margin-bottom: 0px;}
@@ -917,6 +922,15 @@ h2 {
     margin: auto;
     margin-bottom: 15px;
 }
+.underline_f {
+border-bottom: solid 2px #70af55;
+    /*text-align: center;*/
+    width: 15% ! important;
+   /* margin: auto;*/
+   /* margin-bottom: 15px;*/
+/*float: left;*/
+}
+
 .customDiv .fa {
     margin-right: 10px;
     color: #01adf7;
@@ -935,6 +949,6 @@ margin-top: 0px;}
 .second-section.testimonial-section {
     margin-bottom: 115px;
     margin-top: 35px;
-    background-color: #FFF ! important;
+    /*background-color: #FFF ! important;*/
 }
 
