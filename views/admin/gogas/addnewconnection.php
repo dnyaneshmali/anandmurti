@@ -80,9 +80,9 @@
                           
 
                              <span style="margin-right:10px"> <label>
-                              <input type="radio" checked="" ng-model="Connection.connection_hotplate" value="Yes" id="Yes" name="connection_hotplate">yes </label></span>
+                              <input type="radio" checked="" ng-model="Connection.connection_hotplate" value="Yes" id="Yes" name="connection_hotplate" required/>yes </label></span>
                               <label>
-                              <input type="radio" ng-model="Connection.connection_hotplate" value="No" id="No" name="connection_hotplate">No </label>
+                              <input type="radio" ng-model="Connection.connection_hotplate" value="No" id="No" name="connection_hotplate" required/>No </label>
                            
                               </div>
                             </div>
@@ -94,9 +94,9 @@
                             <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
                              
                               <span style="margin-right:10px"><label>
-                              <input type="radio" checked="" ng-model="Connection.connection_passbook" value="Yes" id="Yes" name="connection_passbook">yes </label></span>
+                              <input type="radio" checked="" ng-model="Connection.connection_passbook" value="Yes" id="Yes" name="connection_passbook" required/>yes </label></span>
                               <label>
-                              <input type="radio" ng-model="Connection.connection_passbook" value="No" id="No" name="connection_passbook">No </label>
+                              <input type="radio" ng-model="Connection.connection_passbook" value="No" id="No" name="connection_passbook" required/>No </label>
                             </div>
                               
                             </div>
@@ -119,9 +119,9 @@
                             <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
                         <span style="margin-right:10px">
                               <label>
-                              <input type="radio" checked="" ng-model="Connection.connection_tube" value="Yes" id="Yes" name="connection_tube">yes </label></span>
+                              <input type="radio" checked="" ng-model="Connection.connection_tube" value="Yes" id="Yes" name="connection_tube" required/>yes </label></span>
                               <label>
-                              <input type="radio" ng-model="Connection.connection_tube" value="No" id="No" name="connection_tube">No </label>
+                              <input type="radio" ng-model="Connection.connection_tube" value="No" id="No" name="connection_tube" required/>No </label>
                            
                               </div>
                               </div>
@@ -132,9 +132,9 @@
                             <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
                               <div class="input-group">
                                <span style="margin-right:13px"> <label>
-                              <input type="radio" checked="" ng-model="Connection.connection_lighter" value="Yes" id="Yes" name=" connection_lighter">yes </label></span>
+                              <input type="radio" checked="" ng-model="Connection.connection_lighter" value="Yes" id="Yes" name=" connection_lighter" required/>yes </label></span>
                               <label>
-                              <input type="radio" ng-model="Connection.connection_lighter" value="No" id="No" name="connection_lighter"> No </label>
+                              <input type="radio" ng-model="Connection.connection_lighter" value="No" id="No" name="connection_lighter" required/> No </label>
                             </div>
                               </div>
                             </div>
