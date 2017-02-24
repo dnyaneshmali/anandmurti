@@ -94,7 +94,7 @@
 
 
                 
-        <div class="modal fade" id="invoicemodal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal fade" id="printSection" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog  modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -113,6 +113,27 @@
     color: #fff;
     padding: 10px;
   }
+
+
+  @media screen {
+  #printSection {
+      display: none;
+  }
+}
+
+@media print {
+  body * {
+    visibility:hidden;
+  }
+  #printSection, #printSection * {
+    visibility:visible;
+  }
+}
+
+
+
+
+
                     </style>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>

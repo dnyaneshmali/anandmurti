@@ -449,7 +449,7 @@ console.log($scope.setrem);
 
 
 
-                $('#invoicemodal').modal('toggle');
+                $('#printSection').modal('toggle');
                 //$('#invoicemodal').modal('show');
                // $('#invoicemodal').modal('hide');
 
@@ -488,16 +488,37 @@ console.log($scope.setrem);
 
              }
 
- $scope.fprint=function(invoicemodal){
-  //window.print();
+ $scope.fprint=function(printSection){
 
+        printElement(document.getElementById("printSection"));
+        window.print();
 
-  var innerContents = document.getElementById("invoicemodal").innerHTML;
-        var popupWinindow = window.open('', '_blank', 'width=600,height=700,scrollbars=no,menubar=no,toolbar=no,location=no,status=no,titlebar=no');
-        popupWinindow.document.open();
-        popupWinindow.document.write('<html><head><link rel="stylesheet" type="text/css" href="style.css" /></head><body onload="window.print()">' + innerContents + '</html>');
-        popupWinindow.document.close();
+function printElement(elem, append, delimiter) {
+    var domClone = elem.cloneNode(true);
 
+    var $printSection = document.getElementById("printSection");
+
+    if (!$printSection) {
+        var $printSection = document.createElement("div");
+        $printSection.id = "printSection";
+        document.body.appendChild($printSection);
+    }
+
+    if (append !== true) {
+        $printSection.innerHTML = "";
+    }
+
+    else if (append === true) {
+        if (typeof(delimiter) === "string") {
+            $printSection.innerHTML += delimiter;
+        }
+        else if (typeof(delimiter) === "object") {
+            $printSection.appendChlid(delimiter);
+        }
+    }
+
+    $printSection.appendChild(domClone);
+}
 
 
 }
