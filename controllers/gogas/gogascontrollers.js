@@ -182,7 +182,7 @@ console.log(product_id);
      .success(function(data) {
             
                         console.log(data);
-                        $scope.data.splice(index, 1);
+                        $scope.gasproducts.splice(index, 1);
                         $scope.$watch();
             
             
@@ -471,7 +471,7 @@ console.log(refil_id);
      .success(function(data) {
             
                         console.log(data);
-                        $scope.data.splice(index, 1);
+                        $scope.refildata.splice(index, 1);
                         $scope.$watch();
             
             
