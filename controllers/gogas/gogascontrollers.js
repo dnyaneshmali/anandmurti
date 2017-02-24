@@ -778,7 +778,7 @@ app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
      .success(function(data) {
             
               console.log(data);
-                        $scope.data.splice(index,1);
+                        $scope.gasinwards.splice(index, 1);
                         $scope.$watch();
 
                       });
