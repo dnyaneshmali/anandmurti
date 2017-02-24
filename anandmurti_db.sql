@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2017 at 10:36 AM
+-- Generation Time: Feb 24, 2017 at 02:01 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -196,7 +196,9 @@ INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, 
 (14, 30, '600', '2017-02-23 06:59:25', 'XYZ Distributor', 4, 2),
 (15, 1, '10', '2017-02-24 10:30:29', 'ss', 2, 2),
 (16, 1, '300', '2017-02-24 10:30:44', 's', 1, 2),
-(17, 1, '20', '2017-02-24 10:31:04', 'hg', 4, 2);
+(17, 1, '20', '2017-02-24 10:31:04', 'hg', 4, 2),
+(18, 75, '2625', '2017-02-24 12:37:16', 'YSD Distributor', 6, 3),
+(19, 6, '1800', '2017-02-24 12:47:15', 'VPN Distributor', 1, 2);
 
 -- --------------------------------------------------------
 
@@ -285,7 +287,8 @@ CREATE TABLE `tbl_gvehicle_details` (
 
 INSERT INTO `tbl_gvehicle_details` (`gvehicle_id`, `gvehicle_owner_name`, `gvehicle_number`, `gvehicle_date`, `gvehicle_contact_number`) VALUES
 (2, 'v2', '56565', '2017-02-15 11:55:53', 2147483647),
-(3, 'hfgh', 'hfghghgh', '2017-02-24 10:31:26', 2147483647);
+(3, 'hfgh', 'hfghghgh', '2017-02-24 10:31:26', 2147483647),
+(4, 'test owner2', 'mh-25 3433', '2017-02-24 12:51:31', 2147483647);
 
 -- --------------------------------------------------------
 
@@ -364,7 +367,8 @@ INSERT INTO `tbl_refil_details` (`refil_id`, `refil_cylinder_type`, `refil_payme
 (3, '', 'payment details', 400, '2017-02-14 13:22:49', 0),
 (4, '2', 'test details', 600, '2017-02-14 13:24:25', 2),
 (5, '2', '', 200, '2017-02-16 06:51:13', 2),
-(6, '3', '21', 200, '2017-02-16 06:53:03', 1);
+(6, '3', '21', 200, '2017-02-16 06:53:03', 1),
+(7, '3', 'check', 9181, '2017-02-24 14:01:03', 1);
 
 --
 -- Indexes for dumped tables
@@ -492,7 +496,7 @@ ALTER TABLE `tbl_avehicle_details`
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
-  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `tbl_gogas_customers`
 --
@@ -512,7 +516,7 @@ ALTER TABLE `tbl_gproducts_trasaction`
 -- AUTO_INCREMENT for table `tbl_gvehicle_details`
 --
 ALTER TABLE `tbl_gvehicle_details`
-  MODIFY `gvehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `gvehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_jar_details`
 --
@@ -527,7 +531,7 @@ ALTER TABLE `tbl_new_connection`
 -- AUTO_INCREMENT for table `tbl_refil_details`
 --
 ALTER TABLE `tbl_refil_details`
-  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

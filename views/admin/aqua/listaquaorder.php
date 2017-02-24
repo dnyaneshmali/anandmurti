@@ -107,12 +107,6 @@
 .id-section {
     text-align: center;
 }
-.modal-title {
-    background-color: #05ADF7;
-    color: #fff;
-    padding: 5px;
-    text-align: center;
-}
 .invoice-title{
     background-color: #66B845;
     margin-bottom: 24px;
@@ -132,42 +126,25 @@
                         <h5>(CIN:L14106UP1995PLC019017),</h5>
                         <h5>Sector-128, Pune - 411410,</h5>
                         <h5>Maharashtra, India,</h5>
-                        <h5>h No: (120) 4609000, 2470800,</h5>
+                        <h5>Ph No: (120) 4609000, 2470800,</h5>
                         <h5>Fax: (120) 4609464, 4609496</h5>
                         </div>
                         <div class="row">
+                        <h5><strong>Invoice ID:</strong> IN-001</h5>
+                        <h5><strong>Invoice Date:</strong> {{cdate | date:'yyyy-MM-dd'}}</h5>
+                        <h5><strong>Due Date:</strong> <input type="date" placeholder="Delivery Date" class="form-control" ng-model="duedate" id="duedate" style="width: 50%;" class="form-control" name="cdate" required /></h5>
+                        </div>
+                        </div>
+                        <div class="col-md-6 id-section">
+                        <h3 class="invoice-title">Invoice</h3>
+                        <div class="row">
+
                         <h4 class="modal-title">Customer</h4>
                         <h5><strong>Name:</strong> <span ng-repeat="invoice in orderinvoicedata">{{invoice.acustomer_name}}</span></h5>
                         <h5><strong>Email ID:</strong> <span ng-repeat="invoice in orderinvoicedata">{{invoice.acustomer_email}}</span></h5>
                         <h5><strong>Address:</strong> <span ng-repeat="invoice in orderinvoicedata">{{invoice.acustomer_address}}</span></h5>
                         <h5><strong>Number:</strong> <span ng-repeat="invoice in orderinvoicedata">{{invoice.acustomer_number}}</span></h5>
                         </div>
-                        </div>
-                        <div class="col-md-6 id-section">
-                        <h3 class="invoice-title">Invoice</h3>
-                        <div class="row">
-                        <div class="col-md-6">
-                        <h5 class="modal-title"><strong>Invoice ID</strong></h5>
-                        IN-001
-                        </div>
-                        <div class="col-md-6">
-                        <h5 class="modal-title"><strong>Invoice Date</strong></h5>
-                        <span>{{cdate | date:'yyyy-MM-dd'}}</span>
-                        </div>
-                        </div>
-                        <div class="row">
-                        <div class="col-md-6">
-                        <h5 class="modal-title"><strong>Customer ID</strong></h5>
-                        <span ng-repeat="invoice in orderinvoicedata">{{invoice.acustomer_id}}</span>
-                        </div>
-                        <div class="col-md-6">
-                        <h5 class="modal-title"><strong>Due Date</strong></h5>
-                        <span>
-                        <input type="date" placeholder="Delivery Date" class="form-control" ng-model="duedate" id="duedate" class="form-control" name="cdate" required />
-                        </span>
-                        </div>
-                        </div>
-
                         </div>
                         </div>
                     </div>
@@ -227,6 +204,7 @@
                     </div>
                     </div>
                     <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->
