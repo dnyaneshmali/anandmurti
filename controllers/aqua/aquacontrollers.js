@@ -416,7 +416,7 @@ console.log($scope.setrem);
             }
 
 
-              $scope.geninvoice=function(order_id,index){
+      $scope.geninvoice=function(order_id,index){
                 
 
                  $http({
@@ -430,8 +430,18 @@ console.log($scope.setrem);
               console.log(data);
               //$scope.orderinvoicedata = data;
               $scope.orderinvoicedata=data;
+              var qt = data[0].order_quantity;
+              console.log(data[0].order_quantity);
+              var pr = data[0].order_price;
+              console.log(data[0].order_price);
+              var csubotal = qt*pr;
+              $scope.subotal = csubotal;
               $scope.cdate = new Date();
                $scope.duedate = new Date();
+               $scope.ptax = 10;
+               var ptax = 10;
+               var cftotal = csubotal+$scope.ptax;
+               $scope.ftotal = cftotal;
                        // $scope.data.splice(index, 1);
                        // $scope.$watch();
 
@@ -444,6 +454,39 @@ console.log($scope.setrem);
                // $('#invoicemodal').modal('hide');
 
             }
+
+
+             $scope.changedtax=function(ptax,order_id){
+
+                $scope.ptax = {};
+                $scope.ptax = angular.copy(ptax);
+                //console.log($scope.ptax);
+                $scope.order_id = {};
+                $scope.order_id = angular.copy(order_id);
+                //console.log($scope.order_id);
+
+              $http({
+          method  : 'POST',
+          url     : '../../models/getorderinvoice.php',
+          data    : {'order_id':order_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              //console.log(data);
+              var qt = data[0].order_quantity;
+              console.log(data[0].order_quantity);
+              var pr = data[0].order_price;
+              console.log(data[0].order_price);
+              var csubotal = qt*pr;
+              var ntax= $scope.ptax;
+              var cftotal = +csubotal + +ntax;
+               $scope.ftotal = cftotal;
+
+                      });
+
+
+             }
 
 
 

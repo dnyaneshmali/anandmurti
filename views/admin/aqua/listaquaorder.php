@@ -178,8 +178,8 @@
                           <th>Order ID</th>
                           <th>Jar Type</th>
                           <th>Order Quantity</th>
+                          <th>Rate</th>
                           <th>Order Date</th>
-                          <th>Action</th>
                           
                         </tr>
                       </thead>
@@ -188,14 +188,43 @@
                       <tbody>
 <tr ng-repeat="invoice in orderinvoicedata">
                           <td>{{invoice.order_id}}</td>
-                          <td>{{invoice.jar_id}}</td>
+                          <td>{{invoice.jar_type}}</td>
                           <td>{{invoice.order_quantity}}</td>
+                          <td>{{invoice.jar_price}}</td>
                           <td>{{invoice.order_delivery_date}}</td>
-                          <td><a data-toggle="tooltip" title="Delete"> <button class="btn btn-danger"><i class="fa fa-trash"></i></button></a></td>
 </tr>
 
                       </tbody>
                     </table>
+                    <div class="row invoice-footer">
+                    <div class="in-footer-left col-md-6">
+                    <span><strong>Remark/Instruction:</strong></span>
+                    <h3 style="text-align: center;">Thank You</h3>
+                    </div>
+                    <div class="in-footer-right col-md-6">
+
+
+                    <table id="datatable-buttons" class="table table-striped table-bordered">
+                      <tbody>
+<tr>
+                          <td><strong>Subtotal</strong></td>
+                          <td>{{subotal}}</td>
+</tr>
+<tr>
+                          <td><strong>Tax</strong></td>
+                          <td><input ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="ptax" name="ptax" style="width:auto;" required></td>
+</tr>
+<tr>
+                          <td><strong>Total</strong></td>
+                          <td>{{ftotal}}</td>
+</tr>
+
+                      </tbody>
+                    </table>
+
+
+                    </div>
+                    </div>
                     </div>
                     <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
