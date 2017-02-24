@@ -1,4 +1,5 @@
-<div class="userlist" ng-controller="Listgogasproductctrl">
+
+<div class="userlist" ng-controller="Listgasinwardsctrl">
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
@@ -56,7 +57,7 @@
                           </td>
 
                            <td ng-if="isedit(inwardsentry.inwards_id)">
-                          <input type="text" ng-value="inwardsentry.inwards_id" ng-model="inwardsentry.  distributor_name" name="distributor_name" style="width:auto;" required>
+                          <input type="text" ng-value="inwardsentry.inwards_id" ng-model="inwardsentry.distributor_name" name="distributor_name" style="width:auto;" required>
                           <p style="color:red;" ng-show="subForm.distributor_name.$error.required"> Distributer name is required.</p>
                           </td>
 

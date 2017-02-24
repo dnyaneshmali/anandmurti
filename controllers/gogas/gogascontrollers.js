@@ -156,7 +156,7 @@ app.controller('Listgogasproductctrl', ['$scope','$http', function($scope,$http)
 $http.get("../../models/getgasproducts.php")
     .success(function(data){
         $scope.gasproducts=data
-        console.log($scope.gasproducts);
+        //console.log($scope.gasproducts);
     });
 
     $scope.deleteproduct=function(product_id,index){
@@ -795,8 +795,10 @@ $scope.isedit=function(id){
               $scope.$watch();
             }
             $scope.unsetedit=function(id){
+
               $scope.iseditid='';
               $scope.gasinwards[id]=angular.copy($scope.oldinwards);
+              console.log($scope.gasinwards[id]);
               $scope.$watch();
             }
             $scope.initval = function (inwardsentry) {
