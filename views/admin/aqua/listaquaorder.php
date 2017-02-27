@@ -41,8 +41,8 @@
                         </td>
                         <ng-form name="listordertailsform">
                                <td ng-if="isedit(aquaorder.order_id)">
-                          <input type="text" class="form-control" ng-value="aquaorder.customer_name" ng-model="aquaorder.customer_name" name="customer_name" style="width:auto;" required>
-                          <p style="color:red;" ng-show="subForm.customer_name.$error.required"> Name is required.</p>
+                          <input type="text" class="form-control" ng-value="aquaorder.acustomer_name" ng-model="aquaorder.acustomer_name" name="acustomer_name" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.acustomer_name.$error.required"> Name is required.</p>
 
                           </td>
 

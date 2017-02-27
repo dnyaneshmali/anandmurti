@@ -78,6 +78,11 @@ console.log(gcustomer_id);
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldgogas){
+               if($scope.oldgogas){
+                var index1 = getIndexOf($scope.data, $scope.iseditid, "gcustomer_id");
+                $scope.data[index1]=angular.copy($scope.oldgogas);
+                delete $scope.oldgogas;
+              }
               $scope.iseditid=id;
               $scope.oldgogas=angular.copy(oldgogas);
               $scope.$watch();
@@ -111,6 +116,16 @@ console.log(gcustomer_id);
                      });
            
            }
+             function getIndexOf(arr, val, prop) {
+              var l = arr.length,
+                k = 0;
+              for (k = 0; k < l; k = k + 1) {
+                if (arr[k][prop] === val) {
+                  return k;
+                }
+              }
+              return false;
+            }
 
 }]);
 
