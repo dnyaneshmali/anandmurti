@@ -124,14 +124,19 @@
   body * {
     visibility:hidden;
   }
- .modal-footer {
-    visibility: hidden;
-}
   #printSection, #printSection * {
     visibility:visible;
   }
 }
-                  </style>
+      </style>
+
+
+<style type="text/css" media="print">
+.modal-footer
+{ display: none; }
+</style>
+            
+
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
                             <div class="row">
@@ -197,8 +202,6 @@
                     <h3 style="text-align: center;">Thank You</h3>
                     </div>
                     <div class="in-footer-right col-md-6">
-
-
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <tbody>
 <tr>
@@ -221,7 +224,7 @@
                     </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-default" ng-click="saveinvoice(orderinvoicedata.acustomer_id,orderinvoicedata.order_id);">Save</button>
+                    <button type="button" class="btn btn-default" ng-click="saveinvoice(customer_id,orderinvoicedata.order_id,ptax,ftotal);">Save</button>
                     <button type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
