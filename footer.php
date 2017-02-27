@@ -69,13 +69,13 @@ p a {color: rgba(255,255,255,.5)}
                   </div>
                </div>
               <div class="col-md-3 widget footer-center">
-                  <h3 class="widget-title">Companies</h3>
+                  <h3 class="widget-title">Our Companies</h3>
                   <div class="underline_f"></div><br>
                   <div class="widget-body" style="text-align:justify">
                      <a>Go Gas</a><br><a>Aqua</a><br><a>Food Bevereges</a>
                   </div>
 
-     <h3 class="widget-title">Follow us</h3>
+     <h3 class="widget-title">Get Connected</h3>
                        <div class="underline_f"></div><br>
                   <div class="widget-body">
                      <p class="social-icons">
@@ -92,10 +92,10 @@ p a {color: rgba(255,255,255,.5)}
                    <h3 class="widget-title">Quick Links</h3>
                    <div class="underline_f"></div><br>
           <div>
-                  <h5 class="widget-title" > <a href="http://localhost/anandmurti/enquiry.php" class="hvr-underline-from-left" >Enquiry</a> </h5><hr>
-                  <h5 class="widget-title" ><a href="http://localhost/anandmurti/aboutus.php" >About Us</a> </h5><hr>
-                         <h5 class="widget-title" ><a href="http://localhost/anandmurti/privacypolicy.php" class="widget-title">Privacy Policy</a></h5><hr>
-                        <h5 class="widget-title" ><a href="http://localhost/anandmurti/terms_conditions.php" class="widget-title">Terms & Conditions</a></h5><hr>
+                  <h5 class="widget-title" > <a href="http://localhost/anandmurti/enquiry.php" class="hvr-underline-from-left" >Enquiry</a> </h5><hr style="margin-top: 0px;">
+                  <h5 class="widget-title" ><a href="http://localhost/anandmurti/aboutus.php" >About Us</a> </h5><hr style="margin-top: 0px;">
+                         <h5 class="widget-title" ><a href="http://localhost/anandmurti/privacypolicy.php" class="widget-title">Privacy Policy</a></h5><hr style="margin-top: 0px;">
+                        <h5 class="widget-title" ><a href="http://localhost/anandmurti/terms_conditions.php" class="widget-title">Terms & Conditions</a></h5><hr style="margin-top: 0px;">
      
           </div>
                </div>

@@ -8,6 +8,12 @@ Table Of content
 
 */
 /*------------body Start--------------*/
+.carousel {
+        /*background: url(http://placehold.it/620x420/ff9900);*/
+        background-color: #bcd7e0;
+        position: relative;
+        padding: 10px;     /* Shows as a border around the carousel */
+    }
 ::-webkit-scrollbar {
       width:  10px;
       height: 15px;
@@ -24,6 +30,7 @@ Table Of content
   body{
    /* background-image: url("/anandmurti/images/texture.jpg");*/
      background-image: url("/anandmurti/images/texture .jpg");
+     background-size: cover;
   }
 
   ::-webkit-scrollbar-track {
