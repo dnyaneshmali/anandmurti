@@ -416,6 +416,17 @@ console.log($scope.setrem);
             }
 
 
+      $scope.saveinvoice=function(acustomer_id,order_id){
+
+        $scope.acustomer_id = {};
+                $scope.ptax = angular.copy(acustomer_id);
+                console.log($scope.ptax);
+                $scope.order_id = {};
+                $scope.order_id = angular.copy(order_id);
+                console.log($scope.order_id);
+
+             }
+
       $scope.geninvoice=function(order_id,index){
                 
 

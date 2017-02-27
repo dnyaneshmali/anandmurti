@@ -91,16 +91,13 @@
                     </table>
                   </div>
                 </div>
-
-
-                
         <div class="modal fade" id="printSection" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog  modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                     <style type="text/css">
                       
-                      .invoice_logo {
+ .invoice_logo {
     padding-top: 10px;
     padding-bottom: 25px;
 }
@@ -116,25 +113,25 @@
 
 
   @media screen {
+  
   #printSection {
       display: none;
   }
+
 }
 
 @media print {
   body * {
     visibility:hidden;
   }
+ .modal-footer {
+    visibility: hidden;
+}
   #printSection, #printSection * {
     visibility:visible;
   }
 }
-
-
-
-
-
-                    </style>
+                  </style>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
                             <div class="row">
@@ -209,6 +206,7 @@
                           <td>{{subotal}}</td>
 </tr>
 <tr>
+
                           <td><strong>Tax</strong></td>
                           <td><input ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="ptax" name="ptax" style="width:auto;" required></td>
 </tr>
@@ -219,21 +217,17 @@
 
                       </tbody>
                     </table>
-
-
                     </div>
                     </div>
                     </div>
                     <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="saveinvoice(orderinvoicedata.acustomer_id,orderinvoicedata.order_id);">Save</button>
                     <button type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-
-
-
               </div>
               </div>
 
