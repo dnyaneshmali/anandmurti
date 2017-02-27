@@ -8,12 +8,12 @@ Table Of content
 
 */
 /*------------body Start--------------*/
-.carousel {
-        /*background: url(http://placehold.it/620x420/ff9900);*/
+/*.carousel {
+        background: url(http://placehold.it/620x420/ff9900);
         background-color: #bcd7e0;
         position: relative;
-        padding: 10px;     /* Shows as a border around the carousel */
-    }
+        padding: 10px;     
+    }*/
 ::-webkit-scrollbar {
       width:  10px;
       height: 15px;
