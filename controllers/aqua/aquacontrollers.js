@@ -129,6 +129,11 @@ console.log(acustomer_id);
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldaqua){
+              if($scope.oldaqua){
+                var index1 = getIndexOf($scope.data, $scope.iseditid, "acustomer_id");
+                $scope.data[index1]=angular.copy($scope.oldaqua);
+                delete $scope.oldaqua;
+              }
               $scope.iseditid=id;
               $scope.oldaqua=angular.copy(oldaqua);
               $scope.$watch();
@@ -161,6 +166,17 @@ console.log(acustomer_id);
                      });
            
            }
+            function getIndexOf(arr, val, prop) {
+              var l = arr.length,
+                k = 0;
+              for (k = 0; k < l; k = k + 1) {
+                if (arr[k][prop] === val) {
+                  return k;
+                }
+              }
+              return false;
+            }
+
 
 }]);
 
@@ -527,6 +543,11 @@ function printElement(elem, append, delimiter) {
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldorder){
+              if($scope.oldorder){
+                var index1 = getIndexOf($scope.data, $scope.iseditid, "order_id");
+                $scope.data[index1]=angular.copy($scope.oldorder);
+                delete $scope.oldorder;
+              }
               $scope.iseditid=id;
               $scope.oldorder=angular.copy(oldorder);
               $scope.$watch();
@@ -559,6 +580,16 @@ function printElement(elem, append, delimiter) {
                      });
            
            }
+  function getIndexOf(arr, val, prop) {
+              var l = arr.length,
+                k = 0;
+              for (k = 0; k < l; k = k + 1) {
+                if (arr[k][prop] === val) {
+                  return k;
+                }
+              }
+              return false;
+            }
 
 }]);
 
@@ -649,6 +680,11 @@ app.controller('Listjardetailsctrl', ['$scope','$http', function($scope,$http) {
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldjar){
+              if($scope.oldjar){
+                var index1= getIndexOf($scope.data,$scope.iseditid,"jar_id");
+                $scope.data[index1]=angular.copy($scope.oldjar);
+                delete $scope.oldjar;
+              }
               $scope.iseditid=id;
               $scope.oldjar=angular.copy(oldjar);
               $scope.$watch();
@@ -683,6 +719,16 @@ app.controller('Listjardetailsctrl', ['$scope','$http', function($scope,$http) {
                      });
            
            }
+           function getIndexOf(arr, val, prop) {
+              var l = arr.length,
+                k = 0;
+              for (k = 0; k < l; k = k + 1) {
+                if (arr[k][prop] === val) {
+                  return k;
+                }
+              }
+              return false;
+            }
           
 
 
@@ -774,6 +820,11 @@ console.log(vehicle_id);
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldvehicle){
+              if($scope.oldvehicle){
+                var index1=getIndexOf($scope.data,$scope.iseditid,"vehicle_id");
+                $scope.data[index1]=angular.copy($scope.oldvehicle);
+                delete $scope.oldvehicle;
+              }
               $scope.iseditid=id;
               $scope.oldvehicle=angular.copy(oldvehicle);
               $scope.$watch();
@@ -806,6 +857,17 @@ console.log(vehicle_id);
                      });
            
            }
+             function getIndexOf(arr, val, prop) {
+              var l = arr.length,
+                k = 0;
+              for (k = 0; k < l; k = k + 1) {
+                if (arr[k][prop] === val) {
+                  return k;
+                }
+              }
+              return false;
+            }
+          
 
 }]);
 
