@@ -58,9 +58,9 @@
                          <td ng-if="isedit(refil.refil_id)">{{refil.refil_cylinder_type}}</td>
 
                           <td ng-if="isedit(refil.refil_id)">
-                          <input type="text" ng-pattern="/^\d+$/" ng-value="refil.refil_payment_details" ng-model="refil.refil_payment_details" name="refil_payment_details" style="width:auto;" required>
-                          <p style="color:red;" ng-show="subForm.refil_payment_details.$error.required"> required field.</p>
-                           <p style="color:red;" ng-show="!subForm.refil_payment_details.$error.required && subForm.refil_payment_details.$invalid"> accept digits only.</p>
+                          <input type="text" ng-value="refil.refil_payment_details" ng-model="refil.refil_payment_details" name="refil_payment_details" style="width:auto;" required>
+                          
+                          <p style="color:red;" ng-show="subForm.refil_payment_details.$error.required"> details are required.</p>
                           </td>
 
 
@@ -79,7 +79,7 @@
                            <td ng-if="isedit(refil.refil_id)">{{refil.refil_date}}</td>
 
                          <td ng-if="isedit(refil.refil_id)">
-                               <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updaterefil(refil,$index);"><i class="fa fa-check"></i></button> </a>
+                               <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updategasrefil(refil,$index);"><i class="fa fa-check"></i></button> </a>
                                <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
                             </td>
                             <ng-form>
