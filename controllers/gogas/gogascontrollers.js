@@ -78,7 +78,7 @@ console.log(gcustomer_id);
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldgogas){
-               if($scope.oldgogas){
+              if($scope.oldgogas){
                 var index1 = getIndexOf($scope.data, $scope.iseditid, "gcustomer_id");
                 $scope.data[index1]=angular.copy($scope.oldgogas);
                 delete $scope.oldgogas;
@@ -116,7 +116,7 @@ console.log(gcustomer_id);
                      });
            
            }
-             function getIndexOf(arr, val, prop) {
+function getIndexOf(arr, val, prop) {
               var l = arr.length,
                 k = 0;
               for (k = 0; k < l; k = k + 1) {
@@ -126,7 +126,6 @@ console.log(gcustomer_id);
               }
               return false;
             }
-
 }]);
 
 
@@ -210,6 +209,11 @@ $scope.isedit=function(id){
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldproduct){
+              if($scope.oldproduct){
+                var index1 = getIndexOf($scope.data, $scope.iseditid, "product_id");
+                $scope.data[index1]=angular.copy($scope.oldproduct);
+                delete $scope.oldproduct;
+              }
               $scope.iseditid=id;
               $scope.oldproduct=angular.copy(oldproduct);
               $scope.$watch();
@@ -244,6 +248,17 @@ $scope.isedit=function(id){
                      });
            
            }
+          function getIndexOf(arr, val, prop) {
+              var l = arr.length,
+                k = 0;
+              for (k = 0; k < l; k = k + 1) {
+                if (arr[k][prop] === val) {
+                  return k;
+                }
+              }
+              return false;
+            }
+          
 
 }]);
 
@@ -344,6 +359,11 @@ $scope.isedit=function(id){
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldconnection){
+              if($scope.oldconnection){
+                var index1 = getIndexOf($scope.data, $scope.iseditid, "connection_id");
+                $scope.data[index1]=angular.copy($scope.oldconnection);
+                delete $scope.oldconnection;
+              }
               $scope.iseditid=id;
               $scope.oldconnection=angular.copy(oldconnection);
               $scope.$watch();
@@ -376,6 +396,16 @@ $scope.isedit=function(id){
                      });
            
            }
+           function getIndexOf(arr, val, prop) {
+              var l = arr.length,
+                k = 0;
+              for (k = 0; k < l; k = k + 1) {
+                if (arr[k][prop] === val) {
+                  return k;
+                }
+              }
+              return false;
+            }
 
 }]);
 
@@ -499,6 +529,7 @@ $scope.isedit=function(id){
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldrefil){
+
               $scope.iseditid=id;
               $scope.oldrefil=angular.copy(oldrefil);
               $scope.$watch();
@@ -531,6 +562,7 @@ $scope.isedit=function(id){
                      });
            
            }
+
 
 }]);
 
@@ -619,6 +651,11 @@ $scope.isedit=function(id){
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldvehicle){
+              if($scope.oldvehicle){
+                var index1 = getIndexOf($scope.data, $scope.iseditid, "gvehicle_id");
+                $scope.data[index1]=angular.copy($scope.oldvehicle);
+                delete $scope.oldvehicle;
+              }
               $scope.iseditid=id;
               $scope.oldvehicle=angular.copy(oldvehicle);
               $scope.$watch();
@@ -651,6 +688,16 @@ $scope.isedit=function(id){
                      });
            
            }
+           function getIndexOf(arr, val, prop) {
+              var l = arr.length,
+                k = 0;
+              for (k = 0; k < l; k = k + 1) {
+                if (arr[k][prop] === val) {
+                  return k;
+                }
+              }
+              return false;
+            }
 
 }]);
 
@@ -839,6 +886,7 @@ $scope.isedit=function(id){
                      });
            
            }
+
 
 }]);
 
