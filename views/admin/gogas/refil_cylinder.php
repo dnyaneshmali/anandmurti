@@ -33,22 +33,44 @@
                         </div>
                       </div>
 
+         <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Payment details <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
+                          <select class="form-control" ng-model="refil.refil_payment_details" name="refil_payment_details"  ng-required="true">
+                            <option value="1" selected>Check</option>
+                            <option value="Cash">Cash</option>
+                            </select>
+                        </div>
+                        </div>
+                      </div>
 
-                  <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">Refil payment details <span class="required">*</span>
+                        
+
+                     <div ng-if="refil.refil_payment_details==1" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">check Number <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                           <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                          <input type="text" placeholder="payment details" class="form-control" ng-model="refil.refil_payment_details" id="refil_payment_details"  name="refil_payment_details" required />
+                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" ng-pattern="/^\d+$/" placeholder="Check id" class="form-control"ng-model="refil.check_number" id="check_number" class="form-control" name="check_number" >
                           </div>
-                          <p class="val-style" ng-show="refilform.refil_payment_details.$invalid && !refilform.refil_payment_details.$pristine" class="help-block"> required.</p>
+                          <p class="val-style" ng-show="refilform.check_number.$invalid && !refilform.check_number.$pristine" class="help-block">accept digits only required.</p>
                         </div>
                       </div>
 
 
+
+
+
+
+
+
+
                       
-                     <div class="item form-group">
+                     <div  class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">Refil amount <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">

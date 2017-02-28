@@ -82,7 +82,7 @@
                           <td ng-if="aquaorder.order_reminder==0"><a data-toggle="tooltip" title="Set Reminder"><button class="btn btn-danger" ng-click="setreminder(aquaorder.order_id,$index);"><i class="fa fa-bell"></i></button></a></td>
                           <td ng-if="aquaorder.order_reminder==1"><a data-toggle="tooltip" title="Unset Reminder"><button class="btn btn-active" ng-click="unsetreminder(aquaorder.order_id);"><i class="fa fa-bell-slash"></i></button></a></td>
                           <td><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="geninvoice(aquaorder.order_id);"><i class="fa fa-list-alt" aria-hidden="true"></i>
-</button></a></td>            
+                               </button></a></td>            
                           </td>
 
                           <ng-form>
