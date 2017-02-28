@@ -67,11 +67,23 @@
                           <input type="text"  class="form-control" ng-value="aquaorder.order_delivery_date" ng-model="aquaorder.order_delivery_date" name="order_delivery_date" style="width:auto;" required>
                          <p style="color:red;" ng-show="subForm.order_delivery_date.$error.required">time is required.</p>
                           </td>
+                      
+                     <td ng-if="isedit(aquaorder.order_id)">
 
-                          <td ng-if="isedit(aquaorder.order_id)">
-                          <input type="text" ng-value="aquaorder.vehicle_name" ng-model="aquaorder. vehicle_name" name=" vehicle_name" style="width:auto;" required>
-                          <p style="color:red;" ng-show="listordertailsform.vehicle_name.$invalid && !listordertailsform.vehicle_name.$pristine" class="help-block">  is required.</p>
+
+                            <!-- code by me -->
+                          <select ng-repeat="vname in vehicledata"class="form-control" ng-model="aquaorder.vehicle_name" name="vehicle_name">
+                            <option value="">{{vname}}</option>
+                          </select>
+                          <!-- code by me ends -->
+
+
+
+                          <input type="text" ng-value="aquaorder.vehicle_name" ng-model="aquaorder.vehicle_name" name="vehicle_name" style="width:auto;" required>
+                          <p style="color:red;" ng-show="subForm.vehicle_name.$error.required"> vehicle name is required.</p>
                           </td>
+
+
                              <td ng-if="isedit(aquaorder.order_id)">
 
                               <a data-toggle="tooltip" title="Update"><button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updateaquaorder(aquaorder,$index);"><i class="fa fa-check"></i></button></a> 

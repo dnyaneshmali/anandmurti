@@ -594,6 +594,7 @@ function printElement(elem, append, delimiter) {
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldorder){
+
               if($scope.oldorder){
                 var index1 = getIndexOf($scope.data, $scope.iseditid, "order_id");
                 $scope.data[index1]=angular.copy($scope.oldorder);

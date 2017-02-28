@@ -5,7 +5,7 @@ include($root."/config/config.php");
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 
-$query="SELECT * from tbl_gas_inwards where product_id = '".$data['product']."'";
+$query="SELECT * from tbl_aqua_orders where product_id = '".$data['product']."'";
 $result = mysqli_query($connection,$query);
 
 while ($row = mysqli_fetch_assoc($result)){

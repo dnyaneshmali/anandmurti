@@ -1,9 +1,11 @@
 <?php
 $root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
 include($root."/config/config.php");
-$data=array();
 
-$query="SELECT max(invoice_id) as invoice_id FROM  tbl_aqua_invoice";
+$jsondata=file_get_contents("php://input");
+$data = json_decode($jsondata, true);
+
+$query="SELECT * from tbl_avehicle_details where product_id = '".$data['product']."'";
 $result = mysqli_query($connection,$query);
 
 while ($row = mysqli_fetch_assoc($result)){
