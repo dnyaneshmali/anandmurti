@@ -419,6 +419,18 @@ $scope.isedit=function(id){
                // $('#invoicemodal').modal('hide');
               console.log(connection_id);
 
+              $http.get("../../models/getconninvoiceid.php")
+          .success(function(data){
+            var nextinvoiceid=data;
+            //console.log(nextinvoiceid);
+            $scope.cinvoice_id = data[0].cinvoice_id;
+            console.log($scope.cinvoice_id);
+            var lastinvoiceid = $scope.cinvoice_id;
+            var addone = 1;
+            var currentinoiveid = +lastinvoiceid + +addone;
+            $scope.cinvoiceid = currentinoiveid;
+            console.log(currentinoiveid);
+    });
 
 
             $http({
