@@ -72,16 +72,24 @@
 
 
                             <!-- code by me -->
-                          <select ng-repeat="vname in vehicledata"class="form-control" ng-model="aquaorder.vehicle_name" name="vehicle_name">
+                          <!-- <select ng-repeat="vname in vehicledata"class="form-control" ng-model="aquaorder.vehicle_name" name="vehicle_name">
                             <option value="">{{vname}}</option>
-                          </select>
+                          </select> -->
                           <!-- code by me ends -->
+                         <select class="form-control" ng-model="aquaorder.vehicle_name" name="vehicle_name" class="{'has-errors' : subForm.vehicle_name.$invalid, 'no-errors' : subForm.vehicle_name.$valid}" ng-required="true">
+                            <option value="" ng-selected="aquaorder.vehicle_name == ''">Vehicle Name </option>
+                            <option value="HMT" ng-selected="aquaorder.vehicle_name == 'HMT'">HMT</option>
+                            <option value="Testowner" ng-selected="aquaorder.vehicle_name == 'Testowner'">Testowner</option>
+                              <option value="test" ng-selected="listordertailsform.vehicle_name == 'test'">Only water</option>
+                          </select>
+                          <div class="error-container" ng-show="subForm.vehicle_name.$dirty && subForm.vehicle_name.$invalid" ng-messages="subForm.vehicle_name.$error">
+                         <div class="val-style" class="error" ng-message="required">select vehicle name </div>
+                          </div>
 
 
-
-                          <input type="text" ng-value="aquaorder.vehicle_name" ng-model="aquaorder.vehicle_name" name="vehicle_name" style="width:auto;" required>
-                          <p style="color:red;" ng-show="subForm.vehicle_name.$error.required"> vehicle name is required.</p>
-                          </td>
+                        <!--   <input type="text" ng-value="aquaorder.vehicle_name" ng-model="aquaorder.vehicle_name" name="vehicle_name" style="width:auto;" required>
+                            <p style="color:red;" ng-show="subForm.vehicle_name.$error.required"> vehicle name is required.</p> -->
+                            </td>
 
 
                              <td ng-if="isedit(aquaorder.order_id)">
