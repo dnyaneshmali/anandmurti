@@ -473,6 +473,7 @@ console.log($scope.setrem);
 
           $http.get("../../models/getlastinoiceid.php")
           .success(function(data){
+            console.log(data);
             var nextinvoiceid=data;
             //console.log(nextinvoiceid);
             $scope.invoice_id = data[0].invoice_id;

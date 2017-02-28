@@ -407,6 +407,135 @@ $scope.isedit=function(id){
               return false;
             }
 
+            $scope.connectioninvoice=function(connection_id){
+
+                $('#printSection').modal('toggle');
+                //$('#invoicemodal').modal('show');
+               // $('#invoicemodal').modal('hide');
+              console.log(connection_id);
+
+              $http.get("../../models/getconninvoiceid.php")
+          .success(function(data){
+            var nextinvoiceid=data;
+            //console.log(nextinvoiceid);
+            $scope.cinvoice_id = data[0].cinvoice_id;
+            console.log($scope.cinvoice_id);
+            var lastinvoiceid = $scope.cinvoice_id;
+            var addone = 1;
+            var currentinoiveid = +lastinvoiceid + +addone;
+            $scope.cinvoiceid = currentinoiveid;
+            console.log(currentinoiveid);
+    });
+
+
+            $http({
+          method  : 'POST',
+          url     : '../../models/getconnectioninvoice.php',
+          data    : {'connection_id':connection_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+              console.log(data);
+
+              $scope.connectioninvoice=data;
+              $scope.gcustomer_id = data[0].gcustomer_id;
+              console.log($scope.gcustomer_id)
+              $scope.connection_id = data[0].connection_id;
+              console.log(connection_id);
+              $scope.cdate = new Date();
+               $scope.duedate = new Date();
+              // $scope.ptax = 10;
+             //  var ptax = 10;
+              // var cftotal = csubotal+$scope.ptax;
+            //   $scope.ftotal = cftotal;
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch(); */
+
+                      });
+
+
+
+            }
+
+
+
+            $scope.saveconnectioninvoice=function(gcustomer_id,connection_id,ctax,ctotal){
+
+                $scope.gcustomer_id = {};
+                $scope.gcustomer_id = angular.copy(gcustomer_id);
+                //console.log($scope.gcustomer_id);
+                $scope.connection_id = {};
+                $scope.connection_id = angular.copy(connection_id);
+                //console.log($scope.connection_id);
+                $scope.ctax = {};
+                $scope.ctax = angular.copy(ctax);
+                //console.log($scope.ctax);
+                $scope.ctotal = {};
+                $scope.ctotal = angular.copy(ctotal);
+                //console.log($scope.ctotal);
+
+                $http({
+          method  : 'POST',
+          url     : '../../models/insertconnectioninvoice.php',
+          data    : {'gcustomer_id':$scope.gcustomer_id,'connection_id':$scope.connection_id,'cinvoice_tax':$scope.ctax,'cinvoice_amount':$scope.ctotal}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            console.log(data);
+                  swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
+              
+
+                      });
+
+
+             }
+
+
+
+
+
+ $scope.fprint=function(printSection){
+
+        printElement(document.getElementById("printSection"));
+        window.print();
+
+function printElement(elem, append, delimiter) {
+    var domClone = elem.cloneNode(true);
+
+    var $printSection = document.getElementById("printSection");
+
+    if (!$printSection) {
+        var $printSection = document.createElement("div");
+        $printSection.id = "printSection";
+        document.body.appendChild($printSection);
+    }
+
+    if (append !== true) {
+        $printSection.innerHTML = "";
+    }
+
+    else if (append === true) {
+        if (typeof(delimiter) === "string") {
+            $printSection.innerHTML += delimiter;
+        }
+        else if (typeof(delimiter) === "object") {
+            $printSection.appendChlid(delimiter);
+        }
+    }
+
+    $printSection.appendChild(domClone);
+}
+
+}
+
+
+
+
 }]);
 
 app.controller('Refilcylinderctrl', ['$scope','$http', function($scope,$http) {
