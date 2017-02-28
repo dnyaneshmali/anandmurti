@@ -42,6 +42,7 @@
                           <select class="form-control" ng-model="refil.refil_payment_details" name="refil_payment_details"  ng-required="true">
                             <option value="1" selected>Check</option>
                             <option value="Cash">Cash</option>
+                            <option value="NFT">NFT</option>
                             </select>
                         </div>
                         </div>

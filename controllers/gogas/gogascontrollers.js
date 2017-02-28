@@ -159,11 +159,6 @@ console.log($scope.gogasproduct);
           });
 
 }
-$scope.myFunction=function (gogasproduct) {
-    var x = document.createElement("INPUT");
-    x.setAttribute("type", "checkbox");
-    document.body.appendChild(x);
-}
 
   }]);
 
