@@ -10,13 +10,13 @@
       <!-- /*<script src="assets\js\modernizr.custom.js"></script>*/ -->
 
       <div class="page-content products-page">
-         <div class="title-section container">
+         <div class="title-section container-fluid bg-texture">
             <h2 class="text-center" style="font-weight: 500 ! important;">Products</h2>
             <div class="underline" style="width:20%"></div>
            
          </div>
 
-         <div class="container bg">
+         <div class="container-fluid bg bg-texture">
  <!--  <h2>Dynamic Tabs</h2>
   <p>To make the tabs toggleable, add the data-toggle="tab" attribute to each link. Then add a .tab-pane class with a unique ID for every tab and wrap them inside a div element with class .tab-content.</p>
  -->

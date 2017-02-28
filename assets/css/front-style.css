@@ -8,12 +8,12 @@ Table Of content
 
 */
 /*------------body Start--------------*/
-.carousel {
-        /*background: url(http://placehold.it/620x420/ff9900);*/
+/*.carousel {
+       
         background-color: #bcd7e0;
         position: relative;
         padding: 10px;     
-    }
+    }*/
 ::-webkit-scrollbar {
       width:  10px;
       height: 15px;
@@ -27,10 +27,11 @@ Table Of content
     -webkit-border-radius: 3px;
 
   }
+  .bg-texture{background-image: url("/anandmurti/images/texture.jpg");}
   body{
    /* background-image: url("/anandmurti/images/texture.jpg");*/
-     background-image: url("/anandmurti/images/texture.jpg");
-     background-size: cover;
+    /* background-image: url("/anandmurti/images/texture.jpg");
+     background-size: cover;*/
   }
 
   ::-webkit-scrollbar-track {
@@ -248,6 +249,7 @@ a.slider-btn2 {
 }*/
 .second-section {
     margin-bottom: 30px;
+    background-image: url("/anandmurti/images/texture.jpg");
     /*background-color: #f6f7f8;*/
     padding-top: 32px;
     /*padding-bottom: 47px;*/
@@ -649,15 +651,16 @@ img.owner_img {
     padding-left: 50px;
     padding-right: 50px;
 }
+.home-page .first-section,.gogas-page .first-section,.aqua-page .first-section{padding-bottom: 75px;}
 .home-page .first-section,.gogas-page .first-section,.aqua-page .first-section {padding-top: 91px;}
-.home-page .second-section{padding-top: 75px; padding-bottom: 55px;}
+.home-page .second-section{/*padding-top: 75px;*/ padding-bottom: 55px;}
 .gogas-page .first-section{padding-bottom: 40px;}
 .gogas-page .second-section{padding-top: 0px; padding-bottom: 85px;}
 .home-page .third-section{
        /* background-color: white;*/
             margin-bottom: 115px;
 }
-.aqua-page .third-section{padding-top: 75px; margin-bottom: 0px;}
+.aqua-page .third-section{/*padding-top: 75px;*/ margin-bottom: 100px;}
 .stylish-panel > div > #f1,.stylish-panel > div > #f2,.stylish-panel > div > #f3,.stylish-panel > div > #f4{
     padding: 10px;
     border: 1px solid transparent;
@@ -962,3 +965,13 @@ margin-top: 0px;}
 .row.section1,.row.section2{
     margin-bottom: 100px;
 }
+
+
+.contact-up{margin: -36px auto 0px;
+    position: relative;
+    background-color: #f18737;
+    color: #fff;
+    width: 12%;
+    padding: 7px 20px;
+ 
+    cursor: pointer;}

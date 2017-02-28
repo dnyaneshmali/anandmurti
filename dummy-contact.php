@@ -75,14 +75,7 @@ color: #21a0da;
                                     Ph No: (120) 4609000, 2470800<br />
                                     Fax: (120) 4609464, 4609496 </span></div>
                         </div>
-                        <div class="up" style="z-index: 1;    text-align: center;"><button style="margin: -36px auto 0px;
-    position: relative;
-    background-color: #f18737;
-    color: #fff;
-    width: 12%;
-    padding: 7px 20px;
- 
-    cursor: pointer;">Show Map</button></div>
+                        <div class="up" style="z-index: 1;    text-align: center;"><button class="contact-up">Show Map</button></div>
                 </div>
               <!--   <div class="col-md-4">
                      <div class="row contact-details">
