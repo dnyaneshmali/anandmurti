@@ -62,7 +62,7 @@
                          <img id="img-1" src="/anandmurti/assets/images/gas_icon.png">
                         <h4>12 kg</h4>
                         <p class="text-center">Anand Murti F&B Pvt. Ltd is a fast growing company extending world-class services in F&B and Retail businesses.
-                           With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  Pvt. Ltd is a one stop shop
+                           With a vast experience and expertise  professionals, Anand Murti F&B  Pvt. Ltd is a one stop shop
                         </p>
                      </div>
                   </div>
@@ -71,11 +71,11 @@
          </div>
             </div>
          </div>
-         
+
           <div class="title-section container new-conn">
             <h2 class="text-center">How to get New Gas Connection?</h2>
             <div class="underline"></div>
-<img src="/anandmurti/images/gas-steps.png" style="margin-bottom: 50px;">
+<img src="/anandmurti/images/gas-steps.png"class="img-responsive" style="margin-bottom: 50px;">
          </div>
 
                 

@@ -69,11 +69,13 @@ p a {color: rgba(255,255,255,.5)}
                   </div>
                </div>
               <div class="col-md-3 widget footer-center">
+                <div>
                   <h3 class="widget-title">Our Companies</h3>
                   <div class="underline_f"></div><br>
                   <div class="widget-body" style="text-align:justify">
                      <a>Go Gas</a><br><a>Aqua</a><br><a>Food Bevereges</a>
-                  </div><br>
+                  </div>
+                </div><br>
 
      <h3 class="widget-title">Get Connected</h3>
                        <div class="underline_f"></div><br>

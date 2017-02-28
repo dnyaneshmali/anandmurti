@@ -58,14 +58,14 @@ color: #21a0da;
                 <div class="col-md-12">
                  
                    
-                        <iframe width="100%" height="100%" src="http://www.mapi.ie/create-google-map/map.php?width=100%&amp;height=800&amp;hl=en&amp;q=Natepute+(Anandmurti%20Group)&amp;ie=UTF8&amp;t=h&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ></iframe>
+                        <iframe width="100%" height="80%" src="http://www.mapi.ie/create-google-map/map.php?width=100%&amp;height=800&amp;hl=en&amp;q=Natepute+(Anandmurti%20Group)&amp;ie=UTF8&amp;t=h&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ></iframe>
                         <div class="col-md-12 maptoggle" style=" position:absolute;top:0;left:0;width:100%;height:100%;background-color: #444141;opacity: 0.8;padding-top:50px">  
-                          <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4" style="text-align: center; ">  <img src="/anandmurti/assets/images/diirection.png" alt="" width="58" height="58"/><br><h3>Direction</h3><span style="color:#1ab0d3;">Sector-128 Pune-411410<br />
-                                       Maharashtra India</span></div>
-                           <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4" style="text-align: center;">  <img src="/anandmurti/assets/images/mobile.png" alt="" swidth="58" height="58"/><br><h3>Mobile</h3><span style="color:#1ab0d3;">
+                          <div class="col-md-4 col-sm-6 col-xs-6 col-lg-4" style="text-align: center; ">  <img src="/anandmurti/assets/images/diirection.png" alt="" width="58" height="58"/><br><h3>Direction</h3><span style="color:#1ab0d3;">Sector-128 Pune-411410<br />
+                                       </span></div>
+                           <div class="col-md-4 col-sm-6 col-xs-6 col-lg-4" style="text-align: center;">  <img src="/anandmurti/assets/images/mobile.png" alt="" swidth="58" height="58"/><br><h3>Mobile</h3><span style="color:#1ab0d3;">
                                        (120) 4609000 <br />
                                        (120) 2470800 </span></div>
-                          <div class="col-md-4 col-sm-4 col-xs-4 col-lg-4" style="text-align: center;">  <img src="/anandmurti/assets/images/mail.png" alt="" swidth="58" height="58"/><br><h3>Email</h3><span style="color:#1ab0d3;">anandmurti@gmail.com</span></div>
+                          <div class="col-md-4 col-sm-6 col-xs-6 col-lg-4" style="text-align: center;">  <img src="/anandmurti/assets/images/mail.png" alt="" swidth="58" height="58"/><br><h3>Email</h3><span style="color:#1ab0d3;">anandmurti@gmail.com</span></div>
                           <div class="col-md-6 col-sm-12 col-xs-12 col-lg-6"style="margin-top:100px;text-align: center;"><h3>Go Gas Office</h3><br><span style="color:#1ab0d3;">314,Softinfology<br>Kharadi,World Trade center <br>Sector-128, Pune - 411410<br />
                                     Maharashtra, India<br />
                                     Ph No: (120) 4609000, 2470800<br />
