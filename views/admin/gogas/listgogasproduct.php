@@ -39,7 +39,7 @@
                           <th>product price</th>
                           <th>Product category</th>
                           <th>Product company</th>
-                          <th>product tax</th>
+                          <th>product tax in %</th>    
                         
                           <th>product date</th>
                           <th colspan="2">Action</th>
@@ -53,7 +53,7 @@
                           <td ng-if="!isedit(gogasproduct.product_id)">{{gogasproduct.product_price}}</td>
                           <td ng-if="!isedit(gogasproduct.product_id)">{{gogasproduct.product_category}}</td>
                           <td ng-if="!isedit(gogasproduct.product_id)">{{gogasproduct.product_company}}</td>
-                          <td ng-if="!isedit(gogasproduct.product_id)">{{gogasproduct.product_tax}}</td>
+                    <td ng-if="!isedit(gogasproduct.product_id)">{{gogasproduct.product_tax}}</td>
                           <td ng-if="!isedit(gogasproduct.product_id)">{{gogasproduct.product_date}}</td>
 
 
@@ -83,7 +83,7 @@
                           </td>
 
                            <td ng-if="isedit(gogasproduct.product_id)">
-                          <input type="text" ng-pattern="/^\d+$/" ng-value="gogasproduct.product_tax" ng-model="gogasproduct.product_tax" name="product_tax" style="width:auto;" required>
+                          <input type="text" ng-pattern="/^\d+$/" ng-value="gogasproduct.product_tax" ng-model="gogasproduct.product_tax" name="product_tax" style="width:auto;" required>%
                           <p style="color:red;" ng-show="subForm.product_tax.$error.required"> required field.</p>
                            <p style="color:red;" ng-show="!subForm.product_tax.$error.required && subForm.product_tax.$invalid"> accept digits only.</p>
                           </td>

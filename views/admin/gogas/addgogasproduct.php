@@ -65,17 +65,18 @@
 
                      
                             <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="customer_name">Product tax <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="customer_name">Product tax <span class="required">*</span>%
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                           <span class="input-group-addon"><i class="fa fa-dropbox"></i></span>
-                          <input type="text" placeholder="Product tax" ng-pattern="/^[0-9]*$/" ng-model="gogasproduct.product_tax" id="product_tax" class="form-control" name="product_tax" required />
+                          <input type="text" placeholder="Product tax in %" ng-pattern="/^[0-9]*$/" ng-model="gogasproduct.product_tax" id="product_tax" class="form-control" name="product_tax"  required />
+
                           </div>
                            <p class="val-style" ng-show="addgogasproductform.product_tax.$invalid && !addgogasproductform.product_tax.$pristine" class="help-block">  product tax is required in digit.</p>
                         </div>
                       </div>
-
+                       
                        
 
                       <div class="ln_solid"></div>
