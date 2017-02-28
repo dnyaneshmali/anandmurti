@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2017 at 12:32 PM
+-- Generation Time: Feb 28, 2017 at 02:13 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -217,7 +217,9 @@ CREATE TABLE `tbl_connection_invoice` (
 --
 
 INSERT INTO `tbl_connection_invoice` (`cinvoice_id`, `cinvoice_tax`, `cinvoice_amount`, `cinvoice_date`, `cinvoice_status`, `connection_id`, `gcustomer_id`) VALUES
-(1, 0, 0, '2017-02-28 11:14:47', 0, 3, 2);
+(1, 0, 0, '2017-02-28 11:14:47', 0, 3, 2),
+(2, 0, 0, '2017-02-28 12:43:10', 0, 0, 0),
+(3, 0, 0, '2017-02-28 12:46:14', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -423,6 +425,47 @@ INSERT INTO `tbl_refil_details` (`refil_id`, `refil_cylinder_type`, `refil_payme
 (6, '3', '21', 200, '2017-02-16 06:53:03', 1),
 (7, '3', 'check', 9181, '2017-02-24 14:01:03', 1);
 
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_refil_invoice`
+--
+
+CREATE TABLE `tbl_refil_invoice` (
+  `rinvoice_id` int(11) NOT NULL,
+  `rinvoice_tax` int(10) NOT NULL,
+  `rinvoice_amount` int(10) NOT NULL,
+  `rinvoice_date` datetime NOT NULL,
+  `rinvoice_status` int(10) NOT NULL,
+  `refil_id` int(11) NOT NULL,
+  `gcustomer_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_refil_invoice`
+--
+
+INSERT INTO `tbl_refil_invoice` (`rinvoice_id`, `rinvoice_tax`, `rinvoice_amount`, `rinvoice_date`, `rinvoice_status`, `refil_id`, `gcustomer_id`) VALUES
+(1, 0, 0, '2017-02-28 12:50:18', 0, 1, 2),
+(2, 0, 0, '2017-02-28 12:50:18', 0, 1, 2),
+(3, 0, 0, '2017-02-28 12:50:47', 0, 7, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_sale_invoice`
+--
+
+CREATE TABLE `tbl_sale_invoice` (
+  `sinvoice_id` int(11) NOT NULL,
+  `sinvoice_tax` int(10) NOT NULL,
+  `sinvoice_amount` int(10) NOT NULL,
+  `sinvoice_date` datetime NOT NULL,
+  `sinvoice_status` int(10) NOT NULL,
+  `sale_product_id` int(11) NOT NULL,
+  `gcustomer_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
 --
 -- Indexes for dumped tables
 --
@@ -533,6 +576,22 @@ ALTER TABLE `tbl_refil_details`
   ADD KEY `connection_id` (`gcustomer_id`);
 
 --
+-- Indexes for table `tbl_refil_invoice`
+--
+ALTER TABLE `tbl_refil_invoice`
+  ADD PRIMARY KEY (`rinvoice_id`),
+  ADD KEY `refil_id` (`refil_id`),
+  ADD KEY `gcustomer_id` (`gcustomer_id`);
+
+--
+-- Indexes for table `tbl_sale_invoice`
+--
+ALTER TABLE `tbl_sale_invoice`
+  ADD PRIMARY KEY (`sinvoice_id`),
+  ADD KEY `sale_product_id` (`sale_product_id`),
+  ADD KEY `gcustomer_id` (`gcustomer_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -570,7 +629,7 @@ ALTER TABLE `tbl_avehicle_details`
 -- AUTO_INCREMENT for table `tbl_connection_invoice`
 --
 ALTER TABLE `tbl_connection_invoice`
-  MODIFY `cinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `cinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
@@ -611,6 +670,16 @@ ALTER TABLE `tbl_new_connection`
 --
 ALTER TABLE `tbl_refil_details`
   MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `tbl_refil_invoice`
+--
+ALTER TABLE `tbl_refil_invoice`
+  MODIFY `rinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `tbl_sale_invoice`
+--
+ALTER TABLE `tbl_sale_invoice`
+  MODIFY `sinvoice_id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
