@@ -82,7 +82,7 @@
                           <td ng-if="aquaorder.order_reminder==0"><a data-toggle="tooltip" title="Set Reminder"><button class="btn btn-danger" ng-click="setreminder(aquaorder.order_id,$index);"><i class="fa fa-bell"></i></button></a></td>
                           <td ng-if="aquaorder.order_reminder==1"><a data-toggle="tooltip" title="Unset Reminder"><button class="btn btn-active" ng-click="unsetreminder(aquaorder.order_id);"><i class="fa fa-bell-slash"></i></button></a></td>
                           <td><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="geninvoice(aquaorder.order_id);"><i class="fa fa-list-alt" aria-hidden="true"></i>
-</button></a></td>            
+                               </button></a></td>            
                           </td>
 
                           <ng-form>
@@ -101,15 +101,19 @@
     padding-top: 10px;
     padding-bottom: 25px;
 }
-.id-section {
-    text-align: center;
-}
+
 .invoice-title{
     background-color: #66B845;
     margin-bottom: 24px;
     color: #fff;
     padding: 10px;
   }
+  .in-footer-right {
+    float: right;
+}
+h3.invoice-title {
+    text-align: center;
+}
 
 
   @media screen {
@@ -153,7 +157,7 @@
                         <h5>Fax: (120) 4609464, 4609496</h5>
                         </div>
                         <div class="row">
-                        <h5><strong>Invoice ID:</strong> IN-001</h5>
+                        <h5><strong>Invoice ID:</strong> {{cinvoiceid}}</h5>
                         <h5><strong>Invoice Date:</strong> {{cdate | date:'yyyy-MM-dd'}}</h5>
                         <h5><strong>Due Date:</strong> <input type="date" placeholder="Delivery Date" class="form-control" ng-model="duedate" id="duedate" style="width: 50%;" class="form-control" name="cdate" required /></h5>
                         </div>

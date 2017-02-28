@@ -469,6 +469,22 @@ console.log($scope.setrem);
              }
 
       $scope.geninvoice=function(order_id,index){
+
+
+          $http.get("../../models/getlastinoiceid.php")
+          .success(function(data){
+            var nextinvoiceid=data;
+            //console.log(nextinvoiceid);
+            $scope.invoice_id = data[0].invoice_id;
+            console.log($scope.invoice_id);
+            var lastinvoiceid = $scope.invoice_id;
+            var addone = 1;
+            var currentinoiveid = +lastinvoiceid + +addone;
+            $scope.cinvoiceid = currentinoiveid;
+            console.log(currentinoiveid);
+    });
+
+
                 
 
                  $http({
@@ -478,7 +494,6 @@ console.log($scope.setrem);
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
-            
               console.log(data);
               //$scope.orderinvoicedata = data;
               $scope.orderinvoicedata=data;
@@ -572,7 +587,6 @@ function printElement(elem, append, delimiter) {
 
     $printSection.appendChild(domClone);
 }
-
 
 }
 
