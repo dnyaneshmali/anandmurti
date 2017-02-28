@@ -91,34 +91,37 @@
                     </table>
                   </div>
                 </div>
-
-
-                
         <div class="modal fade" id="printSection" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog  modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                     <style type="text/css">
                       
-                      .invoice_logo {
+ .invoice_logo {
     padding-top: 10px;
     padding-bottom: 25px;
 }
-.id-section {
-    text-align: center;
-}
+
 .invoice-title{
     background-color: #66B845;
     margin-bottom: 24px;
     color: #fff;
     padding: 10px;
   }
+  .in-footer-right {
+    float: right;
+}
+h3.invoice-title {
+    text-align: center;
+}
 
 
   @media screen {
+  
   #printSection {
       display: none;
   }
+
 }
 
 @media print {
@@ -129,12 +132,15 @@
     visibility:visible;
   }
 }
+      </style>
 
 
+<style type="text/css" media="print">
+.modal-footer
+{ display: none; }
+</style>
+            
 
-
-
-                    </style>
                         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                             <span aria-hidden="true">&times;</span></button>
                             <div class="row">
@@ -151,7 +157,7 @@
                         <h5>Fax: (120) 4609464, 4609496</h5>
                         </div>
                         <div class="row">
-                        <h5><strong>Invoice ID:</strong> IN-001</h5>
+                        <h5><strong>Invoice ID:</strong> {{cinvoiceid}}</h5>
                         <h5><strong>Invoice Date:</strong> {{cdate | date:'yyyy-MM-dd'}}</h5>
                         <h5><strong>Due Date:</strong> <input type="date" placeholder="Delivery Date" class="form-control" ng-model="duedate" id="duedate" style="width: 50%;" class="form-control" name="cdate" required /></h5>
                         </div>
@@ -200,8 +206,6 @@
                     <h3 style="text-align: center;">Thank You</h3>
                     </div>
                     <div class="in-footer-right col-md-6">
-
-
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <tbody>
 <tr>
@@ -209,6 +213,7 @@
                           <td>{{subotal}}</td>
 </tr>
 <tr>
+
                           <td><strong>Tax</strong></td>
                           <td><input ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="ptax" name="ptax" style="width:auto;" required></td>
 </tr>
@@ -219,21 +224,17 @@
 
                       </tbody>
                     </table>
-
-
                     </div>
                     </div>
                     </div>
                     <div class="modal-footer">
+                    <button type="button" class="btn btn-default" ng-click="saveinvoice(customer_id,orderinvoicedata.order_id,ptax,ftotal);">Save</button>
                     <button type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
-
-
-
               </div>
               </div>
 

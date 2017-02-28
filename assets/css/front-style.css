@@ -8,12 +8,12 @@ Table Of content
 
 */
 /*------------body Start--------------*/
-/*.carousel {
-        background: url(http://placehold.it/620x420/ff9900);
+.carousel {
+        /*background: url(http://placehold.it/620x420/ff9900);*/
         background-color: #bcd7e0;
         position: relative;
         padding: 10px;     
-    }*/
+    }
 ::-webkit-scrollbar {
       width:  10px;
       height: 15px;
@@ -29,7 +29,7 @@ Table Of content
   }
   body{
    /* background-image: url("/anandmurti/images/texture.jpg");*/
-     background-image: url("/anandmurti/images/texture .jpg");
+     background-image: url("/anandmurti/images/texture.jpg");
      background-size: cover;
   }
 
@@ -930,7 +930,7 @@ h2 {
     margin-bottom: 15px;
 }
 .underline_f {
-border-bottom: solid 2px #70af55;
+border-bottom: solid 3px #70af55;
     /*text-align: center;*/
     width: 15% ! important;
    /* margin: auto;*/
@@ -959,3 +959,6 @@ margin-top: 0px;}
     /*background-color: #FFF ! important;*/
 }
 
+.row.section1,.row.section2{
+    margin-bottom: 100px;
+}

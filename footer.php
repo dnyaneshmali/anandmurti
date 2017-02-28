@@ -73,7 +73,7 @@ p a {color: rgba(255,255,255,.5)}
                   <div class="underline_f"></div><br>
                   <div class="widget-body" style="text-align:justify">
                      <a>Go Gas</a><br><a>Aqua</a><br><a>Food Bevereges</a>
-                  </div>
+                  </div><br>
 
      <h3 class="widget-title">Get Connected</h3>
                        <div class="underline_f"></div><br>
@@ -143,8 +143,14 @@ p a {color: rgba(255,255,255,.5)}
            $(".arrowup").click(function(){
         $(".contact-area").toggle();
       });
+
+           $(".up").click(function(){          
+        $(".maptoggle").toggle();
+    });
     });
      </script>
+     
+
       <script src="http://localhost/anandmurti/assets/js/bootstrap.min.js"></script>
       <script src="http://localhost/anandmurti/assets/js/angular.min.js"></script>
 
