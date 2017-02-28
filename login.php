@@ -61,7 +61,10 @@
         </div>
         <button class="btn btn-lg btn-primary " ng-click="login(loginadmin)" type="submit">Sign in</button><br>
          <span>{{responseMessage}}</span>
-         <span>{{ssname}}</span>
+         <span>{{ssname}}</span><br>
+         <div style="text-align:center">
+         <a>forgot your password?</a>
+       </div>
          </div>
       </form>
        </div>

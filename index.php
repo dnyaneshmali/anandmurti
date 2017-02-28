@@ -59,7 +59,7 @@
    </div>
    <div class="second-section">
       <div class="container panel1">
-         <h2 class="text-center">Solutions that you need everyday</h2>
+         <h2 class="text-center">Solutions that you Need Everyday</h2>
           <div class="underline" style="width: 53%;"></div>
          <p class="text-center text-muted">Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical.Contrary to popular belief, Lorem Ipsum is not simply random text. It has roots in a piece of classical </p>
          <div class="row home-content-box stylish-panel">
@@ -105,7 +105,7 @@
                   <div class="text-center">
                      <div class="panel-body">
                         <img id="img-3" src="/anandmurti/assets/images/fb_icon.png">
-                        <h4>Food Beverages</h4>
+                        <h4>Food & Beverages</h4>
                         <p class="text-center">Anand Murti F&B Pvt. Ltd is a fast growing company extending world-class services in F&B and Retail businesses.
                            With a vast experience and expertise supported by a core team of professionals, Anand Murti F&B  
                      </div>

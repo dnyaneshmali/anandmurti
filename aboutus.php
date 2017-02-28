@@ -27,7 +27,7 @@
    </div> -->
 
    
-<div class="row">
+<div class="row section1">
   <div class="col-md-2"></div>
   <div class="col-md-8">
     <!-- <img class="img-responsive" src="images/hello.jpg" style="margin-bottom: 50px; width:100%"> -->
@@ -118,7 +118,7 @@
         </div> -->
    
 
-    <div class="row">
+    <div class="row section2">
             <div class="box">
                 <div class="col-lg-12">
                    
