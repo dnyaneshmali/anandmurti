@@ -14,7 +14,7 @@
       <!-- <link href="https://fonts.googleapis.com/css?family=Roboto:400" rel="stylesheet"> -->
      <link href="https://fonts.googleapis.com/css?family=Raleway:300|Roboto:500" rel="stylesheet">
 	  <!--1 <link href="assets\css\bootstrap.min.css" rel="stylesheet"> -->
-    <link href="<?php echo "http://" . $_SERVER['SERVER_NAME'] . $_SERVER['REQUEST_URI']; ?>assets/css/font-awesome.min.css" rel="stylesheet">
+    
     <link href="assets/css/font-awesome.min.css" rel="stylesheet">
       <!--Font awesome file-->
 	<link rel="stylesheet" type="text/css" href="assets/css/front-style.css">

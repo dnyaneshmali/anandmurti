@@ -41,6 +41,7 @@
                                <option></option>
                               <option>Go Gas</option>
                               <option>Aqua</option>
+                               <option>Other</option>
                             </select>
                           </div>
                         <!-- <div class="form-group">

@@ -32,10 +32,10 @@
    border-bottom:none ! important;
    }
    .contact-details{
-   border:none ! important;
+   /*border:none ! important;*/
   /* padding-top: 90px;*/
-   background: none ! important;
-   margin-left: 30px;
+   /*background: none ! important;*/
+   /*margin-left: 30px;*/
    /*background-color: #f7f7f7 ! important;*/
    }
 </style>
@@ -82,6 +82,7 @@
                                <option></option>
                               <option>Go Gas</option>
                               <option>Aqua</option>
+                              <option>Other</option>
                             </select>
                           </div>
                         <!-- <div class="form-group">
@@ -109,7 +110,7 @@
                               Near EON IT Park,<br/>
                               Kharadi Pune-41453<br/>
                            </div>
-                        </div>
+                        </div><hr>
                         <div class="item">
                            <div class="icon">
                               <i class="fa fa-phone"></i>
@@ -120,7 +121,7 @@
                               Near EON IT Park,<br/>
                               Kharadi Pune-41453<br/>
                            </div>
-                        </div>
+                        </div><hr>
                         <div class="item">
                            <div class="icon">
                               <i class="fa fa-envelope-o"></i>
@@ -132,7 +133,7 @@
                               Kharadi Pune-41453<br/>
                            </div>
                         </div>
-                        <div class="social-shares">
+                       <!--  <div class="social-shares">
                            <h2>Share</h2>
                            <ul class="contact-social-list">
                               <li>
@@ -155,13 +156,9 @@
                                  <i class="fa fa-google-plus"></i>
                                  </a>
                               </li>
-                             <!--  <li>
-                                 <a href="#" class="rss">
-                                 <i class="fa fa-rss"></i>
-                                 </a>
-                              </li> -->
+                            
                            </ul>
-                        </div>
+                        </div> -->
                      </div>
                   </div>
                </div>
