@@ -26,13 +26,15 @@ include($root."/config/config.php");
     <script src="<?php echo base_url(); ?>/assets/js/angular-route.min.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/angular-validation-match.min.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/autocomplete.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-chart/0.1.0/ng-google-chart.js" type="text/javascript"></script>    
     <script src="<?php echo base_url(); ?>/config/app.js"></script>
     <script src="<?php echo base_url(); ?>/controllers/globalcontrollers.js"></script>
     <script src="<?php echo base_url(); ?>/assets/js/ngStorage.min.js"></script>  
     <script src="<?php echo base_url(); ?>/controllers/aqua/aquacontrollers.js"></script>  
     <script src="<?php echo base_url(); ?>/controllers/gogas/gogascontrollers.js"></script>
     <script src="<?php echo base_url(); ?>/controllers/LoginController.js"></script>
-    <script src="<?php echo base_url(); ?>/assets/js/sweetalert.min.js"></script>      
+    <script src="<?php echo base_url(); ?>/assets/js/sweetalert.min.js"></script>   
+   
   </head>
   <body class="nav-md" ng-app="app">
     <div class="container body" ng-controller="Adminbarctrl">
