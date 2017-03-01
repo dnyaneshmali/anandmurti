@@ -60,7 +60,7 @@ p a {color: rgba(255,255,255,.5)}
                      </p>
                   </div>
                </div>
-               <div class="col-md-4 widget footer-center">
+               <div class="col-md-4 widget footer-center hidden-md-down">
                   <h3 class="widget-title">About us</h3>
                   <div class="underline_f"></div><br>
                   <div class="widget-body" style="text-align:justify">
@@ -128,7 +128,7 @@ p a {color: rgba(255,255,255,.5)}
                <div class="col-md-6 widget">
                   <div class="widget-body">
                      <p class="text-right footer-center">
-                         DESIGNED & DEVELOPED WITH <span class="heart"><i class="fa fa-heart"></i></span> BY:  <a href="http://softinfology.com/">SoftInfology</a>
+                         Designed & Developed with <span class="heart"><i class="fa fa-heart"></i></span> by:  <a href="http://softinfology.com/">SoftInfology</a>
                      </p>
                   </div>
                </div>
