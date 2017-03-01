@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 24, 2017 at 02:01 PM
+-- Generation Time: Feb 28, 2017 at 02:13 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -99,6 +99,36 @@ INSERT INTO `tbl_aqua_customers` (`acustomer_id`, `acustomer_name`, `acustomer_e
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `tbl_aqua_invoice`
+--
+
+CREATE TABLE `tbl_aqua_invoice` (
+  `invoice_id` int(11) NOT NULL,
+  `invoice_tax` int(10) NOT NULL,
+  `invoice_amount` int(10) NOT NULL,
+  `invoice_date` datetime NOT NULL,
+  `invoice_status` int(10) NOT NULL,
+  `order_id` int(11) NOT NULL,
+  `acustomer_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_aqua_invoice`
+--
+
+INSERT INTO `tbl_aqua_invoice` (`invoice_id`, `invoice_tax`, `invoice_amount`, `invoice_date`, `invoice_status`, `order_id`, `acustomer_id`) VALUES
+(1, 10, 310, '2017-02-27 11:43:37', 0, 2, 1),
+(2, 10, 1210, '2017-02-27 11:49:37', 0, 15, 4),
+(3, 10, 1210, '2017-02-28 07:32:35', 0, 14, 1),
+(4, 0, 0, '2017-02-28 11:01:59', 0, 0, 0),
+(5, 0, 0, '2017-02-28 11:06:50', 0, 0, 0),
+(6, 0, 0, '2017-02-28 11:09:41', 0, 0, 0),
+(7, 0, 0, '2017-02-28 11:13:00', 0, 0, 0),
+(8, 0, 0, '2017-02-28 11:13:43', 0, 0, 0);
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `tbl_aqua_orders`
 --
 
@@ -123,8 +153,8 @@ CREATE TABLE `tbl_aqua_orders` (
 
 INSERT INTO `tbl_aqua_orders` (`order_id`, `order_quantity`, `order_price`, `order_delivery_address`, `order_delivery_date`, `order_delivery_time`, `vehicle_name`, `order_status`, `order_reminder`, `order_date`, `jar_id`, `acustomer_id`) VALUES
 (2, '3', 100, 'Osmanabad', '2017-02-17', '03:30', 'HMT', '1', '0', '2017-02-08 12:09:37', 1, 1),
-(3, '4', 100, 'Osmanabad', '2017-02-18', '04:20', 'HMT', '0', '1', '2017-02-09 06:56:32', 1, 4),
-(5, '4', 100, 'Pune', '2017-02-06', '03:34', 'HMT', '1', '1', '2017-02-10 08:03:57', 1, 1),
+(3, '4', 100, 'Osmanabad', '2017-02-18', '04:20', 'HMT', '0', '0', '2017-02-09 06:56:32', 1, 4),
+(5, '4', 100, 'Pune', '2017-02-06', '03:34', 'HMT', '1', '0', '2017-02-10 08:03:57', 1, 1),
 (6, '2', 100, 'Pune', '2017-02-05', '03:34', 'HMT', '0', '1', '2017-02-10 08:05:39', 1, 4),
 (7, '1', 100, 'Pune', '2017-02-02', '03:34', 'test2', '1', '1', '2017-02-10 08:48:44', 1, 1),
 (8, '20', 20, 'Shikrapur', '2017-02-15T18:30:00.000Z', '1970-01-01T07:29:00.000Z', 'HMT', '0', '0', '2017-02-15 11:17:33', 3, 4),
@@ -134,7 +164,7 @@ INSERT INTO `tbl_aqua_orders` (`order_id`, `order_quantity`, `order_price`, `ord
 (12, '10', 20, 'Pune', '2017-10-28T18:30:00.000Z', '1970-01-01T18:28:00.000Z', 'test owner', '0', '0', '2017-02-17 10:48:50', 3, 0),
 (13, '1', 20, 'Pune', '2017-02-23T18:30:00.000Z', '1970-01-01T08:31:00.000Z', 'HMT', '0', '0', '2017-02-17 10:53:08', 3, 4),
 (14, '12', 100, 'Osmanabad', '2017-02-17T18:30:00.000Z', '1970-01-01T09:32:00.000Z', 'test owner', '0', '0', '0000-00-00 00:00:00', 1, 1),
-(15, '12', 100, 'Pune', '2017-11-29T18:30:00.000Z', '1970-01-01T17:28:00.000Z', 'HMT', '0', '0', '2017-02-17 11:40:13', 1, 4),
+(15, '12', 100, 'Pune', '2017-11-29T18:30:00.000Z', '1970-01-01T17:28:00.000Z', 'HMT', '0', '1', '2017-02-17 11:40:13', 1, 4),
 (16, '8', 100, 'Pandharpur', '2017-12-29T18:30:00.000Z', '1970-01-01T18:28:00.000Z', 'HMT', '0', '0', '2017-02-17 11:42:59', 1, 1);
 
 -- --------------------------------------------------------
@@ -165,6 +195,31 @@ INSERT INTO `tbl_avehicle_details` (`vehicle_id`, `vehicle_owner_name`, `vehicle
 (9, 'fgdfg', '45345', '2017-02-11 11:29:59', 2147483647),
 (10, 'Swapnil T', '56788', '2017-02-15 08:49:08', 2147483647),
 (11, 'vehicle owner', 'mh-25', '2017-02-21 10:14:06', 1245637895);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_connection_invoice`
+--
+
+CREATE TABLE `tbl_connection_invoice` (
+  `cinvoice_id` int(11) NOT NULL,
+  `cinvoice_tax` int(10) NOT NULL,
+  `cinvoice_amount` int(10) NOT NULL,
+  `cinvoice_date` datetime NOT NULL,
+  `cinvoice_status` int(10) NOT NULL,
+  `connection_id` int(11) NOT NULL,
+  `gcustomer_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_connection_invoice`
+--
+
+INSERT INTO `tbl_connection_invoice` (`cinvoice_id`, `cinvoice_tax`, `cinvoice_amount`, `cinvoice_date`, `cinvoice_status`, `connection_id`, `gcustomer_id`) VALUES
+(1, 0, 0, '2017-02-28 11:14:47', 0, 3, 2),
+(2, 0, 0, '2017-02-28 12:43:10', 0, 0, 0),
+(3, 0, 0, '2017-02-28 12:46:14', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -362,13 +417,54 @@ CREATE TABLE `tbl_refil_details` (
 --
 
 INSERT INTO `tbl_refil_details` (`refil_id`, `refil_cylinder_type`, `refil_payment_details`, `refil_amount`, `refil_date`, `gcustomer_id`) VALUES
-(1, '', 'test', 300, '2017-02-14 13:07:38', 0),
-(2, '', 'testtest', 300, '2017-02-14 13:09:40', 0),
-(3, '', 'payment details', 400, '2017-02-14 13:22:49', 0),
+(1, '', 'test', 300, '2017-02-14 13:07:38', 2),
+(2, '', 'testtest', 300, '2017-02-14 13:09:40', 1),
+(3, '', 'payment details', 400, '2017-02-14 13:22:49', 1),
 (4, '2', 'test details', 600, '2017-02-14 13:24:25', 2),
 (5, '2', '', 200, '2017-02-16 06:51:13', 2),
 (6, '3', '21', 200, '2017-02-16 06:53:03', 1),
 (7, '3', 'check', 9181, '2017-02-24 14:01:03', 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_refil_invoice`
+--
+
+CREATE TABLE `tbl_refil_invoice` (
+  `rinvoice_id` int(11) NOT NULL,
+  `rinvoice_tax` int(10) NOT NULL,
+  `rinvoice_amount` int(10) NOT NULL,
+  `rinvoice_date` datetime NOT NULL,
+  `rinvoice_status` int(10) NOT NULL,
+  `refil_id` int(11) NOT NULL,
+  `gcustomer_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_refil_invoice`
+--
+
+INSERT INTO `tbl_refil_invoice` (`rinvoice_id`, `rinvoice_tax`, `rinvoice_amount`, `rinvoice_date`, `rinvoice_status`, `refil_id`, `gcustomer_id`) VALUES
+(1, 0, 0, '2017-02-28 12:50:18', 0, 1, 2),
+(2, 0, 0, '2017-02-28 12:50:18', 0, 1, 2),
+(3, 0, 0, '2017-02-28 12:50:47', 0, 7, 1);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_sale_invoice`
+--
+
+CREATE TABLE `tbl_sale_invoice` (
+  `sinvoice_id` int(11) NOT NULL,
+  `sinvoice_tax` int(10) NOT NULL,
+  `sinvoice_amount` int(10) NOT NULL,
+  `sinvoice_date` datetime NOT NULL,
+  `sinvoice_status` int(10) NOT NULL,
+  `sale_product_id` int(11) NOT NULL,
+  `gcustomer_id` int(11) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Indexes for dumped tables
@@ -397,6 +493,14 @@ ALTER TABLE `tbl_aqua_customers`
   ADD PRIMARY KEY (`acustomer_id`);
 
 --
+-- Indexes for table `tbl_aqua_invoice`
+--
+ALTER TABLE `tbl_aqua_invoice`
+  ADD PRIMARY KEY (`invoice_id`),
+  ADD KEY `order_id` (`order_id`),
+  ADD KEY `acustomer_id` (`acustomer_id`);
+
+--
 -- Indexes for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
@@ -409,6 +513,14 @@ ALTER TABLE `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_avehicle_details`
   ADD PRIMARY KEY (`vehicle_id`);
+
+--
+-- Indexes for table `tbl_connection_invoice`
+--
+ALTER TABLE `tbl_connection_invoice`
+  ADD PRIMARY KEY (`cinvoice_id`),
+  ADD KEY `gcustomer_id` (`gcustomer_id`),
+  ADD KEY `connection_id` (`connection_id`);
 
 --
 -- Indexes for table `tbl_gas_inwards`
@@ -464,6 +576,22 @@ ALTER TABLE `tbl_refil_details`
   ADD KEY `connection_id` (`gcustomer_id`);
 
 --
+-- Indexes for table `tbl_refil_invoice`
+--
+ALTER TABLE `tbl_refil_invoice`
+  ADD PRIMARY KEY (`rinvoice_id`),
+  ADD KEY `refil_id` (`refil_id`),
+  ADD KEY `gcustomer_id` (`gcustomer_id`);
+
+--
+-- Indexes for table `tbl_sale_invoice`
+--
+ALTER TABLE `tbl_sale_invoice`
+  ADD PRIMARY KEY (`sinvoice_id`),
+  ADD KEY `sale_product_id` (`sale_product_id`),
+  ADD KEY `gcustomer_id` (`gcustomer_id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -483,6 +611,11 @@ ALTER TABLE `tbl_admin`
 ALTER TABLE `tbl_aqua_customers`
   MODIFY `acustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
+-- AUTO_INCREMENT for table `tbl_aqua_invoice`
+--
+ALTER TABLE `tbl_aqua_invoice`
+  MODIFY `invoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+--
 -- AUTO_INCREMENT for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
@@ -492,6 +625,11 @@ ALTER TABLE `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_avehicle_details`
   MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+--
+-- AUTO_INCREMENT for table `tbl_connection_invoice`
+--
+ALTER TABLE `tbl_connection_invoice`
+  MODIFY `cinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
@@ -532,6 +670,16 @@ ALTER TABLE `tbl_new_connection`
 --
 ALTER TABLE `tbl_refil_details`
   MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+--
+-- AUTO_INCREMENT for table `tbl_refil_invoice`
+--
+ALTER TABLE `tbl_refil_invoice`
+  MODIFY `rinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+--
+-- AUTO_INCREMENT for table `tbl_sale_invoice`
+--
+ALTER TABLE `tbl_sale_invoice`
+  MODIFY `sinvoice_id` int(11) NOT NULL AUTO_INCREMENT;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

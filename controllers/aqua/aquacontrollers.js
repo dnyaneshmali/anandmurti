@@ -473,6 +473,7 @@ console.log($scope.setrem);
 
           $http.get("../../models/getlastinoiceid.php")
           .success(function(data){
+            console.log(data);
             var nextinvoiceid=data;
             //console.log(nextinvoiceid);
             $scope.invoice_id = data[0].invoice_id;
@@ -594,6 +595,7 @@ function printElement(elem, append, delimiter) {
               return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldorder){
+
               if($scope.oldorder){
                 var index1 = getIndexOf($scope.data, $scope.iseditid, "order_id");
                 $scope.data[index1]=angular.copy($scope.oldorder);
