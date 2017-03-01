@@ -1,5 +1,5 @@
 
-var app = angular.module('app',['ngRoute','ngStorage','validation.match','autocomplete']);
+var app = angular.module('app',['ngRoute','ngStorage','validation.match','autocomplete','googlechart']);
 
 app.config(function($routeProvider) {
     $routeProvider

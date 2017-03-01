@@ -2,44 +2,48 @@
  * Created by User on 10/19/14.
  */
 
-app.controller('Aquadashboardctrl', ['$scope','$http', function($scope,$http) {
-$scope.container = {width:500, height:300, gap:10};
-$scope.bars= [
-{color:'#803690', percentage:50},
-{color:'#DCDCDC', percentage:30},
-{color:'#46BFBD', percentage:100},
-{color:'#FDB45C', percentage:90},
-];
-$scope.setContainer = function() {
-return {
-'padding-right': $scope.container.gap + 'px',
-'width': $scope.container.width + 'px',
-'height': $scope.container.height + 'px'
-};
-};
-$scope.setDetails = function(bar, index) {
-var barWidth = $scope.container.width/$scope.bars.length - $scope.
-container.gap;
-return {
-height: bar.percentage + '%',
-background: bar.color,
-width: barWidth/1.3 + 'px',
-left: $scope.container.gap + ($scope.container.gap +
-barWidth)*index + 'px'
-};
-};
-
-  $http.get("../../models/getorderreminder.php")
+app.controller('Aquadashboardctrl', ['$scope','$http', function($scope, $http) {
+// $scope.container = {width:500, height:300, gap:10};
+ $http.get("../../models/getorderreport.php")
     .success(function(data){
         $scope.reminderdata=data
         console.log($scope.reminderdata);
-        $scope.bars= [
-{color:'blue', percentage:$scope.reminderdata[0].order_quantity},
-{color:'orange', percentage:$scope.reminderdata[1].order_quantity},
-{color:'red', percentage:$scope.reminderdata[2].order_quantity},
+        console.log($scope.reminderdata[0].MONTH[order_date]);
 
-];
     });
+
+$scope.chartObject = {
+type: 'ColumnChart',
+data: {
+"cols": [
+{label: "frameworks", type: "string"},
+{label: "shares", type: "number"}
+],
+"rows": [
+{c: [{v: "Jan" }, {v: 10004 }]},
+{c: [{v: "Feb"}, {v: 9 }]},
+{c: [{v: "Mar" }, {v: 2 }]},
+{c: [{v: "Apr" }, {v: 21 }]},
+{c: [{v: "May" }, {v: 14 }]},
+{c: [{v: "Jun" }, {v: 14 }]},
+{c: [{v: "Jul" }, {v: 14 }]},
+{c: [{v: "Aug "}, {v: 14 }]},
+{c: [{v: "Sep" }, {v: 14 }]},
+{c: [{v: "Oct" }, {v: 14 }]},
+{c: [{v: "Nov" }, {v: 14 }]},
+{c: [{v: "Dec" }, {v: 14 }]},
+]
+}
+
+};
+$scope.chartObject.options = {
+        'title': 'Annadmurti Aqua Monthly Orders',
+        'color': 'orange'
+        
+
+    };
+
+ 
 
 }]);
 
