@@ -271,8 +271,11 @@ a.slider-btn2 {
 .page-content ,.products-page {
     margin-top: 75px;    
 }
-.page-content{
+.page-content.home-page,.page-content.about-page,.page-content.gogas-page,.page-content.aqua-page{
     margin-top: 140px ! important;
+}
+.page-content, .products-page {
+    margin-top: 110px;
 }
 #page-contact .title-section {
     margin-top: 40px;
@@ -469,6 +472,7 @@ background-color: #6eb94e;
     .navbar-inverse .navbar-nav .open .dropdown-menu > li > a:focus {
         color: #FF712C;
     }
+    .on-map{display:none;}
 }
 
 

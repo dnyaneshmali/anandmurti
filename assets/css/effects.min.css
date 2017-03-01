@@ -27,6 +27,10 @@
 	-webkit-filter:brightness(.6)
 }
 .ehover13 .overlay{
+	transform: scale(0,1);
+    opacity: 0;
+    background-color: rgba(0,0,0,.5);
+    transition: opacity .35s,transform .35s;
 	width:80%;height:80%;
 	left:10%;top:10%;
 	/*border-bottom:1px solid #FFF;

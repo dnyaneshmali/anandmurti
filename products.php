@@ -52,7 +52,7 @@
           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
            <div class="card">
         <div class="hover ehover13">
-          <img class="img-responsive" src="images/gas_stove_largeold.png" alt="Large gas stove">
+          <img class="img-responsive" src="images/gas_stove_large.png" alt="Large gas stove">
             <div class="overlay">
               <h2>Large gas stove</h2>
               <h4>View
@@ -64,7 +64,7 @@
           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
           <div class="hover ehover13">
-          <img class="img-responsive" src="images/gas_stoveold.png" alt="Small gas stove">
+          <img class="img-responsive" src="images/gas_stove.png" alt="Small gas stove">
             <div class="overlay">
               <h2>Small gas stove</h2>
               <h4>View
@@ -77,7 +77,7 @@
         <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
         <div class="hover ehover13">
-          <img class="img-responsive" src="images/cookerold.png" alt="Pressure cooker">
+          <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
               <h4>View
@@ -89,7 +89,7 @@
           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
              <div class="card">
               <div class="hover ehover13">
-          <img class="img-responsive" src="images/lighterold.png" alt="lighter">
+          <img class="img-responsive" src="images/lighter.png" alt="lighter">
             <div class="overlay">
               <h2>lighter</h2>
               <h4>View
@@ -101,7 +101,7 @@
           <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
              <div class="hover ehover13">
-          <img class="img-responsive" src="images/vesselold.png" alt="Vessel">
+          <img class="img-responsive" src="images/vessel.png" alt="Vessel">
             <div class="overlay">
               <h2>Vessel</h2>
               <h4>View
@@ -138,7 +138,7 @@
         <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
         <div class="hover ehover13">
-          <img class="img-responsive" src="images/cookerold.png" alt="Pressure cooker">
+          <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
               <h4>View
@@ -207,7 +207,7 @@
         <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
         <div class="hover ehover13">
-          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+          <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
               <h4>View
@@ -268,7 +268,7 @@
         <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
         <div class="hover ehover13">
-          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+          <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
               <h4>View
@@ -337,7 +337,7 @@
         <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
         <div class="hover ehover13">
-          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+          <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
               <h4>View
@@ -398,7 +398,7 @@
         <div class="col-md-4 col-xs-4 col-lg-4 col-sm-4">
             <div class="card">
         <div class="hover ehover13">
-          <img class="img-responsive" src="images/cooker.png" alt="Pressure cooker">
+          <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
               <h4>View

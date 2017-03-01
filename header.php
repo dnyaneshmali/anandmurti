@@ -49,7 +49,7 @@
                      <li><a href="http://localhost/anandmurti/gogas.php">Go Gas</a></li>
                      <li><a href="http://localhost/anandmurti/aqua.php">Aqua</a></li>
                      <li><a href="http://localhost/anandmurti/products.php">Products</a></li>
-                     <li><a href="http://localhost/anandmurti/dummy-contact.php">Contact</a></li>
+                     <li><a href="http://localhost/anandmurti/contact.php">Contact</a></li>
                      <li><a href="http://localhost/anandmurti/login.php" data-toggle="tooltip" title="Log in"><span><i class="fa fa-user"></i></span></a></li>
                   </ul>
                </div>
