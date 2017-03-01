@@ -80,10 +80,6 @@
                               <a data-toggle="tooltip" title="Update"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button> </a>
 
                         </td>
-
-
-
-
                            <ng-form>
 
                         </tr>
@@ -169,10 +165,10 @@ h3.invoice-title {
                         <div class="row">
 
                         <h4 class="modal-title">Customer</h4>
-                        <h5><strong>Name:</strong> <span ng-repeat="rinvoice in refilinvoicedata">{{rinvoice.gcustomer_name}}</span></h5>
-                        <h5><strong>Email ID:</strong> <span ng-repeat="rinvoice in refilinvoicedata">{{rinvoice.gcustomer_email}}</span></h5>
-                        <h5><strong>Address:</strong> <span ng-repeat="rinvoice in refilinvoicedata">{{rinvoice.gcustomer_landmark}} {{rinvoice.gcustomer_city}} {{rinvoice.gcustomer_state}} {{rinvoice.gcustomer_pincode}}</span></h5>
-                        <h5><strong>Number:</strong> <span ng-repeat="rinvoice in refilinvoicedata">{{rinvoice.gcustomer_number}}</span></h5>
+                        <h5><strong>Name:</strong> <span ng-repeat="sinvoice in saleinvoice">{{sinvoice.gcustomer_name}}</span></h5>
+                        <h5><strong>Email ID:</strong> <span ng-repeat="sinvoice in saleinvoice">{{sinvoice.gcustomer_email}}</span></h5>
+                        <h5><strong>Address:</strong> <span ng-repeat="sinvoice in saleinvoice">{{sinvoice.gcustomer_landmark}} {{rinvoice.gcustomer_city}} {{rinvoice.gcustomer_state}} {{sinvoice.gcustomer_pincode}}</span></h5>
+                        <h5><strong>Number:</strong> <span ng-repeat="sinvoice in saleinvoice">{{sinvoice.gcustomer_number}}</span></h5>
                         </div>
                         </div>
                         </div>
@@ -181,23 +177,24 @@ h3.invoice-title {
                         <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Refil ID</th>
-                          <th>Cylinder Type</th>
-                          <th>Refil Amount</th>
-                          <th>Rate</th>
-                          <th>Refil Date</th>
-                          <th>Invoice</th>
+                          <th>Sale ID</th>
+                          <th>Product Name</th>
+                          <th>Product Quantity</th>
+                          <th>Product Price</th>
+                          <th>Product Total Price</th>
+                          <th>Sale Date</th>
                         </tr>
                       </thead>
 
 
                       <tbody>
-<tr ng-repeat="rinvoice in refilinvoicedata">
-                          <td>{{rinvoice.refil_id}}</td>
-                          <td>{{rinvoice.refil_cylinder_type}}</td>
-                          <td>{{rinvoice.refil_amount}}</td>
-                          <td>{{rinvoice.refil_date}}</td>
-                          <td>{{rinvoice.refil_date}}</td>
+<tr ng-repeat="sinvoice in saleinvoice">
+                          <td>{{sinvoice.sale_product_id}}</td>
+                          <td>{{sinvoice.product_name}}</td>
+                          <td>{{sinvoice.sale_product_quantity}}</td>
+                          <td>{{sinvoice.sale_product_price}}</td>
+                          <td>{{sinvoice.sale_total_price}}</td>
+                          <td>{{sinvoice.sale_product_date}}</td>
 </tr>
 
                       </tbody>
@@ -217,11 +214,11 @@ h3.invoice-title {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><input ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="rtax" name="rtax" style="width:auto;" required></td>
+                          <td><input ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="stax" name="stax" style="width:auto;" required></td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
-                          <td>{{rtotal}}</td>
+                          <td>{{stotal}}</td>
 </tr>
 
                       </tbody>
@@ -230,7 +227,7 @@ h3.invoice-title {
                     </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-default" ng-click="savesaleinvoice(gcustomer_id,refil_id,rtax,rtotal);">Save</button>
+                    <button type="button" class="btn btn-default" ng-click="savesaleinvoice(gcustomer_id,sale_product_id,stax,stotal);">Save</button>
                     <button type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>

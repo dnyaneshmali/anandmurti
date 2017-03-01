@@ -1220,9 +1220,6 @@ $http({
 
 
 
-
-
-
   $scope.insertdata=function(){
   $scope.salegasproduct = {};
   $scope.gasinwards = {};
@@ -1266,7 +1263,116 @@ app.controller('Listsalegasproductctrl', ['$scope','$http', function($scope,$htt
                 //$('#invoicemodal').modal('show');
                // $('#invoicemodal').modal('hide');
 
+
+                $http({
+          method  : 'POST',
+          url     : '../../models/getsaleinvoice.php',
+          data    : {'sale_product_id':sale_product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+              console.log(data);
+
+              $scope.saleinvoice=data;
+              //console.log($scope.saleinvoice);
+              $scope.sale_product_id = data[0].sale_product_id;
+              //console.log($scope.sale_product_id)
+              $scope.gcustomer_id = data[0].gcustomer_id;
+             // console.log(connection_id);
+             var qt = data[0].sale_product_quantity;
+              console.log(data[0].sale_product_quantity);
+              var pr = data[0].sale_product_price;
+              console.log(data[0].sale_product_price);
+              var ssubotal = qt*pr;
+              $scope.cdate = new Date();
+              $scope.duedate = new Date();
+              $scope.stax = 10;
+              var stax = 10;
+              var cftotal = ssubotal+$scope.stax;
+               $scope.stotal = cftotal;
+              // $scope.data.splice(index, 1);
+              // $scope.$watch(); */
+
+                      });
+
+
+
+
+
+ $scope.fprint=function(printSection){
+
+        printElement(document.getElementById("printSection"));
+        window.print();
+
+function printElement(elem, append, delimiter) {
+    var domClone = elem.cloneNode(true);
+
+    var $printSection = document.getElementById("printSection");
+
+    if (!$printSection) {
+        var $printSection = document.createElement("div");
+        $printSection.id = "printSection";
+        document.body.appendChild($printSection);
+    }
+
+    if (append !== true) {
+        $printSection.innerHTML = "";
+    }
+
+    else if (append === true) {
+        if (typeof(delimiter) === "string") {
+            $printSection.innerHTML += delimiter;
+        }
+        else if (typeof(delimiter) === "object") {
+            $printSection.appendChlid(delimiter);
+        }
+    }
+
+    $printSection.appendChild(domClone);
 }
+
+}
+
+
+
+
+}
+
+
+$scope.savesaleinvoice=function(gcustomer_id,sale_product_id,stax,stotal){
+  alert('dfdf');
+                $scope.gcustomer_id = {};
+                $scope.gcustomer_id = angular.copy(gcustomer_id);
+                //console.log($scope.gcustomer_id);
+                $scope.sale_product_id = {};
+                $scope.sale_product_id = angular.copy(sale_product_id);
+                //console.log($scope.connection_id);
+                $scope.stax = {};
+                $scope.stax = angular.copy(stax);
+                //console.log($scope.stax);
+                $scope.stotal = {};
+                $scope.stotal = angular.copy(stotal);
+                //console.log($scope.stotal);
+
+                $http({
+          method  : 'POST',
+          url     : '../../models/insertsaleinvoice.php',
+          data    : {'gcustomer_id':$scope.gcustomer_id,'sale_product_id':$scope.sale_product_id,'sinvoice_tax':$scope.stax,'sinvoice_amount':$scope.stotal}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            console.log(data);
+                  swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
+              
+
+                      });
+   }
+
 
 
  $http.get("../../models/getsoldprodcuts.php")

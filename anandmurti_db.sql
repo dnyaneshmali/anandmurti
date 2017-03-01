@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 28, 2017 at 02:13 PM
+-- Generation Time: Mar 01, 2017 at 07:30 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -219,7 +219,8 @@ CREATE TABLE `tbl_connection_invoice` (
 INSERT INTO `tbl_connection_invoice` (`cinvoice_id`, `cinvoice_tax`, `cinvoice_amount`, `cinvoice_date`, `cinvoice_status`, `connection_id`, `gcustomer_id`) VALUES
 (1, 0, 0, '2017-02-28 11:14:47', 0, 3, 2),
 (2, 0, 0, '2017-02-28 12:43:10', 0, 0, 0),
-(3, 0, 0, '2017-02-28 12:46:14', 0, 0, 1);
+(3, 0, 0, '2017-02-28 12:46:14', 0, 0, 1),
+(4, 0, 0, '2017-03-01 07:07:46', 0, 0, 1);
 
 -- --------------------------------------------------------
 
@@ -407,6 +408,9 @@ CREATE TABLE `tbl_refil_details` (
   `refil_id` int(11) NOT NULL,
   `refil_cylinder_type` varchar(50) NOT NULL,
   `refil_payment_details` varchar(100) NOT NULL,
+  `check_neft_id` varchar(100) NOT NULL,
+  `bank_name` varchar(100) NOT NULL,
+  `ifsc_code` varchar(100) NOT NULL,
   `refil_amount` int(10) NOT NULL,
   `refil_date` datetime NOT NULL,
   `gcustomer_id` int(11) NOT NULL
@@ -416,14 +420,14 @@ CREATE TABLE `tbl_refil_details` (
 -- Dumping data for table `tbl_refil_details`
 --
 
-INSERT INTO `tbl_refil_details` (`refil_id`, `refil_cylinder_type`, `refil_payment_details`, `refil_amount`, `refil_date`, `gcustomer_id`) VALUES
-(1, '', 'test', 300, '2017-02-14 13:07:38', 2),
-(2, '', 'testtest', 300, '2017-02-14 13:09:40', 1),
-(3, '', 'payment details', 400, '2017-02-14 13:22:49', 1),
-(4, '2', 'test details', 600, '2017-02-14 13:24:25', 2),
-(5, '2', '', 200, '2017-02-16 06:51:13', 2),
-(6, '3', '21', 200, '2017-02-16 06:53:03', 1),
-(7, '3', 'check', 9181, '2017-02-24 14:01:03', 1);
+INSERT INTO `tbl_refil_details` (`refil_id`, `refil_cylinder_type`, `refil_payment_details`, `check_neft_id`, `bank_name`, `ifsc_code`, `refil_amount`, `refil_date`, `gcustomer_id`) VALUES
+(1, '', 'test', '', '', '', 300, '2017-02-14 13:07:38', 2),
+(2, '', 'testtest', '', '', '', 300, '2017-02-14 13:09:40', 1),
+(3, '', 'payment details', '', '', '', 400, '2017-02-14 13:22:49', 1),
+(4, '2', 'test details', '', '', '', 600, '2017-02-14 13:24:25', 2),
+(5, '2', '', '', '', '', 200, '2017-02-16 06:51:13', 2),
+(6, '3', '21', '', '', '', 200, '2017-02-16 06:53:03', 1),
+(7, '3', 'check', '', '', '', 9181, '2017-02-24 14:01:03', 1);
 
 -- --------------------------------------------------------
 
@@ -465,6 +469,13 @@ CREATE TABLE `tbl_sale_invoice` (
   `sale_product_id` int(11) NOT NULL,
   `gcustomer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_sale_invoice`
+--
+
+INSERT INTO `tbl_sale_invoice` (`sinvoice_id`, `sinvoice_tax`, `sinvoice_amount`, `sinvoice_date`, `sinvoice_status`, `sale_product_id`, `gcustomer_id`) VALUES
+(1, 0, 0, '2017-03-01 07:08:15', 0, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -629,7 +640,7 @@ ALTER TABLE `tbl_avehicle_details`
 -- AUTO_INCREMENT for table `tbl_connection_invoice`
 --
 ALTER TABLE `tbl_connection_invoice`
-  MODIFY `cinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `cinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
@@ -679,7 +690,7 @@ ALTER TABLE `tbl_refil_invoice`
 -- AUTO_INCREMENT for table `tbl_sale_invoice`
 --
 ALTER TABLE `tbl_sale_invoice`
-  MODIFY `sinvoice_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `sinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
