@@ -730,13 +730,17 @@ $scope.isedit=function(id){
               $scope.refilinvoicedata=data;
               console.log($scope.refilinvoicedata);
               $scope.gcustomer_id = data[0].gcustomer_id;
+              $scope.refil_amount = data[0].refil_amount;
               $scope.refil_id = data[0].refil_id;
               $scope.cdate = new Date();
                $scope.duedate = new Date();
-              // $scope.ptax = 10;
-             //  var ptax = 10;
-             //  var cftotal = csubotal+$scope.ptax;
-             //  $scope.ftotal = cftotal; 
+                $scope.rtax = 10;
+                var rtax = 10;
+               var cftotal = $scope.refil_amount;
+                  $scope.subotal = cftotal; 
+                  var subotal = $scope.subotal;
+                  var cftotal = +subotal + +$scope.rtax;
+                $scope.stotal = cftotal;
                        // $scope.data.splice(index, 1);
                        // $scope.$watch();
 
@@ -784,6 +788,33 @@ $scope.isedit=function(id){
              }
 
 
+$scope.changedrtax=function(rtax,refil_id){
+
+                $scope.rtax = {};
+                $scope.rtax = angular.copy(rtax);
+                //console.log($scope.rtax);
+                $scope.refil_id = {};
+                $scope.refil_id = angular.copy(refil_id);
+                //console.log($scope.refil_id);
+
+              $http({
+          method  : 'POST',
+          url     : '../../models/getrefilinvoice.php',
+          data    : {'refil_id':refil_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              //console.log(data);
+              var csubotal = data[0].refil_amount;
+              //console.log(csubotal);
+              var ntax = $scope.rtax;
+              //console.log(ntax);
+              var cftotal = +csubotal + +ntax;
+               $scope.stotal = cftotal;
+
+                      });
+             }
 
 
 
@@ -1262,6 +1293,22 @@ app.controller('Listsalegasproductctrl', ['$scope','$http', function($scope,$htt
                 $('#printSection').modal('toggle');
                 //$('#invoicemodal').modal('show');
                // $('#invoicemodal').modal('hide');
+
+
+           $http.get("../../models/getsaleinvoiceid.php")
+          .success(function(data){
+            console.log(data);
+            var nextinvoiceid=data;
+            console.log(nextinvoiceid);
+            $scope.invoice_id = data[0].sinvoice_id;
+            console.log($scope.invoice_id);
+            var lastinvoiceid = $scope.invoice_id;
+            var addone = 1;
+            var currentinoiveid = +lastinvoiceid + +addone;
+            $scope.cinvoiceid = currentinoiveid;
+            console.log(currentinoiveid);
+    });
+
 
 
                 $http({
