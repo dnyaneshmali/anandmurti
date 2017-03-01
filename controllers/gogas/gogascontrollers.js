@@ -9,7 +9,7 @@ $scope.insertdata=function(gogascustomers){
   $scope.gogascustomers = {};
 $scope.gogascustomers = angular.copy(gogascustomers);
 console.log($scope.gogascustomers);
-	 $http({
+   $http({
           method  : 'POST',
           url     : '../../models/insertgogascustomer.php',
           data    : $scope.gogascustomers, //forms user object
@@ -1284,6 +1284,7 @@ app.controller('Listsalegasproductctrl', ['$scope','$http', function($scope,$htt
               var pr = data[0].sale_product_price;
               console.log(data[0].sale_product_price);
               var ssubotal = qt*pr;
+              $scope.subotal = ssubotal;
               $scope.cdate = new Date();
               $scope.duedate = new Date();
               $scope.stax = 10;
@@ -1332,10 +1333,6 @@ function printElement(elem, append, delimiter) {
 }
 
 }
-
-
-
-
 }
 
 
@@ -1368,10 +1365,37 @@ $scope.savesaleinvoice=function(gcustomer_id,sale_product_id,stax,stotal){
   type: "success",
   confirmButtonText: "Ok"
 });
-              
+               });
+   }
+
+        $scope.changedstax=function(stax,sale_product_id){
+                $scope.stax = {};
+                $scope.stax = angular.copy(stax);
+                //console.log($scope.stax);
+                $scope.sale_product_id = {};
+                $scope.sale_product_id = angular.copy(sale_product_id);
+                //console.log($scope.sale_product_id);
+
+              $http({
+          method  : 'POST',
+          url     : '../../models/getsaleinvoice.php',
+          data    : {'sale_product_id':sale_product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              //console.log(data);
+              var qt = data[0].sale_product_quantity;
+              //console.log(data[0].sale_product_quantity);
+              var pr = data[0]. sale_product_price;
+              //console.log(data[0].sale_product_price);
+              var csubotal = qt*pr;
+              var ntax= $scope.stax;
+              var cftotal = +csubotal + +ntax;
+               $scope.stotal = cftotal;
 
                       });
-   }
+             }
 
 
 

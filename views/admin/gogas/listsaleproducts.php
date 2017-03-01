@@ -214,7 +214,7 @@ h3.invoice-title {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><input ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="stax" name="stax" style="width:auto;" required></td>
+                          <td><input ng-change="changedstax(stax,sale_product_id)" type="text" class="form-control" ng-model="stax" name="stax" style="width:auto;" required></td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
