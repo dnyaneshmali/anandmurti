@@ -43,7 +43,7 @@
                              <option value="" selected>Payment details</option>
                             <option value="1" selected>Check</option>
                             <option value="Cash">Cash</option>
-                            <option value="2">NFT</option>
+                            <option value="2">NEFT</option>
                             </select>
                         </div>
                         <div class="error-container" ng-show="refilform.refil_payment_details.$dirty && refilform.refil_payment_details.$invalid" ng-messages="refilform.refil_payment_details.$error">
@@ -94,12 +94,12 @@
 
 
                      <div ng-if="refil.refil_payment_details==2" class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">NFT Number <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">NEFT Number <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" ng-pattern="/^\d+$/" placeholder="NFT Number" class="form-control"ng-model="refil.check_neft_id" id="check_neft_id" class="form-control" name="check_neft_id" >
+                          <input type="text" ng-pattern="/^\d+$/" placeholder="NEFT Number" class="form-control"ng-model="refil.check_neft_id" id="check_neft_id" class="form-control" name="check_neft_id" >
                           </div>
                           <p class="val-style" ng-show="refilform.check_neft_id.$invalid && !refilform.check_neft_id.$pristine" class="help-block">accept digits only required.</p>
                         </div>
