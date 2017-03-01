@@ -992,3 +992,11 @@ margin-top: 0px;}
 .fw-400{
   font-weight: 400 ! important;
 }
+
+.carousel-mb .row {
+    margin-right: -30px;
+    margin-left: -30px;
+    margin-bottom: 50px;
+}
+
+.on-map-color{color:#50ea11 ! important};

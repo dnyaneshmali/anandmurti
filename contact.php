@@ -175,7 +175,11 @@
          <div class="box">
             <div class="col-lg-12" style="position:relative;">
                <div class="col-md-12">
-                  <iframe width="100%" height="50%" src="http://www.mapi.ie/create-google-map/map.php?width=100%&amp;height=800&amp;hl=en&amp;q=Natepute+(Anandmurti%20Group)&amp;ie=UTF8&amp;t=h&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ></iframe>
+                 <!--  <iframe width="100%" height="50%" src="http://www.mapi.ie/create-google-map/map.php?width=100%&amp;height=800&amp;hl=en&amp;q=Natepute+(Anandmurti%20Group)&amp;ie=UTF8&amp;t=h&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ></iframe> -->
+
+
+<iframe width="100%" height="50%" src="http://www.mapi.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=Natepute+(Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="http://www.mapsdirections.info/fr/mesurer-distance-surface-google-maps.html"></iframe>
+
                   <div class="col-md-12 maptoggle" style=" position:absolute;top:0;left:0;width:100%;height:100%;background-color: #444141;opacity: 0.8;padding-top:50px">
                     <span class="on-map">
                      <div class="col-md-4" style="text-align: center; ">

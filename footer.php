@@ -128,7 +128,7 @@ p a {color: rgba(255,255,255,.5)}
                <div class="col-md-6 widget">
                   <div class="widget-body">
                      <p class="text-right footer-center">
-                         Designed & Developed with <span class="heart"><i class="fa fa-heart"></i></span> by:  <a href="http://softinfology.com/">SoftInfology</a>
+                         Designed & Developed with   <span class="heart"><i class="fa fa-heart"></i></span> by:  <a href="http://softinfology.com/">SoftInfology</a>
                      </p>
                   </div>
                </div>
