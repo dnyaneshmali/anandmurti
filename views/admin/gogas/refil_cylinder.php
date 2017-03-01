@@ -42,7 +42,7 @@
                           <select class="form-control" ng-model="refil.refil_payment_details" name="refil_payment_details"  ng-required="true">
                             <option value="1" selected>Check</option>
                             <option value="Cash">Cash</option>
-                            <option value="NFT">NFT</option>
+                            <option value="2">NFT</option>
                             </select>
                         </div>
                         </div>
@@ -59,6 +59,68 @@
                           <input type="text" ng-pattern="/^\d+$/" placeholder="Check id" class="form-control"ng-model="refil.check_number" id="check_number" class="form-control" name="check_number" >
                           </div>
                           <p class="val-style" ng-show="refilform.check_number.$invalid && !refilform.check_number.$pristine" class="help-block">accept digits only required.</p>
+                        </div>
+                      </div>
+
+
+                      <div ng-if="refil.refil_payment_details==1" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">Bank Name <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" placeholder="Bank Name" class="form-control"ng-model="refil.bank_name" id="bank_name" class="form-control" name="bank_name" >
+                          </div>
+                           <p class="val-style" ng-show="refilform.bank_name.$invalid && !refilform.bank_name.$pristine" class="help-block">Bank name required.</p>
+                        </div>
+                      </div>
+
+                      <div ng-if="refil.refil_payment_details==1" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">IFSC code <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" ng-pattern="/^\d+$/" placeholder="Enter IFSC code" class="form-control"ng-model="refil.ifsc_code" id="ifsc_code" class="form-control" name="ifsc_code" >
+                          </div>
+                          <p class="val-style" ng-show="refilform.ifsc_code.$invalid && !refilform.ifsc_code.$pristine" class="help-block">accept digits only required.</p>
+                        </div>
+                      </div>
+
+
+                     <div ng-if="refil.refil_payment_details==2" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">NFT Number <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" ng-pattern="/^\d+$/" placeholder="NFT Number" class="form-control"ng-model="refil.NFT_number" id="NFT_number" class="form-control" name="NFT_number" >
+                          </div>
+                          <p class="val-style" ng-show="refilform.NFT_number.$invalid && !refilform.NFT_number.$pristine" class="help-block">accept digits only required.</p>
+                        </div>
+                      </div>
+                       
+                        <div ng-if="refil.refil_payment_details==2" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">Bank Name <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" placeholder="Bank Name" class="form-control"ng-model="refil.bank_name" id="bank_name" class="form-control" name="bank_name" >
+                          </div>
+                           <p class="val-style" ng-show="refilform.bank_name.$invalid && !refilform.bank_name.$pristine" class="help-block">Bank name required.</p>
+                        </div>
+                      </div>
+
+                       <div ng-if="refil.refil_payment_details==2" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">IFSC code <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" ng-pattern="/^\d+$/" placeholder="Enter IFSC code" class="form-control"ng-model="refil.ifsc_code" id="ifsc_code" class="form-control" name="ifsc_code" >
+                          </div>
+                          <p class="val-style" ng-show="refilform.ifsc_code.$invalid && !refilform.ifsc_code.$pristine" class="help-block">accept digits only required.</p>
                         </div>
                       </div>
 
