@@ -3,7 +3,7 @@ $root = $_SERVER['DOCUMENT_ROOT'].'/anandmurti/';
 include($root."/config/config.php");
 $data=array();
 
-$query="SELECT max(cinvoice_id) as cinvoice_id FROM tbl_connection_invoice";
+$query="SELECT max(sinvoice_id) as sinvoice_id FROM tbl_sale_invoice";
 $result = mysqli_query($connection,$query);
 
 while ($row = mysqli_fetch_assoc($result)){

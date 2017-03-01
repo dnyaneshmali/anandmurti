@@ -111,7 +111,7 @@
 
 
                <div class="modal fade" id="printSection" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog  modal-lg">
+            <div class="modal-dialog  modal-md">
                 <div class="modal-content">
                     <div class="modal-header">
                     <style type="text/css">
@@ -201,7 +201,6 @@ h3.invoice-title {
                           <th>Refil ID</th>
                           <th>Cylinder Type</th>
                           <th>Refil Amount</th>
-                          <th>Rate</th>
                           <th>Refil Date</th>
                         </tr>
                       </thead>
@@ -212,7 +211,6 @@ h3.invoice-title {
                           <td>{{rinvoice.refil_id}}</td>
                           <td>{{rinvoice.refil_cylinder_type}}</td>
                           <td>{{rinvoice.refil_amount}}</td>
-                          <td>{{rinvoice.refil_date}}</td>
                           <td>{{rinvoice.refil_date}}</td>
 </tr>
 
@@ -233,11 +231,11 @@ h3.invoice-title {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><input ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="rtax" name="rtax" style="width:auto;" required></td>
+                          <td><input ng-change="changedrtax(rtax,refil_id)" type="text" class="form-control" ng-model="rtax" name="rtax" style="width:auto;" required></td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
-                          <td>{{rtotal}}</td>
+                          <td>{{stotal}}</td>
 </tr>
 
                       </tbody>
