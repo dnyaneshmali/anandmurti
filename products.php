@@ -43,7 +43,7 @@
           <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
             <div class="overlay">
               <h2>Gas Cylinders</h2>
-              <h4>View
+              <h4>All sizes gas cylinders
               </h4>
             </div>        
         </div>
@@ -55,7 +55,7 @@
           <img class="img-responsive" src="images/gas_stove_large.png" alt="Large gas stove">
             <div class="overlay">
               <h2>Large gas stove</h2>
-              <h4>View
+              <h4>Pigeon Blackline Smart Gas Stove, 4 Burner
               </h4>
             </div>        
         </div>
@@ -67,7 +67,7 @@
           <img class="img-responsive" src="images/gas_stove.png" alt="Small gas stove">
             <div class="overlay">
               <h2>Small gas stove</h2>
-              <h4>View
+              <h4>gas stove small having cooktop
               </h4>
             </div>        
         </div>
@@ -80,7 +80,7 @@
           <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
-              <h4>View
+              <h4>Prestige Popular Aluminium Pressure Cooker, 3 Litres
               </h4>
             </div>        
         </div>
@@ -92,7 +92,7 @@
           <img class="img-responsive" src="images/lighter.png" alt="lighter">
             <div class="overlay">
               <h2>lighter</h2>
-              <h4>View
+              <h4>Prestige Gas Lighter
               </h4>
             </div>
             </div>        
@@ -104,7 +104,7 @@
           <img class="img-responsive" src="images/vessel.png" alt="Vessel">
             <div class="overlay">
               <h2>Vessel</h2>
-              <h4>View
+              <h4>Nirlon Cooking Vessels Non Stick kadhai
               </h4>
             </div>        
         </div>
@@ -129,7 +129,7 @@
           <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
             <div class="overlay">
               <h2>Gas Cylinders</h2>
-              <h4>View
+              <h4>All sizes gas cylinders
               </h4>
             </div>        
         </div>
@@ -141,7 +141,7 @@
           <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
-              <h4>View
+              <h4>Prestige Popular Aluminium Pressure Cooker, 3 Litres
               </h4>
             </div>        
         </div>
@@ -173,7 +173,7 @@
           <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
             <div class="overlay">
               <h2>Gas Cylinders</h2>
-              <h4>View
+              <h4>All sizes gas cylinders
               </h4>
             </div>        
         </div>
@@ -185,7 +185,7 @@
           <img class="img-responsive" src="images/gas_stove_large.png" alt="Large gas stove">
             <div class="overlay">
               <h2>Large gas stove</h2>
-              <h4>View
+              <h4>Pigeon Blackline Smart Gas Stove, 4 Burner
               </h4>
             </div>        
         </div>
@@ -197,7 +197,7 @@
           <img class="img-responsive" src="images/gas_stove.png" alt="Small gas stove">
             <div class="overlay">
               <h2>Small gas stove</h2>
-              <h4>View
+              <h4>small gas stove with cooktop
               </h4>
             </div>        
         </div>
@@ -210,7 +210,7 @@
           <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
-              <h4>View
+              <h4>Prestige Popular Aluminium Pressure Cooker, 3 Litres
               </h4>
             </div>        
         </div>
@@ -222,7 +222,7 @@
           <img class="img-responsive" src="images/lighter.png" alt="lighter">
             <div class="overlay">
               <h2>lighter</h2>
-              <h4>View
+              <h4>Prestige Gas Lighter
               </h4>
             </div>
             </div>        
@@ -234,8 +234,7 @@
           <img class="img-responsive" src="images/vessel.png" alt="Vessel">
             <div class="overlay">
               <h2>Vessel</h2>
-              <h4>View
-              </h4>
+              <h4>Nirlon Cooking Vessels Non Stick kadhai       </h4>
             </div>        
         </div>
       </div>
@@ -259,7 +258,7 @@
           <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
             <div class="overlay">
               <h2>Gas Cylinders</h2>
-              <h4>View
+              <h4>All sizes gas cylinders
               </h4>
             </div>        
         </div>
@@ -271,7 +270,7 @@
           <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
-              <h4>View
+              <h4>Prestige Popular Aluminium Pressure Cooker, 3 Litres
               </h4>
             </div>        
         </div>
@@ -303,7 +302,7 @@
           <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
             <div class="overlay">
               <h2>Gas Cylinders</h2>
-              <h4>View
+              <h4>All sizes gas cylinders
               </h4>
             </div>        
         </div>
@@ -315,7 +314,7 @@
           <img class="img-responsive" src="images/gas_stove_large.png" alt="Large gas stove">
             <div class="overlay">
               <h2>Large gas stove</h2>
-              <h4>View
+              <h4>Pigeon Blackline Smart Gas Stove, 4 Burner
               </h4>
             </div>        
         </div>
@@ -327,7 +326,7 @@
           <img class="img-responsive" src="images/gas_stove.png" alt="Small gas stove">
             <div class="overlay">
               <h2>Small gas stove</h2>
-              <h4>View
+              <h4>small gas stove with cooktop
               </h4>
             </div>        
         </div>
@@ -340,7 +339,7 @@
           <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
-              <h4>View
+              <h4>Prestige Popular Aluminium Pressure Cooker, 3 Litres
               </h4>
             </div>        
         </div>
@@ -352,7 +351,7 @@
           <img class="img-responsive" src="images/lighter.png" alt="lighter">
             <div class="overlay">
               <h2>lighter</h2>
-              <h4>View
+              <h4>Prestige Gas Lighter
               </h4>
             </div>
             </div>        
@@ -364,7 +363,7 @@
           <img class="img-responsive" src="images/vessel.png" alt="Vessel">
             <div class="overlay">
               <h2>Vessel</h2>
-              <h4>View
+              <h4>Nirlon Cooking Vessels Non Stick kadhai
               </h4>
             </div>        
         </div>
@@ -389,7 +388,7 @@
           <img class="img-responsive" src="images/gas_cylinders.png" alt="Gas Cylinders">
             <div class="overlay">
               <h2>Gas Cylinders</h2>
-              <h4>View
+              <h4>All sizes gas cylinders
               </h4>
             </div>        
         </div>
@@ -401,7 +400,7 @@
           <img class="img-responsive" src="images/coocker.png" alt="Pressure cooker">
             <div class="overlay">
               <h2>Pressure cooker</h2>
-              <h4>View
+              <h4>Prestige Popular Aluminium Pressure Cooker, 3 Litres
               </h4>
             </div>        
         </div>
