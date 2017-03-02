@@ -19,6 +19,7 @@
                       <thead>
                         <tr>
                           <th>Product Name</th>
+                          <th>Customer Name</th>
                           <th>Product Quantity</th>
                           <th>Product Price</th>
                           <th>Product Total Price</th>
@@ -30,6 +31,7 @@
                       <tbody>
                         <tr ng-repeat="soldproduct in soldproducts | filter:clisearch" ng-form="subForm">
                           <td  ng-if="!isedit(soldproduct.sale_product_id)">{{soldproduct.product_name}}</td>
+                          <td  ng-if="!isedit(soldproduct.sale_product_id)">{{soldproduct.gcustomer_name}}</td>
                           <td ng-if="!isedit(soldproduct.sale_product_id)">{{soldproduct.sale_product_quantity}}</td>
                           <td ng-if="!isedit(soldproduct.sale_product_id)">{{soldproduct.sale_product_price}}</td>
                           <td ng-if="!isedit(soldproduct.sale_product_id)">{{soldproduct.sale_total_price}}</td>
