@@ -32,10 +32,10 @@
    border-bottom:none ! important;
    }
    .contact-details{
-   border:none ! important;
+   /*border:none ! important;*/
   /* padding-top: 90px;*/
-   background: none ! important;
-   margin-left: 30px;
+   /*background: none ! important;*/
+   /*margin-left: 30px;*/
    /*background-color: #f7f7f7 ! important;*/
    }
 </style>
@@ -82,6 +82,7 @@
                                <option></option>
                               <option>Go Gas</option>
                               <option>Aqua</option>
+                              <option>Other</option>
                             </select>
                           </div>
                         <!-- <div class="form-group">
@@ -109,7 +110,7 @@
                               Near EON IT Park,<br/>
                               Kharadi Pune-41453<br/>
                            </div>
-                        </div>
+                        </div><hr>
                         <div class="item">
                            <div class="icon">
                               <i class="fa fa-phone"></i>
@@ -120,7 +121,7 @@
                               Near EON IT Park,<br/>
                               Kharadi Pune-41453<br/>
                            </div>
-                        </div>
+                        </div><hr>
                         <div class="item">
                            <div class="icon">
                               <i class="fa fa-envelope-o"></i>
@@ -132,7 +133,7 @@
                               Kharadi Pune-41453<br/>
                            </div>
                         </div>
-                        <div class="social-shares">
+                       <!--  <div class="social-shares">
                            <h2>Share</h2>
                            <ul class="contact-social-list">
                               <li>
@@ -155,13 +156,9 @@
                                  <i class="fa fa-google-plus"></i>
                                  </a>
                               </li>
-                             <!--  <li>
-                                 <a href="#" class="rss">
-                                 <i class="fa fa-rss"></i>
-                                 </a>
-                              </li> -->
+                            
                            </ul>
-                        </div>
+                        </div> -->
                      </div>
                   </div>
                </div>
@@ -178,7 +175,11 @@
          <div class="box">
             <div class="col-lg-12" style="position:relative;">
                <div class="col-md-12">
-                  <iframe width="100%" height="50%" src="http://www.mapi.ie/create-google-map/map.php?width=100%&amp;height=800&amp;hl=en&amp;q=Natepute+(Anandmurti%20Group)&amp;ie=UTF8&amp;t=h&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ></iframe>
+                 <!--  <iframe width="100%" height="50%" src="http://www.mapi.ie/create-google-map/map.php?width=100%&amp;height=800&amp;hl=en&amp;q=Natepute+(Anandmurti%20Group)&amp;ie=UTF8&amp;t=h&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" ></iframe> -->
+
+
+<iframe width="100%" height="50%" src="http://www.mapi.ie/create-google-map/map.php?width=100%&amp;height=600&amp;hl=en&amp;q=Natepute+(Anandmurti%20Group)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=A&amp;output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"><a href="http://www.mapsdirections.info/fr/mesurer-distance-surface-google-maps.html"></iframe>
+
                   <div class="col-md-12 maptoggle" style=" position:absolute;top:0;left:0;width:100%;height:100%;background-color: #444141;opacity: 0.8;padding-top:50px">
                     <span class="on-map">
                      <div class="col-md-4" style="text-align: center; ">

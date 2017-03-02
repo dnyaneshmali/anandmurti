@@ -60,7 +60,7 @@ p a {color: rgba(255,255,255,.5)}
                      </p>
                   </div>
                </div>
-               <div class="col-md-4 widget footer-center hidden-md-down">
+               <div class="col-md-4 widget footer-center footer-abt">
                   <h3 class="widget-title">About us</h3>
                   <div class="underline_f"></div><br>
                   <div class="widget-body" style="text-align:justify">
@@ -69,7 +69,7 @@ p a {color: rgba(255,255,255,.5)}
                   </div>
                </div>
               <div class="col-md-3 widget footer-center">
-                <div>
+                <div class="our-comp">
                   <h3 class="widget-title">Our Companies</h3>
                   <div class="underline_f"></div><br>
                   <div class="widget-body" style="text-align:justify">
@@ -128,7 +128,7 @@ p a {color: rgba(255,255,255,.5)}
                <div class="col-md-6 widget">
                   <div class="widget-body">
                      <p class="text-right footer-center">
-                         Designed & Developed with <span class="heart"><i class="fa fa-heart"></i></span> by:  <a href="http://softinfology.com/">SoftInfology</a>
+                         Designed & Developed with   <span class="heart"><i class="fa fa-heart"></i></span> by:  <a href="http://softinfology.com/">SoftInfology</a>
                      </p>
                   </div>
                </div>
@@ -138,7 +138,7 @@ p a {color: rgba(255,255,255,.5)}
       </div>
       
       <script type="text/javascript" src="http://localhost/anandmurti/assets/js/jquery-1.9.1.min.js"></script> 
-      <script type="text/javascript" src="http://localhost/anandmurti/assets/js/jQuerySimpleCounter.js"></script>
+     
 
       <script>
          $(document).ready(function(){

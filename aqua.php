@@ -123,7 +123,7 @@
    </div>
 
       
-         <div class="container carousel-mb">
+         <div class="container-fluid carousel-mb">
         <div class="row">
             <div class="col-md-12   ">
                 <div id="imageCarousel" class="carousel slide" data-interval="2000"
