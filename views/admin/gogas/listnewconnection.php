@@ -181,7 +181,7 @@ h3.invoice-title {
                             <div class="col-md-6 logo-section">
                             <div class="row">
                             <div class="invoice_logo">
-                        <img style="width: 100%;margin-left: -27px;" src="http://localhost/anandmurti/images/am_logo.png" alt="logo">
+                        <img style="width: 100%;margin-left:-27px;" src="http://localhost/anandmurti/images/am_logo.png" alt="logo">
                         </div>
                         <h4 class="modal-title">Anandmurti Group Limited</h4>
                         <h5>(CIN:L14106UP1995PLC019017),</h5>
@@ -203,7 +203,7 @@ h3.invoice-title {
                         <h4 class="modal-title">Customer</h4>
                         <h5><strong>Name:</strong> <span ng-repeat="cinvoice in connectioninvoice">{{cinvoice.gcustomer_name}}</span></h5>
                         <h5><strong>Email ID:</strong> <span ng-repeat="cinvoice in connectioninvoice">{{cinvoice.gcustomer_email}}</span></h5>
-                        <h5><strong>Address:</strong> <span ng-repeat="cinvoice in connectioninvoice">{{cinvoice.gcustomer_landmark}} {{cinvoice.gcustomer_city}} {{cinvoice.gcustomer_state}} {{cinvoice.gcustomer_pincode}}</span></h5>
+                        <h5><strong>Address:</strong> <span ng-repeat="cinvoice in connectioninvoice">{{cinvoice.gcustomer_landmark}} {{cinvoice.gcustomer_city}},<br/> {{cinvoice.gcustomer_state}} {{cinvoice.gcustomer_pincode}}</span></h5>
                         <h5><strong>Number:</strong> <span ng-repeat="cinvoice in connectioninvoice">{{cinvoice.gcustomer_number}}</span></h5>
                         </div>
                         </div>
