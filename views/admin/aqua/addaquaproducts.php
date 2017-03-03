@@ -69,7 +69,7 @@
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                            <span class="input-group-addon"><i class="fa fa-money"></i></span>
                           <input type="text" placeholder="Product Tax" ng-model="addaquaproduct.product_tax" id="product_tax" class="form-control" name="Product_tax" required />
                           <p class="val-style" ng-show="addaquaproductform.Product_tax.$invalid && !addaquaproductform.Product_tax.$pristine" class="help-block"> required </p>  
                           </div>
