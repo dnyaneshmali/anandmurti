@@ -59,7 +59,7 @@
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                           <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
                           <input type="text" ng-pattern="/^\d+$/" placeholder="Check id" class="form-control"ng-model="refil.check_neft_id" id="check_neft_id" class="form-control" name="check_neft_id" >
                           </div>
                          <p class="val-style" ng-show="refilform.check_neft_id.$invalid && !refilform.check_neft_id.$pristine" class="help-block">accept digits only required.</p>
@@ -72,7 +72,7 @@
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                             <span class="input-group-addon"><i class="fa fa-bank"></i></span>
                           <input type="text" placeholder="Bank Name"  class="form-control" ng-model="refil.bank_name" id="bank_name" class="form-control" name="bank_name" required />
                            </div>
                           <p class="val-style" ng-show="refilform.bank_name.$invalid && !refilform.bank_name.$pristine" class="help-block"> required.</p>     
@@ -85,7 +85,7 @@
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                           <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
                           <input type="text" ng-pattern="/^\d+$/" placeholder="Enter IFSC code" class="form-control"ng-model="refil.ifsc_code" id="ifsc_code" class="form-control" name="   ifsc_code" >
                           </div>
                           <p class="val-style" ng-show="refilform.ifsc_code.$invalid && !refilform.ifsc_code.$pristine" class="help-block">accept digits only required.</p>
@@ -98,7 +98,7 @@
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                           <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
                           <input type="text" ng-pattern="/^\d+$/" placeholder="NEFT Number" class="form-control"ng-model="refil.check_neft_id" id="check_neft_id" class="form-control" name="check_neft_id" >
                           </div>
                           <p class="val-style" ng-show="refilform.check_neft_id.$invalid && !refilform.check_neft_id.$pristine" class="help-block">accept digits only required.</p>
@@ -111,7 +111,7 @@
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                             <span class="input-group-addon"><i class="fa fa-bank"></i></span>
                           <input type="text" placeholder="Bank Name"  class="form-control" ng-model="refil.bank_name" id="bank_name" class="form-control" name="bank_name" required />
                            </div>
                           <p class="val-style" ng-show="refilform.bank_name.$invalid && !refilform.bank_name.$pristine" class="help-block"> required.</p>     
@@ -124,7 +124,7 @@
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                           <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
                           <input type="text" ng-pattern="/^\d+$/" placeholder="Enter IFSC code" class="form-control"ng-model="refil.ifsc_code" id="ifsc_code" class="form-control" name=" ifsc_code" >
                           </div>
                           <p class="val-style" ng-show="refilform.ifsc_code.$invalid && !refilform.ifsc_code.$pristine" class="help-block">accept digits only required.</p>

@@ -3,7 +3,23 @@
 <h1>Add Gogas Connection</h1>
 <div class="connectionform" ng-controller="Addnewconnectionctrl">
 <form name="connectionform" class="form-horizontal form-label-left" nonvalidate>
-
+<!--
+<datalist  id="gcustomerlist">
+    <option ng-repeat="gclist in gcustomerdata" value="{{gclist.gcustomer_name}}">{{gclist.gcustomer_name}}</option>
+</datalist>
+-->
+                    <!-- <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                             <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+                          <input type="text" placeholder="select" class="form-control" ng-model="Connection.customer" id="customer" class="form-control" name="customer" list="gcustomerlist" required />
+                        </div>
+                        <p class="val-style" ng-show="connectionform.customer.$invalid && !connectionform.customer.$pristine" class="help-block">required</p>
+                      </div>
+                       </div>  -->
+                       
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select Customer <span class="required">*</span>
                         </label>
@@ -57,48 +73,6 @@
                         </div>
                       </div>
                     
-
-                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_stamp">connection stamp<span class="required">*</span>
-                        </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
-                          <input type="text" placeholder="connection stamp" ng-model="Connection.connection_stamp" id="connection_stamp" class="form-control" name="connection_stamp" required />
-                        </div>
-                          <p class="val-style" ng-show="connectionform.connection_stamp.$invalid && !connectionform.connection_stamp.$pristine" class="help-block"> required</p>
-                        </div>
-                      </div>
-
-
-                           <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_other">connection other<span class="required"></span>
-                        </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <div class="input-group">
-                            <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
-                          <input type="text" placeholder="connection other" ng-model="Connection.connection_other" id="connection_other" class="form-control" name="connection_other" required />
-                        </div>
-                          <!-- <p class="val-style" ng-show="connectionform.connection_other.$invalid && !connectionform.connection_other.$pristine" class="help-block"> required</p> -->
-                        </div>
-                      </div>
-
-            
-
-
-                           <div class="item form-group">
-                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection passbook<span class="required">*</span>
-                        </label>
-                            <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
-                             
-                              <span style="margin-right:10px"><label>
-                              <input type="radio" checked="" ng-model="Connection.connection_passbook" value="Yes" id="Yes" name="connection_passbook" required/>yes </label></span>
-                              <label>
-                              <input type="radio" ng-model="Connection.connection_passbook" value="No" id="No" name="connection_passbook" required/>No </label>
-                            </div>
-                              
-                            </div>
-                            
                       <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection Hotplate<span class="required">*</span>
                         </label>
@@ -113,6 +87,32 @@
                               </div>
                             </div>
 
+
+                           <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection passbook<span class="required">*</span>
+                        </label>
+                            <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
+                             
+                              <span style="margin-right:10px"><label>
+                              <input type="radio" checked="" ng-model="Connection.connection_passbook" value="Yes" id="Yes" name="connection_passbook" required/>yes </label></span>
+                              <label>
+                              <input type="radio" ng-model="Connection.connection_passbook" value="No" id="No" name="connection_passbook" required/>No </label>
+                            </div>
+                              
+                            </div>
+
+                       <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_stamp">connection stamp<span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                          <div class="input-group">
+                             <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+                          <input type="text" placeholder="connection stamp" ng-model="Connection.connection_stamp" id="connection_stamp" class="form-control" name="connection_stamp" required />
+                        </div>
+                          <p class="val-style" ng-show="connectionform.connection_stamp.$invalid && !connectionform.connection_stamp.$pristine" class="help-block"> required</p>
+                        </div>
+                      </div>
+          
                            <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection tube<span class="required">*</span>
                         </label>
@@ -138,20 +138,17 @@
                             </div>
                               </div>
                             </div>
-
-                             <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tcost">connection Cost<span class="required">*</span>
+                           <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_other">connection other<span class="required"></span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder=" connection cost" ng-pattern="/^\d+$/" ng-model="Connection.connection_tcost" id=" connection_tcost" class="form-control" name="connection_tcost" required />
+                            <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+                          <input type="text" placeholder="connection other" ng-model="Connection.connection_other" id="connection_other" class="form-control" name="connection_other" required />
                         </div>
-                          <p class="val-style" ng-show="connectionform.connection_tcost.$invalid && !connectionform.connection_tcost.$pristine" class="help-block">accept only digits required</p>
+                          <!-- <p class="val-style" ng-show="connectionform.connection_other.$invalid && !connectionform.connection_other.$pristine" class="help-block"> required</p> -->
                         </div>
                       </div>
-
-
 
                       <div class="ln_solid"></div>
                       <div class="form-group">

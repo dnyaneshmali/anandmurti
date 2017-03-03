@@ -29,6 +29,7 @@ Table Of content
   }
   .bg-texture{background-image: url("/anandmurti/images/texture.jpg");}
   body{
+    overflow-x: hidden;
    /* background-image: url("/anandmurti/images/texture.jpg");*/
     /* background-image: url("/anandmurti/images/texture.jpg");
      background-size: cover;*/
@@ -463,6 +464,9 @@ background-color: #6eb94e;
 /*----------------Media Queries Start----------*/
 
 @media (max-width: 767px) {
+  .bggradient img {
+    padding-left: 5px;
+}
     .navbar-collapse ul {
         width: 100%;
         text-align: center;
@@ -865,11 +869,17 @@ width: 100%;
     color: #fff;
 }
 /*media Queries*/
-@media screen and (max-width:767px){                                          
-div#home-slider, div#gas-slider, div#aqua-slider {
-    padding-top: 80px;
-    height: 20px;}
+@media screen and (max-width:767px){ 
+.home-page .first-section,.gogas-page .first-section,.aqua-page .first-section {padding-top: 0px;}
 
+div#home-slider, div#aqua-slider {
+    padding-top: 70px;
+    height: 20px;}
+    .contact-details .content{text-align: center;}
+    .page-content, .products-page {
+    margin-top: 70px;
+}
+div#gas-slider{ padding-top: 60px; height: 20px;}
    .about-page h1,.products-page h1,.enquiry-page h1,.aqua-page h1 {
     margin-top: 60px;
 }
@@ -1000,3 +1010,6 @@ margin-top: 0px;}
 }
 
 .on-map-color{color:#50ea11 ! important};
+
+.d-       contact-page .m-b-100{margin-bottom: 10px;
+   margin-top: 100px}

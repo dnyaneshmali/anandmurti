@@ -21,15 +21,12 @@
                   <div class="item active">
                      <img src="images\aqua_(3).jpg" class="img-responsive">
                      <div class="carousel-caption hidden-xs hidden-sm">
-                       <!--  <h3>Aqua</h3>
-                        <p>Aqua water for healthy life</p> -->
                      </div>
                   </div>
                   <div class="item">
                      <img src="images\gogas_(3).jpg" class="img-responsive">
                      <div class="carousel-caption hidden-xs hidden-sm">
-                        <!-- <h3>Go gas </h3>
-                        <p>Lpg gas for domestic and industrial use </p> -->
+                       
                      </div>
                   </div>
                </div>
@@ -74,20 +71,6 @@
                   </div>
                </div>
             </div>
-     <!--        <div class="col-md-4 col-sm-6">
-               <div class="panel panel-default ">
-                  <div class="text-center">
-                     <div class="panel-body">
-                        <img id="img-2" src="/anandmurti/assets/images/aqua_icon.png">
-                        <h4>Aqua</h4>
-                        <p class="text-center">RO + UV + TDS controller + Mineral added, 10 STAGE PURIFICATION "Aqua 
-                           water purifier "
-                           AN ISO 9001-2008 certified company
-                        </p>
-                     </div>
-                  </div>
-               </div>
-            </div> -->
              <div class="col-md-4 col-sm-6">
                <div class="panel panel-default">
                   <div class="text-center">
@@ -168,19 +151,6 @@
       </div>
    </div>
 </div>
-<!--  <div class="footer-cta-section">
-   <div class="container">
-   <div class="row">
-   <div class="col-md-9">
-   <h3>Click Here To Contact And To Know More !</h3>
-   </div>
-   <div class="col-md-3">
-   <a class="footer-cta-btn btn btn-lg" href="http://localhost/anandmurti/contact.php">Contact Us</a>
-   </div>
-   </div>
-   </div>
-   </div> -->
-<!--Footer -->
 <?php include('footer.php');?>
 </body>
 </html>

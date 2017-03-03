@@ -69,7 +69,7 @@
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
-                          <span class="input-group-addon"><i class="fa fa-dropbox"></i></span>
+                          <span class="input-group-addon"><i class="fa fa-money"></i></span>
                           <input type="text" placeholder="Product tax in %" ng-pattern="/^[0-9]*$/" ng-model="gogasproduct.product_tax" id="product_tax" class="form-control" name="product_tax"  required />
 
                           </div>
