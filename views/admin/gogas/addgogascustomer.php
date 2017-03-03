@@ -3,10 +3,24 @@
 <div class="addgogasform" ng-controller="Addgogasctrl">
 <form name="addgogasform" class="form-horizontal form-label-left" nonvalidate>
 
-                    <!--   <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
-                      </p> -->
-                     <!--  <span class="section">Personal Info</span> -->
-
+                        <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select Type<span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+                          <select class="form-control" ng-model="gogascustomers.gcustomer_type" name="gcustomer_type" class="{'has-errors' : gogascustomers.gcustomer_type.$invalid, 'no-errors' : gogascustomers.gcustomer_type.$valid}" ng-required="true">
+                          <option value="" ng-selected="true">Select User</option>
+                            <option value="1" >Connection User</option>
+                            <option value="2">Simple User</option>
+                          </select>
+                          </div>
+                           <div class="error-container" ng-show="addgogasform.gcustomer_type.$dirty && addgogasform.gcustomer_type.$invalid" ng-messages="addgogasform.gcustomer_type.$error">
+                         <div class="val-style" class="error" ng-message="required">select User Type </div>
+                          </div>
+                        </div>
+                      </div>
+                       
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="gcustomer_name">Customer Name <span class="required">*</span>
                         </label>
@@ -44,7 +58,7 @@
                         </div>
                       </div>
 
-                        <div class="item form-group">
+                        <div ng-if="gogascustomers.gcustomer_type==1" class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Date of Birth <span class="required">*</span>
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addgogasform.gcustomer_dob.$invalid && !addgogasform.gcustomer_dob.$pristine }" >
@@ -96,7 +110,7 @@
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Landmark <span class="required">*</span>
                         </label>
-                        <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addgogasform.gcustomer_landmark.$invalid && !addgogasform. gcustomer_landmark.$pristine }" >
+                        <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addgogasform.gcustomer_landmark.$invalid && !addgogasform.gcustomer_landmark.$pristine }" >
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-home"></i></span>
                           <input type="text" placeholder="Landmark" ng-model="gogascustomers.gcustomer_landmark" id="    gcustomer_landmark" class="form-control" name="gcustomer_landmark" required />
@@ -104,9 +118,7 @@
                           <p class="val-style" ng-show="addgogasform.gcustomer_landmark.$invalid && !addgogasform.gcustomer_landmark.$pristine" class="help-block">Required.</p>
                         </div>
                       </div>
-                           
-
-                            <div class="item form-group">
+                      <div ng-if="gogascustomers.gcustomer_type==1" class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Proof<span class="required">*</span>
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addgogasform.gcustomer_proof.$invalid && !addgogasform.gcustomer_proof.$pristine }" >
@@ -117,65 +129,11 @@
                           <p class="val-style" ng-show="addgogasform.gcustomer_proof.$invalid && !addgogasform.gcustomer_proof.$pristine" class="help-block">Required.</p>
                         </div>
                       </div>
-
-
-
-                     
-
-                      
-                      
-
-
-
-                      <!-- <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Customer Address <span class="required">*</span>
-                        </label>
-                        <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addgogasform.customer_address.$invalid && !addgogasform.customer_address.$pristine }" >
-                          <input type="text" ng-model="gogascustomers.customer_address" id="username" class="form-control" name="customer_address" required />
-                          <p style="color:red;" ng-show="addgogasform.customer_address.$invalid && !addgogasform.customer_address.$pristine" class="help-block">Address is required.</p>
-                        </div>
-                      </div> -->
-
-                      
-                     <!--  <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select class="form-control" ng-model="gogascustomers.customer_type" name="customer_type" ng-class="{'has-errors' : addgogasform.customer_type.$invalid, 'no-errors' : addgogasform.customer_type.$valid}" ng-required="true">
-                            <option value="" selected>Customer Type</option>
-                            <option value="temporary">temporary</option>
-                            <option value="Regular">Regular</option>
-                          </select>
-                          <div class="error-container" ng-show="addgogasform.customer_type.$dirty && addgogasform.customer_type.$invalid" ng-messages="addgogasform.customer_type.$error">
-                         <div style="color:red;" class="error" ng-message="required">select customer type </div>
-                          </div>
-                        </div>
-                      </div> -->
-
-
-                       <!--    <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select <span class="required">*</span>
-                        </label>
-                        <div class="col-md-6 col-sm-6 col-xs-12">
-                          <select class="form-control" ng-model="gogascustomers.customer_role" name="customer_role" ng-class="{'has-errors' : addgogasform.customer_role.$invalid, 'no-errors' : addgogasform.customer_role.$valid}" ng-required="true">
-                            <option value="" selected>Customer Role</option>
-                            <option value="Gogas">Gogas</option>
-                          
-                          </select>
-                          <div class="error-container" ng-show="addgogasform.customer_type.$dirty && addgogasform.customer_type.$invalid" ng-messages="addgogasform.customer_type.$error">
-                         <div style="color:red;" class="error" ng-message="required">select customer Role </div>
-                          </div>
-                        </div>
-                      </div> -->
-
-                       
-
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
                           <button type="submit"  ng-click="reset()"  ng-disabled="!addgogasform.$valid" class="btn btn-primary">Cancel</button>
                           <button ng-click="insertdata(gogascustomers)" ng-disabled="!addgogasform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
-
                           {{msg}}
                         </div>
                       </div>

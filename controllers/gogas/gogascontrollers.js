@@ -1156,6 +1156,12 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
         console.log($scope.getinwardsproducts);
     });
 
+    $http.get("../../models/getgogascustomer.php")
+    .success(function(data){
+        $scope.gcustomerdata=data
+        //console.log($scope.gcustomerdata);
+    });
+
     $scope.changedspname=function(product){
     $scope.product = {};
     $scope.product = angular.copy(product);
@@ -1258,10 +1264,11 @@ $http({
   $scope.product_quantity = angular.copy($scope.product_quantity);
   $scope.Product_price = angular.copy($scope.Product_price);
   $scope.Product_tprice = angular.copy($scope.Product_tprice);
+  $scope.customer = angular.copy($scope.customer);
    $http({
           method  : 'POST',
           url     : '../../models/insertsaleproducts.php',
-          data    : {'product':$scope.product,'product_quantity':$scope.product_quantity,'Product_price':$scope.Product_price,'Product_tprice':$scope.Product_tprice}, //forms user object
+          data    : {'product':$scope.product,'product_quantity':$scope.product_quantity,'Product_price':$scope.Product_price,'Product_tprice':$scope.Product_tprice,'gcustomer_id':$scope.customer}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {

@@ -38,6 +38,7 @@
                       <thead>
                         <tr>
                           <th>Customer Name</th>
+                          <th>Customer Type</th>
                           <th>Customer Email</th>
                           <th>Customer Number</th>
                           <!-- <th>customer DOB</th> -->
@@ -55,6 +56,7 @@
                       <tbody>
                         <tr ng-repeat="gogascustomer in data | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_name}}</td>
+                          <td ng-if="!isedit(gogascustomer.gcustomer_id)"><span ng-if="gogascustomer.gcustomer_type==1">Connection User</span><span ng-if="gogascustomer.gcustomer_type==2">Simple User</span></td>
                           <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_email}}</td>
                           <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_number}}</td>
                           <!-- <td>{{gogascustomer.gcustomer_dob}}</td>

@@ -27,9 +27,6 @@
                         </tr>
                       </thead>
 
-
-
-
                       <tbody>
                         <tr ng-repeat="refil in refildata | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(refil.refil_id)">{{refil.gcustomer_name}}</td>
@@ -41,9 +38,6 @@
                           <td ng-if="!isedit(refil.refil_id)">{{refil.refil_amount}}</td>
                           <td ng-if="!isedit(refil.refil_id)">{{refil.refil_date}}</td>
                         
-
-
-
                           <td ng-if="!isedit(refil.refil_id)">
                   
                           <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleterefil(refil.refil_id,$index);"><i class="fa fa-trash"></i></button></a>
@@ -111,7 +105,7 @@
 
 
                <div class="modal fade" id="printSection" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog  modal-md">
+            <div class="modal-dialog  modal-lg">
                 <div class="modal-content">
                     <div class="modal-header">
                     <style type="text/css">
@@ -188,7 +182,7 @@ h3.invoice-title {
                         <h4 class="modal-title">Customer</h4>
                         <h5><strong>Name:</strong> <span ng-repeat="rinvoice in refilinvoicedata">{{rinvoice.gcustomer_name}}</span></h5>
                         <h5><strong>Email ID:</strong> <span ng-repeat="rinvoice in refilinvoicedata">{{rinvoice.gcustomer_email}}</span></h5>
-                        <h5><strong>Address:</strong> <span ng-repeat="rinvoice in refilinvoicedata">{{rinvoice.gcustomer_landmark}} {{rinvoice.gcustomer_city}} {{rinvoice.gcustomer_state}} {{rinvoice.gcustomer_pincode}}</span></h5>
+                        <h5><strong>Address:</strong> <span ng-repeat="rinvoice in refilinvoicedata">{{rinvoice.gcustomer_landmark}} {{rinvoice.gcustomer_city}}, <br/>{{rinvoice.gcustomer_state}} {{rinvoice.gcustomer_pincode}}</span></h5>
                         <h5><strong>Number:</strong> <span ng-repeat="rinvoice in refilinvoicedata">{{rinvoice.gcustomer_number}}</span></h5>
                         </div>
                         </div>

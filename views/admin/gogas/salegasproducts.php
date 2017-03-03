@@ -55,6 +55,21 @@
                           <p class="val-style" ng-show="salegasproductform.Product_tprice.$invalid && !salegasproductform.Product_tprice.$pristine" class="help-block"> Prize required accept only digits.</p>
                         </div>
                       </div>
+
+                       <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Select Customer <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
+                          <select class="form-control" ng-model="customer" name="customer"  ng-required="true">
+                            <option ng-repeat="gclist in gcustomerdata" value="{{gclist.gcustomer_id}}">{{gclist.gcustomer_name}}</option>
+                          </select>
+                        </div>
+                        </div>
+                      </div>
+
+
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">

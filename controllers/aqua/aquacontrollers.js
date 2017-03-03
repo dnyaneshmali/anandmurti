@@ -4,44 +4,45 @@
 
 app.controller('Aquadashboardctrl', ['$scope','$http', function($scope, $http) {
 // $scope.container = {width:500, height:300, gap:10};
+
  $http.get("../../models/getorderreport.php")
     .success(function(data){
         $scope.reminderdata=data
         console.log($scope.reminderdata);
-        console.log($scope.reminderdata[0].MONTH[order_date]);
+        //console.log($scope.reminderdata[0].order_total);
 
-    });
+        var chartData=[];
+        for(var i=0, l=$scope.reminderdata.length; i<l; i++ ){
+
+          chartData.push({c: [{v: $scope.reminderdata[i].order_month }, {v: $scope.reminderdata[i].order_total}, {v: "orange"}]});
+          //console.log(chartData);
+           console.log("work" );
+        }
+
 
 $scope.chartObject = {
 type: 'ColumnChart',
 data: {
 "cols": [
 {label: "frameworks", type: "string"},
-{label: "shares", type: "number"}
+{label: "Orders", type: "number"},
+{role: "style", type: "string"}
 ],
-"rows": [
-{c: [{v: "Jan" }, {v: 10004 }]},
-{c: [{v: "Feb"}, {v: 9 }]},
-{c: [{v: "Mar" }, {v: 2 }]},
-{c: [{v: "Apr" }, {v: 21 }]},
-{c: [{v: "May" }, {v: 14 }]},
-{c: [{v: "Jun" }, {v: 14 }]},
-{c: [{v: "Jul" }, {v: 14 }]},
-{c: [{v: "Aug "}, {v: 14 }]},
-{c: [{v: "Sep" }, {v: 14 }]},
-{c: [{v: "Oct" }, {v: 14 }]},
-{c: [{v: "Nov" }, {v: 14 }]},
-{c: [{v: "Dec" }, {v: 14 }]},
-]
+"rows":  chartData
 }
 
 };
+
 $scope.chartObject.options = {
         'title': 'Annadmurti Aqua Monthly Orders',
         'color': 'orange'
         
 
     };
+    });
+
+
+
 
  
 

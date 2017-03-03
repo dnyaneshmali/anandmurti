@@ -4,7 +4,7 @@ include($root."/config/config.php");
 $data=array();
 
 //$query="SELECT * FROM  gproducts_sale";
-$query="select gproducts_sale.*,tbl_gproducts.product_name,tbl_gproducts.product_id from gproducts_sale INNER JOIN tbl_gproducts On gproducts_sale.product_id = tbl_gproducts.product_id";
+$query="select gproducts_sale.*,tbl_gogas_customers.*,tbl_gproducts.product_name,tbl_gproducts.product_id from gproducts_sale INNER JOIN tbl_gproducts On gproducts_sale.product_id = tbl_gproducts.product_id INNER JOIN tbl_gogas_customers On gproducts_sale.gcustomer_id = tbl_gogas_customers.gcustomer_id";
 $result = mysqli_query($connection,$query);
 
 while ($row = mysqli_fetch_assoc($result)){
