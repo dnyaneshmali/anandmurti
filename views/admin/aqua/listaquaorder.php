@@ -134,6 +134,9 @@
 h3.invoice-title {
     text-align: center;
 }
+input#duedate {
+    display: inline-block;
+}
 
 
   @media screen {

@@ -42,6 +42,10 @@ app.config(function($routeProvider) {
             templateUrl : 'aqua/listaquaorder.php',
             controller  : 'Listaquaorder'
         })
+         .when('/aquaorderinvoice', {
+            templateUrl : 'aqua/aquaorderinvoice.php',
+            controller  : 'Aquaorderinvoice'
+        })
        .when('/addjardetails', {
             templateUrl : 'aqua/addjardetails.php',
             controller  : 'Addjardetailsctrl'

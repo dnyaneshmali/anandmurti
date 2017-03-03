@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 01, 2017 at 07:30 AM
+-- Generation Time: Mar 03, 2017 at 10:52 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -32,16 +32,20 @@ CREATE TABLE `gproducts_sale` (
   `sale_product_price` int(10) NOT NULL,
   `sale_total_price` int(10) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `sale_product_date` datetime NOT NULL
+  `sale_product_date` datetime NOT NULL,
+  `gcustomer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `gproducts_sale`
 --
 
-INSERT INTO `gproducts_sale` (`sale_product_id`, `sale_product_quantity`, `sale_product_price`, `sale_total_price`, `product_id`, `sale_product_date`) VALUES
-(1, 12, 10, 120, 1, '2017-02-16 06:57:30'),
-(2, 3, 10, 30, 2, '2017-02-21 13:13:28');
+INSERT INTO `gproducts_sale` (`sale_product_id`, `sale_product_quantity`, `sale_product_price`, `sale_total_price`, `product_id`, `sale_product_date`, `gcustomer_id`) VALUES
+(1, 12, 10, 120, 1, '2017-02-16 06:57:30', 3),
+(2, 3, 10, 30, 2, '2017-02-21 13:13:28', 2),
+(3, 2, 20, 40, 4, '2017-03-02 10:41:30', 4),
+(4, 3, 10, 30, 2, '2017-03-02 10:42:37', 2),
+(5, 3, 10, 30, 2, '2017-03-02 10:44:38', 1);
 
 -- --------------------------------------------------------
 
@@ -152,7 +156,7 @@ CREATE TABLE `tbl_aqua_orders` (
 --
 
 INSERT INTO `tbl_aqua_orders` (`order_id`, `order_quantity`, `order_price`, `order_delivery_address`, `order_delivery_date`, `order_delivery_time`, `vehicle_name`, `order_status`, `order_reminder`, `order_date`, `jar_id`, `acustomer_id`) VALUES
-(2, '3', 100, 'Osmanabad', '2017-02-17', '03:30', 'HMT', '1', '0', '2017-02-08 12:09:37', 1, 1),
+(2, '3', 100, 'Osmanabad', '2017-02-17', '03:30', 'HMT', '0', '0', '2017-02-08 12:09:37', 1, 1),
 (3, '4', 100, 'Osmanabad', '2017-02-18', '04:20', 'HMT', '0', '0', '2017-02-09 06:56:32', 1, 4),
 (5, '4', 100, 'Pune', '2017-02-06', '03:34', 'HMT', '1', '0', '2017-02-10 08:03:57', 1, 1),
 (6, '2', 100, 'Pune', '2017-02-05', '03:34', 'HMT', '0', '1', '2017-02-10 08:05:39', 1, 4),
@@ -165,7 +169,8 @@ INSERT INTO `tbl_aqua_orders` (`order_id`, `order_quantity`, `order_price`, `ord
 (13, '1', 20, 'Pune', '2017-02-23T18:30:00.000Z', '1970-01-01T08:31:00.000Z', 'HMT', '0', '0', '2017-02-17 10:53:08', 3, 4),
 (14, '12', 100, 'Osmanabad', '2017-02-17T18:30:00.000Z', '1970-01-01T09:32:00.000Z', 'test owner', '0', '0', '0000-00-00 00:00:00', 1, 1),
 (15, '12', 100, 'Pune', '2017-11-29T18:30:00.000Z', '1970-01-01T17:28:00.000Z', 'HMT', '0', '1', '2017-02-17 11:40:13', 1, 4),
-(16, '8', 100, 'Pandharpur', '2017-12-29T18:30:00.000Z', '1970-01-01T18:28:00.000Z', 'HMT', '0', '0', '2017-02-17 11:42:59', 1, 1);
+(16, '8', 100, 'Pandharpur', '2017-12-29T18:30:00.000Z', '1970-01-01T18:28:00.000Z', 'HMT', '0', '0', '2017-02-17 11:42:59', 1, 1),
+(17, '10', 20, 'Shikrapur', '2017-03-12T18:30:00.000Z', '1970-01-01T07:30:00.000Z', 'HMT', '0', '0', '2017-03-03 08:24:37', 3, 4);
 
 -- --------------------------------------------------------
 
@@ -265,6 +270,7 @@ INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, 
 CREATE TABLE `tbl_gogas_customers` (
   `gcustomer_id` int(11) NOT NULL,
   `gcustomer_name` varchar(100) NOT NULL,
+  `gcustomer_type` varchar(100) NOT NULL,
   `gcustomer_email` varchar(150) NOT NULL,
   `gcustomer_number` varchar(50) NOT NULL,
   `gcustomer_dob` varchar(50) NOT NULL,
@@ -280,9 +286,11 @@ CREATE TABLE `tbl_gogas_customers` (
 -- Dumping data for table `tbl_gogas_customers`
 --
 
-INSERT INTO `tbl_gogas_customers` (`gcustomer_id`, `gcustomer_name`, `gcustomer_email`, `gcustomer_number`, `gcustomer_dob`, `gcustomer_state`, `gcustomer_city`, `gcustomer_pincode`, `gcustomer_landmark`, `gcustomer_proof`, `gcustomer_date`) VALUES
-(1, 'Adam', 'adam@gmail.com', '3434343434', '2017-02-06T18:30:00.000Z', 'Maharashtra', 'Osmanabad', 413501, 'Near Hospital', 'Id', '2017-02-10 09:16:58'),
-(2, 'Matt', 'matt@gmail.com', '65665565656', '2017-02-12T18:30:00.000Z', 'Maharashtra', 'Osmanabad', 413501, 'Near Hospital', 'Pancard', '2017-02-10 09:25:20');
+INSERT INTO `tbl_gogas_customers` (`gcustomer_id`, `gcustomer_name`, `gcustomer_type`, `gcustomer_email`, `gcustomer_number`, `gcustomer_dob`, `gcustomer_state`, `gcustomer_city`, `gcustomer_pincode`, `gcustomer_landmark`, `gcustomer_proof`, `gcustomer_date`) VALUES
+(1, 'Adam', '1', 'adam@gmail.com', '3434343434', '2017-02-06T18:30:00.000Z', 'Maharashtra', 'Osmanabad', 413501, 'Near Hospital', 'Id', '2017-02-10 09:16:58'),
+(2, 'Matt', '1', 'matt@gmail.com', '65665565656', '2017-02-12T18:30:00.000Z', 'Maharashtra', 'Osmanabad', 413501, 'Near Hospital', 'Pancard', '2017-02-10 09:25:20'),
+(3, 'dddd', '2', 'dnyanmali@gmail.co', '0000000000', '', 'dfdf', 'dsf', 999999, 'sdfsdfsdfdsfdsfsf', '', '2017-03-02 08:26:53'),
+(4, 'testuser', '2', 'testuser@gmail.com', '3453453453', '', 'MH', 'Pune', 454545, 'Near Hospital', '', '2017-03-02 08:48:08');
 
 -- --------------------------------------------------------
 
@@ -308,7 +316,8 @@ INSERT INTO `tbl_gproducts` (`product_id`, `product_name`, `product_category`, `
 (1, 'p1', 'cooktop', 'test', '300', '10%', '2017-02-14 14:07:06'),
 (2, 'p2', 'cooktop', 'Surya', '10', '10%', '2017-02-16 06:24:10'),
 (4, 'p4', 'cylinder', 'gogas', '20', '2%', '2017-02-22 07:00:26'),
-(6, 'p5', 'lighter', 'star', '35', '5%', '2017-02-22 10:29:37');
+(6, 'p5', 'lighter', 'star', '35', '5%', '2017-02-22 10:29:37'),
+(7, 'hotplate', 'cooktop', 'surya', '300', '10', '2017-03-03 06:57:22');
 
 -- --------------------------------------------------------
 
@@ -452,7 +461,8 @@ CREATE TABLE `tbl_refil_invoice` (
 INSERT INTO `tbl_refil_invoice` (`rinvoice_id`, `rinvoice_tax`, `rinvoice_amount`, `rinvoice_date`, `rinvoice_status`, `refil_id`, `gcustomer_id`) VALUES
 (1, 0, 0, '2017-02-28 12:50:18', 0, 1, 2),
 (2, 0, 0, '2017-02-28 12:50:18', 0, 1, 2),
-(3, 0, 0, '2017-02-28 12:50:47', 0, 7, 1);
+(3, 0, 0, '2017-02-28 12:50:47', 0, 7, 1),
+(4, 10, 0, '2017-03-02 05:49:14', 0, 1, 2);
 
 -- --------------------------------------------------------
 
@@ -486,7 +496,8 @@ INSERT INTO `tbl_sale_invoice` (`sinvoice_id`, `sinvoice_tax`, `sinvoice_amount`
 --
 ALTER TABLE `gproducts_sale`
   ADD PRIMARY KEY (`sale_product_id`),
-  ADD KEY `product_id` (`product_id`);
+  ADD KEY `product_id` (`product_id`),
+  ADD KEY `gcustomer_id` (`gcustomer_id`);
 
 --
 -- Indexes for table `tbl_admin`
@@ -610,7 +621,7 @@ ALTER TABLE `tbl_sale_invoice`
 -- AUTO_INCREMENT for table `gproducts_sale`
 --
 ALTER TABLE `gproducts_sale`
-  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tbl_admin`
 --
@@ -630,7 +641,7 @@ ALTER TABLE `tbl_aqua_invoice`
 -- AUTO_INCREMENT for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 --
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
@@ -650,12 +661,12 @@ ALTER TABLE `tbl_gas_inwards`
 -- AUTO_INCREMENT for table `tbl_gogas_customers`
 --
 ALTER TABLE `tbl_gogas_customers`
-  MODIFY `gcustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `gcustomer_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_gproducts`
 --
 ALTER TABLE `tbl_gproducts`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_gproducts_trasaction`
 --
@@ -685,7 +696,7 @@ ALTER TABLE `tbl_refil_details`
 -- AUTO_INCREMENT for table `tbl_refil_invoice`
 --
 ALTER TABLE `tbl_refil_invoice`
-  MODIFY `rinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `rinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_sale_invoice`
 --

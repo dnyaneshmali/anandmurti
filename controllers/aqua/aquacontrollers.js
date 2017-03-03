@@ -652,6 +652,52 @@ function printElement(elem, append, delimiter) {
 }]);
 
 
+app.controller('Aquaorderinvoice', ['$scope','$http', function($scope,$http){
+
+$http.get("../../models/getaquaorderinvoice.php")
+.success(function(data){
+        $scope.aquainvoicedata=data;
+        console.log($scope.aquainvoicedata);
+    });
+
+ $scope.deleteinvoice=function(invoice_id,index){
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
+console.log(invoice_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deleteaquainvoice.php',
+          data    : {'invoice_id':invoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
+
+                      });
+            });
+
+}
+
+}]);
+
+
+
+
+
+
 app.controller('Addjardetailsctrl', ['$scope','$http', function($scope,$http){
  $scope.reset = function() {
   delete $scope.addjardetails;

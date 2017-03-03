@@ -31,6 +31,7 @@
                         <li><a href="#/listaquaproduct">List Aqua Products</a></li>
                         <li><a href="#/addaquaorder">Add Aqua order</a></li>
                         <li><a href="#/listaquaorder">List Aqua order</a></li>
+                        <li><a href="#/aquaorderinvoice">List Aqua Order Invoice</a></li>
                         <li><a href="#/addjardetails">Add Jar Details</a></li>
                         <li><a href="#/listjardetails">List Jar Details</a></li>
                         <li><a href="#/addvehicledetails">Add Vehicle Details</a></li>
