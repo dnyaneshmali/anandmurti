@@ -861,6 +861,50 @@ console.log(rinvoice_id);
 
 }
 
+
+$scope.setrstatus=function(rinvoice_id,index){
+  //alert('ddd');
+  //alert(sinvoice_id);
+//console.log(data);
+//$scope.setstatus = angular.copy(order_id);
+//console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/setrefilinvsts.php',
+          data    : {'rinvoice_id':rinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                     //   $scope.data.splice(index, 1);
+                      //  $scope.$watch();
+
+                      });
+            }
+
+            $scope.unsetrstatus=function(rinvoice_id,index){
+            //console.log(data);
+            //$scope.setstatus = angular.copy(data);
+            //console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/unsetrefilinvsts.php',
+          data    : {'rinvoice_id':rinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
+
+
+
+
 }]);
 
 
@@ -1610,6 +1654,47 @@ console.log(sinvoice_id);
             });
 
 }
+
+
+$scope.setsstatus=function(sinvoice_id,index){
+  //alert('ddd');
+  //alert(sinvoice_id);
+//console.log(data);
+//$scope.setstatus = angular.copy(order_id);
+//console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/setgasproinvsts.php',
+          data    : {'sinvoice_id':sinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                     //   $scope.data.splice(index, 1);
+                      //  $scope.$watch();
+
+                      });
+            }
+
+            $scope.unsetsstatus=function(sinvoice_id,index){
+//console.log(data);
+//$scope.setstatus = angular.copy(data);
+//console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/unsetgasproinvsts.php',
+          data    : {'sinvoice_id':sinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
 
 }]);
 
