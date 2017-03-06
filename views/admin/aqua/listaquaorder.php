@@ -36,8 +36,8 @@
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_date | date:'MM/dd/yyyy'}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.vehicle_name}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">
-                       <a data-toggle="tooltip" title="Delete"> <button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);"><i class="fa fa-trash"></i></button></a>
-                         <a data-toggle="tooltip" title="Edit"> <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(aquaorder.order_id,aquaorder);"><i class="fa fa-edit"></i></button></a>
+                       <a data-toggle="tooltip" title="Delete"> <button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);"><i class="fa fa-trash"></i></button></a></td>
+                         <!-- <a data-toggle="tooltip" title="Edit"> <button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(aquaorder.order_id,aquaorder);"><i class="fa fa-edit"></i></button></a>
                         </td>
                         <ng-form name="listordertailsform">
                                <td ng-if="isedit(aquaorder.order_id)">
@@ -69,13 +69,6 @@
                           </td>
                       
                      <td ng-if="isedit(aquaorder.order_id)">
-
-
-                            <!-- code by me -->
-                          <!-- <select ng-repeat="vname in vehicledata"class="form-control" ng-model="aquaorder.vehicle_name" name="vehicle_name">
-                            <option value="">{{vname}}</option>
-                          </select> -->
-                          <!-- code by me ends -->
                          <select class="form-control" ng-model="aquaorder.vehicle_name" name="vehicle_name" class="{'has-errors' : subForm.vehicle_name.$invalid, 'no-errors' : subForm.vehicle_name.$valid}" ng-required="true">
                             <option value="" ng-selected="aquaorder.vehicle_name == ''">Vehicle Name </option>
                             <option value="HMT" ng-selected="aquaorder.vehicle_name == 'HMT'">HMT</option>
@@ -85,10 +78,6 @@
                           <div class="error-container" ng-show="subForm.vehicle_name.$dirty && subForm.vehicle_name.$invalid" ng-messages="subForm.vehicle_name.$error">
                          <div class="val-style" class="error" ng-message="required">select vehicle name </div>
                           </div>
-
-
-                        <!--   <input type="text" ng-value="aquaorder.vehicle_name" ng-model="aquaorder.vehicle_name" name="vehicle_name" style="width:auto;" required>
-                            <p style="color:red;" ng-show="subForm.vehicle_name.$error.required"> vehicle name is required.</p> -->
                             </td>
 
 
@@ -96,7 +85,7 @@
 
                               <a data-toggle="tooltip" title="Update"><button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updateaquaorder(aquaorder,$index);"><i class="fa fa-check"></i></button></a> 
 
-                              <a data-toggle="tooltip" title="Cancle"><button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
+                              <a data-toggle="tooltip" title="Cancle"><button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a> -->
                              <td ng-if="aquaorder.order_status==0"><a data-toggle="tooltip" title="Pending"><button class="btn btn-danger" ng-click="setstatus(aquaorder.order_id);"><i class="fa fa-spinner"></i></button></a></td>
                           <td ng-if="aquaorder.order_status==1"><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="unsetstatus(aquaorder.order_id);"><i class="fa fa-check-circle"></i></button></a></td>
                           <td ng-if="aquaorder.order_reminder==0"><a data-toggle="tooltip" title="Set Reminder"><button class="btn btn-danger" ng-click="setreminder(aquaorder.order_id,$index);"><i class="fa fa-bell"></i></button></a></td>

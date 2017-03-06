@@ -39,7 +39,11 @@
 
                            <td ng-if="!isedit(soldproduct.sale_product_id)">
                           <button class="btn btn-danger" ng-click="deletesoldproduct(soldproduct.sale_product_id,$index);">Delete</button>
-                          <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(soldproduct.sale_product_id,soldproduct);"><i class="fa fa-edit"></i></button>
+                           <td><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="saleinvoice(soldproduct.sale_product_id);"><i class="fa fa-list-alt" aria-hidden="true"></i>
+                               </button></a></td> 
+                           
+
+                          <!-- <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(soldproduct.sale_product_id,soldproduct);"><i class="fa fa-edit"></i></button>
                       </td>
                       <td><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="saleinvoice(soldproduct.sale_product_id);"><i class="fa fa-list-alt" aria-hidden="true"></i>
                                </button></a></td> 
@@ -82,7 +86,7 @@
                               <a data-toggle="tooltip" title="Update"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button> </a>
 
                         </td>
-                           <ng-form>
+                           <ng-form> -->
 
                         </tr>
                       </tbody>

@@ -40,8 +40,13 @@
                         
                           <td ng-if="!isedit(refil.refil_id)">
                   
-                          <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleterefil(refil.refil_id,$index);"><i class="fa fa-trash"></i></button></a>
-                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(refil.refil_id,refil);"><i class="fa fa-edit"></i></button></a>
+                          <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleterefil(refil.refil_id,$index);"><i class="fa fa-trash"></i></button></a></td>
+
+                           <td><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="refilinvoice(refil.refil_id);"><i class="fa fa-list-alt" aria-hidden="true"></i>
+                               </button></a></td>
+
+
+                          <!-- <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(refil.refil_id,refil);"><i class="fa fa-edit"></i></button></a>
 
                         </td> 
 
@@ -78,7 +83,7 @@
                                <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updategasrefil(refil,$index);"><i class="fa fa-check"></i></button> </a>
                                <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
                             </td>
-                            <ng-form>
+                            <ng-form> -->
                        
 
 

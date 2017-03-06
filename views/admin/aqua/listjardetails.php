@@ -46,22 +46,21 @@
                           <td ng-if="!isedit(listjar.jar_id)">{{listjar.jar_price}}</td>
 
                           <td ng-if="!isedit(listjar.jar_id)">
-                            <a data-toggle="tooltip" title="delete"><button class="btn btn-danger" Onclick="ConfirmDelete()" ng-click="deletejar(listjar.jar_id,$index);"><i class="fa fa-trash"></i></button></a>     
-                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(listjar.jar_id,listjar);"><i class="fa fa-edit"></i></button></a>
+                            <a data-toggle="tooltip" title="delete"><button class="btn btn-danger" Onclick="ConfirmDelete()" ng-click="deletejar(listjar.jar_id,$index);"><i class="fa fa-trash"></i></button></a>   </td>  
+                          <!-- <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(listjar.jar_id,listjar);"><i class="fa fa-edit"></i></button></a>
                         </td>
 
                          <ng-form name="listjardetailsform">
                             <td ng-if="isedit(listjar.jar_id)">
 
 
-                            <!-- code by me -->
                           <select class="form-control" ng-model="listjar.jar_type" name="jar_type">
                             <option value="" ng-selected="listjar.jar_type == ''">Jar Type</option>
                             <option value="normal-jar" ng-selected="listjar.jar_type == 'normal-jar'">Normal jar </option>
                             <option value="cool-jar" ng-selected="listjar.jar_type == 'cool-jar'">Cool jar</option>
                               <option value="only-water" ng-selected="listjardetailsformjar.jar_type == 'only-water'">Only water</option>
                           </select>
-                          <!-- code by me ends -->
+                    
 
 
 
@@ -85,11 +84,10 @@
 
 
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
-                          </td>
+                          <!-- </td>
                           <ng-form>
 
-
-
+ -->
 
 
 

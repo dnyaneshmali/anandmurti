@@ -38,8 +38,8 @@
                                    
                                     <td ng-if="!isedit(inwardsentry.inwards_id)">
 
-                           <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteinwards(inwardsentry.inwards_id,$index);"><i class="fa fa-trash"></i></button></a>
-                           <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(inwardsentry.inwards_id,inwardsentry);"><i class="fa fa-edit"></i></button></a>
+                           <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteinwards(inwardsentry.inwards_id,$index);"><i class="fa fa-trash"></i></button></a> </td>
+                          <!--  <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(inwardsentry.inwards_id,inwardsentry);"><i class="fa fa-edit"></i></button></a>
 
                               </td>
                               <ng-form name="updategasinwardsform"> 
@@ -75,7 +75,7 @@
 
 
                            <ng-form>
-                       
+                        -->
 
                
                                
