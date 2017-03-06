@@ -101,17 +101,18 @@
                               
                             </div>
 
-                       <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_stamp">connection stamp<span class="required">*</span>
+                        <div class="item form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection stamp<span class="required">*</span>
                         </label>
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
-                          <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
-                          <input type="text" placeholder="connection stamp" ng-model="Connection.connection_stamp" id="connection_stamp" class="form-control" name="connection_stamp" required />
-                        </div>
-                          <p class="val-style" ng-show="connectionform.connection_stamp.$invalid && !connectionform.connection_stamp.$pristine" class="help-block"> required</p>
-                        </div>
-                      </div>
+                            <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
+                             
+                              <span style="margin-right:10px"><label>
+                              <input type="radio" checked="" ng-model="Connection.connection_stamp" value="Yes" id="Yes" name="connection_stamp" required/>yes </label></span>
+                              <label>
+                              <input type="radio" ng-model="Connection.connection_stamp" value="No" id="No" name="connection_stamp" required/>No </label>
+                            </div>
+                              
+                            </div>
           
                            <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection tube<span class="required">*</span>
