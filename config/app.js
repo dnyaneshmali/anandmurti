@@ -103,6 +103,12 @@ app.config(function($routeProvider) {
             controller  : 'Listrefilcylinderctrl'
         })
 
+      .when('/refilinvoice', {
+            templateUrl : 'gogas/refilcinvoice.php',
+            controller  : 'Refilinvoicectrl'
+        })
+
+
       .when('/addgasinwards', {
             templateUrl : 'gogas/addgasinwards.php',
             controller  : 'Addgasinwardsctrl'
@@ -125,6 +131,10 @@ app.config(function($routeProvider) {
       .when('/saleproducts', {
             templateUrl : 'gogas/salegasproducts.php',
             controller  : 'Salegasproductctrl'
+        })
+      .when('/gogasproductinvoice', {
+            templateUrl : 'gogas/gogasproductinvoice.php',
+            controller  : 'Gogasproductinvoicectrl'
         })
 
       .when('/listsoldproducts', {

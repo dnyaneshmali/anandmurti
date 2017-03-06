@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 03, 2017 at 10:52 AM
+-- Generation Time: Mar 06, 2017 at 07:11 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -121,14 +121,12 @@ CREATE TABLE `tbl_aqua_invoice` (
 --
 
 INSERT INTO `tbl_aqua_invoice` (`invoice_id`, `invoice_tax`, `invoice_amount`, `invoice_date`, `invoice_status`, `order_id`, `acustomer_id`) VALUES
-(1, 10, 310, '2017-02-27 11:43:37', 0, 2, 1),
-(2, 10, 1210, '2017-02-27 11:49:37', 0, 15, 4),
 (3, 10, 1210, '2017-02-28 07:32:35', 0, 14, 1),
-(4, 0, 0, '2017-02-28 11:01:59', 0, 0, 0),
-(5, 0, 0, '2017-02-28 11:06:50', 0, 0, 0),
-(6, 0, 0, '2017-02-28 11:09:41', 0, 0, 0),
-(7, 0, 0, '2017-02-28 11:13:00', 0, 0, 0),
-(8, 0, 0, '2017-02-28 11:13:43', 0, 0, 0);
+(4, 0, 0, '2017-02-28 11:01:59', 0, 0, 5),
+(5, 0, 0, '2017-02-28 11:06:50', 0, 0, 5),
+(6, 0, 0, '2017-02-28 11:09:41', 1, 0, 6),
+(7, 0, 0, '2017-02-28 11:13:00', 0, 0, 6),
+(8, 0, 0, '2017-02-28 11:13:43', 1, 0, 7);
 
 -- --------------------------------------------------------
 
@@ -461,7 +459,6 @@ CREATE TABLE `tbl_refil_invoice` (
 INSERT INTO `tbl_refil_invoice` (`rinvoice_id`, `rinvoice_tax`, `rinvoice_amount`, `rinvoice_date`, `rinvoice_status`, `refil_id`, `gcustomer_id`) VALUES
 (1, 0, 0, '2017-02-28 12:50:18', 0, 1, 2),
 (2, 0, 0, '2017-02-28 12:50:18', 0, 1, 2),
-(3, 0, 0, '2017-02-28 12:50:47', 0, 7, 1),
 (4, 10, 0, '2017-03-02 05:49:14', 0, 1, 2);
 
 -- --------------------------------------------------------
@@ -485,7 +482,7 @@ CREATE TABLE `tbl_sale_invoice` (
 --
 
 INSERT INTO `tbl_sale_invoice` (`sinvoice_id`, `sinvoice_tax`, `sinvoice_amount`, `sinvoice_date`, `sinvoice_status`, `sale_product_id`, `gcustomer_id`) VALUES
-(1, 0, 0, '2017-03-01 07:08:15', 0, 1, 1);
+(2, 10, 50, '2017-03-06 06:27:41', 0, 3, 4);
 
 --
 -- Indexes for dumped tables
@@ -701,7 +698,7 @@ ALTER TABLE `tbl_refil_invoice`
 -- AUTO_INCREMENT for table `tbl_sale_invoice`
 --
 ALTER TABLE `tbl_sale_invoice`
-  MODIFY `sinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `sinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

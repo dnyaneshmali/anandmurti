@@ -69,8 +69,6 @@ console.log(gcustomer_id);
              $scope.data.splice(index, 1);
                         $scope.$watch();
             
-            
-
           });
 });
    }
@@ -823,6 +821,51 @@ $scope.changedrtax=function(rtax,refil_id){
 
 }]);
 
+
+app.controller('Refilinvoicectrl', ['$scope','$http', function($scope,$http){
+
+$http.get("../../models/getrefilinvoicedtls.php")
+.success(function(data){
+        $scope.refilinvoicedata=data;
+        console.log($scope.refilinvoicedata);
+    });
+
+ $scope.deleterefilinvoice=function(rinvoice_id,index){
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
+console.log(rinvoice_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deleterefilinvoice.php',
+          data    : {'rinvoice_id':rinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
+
+                      });
+            });
+
+}
+
+}]);
+
+
+
+
 app.controller('Addgasvehiclectrl', ['$scope','$http', function($scope,$http){
   $scope.reset = function() {
   delete $scope.vdetails;
@@ -1527,3 +1570,46 @@ $scope.isedit=function(id){
            }
 
 }]);
+
+
+app.controller('Gogasproductinvoicectrl', ['$scope','$http', function($scope,$http){
+
+$http.get("../../models/getsoldproductinvoice.php")
+.success(function(data){
+        $scope.gasproductinvoicedata=data;
+        console.log($scope.gasproductinvoicedata);
+    });
+
+ $scope.deleteproductinvoice=function(sinvoice_id,index){
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
+console.log(sinvoice_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deletegasproductinvoice.php',
+          data    : {'sinvoice_id':sinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
+
+                      });
+            });
+
+}
+
+}]);
+
