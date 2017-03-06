@@ -360,6 +360,12 @@ console.log(order_id);
   }
 
             $scope.setreminder=function(order_id,index){
+               swal({
+  title: "Successfully!",
+  text: "reminder set successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
 console.log(order_id);
 //$scope.setrem = angular.copy(order_id);
 //console.log($scope.setrem);
@@ -380,6 +386,12 @@ console.log(order_id);
 
 
             $scope.unsetreminder=function(order_id,index){
+              swal({
+  title: "Successfully!",
+  text: "reminder Unset successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
 //console.log(data);
 //$scope.setrem = angular.copy(order_id);
 console.log($scope.setrem);
