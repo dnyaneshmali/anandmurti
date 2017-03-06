@@ -814,11 +814,6 @@ $scope.changedrtax=function(rtax,refil_id){
                       });
              }
 
-
-
-
-
-
 }]);
 
 
@@ -1114,7 +1109,6 @@ $http({
 
 
 }
-
 
   $scope.insertdata=function(){
   $scope.gasinwards = {};

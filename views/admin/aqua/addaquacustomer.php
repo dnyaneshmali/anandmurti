@@ -3,8 +3,7 @@
 <h1>Add Aqua Customers</h1>
 <div class="addaaquaform" ng-controller="Addaquactrl">
 <form name="addaaquaform" class="form-horizontal form-label-left" nonvalidate>
-
-                      <div class="item form-group">
+                     <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Customer Name<span class="required">*</span>
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
@@ -29,8 +28,6 @@
                           <p class="val-style" ng-show="addaaquaform.acustomer_email.$invalid && !addaaquaform.acustomer_email.$pristine" class="help-block"> email is required with correct format.</p>
                         </div>
                       </div>
-
-                     
                       <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="telephone">Customer Number <span class="required">*</span>
                         </label>
