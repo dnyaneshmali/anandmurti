@@ -40,8 +40,13 @@
                         
                           <td ng-if="!isedit(refil.refil_id)">
                   
-                          <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleterefil(refil.refil_id,$index);"><i class="fa fa-trash"></i></button></a>
-                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(refil.refil_id,refil);"><i class="fa fa-edit"></i></button></a>
+                          <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleterefil(refil.refil_id,$index);"><i class="fa fa-trash"></i></button></a></td>
+
+                           <td><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="refilinvoice(refil.refil_id);"><i class="fa fa-list-alt" aria-hidden="true"></i>
+                               </button></a></td>
+
+
+                          <!-- <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(refil.refil_id,refil);"><i class="fa fa-edit"></i></button></a>
 
                         </td> 
 
@@ -78,7 +83,7 @@
                                <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-success"  ng-disabled="!subForm.$valid" ng-click="updategasrefil(refil,$index);"><i class="fa fa-check"></i></button> </a>
                                <a data-toggle="tooltip" title="Cancle"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
                             </td>
-                            <ng-form>
+                            <ng-form> -->
                        
 
 
@@ -225,7 +230,10 @@ h3.invoice-title {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><input ng-change="changedrtax(rtax,refil_id)" type="text" class="form-control" ng-model="rtax" name="rtax" style="width:auto;" required></td>
+                          <td><form name="taxform">
+<input ng-change="changedrtax(rtax,refil_id)" type="text" class="form-control" ng-model="rtax" name="rtax" style="width:auto;" required>
+<span class="val-style" ng-show="taxform.rtax.$touched && taxform.rtax.$invalid">The tax is required.</span></form>
+                          </td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
@@ -238,8 +246,8 @@ h3.invoice-title {
                     </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-default" ng-click="saverefilinvoice(gcustomer_id,refil_id,rtax,rtotal);">Save</button>
-                    <button type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
+                    <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="saverefilinvoice(gcustomer_id,refil_id,rtax,rtotal);">Save</button>
+                    <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->

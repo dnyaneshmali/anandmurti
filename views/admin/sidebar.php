@@ -31,7 +31,7 @@
                         <li><a href="#/listaquaproduct">List Aqua Products</a></li>
                         <li><a href="#/addaquaorder">Add Aqua order</a></li>
                         <li><a href="#/listaquaorder">List Aqua order</a></li>
-                        <li><a href="#/aquaorderinvoice">List Aqua Order Invoice</a></li>
+                        <li><a href="#/aquaorderinvoice">Aqua Order Invoice</a></li>
                         <li><a href="#/addjardetails">Add Jar Details</a></li>
                         <li><a href="#/listjardetails">List Jar Details</a></li>
                         <li><a href="#/addvehicledetails">Add Vehicle Details</a></li>
@@ -49,8 +49,10 @@
                         <li><a href="#/listnewconnection">List New connections</a></li>
                         <li><a href="#/saleproducts">Sale Products</a></li>
                         <li><a href="#/listsoldproducts">List Sold Prodcuts</a></li>
+                        <li><a href="#/gogasproductinvoice">Gogas Product Invoice</a></li>
                         <li><a href="#/refilcylinder">Add Refil cylinder</a></li>
                         <li><a href="#/listrefilcylinder">List Refil cylinder</a></li>
+                        <li><a href="#/refilinvoice">Refil Cylinder Invoice</a></li>
                         <li><a href="#/addgasvehicles">Add Vehicle</a></li>
                         <li><a href="#/listgasvehicles">List Vehicles</a></li>
                         <li><a href="#/addgasinwards">Add Inwards</a></li>

@@ -1,9 +1,9 @@
 <div class="listaqua-cust">
-<div class="userlist" ng-controller="Aquaorderinvoice">
+<div class="userlist" ng-controller="Gogasproductinvoicectrl">
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>List of Aqua Order Invoice</h2>
+                    <h2>List of Go Gas Sold Product Invoice</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
@@ -16,7 +16,7 @@
                       <thead>
                         <tr>
                           <th>Invoice Id</th>
-                          <th>Order Id</th> 
+                          <th>Transaction Id</th> 
                           <th>Customer Id</th>
                           <th>Customer Name</th>
                           <th>Invoice Tax</th>
@@ -27,18 +27,19 @@
                         </tr>
                       </thead>
                       <tbody>
-                        <tr ng-repeat="invoicedata in aquainvoicedata | filter:clisearch" ng-form="subForm">
-                          <td>{{invoicedata.invoice_id}}</td>
-                          <td>{{invoicedata.order_id}}</td>
-                          <td>{{invoicedata.acustomer_id}}</td>
-                          <th>{{invoicedata.acustomer_name}}</th>
-                          <td>{{invoicedata.invoice_tax}}</td>
-                          <td>{{invoicedata.invoice_amount}}</td>
-                          <td>{{invoicedata.invoice_date}}</td>
-                          <td ng-if="invoicedata.invoice_status==0"><a data-toggle="tooltip" ng-click="setistatus(invoicedata.invoice_id);" title="Pending"><button class="btn btn-danger"><i class="fa fa-spinner"></i></button></a></td>
-                          <td ng-if="invoicedata.invoice_status==1"><a data-toggle="tooltip" ng-click="unsetistatus(invoicedata.invoice_id);" title="Complete"><button class="btn btn-success"><i class="fa fa-check-circle"></i></button></a></td>
+                        <tr ng-repeat="productedata in gasproductinvoicedata | filter:clisearch" ng-form="subForm">
+                          <td>{{productedata.sinvoice_id}}</td>
+                          <td>{{productedata.sale_product_id}}</td>
+                          <td>{{productedata.gcustomer_id}}</td>
+                          <th>{{productedata.gcustomer_name}}</th>
+                          <td>{{productedata.sinvoice_tax}}</td>
+                          <td>{{productedata.sinvoice_amount}}</td>
+                          <td>{{productedata.sinvoice_date}}</td>
+                          <td ng-if="productedata.sinvoice_status==0"><a data-toggle="tooltip" ng-click="setsstatus(productedata.sinvoice_id);" title="Pending"><button class="btn btn-danger"><i class="fa fa-spinner"></i></button></a></td>
+                          <td ng-if="productedata.sinvoice_status==1"><a data-toggle="tooltip" ng-click="unsetsstatus(productedata.sinvoice_id);" title="Complete"><button class="btn btn-success"><i class="fa fa-check-circle"></i></button></a></td>
+                          
                           <td>
-                            <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteinvoice(invoicedata.invoice_id,$index);"><i class="fa fa-trash"></i></button></a>
+                            <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteproductinvoice(productedata.sinvoice_id,$index);"><i class="fa fa-trash"></i></button></a>
                         </td>
                         </tr>
                       </tbody>

@@ -360,6 +360,12 @@ console.log(order_id);
   }
 
             $scope.setreminder=function(order_id,index){
+               swal({
+  title: "Successfully!",
+  text: "reminder set successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
 console.log(order_id);
 //$scope.setrem = angular.copy(order_id);
 //console.log($scope.setrem);
@@ -380,6 +386,12 @@ console.log(order_id);
 
 
             $scope.unsetreminder=function(order_id,index){
+              swal({
+  title: "Successfully!",
+  text: "reminder Unset successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
 //console.log(data);
 //$scope.setrem = angular.copy(order_id);
 console.log($scope.setrem);
@@ -690,6 +702,49 @@ console.log(invoice_id);
             });
 
 }
+
+
+
+$scope.setistatus=function(invoice_id,index){
+  //alert(invoice_id);
+//console.log(data);
+//$scope.setstatus = angular.copy(order_id);
+//console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/setaquainvoicestatus.php',
+          data    : {'invoice_id':invoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                     //   $scope.data.splice(index, 1);
+                      //  $scope.$watch();
+
+                      });
+            }
+
+            $scope.unsetistatus=function(invoice_id,index){
+//console.log(data);
+//$scope.setstatus = angular.copy(data);
+//console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/unsetaquainvoicestatus.php',
+          data    : {'invoice_id':invoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
+
+
 
 }]);
 

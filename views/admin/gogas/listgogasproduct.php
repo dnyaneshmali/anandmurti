@@ -58,8 +58,8 @@
 
 
                             <td ng-if="!isedit(gogasproduct.product_id)">
-                        <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteproduct(gogasproduct.product_id,$index);"><i class="fa fa-trash"></i></button></a>
-                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" value="{{btnName}}"  ng-click="setedit(gogasproduct.product_id,gogasproduct);"><i class="fa fa-edit"></i></button></a>
+                        <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteproduct(gogasproduct.product_id,$index);"><i class="fa fa-trash"></i></button></a></td>
+                         <!--  <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" value="{{btnName}}"  ng-click="setedit(gogasproduct.product_id,gogasproduct);"><i class="fa fa-edit"></i></button></a>
                         </td>
 
                          <ng-form name="listproductsform">
@@ -100,10 +100,10 @@
                               <a data-toggle="tooltip" title="Edit"><button class="btn btn-danger" value="{{btnName}}"  ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
 
 
-                             <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
+                          
                           </td>
                             <ng-form>
-
+ -->
                         </tr>
                       </tbody>
                     </table>

@@ -69,8 +69,6 @@ console.log(gcustomer_id);
              $scope.data.splice(index, 1);
                         $scope.$watch();
             
-            
-
           });
 });
    }
@@ -276,18 +274,29 @@ app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http)
 
 $http.get("../../models/getgogascustomer.php")
     .success(function(data){
-        $scope.gcustomerdata=data
+        $scope.gcustomerdata=data;
         //console.log($scope.gcustomerdata);
+        $scope.connection_tprice=1000;
     });
 
-$scope.insertdata=function(Connection){
-  $scope.Connection = {};
-$scope.Connection = angular.copy(Connection);
-console.log($scope.Connection);
+$scope.insertdata=function(){
+  $scope.customer = angular.copy($scope.customer);
+  alert($scope.customer);
+  $scope.c_type = angular.copy($scope.c_type);
+  $scope.connection_cylinder_deposit = angular.copy($scope.connection_cylinder_deposit);
+  $scope.connection_depreciation = angular.copy($scope.connection_depreciation);
+  $scope.connection_hotplate = angular.copy($scope.connection_hotplate);
+  $scope.connection_passbook = angular.copy($scope.connection_passbook);
+  $scope.connection_stamp = angular.copy($scope.connection_stamp);
+  $scope.connection_tube = angular.copy($scope.connection_tube);
+  $scope.connection_lighter = angular.copy($scope.connection_lighter);
+  $scope.connection_other = angular.copy($scope.connection_other);
+  $scope.connection_tprice = angular.copy($scope.connection_tprice);
+
    $http({
           method  : 'POST',
           url     : '../../models/insertnewconnection.php',
-          data    : $scope.Connection, //forms user object
+          data    : {'customer':$scope.customer,'c_type':$scope.c_type,'connection_cylinder_deposit':$scope.connection_cylinder_deposit,'connection_depreciation':$scope.connection_depreciation,'connection_hotplate':$scope.connection_hotplate,'connection_passbook':$scope.connection_passbook,'connection_stamp':$scope.connection_stamp,'connection_tube':$scope.connection_tube,'connection_lighter':$scope.connection_lighter,'connection_other':$scope.connection_other,'connection_tprice':$scope.connection_tprice}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
 
@@ -816,12 +825,96 @@ $scope.changedrtax=function(rtax,refil_id){
                       });
              }
 
+}]);
 
+
+app.controller('Refilinvoicectrl', ['$scope','$http', function($scope,$http){
+
+$http.get("../../models/getrefilinvoicedtls.php")
+.success(function(data){
+        $scope.refilinvoicedata=data;
+        console.log($scope.refilinvoicedata);
+    });
+
+ $scope.deleterefilinvoice=function(rinvoice_id,index){
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
+console.log(rinvoice_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deleterefilinvoice.php',
+          data    : {'rinvoice_id':rinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
+
+                      });
+            });
+
+}
+
+
+$scope.setrstatus=function(rinvoice_id,index){
+  //alert('ddd');
+  //alert(sinvoice_id);
+//console.log(data);
+//$scope.setstatus = angular.copy(order_id);
+//console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/setrefilinvsts.php',
+          data    : {'rinvoice_id':rinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                     //   $scope.data.splice(index, 1);
+                      //  $scope.$watch();
+
+                      });
+            }
+
+            $scope.unsetrstatus=function(rinvoice_id,index){
+            //console.log(data);
+            //$scope.setstatus = angular.copy(data);
+            //console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/unsetrefilinvsts.php',
+          data    : {'rinvoice_id':rinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
 
 
 
 
 }]);
+
+
+
 
 app.controller('Addgasvehiclectrl', ['$scope','$http', function($scope,$http){
   $scope.reset = function() {
@@ -1027,7 +1120,6 @@ $http({
 
 
 }
-
 
   $scope.insertdata=function(){
   $scope.gasinwards = {};
@@ -1527,3 +1619,87 @@ $scope.isedit=function(id){
            }
 
 }]);
+
+
+app.controller('Gogasproductinvoicectrl', ['$scope','$http', function($scope,$http){
+
+$http.get("../../models/getsoldproductinvoice.php")
+.success(function(data){
+        $scope.gasproductinvoicedata=data;
+        console.log($scope.gasproductinvoicedata);
+    });
+
+ $scope.deleteproductinvoice=function(sinvoice_id,index){
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
+console.log(sinvoice_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deletegasproductinvoice.php',
+          data    : {'sinvoice_id':sinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
+
+                      });
+            });
+
+}
+
+
+$scope.setsstatus=function(sinvoice_id,index){
+  //alert('ddd');
+  //alert(sinvoice_id);
+//console.log(data);
+//$scope.setstatus = angular.copy(order_id);
+//console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/setgasproinvsts.php',
+          data    : {'sinvoice_id':sinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                     //   $scope.data.splice(index, 1);
+                      //  $scope.$watch();
+
+                      });
+            }
+
+            $scope.unsetsstatus=function(sinvoice_id,index){
+//console.log(data);
+//$scope.setstatus = angular.copy(data);
+//console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/unsetgasproinvsts.php',
+          data    : {'sinvoice_id':sinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
+
+}]);
+
