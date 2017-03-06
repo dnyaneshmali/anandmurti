@@ -20,7 +20,7 @@
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
-                             <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                             <span class="input-group-addon"><i class="fa fa-flask"></i></span>
                           <input type="text" placeholder="Product Quantity" ng-pattern="/^\d+$/" ng-model="pquantity" id="pquantity" ng-change="changedquantity(pquantity,product)" class="form-control" name="pquantity" required />
                         </div>
                           <p class="val-style" ng-show="inwardsform.pquantity.$invalid && !inwardsform.pquantity.$pristine" class="help-block">Accept digits only</p>
