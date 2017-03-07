@@ -1486,12 +1486,12 @@ $http({
             console.log(data);
              // $scope.msg = "data inserted successfully "
                delete $scope.salegasproduct;
-               swal({
-  title: "Successfully!",
-  text: "data inserted successfully!",
-  type: "success",
-  confirmButtonText: "Ok"
-});
+                             swal({
+                title: "Successfully!",
+                text: "data inserted successfully!",
+                type: "success",
+                confirmButtonText: "Ok"
+              });
                       $scope.salegasproductform.$setPristine();
           });
 

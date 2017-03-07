@@ -42,6 +42,9 @@
                         </div>
                       </div>
 
+
+                      
+
                        <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_depreciation">connection Depreciation<span class="required">*</span>
                         </label>
@@ -53,6 +56,7 @@
                           <p class="val-style" ng-show="connectionform.connection_depreciation.$invalid && !connectionform.connection_depreciation.$pristine" class="help-block">accept only digits required</p>
                         </div>
                       </div>
+
                     
                            <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection passbook<span class="required">*</span>
@@ -67,6 +71,7 @@
                               
                             </div>
 
+
                         <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_stamp">connection stamp<span class="required">*</span>
                         </label>
@@ -79,6 +84,7 @@
                             </div>
                               
                             </div>
+<<<<<<< HEAD
             
                       <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection Hotplate<span class="required">*</span>
@@ -92,6 +98,10 @@
                               </div>
                             </div>
 
+=======
+
+          
+>>>>>>> 02b3284be484f97499e6844fdeef83f294998ded
                            <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection tube<span class="required">*</span>
                         </label>
@@ -116,6 +126,29 @@
                             </div>
                               </div>
                             </div>
+                            
+                       <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_stamp">connection stamp<span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                          <div class="input-group">
+                             <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
+                          <input type="text" placeholder="connection stamp" ng-model="Connection.connection_stamp" id="connection_stamp" class="form-control" name="connection_stamp" required />
+                        </div>
+                          <p class="val-style" ng-show="connectionform.connection_stamp.$invalid && !connectionform.connection_stamp.$pristine" class="help-block"> required</p>
+                        </div>
+                      </div>
+                             <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_depreciation">connection Depreciation<span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                          <div class="input-group">
+                             <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" placeholder=" connection depreciation" ng-pattern="/^\d+$/" ng-model="Connection.connection_depreciation" id=" connection_depreciation" class="form-control" name="connection_depreciation" required />
+                        </div>
+                          <p class="val-style" ng-show="connectionform.connection_depreciation.$invalid && !connectionform.connection_depreciation.$pristine" class="help-block">accept only digits required</p>
+                        </div>
+                      </div>
                            <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_other">connection other<span class="required"></span>
                         </label>
