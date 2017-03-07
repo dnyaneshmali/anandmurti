@@ -38,7 +38,7 @@
                           <td ng-if="!isedit(soldproduct.sale_product_id)">{{soldproduct.sale_product_date}}</td>
 
                            <td ng-if="!isedit(soldproduct.sale_product_id)">
-                          <button class="btn btn-danger" ng-click="deletesoldproduct(soldproduct.sale_product_id,$index);">Delete</button>
+                           <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deletesoldproduct(soldproduct.sale_product_id,$index);"><i class="fa fa-trash"></i></button></a>
                            <td><a data-toggle="tooltip" title="Complete"><button class="btn btn-success" ng-click="saleinvoice(soldproduct.sale_product_id);"><i class="fa fa-list-alt" aria-hidden="true"></i>
                                </button></a></td> 
                            
