@@ -55,8 +55,7 @@ $scope.deleteuser=function(gcustomer_id,index){
       closeOnConfirm: true
     },
     function(){
-
-console.log(gcustomer_id);
+      console.log(gcustomer_id);
      $http({
           method  : 'POST',
           url     : '../../models/deletegogas.php',
@@ -67,7 +66,7 @@ console.log(gcustomer_id);
             
             console.log(data);
              $scope.data.splice(index, 1);
-                        $scope.$watch();
+             $scope.$watch();
             
           });
 });
@@ -329,6 +328,7 @@ app.controller('Listnewconnectionctrl', ['$scope','$http', function($scope,$http
     .success(function(data){
         $scope.data=data
         console.log($scope.data);
+
     });
 
 $scope.deleteuser=function(connection_id,index){
@@ -448,15 +448,20 @@ $scope.isedit=function(id){
 
               $scope.connectioninvoice=data;
               $scope.gcustomer_id = data[0].gcustomer_id;
-              console.log($scope.gcustomer_id)
+              //console.log($scope.gcustomer_id)
               $scope.connection_id = data[0].connection_id;
-              console.log(connection_id);
+              $scope.subotal = data[0].connection_tprice;
+              //console.log($scope.subotal);
+              var csubotal = $scope.subotal;
+              //$scope.csubotal = csubotal;
+              //console.log($scope.csubotal);
               $scope.cdate = new Date();
                $scope.duedate = new Date();
-              // $scope.ptax = 10;
-             //  var ptax = 10;
-              // var cftotal = csubotal+$scope.ptax;
-            //   $scope.ftotal = cftotal;
+              $scope.ctax = 10;
+              var ctax = 10;
+              var cftotal = +csubotal + +$scope.ctax;
+              console.log(cftotal);
+              $scope.ftotal = cftotal;
                        // $scope.data.splice(index, 1);
                        // $scope.$watch(); */
 
@@ -465,6 +470,35 @@ $scope.isedit=function(id){
 
 
             }
+
+
+            $scope.changedctax=function(ctax,connection_id){
+                $scope.ctax = {};
+                $scope.ctax = angular.copy(ctax);
+                console.log($scope.ctax);
+                $scope.connection_id = {};
+                $scope.connection_id = angular.copy(connection_id);
+                console.log($scope.connection_id);
+
+              $http({
+          method  : 'POST',
+          url     : '../../models/getconnectioninvoice.php',
+          data    : {'connection_id':connection_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              //console.log(data);
+              var csubotal = data[0].connection_tprice;
+              //console.log(csubotal);
+              var ntax = $scope.ctax;
+              //console.log(ntax);
+              var cftotal = +csubotal + +ntax;
+               $scope.ftotal = cftotal;
+
+                      });
+             }
+
 
 
 
@@ -546,6 +580,95 @@ function printElement(elem, append, delimiter) {
 
 
 }]);
+
+
+
+app.controller('Connectioninvoicectrl', ['$scope','$http', function($scope,$http){
+
+$http.get("../../models/getconnectioninvdtls.php")
+.success(function(data){
+        $scope.conninvoicedata=data;
+        console.log($scope.conninvoicedata);
+    });
+
+ $scope.deleteconninvoice=function(cinvoice_id,index){
+    //alert('in delete function');
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
+console.log(cinvoice_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deleteconninvoice.php',
+          data    : {'cinvoice_id':cinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            });
+
+}
+
+
+$scope.setcstatus=function(cinvoice_id,index){
+  //alert('ddd');
+  //alert(sinvoice_id);
+//console.log(data);
+//$scope.setstatus = angular.copy(order_id);
+//console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/setconninvsts.php',
+          data    : {'cinvoice_id':cinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                     //   $scope.data.splice(index, 1);
+                      //  $scope.$watch();
+
+                      });
+            }
+
+            $scope.unsetcstatus=function(cinvoice_id,index){
+            //console.log(data);
+            //$scope.setstatus = angular.copy(data);
+            //console.log($scope.setrem);
+     $http({
+          method  : 'POST',
+          url     : '../../models/unsetconninvsts.php',
+          data    : {'cinvoice_id':cinvoice_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
+            }
+
+
+
+
+}]);
+
+
 
 app.controller('Refilcylinderctrl', ['$scope','$http', function($scope,$http) {
    $scope.reset = function() {
@@ -867,7 +990,6 @@ console.log(rinvoice_id);
 
 }
 
-
 $scope.setrstatus=function(rinvoice_id,index){
   //alert('ddd');
   //alert(sinvoice_id);
@@ -907,9 +1029,6 @@ $scope.setrstatus=function(rinvoice_id,index){
 
                       });
             }
-
-
-
 
 }]);
 

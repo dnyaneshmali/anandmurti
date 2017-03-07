@@ -93,6 +93,11 @@ app.config(function($routeProvider) {
             controller  : 'Listnewconnectionctrl'
         })
 
+     .when('/connectioninvoice', {
+            templateUrl : 'gogas/connectioninvoice.php',
+            controller  : 'Connectioninvoicectrl'
+        })
+
      .when('/refilcylinder', {
             templateUrl : 'gogas/refil_cylinder.php',
             controller  : 'Refilcylinderctrl'

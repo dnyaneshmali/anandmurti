@@ -47,6 +47,7 @@
                         <li><a href="#/listgogasproduct">List Gogas Products</a></li>
                         <li><a href="#/addnewconnection">Add New Connection</a></li>
                         <li><a href="#/listnewconnection">List New connections</a></li>
+                        <li><a href="#/connectioninvoice">New connections Invoice</a></li>
                         <li><a href="#/saleproducts">Sale Products</a></li>
                         <li><a href="#/listsoldproducts">List Sold Prodcuts</a></li>
                         <li><a href="#/gogasproductinvoice">Gogas Product Invoice</a></li>

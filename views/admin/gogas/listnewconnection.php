@@ -19,6 +19,7 @@
                           <th>Customer Name</th>
                           <th>Cylinder Type</th>
                           <th>Cylinder Deposit</th>
+                          <th>Connection Cost</th>
                           <th>connection Depreciation</th>
                          <th>connection Hotplate</th> 
                           <th>connection passbook</th>
@@ -37,6 +38,7 @@
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.gcustomer_name}}</td>
                           <td ng-if="!isedit(Connection.connection_id)"><span ng-if="Connection.connection_type==1">2 Kg</span><span ng-if="Connection.connection_type==2">5 Kg</span><span ng-if="Connection.connection_type==3">12 Kg</span></td>
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_cylinder_deposit}}</td>
+                          <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_tprice}}</td>
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_depreciation}}</td>
                          
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_hotplate}}</td>
@@ -261,7 +263,7 @@ h3.invoice-title {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><input ng-change="changedtax(ctax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="ptax" name="ptax" style="width:auto;" required></td>
+                          <td><form name="taxform"><input ng-change="changedctax(ctax,connection_id)" type="text" class="form-control" ng-model="ctax" name="ctax" style="width:auto;" required><span class="val-style" ng-show="taxform.ctax.$touched && taxform.ctax.$invalid">The tax is required.</span></form></td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
@@ -274,8 +276,8 @@ h3.invoice-title {
                     </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-default" ng-click="saveconnectioninvoice(gcustomer_id,connection_id,ctax,ctotal);">Save</button>
-                    <button type="button" class="btn btn-default" ng-click="fprint(printSection);">Print</button>
+                    <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="saveconnectioninvoice(gcustomer_id,connection_id,ctax,ctotal);">Save</button>
+                    <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="fprint(printSection);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->
