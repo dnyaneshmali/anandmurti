@@ -230,7 +230,10 @@ h3.invoice-title {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><input ng-change="changedrtax(rtax,refil_id)" type="text" class="form-control" ng-model="rtax" name="rtax" style="width:auto;" required></td>
+                          <td><form name="taxform">
+<input ng-change="changedrtax(rtax,refil_id)" type="text" class="form-control" ng-model="rtax" name="rtax" style="width:auto;" required>
+<span class="val-style" ng-show="taxform.rtax.$touched && taxform.rtax.$invalid">The tax is required.</span></form>
+                          </td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
@@ -243,8 +246,8 @@ h3.invoice-title {
                     </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-default" ng-click="saverefilinvoice(gcustomer_id,refil_id,rtax,rtotal);">Save</button>
-                    <button type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
+                    <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="saverefilinvoice(gcustomer_id,refil_id,rtax,rtotal);">Save</button>
+                    <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->

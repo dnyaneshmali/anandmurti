@@ -220,7 +220,7 @@ h3.invoice-title {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><input ng-change="changedstax(stax,sale_product_id)" type="text" class="form-control" ng-model="stax" name="stax" style="width:auto;" required></td>
+                          <td><form name="taxform"><input ng-change="changedstax(stax,sale_product_id)" type="text" class="form-control" ng-model="stax" name="stax" style="width:auto;" required><span class="val-style" ng-show="taxform.stax.$touched && taxform.stax.$invalid">The tax is required.</span></form></td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
@@ -233,8 +233,8 @@ h3.invoice-title {
                     </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-default" ng-click="savesaleinvoice(gcustomer_id,sale_product_id,stax,stotal);">Save</button>
-                    <button type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
+                    <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="savesaleinvoice(gcustomer_id,sale_product_id,stax,stotal);">Save</button>
+                    <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->

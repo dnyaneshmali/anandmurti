@@ -227,7 +227,7 @@ input#duedate {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><input ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="ptax" name="ptax" style="width:auto;" required></td>
+                          <td><form name="taxform"><input ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="ptax" name="ptax" style="width:auto;" required><span class="val-style" ng-show="taxform.ptax.$touched && taxform.ptax.$invalid">The tax is required.</span></form></td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
@@ -240,9 +240,9 @@ input#duedate {
                     </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" class="btn btn-default" ng-click="saveinvoice(customer_id,orderinvoicedata.order_id,ptax,ftotal);">Save</button>
-                    <button type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
-                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button ng-disabled="!taxform.$valid" type="button" class="btn btn-default" ng-click="saveinvoice(customer_id,orderinvoicedata.order_id,ptax,ftotal);">Save</button>
+                    <button ng-disabled="!taxform.$valid" type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
+                    <button  type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>
                 </div><!-- /.modal-content -->
             </div><!-- /.modal-dialog -->

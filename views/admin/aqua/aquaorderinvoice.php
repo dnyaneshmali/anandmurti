@@ -37,7 +37,6 @@
                           <td>{{invoicedata.invoice_date}}</td>
                           <td ng-if="invoicedata.invoice_status==0"><a data-toggle="tooltip" ng-click="setistatus(invoicedata.invoice_id);" title="Pending"><button class="btn btn-danger"><i class="fa fa-spinner"></i></button></a></td>
                           <td ng-if="invoicedata.invoice_status==1"><a data-toggle="tooltip" ng-click="unsetistatus(invoicedata.invoice_id);" title="Complete"><button class="btn btn-success"><i class="fa fa-check-circle"></i></button></a></td>
-                          
                           <td>
                             <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteinvoice(invoicedata.invoice_id,$index);"><i class="fa fa-trash"></i></button></a>
                         </td>

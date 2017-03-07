@@ -17,6 +17,7 @@
                       <thead>
                         <tr>
                           <th>Customer Name</th>
+                          <th>Cylinder Type</th>
                           <th>Cylinder Deposit</th>
                           <th>connection Depreciation</th>
                          <th>connection Hotplate</th> 
@@ -34,6 +35,7 @@
                       <tbody>
                         <tr ng-repeat="Connection in data | filter:clisearch" ng-form="subForm" >
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.gcustomer_name}}</td>
+                          <td ng-if="!isedit(Connection.connection_id)"><span ng-if="Connection.connection_type==1">2 Kg</span><span ng-if="Connection.connection_type==2">5 Kg</span><span ng-if="Connection.connection_type==3">12 Kg</span></td>
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_cylinder_deposit}}</td>
                           <td ng-if="!isedit(Connection.connection_id)">{{Connection.connection_depreciation}}</td>
                          
