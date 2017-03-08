@@ -72,7 +72,6 @@ console.log($scope.aquacustomers);
      .success(function(data) {
             console.log(data);
               //$scope.msg = "data inserted successfully "
-
                         delete $scope.aquacustomers;
                         swal({
   title: "Successfully!",

@@ -7,7 +7,7 @@ include($root."/config/config.php");
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 
-$query = "delete from  tbl_aqua_customers where acustomer_id = '".$data['acustomer_id']."'";
+$query = "update tbl_aqua_customers set acustomer_activestatus = 0 where acustomer_id = '".$data['acustomer_id']."'";
     if(!mysqli_query($connection,$query))
     {
         die('Error : ' . mysqli_error());
