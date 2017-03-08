@@ -7,7 +7,7 @@ include($root."/config/config.php");
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 
-$query = "delete from tbl_gproducts where product_id = '".$data['product_id']."'";
+$query = "update tbl_gproducts set product_activestatus = 0 where product_id = '".$data['product_id']."'";
    if(!mysqli_query($connection,$query))
     {
         die('Error : ' . mysqli_error());
