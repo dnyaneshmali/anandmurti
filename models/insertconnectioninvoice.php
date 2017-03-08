@@ -7,8 +7,9 @@ $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 $cinvoice_date = date("Y-m-d H:i:s");
 $cinvoice_status = '0';
-$query = "INSERT INTO  tbl_connection_invoice(cinvoice_tax, cinvoice_amount, cinvoice_date, cinvoice_status, connection_id, gcustomer_id)
-    VALUES('".$data['cinvoice_tax']."', '".$data['cinvoice_amount']."','".$cinvoice_date."','".$cinvoice_status."', '".$data['connection_id']."','".$data['gcustomer_id']."')";
+$cinvoice_activestatus = 1;
+$query = "INSERT INTO  tbl_connection_invoice(cinvoice_tax, cinvoice_amount, cinvoice_date, cinvoice_status, connection_id, gcustomer_id,cinvoice_activestatus)
+    VALUES('".$data['cinvoice_tax']."', '".$data['cinvoice_amount']."','".$cinvoice_date."','".$cinvoice_status."', '".$data['connection_id']."','".$data['gcustomer_id']."','".$cinvoice_activestatus."')";
    
     if(!mysqli_query($connection,$query))
     {
