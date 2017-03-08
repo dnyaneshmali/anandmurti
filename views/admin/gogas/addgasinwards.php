@@ -1,3 +1,9 @@
+<!-- /*<style>.inwards-entry h1{text-align: center;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
+  padding-bottom:10px;}</style>*/ -->
+
+
 <div class="inwards-entry">
 
 <h1>Add New Entry</h1>
