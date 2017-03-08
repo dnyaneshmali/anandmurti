@@ -156,5 +156,13 @@ app.config(function($routeProvider) {
             templateUrl : 'Addadmin.php',
             controller  : 'Addadminctrl'
         })
+      .when('/addexpensive', {
+            templateUrl : 'addexpensive.php',
+            controller  : 'Addexpensive'
+        })
+      .when('/listexpensive', {
+            templateUrl : 'listexpensive.php',
+            controller  : 'Listexpensive'
+        })
 
 });

@@ -208,3 +208,40 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', '
    
 }]);
 
+
+app.controller('Addexpensive' , ['$scope','$http', function($scope,$http) {
+
+  $scope.reset = function() {
+  delete $scope.expensive;
+  $scope.addexpensiveform.$setPristine();
+
+}
+
+           $scope.insertdata=function(expensive){
+             //console.log(expensive);
+              $scope.expensive = {};
+           $scope.expensive = angular.copy(expensive);
+           console.log($scope.expensive);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/insertecpensive.php',
+                     data    : $scope.expensive, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                      console.log(data);
+                         $scope.msg = "data inserted successfully ";
+
+                        delete $scope.expensive;
+                        $scope.addexpensiveform.$setPristine();
+           
+                     });
+           
+           }
+ }]);
+
+app.controller('Listexpensive', ['$scope', function($scope) {
+   
+}]);
+
