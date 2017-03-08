@@ -411,6 +411,12 @@ console.log($scope.setrem);
             }
 
             $scope.setstatus=function(order_id,index){
+               swal({
+  title: "Successfully!",
+  text: "status set successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
 //console.log(data);
 //$scope.setstatus = angular.copy(order_id);
 //console.log($scope.setrem);
@@ -430,6 +436,12 @@ console.log($scope.setrem);
             }
 
             $scope.unsetstatus=function(order_id,index){
+               swal({
+  title: "Successfully!",
+  text: "reminder Unset successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
 //console.log(data);
 //$scope.setstatus = angular.copy(data);
 //console.log($scope.setrem);
