@@ -7,7 +7,7 @@ include($root."/config/config.php");
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 
-$query = "delete from tbl_sale_invoice where sinvoice_id = '".$data['sinvoice_id']."'";
+$query = "update tbl_sale_invoice set sinvoice_activestatus = 0 where sinvoice_id = '".$data['sinvoice_id']."'";
    if(!mysqli_query($connection,$query))
     {
         die('Error : ' . mysqli_error());

@@ -280,7 +280,7 @@ $http.get("../../models/getgogascustomer.php")
 
 $scope.insertdata=function(){
   $scope.customer = angular.copy($scope.customer);
-  alert($scope.customer);
+  //alert($scope.customer);
   $scope.c_type = angular.copy($scope.c_type);
   $scope.connection_cylinder_deposit = angular.copy($scope.connection_cylinder_deposit);
   $scope.connection_depreciation = angular.copy($scope.connection_depreciation);
