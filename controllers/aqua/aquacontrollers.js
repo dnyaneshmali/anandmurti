@@ -438,7 +438,7 @@ console.log($scope.setrem);
             $scope.unsetstatus=function(order_id,index){
                swal({
   title: "Successfully!",
-  text: "reminder Unset successfully!",
+  text: "reminder set successfully!",
   type: "success",
   confirmButtonText: "Ok"
 });
