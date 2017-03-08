@@ -1,4 +1,4 @@
-<div class="addnew-conn">
+Fstam[<div class="addnew-conn">
 
 <h1>Add Gogas Connection</h1>
 <div class="connectionform" ng-controller="Addnewconnectionctrl">
@@ -84,7 +84,7 @@
                             </div>
                               
                             </div>
-<<<<<<< HEAD
+
             
                       <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection Hotplate<span class="required">*</span>
@@ -98,10 +98,6 @@
                               </div>
                             </div>
 
-=======
-
-          
->>>>>>> 02b3284be484f97499e6844fdeef83f294998ded
                            <div class="item form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_tube">connection tube<span class="required">*</span>
                         </label>
@@ -127,7 +123,7 @@
                               </div>
                             </div>
                             
-                       <div class="item form-group">
+                       <!-- <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="      connection_stamp">connection stamp<span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
@@ -137,7 +133,7 @@
                         </div>
                           <p class="val-style" ng-show="connectionform.connection_stamp.$invalid && !connectionform.connection_stamp.$pristine" class="help-block"> required</p>
                         </div>
-                      </div>
+                      </div> -->
                              <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="connection_depreciation">connection Depreciation<span class="required">*</span>
                         </label>
