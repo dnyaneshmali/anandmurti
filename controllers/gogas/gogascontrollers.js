@@ -1822,3 +1822,136 @@ $scope.setsstatus=function(sinvoice_id,index){
 
 }]);
 
+app.controller('Addgogasexpensive', ['$scope','$http', function($scope,$http){
+
+
+$scope.reset = function() {
+  delete $scope.expensive;
+  $scope.addexpensiveform.$setPristine();
+
+}
+
+           $scope.insertdata=function(expensive){
+             //console.log(expensive);
+              $scope.expensive = {};
+           $scope.expensive = angular.copy(expensive);
+           console.log($scope.expensive);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/insertgogasexpensive.php',
+                     data    : $scope.expensive, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                      console.log(data);
+                         $scope.msg = "data inserted successfully ";
+
+                        delete $scope.expensive;
+                        $scope.addexpensiveform.$setPristine();
+           
+                     });
+           
+           }
+ }]);
+
+app.controller('Listgogasexpensive', ['$scope','$http', function($scope,$http){
+
+ $scope.iseditid='';
+    $scope.oldexpensive='';
+
+  $http.get("../../models/getexpensivedetails.php")
+    .success(function(data){
+        $scope.data=data
+        //console.log($scope.data);
+    });
+
+
+
+  $scope.deleteexpensive=function(expensive_id,index){
+   // alert(vehicle_id);
+    swal({
+      title: "Are you sure?",
+      text: "Your will not be able to recover this imaginary file!",
+      type: "warning",
+      showCancelButton: true,
+      confirmButtonClass: "btn-danger",
+      confirmButtonText: "Yes, delete it!",
+      closeOnConfirm: true
+    },
+    function(){
+
+console.log(expensive_id);
+     $http({
+          method  : 'POST',
+          url     : '../../models/deleteexpensive.php',
+          data    : {'expensive_id':expensive_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+            
+              console.log(data);
+                        $scope.data.splice(index, 1);
+                        $scope.$watch();
+
+                      });
+            });
+  }
+
+
+
+
+             $scope.isedit=function(id){
+              return id==$scope.iseditid;
+            }
+            $scope.setedit=function(id,oldexpensive){
+              if($scope.oldexpensive){
+                var index1=getIndexOf($scope.data,$scope.iseditid,"expensive_id");
+                $scope.data[index1]=angular.copy($scope.oldexpensive);
+                delete $scope.oldexpensive;
+              }
+              $scope.iseditid=id;
+              $scope.oldexpensive=angular.copy(oldexpensive);
+              $scope.$watch();
+            }
+            $scope.unsetedit=function(id){
+              $scope.iseditid='';
+              $scope.data[id]=angular.copy($scope.oldexpensive);
+              $scope.$watch();
+            }
+            $scope.initval = function (expensive) {
+                settings = window[settings];
+                console.log(settings.awesome); //1
+            };
+            $scope.updateexpensive=function(expensive,index){
+              console.log(expensive);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updateexpensivedetails.php',
+                     data    : expensive, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                        $scope.msg = "data inserted successfully ";
+                        $scope.listexpensiveform.$setPristine();
+                        delete $scope.oldexpensive;
+                        $scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
+             function getIndexOf(arr, val, prop) {
+              var l = arr.length,
+                k = 0;
+              for (k = 0; k < l; k = k + 1) {
+                if (arr[k][prop] === val) {
+                  return k;
+                }
+              }
+              return false;
+            }
+          
+
+}]);

@@ -224,7 +224,7 @@ app.controller('Addexpensive' , ['$scope','$http', function($scope,$http) {
            console.log($scope.expensive);
               $http({
                      method  : 'POST',
-                     url     : '../../models/insertecpensive.php',
+                     url     : '../../models/insertexpensive.php',
                      data    : $scope.expensive, //forms user object
                      headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
                     })

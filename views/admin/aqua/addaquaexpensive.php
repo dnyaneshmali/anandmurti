@@ -1,6 +1,6 @@
 <div class="adda-order">
 <h1>Add Expensives</h1>
-<div class="addexpensiveform" ng-controller="Addexpensive">
+<div class="addexpensiveform" ng-controller="Addaquaexpensive">
 <form name="addexpensiveform" class="form-horizontal form-label-left" nonvalidate>
 
                     <!--   <p>For alternative validation library <code>parsleyJS</code> check out in the <a href="form.html">form page</a>
