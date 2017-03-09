@@ -553,12 +553,7 @@ $scope.isedit=function(id){
  $('#printSection').modal('toggle');
                       });
 
-
              }
-
-
-
-
 
  $scope.fprint=function(printSection){
 
@@ -593,9 +588,6 @@ function printElement(elem, append, delimiter) {
 }
 
 }
-
-
-
 
 }]);
 
@@ -1677,6 +1669,7 @@ $scope.savesaleinvoice=function(gcustomer_id,sale_product_id,stax,stotal){
   type: "success",
   confirmButtonText: "Ok"
 });
+               $('#printSection').modal('toggle');   
                });
    }
 
