@@ -240,7 +240,7 @@ input#duedate {
                     </div>
                     </div>
                     <div class="modal-footer">
-                    <button ng-disabled="!taxform.$valid" type="button" class="btn btn-default" ng-click="saveinvoice(customer_id,orderinvoicedata.order_id,ptax,ftotal);">Save</button>
+                    <button ng-if="checkorderinv == 0" ng-disabled="!taxform.$valid" type="button" class="btn btn-default" ng-click="saveinvoice(customer_id,orderinvoicedata.order_id,ptax,ftotal);">Save</button>
                     <button ng-disabled="!taxform.$valid" type="button" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
                     <button  type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>

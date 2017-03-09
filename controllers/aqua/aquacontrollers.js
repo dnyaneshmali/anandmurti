@@ -545,11 +545,24 @@ console.log($scope.setrem);
                       });
 
 
+       $http({
+          method  : 'POST',
+          url     : '../../models/checkorderinv.php',
+          data    : {'order_id':order_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+              //console.log(data);
+             $scope.checkorderinv=data;
+             console.log($scope.checkorderinv);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch();
+
+                      });
 
                 $('#printSection').modal('toggle');
                 //$('#invoicemodal').modal('show');
                // $('#invoicemodal').modal('hide');
-
             }
 
 
