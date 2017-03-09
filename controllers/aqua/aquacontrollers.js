@@ -1097,7 +1097,7 @@ app.controller('Listaquaexpensive', ['$scope','$http', function($scope,$http){
  $scope.iseditid='';
     $scope.oldexpensive='';
 
-  $http.get("../../models/getexpensivedetails.php")
+  $http.get("../../models/getaquaexpensivedetails.php")
     .success(function(data){
         $scope.data=data
         //console.log($scope.data);
@@ -1105,7 +1105,7 @@ app.controller('Listaquaexpensive', ['$scope','$http', function($scope,$http){
 
 
 
-  $scope.deleteexpensive=function(expensive_id,index){
+  $scope.deleteexpensive=function(aquaexpensive_id,index){
    // alert(vehicle_id);
     swal({
       title: "Are you sure?",
@@ -1118,11 +1118,11 @@ app.controller('Listaquaexpensive', ['$scope','$http', function($scope,$http){
     },
     function(){
 
-console.log(expensive_id);
+console.log(aquaexpensive_id);
      $http({
           method  : 'POST',
-          url     : '../../models/deleteexpensive.php',
-          data    : {'expensive_id':expensive_id}, //forms user object
+          url     : '../../models/deleteaquaexpensive.php',
+          data    : {'aquaexpensive_id':aquaexpensive_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
@@ -1143,7 +1143,7 @@ console.log(expensive_id);
             }
             $scope.setedit=function(id,oldexpensive){
               if($scope.oldexpensive){
-                var index1=getIndexOf($scope.data,$scope.iseditid,"expensive_id");
+                var index1=getIndexOf($scope.data,$scope.iseditid,"aquaexpensive_id");
                 $scope.data[index1]=angular.copy($scope.oldexpensive);
                 delete $scope.oldexpensive;
               }

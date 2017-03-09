@@ -7,7 +7,7 @@ include($root."/config/config.php");
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 
-$query = "update tbl_expensives set exp_activestatus = 0 where expensive_id = '".$data['expensive_id']."'";
+$query = "update tbl_aquaexpensives set exp_activestatus = 0 where aquaexpensive_id ='".$data['aquaexpensive_id']."'";
    if(!mysqli_query($connection,$query))
     {
         die('Error : ' . mysqli_error());

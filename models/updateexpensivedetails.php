@@ -7,7 +7,7 @@ $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 print_r($data);
 
-$query = "UPDATE tbl_expensives SET person_name='".$data['person_name']."',exp_desc='".$data['exp_desc']."',exp_amount='".$data['exp_amount']."'WHERE expensive_id='".$data['expensive_id']."'";
+$query = "UPDATE tbl_aquaexpensives SET person_name='".$data['person_name']."',exp_desc='".$data['exp_desc']."',exp_amount='".$data['exp_amount']."'WHERE aquaexpensive_id='".$data['aquaexpensive_id']."'";
 
 
     if(!mysqli_query($connection,$query))
