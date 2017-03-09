@@ -69,8 +69,8 @@
                     <ul class="nav child_menu">
                       <li><a href="#/adminlist">List Admin</a></li>
                       <li><a href="#/addadmin">Add Admin</a></li>
-                        <li><a href="#/addexpensive">Add Admin Expensives</a></li>
-                          <li><a href="#/listexpensive">List Admin expensives</a></li>
+                        <!-- <li><a href="#/addexpensive">Add Admin Expensives</a></li>
+                          <li><a href="#/listexpensive">List Admin expensives</a></li> -->
                     </ul>
                   </li>
                 </ul>

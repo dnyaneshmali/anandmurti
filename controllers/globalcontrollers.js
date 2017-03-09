@@ -209,7 +209,7 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', '
 }]);
 
 
-app.controller('Addexpensive' , ['$scope','$http', function($scope,$http) {
+/*app.controller('Addexpensive' , ['$scope','$http', function($scope,$http) {
 
   $scope.reset = function() {
   delete $scope.expensive;
@@ -339,4 +339,4 @@ console.log(expensive_id);
             }
           
 
-}]);
+}]);*/
