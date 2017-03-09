@@ -7,7 +7,8 @@ $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 
 $expensive_date = date("Y-m-d H:i:s");
-$query = "INSERT INTO  tbl_expensives(person_name, exp_desc,exp_amount,exp_date) VALUES('".$data['person_name']."','".$data['exp_desc']."','".$data['exp_amount']."','".$expensive_date."')";
+$expensive_activestatus = 1;
+$query = "INSERT INTO  tbl_expensives(person_name, exp_desc,exp_amount,exp_date,exp_activestatus) VALUES('".$data['person_name']."','".$data['exp_desc']."','".$data['exp_amount']."','".$expensive_date."','".$expensive_activestatus."')";
    
      if(!mysqli_query($connection,$query))
     {

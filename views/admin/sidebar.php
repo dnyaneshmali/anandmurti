@@ -66,7 +66,7 @@
                       <li><a href="#/adminlist">List Admin</a></li>
                       <li><a href="#/addadmin">Add Admin</a></li>
                         <li><a href="#/addexpensive">Add Expensives</a></li>
-                          <li><a href="#/listexpensive">Add List expensives</a></li>
+                          <li><a href="#/listexpensive">List expensives</a></li>
                     </ul>
                   </li>
                 </ul>

@@ -40,11 +40,10 @@
                     <table id="datatable-buttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
-                          <th>Name</th>
-                          <th>Email</th>
-                          <th>Number</th>
-                          <th>Role</th>
-                          <th>Start Date</th>
+                          <th>Person Name</th>
+                          <th>Expensive Description</th>
+                          <th>Amount</th>
+                          <th>Date</th>
                           <th colspan="2">Action</th>
                         </tr>
                       </thead>
@@ -52,47 +51,54 @@
 
                       <tbody>
                         
-                        <tr ng-repeat="admin in data | filter:clisearch">
-                          <td ng-if="!isedit(admin.admin_id)">{{admin.admin_name}}</td>
-                          <td ng-if="!isedit(admin.admin_id)">{{admin.admin_email}}</td>
-                          <td ng-if="!isedit(admin.admin_id)">{{admin.admin_number}}</td>
-                          <td ng-if="!isedit(admin.admin_id)">{{admin.admin_role}}</td>
-                          <td ng-if="!isedit(admin.admin_id)">{{admin.admin_date}}</td>
+                        <tr ng-repeat="expensive in data | filter:clisearch"  ng-form="subForm">
+                          <td ng-if="!isedit(expensive.expensive_id)">{{expensive.person_name}}</td>
+                          <td ng-if="!isedit(expensive.expensive_id)">{{expensive.exp_desc}}</td>
+                          <td ng-if="!isedit(expensive.expensive_id)">{{expensive.exp_amount}}</td>
+                          <td ng-if="!isedit(expensive.expensive_id)">{{expensive.exp_date}}</td>
+                        
                           
-                          <td ng-if="!isedit(admin.admin_id)">
-                              <a  data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);"><i class="fa fa-trash"></i></button></a>
-                               <a  data-toggle="tooltip" title="Edit"><button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id, admin);"><i class="fa fa-edit"></i></button></a>
+                          <td ng-if="!isedit(expensive.expensive_id)">
+                              <a  data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deleteexpensive(expensive.expensive_id,$index);"><i class="fa fa-trash"></i></button></a>
+                               <a  data-toggle="tooltip" title="Edit"><button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(expensive.expensive_id,expensive);"><i class="fa fa-edit"></i></button></a>
 
-                            <!--   <button class="btn btn-danger" ng-click="deleteuser(admin.admin_id,$index);">Delete</button> 
-                              <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(admin.admin_id, admin);">Edit</button> -->
+                            <!--   <button class="btn btn-danger" ng-click="deleteuser(expensive.expensive_id,$index);">Delete</button> 
+                              <button class="btn btn-warning" value="{{btnName}}" ng-click="setedit(expensive.expensive_id, expensive);">Edit</button> -->
 
                              <!--  <button class="btn btn-warning" ng-click="logout();">Logout</button> -->
                           </td>
-                          <ng-form name="addadminform">
+                          <ng-form name="listexpensiveform">
                           
-                          <td ng-if="isedit(admin.admin_id)">
-                          <input type="text" ng-value="admin.admin_name" ng-model="admin.admin_name" name="admin_name" style="width:auto;" required>
-                          <p style="color:red;" ng-show="addadminform.admin_name.$invalid && !addadminform.admin_name.$pristine" class="help-block"> fullname is required.</p>
+                         <td ng-if="isedit(expensive.expensive_id)">
+                          <input type="text" class="form-control" ng-value="expensive.person_name" ng-model="expensive.person_name" name="person_name" style="width:auto;" required>
+                        <p style="color:red;" ng-show="subForm.person_name.$error.required"> Name is required.</p>
                           </td>
-                          <td ng-if="isedit(admin.admin_id)">{{admin.admin_email}}</td>
-                          <td ng-if="isedit(admin.admin_id)">
-                          <input type="text" ng-value="admin.admin_number" ng-model="admin.admin_number" name="admin_number" style="width: auto;" required>
-                          <p style="color:red;" ng-show="addadminform.admin_number.$invalid && !addadminform.admin_number.$pristine" class="help-block"> phone number is required.</p>
+
+
+
+                          
+                            <td ng-if="isedit(expensive.expensive_id)">
+                          <input type="text" class="form-control" ng-value="expensive.exp_desc" ng-model="expensive.exp_desc" name="exp_desc" style="width:auto;" required>
+                        <p style="color:red;" ng-show="subForm.exp_desc.$error.required"> Description is required.</p>
                           </td>
-                          <td ng-if="isedit(admin.admin_id)">
-                          <input type="text" ng-value="admin.admin_role" ng-model="admin.admin_role" name="admin_role" style="width: auto;" required>
-                          <p style="color:red;" ng-show="addadminform.admin_role.$invalid && !addadminform.admin_role.$pristine" class="help-block"> admin_role is required.</p>
+
+
+                             <td ng-if="isedit(expensive.expensive_id)">
+                          <input type="text" class="form-control" ng-value="expensive.exp_amount" ng-model="expensive.exp_amount" name="exp_amount" style="width:auto;" required>
+                        <p style="color:red;" ng-show="subForm.exp_amount.$error.required"> Amount is required.</p>
                           </td>
-                          <td ng-if="isedit(admin.admin_id)">{{admin.admin_date}}</td>
+
+
+                          <td ng-if="isedit(expensive.expensive_id)">{{expensive.exp_date}}</td>
                           
 
-                          <td ng-if="isedit(admin.admin_id)"> <a  data-toggle="tooltip" title="Update"><button class="btn btn-success" ng-click="updateuser(admin);"><i class="fa fa-check"></i></button></a>
+                          <td ng-if="isedit(expensive.expensive_id)"> <a  data-toggle="tooltip" title="Update"><button class="btn btn-success" ng-click="updateexpensive(expensive);"><i class="fa fa-check"></i></button></a>
 
                              <a  data-toggle="tooltip" title="Cancle"> <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button></a>
 
-                         <!--  <td ng-if="isedit(admin.admin_id)"> -->
+                         <!--  <td ng-if="isedit(expensive.expensive_id)"> -->
 
-                             <!--  <button class="btn btn-danger" ng-click="updateuser(admin,$index);">Update</button> 
+                             <!--  <button class="btn btn-danger" ng-click="updateuser(expensive,$index);">Update</button> 
 
                               <button class="btn btn-warning" value="{{btnName}}" ng-click="unsetedit($index);">Cancel</button> -->
 
