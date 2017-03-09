@@ -547,9 +547,10 @@ $scope.isedit=function(id){
   text: "data inserted successfully!",
   type: "success",
   confirmButtonText: "Ok"
-});
-              
 
+});
+             
+ $('#printSection').modal('toggle');
                       });
 
 
