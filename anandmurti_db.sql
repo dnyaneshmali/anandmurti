@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2017 at 06:53 AM
+-- Generation Time: Mar 09, 2017 at 12:50 PM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -73,6 +73,41 @@ INSERT INTO `tbl_admin` (`admin_id`, `admin_username`, `admin_name`, `admin_emai
 (1, 'dnyanesh', 'Dnyanesh Mali', 'dnyanesh.mali@softinfology.com', 'e6e061838856bf47e1de730719fb2609', '9689483519', 'superadmin', '2017-01-30 00:00:00'),
 (2, 'santosh', 'Santosh B', 'santoshbhosale123@gmail.com', 'e6e061838856bf47e1de730719fb2609', '1234567890', 'aquaadmin', '2017-02-02 12:30:23'),
 (3, 'pallavi', 'Pallavi G', 'p@gmail.com', 'e6e061838856bf47e1de730719fb2609', '9999999999', 'gasadmin', '2017-02-13 10:53:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_aquaexpensives`
+--
+
+CREATE TABLE `tbl_aquaexpensives` (
+  `aquaexpensive_id` int(11) NOT NULL,
+  `person_name` varchar(100) NOT NULL,
+  `exp_desc` varchar(100) NOT NULL,
+  `exp_amount` varchar(100) NOT NULL,
+  `exp_date` datetime NOT NULL,
+  `exp_activestatus` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_aquaexpensives`
+--
+
+INSERT INTO `tbl_aquaexpensives` (`aquaexpensive_id`, `person_name`, `exp_desc`, `exp_amount`, `exp_date`, `exp_activestatus`) VALUES
+(1, 'sss', 'sss', '23', '2017-03-08 14:05:14', ''),
+(2, 'santosh', 'sasas', '22', '2017-03-09 07:39:58', '0'),
+(3, 'dnyanesh1234ssss', 'ss333', '1003333', '2017-03-09 07:45:55', '0'),
+(4, 'poonamsasadad', 'abdahdb', '22', '2017-03-09 07:46:10', '0'),
+(5, 'monty123', 'akjak', '232', '2017-03-09 07:46:24', '1'),
+(6, 'sasasa', 'adsadd', '22222', '2017-03-09 07:46:34', '0'),
+(7, 'sa', 'sassa', '222', '2017-03-09 09:02:15', '1'),
+(8, 'swapnill', 'sss', '222', '2017-03-09 11:05:50', '1'),
+(9, 'nalinee', 'mam', '199', '2017-03-09 11:25:34', '1'),
+(10, 'sss', 'sss', '11', '2017-03-09 11:35:37', '1'),
+(11, 'ss', '222', '22222', '2017-03-09 11:36:49', '1'),
+(12, 'sss', 'sss', '22222', '2017-03-09 11:38:54', '1'),
+(13, 'sa', '11', '11', '2017-03-09 11:46:56', '1'),
+(14, 'ss', '22', '333', '2017-03-09 12:00:49', '1');
 
 -- --------------------------------------------------------
 
@@ -234,27 +269,6 @@ INSERT INTO `tbl_connection_invoice` (`cinvoice_id`, `cinvoice_tax`, `cinvoice_a
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tbl_expensives`
---
-
-CREATE TABLE `tbl_expensives` (
-  `expensive_id` int(11) NOT NULL,
-  `person_name` varchar(100) NOT NULL,
-  `exp_desc` varchar(100) NOT NULL,
-  `exp_amount` varchar(100) NOT NULL,
-  `exp_date` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_expensives`
---
-
-INSERT INTO `tbl_expensives` (`expensive_id`, `person_name`, `exp_desc`, `exp_amount`, `exp_date`) VALUES
-(1, 'sss', 'sss', '23', '2017-03-08 14:05:14');
-
--- --------------------------------------------------------
-
---
 -- Table structure for table `tbl_gas_inwards`
 --
 
@@ -286,6 +300,29 @@ INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, 
 (19, 6, '1800', '2017-02-24 12:47:15', 'VPN Distributor', 1, 2, '1'),
 (20, 1, '25', '2017-03-08 11:59:52', 'Test Distributor', 8, 5, '1'),
 (21, 20, '500', '2017-03-08 12:02:16', 'ABC Distributor', 8, 4, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_gogasexpensives`
+--
+
+CREATE TABLE `tbl_gogasexpensives` (
+  `gogasexpensive_id` int(11) NOT NULL,
+  `person_name` varchar(100) NOT NULL,
+  `exp_desc` varchar(100) NOT NULL,
+  `exp_amount` varchar(100) NOT NULL,
+  `exp_date` datetime NOT NULL,
+  `exp_activestatus` varchar(50) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_gogasexpensives`
+--
+
+INSERT INTO `tbl_gogasexpensives` (`gogasexpensive_id`, `person_name`, `exp_desc`, `exp_amount`, `exp_date`, `exp_activestatus`) VALUES
+(1, 'sas', 'sasasasas232323', '222', '2017-03-09 12:37:43', '0'),
+(2, 'sa', 'sassa', '98798', '2017-03-09 12:45:55', '1');
 
 -- --------------------------------------------------------
 
@@ -550,6 +587,12 @@ ALTER TABLE `tbl_admin`
   ADD UNIQUE KEY `admin_number` (`admin_number`);
 
 --
+-- Indexes for table `tbl_aquaexpensives`
+--
+ALTER TABLE `tbl_aquaexpensives`
+  ADD PRIMARY KEY (`aquaexpensive_id`);
+
+--
 -- Indexes for table `tbl_aqua_customers`
 --
 ALTER TABLE `tbl_aqua_customers`
@@ -586,16 +629,16 @@ ALTER TABLE `tbl_connection_invoice`
   ADD KEY `connection_id` (`connection_id`);
 
 --
--- Indexes for table `tbl_expensives`
---
-ALTER TABLE `tbl_expensives`
-  ADD PRIMARY KEY (`expensive_id`);
-
---
 -- Indexes for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
   ADD PRIMARY KEY (`inwards_id`);
+
+--
+-- Indexes for table `tbl_gogasexpensives`
+--
+ALTER TABLE `tbl_gogasexpensives`
+  ADD PRIMARY KEY (`gogasexpensive_id`);
 
 --
 -- Indexes for table `tbl_gogas_customers`
@@ -675,6 +718,11 @@ ALTER TABLE `gproducts_sale`
 ALTER TABLE `tbl_admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 --
+-- AUTO_INCREMENT for table `tbl_aquaexpensives`
+--
+ALTER TABLE `tbl_aquaexpensives`
+  MODIFY `aquaexpensive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+--
 -- AUTO_INCREMENT for table `tbl_aqua_customers`
 --
 ALTER TABLE `tbl_aqua_customers`
@@ -700,15 +748,15 @@ ALTER TABLE `tbl_avehicle_details`
 ALTER TABLE `tbl_connection_invoice`
   MODIFY `cinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
--- AUTO_INCREMENT for table `tbl_expensives`
---
-ALTER TABLE `tbl_expensives`
-  MODIFY `expensive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
---
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
   MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+--
+-- AUTO_INCREMENT for table `tbl_gogasexpensives`
+--
+ALTER TABLE `tbl_gogasexpensives`
+  MODIFY `gogasexpensive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `tbl_gogas_customers`
 --
