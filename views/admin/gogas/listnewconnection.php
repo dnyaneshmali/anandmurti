@@ -276,7 +276,7 @@ h3.invoice-title {
                     </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="saveconnectioninvoice(gcustomer_id,connection_id,ctax,ctotal);">Save</button>
+                    <button ng-if="checkconninv == 0" type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="saveconnectioninvoice(gcustomer_id,connection_id,ctax,ctotal);">Save</button>
                     <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="fprint(printSection);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>

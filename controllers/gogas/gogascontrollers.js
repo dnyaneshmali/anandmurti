@@ -468,6 +468,23 @@ $scope.isedit=function(id){
                       });
 
 
+     $http({
+          method  : 'POST',
+          url     : '../../models/checkconninv.php',
+          data    : {'connection_id':connection_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+              //console.log(data);
+              $scope.checkconninv=data;
+              console.log($scope.checkconninv);
+                       // $scope.data.splice(index, 1);
+                       // $scope.$watch(); */
+
+                      });
+
+
+
 
             }
 
