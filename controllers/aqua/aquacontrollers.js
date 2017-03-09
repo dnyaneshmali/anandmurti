@@ -1164,7 +1164,7 @@ console.log(aquaexpensive_id);
               console.log(expensive);
               $http({
                      method  : 'POST',
-                     url     : '../../models/updateexpensivedetails.php',
+                     url     : '../../models/updateaquaexpensivedetails.php',
                      data    : expensive, //forms user object
                      headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
                     })

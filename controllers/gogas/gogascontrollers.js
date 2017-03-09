@@ -1906,7 +1906,7 @@ app.controller('Listgogasexpensive', ['$scope','$http', function($scope,$http){
  $scope.iseditid='';
     $scope.oldexpensive='';
 
-  $http.get("../../models/getexpensivedetails.php")
+  $http.get("../../models/getgogasexpensivedetails.php")
     .success(function(data){
         $scope.data=data
         //console.log($scope.data);
@@ -1914,7 +1914,7 @@ app.controller('Listgogasexpensive', ['$scope','$http', function($scope,$http){
 
 
 
-  $scope.deleteexpensive=function(expensive_id,index){
+  $scope.deleteexpensive=function(gogasexpensive_id,index){
    // alert(vehicle_id);
     swal({
       title: "Are you sure?",
@@ -1927,11 +1927,11 @@ app.controller('Listgogasexpensive', ['$scope','$http', function($scope,$http){
     },
     function(){
 
-console.log(expensive_id);
+console.log(gogasexpensive_id);
      $http({
           method  : 'POST',
-          url     : '../../models/deleteexpensive.php',
-          data    : {'expensive_id':expensive_id}, //forms user object
+          url     : '../../models/deletegogasexpensive.php',
+          data    : {'gogasexpensive_id':gogasexpensive_id}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
@@ -1952,7 +1952,7 @@ console.log(expensive_id);
             }
             $scope.setedit=function(id,oldexpensive){
               if($scope.oldexpensive){
-                var index1=getIndexOf($scope.data,$scope.iseditid,"expensive_id");
+                var index1=getIndexOf($scope.data,$scope.iseditid,"gogasexpensive_id");
                 $scope.data[index1]=angular.copy($scope.oldexpensive);
                 delete $scope.oldexpensive;
               }
@@ -1973,7 +1973,7 @@ console.log(expensive_id);
               console.log(expensive);
               $http({
                      method  : 'POST',
-                     url     : '../../models/updateexpensivedetails.php',
+                     url     : '../../models/updategogasexpensivedetails.php',
                      data    : expensive, //forms user object
                      headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
                     })
