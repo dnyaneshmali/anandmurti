@@ -63,6 +63,14 @@ app.config(function($routeProvider) {
             templateUrl : 'aqua/listvehicledetails.php',
             controller  : 'Listvehiclectrl'
         })
+       .when('/addaquaexpensive', {
+            templateUrl : 'aqua/addaquaexpensive.php',
+            controller  : 'Addaquaexpensive'
+        })
+      .when('/listaquaexpensive', {
+            templateUrl : 'aqua/listaquaexpensive.php',
+            controller  : 'Listaquaexpensive'
+        })
 
      .when('/gogas', {
             templateUrl : 'gogas/gogasdashboard.php',
@@ -146,6 +154,17 @@ app.config(function($routeProvider) {
             templateUrl : 'gogas/listsaleproducts.php',
             controller  : 'Listsalegasproductctrl'
         })
+       
+
+        .when('/addgogasexpensive', {
+            templateUrl : 'gogas/addgogasexpensive.php',
+            controller  : 'Addgogasexpensive'
+        })
+      .when('/listgogasexpensive', {
+            templateUrl : 'gogas/listgogasexpensive.php',
+            controller  : 'Listgogasexpensive'
+        })
+
 
 
      .when('/adminlist', {
