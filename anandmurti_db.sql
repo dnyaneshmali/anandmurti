@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2017 at 02:12 PM
+-- Generation Time: Mar 09, 2017 at 06:47 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -188,23 +188,22 @@ CREATE TABLE `tbl_avehicle_details` (
   `vehicle_owner_name` varchar(100) NOT NULL,
   `vehicle_number` varchar(50) NOT NULL,
   `vehicle_date` datetime NOT NULL,
-  `vehicle_contact_number` int(15) NOT NULL
+  `vehicle_contact_number` int(15) NOT NULL,
+  `vehicle_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
 -- Dumping data for table `tbl_avehicle_details`
 --
 
-INSERT INTO `tbl_avehicle_details` (`vehicle_id`, `vehicle_owner_name`, `vehicle_number`, `vehicle_date`, `vehicle_contact_number`) VALUES
-(2, 'test2', '323424', '2017-02-08 10:28:25', 2147483647),
-(3, 'HMT', '234234', '2017-02-08 10:29:58', 2147483647),
-(4, 'test owner', '2343232', '2017-02-11 11:12:22', 0),
-(6, 'sdfsf', '342342', '2017-02-11 11:16:06', 2147483647),
-(7, 'fgh', '453454', '2017-02-11 11:16:51', 0),
-(8, 'erewrewr', '454354', '2017-02-11 11:27:36', 0),
-(9, 'fgdfg', '45345', '2017-02-11 11:29:59', 2147483647),
-(10, 'Swapnil T', '56788', '2017-02-15 08:49:08', 2147483647),
-(11, 'vehicle owner', 'mh-25', '2017-02-21 10:14:06', 1245637895);
+INSERT INTO `tbl_avehicle_details` (`vehicle_id`, `vehicle_owner_name`, `vehicle_number`, `vehicle_date`, `vehicle_contact_number`, `vehicle_activestatus`) VALUES
+(2, 'test2', '323424', '2017-02-08 10:28:25', 2147483647, '1'),
+(3, 'HMT', '234234', '2017-02-08 10:29:58', 2147483647, '1'),
+(4, 'test owner', '2343232', '2017-02-11 11:12:22', 0, '1'),
+(8, 'erewrewr', '454354', '2017-02-11 11:27:36', 0, '1'),
+(10, 'Swapnil T', '56788', '2017-02-15 08:49:08', 2147483647, '1'),
+(11, 'vehicle owner', 'mh-25', '2017-02-21 10:14:06', 1245637895, '1'),
+(12, 'piago travller', '343434', '2017-03-09 05:57:20', 2147483647, '1');
 
 -- --------------------------------------------------------
 
@@ -387,8 +386,9 @@ CREATE TABLE `tbl_jar_details` (
 --
 
 INSERT INTO `tbl_jar_details` (`jar_id`, `jar_type`, `jar_price`, `jar_date`, `jar_activestatus`) VALUES
-(1, 'normal-jar', 100, '2017-02-08 08:09:15', ''),
-(3, 'only-water', 20, '2017-02-08 08:47:05', '');
+(1, 'normal-jar', 100, '2017-02-08 08:09:15', '1'),
+(3, 'only-water', 20, '2017-02-08 08:47:05', '1'),
+(4, 'cool-jar', 10, '2017-03-09 05:49:41', '1');
 
 -- --------------------------------------------------------
 
@@ -666,7 +666,7 @@ ALTER TABLE `tbl_aqua_orders`
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
 ALTER TABLE `tbl_avehicle_details`
-  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
 --
 -- AUTO_INCREMENT for table `tbl_connection_invoice`
 --
@@ -701,7 +701,7 @@ ALTER TABLE `tbl_gvehicle_details`
 -- AUTO_INCREMENT for table `tbl_jar_details`
 --
 ALTER TABLE `tbl_jar_details`
-  MODIFY `jar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `jar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 --
 -- AUTO_INCREMENT for table `tbl_new_connection`
 --
