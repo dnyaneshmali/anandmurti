@@ -7,8 +7,9 @@ $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 
 $jardetails_date = date("Y-m-d H:i:s");
-$query = "INSERT INTO   tbl_jar_details(jar_type, jar_price,jar_date)
-    VALUES('".$data['jar_type']."','".$data['jar_price']."','".$jardetails_date."')";
+$jar_activestatus = 1;
+$query = "INSERT INTO tbl_jar_details(jar_type, jar_price,jar_date,	jar_activestatus)
+    VALUES('".$data['jar_type']."','".$data['jar_price']."','".$jardetails_date."','".$jar_activestatus."')";
    
      if(!mysqli_query($connection,$query))
     {

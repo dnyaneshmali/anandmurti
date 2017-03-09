@@ -7,7 +7,7 @@ include($root."/config/config.php");
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
 
-$query = "delete from tbl_jar_details where jar_id = '".$data['jar_id']."'";
+$query = "update tbl_jar_details set jar_activestatus = 0 where jar_id = '".$data['jar_id']."'";
     if(!mysqli_query($connection,$query))
     {
         die('Error : ' . mysqli_error());

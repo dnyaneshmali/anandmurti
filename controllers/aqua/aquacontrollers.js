@@ -794,7 +794,7 @@ console.log($scope.addjardetails);
   confirmButtonText: "Ok"
 });
 
-                      $scope.addjardetailsform.$setPristine();
+     $scope.addjardetailsform.$setPristine();
             
 
           });
@@ -954,7 +954,7 @@ app.controller('Listvehiclectrl', ['$scope','$http', function($scope,$http) {
 
 
   $scope.deletevehicle=function(vehicle_id,index){
-    //alert('in delete function');
+   // alert(vehicle_id);
     swal({
       title: "Are you sure?",
       text: "Your will not be able to recover this imaginary file!",
