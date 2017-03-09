@@ -1,5 +1,5 @@
 <div class="listnew-conn">
-<div class="connectionlist" ng-controller="Listnewconnectionctrl">
+<div class="connectionlist" ng-controller="Listrefilcylinderctrl">
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
@@ -246,7 +246,7 @@ h3.invoice-title {
                     </div>
                     </div>
                     <div class="modal-footer">
-                    <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="saverefilinvoice(gcustomer_id,refil_id,rtax,rtotal);">Save</button>
+                    <button ng-if="chkrefilinv == 0" type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="saverefilinvoice(gcustomer_id,refil_id,rtax,rtotal);">Save</button>
                     <button type="button" ng-disabled="!taxform.$valid" class="btn btn-default" ng-click="fprint(invoicemodal);">Print</button>
                     <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
                     </div>

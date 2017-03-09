@@ -284,7 +284,5 @@ h3.invoice-title {
             </div><!-- /.modal-dialog -->
         </div><!-- /.modal -->
 
-
-
               </div>
 </div>

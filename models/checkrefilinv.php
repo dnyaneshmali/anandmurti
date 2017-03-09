@@ -6,7 +6,7 @@ include($root."/config/config.php");
 
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
-$query = "select * from tbl_sale_invoice where connection_id = '".$data['connection_id']."'";
+$query = "select * from tbl_refil_invoice where refil_id = '".$data['refil_id']."'";
 $result = mysqli_query($connection,$query);
    if(!$result)
     {

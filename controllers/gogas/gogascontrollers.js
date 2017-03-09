@@ -896,6 +896,21 @@ $scope.isedit=function(id){
                       });
 
 
+      $http({
+          method  : 'POST',
+          url     : '../../models/checkrefilinv.php',
+          data    : {'refil_id':refil_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+             // console.log(data);
+              $scope.chkrefilinv=data;
+
+                      });
+
+
+
+
             }
 
 
@@ -1575,6 +1590,20 @@ app.controller('Listsalegasproductctrl', ['$scope','$http', function($scope,$htt
                $scope.stotal = cftotal;
               // $scope.data.splice(index, 1);
               // $scope.$watch(); */
+
+                      });
+
+
+$http({
+          method  : 'POST',
+          url     : '../../models/checksaleinv.php',
+          data    : {'sale_product_id':sale_product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+              console.log(data);
+
+              $scope.chksaleinvoice=data;
 
                       });
 
