@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 08, 2017 at 02:12 PM
--- Server version: 10.1.16-MariaDB
--- PHP Version: 5.6.24
+-- Generation Time: Mar 09, 2017 at 06:33 AM
+-- Server version: 10.1.13-MariaDB
+-- PHP Version: 5.6.20
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -231,6 +231,27 @@ INSERT INTO `tbl_connection_invoice` (`cinvoice_id`, `cinvoice_tax`, `cinvoice_a
 (3, 0, 0, '2017-02-28 12:46:14', 1, 5, 1, '1'),
 (4, 0, 0, '2017-03-01 07:07:46', 0, 8, 1, '1'),
 (5, 10, 0, '2017-03-08 11:04:50', 0, 11, 6, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_expensives`
+--
+
+CREATE TABLE `tbl_expensives` (
+  `expensive_id` int(11) NOT NULL,
+  `person_name` varchar(100) NOT NULL,
+  `exp_desc` varchar(100) NOT NULL,
+  `exp_amount` varchar(100) NOT NULL,
+  `exp_date` datetime NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_expensives`
+--
+
+INSERT INTO `tbl_expensives` (`expensive_id`, `person_name`, `exp_desc`, `exp_amount`, `exp_date`) VALUES
+(1, 'sss', 'sss', '23', '2017-03-08 14:05:14');
 
 -- --------------------------------------------------------
 
@@ -565,6 +586,12 @@ ALTER TABLE `tbl_connection_invoice`
   ADD KEY `connection_id` (`connection_id`);
 
 --
+-- Indexes for table `tbl_expensives`
+--
+ALTER TABLE `tbl_expensives`
+  ADD PRIMARY KEY (`expensive_id`);
+
+--
 -- Indexes for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
@@ -672,6 +699,11 @@ ALTER TABLE `tbl_avehicle_details`
 --
 ALTER TABLE `tbl_connection_invoice`
   MODIFY `cinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+--
+-- AUTO_INCREMENT for table `tbl_expensives`
+--
+ALTER TABLE `tbl_expensives`
+  MODIFY `expensive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
