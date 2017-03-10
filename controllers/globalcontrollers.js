@@ -84,6 +84,12 @@ app.controller('Addadminctrl', ['$scope', '$http', '$window', '$localStorage', f
                          $scope.msg = "data inserted successfully ";
 
                         delete $scope.admin;
+                         swal({
+  title: "Successfully!",
+  text: "admin added successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                         $scope.addadminform.$setPristine();
            
                      });
