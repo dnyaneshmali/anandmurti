@@ -1919,6 +1919,12 @@ $scope.reset = function() {
                          $scope.msg = "data inserted successfully ";
 
                         delete $scope.expensive;
+                         swal({
+  title: "Successfully!",
+  text: "Expensives added successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                         $scope.addexpensiveform.$setPristine();
            
                      });

@@ -1081,9 +1081,15 @@ $scope.reset = function() {
            
                 .success(function(data) {
                       console.log(data);
-                         $scope.msg = "data inserted successfully ";
+                        // $scope.msg = "data inserted successfully ";
 
                         delete $scope.expensive;
+                         swal({
+  title: "Successfully!",
+  text: "expensive added successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
                         $scope.addexpensiveform.$setPristine();
            
                      });
