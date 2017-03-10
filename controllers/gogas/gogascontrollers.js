@@ -344,8 +344,6 @@ $scope.deleteuser=function(connection_id,index){
     },
     function(){
 
-
-
 console.log(connection_id);
      $http({
           method  : 'POST',
@@ -937,12 +935,45 @@ $scope.isedit=function(id){
   type: "success",
   confirmButtonText: "Ok"
 });
-              
+              $('#printSection').modal('toggle');
 
                       });
-
-
              }
+
+        $scope.fprint=function(printSection){
+
+        printElement(document.getElementById("printSection"));
+        window.print();
+
+function printElement(elem, append, delimiter) {
+    var domClone = elem.cloneNode(true);
+
+    var $printSection = document.getElementById("printSection");
+
+    if (!$printSection) {
+        var $printSection = document.createElement("div");
+        $printSection.id = "printSection";
+        document.body.appendChild($printSection);
+    }
+
+    if (append !== true) {
+        $printSection.innerHTML = "";
+    }
+
+    else if (append === true) {
+        if (typeof(delimiter) === "string") {
+            $printSection.innerHTML += delimiter;
+        }
+        else if (typeof(delimiter) === "object") {
+            $printSection.appendChlid(delimiter);
+        }
+    }
+
+    $printSection.appendChild(domClone);
+}
+}
+
+
 
 
 $scope.changedrtax=function(rtax,refil_id){
@@ -1641,7 +1672,7 @@ function printElement(elem, append, delimiter) {
 
 
 $scope.savesaleinvoice=function(gcustomer_id,sale_product_id,stax,stotal){
-  alert('dfdf');
+  
                 $scope.gcustomer_id = {};
                 $scope.gcustomer_id = angular.copy(gcustomer_id);
                 //console.log($scope.gcustomer_id);

@@ -489,7 +489,7 @@ console.log($scope.setrem);
   type: "success",
   confirmButtonText: "Ok"
 });
-              
+              $('#printSection').modal('toggle');
 
                       });
 
