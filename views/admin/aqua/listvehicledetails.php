@@ -49,7 +49,7 @@
                           <td ng-if="!isedit(listvehicle.vehicle_id)">{{listvehicle.vehicle_contact_number}}</td>
 
                             <td ng-if="!isedit(listvehicle.vehicle_id)">
-                           <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deletevehicle(listvehicle.vehicle_id);"><i class="fa fa-trash"></i></button></a>
+                           <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deletevehicle(listvehicle.vehicle_id,$index);"><i class="fa fa-trash"></i></button></a>
                         <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(listvehicle.vehicle_id,listvehicle);"><i class="fa fa-edit"></i></button></a>
                             </td>
                               <ng-form name="listvehicleform">
