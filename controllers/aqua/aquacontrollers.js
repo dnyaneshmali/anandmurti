@@ -501,16 +501,16 @@ console.log($scope.setrem);
 
           $http.get("../../models/getlastinoiceid.php")
           .success(function(data){
-            console.log(data);
+           // console.log(data);
             var nextinvoiceid=data;
             //console.log(nextinvoiceid);
             $scope.invoice_id = data[0].invoice_id;
-            console.log($scope.invoice_id);
+            //console.log($scope.invoice_id);
             var lastinvoiceid = $scope.invoice_id;
             var addone = 1;
             var currentinoiveid = +lastinvoiceid + +addone;
             $scope.cinvoiceid = currentinoiveid;
-            console.log(currentinoiveid);
+            //console.log(currentinoiveid);
     });
 
 
@@ -523,7 +523,7 @@ console.log($scope.setrem);
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
      .success(function(data) {
-              console.log(data);
+              //console.log(data);
               //$scope.orderinvoicedata = data;
               $scope.orderinvoicedata=data;
               $scope.customer_id = data[0].acustomer_id;
@@ -554,7 +554,7 @@ console.log($scope.setrem);
      .success(function(data) {
               //console.log(data);
              $scope.checkorderinv=data;
-             console.log($scope.checkorderinv);
+             //console.log($scope.checkorderinv);
                        // $scope.data.splice(index, 1);
                        // $scope.$watch();
 
@@ -585,9 +585,9 @@ console.log($scope.setrem);
             
               //console.log(data);
               var qt = data[0].order_quantity;
-              console.log(data[0].order_quantity);
+              //console.log(data[0].order_quantity);
               var pr = data[0].order_price;
-              console.log(data[0].order_price);
+              //console.log(data[0].order_price);
               var csubotal = qt*pr;
               var ntax= $scope.ptax;
               var cftotal = +csubotal + +ntax;
@@ -718,7 +718,7 @@ console.log(invoice_id);
          })
      .success(function(data) {
             
-              console.log(data);
+                        console.log(data);
                         $scope.data.splice(index, 1);
                         $scope.$watch();
 

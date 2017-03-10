@@ -842,18 +842,36 @@ $scope.isedit=function(id){
 
 
 
+               $http({
+          method  : 'POST',
+          url     : '../../models/getrefilsinglinv.php',
+          data    : {'refil_id':refil_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+             // console.log(data);
+              $scope.singleinv=data;
+              $scope.rinvoice_tax = data[0].rinvoice_tax;
+              $scope.rinvoice_id = data[0].rinvoice_id;
+                  //console.log($scope.rinvoice_tax);
+                      });
+
+
+
+
           $http.get("../../models/getrefilinvoicebyid.php")
           .success(function(data){
-            console.log(data);
+            //console.log(data);
             var nextinvoiceid=data;
-            console.log(nextinvoiceid);
+            //console.log(nextinvoiceid);
             $scope.invoice_id = data[0].rinvoice_id;
-            console.log($scope.invoice_id);
+            //console.log($scope.invoice_id);
             var lastinvoiceid = $scope.invoice_id;
             var addone = 1;
             var currentinoiveid = +lastinvoiceid + +addone;
             $scope.cinvoiceid = currentinoiveid;
-            console.log(currentinoiveid);
+            //console.log(currentinoiveid);
+            
     });
 
 
@@ -868,7 +886,7 @@ $scope.isedit=function(id){
              // console.log(data);
               //$scope.orderinvoicedata = data;
               $scope.refilinvoicedata=data;
-              console.log($scope.refilinvoicedata);
+              //console.log($scope.refilinvoicedata);
               $scope.gcustomer_id = data[0].gcustomer_id;
               $scope.refil_amount = data[0].refil_amount;
               $scope.refil_id = data[0].refil_id;
@@ -899,14 +917,10 @@ $scope.isedit=function(id){
 
                       });
 
-
-
-
             }
 
-
-
             $scope.saverefilinvoice=function(gcustomer_id,refil_id,rtax,rtotal){
+
 
                 $scope.gcustomer_id = {};
                 $scope.gcustomer_id = angular.copy(gcustomer_id);
