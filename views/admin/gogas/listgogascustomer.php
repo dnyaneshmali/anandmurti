@@ -56,7 +56,8 @@
                       <tbody>
                         <tr ng-repeat="gogascustomer in data | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_name}}</td>
-                          <td ng-if="!isedit(gogascustomer.gcustomer_id)"><span ng-if="gogascustomer.gcustomer_type==1">Connection User</span><span ng-if="gogascustomer.gcustomer_type==2">Simple User</span></td>
+                          <td ng-if="!isedit(gogascustomer.gcustomer_id)">
+                            <span ng-if="gogascustomer.gcustomer_type==1">Connection User</span><span ng-if="gogascustomer.gcustomer_type==2">Simple User</span></td>
                           <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_email}}</td>
                           <td ng-if="!isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_number}}</td>
                           <!-- <td>{{gogascustomer.gcustomer_dob}}</td>
@@ -77,6 +78,9 @@
                           <input type="text" ng-value="gogascustomer.gcustomer_name" ng-model="gogascustomer.gcustomer_name" name="gcustomer_name" style="width:auto;" required>
                           <p style="color:red;" ng-show="subForm.gcustomer_name.$error.required"> Name is required.</p>
                           </td>
+                          
+                           <td ng-if="isedit(gogascustomer.gcustomer_id)">{{gogascustomer.gcustomer_type}}</td>
+
                               
 
                           
