@@ -285,6 +285,63 @@ app.controller('Addaquaorderctrl', ['$scope','$http', function($scope,$http) {
     });
 
 
+$scope.changedjar=function(jar_id){
+$scope.jar_id = {};
+$scope.jar_id = angular.copy(jar_id);
+console.log($scope.jar_id);
+$http({
+          method  : 'POST',
+          url     : '../../models/getjardetailsbyid.php',
+          data    : {'jar_id':jar_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+      console.log(data);
+           // $scope.productprice=data;
+           $scope.addaquaorder.order_quantity = 1;
+           //console.log(data[0].jar_price);
+            var jprice = data[0].jar_price;
+            $scope.addaquaorder.order_price = jprice;
+            //console.log(order_price);
+           // var fpquantity = $scope.pquantity;
+           // var totalprice = fprice*fpquantity;
+           // $scope.tprice = totalprice;
+          });
+
+
+}
+
+$scope.changedjarqt=function(order_quantity,jar_id){
+  //alert('test');
+$scope.order_quantity = {};
+$scope.jar_id = {};
+$scope.order_quantity = angular.copy(order_quantity);
+$scope.jar_id = angular.copy(jar_id);
+console.log($scope.order_quantity);
+console.log($scope.jar_id);
+$http({
+          method  : 'POST',
+          url     : '../../models/getjardetailsbyid.php',
+          data    : {'jar_id':jar_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+
+     .success(function(data) {
+            $scope.productprice=data;
+            console.log(data[0].jar_price);
+            var fprice = data[0].jar_price;
+            var fpquantity = $scope.order_quantity;
+            var totalprice = fprice*fpquantity;
+            $scope.addaquaorder.order_price = totalprice;
+          });
+
+
+}
+
+
+
+
   $scope.insertdata=function(addaquaorder){
   $scope.addaquaorder = {};
 $scope.addaquaorder = angular.copy(addaquaorder);
@@ -497,6 +554,23 @@ console.log($scope.setrem);
              }
 
       $scope.geninvoice=function(order_id,index){
+
+
+        $http({
+          method  : 'POST',
+          url     : '../../models/getaquasingleinv.php',
+          data    : {'order_id':order_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+             // console.log(data);
+              $scope.singlecinv=data;
+              $scope.invoice_tax = data[0].invoice_tax;
+              $scope.invoice_id = data[0].invoice_id;
+              $scope.invoice_amount = data[0].invoice_amount;
+              $scope.invoice_date = data[0].invoice_date;
+                  //console.log($scope.rinvoice_tax);
+                      });
 
 
           $http.get("../../models/getlastinoiceid.php")

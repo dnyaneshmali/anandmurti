@@ -197,15 +197,16 @@ h3.invoice-title {
                         <h5>Fax: (120) 4609464, 4609496</h5>
                         </div>
                         <div class="row">
-                        <h5><strong>Invoice ID:</strong> {{cinvoiceid}}</h5>
-                        <h5><strong>Invoice Date:</strong> {{cdate | date:'yyyy-MM-dd'}}</h5>
+                        <h5 ng-if="checkconninv == 0"><strong>Invoice ID:</strong> {{cinvoiceid}}</h5>
+                        <h5 ng-if="checkconninv == 1"><strong>Invoice ID:</strong> {{cinvoice_id}}</h5>
+                         <h5 ng-if="checkconninv == 0"><strong>Invoice Date:</strong> {{cdate | date:'yyyy-MM-dd'}}</h5>
+                        <h5 ng-if="checkconninv == 1"><strong>Invoice Date:</strong> {{cinvoice_date | date:'yyyy-MM-dd'}}</h5>
                       <!--  <h5><strong>Due Date:</strong> <input type="date" placeholder="Delivery Date" class="form-control" ng-model="duedate" id="duedate" style="width: 50%;" class="form-control" name="cdate" required /></h5>  -->
                         </div>
                         </div>
                         <div class="col-md-6 id-section">
                         <h3 class="invoice-title">Invoice</h3>
                         <div class="row">
-
                         <h4 class="modal-title">Customer</h4>
                         <h5><strong>Name:</strong> <span ng-repeat="cinvoice in connectioninvoice">{{cinvoice.gcustomer_name}}</span></h5>
                         <h5><strong>Email ID:</strong> <span ng-repeat="cinvoice in connectioninvoice">{{cinvoice.gcustomer_email}}</span></h5>
@@ -263,11 +264,15 @@ h3.invoice-title {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><form name="taxform"><input ng-change="changedctax(ctax,connection_id)" type="text" class="form-control" ng-model="ctax" name="ctax" style="width:auto;" required><span class="val-style" ng-show="taxform.ctax.$touched && taxform.ctax.$invalid">The tax is required.</span></form></td>
+                          <td><form name="taxform"><input ng-if="checkconninv == 0" ng-change="changedctax(ctax,connection_id)" type="text" class="form-control" ng-model="ctax" name="ctax" style="width:auto;" required><span class="val-style" ng-show="taxform.ctax.$touched && taxform.ctax.$invalid">The tax is required.</span></form>
+                          <span ng-if="checkconninv == 1">{{cinvoice_tax}}</span>
+                          </td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
-                          <td>{{ftotal}}</td>
+                          <td><span ng-if="checkconninv == 0">{{ftotal}}</span>
+                          <span ng-if="checkconninv == 1">{{cinvoice_amount}}</span>
+                          </td>
 </tr>
 
                       </tbody>
