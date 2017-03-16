@@ -1,5 +1,5 @@
 <div class="adda-order">
-<h1>Add Expensives</h1>
+<h1>Add Aqua Expenses</h1>
 <div class="addexpensiveform" ng-controller="Addaquaexpensive">
 <form name="addexpensiveform" class="form-horizontal form-label-left" nonvalidate>
 

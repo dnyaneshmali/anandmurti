@@ -100,6 +100,7 @@ app.controller('Listaquactrl', ['$scope','$http', function($scope,$http) {
 
 
   $scope.deleteuser=function(acustomer_id,index){
+
     //alert('in delete function');
     swal({
       title: "Are you sure?",

@@ -268,7 +268,7 @@ app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http)
   
    
     $scope.reset = function(){
-      /*$scope.connectionform.$setPristine();*/
+      
      
         $scope.gcustomer_name = "";
         $scope.c_type = "";
@@ -282,7 +282,7 @@ app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http)
         $scope.connection_lighter = "";
         $scope.connection_tprice="";
              
-               $scope.connectionform.$setPristine();
+               
                    }
               
                   
@@ -1476,8 +1476,32 @@ $scope.isedit=function(id){
 
 app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
 
+  $scope.reset = function(){
+      /*$scope.connectionform.$setPristine();*/
+     
+        $scope.product_name = "";
+        $scope.product_quantity = "";
+        $scope.Product_price = "";
+        $scope.Product_tprice = "";
+        $scope.gcustomer_name = "";
+       
+             
+               /* */
+                   }
+              
+                  
+
+                    $scope.reset();
+
+
+        
+
+
+
+
  $http.get("../../models/getgasinwards.php")
     .success(function(data){
+
         $scope.getinwardsproducts=data
         console.log($scope.getinwardsproducts);
     });
@@ -1597,17 +1621,26 @@ $http({
           data    : {'product':$scope.product,'product_quantity':$scope.product_quantity,'Product_price':$scope.Product_price,'Product_tprice':$scope.Product_tprice,'gcustomer_id':$scope.customer}, //forms user object
           headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
          })
+  
      .success(function(data) {
             console.log(data);
              // $scope.msg = "data inserted successfully "
-               delete $scope.salegasproduct;
+ 
+       
+             
                              swal({
                 title: "Successfully!",
                 text: "data inserted successfully!",
                 type: "success",
                 confirmButtonText: "Ok"
               });
-                      $scope.salegasproductform.$setPristine();
+                             delete $scope.product_name ;
+        delete $scope.product_quantity ;
+       delete $scope.Product_price ;
+       delete $scope.Product_tprice;
+       delete $scope.gcustomer_name;
+
+                $scope.salegasproductform.$setPristine();
           });
 
 }
