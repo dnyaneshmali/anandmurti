@@ -33,7 +33,7 @@
                         <div class="col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
-                          <select class="form-control" ng-model="addaquaorder.jar_id" name="jar_id"  ng-required="true">
+                          <select ng-change="changedjar(addaquaorder.jar_id)" class="form-control" ng-model="addaquaorder.jar_id" name="jar_id"  ng-required="true">
                           <option ng-repeat="jlist in jardata" value="{{jlist.jar_id}}">{{jlist.jar_type}}</option>
                           </select>
                         </div>
@@ -45,7 +45,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                               <span class="input-group-addon"><i class="fa fa-dropbox"></i></span>
-                          <input type="text" placeholder="Order Quantity" class="form-control" ng-model="addaquaorder.order_quantity" ng-pattern="/^\d+$/" id="order_quantity" class="form-control" name="order_quantity" required />
+                          <input ng-change="changedjarqt(addaquaorder.order_quantity,addaquaorder.jar_id)" type="text" placeholder="Order Quantity" class="form-control" ng-model="addaquaorder.order_quantity" ng-pattern="/^\d+$/" id="order_quantity" class="form-control" name="order_quantity" required />
                         </div>
                           <p class="val-style" ng-show="addaquorderform.order_quantity.$invalid && !addaquorderform.order_quantity.$pristine" class="help-block">accept only digits required</p>
                         </div>
@@ -58,7 +58,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Order Price" class="form-control" ng-model="addaquaorder.order_price" ng-pattern="/^\d+$/" id="order_price" class="form-control" name="order_price" required />
+                          <input readonly type="text" placeholder="Order Price" class="form-control" ng-model="addaquaorder.order_price" ng-pattern="/^\d+$/" id="order_price" class="form-control" name="order_price" required />
                         </div>
                            <p class="val-style" ng-show="addaquorderform.order_price.$invalid && !addaquorderform.order_price.$pristine" class="help-block">accept only digits required</p>
                         </div>

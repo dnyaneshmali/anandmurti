@@ -161,9 +161,11 @@ h3.invoice-title {
                         <h5>Fax: (120) 4609464, 4609496</h5>
                         </div>
                         <div class="row">
-                        <h5><strong>Invoice ID:</strong> {{cinvoiceid}}</h5>
-                        <h5><strong>Invoice Date:</strong> {{cdate | date:'yyyy-MM-dd'}}</h5>
-                        <h5><strong>Due Date:</strong> <input type="date" placeholder="Delivery Date" class="form-control" ng-model="duedate" id="duedate" style="width: 50%;" class="form-control" name="cdate" required /></h5>
+                        <h5 ng-if="chksaleinvoice == 0"><strong>Invoice ID:</strong> {{cinvoiceid}}</h5>
+                        <h5 ng-if="chksaleinvoice == 1"><strong>Invoice ID:</strong> {{sinvoice_id}}</h5>
+                        <h5 ng-if="chksaleinvoice == 0"><strong>Invoice Date:</strong> {{cdate | date:'yyyy-MM-dd'}}</h5>
+                        <h5 ng-if="chksaleinvoice == 1"><strong>Invoice Date:</strong> {{sinvoice_date | date:'yyyy-MM-dd'}}</h5>
+                     <!--   <h5><strong>Due Date:</strong> <input type="date" placeholder="Delivery Date" class="form-control" ng-model="duedate" id="duedate" style="width: 50%;" class="form-control" name="cdate" required /></h5> -->
                         </div>
                         </div>
                         <div class="col-md-6 id-section">
@@ -220,11 +222,15 @@ h3.invoice-title {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><form name="taxform"><input ng-change="changedstax(stax,sale_product_id)" type="text" class="form-control" ng-model="stax" name="stax" style="width:auto;" required><span class="val-style" ng-show="taxform.stax.$touched && taxform.stax.$invalid">The tax is required.</span></form></td>
+                          <td><form name="taxform"><input ng-if="chksaleinvoice == 0" ng-change="changedstax(stax,sale_product_id)" type="text" class="form-control" ng-model="stax" name="stax" style="width:auto;" required><span class="val-style" ng-show="taxform.stax.$touched && taxform.stax.$invalid">The tax is required.</span></form>
+                          <span ng-if="chksaleinvoice == 1" >{{sinvoice_tax}}</span>
+                          </td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
-                          <td>{{stotal}}</td>
+                          <td><span ng-if="chksaleinvoice == 0">{{stotal}}</span>
+                            <span ng-if="chksaleinvoice == 1">{{sinvoice_amount}}</span>
+                          </td>
 </tr>
 
                       </tbody>

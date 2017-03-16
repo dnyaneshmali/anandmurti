@@ -169,9 +169,11 @@ input#duedate {
                         <h5>Fax: (120) 4609464, 4609496</h5>
                         </div>
                         <div class="row">
-                        <h5><strong>Invoice ID:</strong> {{cinvoiceid}}</h5>
-                        <h5><strong>Invoice Date:</strong> {{cdate | date:'yyyy-MM-dd'}}</h5>
-                        <h5><strong>Due Date:</strong> <input type="date" placeholder="Delivery Date" class="form-control" ng-model="duedate" id="duedate" style="width: 50%;" class="form-control" name="cdate" required /></h5>
+                        <h5 ng-if="checkorderinv == 0"><strong>Invoice ID:</strong> {{cinvoiceid}}</h5>
+                        <h5 ng-if="checkorderinv == 1"><strong>Invoice ID:</strong> {{invoice_id}}</h5>
+                        <h5 ng-if="checkorderinv == 0"><strong>Invoice Date:</strong> {{cdate | date:'yyyy-MM-dd'}}</h5>
+                        <h5 ng-if="checkorderinv == 1"><strong>Invoice Date:</strong> {{invoice_date | date:'yyyy-MM-dd'}}</h5>
+                        <!-- <h5><strong>Due Date:</strong> <input type="date" placeholder="Delivery Date" class="form-control" ng-model="duedate" id="duedate" style="width: 50%;" class="form-control" name="cdate" required /></h5> -->
                         </div>
                         </div>
                         <div class="col-md-6 id-section">
@@ -227,11 +229,15 @@ input#duedate {
 <tr>
 
                           <td><strong>Tax</strong></td>
-                          <td><form name="taxform"><input ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="ptax" name="ptax" style="width:auto;" required><span class="val-style" ng-show="taxform.ptax.$touched && taxform.ptax.$invalid">The tax is required.</span></form></td>
+                          <td><form name="taxform"><input ng-if="checkorderinv == 0" ng-change="changedtax(ptax,orderinvoicedata.order_id)" type="text" class="form-control" ng-model="ptax" name="ptax" style="width:auto;" required><span class="val-style" ng-show="taxform.ptax.$touched && taxform.ptax.$invalid">The tax is required.</span></form>
+                            <span ng-if="checkorderinv == 1">{{invoice_tax}}</span>
+                          </td>
 </tr>
 <tr>
                           <td><strong>Total</strong></td>
-                          <td>{{ftotal}}</td>
+                          <td><span ng-if="checkorderinv == 0">{{ftotal}}</span>
+                          <span ng-if="checkorderinv == 1">{{invoice_amount}}</span>
+                          </td>
 </tr>
 
                       </tbody>

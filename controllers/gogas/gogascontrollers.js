@@ -419,7 +419,26 @@ $scope.isedit=function(id){
                 $('#printSection').modal('toggle');
                 //$('#invoicemodal').modal('show');
                // $('#invoicemodal').modal('hide');
-              console.log(connection_id);
+              //console.log(connection_id);
+
+
+              $http({
+          method  : 'POST',
+          url     : '../../models/getconnsingleinv.php',
+          data    : {'connection_id':connection_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+             // console.log(data);
+              $scope.singlecinv=data;
+              $scope.cinvoice_tax = data[0].cinvoice_tax;
+              $scope.cinvoice_id = data[0].cinvoice_id;
+              $scope.cinvoice_amount = data[0].cinvoice_amount;
+              $scope.cinvoice_date = data[0].cinvoice_date;
+                  //console.log($scope.rinvoice_tax);
+                      });
+
+
 
               $http.get("../../models/getconninvoiceid.php")
           .success(function(data){
@@ -842,18 +861,38 @@ $scope.isedit=function(id){
 
 
 
+               $http({
+          method  : 'POST',
+          url     : '../../models/getrefilsinglinv.php',
+          data    : {'refil_id':refil_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+             // console.log(data);
+              $scope.singleinv=data;
+              $scope.rinvoice_tax = data[0].rinvoice_tax;
+              $scope.rinvoice_id = data[0].rinvoice_id;
+              $scope.rinvoice_amount = data[0].rinvoice_amount;
+              $scope.rinvoice_date = data[0].rinvoice_date;
+                  //console.log($scope.rinvoice_tax);
+                      });
+
+
+
+
           $http.get("../../models/getrefilinvoicebyid.php")
           .success(function(data){
-            console.log(data);
+            //console.log(data);
             var nextinvoiceid=data;
-            console.log(nextinvoiceid);
+            //console.log(nextinvoiceid);
             $scope.invoice_id = data[0].rinvoice_id;
-            console.log($scope.invoice_id);
+            //console.log($scope.invoice_id);
             var lastinvoiceid = $scope.invoice_id;
             var addone = 1;
             var currentinoiveid = +lastinvoiceid + +addone;
             $scope.cinvoiceid = currentinoiveid;
-            console.log(currentinoiveid);
+            //console.log(currentinoiveid);
+            
     });
 
 
@@ -868,7 +907,7 @@ $scope.isedit=function(id){
              // console.log(data);
               //$scope.orderinvoicedata = data;
               $scope.refilinvoicedata=data;
-              console.log($scope.refilinvoicedata);
+              //console.log($scope.refilinvoicedata);
               $scope.gcustomer_id = data[0].gcustomer_id;
               $scope.refil_amount = data[0].refil_amount;
               $scope.refil_id = data[0].refil_id;
@@ -899,14 +938,10 @@ $scope.isedit=function(id){
 
                       });
 
-
-
-
             }
 
-
-
             $scope.saverefilinvoice=function(gcustomer_id,refil_id,rtax,rtotal){
+
 
                 $scope.gcustomer_id = {};
                 $scope.gcustomer_id = angular.copy(gcustomer_id);
@@ -1560,13 +1595,28 @@ app.controller('Listsalegasproductctrl', ['$scope','$http', function($scope,$htt
    $scope.iseditid='';
     $scope.oldsale='';
 
-
-
       $scope.saleinvoice=function(sale_product_id){
         
                 $('#printSection').modal('toggle');
                 //$('#invoicemodal').modal('show');
                // $('#invoicemodal').modal('hide');
+
+               $http({
+          method  : 'POST',
+          url     : '../../models/getsalesinglinv.php',
+          data    : {'sale_product_id':sale_product_id}, //forms user object
+          headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+         })
+     .success(function(data) {
+             // console.log(data);
+              $scope.singlesinv=data;
+              $scope.sinvoice_tax = data[0].sinvoice_tax;
+              $scope.sinvoice_id = data[0].sinvoice_id;
+              $scope.sinvoice_amount = data[0].sinvoice_amount;
+              $scope.sinvoice_date = data[0].sinvoice_date;
+                  //console.log($scope.rinvoice_tax);
+                      });
+
 
 
            $http.get("../../models/getsaleinvoiceid.php")
