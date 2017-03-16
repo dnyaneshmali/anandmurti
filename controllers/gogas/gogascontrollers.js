@@ -265,12 +265,35 @@ $scope.isedit=function(id){
 
 
 app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http) {
-  $scope.reset = function() {
-  delete $scope.Connection;
-  $scope.connectionform.$setPristine();
   
-}
+   
+    $scope.reset = function(){
+      /*$scope.connectionform.$setPristine();*/
+     
+        $scope.gcustomer_name = "";
+        $scope.c_type = "";
+        $scope.connection_cylinder_deposit = "";
+        $scope.connection_depreciation = "";
+        $scope.connection_other = "";
+        $scope.connection_passbook = "";
+        $scope.connection_stamp = "";
+        $scope.connection_hotplate = "";
+        $scope.connection_tube = "";
+        $scope.connection_lighter = "";
+        $scope.connection_tprice="";
+             
+               $scope.connectionform.$setPristine();
+                   }
+              
+                  
 
+                    $scope.reset();
+
+
+        
+
+      
+      
 $http.get("../../models/getgogascustomer.php")
     .success(function(data){
         $scope.gcustomerdata=data;
@@ -279,6 +302,7 @@ $http.get("../../models/getgogascustomer.php")
     });
 
 $scope.insertdata=function(){
+
   $scope.customer = angular.copy($scope.customer);
   //alert($scope.customer);
   $scope.c_type = angular.copy($scope.c_type);

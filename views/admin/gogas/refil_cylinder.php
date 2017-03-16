@@ -80,7 +80,7 @@
                       </div>
 
 
-                      <div ng-if="refil.refil_payment_details==1" class="item form-group">
+                    <!--   <div ng-if="refil.refil_payment_details==1" class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">IFSC code <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
@@ -90,7 +90,22 @@
                           </div>
                           <p class="val-style" ng-show="refilform.ifsc_code.$invalid && !refilform.ifsc_code.$pristine" class="help-block">accept digits only required.</p>
                         </div>
+                      </div> -->
+                          
+                          <div ng-if="refil.refil_payment_details==1" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">IFSC code<span class="required">*</span>
+                        </label>
+                        <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                          <div class="input-group">
+                             <span class="input-group-addon"><i class="fa fa-bank"></i></span>
+                          <input type="text" placeholder="IFSC code"  class="form-control" ng-model="refil.ifsc_code" id="ifsc_code" class="form-control" name="ifsc_code" required />
+                           </div>
+                          <p class="val-style" ng-show="refilform.ifsc_code.$invalid && !refilform.ifsc_code.$pristine" class="help-block"> IFSC code in correct format required.</p>     
+                        </div>
                       </div>
+
+
+
 
 
                      <div ng-if="refil.refil_payment_details==2" class="item form-group">
@@ -119,7 +134,7 @@
                       </div>
                       
 
-                       <div ng-if="refil.refil_payment_details==2" class="item form-group">
+                     <!--   <div ng-if="refil.refil_payment_details==2" class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">IFSC code <span class="required">*</span>
                         </label>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
@@ -128,6 +143,17 @@
                           <input type="text" ng-pattern="/^\d+$/" placeholder="Enter IFSC code" class="form-control"ng-model="refil.ifsc_code" id="ifsc_code" class="form-control" name=" ifsc_code" >
                           </div>
                           <p class="val-style" ng-show="refilform.ifsc_code.$invalid && !refilform.ifsc_code.$pristine" class="help-block">accept digits only required.</p>
+                        </div>
+                      </div> -->
+                       <div ng-if="refil.refil_payment_details==2" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">IFSC code<span class="required">*</span>
+                        </label>
+                        <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                          <div class="input-group">
+                             <span class="input-group-addon"><i class="fa fa-bank"></i></span>
+                          <input type="text" placeholder="IFSC code"  class="form-control" ng-model="refil.ifsc_code" id="ifsc_code" class="form-control" name="ifsc_code" required />
+                           </div>
+                          <p class="val-style" ng-show="refilform.ifsc_code.$invalid && !refilform.ifsc_code.$pristine" class="help-block">IFSC code in correct format required.</p>     
                         </div>
                       </div>
 
