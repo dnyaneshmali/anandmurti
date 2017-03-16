@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 09, 2017 at 12:50 PM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.20
+-- Generation Time: Mar 16, 2017 at 06:00 AM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -46,7 +46,9 @@ INSERT INTO `gproducts_sale` (`sale_product_id`, `sale_product_quantity`, `sale_
 (2, 3, 10, 30, 2, '2017-02-21 13:13:28', 2, '1'),
 (3, 2, 20, 40, 4, '2017-03-02 10:41:30', 4, '1'),
 (4, 3, 10, 30, 2, '2017-03-02 10:42:37', 2, '1'),
-(5, 1, 35, 35, 6, '2017-03-08 11:28:47', 6, '1');
+(5, 1, 35, 35, 6, '2017-03-08 11:28:47', 6, '1'),
+(6, 2, 150, 300, 9, '2017-03-14 13:50:14', 5, '1'),
+(7, 1, 150, 150, 9, '2017-03-15 13:30:16', 2, '1');
 
 -- --------------------------------------------------------
 
@@ -73,41 +75,6 @@ INSERT INTO `tbl_admin` (`admin_id`, `admin_username`, `admin_name`, `admin_emai
 (1, 'dnyanesh', 'Dnyanesh Mali', 'dnyanesh.mali@softinfology.com', 'e6e061838856bf47e1de730719fb2609', '9689483519', 'superadmin', '2017-01-30 00:00:00'),
 (2, 'santosh', 'Santosh B', 'santoshbhosale123@gmail.com', 'e6e061838856bf47e1de730719fb2609', '1234567890', 'aquaadmin', '2017-02-02 12:30:23'),
 (3, 'pallavi', 'Pallavi G', 'p@gmail.com', 'e6e061838856bf47e1de730719fb2609', '9999999999', 'gasadmin', '2017-02-13 10:53:45');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_aquaexpensives`
---
-
-CREATE TABLE `tbl_aquaexpensives` (
-  `aquaexpensive_id` int(11) NOT NULL,
-  `person_name` varchar(100) NOT NULL,
-  `exp_desc` varchar(100) NOT NULL,
-  `exp_amount` varchar(100) NOT NULL,
-  `exp_date` datetime NOT NULL,
-  `exp_activestatus` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_aquaexpensives`
---
-
-INSERT INTO `tbl_aquaexpensives` (`aquaexpensive_id`, `person_name`, `exp_desc`, `exp_amount`, `exp_date`, `exp_activestatus`) VALUES
-(1, 'sss', 'sss', '23', '2017-03-08 14:05:14', ''),
-(2, 'santosh', 'sasas', '22', '2017-03-09 07:39:58', '0'),
-(3, 'dnyanesh1234ssss', 'ss333', '1003333', '2017-03-09 07:45:55', '0'),
-(4, 'poonamsasadad', 'abdahdb', '22', '2017-03-09 07:46:10', '0'),
-(5, 'monty123', 'akjak', '232', '2017-03-09 07:46:24', '1'),
-(6, 'sasasa', 'adsadd', '22222', '2017-03-09 07:46:34', '0'),
-(7, 'sa', 'sassa', '222', '2017-03-09 09:02:15', '1'),
-(8, 'swapnill', 'sss', '222', '2017-03-09 11:05:50', '1'),
-(9, 'nalinee', 'mam', '199', '2017-03-09 11:25:34', '1'),
-(10, 'sss', 'sss', '11', '2017-03-09 11:35:37', '1'),
-(11, 'ss', '222', '22222', '2017-03-09 11:36:49', '1'),
-(12, 'sss', 'sss', '22222', '2017-03-09 11:38:54', '1'),
-(13, 'sa', '11', '11', '2017-03-09 11:46:56', '1'),
-(14, 'ss', '22', '333', '2017-03-09 12:00:49', '1');
 
 -- --------------------------------------------------------
 
@@ -165,8 +132,10 @@ INSERT INTO `tbl_aqua_invoice` (`invoice_id`, `invoice_tax`, `invoice_amount`, `
 (5, 0, 0, '2017-02-28 11:06:50', 1, 0, 5, '1'),
 (6, 0, 0, '2017-02-28 11:09:41', 1, 0, 6, '1'),
 (7, 0, 0, '2017-02-28 11:13:00', 0, 0, 6, '1'),
-(8, 0, 0, '2017-02-28 11:13:43', 1, 0, 7, '1'),
-(9, 10, 1450, '2017-03-08 13:55:38', 0, 18, 8, '1');
+(8, 0, 0, '2017-02-28 11:13:43', 1, 2, 7, '1'),
+(9, 10, 0, '2017-03-08 13:55:38', 0, 18, 8, '1'),
+(10, 20, 1220, '2017-03-10 08:15:53', 0, 15, 4, '1'),
+(11, 12, 412, '2017-03-15 07:10:26', 1, 3, 4, '1');
 
 -- --------------------------------------------------------
 
@@ -195,7 +164,7 @@ CREATE TABLE `tbl_aqua_orders` (
 --
 
 INSERT INTO `tbl_aqua_orders` (`order_id`, `order_quantity`, `order_price`, `order_delivery_address`, `order_delivery_date`, `order_delivery_time`, `vehicle_name`, `order_status`, `order_reminder`, `order_date`, `jar_id`, `acustomer_id`, `order_activestatus`) VALUES
-(2, '3', 100, 'Osmanabad', '2017-02-17', '03:30', 'HMT', '0', '0', '2017-02-08 12:09:37', 1, 1, '1'),
+(2, '3', 100, 'Osmanabad', '2017-02-17', '03:30', 'HMT', '1', '1', '2017-02-08 12:09:37', 1, 1, '1'),
 (3, '4', 100, 'Osmanabad', '2017-02-18', '04:20', 'HMT', '0', '0', '2017-02-09 06:56:32', 1, 4, '1'),
 (5, '4', 100, 'Pune', '2017-02-06', '03:34', 'HMT', '1', '0', '2017-02-10 08:03:57', 1, 1, '1'),
 (6, '2', 100, 'Pune', '2017-02-05', '03:34', 'HMT', '0', '1', '2017-02-10 08:05:39', 1, 4, '1'),
@@ -209,8 +178,8 @@ INSERT INTO `tbl_aqua_orders` (`order_id`, `order_quantity`, `order_price`, `ord
 (14, '12', 100, 'Osmanabad', '2017-02-17T18:30:00.000Z', '1970-01-01T09:32:00.000Z', 'test owner', '0', '0', '0000-00-00 00:00:00', 1, 1, '1'),
 (15, '12', 100, 'Pune', '2017-11-29T18:30:00.000Z', '1970-01-01T17:28:00.000Z', 'HMT', '0', '1', '2017-02-17 11:40:13', 1, 4, '1'),
 (16, '8', 100, 'Pandharpur', '2017-12-29T18:30:00.000Z', '1970-01-01T18:28:00.000Z', 'HMT', '0', '0', '2017-02-17 11:42:59', 1, 1, '1'),
-(17, '10', 20, 'Shikrapur', '2017-03-12T18:30:00.000Z', '1970-01-01T07:30:00.000Z', 'HMT', '0', '0', '2017-03-03 08:24:37', 3, 4, '1'),
-(18, '12', 120, 'Shikrapur', '2017-03-14T18:30:00.000Z', '1970-01-01T09:31:00.000Z', 'HMT', '0', '0', '2017-03-08 13:46:03', 3, 8, '1');
+(17, '10', 20, 'Shikrapur', '2017-03-12T18:30:00.000Z', '1970-01-01T07:30:00.000Z', 'HMT', '0', '1', '2017-03-03 08:24:37', 3, 4, '1'),
+(18, '12', 20, 'Shikrapur', '2017-03-14T18:30:00.000Z', '1970-01-01T09:31:00.000Z', 'HMT', '0', '0', '2017-03-08 13:46:03', 3, 8, '0');
 
 -- --------------------------------------------------------
 
@@ -235,10 +204,11 @@ INSERT INTO `tbl_avehicle_details` (`vehicle_id`, `vehicle_owner_name`, `vehicle
 (2, 'test2', '323424', '2017-02-08 10:28:25', 2147483647, '1'),
 (3, 'HMT', '234234', '2017-02-08 10:29:58', 2147483647, '1'),
 (4, 'test owner', '2343232', '2017-02-11 11:12:22', 0, '1'),
-(8, 'erewrewr', '454354', '2017-02-11 11:27:36', 0, '1'),
+(8, 'erewrewr', '454354', '2017-02-11 11:27:36', 0, '0'),
 (10, 'Swapnil T', '56788', '2017-02-15 08:49:08', 2147483647, '1'),
 (11, 'vehicle owner', 'mh-25', '2017-02-21 10:14:06', 1245637895, '1'),
-(12, 'piago travller', '343434', '2017-03-09 05:57:20', 2147483647, '1');
+(12, 'piago travller', '343434', '2017-03-09 05:57:20', 2147483647, '1'),
+(13, 'swapnil', 'MH-25 4545', '2017-03-15 08:24:11', 2147483647, '1');
 
 -- --------------------------------------------------------
 
@@ -264,7 +234,11 @@ CREATE TABLE `tbl_connection_invoice` (
 INSERT INTO `tbl_connection_invoice` (`cinvoice_id`, `cinvoice_tax`, `cinvoice_amount`, `cinvoice_date`, `cinvoice_status`, `connection_id`, `gcustomer_id`, `cinvoice_activestatus`) VALUES
 (3, 0, 0, '2017-02-28 12:46:14', 1, 5, 1, '1'),
 (4, 0, 0, '2017-03-01 07:07:46', 0, 8, 1, '1'),
-(5, 10, 0, '2017-03-08 11:04:50', 0, 11, 6, '1');
+(5, 10, 0, '2017-03-08 11:04:50', 0, 11, 6, '1'),
+(6, 20, 0, '2017-03-09 09:01:34', 0, 10, 7, '1'),
+(7, 15, 1015, '2017-03-09 09:10:40', 0, 4, 2, '1'),
+(8, 12, 1012, '2017-03-09 09:12:28', 0, 2, 1, '1'),
+(9, 2, 1002, '2017-03-09 10:55:23', 0, 3, 2, '1');
 
 -- --------------------------------------------------------
 
@@ -299,30 +273,9 @@ INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, 
 (18, 75, '2625', '2017-02-24 12:37:16', 'YSD Distributor', 6, 3, '0'),
 (19, 6, '1800', '2017-02-24 12:47:15', 'VPN Distributor', 1, 2, '1'),
 (20, 1, '25', '2017-03-08 11:59:52', 'Test Distributor', 8, 5, '1'),
-(21, 20, '500', '2017-03-08 12:02:16', 'ABC Distributor', 8, 4, '1');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `tbl_gogasexpensives`
---
-
-CREATE TABLE `tbl_gogasexpensives` (
-  `gogasexpensive_id` int(11) NOT NULL,
-  `person_name` varchar(100) NOT NULL,
-  `exp_desc` varchar(100) NOT NULL,
-  `exp_amount` varchar(100) NOT NULL,
-  `exp_date` datetime NOT NULL,
-  `exp_activestatus` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=latin1;
-
---
--- Dumping data for table `tbl_gogasexpensives`
---
-
-INSERT INTO `tbl_gogasexpensives` (`gogasexpensive_id`, `person_name`, `exp_desc`, `exp_amount`, `exp_date`, `exp_activestatus`) VALUES
-(1, 'sas', 'sasasasas232323', '222', '2017-03-09 12:37:43', '0'),
-(2, 'sa', 'sassa', '98798', '2017-03-09 12:45:55', '1');
+(21, 20, '500', '2017-03-08 12:02:16', 'ABC Distributor', 8, 4, '1'),
+(22, 30, '4500', '2017-03-14 13:46:31', 'Surya Company', 9, 5, '1'),
+(23, 1, '10', '2017-03-15 13:40:20', 'Test Distributor', 2, 6, '1');
 
 -- --------------------------------------------------------
 
@@ -386,7 +339,8 @@ INSERT INTO `tbl_gproducts` (`product_id`, `product_name`, `product_category`, `
 (4, 'p4', 'cylinder', 'gogas', '20', '2%', '2017-02-22 07:00:26', '1'),
 (6, 'p5', 'lighter', 'star', '35', '5%', '2017-02-22 10:29:37', '1'),
 (7, 'hotplate', 'cooktop', 'surya', '300', '10', '2017-03-03 06:57:22', '1'),
-(8, 'p6', 'pipe', 'Star', '25', '10', '2017-03-08 07:06:26', '1');
+(8, 'p6', 'pipe', 'Star', '25', '10', '2017-03-08 07:06:26', '1'),
+(9, 'surya lighter', 'lighter', 'Surya', '150', '10', '2017-03-14 13:45:43', '1');
 
 -- --------------------------------------------------------
 
@@ -423,7 +377,8 @@ CREATE TABLE `tbl_gvehicle_details` (
 INSERT INTO `tbl_gvehicle_details` (`gvehicle_id`, `gvehicle_owner_name`, `gvehicle_number`, `gvehicle_date`, `gvehicle_contact_number`, `gvehicle_activestatus`) VALUES
 (3, 'hfgh', 'hfghghgh', '2017-02-24 10:31:26', 2147483647, '0'),
 (4, 'test owner2', 'mh-25 3433', '2017-02-24 12:51:31', 2147483647, '1'),
-(5, 'hmt owner', '9192', '2017-03-08 07:49:15', 2147483647, '1');
+(5, 'hmt owner', '9192', '2017-03-08 07:49:15', 2147483647, '1'),
+(6, 'Dnyanesh', 'MH-12 5119', '2017-03-15 13:38:32', 2147483647, '1');
 
 -- --------------------------------------------------------
 
@@ -446,7 +401,8 @@ CREATE TABLE `tbl_jar_details` (
 INSERT INTO `tbl_jar_details` (`jar_id`, `jar_type`, `jar_price`, `jar_date`, `jar_activestatus`) VALUES
 (1, 'normal-jar', 100, '2017-02-08 08:09:15', '1'),
 (3, 'only-water', 20, '2017-02-08 08:47:05', '1'),
-(4, 'cool-jar', 10, '2017-03-09 05:49:41', '1');
+(4, 'cool-jar', 10, '2017-03-09 05:49:41', '0'),
+(5, 'cool-jar', 30, '2017-03-15 08:20:55', '1');
 
 -- --------------------------------------------------------
 
@@ -476,14 +432,16 @@ CREATE TABLE `tbl_new_connection` (
 --
 
 INSERT INTO `tbl_new_connection` (`connection_id`, `connection_type`, `connection_cylinder_deposit`, `connection_depreciation`, `connection_hotplate`, `connection_passbook`, `connection_stamp`, `connection_tube`, `connection_lighter`, `connection_other`, `connection_tprice`, `connection_date`, `gcustomer_id`, `connection_activestatus`) VALUES
-(2, '3', '11', 'yes', 'No', 'No', '1', 'No', 'No', 'test2', 0, '2017-02-10 12:15:32', 1, '1'),
-(3, '2', '45', 'test', 'Yes', 'Yes', 'tt', 'Yes', 'Yes', 'tttttt', 0, '2017-02-14 07:53:13', 2, '1'),
-(4, '1', '34', 'depreciation', 'Yes', 'Yes', 'test', 'Yes', 'Yes', 'testtest', 0, '2017-02-14 11:10:11', 2, '1'),
-(5, '3', '23', 'dpreciation', 'Yes', 'Yes', 'test', 'Yes', 'Yes', 'other', 0, '2017-02-14 11:14:08', 2, '1'),
+(2, '3', '11', 'yes', 'No', 'No', '1', 'No', 'No', 'test2', 1000, '2017-02-10 12:15:32', 1, '1'),
+(3, '2', '45', 'test', 'Yes', 'Yes', 'tt', 'Yes', 'Yes', 'tttttt', 1000, '2017-02-14 07:53:13', 2, '1'),
+(4, '1', '34', 'depreciation', 'Yes', 'Yes', 'test', 'Yes', 'Yes', 'testtest', 1000, '2017-02-14 11:10:11', 2, '1'),
+(5, '3', '23', 'dpreciation', 'Yes', 'Yes', 'test', 'Yes', 'Yes', 'other', 1000, '2017-02-14 11:14:08', 2, '1'),
 (8, '3', '', '1', 'Yes', 'Yes', 'No', 'Yes', 'No', 'test', 1000, '2017-03-06 14:19:57', 4, '1'),
 (9, '3', '100', '0', 'Yes', 'No', 'Yes', 'No', 'No', 'test11', 1000, '2017-03-07 05:38:17', 4, '0'),
 (10, '2', '10', '0', 'Yes', 'No', 'Yes', 'No', 'Yes', 'testtesttesttest', 1000, '2017-03-08 10:07:12', 7, '1'),
-(11, '3', '12', '0', 'Yes', 'Yes', 'No', 'No', 'Yes', 'trial', 1000, '2017-03-08 10:53:33', 6, '1');
+(11, '3', '12', '0', 'Yes', 'Yes', 'No', 'No', 'Yes', 'trial', 1000, '2017-03-08 10:53:33', 6, '1'),
+(12, '', '', '', 'Yes', '', '', 'No', 'Yes', '', 1000, '2017-03-15 11:11:27', 0, '1'),
+(13, '', '', '', '', '', '', '', '', '', 1000, '2017-03-15 11:11:33', 0, '1');
 
 -- --------------------------------------------------------
 
@@ -514,7 +472,8 @@ INSERT INTO `tbl_refil_details` (`refil_id`, `refil_cylinder_type`, `refil_payme
 (4, '2', 'test details', '', '', '', 600, '2017-02-14 13:24:25', 2),
 (5, '2', '', '', '', '', 200, '2017-02-16 06:51:13', 2),
 (6, '3', '21', '', '', '', 200, '2017-02-16 06:53:03', 1),
-(7, '3', 'check', '', '', '', 9181, '2017-02-24 14:01:03', 1);
+(7, '3', 'check', '', '', '', 9181, '2017-02-24 14:01:03', 1),
+(8, '2', '1', '1222222222222', 'l,ko', '16521541541', 26, '2017-03-15 13:35:00', 7);
 
 -- --------------------------------------------------------
 
@@ -538,7 +497,10 @@ CREATE TABLE `tbl_refil_invoice` (
 
 INSERT INTO `tbl_refil_invoice` (`rinvoice_id`, `rinvoice_tax`, `rinvoice_amount`, `rinvoice_date`, `rinvoice_status`, `refil_id`, `gcustomer_id`) VALUES
 (1, 0, 0, '2017-02-28 12:50:18', 1, 1, 2),
-(2, 0, 0, '2017-02-28 12:50:18', 1, 1, 2);
+(3, 10, 0, '2017-03-09 08:51:47', 0, 2, 1),
+(4, 5, 0, '2017-03-10 08:07:06', 0, 6, 1),
+(5, 15, 215, '2017-03-10 08:09:40', 0, 5, 2),
+(6, 12, 9193, '2017-03-10 12:42:47', 0, 7, 1);
 
 -- --------------------------------------------------------
 
@@ -563,7 +525,10 @@ CREATE TABLE `tbl_sale_invoice` (
 
 INSERT INTO `tbl_sale_invoice` (`sinvoice_id`, `sinvoice_tax`, `sinvoice_amount`, `sinvoice_date`, `sinvoice_status`, `sale_product_id`, `gcustomer_id`, `sinvoice_activestatus`) VALUES
 (2, 10, 50, '2017-03-06 06:27:41', 0, 3, 4, '1'),
-(3, 50, 170, '2017-03-08 11:41:43', 0, 1, 3, '1');
+(3, 50, 170, '2017-03-08 11:41:43', 0, 1, 3, '1'),
+(4, 10, 45, '2017-03-09 08:43:35', 0, 5, 6, '1'),
+(5, 20, 50, '2017-03-10 07:08:28', 0, 2, 2, '1'),
+(6, 25, 55, '2017-03-14 08:17:47', 1, 4, 2, '1');
 
 --
 -- Indexes for dumped tables
@@ -585,12 +550,6 @@ ALTER TABLE `tbl_admin`
   ADD UNIQUE KEY `admin_username` (`admin_username`),
   ADD UNIQUE KEY `admin_email` (`admin_email`),
   ADD UNIQUE KEY `admin_number` (`admin_number`);
-
---
--- Indexes for table `tbl_aquaexpensives`
---
-ALTER TABLE `tbl_aquaexpensives`
-  ADD PRIMARY KEY (`aquaexpensive_id`);
 
 --
 -- Indexes for table `tbl_aqua_customers`
@@ -633,12 +592,6 @@ ALTER TABLE `tbl_connection_invoice`
 --
 ALTER TABLE `tbl_gas_inwards`
   ADD PRIMARY KEY (`inwards_id`);
-
---
--- Indexes for table `tbl_gogasexpensives`
---
-ALTER TABLE `tbl_gogasexpensives`
-  ADD PRIMARY KEY (`gogasexpensive_id`);
 
 --
 -- Indexes for table `tbl_gogas_customers`
@@ -711,17 +664,12 @@ ALTER TABLE `tbl_sale_invoice`
 -- AUTO_INCREMENT for table `gproducts_sale`
 --
 ALTER TABLE `gproducts_sale`
-  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 --
 -- AUTO_INCREMENT for table `tbl_admin`
 --
 ALTER TABLE `tbl_admin`
   MODIFY `admin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
---
--- AUTO_INCREMENT for table `tbl_aquaexpensives`
---
-ALTER TABLE `tbl_aquaexpensives`
-  MODIFY `aquaexpensive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `tbl_aqua_customers`
 --
@@ -731,7 +679,7 @@ ALTER TABLE `tbl_aqua_customers`
 -- AUTO_INCREMENT for table `tbl_aqua_invoice`
 --
 ALTER TABLE `tbl_aqua_invoice`
-  MODIFY `invoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `invoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `tbl_aqua_orders`
 --
@@ -741,22 +689,17 @@ ALTER TABLE `tbl_aqua_orders`
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
 ALTER TABLE `tbl_avehicle_details`
-  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `vehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `tbl_connection_invoice`
 --
 ALTER TABLE `tbl_connection_invoice`
-  MODIFY `cinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `cinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
-  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
---
--- AUTO_INCREMENT for table `tbl_gogasexpensives`
---
-ALTER TABLE `tbl_gogasexpensives`
-  MODIFY `gogasexpensive_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
 --
 -- AUTO_INCREMENT for table `tbl_gogas_customers`
 --
@@ -766,7 +709,7 @@ ALTER TABLE `tbl_gogas_customers`
 -- AUTO_INCREMENT for table `tbl_gproducts`
 --
 ALTER TABLE `tbl_gproducts`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tbl_gproducts_trasaction`
 --
@@ -776,32 +719,32 @@ ALTER TABLE `tbl_gproducts_trasaction`
 -- AUTO_INCREMENT for table `tbl_gvehicle_details`
 --
 ALTER TABLE `tbl_gvehicle_details`
-  MODIFY `gvehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `gvehicle_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_jar_details`
 --
 ALTER TABLE `tbl_jar_details`
-  MODIFY `jar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `jar_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tbl_new_connection`
 --
 ALTER TABLE `tbl_new_connection`
-  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `connection_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 --
 -- AUTO_INCREMENT for table `tbl_refil_details`
 --
 ALTER TABLE `tbl_refil_details`
-  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `refil_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tbl_refil_invoice`
 --
 ALTER TABLE `tbl_refil_invoice`
-  MODIFY `rinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+  MODIFY `rinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `tbl_sale_invoice`
 --
 ALTER TABLE `tbl_sale_invoice`
-  MODIFY `sinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `sinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
