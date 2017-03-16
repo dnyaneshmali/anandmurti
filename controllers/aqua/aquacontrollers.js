@@ -719,7 +719,7 @@ console.log(invoice_id);
      .success(function(data) {
             
               console.log(data);
-                        $scope.data.splice(index, 1);
+                        $scope.aquainvoicedata.splice(index, 1);
                         $scope.$watch();
 
                       });

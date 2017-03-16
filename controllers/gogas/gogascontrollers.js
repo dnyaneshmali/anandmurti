@@ -1584,7 +1584,7 @@ app.controller('Listsalegasproductctrl', ['$scope','$http', function($scope,$htt
     });
 
 
-
+                      
                 $http({
           method  : 'POST',
           url     : '../../models/getsaleinvoice.php',

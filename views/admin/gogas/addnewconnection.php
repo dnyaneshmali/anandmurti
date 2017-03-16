@@ -62,7 +62,7 @@
                             <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
                           <input type="text" placeholder="connection other" ng-model="connection_other" id="connection_other" class="form-control" name="connection_other" required />
                         </div>
-                          <!-- <p class="val-style" ng-show="connectionform.connection_other.$invalid && !connectionform.connection_other.$pristine" class="help-block"> required</p> -->
+                           <p class="val-style" ng-show="connectionform.connection_other.$invalid && !connectionform.connection_other.$pristine" class="help-block"> required</p>
                         </div>
                       </div>
 
@@ -141,8 +141,8 @@
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
-                          <button type="submit" ng-click="reset()"   class="btn btn-primary">Cancel</button>
-                          <button ng-click="insertdata()" id="send" type="submit" class="btn btn-success">Submit</button>
+                          <button type="submit" ng-click="reset()" ng-disabled="!connectionform.$valid"  class="btn btn-primary">Cancel</button>
+                          <button ng-click="insertdata()" id="send" type="submit" ng-disabled="!connectionform.$valid" class="btn btn-success">Submit</button>
 
                           {{msg}}
                         </div>
