@@ -272,7 +272,7 @@ app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http)
      
         $scope.gcustomer_name = "";
         $scope.c_type = "";
-        $scope.connection_cylinder_deposit = "";
+       $scope.connection_cylinder_deposit = "";
         $scope.connection_depreciation = "";
         $scope.connection_other = "";
         $scope.connection_passbook = "";
@@ -282,15 +282,12 @@ app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http)
         $scope.connection_lighter = "";
         $scope.connection_tprice="";
              
-               
                    }
               
-                  
+                    
+          
+            delete $scope.reset();
 
-                    $scope.reset();
-
-
-        
 
       
       
@@ -326,7 +323,18 @@ $scope.insertdata=function(){
      .success(function(data) {
             console.log(data);
               //$scope.msg = "data inserted successfully "
-                delete $scope.Connection;
+                $scope.customer="";
+                 $scope.c_type="";
+                   $scope.connection_cylinder_deposit="";
+                    $scope.connection_depreciation="";
+                    $scope.connection_hotplate="";
+                    $scope.connection_passbook="";
+                    $scope.connection_stamp="";
+                    $scope.connection_tube="";
+                   $scope.connection_lighter="";
+                    $scope.connection_other="";
+                    $scope.connection_tprice="";
+
                swal({
   title: "Successfully!",
   text: "data inserted successfully!",

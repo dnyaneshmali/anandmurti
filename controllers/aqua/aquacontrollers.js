@@ -102,6 +102,7 @@ app.controller('Listaquactrl', ['$scope','$http', function($scope,$http) {
   $scope.deleteuser=function(acustomer_id,index){
 
     //alert('in delete function');
+   
     swal({
       title: "Are you sure?",
       text: "Your will not be able to recover this imaginary file!",
@@ -147,6 +148,7 @@ console.log(acustomer_id);
               $scope.iseditid='';
               $scope.data[id]=angular.copy($scope.oldaqua);
               $scope.$watch();
+
             }
             $scope.initval = function (aquacustomer) {
                 settings = window[settings];

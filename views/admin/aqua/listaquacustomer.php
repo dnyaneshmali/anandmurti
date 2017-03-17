@@ -58,7 +58,7 @@
                           <!-- <td>{{aquacustomer.customer_role}}</td> -->
                           <!-- <td ng-if="!isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_date}}</td> -->
                           <td ng-if="!isedit(aquacustomer.acustomer_id)">
-                            <a data-toggle="tooltip" title="delete"><button class="btn btn-danger" ng-click="deleteuser(aquacustomer.acustomer_id,$index);"><i class="fa fa-trash"></i></button></a>
+                            <a data-toggle="tooltip" title="delete"><button class="btn btn-danger"  ng-click="deleteuser(aquacustomer.acustomer_id,$index);"><i class="fa fa-trash"></i></button></a>
                           <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" value="{{btnName}}"  ng-click="setedit(aquacustomer.acustomer_id,aquacustomer);"><i class="fa fa-edit"></i></button></a>
                         </td>
 
@@ -108,23 +108,6 @@
                           <input type="text" ng-value="aquacustomer.acustomer_type" ng-model="aquacustomer.acustomer_type" name="acustomer_type" style="width:auto;" required>
                           <p style="color:red;" ng-show="subForm.acustomer_type.$error.required">  type is required.</p>
                           </td>
-
-
-
-
-
-
-
-
-
-
-
-
-
-                             <!--  <td ng-if="isedit(aquacustomer.acustomer_id)">{{aquacustomer.acustomer_date}}</td> -->
-
-
-
 
 
 
