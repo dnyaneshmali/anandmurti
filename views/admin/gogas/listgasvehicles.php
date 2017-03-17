@@ -29,10 +29,12 @@
                           <td ng-if="!isedit(listvehicle.vehicle_id)" >{{listvehicle.gvehicle_number}}</td>
                           <td ng-if="!isedit(listvehicle.vehicle_id)">{{listvehicle.gvehicle_contact_number}}</td>
 
-                            <td ng-if="!isedit(listvehicle.vehicle_id)">
-                          <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deletevehicle(listvehicle.gvehicle_id);"><i class="fa fa-trash"></i></button></a>
-                        <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(listvehicle.vehicle_id,listvehicle);"><i class="fa fa-edit"></i></button></a>
-                            </td>
+                              <td ng-if="!isedit(listvehicle.vehicle_id)">
+                            <a data-toggle="tooltip" title="Delete"><button class="btn btn-danger" ng-click="deletevehicle(listvehicle.gvehicle_id);"><i class="fa fa-trash"></i></button></a>
+
+                          <a data-toggle="tooltip" title="Edit"><button class="btn btn-warning" ng-value="{{btnName}}" ng-click="setedit(listvehicle.vehicle_id,listvehicle);"><i class="fa fa-edit"></i></button></a>
+                              </td>
+                              
                                 <ng-form name="updatevehicleform">
                                 <td ng-if="isedit(listvehicle.vehicle_id)">
                           <input type="text"  ng-value="listvehicle.gvehicle_owner_name" ng-model="listvehicle.gvehicle_owner_name" name="gvehicle_owner_name" style="width:auto;" required>

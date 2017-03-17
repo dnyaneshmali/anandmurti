@@ -100,9 +100,11 @@ app.controller('Listaquactrl', ['$scope','$http', function($scope,$http) {
 
 
   $scope.deleteuser=function(acustomer_id,index){
+    delete $scope.unsetedit();
 
     //alert('in delete function');
-   
+
+
     swal({
       title: "Are you sure?",
       text: "Your will not be able to recover this imaginary file!",
@@ -1049,6 +1051,7 @@ app.controller('Listvehiclectrl', ['$scope','$http', function($scope,$http) {
 
 
   $scope.deletevehicle=function(vehicle_id,index){
+    delete $scope.unsetedit();
    // alert(vehicle_id);
     swal({
       title: "Are you sure?",
@@ -1194,6 +1197,7 @@ app.controller('Listaquaexpensive', ['$scope','$http', function($scope,$http){
 
 
   $scope.deleteexpensive=function(aquaexpensive_id,index){
+delete $scope.unsetedit();
    // alert(vehicle_id);
     swal({
       title: "Are you sure?",

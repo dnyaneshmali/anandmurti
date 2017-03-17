@@ -44,6 +44,7 @@ app.controller('Listgogasctrl', ['$scope','$http', function($scope,$http) {
     });
 
 $scope.deleteuser=function(gcustomer_id,index){
+  delete $scope.unsetedit();
     //alert('in delete function');
      swal({
       title: "Are you sure?",
@@ -1210,6 +1211,7 @@ $http.get("../../models/getgasvehicles.php")
 
 
   $scope.deletevehicle=function(gvehicle_id,index){
+    delete $scope.unsetedit();
     //alert('in delete function');
      swal({
       title: "Are you sure?",
@@ -1239,8 +1241,8 @@ console.log(gvehicle_id);
             });
    }
 
-$scope.isedit=function(id){
-              return id==$scope.iseditid;
+          $scope.isedit=function(id){
+                        return id==$scope.iseditid;
             }
             $scope.setedit=function(id,oldvehicle){
               if($scope.oldvehicle){
