@@ -268,7 +268,7 @@ $scope.isedit=function(id){
 app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http) {
   
    
-    $scope.reset = function(){
+   $scope.reset = function(){
       
      
         $scope.gcustomer_name = "";
@@ -282,15 +282,14 @@ app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http)
         $scope.connection_tube = "";
         $scope.connection_lighter = "";
         $scope.connection_tprice="";
+       
              
                    }
               
                     
           
-            delete $scope.reset();
+          $scope.reset();
 
-
-      
       
 $http.get("../../models/getgogascustomer.php")
     .success(function(data){
@@ -1297,6 +1296,17 @@ console.log(gvehicle_id);
 
 app.controller('Addgasinwardsctrl', ['$scope','$http', function($scope,$http) {
 
+$scope.reset = function() {
+
+  //delete $scope.data;
+  $scope.allproducts="";
+   $scope.vehiclesdata="";
+  //$scope.inwardsform.$setPristine();
+}
+
+
+
+
 
  $http.get("../../models/getgasproducts.php")
     .success(function(data){
@@ -1488,7 +1498,9 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
 
   $scope.reset = function(){
       /*$scope.connectionform.$setPristine();*/
-     
+        $scope.getinwardsproducts="";
+        $scope.availquantity="";
+         $scope.gcustomerdata="";
         $scope.product_name = "";
         $scope.product_quantity = "";
         $scope.Product_price = "";
