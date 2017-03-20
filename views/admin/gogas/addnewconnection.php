@@ -35,7 +35,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="Connection Cylinder Deposite" ng-pattern="/^\d+$/" ng-model="connection_cylinder_deposit" id="connection_cylinder_deposit" class="form-control" name="connection_cylinder_deposit" required />
+                          <input type="text" placeholder="Connection Cylinder Deposite" ng-pattern="/^\d+$/" ng-model="connection_cylinder_deposit" id="connection_cylinder_deposit" class="form-control" name="connection_cylinder_deposit" >
                         </div>
                           <p class="val-style" ng-show="connectionform.connection_cylinder_deposit.$invalid && !connectionform.connection_cylinder_deposit.$pristine" class="help-block">Accept digits only</p>
                         </div>
@@ -47,7 +47,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
-                          <input type="text" placeholder="connection depreciation" ng-pattern="/^\d+$/" ng-model="connection_depreciation" id="connection_depreciation" class="form-control" name="connection_depreciation" required />
+                          <input type="text" placeholder="connection depreciation" ng-pattern="/^\d+$/" ng-model="connection_depreciation" id="connection_depreciation" class="form-control" name="connection_depreciation" >
                         </div>
                           <p class="val-style" ng-show="connectionform.connection_depreciation.$invalid && !connectionform.connection_depreciation.$pristine" class="help-block">accept only digits required</p>
                         </div>
@@ -60,7 +60,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-list-ul"></i></span>
-                          <input type="text" placeholder="connection other" ng-model="connection_other" id="connection_other" class="form-control" name="connection_other" required />
+                          <input type="text" placeholder="connection other" ng-model="connection_other" id="connection_other" class="form-control" name="connection_other" >
                         </div>
                            <p class="val-style" ng-show="connectionform.connection_other.$invalid && !connectionform.connection_other.$pristine" class="help-block"> required</p>
                         </div>

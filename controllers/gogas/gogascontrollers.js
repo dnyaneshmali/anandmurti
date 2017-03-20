@@ -269,9 +269,7 @@ app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http)
   
    
    $scope.reset = function(){
-      
-     
-        $scope.gcustomer_name = "";
+        $scope.gcustomerdata = "";
         $scope.c_type = "";
        $scope.connection_cylinder_deposit = "";
         $scope.connection_depreciation = "";
