@@ -10,7 +10,7 @@ app.config(function($routeProvider) {
 
         .when('/myaccount', {
             templateUrl : 'myaccount.php',
-            controller  : 'Myacccountctrl'
+            controller  : 'Addmyaccountctrl'
         })
 
 

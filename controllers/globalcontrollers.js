@@ -210,10 +210,35 @@ app.controller('Adminlistctrl', ['$scope','$http', '$window', '$localStorage', '
 
 }]);
 
- app.controller('Myaccountctrl', ['$scope', function($scope) {
-   
-}]);
+app.controller('Addmyaccountctrl', ['$scope', '$http', '$window', '$localStorage', function($scope, $http, $window, $localStorage) {
+   if($window.localStorage.getItem('ssid') == ''){
 
+                window.location.replace("http://localhost/anandmurti/");
+              }
+              var csid = $window.localStorage.getItem('ssid');
+              //alert(csid);
+                 $http({
+                      method  : 'POST',
+                      url     : '../../models/admindetails.php',
+                      data    : {'admin_id':csid}, //forms user object
+                      headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                     })
+                 .success(function(data) {
+                        
+                        console.log(data);
+                      $scope.admindetails = data;
+                        //console.log(data[0].admin_username);
+                        $scope.username = data[0].admin_username;
+                        $scope.fullname = data[0].admin_name;
+                        $scope.email=data[0].admin_email;
+                        $scope.phone=data[0].admin_number;
+                        $scope.userrole=data[0].admin_role;
+                        //$scope.data.splice(index, 1);
+                        //$scope.$watch();
+
+                      });
+ 
+ }]);
 
 /*app.controller('Addexpensive' , ['$scope','$http', function($scope,$http) {
 
