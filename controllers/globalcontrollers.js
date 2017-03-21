@@ -227,7 +227,9 @@ app.controller('Addmyaccountctrl', ['$scope', '$http', '$window', '$localStorage
                         
                         console.log(data);
                       $scope.admindetails = data;
+
                         //console.log(data[0].admin_username);
+                        $scope.admin_id = data[0].admin_id;
                         $scope.username = data[0].admin_username;
                         $scope.fullname = data[0].admin_name;
                         $scope.email=data[0].admin_email;
@@ -237,6 +239,49 @@ app.controller('Addmyaccountctrl', ['$scope', '$http', '$window', '$localStorage
                         //$scope.$watch();
 
                       });
+
+                       $scope.updateadmin=function(admin_id){
+                        $scope.admin_id=angular.copy($scope.admin_id);
+                        console.log($scope.admin_id);
+                        $scope.username=angular.copy($scope.username);
+                        console.log($scope.username);
+                        $scope.fullname=angular.copy($scope.fullname);
+                        console.log($scope.fullname);
+                        $scope.email=angular.copy($scope.email);
+                        console.log($scope.email);
+                        $scope.phone=angular.copy($scope.phone);
+                        console.log($scope.phone);
+                        $scope.userrole = angular.copy($scope.userrole);
+                        console.log($scope.userrole);
+              $http({
+                     method  : 'POST',
+                     url     : '../../models/updatemyaccount.php',
+                     data    : {'admin_id':$scope.admin_id,'username':$scope.username,'fullname':$scope.fullname,'email':$scope.email,'phone':$scope.phone}, //forms user object
+                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                    })
+           
+                .success(function(data) {
+                       console.log(data);
+                    
+               swal({
+  title: "Successfully!",
+  text: "data inserted successfully!",
+  type: "success",
+  confirmButtonText: "Ok"
+});
+                        //$scope.msg = "data inserted successfully ";
+                        //$scope.addadminform.$setPristine();
+                        //delete $scope.oldadmin;
+                        //$scope.iseditid='';
+                        $scope.$watch();
+                     });
+           
+           }
+
+
+
+
+
  
  }]);
 
