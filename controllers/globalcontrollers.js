@@ -262,10 +262,10 @@ app.controller('Addmyaccountctrl', ['$scope', '$http', '$window', '$localStorage
            
                 .success(function(data) {
                        console.log(data);
-                    
+
                swal({
   title: "Successfully!",
-  text: "data inserted successfully!",
+  text: "admin updated successfully!",
   type: "success",
   confirmButtonText: "Ok"
 });
@@ -273,7 +273,7 @@ app.controller('Addmyaccountctrl', ['$scope', '$http', '$window', '$localStorage
                         //$scope.addadminform.$setPristine();
                         //delete $scope.oldadmin;
                         //$scope.iseditid='';
-                        $scope.$watch();
+                        //$scope.$watch();
                      });
            
            }
