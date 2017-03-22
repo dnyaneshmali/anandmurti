@@ -155,6 +155,7 @@ p a {color: rgba(255,255,255,.5)}
 
       <script src="http://localhost/anandmurti/assets/js/bootstrap.min.js"></script>
       <script src="http://localhost/anandmurti/assets/js/angular.min.js"></script>
+      
 
   
 	

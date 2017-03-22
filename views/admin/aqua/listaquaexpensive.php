@@ -37,7 +37,7 @@
                     <!-- <p class="text-muted font-13 m-b-30">
                       The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
                     </p> -->
-                    <table id="datatable-buttons" class="table table-striped table-bordered">
+                  <table id="example" class="display nowrap" cellspacing="0" width="100%">
                       <thead>
                         <tr>
                           <th>Person Name</th>
@@ -114,5 +114,14 @@
                 </div>
               </div>
               </div>
+<script>
+      $(document).ready(function() {
+    $('#example').DataTable( {
+        dom: 'Bfrtip',
+        buttons: [
+            'copy', 'csv', 'excel', 'pdf', 'print'
+        ]
+    } );
+} );
 
-      
+      </script>

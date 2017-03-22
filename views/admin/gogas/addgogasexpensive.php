@@ -1,5 +1,5 @@
 <div class="adda-order">
-<h1>Add Gogas Expensives</h1>
+<h1> Add Gogas expenses</h1>
 <div class="addexpensiveform" ng-controller="Addgogasexpensive">
 <form name="addexpensiveform" class="form-horizontal form-label-left" nonvalidate>
 
@@ -65,7 +65,7 @@
                           <button type="submit" ng-click="reset()" ng-disabled="!addexpensiveform.$valid" class="btn btn-primary">Cancel</button>
                           <button ng-click="insertdata(expensive)"  ng-disabled="!addexpensiveform.$valid" id="send" type="submit" class="btn btn-success">Submit</button>
 
-                          {{msg}}
+                   
                         </div>
                       </div>
                     </form>

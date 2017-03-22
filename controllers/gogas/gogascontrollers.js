@@ -1392,6 +1392,12 @@ $http({
             console.log(data);
               //$scope.msg = "data inserted successfully "
               delete $scope.gasinwards;
+              delete $scope.product;
+              delete $scope.pquantity;
+              delete $scope.tprice;
+               delete $scope.distributor_name;
+                delete $scope.vehicle;
+              
               swal({
   title: "Successfully!",
   text: "data inserted successfully!",
@@ -1654,7 +1660,7 @@ $http({
                 type: "success",
                 confirmButtonText: "Ok"
               });
-                             delete $scope.product_name ;
+        delete $scope.product_name ;
         delete $scope.product_quantity ;
        delete $scope.Product_price ;
        delete $scope.Product_tprice;
@@ -2043,7 +2049,7 @@ $scope.reset = function() {
            
                 .success(function(data) {
                       console.log(data);
-                         $scope.msg = "data inserted successfully ";
+                        // $scope.msg = "data inserted successfully ";
 
                         delete $scope.expensive;
                          swal({

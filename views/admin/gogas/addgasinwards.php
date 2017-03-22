@@ -6,7 +6,7 @@
 
 <div class="inwards-entry">
 
-<h1>Add New Entry</h1>
+<h1>Add Inwards</h1>
 <div class="inwardsform" ng-controller="Addgasinwardsctrl">
 <form name="inwardsform" class="form-horizontal form-label-left" nonvalidate>
                       <div class="item form-group">
