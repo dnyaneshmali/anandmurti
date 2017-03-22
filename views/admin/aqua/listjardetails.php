@@ -29,7 +29,7 @@
                           
                         </div>
                       </div>
-                    <table id="datatable-buttons" class="table table-striped table-bordered">
+                    <table id="datatable-responsive" class="table table-striped table-bordered dt-responsive nowrap" cellspacing="0" width="100%">
                       <thead>
                         <tr>
                           <th>Jar Type</th>
@@ -38,7 +38,7 @@
                           
                         </tr>
                       </thead>
-
+                     
 
                       <tbody>
                         <tr ng-repeat="listjar in data | filter:clisearch"  ng-form="subForm">

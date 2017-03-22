@@ -76,7 +76,7 @@
                           <input type="password" placeholder="Confirm Password" ng-model="admin.password2" id="password2" class="form-control" name="password2" match="admin.password" required />
                         </div>
                           <p style="color:red;" ng-show="addadminform.password2.$error.required && !addadminform.password2.$pristine" class="help-block"> confirm password is required.</p>
-                         <!--  <p style="color:red;" ng-show="addadminform.password2.$error.match && !addadminform.password2.$pristine" class="help-block"> confirm password is not mached.</p> -->
+                         <p style="color:red;" ng-show="addadminform.password2.$error.match && !addadminform.password2.$pristine" class="help-block"> confirm password is not mached.</p> 
                         </div>
                       </div>
                       <div class="item form-group">
