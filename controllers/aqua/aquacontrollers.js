@@ -383,12 +383,9 @@ app.controller('Listaquaorder', ['$scope','$http', function($scope,$http) {
     $scope.oldorder='';
 
   $http.get("../../models/getorderdetails.php")
-
     .success(function(data){
-
         $scope.data=data
         //console.log($scope.data);
-        
     });
 
 
