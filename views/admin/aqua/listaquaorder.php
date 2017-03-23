@@ -7,6 +7,9 @@
                   </div>
                   <div class="x_content">
                     <div class="item form-group">
+                          <input date-time ng-model="dates.maxDate" id="pickerMaxSelector" min-date="minDate" view="date" timezone="UTC" format="DD/MM/YYYY">
+      
+                          <button ng-click="exportData()" >Export</button>
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
                           <input type="text" ng-model="clisearch" id="clisearch" placeholder="&#xF002 Search for ..." name="clisearch" >
                           

@@ -5,6 +5,7 @@
 app.controller('Aquadashboardctrl', ['$scope','$http', function($scope, $http) {
 // $scope.container = {width:500, height:300, gap:10};
 
+
  $http.get("../../models/getorderreport.php")
     .success(function(data){
         $scope.reminderdata=data
@@ -470,6 +471,10 @@ console.log(order_id);
 
                       });
             }
+
+            $scope.exportData = function () {
+                alasql('SELECT * INTO XLSX("aquaorders.xlsx",{headers:true}) FROM ?',[$scope.data]);
+            };
 
             $scope.setstatus=function(order_id,index){
                swal({

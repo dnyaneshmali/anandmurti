@@ -1,5 +1,5 @@
 
-var app = angular.module('app',['ngRoute','ngStorage','validation.match','autocomplete']);
+var app = angular.module('app',['ngRoute','ngStorage','validation.match','autocomplete','datePicker']);
 
 app.config(function($routeProvider) {
     $routeProvider
@@ -185,3 +185,10 @@ app.config(function($routeProvider) {
         })*/
 
 });
+app.filter('range', function(){
+    return function(items, property, min, max) {
+      return items.filter(function(item){
+        return item[property] >= min && item[property] <= max;
+      });
+    };
+  });
