@@ -21,8 +21,8 @@ include($root."/config/config.php");
     <link href="<?php echo base_url(); ?>/build/css/custom.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/autocomplete.css" rel="stylesheet">
      <!--   <link href="<?php //echo base_url(); ?>/assets/css/custom.min.css" rel="stylesheet"> -->
-     <link href="<?php echo base_url(); ?>/assets/css/tablecss/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="<?php echo base_url(); ?>/assets/css/tablecss/buttons.bootstrap.min.css" rel="stylesheet">
+     <link href="<?php echo base_url(); ?>/assets/css/tablescss/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="<?php echo base_url(); ?>/assets/css/tablescss/buttons.bootstrap.min.css" rel="stylesheet">
      
 
      

@@ -60,9 +60,9 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
-                          <input type="text" ng-pattern="/^\d+$/" placeholder="Check id" class="form-control"ng-model="refil.check_neft_id" id="check_neft_id" class="form-control" name="check_neft_id" >
+                          <input type="text"  placeholder="Check id" class="form-control"ng-model="refil.check_neft_id" id="check_neft_id" class="form-control" name="check_neft_id" >
                           </div>
-                         <p class="val-style" ng-show="refilform.check_neft_id.$invalid && !refilform.check_neft_id.$pristine" class="help-block">accept digits only required.</p>
+                         <p class="val-style" ng-show="refilform.check_neft_id.$invalid && !refilform.check_neft_id.$pristine" class="help-block"> required.</p>
                         </div>
                       </div>
 
@@ -114,7 +114,7 @@
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12">
                           <div class="input-group">
                            <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
-                          <input type="text" ng-pattern="/^\d+$/" placeholder="NEFT Number" class="form-control"ng-model="refil.check_neft_id" id="check_neft_id" class="form-control" name="check_neft_id" >
+                          <input type="text"  placeholder="NEFT Number" class="form-control"ng-model="refil.check_neft_id" id="check_neft_id" class="form-control" name="check_neft_id" >
                           </div>
                           <p class="val-style" ng-show="refilform.check_neft_id.$invalid && !refilform.check_neft_id.$pristine" class="help-block">accept digits only required.</p>
                         </div>

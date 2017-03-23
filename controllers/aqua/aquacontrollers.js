@@ -383,9 +383,12 @@ app.controller('Listaquaorder', ['$scope','$http', function($scope,$http) {
     $scope.oldorder='';
 
   $http.get("../../models/getorderdetails.php")
+
     .success(function(data){
+
         $scope.data=data
         //console.log($scope.data);
+        
     });
 
 
@@ -455,7 +458,7 @@ console.log(order_id);
 });
 //console.log(data);
 //$scope.setrem = angular.copy(order_id);
-console.log($scope.setrem);
+//console.log($scope.setrem);
      $http({
           method  : 'POST',
           url     : '../../models/unsetreminder.php',
