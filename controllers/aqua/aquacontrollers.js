@@ -268,6 +268,13 @@ console.log(product_id);
 }]);
 
 app.controller('Addaquaorderctrl', ['$scope','$http', function($scope,$http) {
+
+
+$scope.datePicker.date = {startDate: null, endDate: null};
+
+
+
+  
    $scope.reset = function() {
   delete $scope.addaquaorder;
   $scope.addaquorderform.$setPristine();
@@ -472,8 +479,21 @@ console.log(order_id);
                       });
             }
 
-            $scope.exportData = function () {
-                alasql('SELECT * INTO XLSX("aquaorders.xlsx",{headers:true}) FROM ?',[$scope.data]);
+            $scope.exportData = function (startdt,enddt) {
+                 
+                  $http({
+                    method  : 'POST',
+                    url     : '../../models/exportexcel.php',
+                    data    : {'startdt':startdt,'enddt':enddt}, //forms user object
+                    headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                   })
+                  .success(function(data) {
+                      
+                        alasql('SELECT * INTO XLSX("aquaorders.xlsx",{headers:true}) FROM ?',[data]);
+
+                  });
+                    
+                
             };
 
             $scope.setstatus=function(order_id,index){
