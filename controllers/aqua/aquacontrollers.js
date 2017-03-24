@@ -480,9 +480,9 @@ console.log(order_id);
                       });
             }
 
-            $scope.exportData = function(startdt,enddt) {
-              /*alert(startdt);
-              alert(enddt);*/
+            $scope.exportData = function (startdt,enddt) {
+              alert(startdt);
+              alert(enddt);
                   $http({
                     method  : 'POST',
                     url     : '../../models/exportexcel.php',
@@ -494,9 +494,10 @@ console.log(order_id);
                         alasql('SELECT * INTO XLSX("aquaorders.xlsx",{headers:true}) FROM ?',[data]);
 
                   });
-                    
+        
+
                 
-            };
+            }
 
             $scope.setstatus=function(order_id,index){
                swal({
