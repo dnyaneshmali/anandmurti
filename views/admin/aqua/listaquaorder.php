@@ -7,10 +7,18 @@
                   </div>
                   <div class="x_content">
                     <div class="item form-group">
-                          <input date-time ng-model="dates.maxDate" id="pickerMaxSelector" date-change="changeMinMax" min-date="minDate" view="date" timezone="UTC" format="D MMM YYYY HH:mm">
+                       <!--  <input date-time ng-model="dates.maxDate" id="pickerMaxSelector" date-change="changeMinMax" min-date="minDate" view="date" timezone="UTC"format="D MMM YYYY HH:mm">
       
       
-                          <button ng-click="exportData('2017/02/19 00:00:00','2017/02/19 00:00:00')" >Export</button>
+                          <button ng-click="exportData('2017/02/16 00:00:00','2017/02/19 00:00:00')" >Export</button>  -->
+                             
+                        <!-- <input date-time ng-model="startdt" id="pickerMaxSelector" date-change="changeMinMax" name="startdt" min-date="mindate" view="date" timezone="UTC" format="D MMM HH:mm"> -->
+                        <input type="date" name="startdt" ng-model="startdt">
+                           <input type="date" name="enddt" ng-model="enddt">
+                           
+                           <button ng-click="exportData(startdt,enddt)" >Export</button>  
+                              
+
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
                           <input type="text" ng-model="clisearch" id="clisearch" placeholder="&#xF002 Search for ..." name="clisearch" >
                           

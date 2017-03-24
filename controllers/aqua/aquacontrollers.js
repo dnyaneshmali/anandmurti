@@ -270,7 +270,7 @@ console.log(product_id);
 app.controller('Addaquaorderctrl', ['$scope','$http', function($scope,$http) {
 
 
-$scope.datePicker.date = {startDate: null, endDate: null};
+//$scope.datePicker.date = {startDate: null, endDate: null};
 
 
 
@@ -356,6 +356,7 @@ $http({
 
 
   $scope.insertdata=function(addaquaorder){
+   
   $scope.addaquaorder = {};
 $scope.addaquaorder = angular.copy(addaquaorder);
 console.log($scope.addaquaorder);
@@ -479,8 +480,9 @@ console.log(order_id);
                       });
             }
 
-            $scope.exportData = function (startdt,enddt) {
-                 
+            $scope.exportData = function(startdt,enddt) {
+              /*alert(startdt);
+              alert(enddt);*/
                   $http({
                     method  : 'POST',
                     url     : '../../models/exportexcel.php',
