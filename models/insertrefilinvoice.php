@@ -5,7 +5,10 @@ include($root."/config/config.php");
 
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
-$rinvoice_date = date("Y-m-d H:i:s");
+date_default_timezone_set('Asia/Kolkata');
+$rinvoice_date = date("Y-m-d g:i a");
+
+
 $rinvoice_status = '0';
 $query = "INSERT INTO  tbl_refil_invoice(rinvoice_tax, rinvoice_amount, rinvoice_date, rinvoice_status, 	refil_id, gcustomer_id)
     VALUES('".$data['rinvoice_tax']."', '".$data['rinvoice_amount']."','".$rinvoice_date."','".$rinvoice_status."', '".$data['refil_id']."','".$data['gcustomer_id']."')";
