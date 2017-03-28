@@ -5,7 +5,9 @@ include($root."/config/config.php");
 
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
-$inwards_date = date("Y-m-d H:i:s");
+date_default_timezone_set('Asia/Kolkata');
+$inwards_date = date("Y-m-d g:i a");
+
 $inwards_activestatus = 1;
 $query = "INSERT INTO  tbl_gas_inwards(product_quantity,total_price,product_date, 	distributor_name,product_id,vehicle_id,inwards_activestatus)VALUES('".$data['pquantity']."','".$data['tprice']."','".$inwards_date."','".$data['distributor_name']."', '".$data['product']."','".$data['vehicle']."','".$inwards_activestatus."')";
    

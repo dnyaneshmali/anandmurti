@@ -5,7 +5,9 @@ include($root."/config/config.php");
 
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
-$order_date = date("Y-m-d H:i:s");
+date_default_timezone_set('Asia/Kolkata');
+$order_date = date("Y-m-d g:i a");
+
 $order_status = '0';
 $order_reminder = '0';
 $order_activestatus = 1;
