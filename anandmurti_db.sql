@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2017 at 08:38 AM
+-- Generation Time: Mar 29, 2017 at 09:06 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -276,6 +276,22 @@ INSERT INTO `tbl_connection_invoice` (`cinvoice_id`, `cinvoice_tax`, `cinvoice_a
 (7, 15, 1015, '2017-03-09 09:10:40', 0, 4, 2, '1'),
 (8, 12, 1012, '2017-03-09 09:12:28', 0, 2, 1, '1'),
 (9, 2, 1002, '2017-03-09 10:55:23', 0, 3, 2, '1');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `tbl_enquiry`
+--
+
+CREATE TABLE `tbl_enquiry` (
+  `enquiry_id` int(11) NOT NULL,
+  `person_name` varchar(100) NOT NULL,
+  `person_email` varchar(100) NOT NULL,
+  `person_number` varchar(20) NOT NULL,
+  `enquiry_about` varchar(100) NOT NULL,
+  `enquiry_details` varchar(1000) NOT NULL,
+  `enquiry_date` varchar(100) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
 
@@ -663,6 +679,12 @@ ALTER TABLE `tbl_connection_invoice`
   ADD KEY `connection_id` (`connection_id`);
 
 --
+-- Indexes for table `tbl_enquiry`
+--
+ALTER TABLE `tbl_enquiry`
+  ADD PRIMARY KEY (`enquiry_id`);
+
+--
 -- Indexes for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
@@ -781,6 +803,11 @@ ALTER TABLE `tbl_avehicle_details`
 --
 ALTER TABLE `tbl_connection_invoice`
   MODIFY `cinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+--
+-- AUTO_INCREMENT for table `tbl_enquiry`
+--
+ALTER TABLE `tbl_enquiry`
+  MODIFY `enquiry_id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
