@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2017 at 09:06 AM
+-- Generation Time: Mar 29, 2017 at 03:15 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -334,7 +334,16 @@ INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, 
 (26, 50, '25000', '2017-03-28 11:58:51', 'XYZ Distributor', 11, 5, '1'),
 (27, 10, '2000', '2017-03-28 12:48:22', 'ABC Distributor', 10, 4, '1'),
 (28, 1, '200', '2017-03-29 11:56:00', 'D Distributor', 10, 5, '1'),
-(29, 1, '200', '2017-03-29 12:01 pm', 'A Distributor', 10, 4, '1');
+(29, 1, '200', '2017-03-29 12:01 pm', 'A Distributor', 10, 4, '1'),
+(30, 20, '700', '2017-03-29 6:25 pm', 'ABC Distributor', 6, 5, '1'),
+(31, 20, '4000', '2017-03-29 6:29 pm', 'D Distributor', 10, 5, '1'),
+(32, 30, '15000', '2017-03-29 6:30 pm', 'XYZ Distributor', 11, 4, '1'),
+(33, 20, '3000', '2017-03-29 6:33 pm', 'Test Distributor', 9, 4, '1'),
+(34, 30, '9000', '2017-03-29 6:35 pm', 'ABC Distributor', 7, 6, '1'),
+(35, 30, '15000', '2017-03-29 6:38 pm', 'A Distributor', 11, 5, '1'),
+(36, 20, '3000', '2017-03-29 6:38 pm', 'D Distributor', 9, 5, '1'),
+(37, 30, '6000', '2017-03-29 6:39 pm', 'D Distributor', 10, 5, '1'),
+(38, 10, '2000', '2017-03-29 6:41 pm', 'ABC Distributor', 10, 4, '1');
 
 -- --------------------------------------------------------
 
@@ -436,9 +445,19 @@ INSERT INTO `tbl_gproducts` (`product_id`, `product_name`, `product_category`, `
 CREATE TABLE `tbl_gproducts_trasaction` (
   `transaction_id` int(11) NOT NULL,
   `tproduct_quantity` int(10) NOT NULL,
-  `inwards_id` int(11) NOT NULL,
+  `product_id` int(11) NOT NULL,
   `transaction_date` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `tbl_gproducts_trasaction`
+--
+
+INSERT INTO `tbl_gproducts_trasaction` (`transaction_id`, `tproduct_quantity`, `product_id`, `transaction_date`) VALUES
+(1, 20, 7, '2017-03-29 6:33 pm'),
+(3, 0, 9, '2017-03-29 6:38 pm'),
+(4, 30, 10, '2017-03-29 6:39 pm'),
+(5, 10, 10, '2017-03-29 6:41 pm');
 
 -- --------------------------------------------------------
 
@@ -551,9 +570,9 @@ CREATE TABLE `tbl_refil_details` (
 --
 
 INSERT INTO `tbl_refil_details` (`refil_id`, `refil_cylinder_type`, `refil_payment_details`, `check_neft_id`, `bank_name`, `ifsc_code`, `refil_amount`, `refil_date`, `gcustomer_id`) VALUES
-(1, '', 'test', '', '', '', 300, '2017-02-14 13:07:38', 2),
-(2, '', 'testtest', '', '', '', 300, '2017-02-14 13:09:40', 1),
-(3, '', 'payment details', '', '', '', 400, '2017-02-14 13:22:49', 1),
+(1, '3', 'test', '', '', '', 300, '2017-02-14 13:07:38', 2),
+(2, '2', 'testtest', '', '', '', 300, '2017-02-14 13:09:40', 1),
+(3, '3', 'payment details', '', '', '', 400, '2017-02-14 13:22:49', 1),
 (4, '2', 'test details', '', '', '', 600, '2017-02-14 13:24:25', 2),
 (5, '2', '', '', '', '', 200, '2017-02-16 06:51:13', 2),
 (6, '3', '21', '', '', '', 200, '2017-02-16 06:53:03', 1),
@@ -715,7 +734,7 @@ ALTER TABLE `tbl_gproducts`
 --
 ALTER TABLE `tbl_gproducts_trasaction`
   ADD PRIMARY KEY (`transaction_id`),
-  ADD KEY `inwards_id` (`inwards_id`);
+  ADD KEY `product_id` (`product_id`);
 
 --
 -- Indexes for table `tbl_gvehicle_details`
@@ -812,7 +831,7 @@ ALTER TABLE `tbl_enquiry`
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
-  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
+  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
 --
 -- AUTO_INCREMENT for table `tbl_gogasexpensives`
 --
@@ -832,7 +851,7 @@ ALTER TABLE `tbl_gproducts`
 -- AUTO_INCREMENT for table `tbl_gproducts_trasaction`
 --
 ALTER TABLE `tbl_gproducts_trasaction`
-  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 --
 -- AUTO_INCREMENT for table `tbl_gvehicle_details`
 --
