@@ -20,7 +20,6 @@
                         <th>refil_cylinder_type</th>
                           <th>refil_payment_details</th>
                           <th>refil_amount</th>
-                          
                           <th>refil_date</th>
                           <th>Action</th>
                            <th>Invoice</th>
@@ -34,7 +33,7 @@
                           <td ng-if="refil.refil_cylinder_type==1">2 Kg</td>
                           <td ng-if="refil.refil_cylinder_type==2">5 Kg</td>
                           <td ng-if="refil.refil_cylinder_type==3">12 Kg</td> 
-                            <td ng-if="!isedit(refil.refil_id)">{{refil.refil_payment_details }}</td>
+                            <td ng-if="!isedit(refil.refil_id)">{{refil.refil_payment_details}}</td>
                           <td ng-if="!isedit(refil.refil_id)">{{refil.refil_amount}}</td>
                           <td ng-if="!isedit(refil.refil_id)">{{refil.refil_date}}</td>
                         

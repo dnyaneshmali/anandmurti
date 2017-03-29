@@ -16,6 +16,9 @@ $query = "INSERT INTO tbl_gas_inwards(product_quantity,total_price,product_date,
         die('Error : ' . mysqli_error());
     }else{
     	echo"success";
+
+    	$query1 = "INSERT INTO tbl_gproducts_trasaction(tproduct_quantity,product_id,transaction_date)VALUES('".$data['pquantity']."','".$data['product']."','".$inwards_date."')";
+    		mysqli_query($connection,$query1);
     }
 	
 echo json_encode($data);
