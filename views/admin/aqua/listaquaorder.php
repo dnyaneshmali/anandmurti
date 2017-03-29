@@ -7,15 +7,17 @@
                   </div>
                   <div class="x_content">
                     <div class="item form-group">
-                         <!-- <input date-time ng-model="dates.maxDate" id="pickerMaxSelector" date-change="changeMinMax" min-date="minDate" view="date" timezone="UTC"format="D MMM YYYY HH:mm">
+                         <!--  <input date-time ng-model="dates.maxDate" id="pickerMaxSelector" date-change="changeMinMax" min-date="minDate" view="date" timezone="UTC"format="D MMM YYYY HH:mm"> 
       
       
-                          <button ng-click="exportData('2017/02/16 00:00:00','2017/02/19 00:00:00')" >Export</button>  
-                          --> 
+                          <button ng-click="exportData('2017/02/16 00:00:00','2017/02/19 00:00:00')" >Export</button>   -->
+                          
                         
                        <input type="date" ng-model="startdt"name="startdt">
                        <input type="date" ng-model="enddt"name="enddt">
-        
+         
+          
+
                             <button ng-click="exportData(startdt,enddt)">Export</button>  
                               
 

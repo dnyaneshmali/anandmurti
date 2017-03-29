@@ -92,7 +92,7 @@
                      <div class="item form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12" for="order_time">Order Time<span class="required">*</span>
                         </label>
-          <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
+                   <div class=" form-group col-md-6 col-sm-6 col-xs-12" >
                           <div class="input-group">
                              <span class="input-group-addon"><i class="fa fa-calendar"></i></span>
                           <input type="time" placeholder="Order time" class="form-control" ng-model="addaquaorder.order_time" id="order_time" class="form-control" name="order_time" required />
