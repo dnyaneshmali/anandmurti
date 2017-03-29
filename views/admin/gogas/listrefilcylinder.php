@@ -30,10 +30,10 @@
                       <tbody>
                         <tr ng-repeat="refil in refildata | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(refil.refil_id)">{{refil.gcustomer_name}}</td>
-                                <td ng-if="!isedit(refil.refil_id)">{{refil.refil_cylinder_type}}</td>
-                                <!-- <td ng-if="refil.refil_cylinder_type==1">2 Kg</td>
+                              <!--  <td ng-if="!isedit(refil.refil_id)">{{refil.refil_cylinder_type}}</td> -->
+                          <td ng-if="refil.refil_cylinder_type==1">2 Kg</td>
                           <td ng-if="refil.refil_cylinder_type==2">5 Kg</td>
-                          <td ng-if="refil.refil_cylinder_type==3">12 Kg</td> -->
+                          <td ng-if="refil.refil_cylinder_type==3">12 Kg</td> 
                             <td ng-if="!isedit(refil.refil_id)">{{refil.refil_payment_details }}</td>
                           <td ng-if="!isedit(refil.refil_id)">{{refil.refil_amount}}</td>
                           <td ng-if="!isedit(refil.refil_id)">{{refil.refil_date}}</td>
