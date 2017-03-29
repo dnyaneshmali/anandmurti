@@ -2,7 +2,7 @@
 <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>List for Gogas Expensives</h2>
+                    <h2>List Gogas Expenses</h2>
                    <!--  <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -41,7 +41,7 @@
                       <thead>
                         <tr>
                           <th>Person Name</th>
-                          <th>Expensive Description</th>
+                          <th>Expenses Description</th>
                           <th>Amount</th>
                           <th>Date</th>
                           <th colspan="2">Action</th>

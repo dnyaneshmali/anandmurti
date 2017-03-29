@@ -1,5 +1,5 @@
 <div class="adda-order">
-<h1> Add Gogas expenses</h1>
+<h1> Add Gogas Expenses</h1>
 <div class="addexpensiveform" ng-controller="Addgogasexpensive">
 <form name="addexpensiveform" class="form-horizontal form-label-left" nonvalidate>
 
@@ -32,12 +32,12 @@
                       </div>
 
                      <div class="item form-group">
-                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Expensive amount <span class="required">*</span>
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="name">Expenses amount <span class="required">*</span>
                         </label>
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addexpensiveform.exp_amount.$invalid && !addexpensiveform.exp_amount.$pristine }" >
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                          <input type="text" placeholder="expensive Amount"  ng-pattern="/^\d+$/" ng-model="expensive.exp_amount" id="exp_amount" class="form-control" name="exp_amount" required />
+                          <input type="text" placeholder="Expenses Amount"  ng-pattern="/^\d+$/" ng-model="expensive.exp_amount" id="exp_amount" class="form-control" name="exp_amount" required />
                         </div>
                           <p class="val-style" ng-show="addexpensiveform.exp_amount.$invalid && !addexpensiveform.exp_amount.$pristine" class="help-block"> amount is required in digits.</p>
                         </div>

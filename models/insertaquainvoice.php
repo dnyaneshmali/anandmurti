@@ -5,7 +5,9 @@ include($root."/config/config.php");
 
 $jsondata=file_get_contents("php://input");
 $data = json_decode($jsondata, true);
-$invoice_date = date("Y-m-d H:i:s");
+date_default_timezone_set('Asia/Kolkata');
+$invoice_date = date("Y-m-d g:i a");
+
 $invoice_status = '0';
 $invoice_activestatus = 1;
 $query = "INSERT INTO  tbl_aqua_invoice(invoice_tax, invoice_amount, invoice_date, invoice_status, order_id, acustomer_id,invoice_activestatus)

@@ -270,7 +270,7 @@ console.log(product_id);
 app.controller('Addaquaorderctrl', ['$scope','$http', function($scope,$http) {
 
 
-$scope.datePicker.date = {startDate: null, endDate: null};
+//$scope.datePicker.date = {startDate: null, endDate: null};
 
 
 
@@ -356,6 +356,7 @@ $http({
 
 
   $scope.insertdata=function(addaquaorder){
+   
   $scope.addaquaorder = {};
 $scope.addaquaorder = angular.copy(addaquaorder);
 console.log($scope.addaquaorder);
@@ -387,6 +388,7 @@ console.log($scope.addaquaorder);
 
 
 app.controller('Listaquaorder', ['$scope','$http', function($scope,$http) {
+
   $scope.iseditid='';
     $scope.oldorder='';
 
@@ -480,27 +482,51 @@ console.log(order_id);
             }
 
             $scope.exportData = function (startdt,enddt) {
-                 
+              var d = startdt;
+              var curr_date = d.getDate();
+              var curr_month = d.getMonth();
+              curr_month++;
+              var curr_year = d.getFullYear();
+              //alert(curr_date + "-" + curr_month + "-" + curr_year);
+              var sdate = curr_date + "-" + curr_month + "-" + curr_year;
+              alert(sdate);
+
+               var e = enddt;
+              var curr_date = e.getDate();
+              var curr_month = e.getMonth();
+              curr_month++;
+              var curr_year = e.getFullYear();
+              //alert(curr_date + "-" + curr_month + "-" + curr_year);
+              var edate = curr_date + "-" + curr_month + "-" + curr_year;
+              alert(edate);
+
+
+
+                                      
+
+
                   $http({
                     method  : 'POST',
                     url     : '../../models/exportexcel.php',
-                    data    : {'startdt':startdt,'enddt':enddt}, //forms user object
+                    data    : {'startdt':sdate,'enddt':edate}, //forms user object
                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
                    })
                   .success(function(data) {
-                      
+                      console.log(data);
                         alasql('SELECT * INTO XLSX("aquaorders.xlsx",{headers:true}) FROM ?',[data]);
 
                   });
-                    
+              $scope.startdt="";
+              $scope.enddt="";
+
                 
-            };
+            }
 
             $scope.setstatus=function(order_id,index){
                swal({
   title: "Successfully!",
   text: "status set successfully!",
-  type: "success",
+  type: "success",      
   confirmButtonText: "Ok"
 });
 //console.log(data);

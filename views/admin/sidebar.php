@@ -36,8 +36,8 @@
                         <li><a href="#/listjardetails">List Jar Details</a></li>
                         <li><a href="#/addvehicledetails">Add Vehicle Details</a></li>
                         <li><a href="#/listvehicledetails">List Vehicle Details</a></li>
-                           <li><a href="#/addaquaexpensive">Add Aqua Expensives</a></li>
-                        <li><a href="#/listaquaexpensive">List Aqua Expensives</a></li>
+                           <li><a href="#/addaquaexpensive">Add Aqua Expenses</a></li>
+                        <li><a href="#/listaquaexpensive">List Aqua Expenses</a></li>
                     </ul>
                   </li>
                   <li ng-hide="!isgasadmin()" ng-controller="Dashboard" ><a><i class="fa fa-fire gradient-gas"></i>     Go Gas Agency<span class="fa fa-chevron-down"></span></a>
@@ -60,8 +60,8 @@
                         <li><a href="#/listgasvehicles">List Vehicles</a></li>
                         <li><a href="#/addgasinwards">Add Inwards</a></li>
                         <li><a href="#/listgasinwards">List Inwards</a></li>
-                        <li><a href="#/addgogasexpensive">Add Gogas Expensives</a></li>
-                        <li><a href="#/listgogasexpensive">List Gogas Expensives</a></li>
+                        <li><a href="#/addgogasexpensive">Add Gogas Expenses</a></li>
+                        <li><a href="#/listgogasexpensive">List Gogas Expenses</a></li>
                     </ul>
                   </li>
 

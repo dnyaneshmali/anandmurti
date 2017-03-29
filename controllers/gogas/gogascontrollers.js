@@ -1856,7 +1856,7 @@ $scope.savesaleinvoice=function(gcustomer_id,sale_product_id,stax,stotal){
               //console.log(data);
               var qt = data[0].sale_product_quantity;
               //console.log(data[0].sale_product_quantity);
-              var pr = data[0]. sale_product_price;
+              var pr = data[0].sale_product_price;
               //console.log(data[0].sale_product_price);
               var csubotal = qt*pr;
               var ntax= $scope.stax;
