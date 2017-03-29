@@ -3,9 +3,9 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 16, 2017 at 06:53 AM
--- Server version: 10.1.13-MariaDB
--- PHP Version: 5.6.20
+-- Generation Time: Mar 29, 2017 at 08:38 AM
+-- Server version: 10.1.16-MariaDB
+-- PHP Version: 5.6.24
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -32,7 +32,7 @@ CREATE TABLE `gproducts_sale` (
   `sale_product_price` int(10) NOT NULL,
   `sale_total_price` int(10) NOT NULL,
   `product_id` int(11) NOT NULL,
-  `sale_product_date` datetime NOT NULL,
+  `sale_product_date` varchar(100) NOT NULL,
   `gcustomer_id` int(11) NOT NULL,
   `sale_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -48,7 +48,8 @@ INSERT INTO `gproducts_sale` (`sale_product_id`, `sale_product_quantity`, `sale_
 (4, 3, 10, 30, 2, '2017-03-02 10:42:37', 2, '1'),
 (5, 1, 35, 35, 6, '2017-03-08 11:28:47', 6, '1'),
 (6, 2, 150, 300, 9, '2017-03-14 13:50:14', 5, '1'),
-(7, 1, 150, 150, 9, '2017-03-15 13:30:16', 2, '1');
+(7, 1, 150, 150, 9, '2017-03-15 13:30:16', 2, '1'),
+(8, 2, 25, 50, 8, '2017-03-28 01:51:00', 4, '1');
 
 -- --------------------------------------------------------
 
@@ -64,7 +65,7 @@ CREATE TABLE `tbl_admin` (
   `admin_password` varchar(50) NOT NULL,
   `admin_number` varchar(50) NOT NULL,
   `admin_role` varchar(50) NOT NULL,
-  `admin_date` datetime NOT NULL
+  `admin_date` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
@@ -87,7 +88,7 @@ CREATE TABLE `tbl_aquaexpensives` (
   `person_name` varchar(100) NOT NULL,
   `exp_desc` varchar(100) NOT NULL,
   `exp_amount` varchar(100) NOT NULL,
-  `exp_date` datetime NOT NULL,
+  `exp_date` varchar(100) NOT NULL,
   `exp_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -109,7 +110,7 @@ INSERT INTO `tbl_aquaexpensives` (`aquaexpensive_id`, `person_name`, `exp_desc`,
 (11, 'ss', '222', '22222', '2017-03-09 11:36:49', '1'),
 (12, 'sss', 'sss', '22222', '2017-03-09 11:38:54', '1'),
 (13, 'sa', '11', '11', '2017-03-09 11:46:56', '1'),
-(14, 'ss', '22', '333', '2017-03-09 12:00:49', '1');
+(14, 'ss', '22', '333', '2017-03-09 12:00:49', '0');
 
 -- --------------------------------------------------------
 
@@ -124,7 +125,7 @@ CREATE TABLE `tbl_aqua_customers` (
   `acustomer_number` varchar(50) NOT NULL,
   `acustomer_address` varchar(255) NOT NULL,
   `acustomer_type` varchar(100) NOT NULL,
-  `acustomer_date` datetime NOT NULL,
+  `acustomer_date` varchar(100) NOT NULL,
   `acustomer_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -150,7 +151,7 @@ CREATE TABLE `tbl_aqua_invoice` (
   `invoice_id` int(11) NOT NULL,
   `invoice_tax` int(10) NOT NULL,
   `invoice_amount` int(10) NOT NULL,
-  `invoice_date` datetime NOT NULL,
+  `invoice_date` varchar(100) NOT NULL,
   `invoice_status` int(10) NOT NULL,
   `order_id` int(11) NOT NULL,
   `acustomer_id` int(11) NOT NULL,
@@ -188,7 +189,7 @@ CREATE TABLE `tbl_aqua_orders` (
   `vehicle_name` varchar(50) NOT NULL,
   `order_status` varchar(50) NOT NULL,
   `order_reminder` varchar(20) NOT NULL,
-  `order_date` datetime NOT NULL,
+  `order_date` varchar(100) NOT NULL,
   `jar_id` int(11) NOT NULL,
   `acustomer_id` int(11) NOT NULL,
   `order_activestatus` varchar(50) NOT NULL
@@ -214,7 +215,8 @@ INSERT INTO `tbl_aqua_orders` (`order_id`, `order_quantity`, `order_price`, `ord
 (15, '12', 100, 'Pune', '2017-11-29T18:30:00.000Z', '1970-01-01T17:28:00.000Z', 'HMT', '0', '1', '2017-02-17 11:40:13', 1, 4, '1'),
 (16, '8', 100, 'Pandharpur', '2017-12-29T18:30:00.000Z', '1970-01-01T18:28:00.000Z', 'HMT', '0', '0', '2017-02-17 11:42:59', 1, 1, '1'),
 (17, '10', 20, 'Shikrapur', '2017-03-12T18:30:00.000Z', '1970-01-01T07:30:00.000Z', 'HMT', '0', '1', '2017-03-03 08:24:37', 3, 4, '1'),
-(18, '12', 20, 'Shikrapur', '2017-03-14T18:30:00.000Z', '1970-01-01T09:31:00.000Z', 'HMT', '0', '0', '2017-03-08 13:46:03', 3, 8, '0');
+(18, '12', 20, 'Shikrapur', '2017-03-14T18:30:00.000Z', '1970-01-01T09:31:00.000Z', 'HMT', '0', '0', '2017-03-08 13:46:03', 3, 8, '0'),
+(19, '1', 30, 'Pune', '2017-03-28T18:30:00.000Z', '1970-01-01T08:30:00.000Z', 'Swapnil T', '0', '0', '2017-03-28 10:06:09', 5, 8, '0');
 
 -- --------------------------------------------------------
 
@@ -226,7 +228,7 @@ CREATE TABLE `tbl_avehicle_details` (
   `vehicle_id` int(11) NOT NULL,
   `vehicle_owner_name` varchar(100) NOT NULL,
   `vehicle_number` varchar(50) NOT NULL,
-  `vehicle_date` datetime NOT NULL,
+  `vehicle_date` varchar(100) NOT NULL,
   `vehicle_contact_number` int(15) NOT NULL,
   `vehicle_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -255,7 +257,7 @@ CREATE TABLE `tbl_connection_invoice` (
   `cinvoice_id` int(11) NOT NULL,
   `cinvoice_tax` int(10) NOT NULL,
   `cinvoice_amount` int(10) NOT NULL,
-  `cinvoice_date` datetime NOT NULL,
+  `cinvoice_date` varchar(100) NOT NULL,
   `cinvoice_status` int(10) NOT NULL,
   `connection_id` int(11) NOT NULL,
   `gcustomer_id` int(11) NOT NULL,
@@ -285,7 +287,7 @@ CREATE TABLE `tbl_gas_inwards` (
   `inwards_id` int(11) NOT NULL,
   `product_quantity` int(10) NOT NULL,
   `total_price` varchar(10) NOT NULL,
-  `product_date` datetime NOT NULL,
+  `product_date` varchar(100) NOT NULL,
   `distributor_name` varchar(100) NOT NULL,
   `product_id` int(11) NOT NULL,
   `vehicle_id` int(11) NOT NULL,
@@ -310,7 +312,13 @@ INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, 
 (20, 1, '25', '2017-03-08 11:59:52', 'Test Distributor', 8, 5, '1'),
 (21, 20, '500', '2017-03-08 12:02:16', 'ABC Distributor', 8, 4, '1'),
 (22, 30, '4500', '2017-03-14 13:46:31', 'Surya Company', 9, 5, '1'),
-(23, 1, '10', '2017-03-15 13:40:20', 'Test Distributor', 2, 6, '1');
+(23, 1, '10', '2017-03-15 13:40:20', 'Test Distributor', 2, 6, '1'),
+(24, 1, '35', '2017-03-17 12:09:57', 'Test Distributor', 6, 4, '1'),
+(25, 15, '525', '2017-03-17 12:12:22', 'D Distributor', 6, 5, '1'),
+(26, 50, '25000', '2017-03-28 11:58:51', 'XYZ Distributor', 11, 5, '1'),
+(27, 10, '2000', '2017-03-28 12:48:22', 'ABC Distributor', 10, 4, '1'),
+(28, 1, '200', '2017-03-29 11:56:00', 'D Distributor', 10, 5, '1'),
+(29, 1, '200', '2017-03-29 12:01 pm', 'A Distributor', 10, 4, '1');
 
 -- --------------------------------------------------------
 
@@ -323,7 +331,7 @@ CREATE TABLE `tbl_gogasexpensives` (
   `person_name` varchar(100) NOT NULL,
   `exp_desc` varchar(100) NOT NULL,
   `exp_amount` varchar(100) NOT NULL,
-  `exp_date` datetime NOT NULL,
+  `exp_date` varchar(100) NOT NULL,
   `exp_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -354,7 +362,7 @@ CREATE TABLE `tbl_gogas_customers` (
   `gcustomer_pincode` int(10) NOT NULL,
   `gcustomer_landmark` varchar(200) NOT NULL,
   `gcustomer_proof` varchar(200) NOT NULL,
-  `gcustomer_date` datetime NOT NULL,
+  `gcustomer_date` varchar(100) NOT NULL,
   `gcustomer_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -384,7 +392,7 @@ CREATE TABLE `tbl_gproducts` (
   `product_company` varchar(100) NOT NULL,
   `product_price` varchar(100) NOT NULL,
   `product_tax` varchar(100) NOT NULL,
-  `product_date` datetime NOT NULL,
+  `product_date` varchar(100) NOT NULL,
   `product_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -399,7 +407,9 @@ INSERT INTO `tbl_gproducts` (`product_id`, `product_name`, `product_category`, `
 (6, 'p5', 'lighter', 'star', '35', '5%', '2017-02-22 10:29:37', '1'),
 (7, 'hotplate', 'cooktop', 'surya', '300', '10', '2017-03-03 06:57:22', '1'),
 (8, 'p6', 'pipe', 'Star', '25', '10', '2017-03-08 07:06:26', '1'),
-(9, 'surya lighter', 'lighter', 'Surya', '150', '10', '2017-03-14 13:45:43', '1');
+(9, 'surya lighter', 'lighter', 'Surya', '150', '10', '2017-03-14 13:45:43', '1'),
+(10, 'Akash Pipes', 'pipe', 'Akash', '200', '10', '2017-03-28 08:38:20', '1'),
+(11, 'Surya Cooktop', 'cooktop', 'Surya', '500', '10', '2017-03-28 01:25:00', '1');
 
 -- --------------------------------------------------------
 
@@ -411,7 +421,7 @@ CREATE TABLE `tbl_gproducts_trasaction` (
   `transaction_id` int(11) NOT NULL,
   `tproduct_quantity` int(10) NOT NULL,
   `inwards_id` int(11) NOT NULL,
-  `transaction_date` datetime NOT NULL
+  `transaction_date` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 -- --------------------------------------------------------
@@ -424,7 +434,7 @@ CREATE TABLE `tbl_gvehicle_details` (
   `gvehicle_id` int(11) NOT NULL,
   `gvehicle_owner_name` varchar(100) NOT NULL,
   `gvehicle_number` varchar(50) NOT NULL,
-  `gvehicle_date` datetime NOT NULL,
+  `gvehicle_date` varchar(100) NOT NULL,
   `gvehicle_contact_number` int(15) NOT NULL,
   `gvehicle_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -449,7 +459,7 @@ CREATE TABLE `tbl_jar_details` (
   `jar_id` int(11) NOT NULL,
   `jar_type` varchar(50) NOT NULL,
   `jar_price` int(10) NOT NULL,
-  `jar_date` datetime NOT NULL,
+  `jar_date` varchar(100) NOT NULL,
   `jar_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -481,7 +491,7 @@ CREATE TABLE `tbl_new_connection` (
   `connection_lighter` varchar(50) NOT NULL,
   `connection_other` varchar(100) NOT NULL,
   `connection_tprice` int(10) NOT NULL,
-  `connection_date` datetime NOT NULL,
+  `connection_date` varchar(100) NOT NULL,
   `gcustomer_id` int(11) NOT NULL,
   `connection_activestatus` varchar(50) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
@@ -516,7 +526,7 @@ CREATE TABLE `tbl_refil_details` (
   `bank_name` varchar(100) NOT NULL,
   `ifsc_code` varchar(100) NOT NULL,
   `refil_amount` int(10) NOT NULL,
-  `refil_date` datetime NOT NULL,
+  `refil_date` varchar(100) NOT NULL,
   `gcustomer_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
@@ -544,7 +554,7 @@ CREATE TABLE `tbl_refil_invoice` (
   `rinvoice_id` int(11) NOT NULL,
   `rinvoice_tax` int(10) NOT NULL,
   `rinvoice_amount` int(10) NOT NULL,
-  `rinvoice_date` datetime NOT NULL,
+  `rinvoice_date` varchar(100) NOT NULL,
   `rinvoice_status` int(10) NOT NULL,
   `refil_id` int(11) NOT NULL,
   `gcustomer_id` int(11) NOT NULL
@@ -571,7 +581,7 @@ CREATE TABLE `tbl_sale_invoice` (
   `sinvoice_id` int(11) NOT NULL,
   `sinvoice_tax` int(10) NOT NULL,
   `sinvoice_amount` int(10) NOT NULL,
-  `sinvoice_date` datetime NOT NULL,
+  `sinvoice_date` varchar(100) NOT NULL,
   `sinvoice_status` int(10) NOT NULL,
   `sale_product_id` int(11) NOT NULL,
   `gcustomer_id` int(11) NOT NULL,
@@ -735,7 +745,7 @@ ALTER TABLE `tbl_sale_invoice`
 -- AUTO_INCREMENT for table `gproducts_sale`
 --
 ALTER TABLE `gproducts_sale`
-  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `tbl_admin`
 --
@@ -760,7 +770,7 @@ ALTER TABLE `tbl_aqua_invoice`
 -- AUTO_INCREMENT for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 --
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --
@@ -775,7 +785,7 @@ ALTER TABLE `tbl_connection_invoice`
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
-  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=24;
+  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=30;
 --
 -- AUTO_INCREMENT for table `tbl_gogasexpensives`
 --
@@ -790,7 +800,7 @@ ALTER TABLE `tbl_gogas_customers`
 -- AUTO_INCREMENT for table `tbl_gproducts`
 --
 ALTER TABLE `tbl_gproducts`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `tbl_gproducts_trasaction`
 --
