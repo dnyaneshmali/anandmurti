@@ -14,6 +14,7 @@
                           
                         
                        <input type="date" ng-model="startdt"name="startdt">
+                      
                        <input type="date" ng-model="enddt"name="enddt">
          
           
@@ -47,7 +48,7 @@
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_address}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_quantity}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_time | date:'h:mm'}}</td>
-                          <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_date | date:'MM/dd/yyyy'}}</td>
+                          <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_date | date:'dd/mm/yyyy'}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.vehicle_name}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">
                        <a data-toggle="tooltip" title="Delete"> <button class="btn btn-danger" ng-click="deleteorder(aquaorder.order_id);"><i class="fa fa-trash"></i></button></a></td>
