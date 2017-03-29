@@ -481,8 +481,7 @@ console.log(order_id);
             }
 
             $scope.exportData = function (startdt,enddt) {
-              alert(startdt);
-              alert(enddt);
+            
                   $http({
                     method  : 'POST',
                     url     : '../../models/exportexcel.php',
@@ -494,7 +493,8 @@ console.log(order_id);
                         alasql('SELECT * INTO XLSX("aquaorders.xlsx",{headers:true}) FROM ?',[data]);
 
                   });
-        
+              $scope.startdt="";
+              $scope.enddt="";
 
                 
             }
@@ -503,7 +503,7 @@ console.log(order_id);
                swal({
   title: "Successfully!",
   text: "status set successfully!",
-  type: "success",
+  type: "success",      
   confirmButtonText: "Ok"
 });
 //console.log(data);
