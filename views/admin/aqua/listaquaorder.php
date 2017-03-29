@@ -11,10 +11,11 @@
       
       
                           <button ng-click="exportData('2017/02/16 00:00:00','2017/02/19 00:00:00')" >Export</button>  
-                          -->    
+                          --> 
+                        
                        <input type="date" ng-model="startdt"name="startdt">
                        <input type="date" ng-model="enddt"name="enddt">
-                      
+        
                             <button ng-click="exportData(startdt,enddt)">Export</button>  
                               
 
