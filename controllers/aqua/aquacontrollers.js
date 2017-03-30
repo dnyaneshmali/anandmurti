@@ -481,8 +481,24 @@ console.log(order_id);
                       });
             }
 
-            $scope.exportData = function (startdt,enddt) {
-              var d = startdt;
+
+                /*$scope.custommindateFilter = function (item) { 
+             if($scope.startdt != null || $scope.startdt != undefined || $scope.startdt != ''){
+             if ( item.order_delivery_date > $scope.startdt ) {
+              return item;
+             }
+             }
+            };
+
+            $scope.custommaxdateFilter = function (item) { 
+             if($scope.enddt != null || $scope.enddt != undefined || $scope.enddt != ''){
+              if ( item.order_delivery_date < $scope.enddt ) {
+              return item;
+            }
+             }
+            };*/
+     $scope.exportData = function (startdt,enddt) {
+               var d = startdt;
               var curr_date = d.getDate();
               var curr_month = d.getMonth();
               curr_month++;
@@ -500,8 +516,8 @@ console.log(order_id);
               var edate = curr_date + "-" + curr_month + "-" + curr_year;
               alert(edate);
 
-
-
+                    
+     
                                       
 
 
