@@ -1484,7 +1484,7 @@ $scope.isedit=function(id){
                     })
            
                 .success(function(data) {
-                       console.log(data);
+                       //console.log(data);
                       $scope.msg = "data inserted successfully ";
                           $scope.updategasinwardsform.$setPristine();
                           delete $scope.oldinwards;
@@ -1600,9 +1600,6 @@ $http({
             var remainquantity = tquantity-epquantity;
             $scope.remainquantity = remainquantity;
           });
-
-
-
 
 
 $http({
