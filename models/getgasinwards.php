@@ -9,7 +9,7 @@ $data=array();
 
 $query="select tbl_gas_inwards.inwards_id,tbl_gas_inwards.product_quantity,tbl_gas_inwards.total_price,tbl_gas_inwards.product_date,tbl_gas_inwards.distributor_name,
 tbl_gas_inwards.product_id,tbl_gas_inwards.vehicle_id,tbl_gproducts.product_name,
-tbl_gproducts.product_id,tbl_gvehicle_details.gvehicle_id,tbl_gvehicle_details.gvehicle_owner_name from tbl_gas_inwards INNER JOIN tbl_gproducts On tbl_gas_inwards.product_id = tbl_gproducts.product_id INNER JOIN tbl_gvehicle_details ON tbl_gas_inwards.vehicle_id = tbl_gvehicle_details.gvehicle_id where inwards_activestatus = 1";
+tbl_gproducts.product_id,tbl_gvehicle_details.gvehicle_id,tbl_gvehicle_details.gvehicle_owner_name from tbl_gas_inwards INNER JOIN tbl_gproducts On tbl_gas_inwards.product_id = tbl_gproducts.product_id INNER JOIN tbl_gvehicle_details ON tbl_gas_inwards.vehicle_id = tbl_gvehicle_details.gvehicle_id where inwards_activestatus = 1 GROUP BY tbl_gas_inwards.product_id";
 
 
 

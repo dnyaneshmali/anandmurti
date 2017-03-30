@@ -1515,14 +1515,7 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
                /* */
                    }
               
-                  
-
                     $scope.reset();
-
-
-        
-
-
 
 
  $http.get("../../models/getgasinwards.php")
@@ -1651,9 +1644,6 @@ $http({
      .success(function(data) {
             console.log(data);
              // $scope.msg = "data inserted successfully "
- 
-       
-             
                              swal({
                 title: "Successfully!",
                 text: "data inserted successfully!",
