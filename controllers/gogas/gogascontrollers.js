@@ -1515,17 +1515,10 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
                /* */
                    }
               
-                  
-
                     $scope.reset();
 
 
-        
-
-
-
-
- $http.get("../../models/getgasinwards.php")
+ $http.get("../../models/getavailableproductdtls.php")
     .success(function(data){
 
         $scope.getinwardsproducts=data
@@ -1542,7 +1535,7 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
     $scope.product = {};
     $scope.product = angular.copy(product);
     //console.log($scope.product);
-
+//alert(product);
 
     $http({
           method  : 'POST',
@@ -1552,10 +1545,10 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
          })
 
      .success(function(data) {
-     // console.log(data);
+      console.log(data);
             //$scope.pquantity = '1';
-            console.log(data[0].product_quantity);
-           $scope.availquantity = data[0].product_quantity;
+            //console.log(data[0].tproduct_quantity);
+           $scope.availquantity = data[0].tproduct_quantity;
            var sremainquantity = $scope.availquantity-1;
            $scope.remainquantity = sremainquantity;
            
@@ -1602,7 +1595,7 @@ $http({
      .success(function(data) {
             //$scope.pquantity = '1';
             //console.log(data);
-            var tquantity = data[0].product_quantity;
+            var tquantity = data[0].tproduct_quantity;
             var epquantity = $scope.product_quantity;
             var remainquantity = tquantity-epquantity;
             $scope.remainquantity = remainquantity;
@@ -1651,9 +1644,6 @@ $http({
      .success(function(data) {
             console.log(data);
              // $scope.msg = "data inserted successfully "
- 
-       
-             
                              swal({
                 title: "Successfully!",
                 text: "data inserted successfully!",

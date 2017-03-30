@@ -18,7 +18,6 @@
                         <tr>
                           <th>Product Name</th>
                           <th>Total Quantity</th>
-                          <th>Remaining Quantity</th>
                           <th>Total Amount</th>
                           <th>Distributor Name</th>
                           <th>Vehicle Name</th>
@@ -31,7 +30,6 @@
                       <tbody>
                         <tr ng-repeat="inwardsentry in gasinwards | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(inwardsentry.inwards_id)">{{inwardsentry.product_name}}</td>
-                          <td ng-if="!isedit(inwardsentry.inwards_id)">{{inwardsentry.product_quantity}}</td>
                           <td ng-if="!isedit(inwardsentry.inwards_id)">{{inwardsentry.product_quantity}}</td>
                           <td ng-if="!isedit(inwardsentry.inwards_id)">{{inwardsentry.total_price}}</td>
                           <td ng-if="!isedit(inwardsentry.inwards_id)">{{inwardsentry.distributor_name}}</td>
