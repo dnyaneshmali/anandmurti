@@ -1498,6 +1498,17 @@ $scope.isedit=function(id){
 }]);
 
 
+app.controller('Productstatusctrl', ['$scope','$http', function($scope,$http) {
+
+$http.get("../../models/getproductstatus.php")
+    .success(function(data){
+        $scope.productstatus=data
+        console.log($scope.productstatus);
+    });
+
+}]);
+
+
 app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
 
   $scope.reset = function(){

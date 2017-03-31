@@ -132,6 +132,11 @@ app.config(function($routeProvider) {
             controller  : 'Listgasinwardsctrl'
         })
 
+      .when('/gasproductstatus', {
+            templateUrl : 'gogas/gasproductstatus.php',
+            controller  : 'Productstatusctrl'
+        })
+
       .when('/addgasvehicles', {
             templateUrl : 'gogas/addgasvehicles.php',
             controller  : 'Addgasvehiclectrl'

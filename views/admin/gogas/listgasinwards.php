@@ -25,8 +25,6 @@
                           <th colspan="2">Action</th>
                         </tr>
                       </thead>
-
-
                       <tbody>
                         <tr ng-repeat="inwardsentry in gasinwards | filter:clisearch" ng-form="subForm">
                           <td ng-if="!isedit(inwardsentry.inwards_id)">{{inwardsentry.product_name}}</td>
@@ -41,9 +39,9 @@
 
                               </td>
                               <ng-form name="updategasinwardsform"> 
-               <td ng-if="isedit(inwardsentry.inwards_id)">{{inwardsentry.product_name}}</td>
+                           <td ng-if="isedit(inwardsentry.inwards_id)">{{inwardsentry.product_name}}</td>
 
-               <td ng-if="isedit(inwardsentry.inwards_id)">
+                           <td ng-if="isedit(inwardsentry.inwards_id)">
                           <input type="text" ng-pattern="/^\d+$/" ng-value="inwardsentry.product_quantity" ng-model="inwardsentry.product_quantity" name="product_quantity" style="width:auto;" required>
                           <p style="color:red;" ng-show="subForm.product_quantity.$error.required"> required field.</p>
                            <p style="color:red;" ng-show="!subForm.product_quantity.$error.required && subForm.product_quantity.$invalid"> accept digits only.</p>
@@ -65,16 +63,9 @@
 
                          <td ng-if="isedit(inwardsentry.inwards_id)">
                         <button class="btn btn-success" ng-disabled="!subForm.$valid" ng-click="updateinwards(inwardsentry);"><i class="fa fa-check"></i></button> 
-
-             <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
-
-                               </td>
-
-
-
-
-                           <ng-form>
-                       
+                    <button class="btn btn-danger" value="{{btnName}}" ng-click="unsetedit($index);"><i class="fa fa-close"></i></button>
+                        </td>
+                        <ng-form>
                         </tr>
                       </tbody>
                     </table>

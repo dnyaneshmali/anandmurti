@@ -25,9 +25,7 @@ include($root."/config/config.php");
     <link href="<?php echo base_url(); ?>/assets/css/tablescss/buttons.bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/angular-datepicker.min.css" rel="stylesheet">
      
-
-
-     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.1/moment-timezone-with-data.js"></script>
   
     <link href="<?php echo base_url(); ?>/assets/css/admin-style.css" rel="stylesheet">

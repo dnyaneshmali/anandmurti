@@ -17,13 +17,10 @@ $query = "INSERT INTO gproducts_sale(sale_product_quantity,sale_product_price,sa
     }else{
     	echo"success";
 
-
-    			$updatequery = "UPDATE tbl_gproducts_trasaction SET tproduct_quantity= tproduct_quantity - '".$data['product_quantity']."', transaction_date='".$saleproduct_date."' where product_id = '".$data['product']."'";
+        $updatequery = "UPDATE tbl_gproducts_trasaction SET tproduct_quantity = tproduct_quantity - '".$data['product_quantity']."', transaction_date='".$saleproduct_date."' where product_id = '".$data['product']."'";
     		mysqli_query($connection,$updatequery);
 
     	
-
-
     }
 	
 echo json_encode($data);

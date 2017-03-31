@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 29, 2017 at 03:15 PM
+-- Generation Time: Mar 31, 2017 at 11:12 AM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -42,14 +42,7 @@ CREATE TABLE `gproducts_sale` (
 --
 
 INSERT INTO `gproducts_sale` (`sale_product_id`, `sale_product_quantity`, `sale_product_price`, `sale_total_price`, `product_id`, `sale_product_date`, `gcustomer_id`, `sale_activestatus`) VALUES
-(1, 12, 10, 120, 1, '2017-02-16 06:57:30', 3, '1'),
-(2, 3, 10, 30, 2, '2017-02-21 13:13:28', 2, '1'),
-(3, 2, 20, 40, 4, '2017-03-02 10:41:30', 4, '1'),
-(4, 3, 10, 30, 2, '2017-03-02 10:42:37', 2, '1'),
-(5, 1, 35, 35, 6, '2017-03-08 11:28:47', 6, '1'),
-(6, 2, 150, 300, 9, '2017-03-14 13:50:14', 5, '1'),
-(7, 1, 150, 150, 9, '2017-03-15 13:30:16', 2, '1'),
-(8, 2, 25, 50, 8, '2017-03-28 01:51:00', 4, '1');
+(11, 10, 200, 2000, 14, '2017-03-30 12:51 pm', 4, '1');
 
 -- --------------------------------------------------------
 
@@ -315,35 +308,12 @@ CREATE TABLE `tbl_gas_inwards` (
 --
 
 INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, `product_date`, `distributor_name`, `product_id`, `vehicle_id`, `inwards_activestatus`) VALUES
-(2, 200, '200', '2017-02-16 06:25:13', 'A Distributor', 2, 2, '1'),
-(10, 2, '20', '2017-02-21 10:59:36', 'ABC Distributor', 2, 2, '1'),
-(11, 3, '900', '2017-02-21 11:21:11', 'XYZ Distributor', 1, 2, '1'),
-(13, 0, '35', '2017-02-22 10:31:20', 'D Distributor', 6, 2, '1'),
-(14, 30, '600', '2017-02-23 06:59:25', 'XYZ Distributor', 4, 2, '1'),
-(15, 1, '10', '2017-02-24 10:30:29', 'ss', 2, 2, '1'),
-(16, 1, '300', '2017-02-24 10:30:44', 's', 1, 2, '1'),
-(17, 1, '20', '2017-02-24 10:31:04', 'hg', 4, 2, '1'),
-(18, 75, '2625', '2017-02-24 12:37:16', 'YSD Distributor', 6, 3, '0'),
-(19, 6, '1800', '2017-02-24 12:47:15', 'VPN Distributor', 1, 2, '1'),
-(20, 1, '25', '2017-03-08 11:59:52', 'Test Distributor', 8, 5, '1'),
-(21, 20, '500', '2017-03-08 12:02:16', 'ABC Distributor', 8, 4, '1'),
-(22, 30, '4500', '2017-03-14 13:46:31', 'Surya Company', 9, 5, '1'),
-(23, 1, '10', '2017-03-15 13:40:20', 'Test Distributor', 2, 6, '1'),
-(24, 1, '35', '2017-03-17 12:09:57', 'Test Distributor', 6, 4, '1'),
-(25, 15, '525', '2017-03-17 12:12:22', 'D Distributor', 6, 5, '1'),
-(26, 50, '25000', '2017-03-28 11:58:51', 'XYZ Distributor', 11, 5, '1'),
-(27, 10, '2000', '2017-03-28 12:48:22', 'ABC Distributor', 10, 4, '1'),
-(28, 1, '200', '2017-03-29 11:56:00', 'D Distributor', 10, 5, '1'),
-(29, 1, '200', '2017-03-29 12:01 pm', 'A Distributor', 10, 4, '1'),
-(30, 20, '700', '2017-03-29 6:25 pm', 'ABC Distributor', 6, 5, '1'),
-(31, 20, '4000', '2017-03-29 6:29 pm', 'D Distributor', 10, 5, '1'),
-(32, 30, '15000', '2017-03-29 6:30 pm', 'XYZ Distributor', 11, 4, '1'),
-(33, 20, '3000', '2017-03-29 6:33 pm', 'Test Distributor', 9, 4, '1'),
-(34, 30, '9000', '2017-03-29 6:35 pm', 'ABC Distributor', 7, 6, '1'),
-(35, 30, '15000', '2017-03-29 6:38 pm', 'A Distributor', 11, 5, '1'),
-(36, 20, '3000', '2017-03-29 6:38 pm', 'D Distributor', 9, 5, '1'),
-(37, 30, '6000', '2017-03-29 6:39 pm', 'D Distributor', 10, 5, '1'),
-(38, 10, '2000', '2017-03-29 6:41 pm', 'ABC Distributor', 10, 4, '1');
+(42, 20, '2000', '2017-03-30 12:47 pm', 'Surya Company', 14, 4, '1'),
+(43, 1, '25', '2017-03-30 12:48 pm', 'ABC Distributor', 13, 5, '1'),
+(44, 25, '1250', '2017-03-30 12:48 pm', 'XYZ Distributor', 12, 6, '1'),
+(45, 20, '2000', '2017-03-30 12:49 pm', 'ABC Distributor', 14, 5, '1'),
+(46, 9, '225', '2017-03-30 12:50 pm', 'D Distributor', 13, 4, '1'),
+(47, 50, '2500', '2017-03-31 10:38 am', 'Surya Company', 12, 6, '1');
 
 -- --------------------------------------------------------
 
@@ -426,15 +396,9 @@ CREATE TABLE `tbl_gproducts` (
 --
 
 INSERT INTO `tbl_gproducts` (`product_id`, `product_name`, `product_category`, `product_company`, `product_price`, `product_tax`, `product_date`, `product_activestatus`) VALUES
-(1, 'p1', 'cooktop', 'test', '300', '10%', '2017-02-14 14:07:06', '0'),
-(2, 'p2', 'cooktop', 'Surya', '10', '10%', '2017-02-16 06:24:10', '1'),
-(4, 'p4', 'cylinder', 'gogas', '20', '2%', '2017-02-22 07:00:26', '1'),
-(6, 'p5', 'lighter', 'star', '35', '5%', '2017-02-22 10:29:37', '1'),
-(7, 'hotplate', 'cooktop', 'surya', '300', '10', '2017-03-03 06:57:22', '1'),
-(8, 'p6', 'pipe', 'Star', '25', '10', '2017-03-08 07:06:26', '1'),
-(9, 'surya lighter', 'lighter', 'Surya', '150', '10', '2017-03-14 13:45:43', '1'),
-(10, 'Akash Pipes', 'pipe', 'Akash', '200', '10', '2017-03-28 08:38:20', '1'),
-(11, 'Surya Cooktop', 'cooktop', 'Surya', '500', '10', '2017-03-28 01:25:00', '1');
+(12, 'Surya Pipe', 'pipe', 'Surya', '50', '10', '2017-03-30 12:45 pm', '1'),
+(13, 'Star Lighter', 'lighter', 'Star', '25', '10', '2017-03-30 12:46 pm', '1'),
+(14, 'Surya Cooktop', 'cooktop', 'Surya', '200', '10', '2017-03-30 12:46 pm', '1');
 
 -- --------------------------------------------------------
 
@@ -454,10 +418,9 @@ CREATE TABLE `tbl_gproducts_trasaction` (
 --
 
 INSERT INTO `tbl_gproducts_trasaction` (`transaction_id`, `tproduct_quantity`, `product_id`, `transaction_date`) VALUES
-(1, 20, 7, '2017-03-29 6:33 pm'),
-(3, 0, 9, '2017-03-29 6:38 pm'),
-(4, 30, 10, '2017-03-29 6:39 pm'),
-(5, 10, 10, '2017-03-29 6:41 pm');
+(7, 50, 14, '30-03-2017 6:09 pm'),
+(8, 10, 13, '2017-03-30 12:50 pm'),
+(9, 75, 12, '2017-03-31 10:38 am');
 
 -- --------------------------------------------------------
 
@@ -632,7 +595,8 @@ INSERT INTO `tbl_sale_invoice` (`sinvoice_id`, `sinvoice_tax`, `sinvoice_amount`
 (3, 50, 170, '2017-03-08 11:41:43', 0, 1, 3, '1'),
 (4, 10, 45, '2017-03-09 08:43:35', 0, 5, 6, '1'),
 (5, 20, 50, '2017-03-10 07:08:28', 0, 2, 2, '1'),
-(6, 25, 55, '2017-03-14 08:17:47', 1, 4, 2, '1');
+(6, 25, 55, '2017-03-14 08:17:47', 1, 4, 2, '1'),
+(7, 10, 2010, '2017-03-30 1:01 pm', 1, 11, 4, '1');
 
 --
 -- Indexes for dumped tables
@@ -786,7 +750,7 @@ ALTER TABLE `tbl_sale_invoice`
 -- AUTO_INCREMENT for table `gproducts_sale`
 --
 ALTER TABLE `gproducts_sale`
-  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `sale_product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 --
 -- AUTO_INCREMENT for table `tbl_admin`
 --
@@ -831,7 +795,7 @@ ALTER TABLE `tbl_enquiry`
 -- AUTO_INCREMENT for table `tbl_gas_inwards`
 --
 ALTER TABLE `tbl_gas_inwards`
-  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=39;
+  MODIFY `inwards_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=48;
 --
 -- AUTO_INCREMENT for table `tbl_gogasexpensives`
 --
@@ -846,12 +810,12 @@ ALTER TABLE `tbl_gogas_customers`
 -- AUTO_INCREMENT for table `tbl_gproducts`
 --
 ALTER TABLE `tbl_gproducts`
-  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
+  MODIFY `product_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
 --
 -- AUTO_INCREMENT for table `tbl_gproducts_trasaction`
 --
 ALTER TABLE `tbl_gproducts_trasaction`
-  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `transaction_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 --
 -- AUTO_INCREMENT for table `tbl_gvehicle_details`
 --
@@ -881,7 +845,7 @@ ALTER TABLE `tbl_refil_invoice`
 -- AUTO_INCREMENT for table `tbl_sale_invoice`
 --
 ALTER TABLE `tbl_sale_invoice`
-  MODIFY `sinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `sinvoice_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
