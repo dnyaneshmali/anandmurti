@@ -41,7 +41,7 @@
                       <thead>
                         <tr>
                           <th>Person Name</th>
-                          <th>Expensive Description</th>
+                          <th>Expenses Description</th>
                           <th>Amount</th>
                           <th>Date</th>
                           <th colspan="2">Action</th>

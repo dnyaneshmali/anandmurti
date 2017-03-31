@@ -25,7 +25,7 @@
                         <div class=" form-group col-md-6 col-sm-6 col-xs-12" ng-class="{ 'has-error' : addexpensiveform.exp_desc.$invalid && !addexpensiveform.exp_desc.$pristine }" >
                           <div class="input-group">
                             <span class="input-group-addon"><i class="fa fa-user"></i></span>
-                          <input type="text" placeholder="expensive description" ng-model="expensive.exp_desc" id="exp_desc" class="form-control" name="exp_desc" required />
+                          <input type="text" placeholder="Expenses description" ng-model="expensive.exp_desc" id="exp_desc" class="form-control" name="exp_desc" required />
                         </div>
                           <p class="val-style" ng-show="addexpensiveform.exp_desc.$invalid && !addexpensiveform.exp_desc.$pristine" class="help-block"> Description is required.</p>
                         </div>
