@@ -16,7 +16,15 @@
                        <input type="date" ng-model="startdt"name="startdt">
                       
                        <input type="date" ng-model="enddt"name="enddt">
-         
+
+                      <!--  <input ng-model="dateFrom" type="text"/>
+                    <input ng-model="dateTo" type="text"/> -->
+                   <!--  <tr ng-repeat="aquaorder in orders | myfilter:startdt:enddt">
+                      <td>{{aquaorder.order_delivery_date | date:'dd/mm/yyyy'}}</td>
+                     
+                      
+                    </tr> -->
+                             
           
 
                             <button ng-click="exportData(startdt,enddt)">Export</button>  
