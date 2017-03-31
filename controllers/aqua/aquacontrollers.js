@@ -502,19 +502,21 @@ console.log(order_id);
             };*/
 
             $scope.changedate=function(startdt,enddt){
-
+             /* var startdt = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" +
+    d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+*/
     var d = startdt;
-              var curr_date = d.getDate();
-              var curr_month = d.getMonth();
+              var curr_date = ("0" + d.getDate()).slice(-2);
+              var curr_month = ("0" +(d.getMonth()+1)).slice(-2);
               curr_month++;
               var curr_year = d.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
               var sdate = curr_date + "-" + curr_month + "-" + curr_year;
               alert(sdate);
 
-               var e = enddt;
-              var curr_date = e.getDate();
-              var curr_month = e.getMonth();
+    var e = enddt;
+              var curr_date =("0" + e.getDate()).slice(-2);
+              var curr_month = ("0" + (e.getMonth()+1)).slice(-2);
               curr_month++;
               var curr_year = e.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
@@ -541,8 +543,8 @@ console.log(order_id);
 
      $scope.exportData = function (startdt,enddt) {
                var d = startdt;
-              var curr_date = d.getDate();
-              var curr_month = d.getMonth();
+              var curr_date = ("0" + d.getDate()).slice(-2);
+              var curr_month =  ("0" +(d.getMonth()+1)).slice(-2)
               curr_month++;
               var curr_year = d.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
@@ -550,8 +552,8 @@ console.log(order_id);
               alert(sdate);
 
                var e = enddt;
-              var curr_date = e.getDate();
-              var curr_month = e.getMonth();
+              var curr_date = ("0" + e.getDate()).slice(-2);
+              var curr_month = ("0" + (e.getMonth()+1)).slice(-2);
               curr_month++;
               var curr_year = e.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
