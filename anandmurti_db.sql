@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 31, 2017 at 11:12 AM
+-- Generation Time: Mar 31, 2017 at 03:03 PM
 -- Server version: 10.1.16-MariaDB
 -- PHP Version: 5.6.24
 
@@ -313,7 +313,7 @@ INSERT INTO `tbl_gas_inwards` (`inwards_id`, `product_quantity`, `total_price`, 
 (44, 25, '1250', '2017-03-30 12:48 pm', 'XYZ Distributor', 12, 6, '1'),
 (45, 20, '2000', '2017-03-30 12:49 pm', 'ABC Distributor', 14, 5, '1'),
 (46, 9, '225', '2017-03-30 12:50 pm', 'D Distributor', 13, 4, '1'),
-(47, 50, '2500', '2017-03-31 10:38 am', 'Surya Company', 12, 6, '1');
+(47, 50, '2500', '2017-03-31 10:38 am', 'Surya', 12, 6, '1');
 
 -- --------------------------------------------------------
 
@@ -420,7 +420,7 @@ CREATE TABLE `tbl_gproducts_trasaction` (
 INSERT INTO `tbl_gproducts_trasaction` (`transaction_id`, `tproduct_quantity`, `product_id`, `transaction_date`) VALUES
 (7, 50, 14, '30-03-2017 6:09 pm'),
 (8, 10, 13, '2017-03-30 12:50 pm'),
-(9, 75, 12, '2017-03-31 10:38 am');
+(9, 125, 12, '31-03-2017 4:22 pm');
 
 -- --------------------------------------------------------
 

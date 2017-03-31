@@ -267,8 +267,25 @@ $scope.isedit=function(id){
 
 app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http) {
   
+ /* $scope.chkhotplate=function(connection_hotplate,connection_tprice){
+
+    var basic_price = connection_tprice;
+
+    if(connection_hotplate == 'Yes'){
+
+      alert('yes');
+      
+      $scope.connection_tprice=basic_price + 200;
+    }else{
+
+      alert('No');
+      $scope.connection_tprice=basic_price - 200;
+    }
+
+  } */
    
    $scope.reset = function(){
+
         $scope.gcustomerdata = "";
         $scope.c_type = "";
        $scope.connection_cylinder_deposit = "";
@@ -281,11 +298,8 @@ app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http)
         $scope.connection_lighter = "";
         $scope.connection_tprice="";
        
-             
                    }
               
-                    
-          
           $scope.reset();
 
       

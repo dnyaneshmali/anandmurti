@@ -92,9 +92,9 @@
                         </label>
                             <div class="radio form-group col-md-6 col-sm-6 col-xs-12">
                              <span style="margin-right:10px"> <label>
-                              <input type="radio" checked="" ng-model="connection_hotplate" value="Yes" id="Yes" name="connection_hotplate" required/>yes </label></span>
+                              <input type="radio" checked="" ng-model="connection_hotplate" value="Yes" id="Yes" name="connection_hotplate" ng-change="chkhotplate(connection_hotplate,connection_tprice)" required/>yes </label></span>
                               <label>
-                              <input type="radio" ng-model="connection_hotplate" value="No" id="No" name="connection_hotplate" required/>No </label>
+                              <input type="radio" ng-model="connection_hotplate" value="No" id="No" name="connection_hotplate" ng-change="chkhotplate(connection_hotplate,connection_tprice)" required/>No </label>
                            
                               </div>
                             </div>
