@@ -1546,7 +1546,7 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
     $scope.product = {};
     $scope.product = angular.copy(product);
     //console.log($scope.product);
-//alert(product);
+    //alert(product);
 
     $http({
           method  : 'POST',
@@ -1578,6 +1578,7 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
          })
 
      .success(function(data) {
+
             //$scope.pquantity = '1';
             console.log(data);
            $scope.product_quantity = '1';
@@ -1603,7 +1604,7 @@ $http({
           headers : {'Content-Type':'application/x-www-form-urlencoded'} 
          })
 
-     .success(function(data) {
+     .success(function(data){
             //$scope.pquantity = '1';
             //console.log(data);
             var tquantity = data[0].tproduct_quantity;
@@ -1663,8 +1664,7 @@ $http({
        delete $scope.Product_price ;
        delete $scope.Product_tprice;
        delete $scope.gcustomer_name;
-
-                $scope.salegasproductform.$setPristine();
+              $scope.salegasproductform.$setPristine();
           });
 
 }
