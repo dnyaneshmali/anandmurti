@@ -92,10 +92,10 @@
                         </label>
                             <div class="radio form-group col-md-6 col-sm-6 col-xs-12">
                              <span style="margin-right:10px"> <label>
-                              <input type="radio" checked="" ng-model="connection_hotplate" value="Yes" id="Yes" name="connection_hotplate" ng-change="chkhotplate(connection_hotplate,connection_tprice)" required/>yes </label></span>
+                              <input type="radio" ng-model="connection_hotplate" value="Yes" id="Yes" name="connection_hotplate" ng-change="chkhotplate(connection_hotplate,connection_tprice)" required/>yes </label></span>
                               <label>
-                              <input type="radio" ng-model="connection_hotplate" value="No" id="No" name="connection_hotplate" ng-change="chkhotplate(connection_hotplate,connection_tprice)" required/>No </label>
-                           
+                              <input type="radio" ng-model="connection_hotplate" value="No" id="No" name="connection_hotplate"  checked   ng-change="chkhotplate(connection_hotplate,connection_tprice)" />No </label>
+                          <b> Available Quantity:</b> {{cooktopcount}}
                               </div>
                             </div>
                            <div class="item form-group">
@@ -107,6 +107,7 @@
                               <input type="radio" checked="" ng-model="connection_tube" value="Yes" id="Yes" name="connection_tube" required/>yes </label></span>
                               <label>
                               <input type="radio" ng-model="connection_tube" value="No" id="No" name="connection_tube" required/>No </label>
+                              <b>  Available Quantity:</b> {{tubecount}}
                               </div>
                               </div>
               
@@ -119,6 +120,7 @@
                               <input type="radio" checked="" ng-model="connection_lighter" value="Yes" id="Yes" name="connection_lighter" required/>yes </label></span>
                               <label>
                               <input type="radio" ng-model="connection_lighter" value="No" id="No" name="connection_lighter" required/> No </label>
+                              <b>  Available Quantity:</b> {{lightercount}}
                             </div>
                               </div>
                             </div>

@@ -266,7 +266,30 @@ $scope.isedit=function(id){
 
 
 app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http) {
+
+
+  $http.get("../../models/chklighteravail.php")
+    .success(function(data){
+        $scope.lightercount=data[0].tproduct_quantity;
+        //console.log($scope.lightercount);
+    });
   
+
+  $http.get("../../models/chkcooktopavail.php")
+    .success(function(data){
+        $scope.cooktopcount=data[0].tproduct_quantity;
+        //console.log($scope.cooktopcount);
+    });
+
+
+    $http.get("../../models/chktubeavail.php")
+    .success(function(data){
+        $scope.tubecount=data[0].tproduct_quantity;
+        console.log($scope.tubecount);
+    });
+
+
+
  $scope.chkhotplate=function(connection_hotplate,connection_tprice){
 
     var basic_price = connection_tprice;
