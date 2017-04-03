@@ -482,7 +482,7 @@ console.log(order_id);
             }
 
             $scope.exportData = function (startdt,enddt) {
-              var d = startdt;
+              /*var d = startdt;
               var curr_date = d.getDate();
               var curr_month = d.getMonth();
               curr_month++;
@@ -498,7 +498,7 @@ console.log(order_id);
               var curr_year = e.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
               var edate = curr_date + "-" + curr_month + "-" + curr_year;
-              alert(edate);
+              alert(edate);*/
 
 
 
@@ -508,7 +508,7 @@ console.log(order_id);
                   $http({
                     method  : 'POST',
                     url     : '../../models/exportexcel.php',
-                    data    : {'startdt':sdate,'enddt':edate}, //forms user object
+                    data    : {'startdt':startdt,'enddt':enddt}, //forms user object
                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
                    })
                   .success(function(data) {
