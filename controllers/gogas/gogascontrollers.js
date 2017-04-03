@@ -267,7 +267,7 @@ $scope.isedit=function(id){
 
 app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http) {
   
- /* $scope.chkhotplate=function(connection_hotplate,connection_tprice){
+ $scope.chkhotplate=function(connection_hotplate,connection_tprice){
 
     var basic_price = connection_tprice;
 
@@ -282,7 +282,7 @@ app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http)
       $scope.connection_tprice=basic_price - 200;
     }
 
-  } */
+  }
    
    $scope.reset = function(){
 
