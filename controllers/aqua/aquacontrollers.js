@@ -63,7 +63,7 @@ $scope.insertdata=function(aquacustomers){
 
 $scope.aquacustomers = angular.copy(aquacustomers);
 console.log($scope.aquacustomers);
-	 $http({
+   $http({
           method  : 'POST',
           url     : '../../models/insertaquacustomer.php',
           data    : $scope.aquacustomers, //forms user object
@@ -484,12 +484,6 @@ console.log(order_id);
                       });
             }
 
-<<<<<<< HEAD
-            $scope.exportData = function (startdt,enddt) {
-              /*var d = startdt;
-              var curr_date = d.getDate();
-              var curr_month = d.getMonth();
-=======
 
                 /*$scope.custommindateFilter = function (item) { 
              if($scope.startdt != null || $scope.startdt != undefined || $scope.startdt != ''){
@@ -514,7 +508,6 @@ console.log(order_id);
     var d = startdt;
               var curr_date = ("0" + d.getDate()).slice(-2);
               var curr_month = ("0" +(d.getMonth()+1)).slice(-2);
->>>>>>> 445c0c0efc02691b8c7aef63f1da706062f57053
               curr_month++;
               var curr_year = d.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
@@ -528,7 +521,7 @@ console.log(order_id);
               var curr_year = e.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
               var edate = curr_date + "-" + curr_month + "-" + curr_year;
-              alert(edate);*/
+              alert(edate);
 
                 $http({
                     method  : 'POST',
@@ -575,7 +568,7 @@ console.log(order_id);
                   $http({
                     method  : 'POST',
                     url     : '../../models/exportexcel.php',
-                    data    : {'startdt':startdt,'enddt':enddt}, //forms user object
+                    data    : {'startdt':sdate,'enddt':edate}, //forms user object
                     headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
                    })
                   .success(function(data) {
