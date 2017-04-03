@@ -47,7 +47,7 @@
                           <th>Order Address</th>
                           <th>Quantity</th>
                           <th>Order time</th>
-                          <th>Order Date</th>
+                          <th>Order delivery Date</th>
                           <th>Vehicle Name</th>
                           <th>Action</th>
                           <th>Order Status</th>
