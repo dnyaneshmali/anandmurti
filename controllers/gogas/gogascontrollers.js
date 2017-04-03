@@ -1458,7 +1458,7 @@ app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
  $http.get("../../models/getgasinwards.php")
     .success(function(data){
         $scope.gasinwards=data
-        console.log($scope.gasinwards);
+        //console.log($scope.gasinwards);
     });
 
     $scope.deleteinwards=function(inwards_id,index){
@@ -1512,7 +1512,7 @@ $scope.isedit=function(id){
                 console.log(settings.awesome); //1
             };
             $scope.updateinwards=function(inwardsentry,index){
-              console.log(inwardsentry);
+              //console.log(inwardsentry);
               $http({
                      method  : 'POST',
                      url     : '../../models/updateinwardslist.php',
@@ -1521,7 +1521,7 @@ $scope.isedit=function(id){
                     })
            
                 .success(function(data) {
-                       //console.log(data);
+                       console.log(data);
                       $scope.msg = "data inserted successfully ";
                           $scope.updategasinwardsform.$setPristine();
                           delete $scope.oldinwards;

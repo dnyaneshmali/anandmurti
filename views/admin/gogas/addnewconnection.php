@@ -94,7 +94,7 @@
                              <span style="margin-right:10px"> <label>
                               <input type="radio" ng-model="connection_hotplate" value="Yes" id="Yes" name="connection_hotplate" ng-change="chkhotplate(connection_hotplate,connection_tprice)" required/>yes </label></span>
                               <label>
-                              <input type="radio" ng-model="connection_hotplate" value="No" id="No" name="connection_hotplate"  checked   ng-change="chkhotplate(connection_hotplate,connection_tprice)" />No </label>
+                              <input type="radio" ng-model="connection_hotplate" value="No" id="No" name="connection_hotplate"  checked ng-change="chkhotplate(connection_hotplate,connection_tprice)" />No </label>
                           <b> Available Quantity:</b> {{cooktopcount}}
                               </div>
                             </div>
