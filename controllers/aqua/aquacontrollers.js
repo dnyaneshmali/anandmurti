@@ -389,6 +389,9 @@ console.log($scope.addaquaorder);
 
 app.controller('Listaquaorder', ['$scope','$http', function($scope,$http) {
 
+
+
+
   $scope.iseditid='';
     $scope.oldorder='';
 
@@ -481,10 +484,74 @@ console.log(order_id);
                       });
             }
 
+<<<<<<< HEAD
             $scope.exportData = function (startdt,enddt) {
               /*var d = startdt;
               var curr_date = d.getDate();
               var curr_month = d.getMonth();
+=======
+
+                /*$scope.custommindateFilter = function (item) { 
+             if($scope.startdt != null || $scope.startdt != undefined || $scope.startdt != ''){
+             if ( item.order_delivery_date > $scope.startdt ) {
+              return item;
+             }
+             }
+            };
+
+            $scope.custommaxdateFilter = function (item) { 
+             if($scope.enddt != null || $scope.enddt != undefined || $scope.enddt != ''){
+              if ( item.order_delivery_date < $scope.enddt ) {
+              return item;
+            }
+             }
+            };*/
+
+            $scope.changedate=function(startdt,enddt){
+             /* var startdt = ("0" + d.getDate()).slice(-2) + "-" + ("0"+(d.getMonth()+1)).slice(-2) + "-" +
+    d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
+*/
+    var d = startdt;
+              var curr_date = ("0" + d.getDate()).slice(-2);
+              var curr_month = ("0" +(d.getMonth()+1)).slice(-2);
+>>>>>>> 445c0c0efc02691b8c7aef63f1da706062f57053
+              curr_month++;
+              var curr_year = d.getFullYear();
+              //alert(curr_date + "-" + curr_month + "-" + curr_year);
+              var sdate = curr_date + "-" + curr_month + "-" + curr_year;
+              alert(sdate);
+
+    var e = enddt;
+              var curr_date =("0" + e.getDate()).slice(-2);
+              var curr_month = ("0" + (e.getMonth()+1)).slice(-2);
+              curr_month++;
+              var curr_year = e.getFullYear();
+              //alert(curr_date + "-" + curr_month + "-" + curr_year);
+              var edate = curr_date + "-" + curr_month + "-" + curr_year;
+              alert(edate);*/
+
+                $http({
+                    method  : 'POST',
+                    url     : '../../models/exportexcel.php',
+                    data    : {'startdt':sdate,'enddt':edate}, //forms user object
+                    headers : {'Content-Type': 'application/x-www-form-urlencoded'} 
+                   })
+                  .success(function(data) {
+                      console.log(data);
+
+                      $scope.data=data
+                        //alasql('SELECT * INTO XLSX("aquaorders.xlsx",{headers:true}) FROM ?',[data]);
+
+                  });
+
+                    
+  }
+
+
+     $scope.exportData = function (startdt,enddt) {
+               var d = startdt;
+              var curr_date = ("0" + d.getDate()).slice(-2);
+              var curr_month =  ("0" +(d.getMonth()+1)).slice(-2)
               curr_month++;
               var curr_year = d.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
@@ -492,16 +559,16 @@ console.log(order_id);
               alert(sdate);
 
                var e = enddt;
-              var curr_date = e.getDate();
-              var curr_month = e.getMonth();
+              var curr_date = ("0" + e.getDate()).slice(-2);
+              var curr_month = ("0" + (e.getMonth()+1)).slice(-2);
               curr_month++;
               var curr_year = e.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
               var edate = curr_date + "-" + curr_month + "-" + curr_year;
-              alert(edate);*/
+              alert(edate);
 
-
-
+                    
+     
                                       
 
 

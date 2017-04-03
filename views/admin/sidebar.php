@@ -60,6 +60,7 @@
                         <li><a href="#/listgasvehicles">List Vehicles</a></li>
                         <li><a href="#/addgasinwards">Add Inwards</a></li>
                         <li><a href="#/listgasinwards">List Inwards</a></li>
+                        <li><a href="#/gasproductstatus">Product Status</a></li>
                         <li><a href="#/addgogasexpensive">Add Gogas Expenses</a></li>
                         <li><a href="#/listgogasexpensive">List Gogas Expenses</a></li>
                     </ul>

@@ -17,8 +17,21 @@ $query = "INSERT INTO tbl_gas_inwards(product_quantity,total_price,product_date,
     }else{
     	echo"success";
 
-    	$query1 = "INSERT INTO tbl_gproducts_trasaction(tproduct_quantity,product_id,transaction_date)VALUES('".$data['pquantity']."','".$data['product']."','".$inwards_date."')";
-    		mysqli_query($connection,$query1);
+
+    	$checkquery = "select * from  tbl_gproducts_trasaction where product_id = '".$data['product']."'";
+    		$result = mysqli_query($connection,$checkquery);
+
+    		if(mysqli_num_rows($result)>0){
+
+    			$updatequery = "UPDATE tbl_gproducts_trasaction SET tproduct_quantity= tproduct_quantity + '".$data['pquantity']."', transaction_date='".$inwards_date."' where product_id = '".$data['product']."'";
+    		mysqli_query($connection,$updatequery);
+
+    		}else{
+
+
+    	$insertquery = "INSERT INTO tbl_gproducts_trasaction(tproduct_quantity,product_id,transaction_date)VALUES('".$data['pquantity']."','".$data['product']."','".$inwards_date."')";
+    		mysqli_query($connection,$insertquery);
+    	}
     }
 	
 echo json_encode($data);

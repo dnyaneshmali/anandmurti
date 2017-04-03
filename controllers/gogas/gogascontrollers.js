@@ -266,9 +266,49 @@ $scope.isedit=function(id){
 
 
 app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http) {
+
+
+  $http.get("../../models/chklighteravail.php")
+    .success(function(data){
+        $scope.lightercount=data[0].tproduct_quantity;
+        //console.log($scope.lightercount);
+    });
   
+
+  $http.get("../../models/chkcooktopavail.php")
+    .success(function(data){
+        $scope.cooktopcount=data[0].tproduct_quantity;
+        //console.log($scope.cooktopcount);
+    });
+
+
+    $http.get("../../models/chktubeavail.php")
+    .success(function(data){
+        $scope.tubecount=data[0].tproduct_quantity;
+        console.log($scope.tubecount);
+    });
+
+
+
+ $scope.chkhotplate=function(connection_hotplate,connection_tprice){
+
+    var basic_price = connection_tprice;
+
+    if(connection_hotplate == 'Yes'){
+
+      alert('yes');
+      
+      $scope.connection_tprice=basic_price + 200;
+    }else{
+
+      alert('No');
+      $scope.connection_tprice=basic_price - 200;
+    }
+
+  }
    
    $scope.reset = function(){
+
         $scope.gcustomerdata = "";
         $scope.c_type = "";
        $scope.connection_cylinder_deposit = "";
@@ -281,11 +321,8 @@ app.controller('Addnewconnectionctrl', ['$scope','$http', function($scope,$http)
         $scope.connection_lighter = "";
         $scope.connection_tprice="";
        
-             
                    }
               
-                    
-          
           $scope.reset();
 
       
@@ -1421,7 +1458,7 @@ app.controller('Listgasinwardsctrl', ['$scope','$http', function($scope,$http) {
  $http.get("../../models/getgasinwards.php")
     .success(function(data){
         $scope.gasinwards=data
-        console.log($scope.gasinwards);
+        //console.log($scope.gasinwards);
     });
 
     $scope.deleteinwards=function(inwards_id,index){
@@ -1475,7 +1512,7 @@ $scope.isedit=function(id){
                 console.log(settings.awesome); //1
             };
             $scope.updateinwards=function(inwardsentry,index){
-              console.log(inwardsentry);
+              //console.log(inwardsentry);
               $http({
                      method  : 'POST',
                      url     : '../../models/updateinwardslist.php',
@@ -1498,6 +1535,17 @@ $scope.isedit=function(id){
 }]);
 
 
+app.controller('Productstatusctrl', ['$scope','$http', function($scope,$http) {
+
+$http.get("../../models/getproductstatus.php")
+    .success(function(data){
+        $scope.productstatus=data
+        console.log($scope.productstatus);
+    });
+
+}]);
+
+
 app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
 
   $scope.reset = function(){
@@ -1515,17 +1563,10 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
                /* */
                    }
               
-                  
-
                     $scope.reset();
 
 
-        
-
-
-
-
- $http.get("../../models/getgasinwards.php")
+ $http.get("../../models/getavailableproductdtls.php")
     .success(function(data){
 
         $scope.getinwardsproducts=data
@@ -1542,7 +1583,7 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
     $scope.product = {};
     $scope.product = angular.copy(product);
     //console.log($scope.product);
-
+    //alert(product);
 
     $http({
           method  : 'POST',
@@ -1552,10 +1593,10 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
          })
 
      .success(function(data) {
-     // console.log(data);
+      console.log(data);
             //$scope.pquantity = '1';
-            console.log(data[0].product_quantity);
-           $scope.availquantity = data[0].product_quantity;
+            //console.log(data[0].tproduct_quantity);
+           $scope.availquantity = data[0].tproduct_quantity;
            var sremainquantity = $scope.availquantity-1;
            $scope.remainquantity = sremainquantity;
            
@@ -1574,6 +1615,7 @@ app.controller('Salegasproductctrl', ['$scope','$http', function($scope,$http) {
          })
 
      .success(function(data) {
+
             //$scope.pquantity = '1';
             console.log(data);
            $scope.product_quantity = '1';
@@ -1599,17 +1641,14 @@ $http({
           headers : {'Content-Type':'application/x-www-form-urlencoded'} 
          })
 
-     .success(function(data) {
+     .success(function(data){
             //$scope.pquantity = '1';
             //console.log(data);
-            var tquantity = data[0].product_quantity;
+            var tquantity = data[0].tproduct_quantity;
             var epquantity = $scope.product_quantity;
             var remainquantity = tquantity-epquantity;
             $scope.remainquantity = remainquantity;
           });
-
-
-
 
 
 $http({
@@ -1651,9 +1690,6 @@ $http({
      .success(function(data) {
             console.log(data);
              // $scope.msg = "data inserted successfully "
- 
-       
-             
                              swal({
                 title: "Successfully!",
                 text: "data inserted successfully!",
@@ -1665,8 +1701,7 @@ $http({
        delete $scope.Product_price ;
        delete $scope.Product_tprice;
        delete $scope.gcustomer_name;
-
-                $scope.salegasproductform.$setPristine();
+              $scope.salegasproductform.$setPristine();
           });
 
 }

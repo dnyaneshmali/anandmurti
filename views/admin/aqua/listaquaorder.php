@@ -10,16 +10,32 @@
                          <!--  <input date-time ng-model="dates.maxDate" id="pickerMaxSelector" date-change="changeMinMax" min-date="minDate" view="date" timezone="UTC"format="D MMM YYYY HH:mm"> 
       
       
+<<<<<<< HEAD
 
                           <button ng-click="exportData('2017/02/16 00:00:00','2017/02/19 00:00:00')" >Export</button>
 
+=======
+>>>>>>> 445c0c0efc02691b8c7aef63f1da706062f57053
                           <button ng-click="exportData('2017/02/16 00:00:00','2017/02/19 00:00:00')" >Export</button>   -->
                           
+
+                             
+
+
+
                         
                        <input type="date" ng-model="startdt"name="startdt">
                       
-                       <input type="date" ng-model="enddt"name="enddt">
-         
+                       <input type="date" ng-change="changedate(startdt,enddt)" ng-model="enddt"name="enddt">
+
+                      <!--  <input ng-model="dateFrom" type="text"/>
+                    <input ng-model="dateTo" type="text"/> -->
+                   <!--  <tr ng-repeat="aquaorder in orders | myfilter:startdt:enddt">
+                      <td>{{aquaorder.order_delivery_date | date:'dd/mm/yyyy'}}</td>
+                     
+                      
+                    </tr> -->
+                             
           
 
                             <button ng-click="exportData(startdt,enddt)">Export</button>  
@@ -37,7 +53,7 @@
                           <th>Order Address</th>
                           <th>Quantity</th>
                           <th>Order time</th>
-                          <th>Order Date</th>
+                          <th>Order delivery Date</th>
                           <th>Vehicle Name</th>
                           <th>Action</th>
                           <th>Order Status</th>
