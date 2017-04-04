@@ -1,5 +1,5 @@
 
-var app = angular.module('app',['ngRoute','ngStorage','validation.match','autocomplete','datePicker']);
+var app = angular.module('app',['ngRoute','ngStorage','validation.match','autocomplete','datePicker','googlechart']);
 
 app.config(function($routeProvider) {
     $routeProvider
