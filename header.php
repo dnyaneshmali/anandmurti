@@ -19,6 +19,7 @@
       <!--Font awesome file-->
 	<link rel="stylesheet" type="text/css" href="assets/css/front-style.css">
    <link rel="stylesheet" type="text/css" href="assets/css/effects.min.css">
+   
     <!-- <link rel="stylesheet" type="text/css" href=" http://localhost/anandmurti/assets/css/owl.carousel.css" /> -->
         <!--Custom stylesheet-->
    </head>

@@ -28,7 +28,14 @@ loginapp.controller('loginCtrl',['$scope', '$http', '$window', '$localStorage', 
                 //alert($scope.data2);
                 window.location.replace("views/admin/admin.php");
               }else{
+                           swal({
+                title: "something went Wrong!",
+                text: "Wrong username or password!",
+                type: "success",
+                confirmButtonText: "Ok"
+              });
                 window.location.replace("http://localhost/anandmurti/login.php");
+
               }
               //$window.location.href="views/admin/admin.php";
               

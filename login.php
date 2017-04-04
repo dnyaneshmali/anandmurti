@@ -14,6 +14,7 @@
       include($root."/config/config.php"); ?>
    <head>
       <link href="https://fonts.googleapis.com/css?family=Lato:350,700" rel="stylesheet">
+        <link href="<?php echo base_url(); ?>/assets/css/sweetalert.css" rel="stylesheet"/>
       <link  rel="stylesheet" href="<?php echo base_url(); ?>/assets/css/bootstrap.min.css">
       <script src="<?php echo base_url(); ?>/assets/js/angular.min.js"></script>
       <script src="<?php echo base_url(); ?>/assets/js/angular-route.min.js"></script>
@@ -23,6 +24,7 @@
       <script src="assets/js/angular-route.min.js" type="text/javascript"></script>
       <script src="assets/js/jquery-2.1.1.min.js" type="text/javascript"></script>
       <script src="<?php echo base_url(); ?>/assets/js/ngStorage.min.js"></script>
+      <script src="<?php echo base_url(); ?>/assets/js/sweetalert.min.js"></script>  
       <meta charset="utf-8">
      <!--  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"> -->
       <meta name="description" content="">
