@@ -46,6 +46,7 @@
                           <th>Customer Name</th>
                           <th>Order Address</th>
                           <th>Quantity</th>
+                           <th>Price</th>
                           <th>Order time</th>
                           <th>Order Date</th>
                           <th>Vehicle Name</th>
@@ -60,6 +61,7 @@
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.acustomer_name}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_address}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_quantity}}</td>
+                             <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_price}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_time | date:'h:mm'}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_date}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.vehicle_name}}</td>

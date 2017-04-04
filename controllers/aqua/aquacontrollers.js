@@ -512,7 +512,7 @@ console.log(order_id);
               var curr_year = d.getFullYear();*/
 
               var sdate = d.getFullYear() + '-' + ('0' + (d.getMonth()+1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
-              alert(sdate);
+              //alert(sdate);
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
              /* var sdate = curr_date + "-" + curr_month + "-" + curr_year;*/
               //alert(sdate);
@@ -527,7 +527,7 @@ console.log(order_id);
               //alert(edate);
 
               var edate = e.getFullYear() + '-' + ('0' + (e.getMonth()+1)).slice(-2) + '-' + ('0' + e.getDate()).slice(-2);
-              alert(edate);
+              //alert(edate);
 
 
 
