@@ -506,22 +506,31 @@ console.log(order_id);
     d.getFullYear() + " " + ("0" + d.getHours()).slice(-2) + ":" + ("0" + d.getMinutes()).slice(-2);
 */
     var d = startdt;
-              var curr_date = ("0" + d.getDate()).slice(-2);
-              var curr_month = ("0" +(d.getMonth()+1)).slice(-2);
-              curr_month++;
-              var curr_year = d.getFullYear();
-              //alert(curr_date + "-" + curr_month + "-" + curr_year);
-              var sdate = curr_date + "-" + curr_month + "-" + curr_year;
+              /*var curr_date = ("0" + d.getDate()).slice(-2);
+              var curr_month = ("0" +d.getMonth()).slice(-2);
+              //alert(curr_month);
+              var curr_year = d.getFullYear();*/
+
+              var sdate = d.getFullYear() + '-' + ('0' + (d.getMonth()+1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
               alert(sdate);
+              //alert(curr_date + "-" + curr_month + "-" + curr_year);
+             /* var sdate = curr_date + "-" + curr_month + "-" + curr_year;*/
+              //alert(sdate);
 
     var e = enddt;
-              var curr_date =("0" + e.getDate()).slice(-2);
-              var curr_month = ("0" + (e.getMonth()+1)).slice(-2);
+             /* var curr_date =("0" + e.getDate()).slice(-2);
+              var curr_month = ("0" + e.getMonth()).slice(-2);
               curr_month++;
               var curr_year = e.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
-              var edate = curr_date + "-" + curr_month + "-" + curr_year;
+              var edate = curr_date + "-" + curr_month + "-" + curr_year;*/
+              //alert(edate);
+
+              var edate = e.getFullYear() + '-' + ('0' + (e.getMonth()+1)).slice(-2) + '-' + ('0' + e.getDate()).slice(-2);
               alert(edate);
+
+
+
 
                 $http({
                     method  : 'POST',
@@ -542,26 +551,31 @@ console.log(order_id);
 
 
      $scope.exportData = function (startdt,enddt) {
-               var d = startdt;
+              /* var d = startdt;
               var curr_date = ("0" + d.getDate()).slice(-2);
-              var curr_month =  ("0" +(d.getMonth()+1)).slice(-2)
+              var curr_month =  ("0" +d.getMonth()).slice(-2)
               curr_month++;
               var curr_year = d.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
               var sdate = curr_date + "-" + curr_month + "-" + curr_year;
-              alert(sdate);
+              //alert(sdate);
 
                var e = enddt;
               var curr_date = ("0" + e.getDate()).slice(-2);
-              var curr_month = ("0" + (e.getMonth()+1)).slice(-2);
+              var curr_month = ("0" + e.getMonth()).slice(-2);
               curr_month++;
               var curr_year = e.getFullYear();
               //alert(curr_date + "-" + curr_month + "-" + curr_year);
               var edate = curr_date + "-" + curr_month + "-" + curr_year;
-              alert(edate);
-
+              //alert(edate);
+*/
                     
-     
+                     var d = startdt;
+                      var sdate = d.getFullYear() + '-' + ('0' + (d.getMonth()+1)).slice(-2) + '-' + ('0' + d.getDate()).slice(-2);
+              alert(sdate);
+               var e = enddt;
+                 var edate = e.getFullYear() + '-' + ('0' + (e.getMonth()+1)).slice(-2) + '-' + ('0' + e.getDate()).slice(-2);
+              alert(edate);
                                       
 
 
