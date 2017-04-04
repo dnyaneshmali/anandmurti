@@ -63,7 +63,7 @@ $scope.insertdata=function(aquacustomers){
 
 $scope.aquacustomers = angular.copy(aquacustomers);
 console.log($scope.aquacustomers);
-	 $http({
+   $http({
           method  : 'POST',
           url     : '../../models/insertaquacustomer.php',
           data    : $scope.aquacustomers, //forms user object
