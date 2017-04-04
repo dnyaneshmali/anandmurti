@@ -16,8 +16,7 @@ app.controller('Aquadashboardctrl', ['$scope','$http', function($scope, $http) {
         for(var i=0, l=$scope.reminderdata.length; i<l; i++ ){
 
           chartData.push({c: [{v: $scope.reminderdata[i].order_month }, {v: $scope.reminderdata[i].order_total}, {v: "orange"}]});
-          //console.log(chartData);
-           console.log("work" );
+          
         }
 
 
