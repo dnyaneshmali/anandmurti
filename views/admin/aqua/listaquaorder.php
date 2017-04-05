@@ -1,12 +1,12 @@
-<div class="listaquaorder" ng-controller="Listaquaorder">
-<div class="col-md-12 col-sm-12 col-xs-12">
+<div  class="listaquaorder" ng-controller="Listaquaorder">
+<div id="datatable-buttons"class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel" >
                   <div class="x_title">
                     <h2>List Aqua Order</h2>
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    <div class="item form-group">
+                    <div  class="item form-group">
                          <!--  <input date-time ng-model="dates.maxDate" id="pickerMaxSelector" date-change="changeMinMax" min-date="minDate" view="date" timezone="UTC"format="D MMM YYYY HH:mm"> 
       
       
@@ -17,7 +17,6 @@
 
 
 
-                        
                        <input type="date" ng-model="startdt"name="startdt">
                       
                        <input type="date" ng-change="changedate(startdt,enddt)" ng-model="enddt"name="enddt">
@@ -33,6 +32,7 @@
           
 
                             <button ng-click="exportData(startdt,enddt)">Export</button>  
+                            <button  ng-click="printData(datatable-buttons)">Print</button>
                               
 
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
@@ -40,7 +40,7 @@
                           
                         </div>
                       </div>
-                    <table id="datatable-buttons" class="table table-striped table-bordered">
+                    <table id="datatablebuttons" class="table table-striped table-bordered">
                       <thead>
                         <tr>
                           <th>Customer Name</th>
@@ -176,6 +176,21 @@ input#duedate {
     visibility:visible;
   }
 }
+
+
+
+ @media screen {
+  
+
+}
+
+  #datatablebuttons * {
+    visibility:visible;
+  }
+}
+
+
+
       </style>
 
 
