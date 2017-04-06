@@ -112,6 +112,128 @@
                           <p class="val-style" ng-show="addaquorderform.vehicle.$invalid && !addaquorderform.vehicle.$pristine" class="help-block"> time required</p>
                         </div>
                       </div>
+
+
+
+
+
+
+
+
+                      <div class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="textarea">Payment details <span class="required">*</span>
+                        </label>
+                        <div class="col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                              <span class="input-group-addon"><i class="fa fa-list-ul "></i></span>
+                          <select class="form-control" ng-model="addaquaorder.aqua_payment_details" name="aqua_payment_details" class="{'has-errors' : addaquorderform.aqua_payment_details.$invalid, 'no-errors' : addaquorderform.aqua_payment_details.$valid}" ng-required="true">
+                             <option value="" selected>Payment details</option>
+                            <option value="1" selected>Check</option>
+                            <option value="Cash">Cash</option>
+                            <option value="2">NEFT</option>
+                            </select>
+                        </div>
+                        <div class="error-container" ng-show="addaquorderform.aqua_payment_details.$dirty && addaquorderform.aqua_payment_details.$invalid" ng-messages="addaquorderform.aqua_payment_details.$error">
+                         <div class="val-style" class="error" ng-message="required">select payment details </div>
+                          </div>
+                        </div>
+                      </div>
+
+
+                         <div ng-if="addaquaorder.aqua_payment_details==1" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="aqua_payment_details">check Number <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+                          <input type="text"  placeholder="Check id" class="form-control"ng-model="addaquaorder.check_neft_id" id="check_neft_id" class="form-control" name="check_neft_id" >
+                          </div>
+                         <p class="val-style" ng-show="addaquorderform.check_neft_id.$invalid && !addaquorderform.check_neft_id.$pristine" class="help-block"> required.</p>
+                        </div>
+                      </div>
+                         
+                      
+
+                          
+                           <div ng-if="addaquaorder.aqua_payment_details==1" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="aqua_payment_details">Bank Name <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+                          <input type="text"  placeholder="bank name" class="form-control"ng-model="addaquaorder.bank_name" id="bank_name" class="form-control" name="bank_name" >
+                          </div>
+                          <p class="val-style" ng-show="addaquorderform.bank_name.$invalid && !addaquorderform.bank_name.$pristine" class="help-block">required</p>
+                        </div>
+                      </div>
+                        
+                        <div ng-if="addaquaorder.aqua_payment_details==1" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="aqua_payment_details">IFSC code <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+                          <input type="text"  placeholder="IFSC code" class="form-control"ng-model="addaquaorder.ifsc_code" id="ifsc_code" class="form-control" name="ifsc_code" >
+                          </div>
+                         <p class="val-style" ng-show="addaquorderform.ifsc_code.$invalid && !addaquorderform.ifsc_code.$pristine" class="help-block"> required.</p>
+                        </div>
+                      </div>
+
+                      
+
+
+                        <div ng-if="addaquaorder.aqua_payment_details==2" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="aqua_payment_details">NEFT Number <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+                          <input type="text"  placeholder="Check id" class="form-control"ng-model="addaquaorder.check_neft_id" id="check_neft_id" class="form-control" name="check_neft_id" >
+                          </div>
+                         <p class="val-style" ng-show="addaquorderform.check_neft_id.$invalid && !addaquorderform.check_neft_id.$pristine" class="help-block"> required.</p>
+                        </div>
+                      </div>
+                        
+                        <div ng-if="addaquaorder.aqua_payment_details==2" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="aqua_payment_details">Bank Name <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+                          <input type="text"  placeholder="bank name" class="form-control"ng-model="addaquaorder.bank_name" id="bank_name" class="form-control" name="bank_name" >
+                          </div>
+                         <p class="val-style" ng-show="addaquorderform.bank_name.$invalid && !addaquorderform.bank_name.$pristine" class="help-block"> required.</p>
+                        </div>
+                      </div>
+                           
+                             <div ng-if="addaquaorder.aqua_payment_details==2" class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="aqua_payment_details">IFSC code <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
+                          <input type="text"  placeholder="IFSC code" class="form-control"ng-model="addaquaorder.ifsc_code" id="ifsc_code" class="form-control" name="ifsc_code" >
+                          </div>
+                         <p class="val-style" ng-show="addaquorderform.ifsc_code.$invalid && !addaquorderform.ifsc_code.$pristine" class="help-block"> required.</p>
+                        </div>
+                      </div>
+
+                       
+                       <div  class="item form-group">
+                        <label class="control-label col-md-3 col-sm-3 col-xs-12" for="refil_payment_details">Cash amount <span class="required">*</span>
+                        </label>
+                         <div class=" form-group col-md-6 col-sm-6 col-xs-12">
+                          <div class="input-group">
+                           <span class="input-group-addon"><i class="fa fa-rupee"></i></span>
+                          <input type="text" ng-pattern="/^\d+$/" placeholder="Amount recieved" class="form-control"ng-model="addaquaorder.aqua_amount" id="aqua_amount" class="form-control" name="aqua_amount" >
+                          </div>
+                         <p class="val-style" ng-show="addaquorderform.aqua_amount.$invalid && !addaquorderform.aqua_amount.$pristine" class="help-block">accept only digits required</p>
+                        </div>
+                      </div>
+                       
+
+
+
                       <div class="ln_solid"></div>
                       <div class="form-group">
                         <div class="col-md-6 col-md-offset-5 col-sm-6 col-sm-offset-3 col-xs-6 col-xs-offset-4">
