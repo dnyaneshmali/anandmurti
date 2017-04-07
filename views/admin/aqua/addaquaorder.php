@@ -214,7 +214,7 @@
                            <span class="input-group-addon"><i class="fa fa-pencil-square-o"></i></span>
                           <input type="text"  placeholder="IFSC code" class="form-control"ng-model="addaquaorder.ifsc_code" id="ifsc_code" class="form-control" name="ifsc_code" >
                           </div>
-                         <p class="val-style" ng-show="addaquorderform.ifsc_code.$invalid && !addaquorderform.ifsc_code.$pristine" class="help-block"> required.</p>
+                         <p class="val-style" ng-show="addaquorderform. .$invalid && !addaquorderform.ifsc_code.$pristine" class="help-block"> required.</p>
                         </div>
                       </div>
 
