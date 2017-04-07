@@ -24,26 +24,8 @@ include($root."/config/config.php");
      <link href="<?php echo base_url(); ?>/assets/css/tablescss/dataTables.bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/tablescss/buttons.bootstrap.min.css" rel="stylesheet">
     <link href="<?php echo base_url(); ?>/assets/css/angular-datepicker.min.css" rel="stylesheet">
-     
-<script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.10.6/moment.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.4.1/moment-timezone-with-data.js"></script>
-  
-    <link href="<?php echo base_url(); ?>/assets/css/admin-style.css" rel="stylesheet">
-    <script src="<?php echo base_url(); ?>/assets/js/angular.min.js"></script>
-    <script src="<?php echo base_url(); ?>/assets/js/angular-route.min.js"></script>
-    <script src="<?php echo base_url(); ?>/assets/js/angular-validation-match.min.js"></script>
-    <script src="<?php echo base_url(); ?>/assets/js/autocomplete.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-google-chart/0.1.0/ng-google-chart.js" type="text/javascript"></script>    
-    <script src="<?php echo base_url(); ?>/assets/js/angular-datepicker.min.js"></script>
-    <script src="<?php echo base_url(); ?>/assets/js/alasql.min.js"></script>
-    <script src="<?php echo base_url(); ?>/assets/js/xlsx.core.min.js"></script>
-    <script src="<?php echo base_url(); ?>/config/app.js"></script>
-    <script src="<?php echo base_url(); ?>/controllers/globalcontrollers.js"></script>
-    <script src="<?php echo base_url(); ?>/assets/js/ngStorage.min.js"></script>  
-    <script src="<?php echo base_url(); ?>/controllers/aqua/aquacontrollers.js"></script>  
-    <script src="<?php echo base_url(); ?>/controllers/gogas/gogascontrollers.js"></script>
-    <script src="<?php echo base_url(); ?>/controllers/LoginController.js"></script>
-    <script src="<?php echo base_url(); ?>/assets/js/sweetalert.min.js"></script>   
+    <link href="<?php echo base_url(); ?>/assets/css/angular-datatables.min.css" rel="stylesheet">
+ <link rel="stylesheet" href="https://cdn.datatables.net/buttons/1.2.2/css/buttons.dataTables.min.css">
    
   </head>
   <body class="nav-md" ng-app="app">

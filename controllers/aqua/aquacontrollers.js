@@ -3,8 +3,6 @@
  */
 
 app.controller('Aquadashboardctrl', ['$scope','$http', function($scope, $http) {
-// $scope.container = {width:500, height:300, gap:10};
-
 
  $http.get("../../models/getorderreport.php")
     .success(function(data){
@@ -41,6 +39,41 @@ $scope.chartObject.options = {
     };
     });
 
+ $http.get("../../models/expensereport.php")
+    .success(function(data){
+      console.log(data);
+        $scope.ereminderdata=data
+        console.log($scope.ereminderdata);
+        //console.log($scope.reminderdata[0].order_total);
+
+        var chartData1=[];
+        for(var i=0, l=$scope.ereminderdata.length; i<l; i++ ){
+
+          chartData1.push({c: [{v: $scope.ereminderdata[i].expense_month }, {v: $scope.ereminderdata[i].exp_total}, {v: "red"}]});
+          
+        }
+
+
+$scope.chartObject1 = {
+type: 'ColumnChart',
+data: {
+"cols": [
+{label: "frameworks", type: "string"},
+{label: "expense", type: "number"},
+{role: "style", type: "string"}
+],
+"rows":  chartData1
+}
+
+};
+
+$scope.chartObject1.options = {
+        'title': 'Annadmurti Aqua Monthly Expense',
+        'color': 'red'
+        
+
+    };
+    });
 
 
 
@@ -386,8 +419,28 @@ console.log($scope.addaquaorder);
   }]);
 
 
-app.controller('Listaquaorder', ['$scope','$http', function($scope,$http) {
+app.controller('Listaquaorder', ['$scope','$http','DTOptionsBuilder', function($scope,$http,DTOptionsBuilder) {
 
+
+// $scope.dtOptions = DTOptionsBuilder.newOptions()
+//             .withPaginationType('full_numbers')
+//             .withButtons([
+//                 'excel',
+//                 'pdf'
+//             ])
+//             .withDisplayLength(10);
+
+  $scope.dtOptions = DTOptionsBuilder.newOptions()
+        .withDOM('frtip')
+        .withPaginationType('full_numbers')
+        // Active Buttons extension
+        .withButtons([
+          'colvis',
+            'pdf',
+           'excel',
+           
+            
+        ]);
 
 
 
@@ -541,37 +594,37 @@ console.log(order_id);
                 
             }
              
-           $scope.printData = function(datatablebuttons) {
-             printElement(document.getElementById("datatablebuttons"));
-        window.print();
+//            $scope.printData = function(datatablebuttons) {
+//              printElement(document.getElementById("datatablebuttons"));
+//         window.print();
 
-   function printElement(elem, append, delimiter) {
-    var domClone = elem.cloneNode(true);
+//    function printElement(elem, append, delimiter) {
+//     var domClone = elem.cloneNode(true);
 
-    var $datatablebuttons = document.getElementById("datatablebuttons");
+//     var $datatablebuttons = document.getElementById("datatablebuttons");
 
-    if (!$datatablebuttons) {
-        var $datatablebuttons = document.createElement("div");
-        $datatablebuttons.id = "datatablebuttons";
-        document.body.appendChild($datatablebuttons);
-    }
+//     if (!$datatablebuttons) {
+//         var $datatablebuttons = document.createElement("div");
+//         $datatablebuttons.id = "datatablebuttons";
+//         document.body.appendChild($datatablebuttons);
+//     }
 
-    if (append !== true) {
-        $datatablebuttons.innerHTML = "";
-    }
+//     if (append !== true) {
+//         $datatablebuttons.innerHTML = "";
+//     }
 
-    else if (append === true) {
-        if (typeof(delimiter) === "string") {
-            $datatablebuttons.innerHTML += delimiter;
-        }
-        else if (typeof(delimiter) === "object") {
-            $datatablebuttons.appendChlid(delimiter);
-        }
-    }
+//     else if (append === true) {
+//         if (typeof(delimiter) === "string") {
+//             $datatablebuttons.innerHTML += delimiter;
+//         }
+//         else if (typeof(delimiter) === "object") {
+//             $datatablebuttons.appendChlid(delimiter);
+//         }
+//     }
 
-    $datatablebuttons.appendChild(domClone);
-  }
-}
+//     $datatablebuttons.appendChild(domClone);
+//   }
+// }
 
 
       

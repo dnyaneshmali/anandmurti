@@ -35,12 +35,15 @@
                             <button  ng-click="printData(datatable-buttons)">Print</button>
                               
 
-                         <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
+                        <!--  <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
                           <input type="text" ng-model="clisearch" id="clisearch" placeholder="&#xF002 Search for ..." name="clisearch" >
                           
-                        </div>
+                        </div> -->
                       </div>
-                    <table id="datatablebuttons" class="table table-striped table-bordered">
+
+  
+
+                    <table datatable="ng" dt-options="dtOptions" dt-columns="dtColumns" dt-disable-deep-watchers="true" class="table table-striped table-bordered hover">
                       <thead>
                         <tr>
                           <th>Customer Name</th>
@@ -303,13 +306,5 @@ input#duedate {
               </div>
               </div>
 <script type="text/javascript">
-$(document).ready(function() {
-    $('#example').DataTable( {
-        dom: 'Bfrtip',
-        buttons: [
-            'copy', 'csv', 'excel', 'pdf', 'print'
-        ]
-    } );
-} );
 
 </script>
