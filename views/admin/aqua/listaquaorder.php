@@ -47,6 +47,8 @@
                           <th>Order Address</th>
                           <th>Quantity</th>
                            <th>Price</th>
+                           <th>PaymentDetails</th>
+                           <th>RecievedAmount</th>
                           <th>Order time</th>
                           <th>Order Date</th>
                           <th>Vehicle Name</th>
@@ -62,6 +64,15 @@
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_address}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_quantity}}</td>
                              <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_price}}</td>
+                              
+                               <td ng-if="aquaorder.aqua_payment_details==1">check</td>
+                               <td ng-if="aquaorder.aqua_payment_details==2">NEFT</td>
+                               <td ng-if="aquaorder.aqua_payment_details==3">cash</td>
+
+
+
+                           <!--  <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.aqua_payment_details}}</td> -->
+                             <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.aqua_amount}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_time | date:'h:mm'}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.order_delivery_date}}</td>
                           <td ng-if="!isedit(aquaorder.order_id)">{{aquaorder.vehicle_name}}</td>
