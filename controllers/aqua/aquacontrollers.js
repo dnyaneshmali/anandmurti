@@ -541,7 +541,7 @@ console.log(order_id);
                 
             }
              
-           $scope.printData = function(datatablebuttons) {
+          /* $scope.printData = function(datatablebuttons) {
              printElement(document.getElementById("datatablebuttons"));
         window.print();
 
@@ -572,7 +572,7 @@ console.log(order_id);
     $datatablebuttons.appendChild(domClone);
   }
 }
-
+*/
 
       
  

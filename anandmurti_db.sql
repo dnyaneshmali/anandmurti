@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Apr 04, 2017 at 12:24 PM
+-- Generation Time: Apr 07, 2017 at 09:10 AM
 -- Server version: 10.1.13-MariaDB
 -- PHP Version: 5.6.20
 
@@ -187,6 +187,10 @@ CREATE TABLE `tbl_aqua_orders` (
   `order_delivery_date` date NOT NULL,
   `order_delivery_time` varchar(50) NOT NULL,
   `vehicle_name` varchar(50) NOT NULL,
+  `check_neft_id` varchar(100) NOT NULL,
+  `bank_name` varchar(100) NOT NULL,
+  `ifsc_code` varchar(100) NOT NULL,
+  `aqua_amount` int(11) NOT NULL,
   `order_status` varchar(50) NOT NULL,
   `order_reminder` varchar(20) NOT NULL,
   `order_date` varchar(100) NOT NULL,
@@ -199,17 +203,19 @@ CREATE TABLE `tbl_aqua_orders` (
 -- Dumping data for table `tbl_aqua_orders`
 --
 
-INSERT INTO `tbl_aqua_orders` (`order_id`, `order_quantity`, `order_price`, `order_delivery_address`, `order_delivery_date`, `order_delivery_time`, `vehicle_name`, `order_status`, `order_reminder`, `order_date`, `jar_id`, `acustomer_id`, `order_activestatus`) VALUES
-(20, '1', 100, 'pune', '2017-03-03', '1969-12-31T19:41:00.000Z', 'test2', '0', '0', '30-03-2017 11:22 am', 1, 1, '1'),
-(22, '2', 60, 'wagholi', '2017-04-03', '1969-12-31T20:30:00.000Z', 'test owner', '0', '0', '30-03-2017 11:24 am', 5, 5, '1'),
-(23, '1', 30, 'kharadi', '2017-04-04', '1970-01-01T04:30:00.000Z', 'Swapnil T', '0', '0', '30-03-2017 11:25 am', 5, 6, '1'),
-(24, '1', 100, 'ss', '2017-04-01', '1970-01-01T02:29:00.000Z', 'test owner', '0', '0', '30-03-2017 12:48 pm', 1, 6, '1'),
-(25, '1', 20, 'ss', '2017-03-05', '1969-12-31T20:32:00.000Z', 'vehicle owner', '0', '0', '30-03-2017 12:50 pm', 3, 8, '1'),
-(27, '1', 20, 'satara', '2017-03-07', '1970-01-01T05:41:00.000Z', 'piago travller', '0', '0', '03-04-2017 4:27 pm', 3, 5, '1'),
-(28, '1', 30, '22', '2017-03-08', '1970-01-01T14:30:00.000Z', 'swapnil', '0', '0', '03-04-2017 4:28 pm', 5, 7, '1'),
-(29, '1', 20, 'iiii', '2017-03-09', '1969-12-31T19:30:00.000Z', 'test owner', '0', '0', '03-04-2017 4:28 pm', 3, 6, '1'),
-(30, '1', 30, 'eee', '2017-03-10', '1969-12-31T19:31:00.000Z', 'Swapnil T', '0', '0', '03-04-2017 5:58 pm', 5, 7, '1'),
-(31, '1', 20, 'll', '2017-04-02', '1969-12-31T19:30:00.000Z', 'vehicle owner', '0', '0', '03-04-2017 5:59 pm', 3, 8, '1');
+INSERT INTO `tbl_aqua_orders` (`order_id`, `order_quantity`, `order_price`, `order_delivery_address`, `order_delivery_date`, `order_delivery_time`, `vehicle_name`, `check_neft_id`, `bank_name`, `ifsc_code`, `aqua_amount`, `order_status`, `order_reminder`, `order_date`, `jar_id`, `acustomer_id`, `order_activestatus`) VALUES
+(20, '1', 100, 'pune', '2017-03-03', '1969-12-31T19:41:00.000Z', 'test2', '', '', '', 0, '1', '0', '30-03-2017 11:22 am', 1, 1, '0'),
+(22, '2', 60, 'wagholi', '2017-04-03', '1969-12-31T20:30:00.000Z', 'test owner', '', '', '', 0, '1', '1', '30-03-2017 11:24 am', 5, 5, '1'),
+(23, '1', 30, 'kharadi', '2017-04-04', '1970-01-01T04:30:00.000Z', 'Swapnil T', '', '', '', 0, '0', '0', '30-03-2017 11:25 am', 5, 6, '1'),
+(24, '1', 100, 'ss', '2017-04-01', '1970-01-01T02:29:00.000Z', 'test owner', '', '', '', 0, '0', '0', '30-03-2017 12:48 pm', 1, 6, '1'),
+(25, '1', 20, 'ss', '2017-03-05', '1969-12-31T20:32:00.000Z', 'vehicle owner', '', '', '', 0, '0', '0', '30-03-2017 12:50 pm', 3, 8, '0'),
+(27, '1', 20, 'satara', '2017-03-07', '1970-01-01T05:41:00.000Z', 'piago travller', '', '', '', 0, '0', '0', '03-04-2017 4:27 pm', 3, 5, '0'),
+(28, '1', 30, '22', '2017-03-08', '1970-01-01T14:30:00.000Z', 'swapnil', '', '', '', 0, '0', '0', '03-04-2017 4:28 pm', 5, 7, '0'),
+(29, '1', 20, 'iiii', '2017-03-09', '1969-12-31T19:30:00.000Z', 'test owner', '', '', '', 0, '0', '0', '03-04-2017 4:28 pm', 3, 6, '1'),
+(30, '1', 30, 'eee', '2017-03-10', '1969-12-31T19:31:00.000Z', 'Swapnil T', '', '', '', 0, '0', '0', '03-04-2017 5:58 pm', 5, 7, '1'),
+(31, '1', 20, 'll', '2017-04-02', '1969-12-31T19:30:00.000Z', 'vehicle owner', '', '', '', 0, '1', '0', '03-04-2017 5:59 pm', 3, 8, '1'),
+(32, '1', 100, 'sss', '0000-00-00', '1969-12-31T19:31:00.000Z', 'piago travller', '77777777777', 'boi', '4444444444', 100, '0', '0', '06-04-2017 1:10 pm', 1, 1, '0'),
+(33, '1', 20, 'sss', '2017-04-07', '1969-12-31T19:31:00.000Z', 'Swapnil T', '222', 'bpm', '213213213213', 22, '0', '0', '06-04-2017 1:12 pm', 3, 4, '1');
 
 -- --------------------------------------------------------
 
@@ -238,7 +244,7 @@ INSERT INTO `tbl_avehicle_details` (`vehicle_id`, `vehicle_owner_name`, `vehicle
 (10, 'Swapnil T', '56788', '2017-02-15 08:49:08', 2147483647, '1'),
 (11, 'vehicle owner', 'mh-25', '2017-02-21 10:14:06', 1245637895, '1'),
 (12, 'piago travller', '343434', '2017-03-09 05:57:20', 2147483647, '1'),
-(13, 'swapnil', 'MH-25 4545', '2017-03-15 08:24:11', 2147483647, '1');
+(13, 'swapnil', 'MH-25 4545', '2017-03-15 08:24:11', 2147483647, '0');
 
 -- --------------------------------------------------------
 
@@ -540,7 +546,7 @@ INSERT INTO `tbl_new_connection` (`connection_id`, `connection_type`, `connectio
 (12, '', '', '', 'Yes', '', '', 'No', 'Yes', '', 1000, '2017-03-15 11:11:27', 0, '1'),
 (13, '', '', '', '', '', '', '', '', '', 1000, '2017-03-15 11:11:33', 0, '1'),
 (14, '2', '3', '3', 'Yes', 'Yes', 'Yes', 'Yes', 'Yes', '3', 1000, '2017-04-15 11:11:33', 2, '1'),
-(15, '2', '6', '7', 'No', 'No', 'No', 'No', 'No', '7', 800, '2017-04-03 4:35 pm', 2, '1');
+(15, '2', '6', '7', 'No', 'No', 'No', 'No', 'No', '7', 800, '2017-04-03 4:35 pm', 2, '0');
 
 -- --------------------------------------------------------
 
@@ -806,7 +812,7 @@ ALTER TABLE `tbl_aqua_invoice`
 -- AUTO_INCREMENT for table `tbl_aqua_orders`
 --
 ALTER TABLE `tbl_aqua_orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=34;
 --
 -- AUTO_INCREMENT for table `tbl_avehicle_details`
 --

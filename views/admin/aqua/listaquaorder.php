@@ -32,7 +32,7 @@
           
 
                             <button ng-click="exportData(startdt,enddt)">Export</button>  
-                            <button  ng-click="printData(datatable-buttons)">Print</button>
+                           <!--  <button  ng-click="printData(datatable-buttons)">Print</button> -->
                               
 
                          <div class=" form-group col-md-6 col-sm-6 col-xs-12 col-md-offset-6" >
@@ -179,7 +179,7 @@ input#duedate {
 
 
 
- @media screen {
+/* @media screen {
   
 
 }
@@ -187,7 +187,7 @@ input#duedate {
   #datatablebuttons * {
     visibility:visible;
   }
-}
+}*/
 
 
 
