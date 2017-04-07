@@ -5,8 +5,8 @@ include($root."/config/config.php");
 $data=array();
 
 $query="SELECT SUM(order_quantity) AS order_total,
-MONTHNAME(order_date ) AS order_month
-FROM tbl_aqua_orders GROUP BY MONTHNAME(order_date ) ";
+MONTHNAME(order_delivery_date ) AS order_month
+FROM tbl_aqua_orders GROUP BY MONTHNAME(order_delivery_date ) ";
 $result = mysqli_query($connection,$query);
 
 while ($row = mysqli_fetch_assoc($result)){
