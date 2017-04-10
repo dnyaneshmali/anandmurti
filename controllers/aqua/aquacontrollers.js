@@ -422,13 +422,7 @@ console.log($scope.addaquaorder);
 app.controller('Listaquaorder', ['$scope','$http','DTOptionsBuilder', function($scope,$http,DTOptionsBuilder) {
 
 
-// $scope.dtOptions = DTOptionsBuilder.newOptions()
-//             .withPaginationType('full_numbers')
-//             .withButtons([
-//                 'excel',
-//                 'pdf'
-//             ])
-//             .withDisplayLength(10);
+
 
   $scope.dtOptions = DTOptionsBuilder.newOptions()
         .withDOM('frtip')
@@ -594,6 +588,7 @@ console.log(order_id);
                 
             }
              
+<<<<<<< HEAD
 //            $scope.printData = function(datatablebuttons) {
 //              printElement(document.getElementById("datatablebuttons"));
 //         window.print();
@@ -626,6 +621,40 @@ console.log(order_id);
 //   }
 // }
 
+=======
+          /* $scope.printData = function(datatablebuttons) {
+             printElement(document.getElementById("datatablebuttons"));
+        window.print();
+
+   function printElement(elem, append, delimiter) {
+    var domClone = elem.cloneNode(true);
+
+    var $datatablebuttons = document.getElementById("datatablebuttons");
+
+    if (!$datatablebuttons) {
+        var $datatablebuttons = document.createElement("div");
+        $datatablebuttons.id = "datatablebuttons";
+        document.body.appendChild($datatablebuttons);
+    }
+
+    if (append !== true) {
+        $datatablebuttons.innerHTML = "";
+    }
+
+    else if (append === true) {
+        if (typeof(delimiter) === "string") {
+            $datatablebuttons.innerHTML += delimiter;
+        }
+        else if (typeof(delimiter) === "object") {
+            $datatablebuttons.appendChlid(delimiter);
+        }
+    }
+
+    $datatablebuttons.appendChild(domClone);
+  }
+}
+*/
+>>>>>>> 70ba13da1ca1f29769f0a2e52bc273b8945b9766
 
       
  
