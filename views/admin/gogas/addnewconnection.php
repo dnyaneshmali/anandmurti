@@ -68,7 +68,7 @@
                             <div class="radio form-group col-md-6 col-sm-6 col-xs-12" >
                              
                               <span style="margin-right:10px"><label>
-                              <input type="radio" checked="" ng-model="connection_passbook" value="Yes" id="passbook_yes" name="connection_passbook" required/>yes </label></span>
+                              <input type="radio" checked="" ng-model="connection_passbook" value="Yes" id="passbook_yes" required/>yes </label></span>
                               <label>
                               <input type="radio" ng-model="connection_passbook" value="No" id="passbook_no" name="connection_passbook" required/>No </label>
                             </div>
